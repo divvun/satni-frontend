@@ -20,6 +20,7 @@ export function invalidateSubreddit (subreddit) {
 }
 
 function requestPosts (subreddit) {
+  console.log(subreddit);
   return {
     type: REQUEST_POSTS,
     subreddit
@@ -27,24 +28,29 @@ function requestPosts (subreddit) {
 }
 
 function receivePosts (subreddit, json) {
+  console.log('receivePosts');
   return {
     type: RECEIVE_POSTS,
     subreddit,
-    posts: json.data.children.map(child => child.data),
+    posts: json,
     receivedAt: Date.now()
   };
 }
 
 function fetchPosts (subreddit) {
+  console.log('fetchPosts');
   return dispatch => {
     dispatch(requestPosts(subreddit));
-    return fetch(`https://www.reddit.com/r/${subreddit}.json`)
-      .then(response => response.json())
+    let url = `http://satni.uit.no:8080/exist/restxq/satni/article/${subreddit}`;
+    console.log(encodeURI(url));
+    return fetch(encodeURI(url))
+      .then(response => response.text())
       .then(json => dispatch(receivePosts(subreddit, json)));
   };
 }
 
 function shouldFetchPosts (state, subreddit) {
+  console.log('shouldFetchPosts');
   const posts = state.postsBySubreddit[subreddit];
   if (!posts) {
     return true;

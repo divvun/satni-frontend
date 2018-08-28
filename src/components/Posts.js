@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 export default class Posts extends Component {
   render () {
+    const isjson = JSON.parse(this.props.posts);
     return (
       <ul>
-        {this.props.posts.map((post, i) => <li key={i}>{post.title}</li>)}
+        {isjson.map((post, i) => <li key={i}>{post.term}</li>)}
       </ul>
     );
   }
