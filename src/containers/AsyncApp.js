@@ -8,6 +8,7 @@ import {
 } from '../actions';
 import Picker from '../components/Picker';
 import Posts from '../components/Posts';
+import Searcher from '../components/Searcher';
 
 class AsyncApp extends Component {
   constructor (props) {
@@ -29,6 +30,7 @@ class AsyncApp extends Component {
   }
 
   handleChange (nextSubreddit) {
+    console.log(nextSubreddit);
     this.props.dispatch(selectSubreddit(nextSubreddit));
     this.props.dispatch(fetchPostsIfNeeded(nextSubreddit));
   }
@@ -45,11 +47,7 @@ class AsyncApp extends Component {
     const { selectedSubreddit, posts, isFetching, lastUpdated } = this.props;
     return (
       <div>
-        <Picker
-          value={selectedSubreddit}
-          onChange={this.handleChange}
-          options={['váivi', 'guolli']}
-        />
+        <Searcher onChange={this.handleChange} />
         <p>
           {lastUpdated &&
             <span>
