@@ -74,7 +74,7 @@ class AsyncApp extends Component {
 
 AsyncApp.propTypes = {
   selectedSubreddit: PropTypes.string.isRequired,
-  posts: PropTypes.array.isRequired,
+  posts: PropTypes.string.isRequired,
   isFetching: PropTypes.bool.isRequired,
   lastUpdated: PropTypes.number,
   dispatch: PropTypes.func.isRequired
