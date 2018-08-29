@@ -37,16 +37,22 @@ const normaliseDict = (existDict) => {
 
 const term2dict = {
   'se': 'sme',
+  'sme': 'sme',
   'fi': 'fin',
+  'fin': 'fin',
   'nb': 'nob',
   'nor': 'nob',
+  'nob': 'nob',
   'nn': 'nno',
+  'nno': 'nno',
   'sv': 'swe',
+  'swe': 'swe',
   'smn': 'smn',
   'sma': 'sma',
   'smj': 'smj',
   'lat': 'lat',
-  'en': 'eng'
+  'en': 'eng',
+  'eng': 'eng'
 };
 
 const normaliseTermWiki = (existTerm) => {
