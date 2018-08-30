@@ -1,15 +1,15 @@
 import { combineReducers } from 'redux';
 import {
-  SELECT_SUBREDDIT,
-  INVALIDATE_SUBREDDIT,
+  SELECT_LEMMA,
+  INVALIDATE_LEMMA,
   REQUEST_ARTICLES,
   RECEIVE_ARTICLES
 } from './actions';
 
-function selectedSubreddit (state = 'guolli', action) {
+function selectedLemma (state = 'guolli', action) {
   switch (action.type) {
-    case SELECT_SUBREDDIT:
-      return action.subreddit;
+    case SELECT_LEMMA:
+      return action.lemma;
     default:
       return state;
   }
@@ -24,7 +24,7 @@ function articles (
   action
 ) {
   switch (action.type) {
-    case INVALIDATE_SUBREDDIT:
+    case INVALIDATE_LEMMA:
       return Object.assign({}, state, {
         didInvalidate: true
       });
@@ -45,13 +45,13 @@ function articles (
   }
 }
 
-function articlesBySubreddit (state = {}, action) {
+function articlesByLemma (state = {}, action) {
   switch (action.type) {
-    case INVALIDATE_SUBREDDIT:
+    case INVALIDATE_LEMMA:
     case RECEIVE_ARTICLES:
     case REQUEST_ARTICLES:
       return Object.assign({}, state, {
-        [action.subreddit]: articles(state[action.subreddit], action)
+        [action.lemma]: articles(state[action.lemma], action)
       });
     default:
       return state;
@@ -59,8 +59,8 @@ function articlesBySubreddit (state = {}, action) {
 }
 
 const rootReducer = combineReducers({
-  articlesBySubreddit,
-  selectedSubreddit
+  articlesByLemma,
+  selectedLemma
 });
 
 export default rootReducer;

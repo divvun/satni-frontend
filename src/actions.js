@@ -2,56 +2,56 @@ import fetch from 'cross-fetch';
 
 export const REQUEST_ARTICLES = 'REQUEST_ARTICLES';
 export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES';
-export const SELECT_SUBREDDIT = 'SELECT_SUBREDDIT';
-export const INVALIDATE_SUBREDDIT = 'INVALIDATE_SUBREDDIT';
+export const SELECT_LEMMA = 'SELECT_LEMMA';
+export const INVALIDATE_LEMMA = 'INVALIDATE_LEMMA';
 
-export function selectSubreddit (subreddit) {
+export function selectLemma (lemma) {
   return {
-    type: SELECT_SUBREDDIT,
-    subreddit
+    type: SELECT_LEMMA,
+    lemma
   };
 }
 
-export function invalidateSubreddit (subreddit) {
+export function invalidateLemma (lemma) {
   return {
-    type: INVALIDATE_SUBREDDIT,
-    subreddit
+    type: INVALIDATE_LEMMA,
+    lemma
   };
 }
 
-function requestArticles (subreddit) {
-  console.log(subreddit);
+function requestArticles (lemma) {
+  console.log(lemma);
   return {
     type: REQUEST_ARTICLES,
-    subreddit
+    lemma
   };
 }
 
-function receiveArticles (subreddit, text) {
+function receiveArticles (lemma, text) {
   console.log('receiveArticles');
   return {
     type: RECEIVE_ARTICLES,
-    subreddit,
+    lemma,
     articles: text,
     receivedAt: Date.now()
   };
 }
 
-function fetchArticles (subreddit) {
+function fetchArticles (lemma) {
   console.log('fetchArticles');
   return dispatch => {
-    dispatch(requestArticles(subreddit));
-    let url = `http://satni.uit.no:8080/exist/restxq/satni/article/${subreddit}`;
+    dispatch(requestArticles(lemma));
+    let url = `http://satni.uit.no:8080/exist/restxq/satni/article/${lemma}`;
     console.log(encodeURI(url));
     return fetch(encodeURI(url))
       .then(response => response.text())
-      .then(text => dispatch(receiveArticles(subreddit, text)));
+      .then(text => dispatch(receiveArticles(lemma, text)));
   };
 }
 
-function shouldFetchArticles (state, subreddit) {
+function shouldFetchArticles (state, lemma) {
   console.log('shouldFetchArticles');
-  const articles = state.articlesBySubreddit[subreddit];
+  const articles = state.articlesByLemma[lemma];
   if (!articles) {
     return true;
   } else if (articles.isFetching) {
@@ -61,10 +61,10 @@ function shouldFetchArticles (state, subreddit) {
   }
 }
 
-export function fetchArticlesIfNeeded (subreddit) {
+export function fetchArticlesIfNeeded (lemma) {
   return (dispatch, getState) => {
-    if (shouldFetchArticles(getState(), subreddit)) {
-      return dispatch(fetchArticles(subreddit));
+    if (shouldFetchArticles(getState(), lemma)) {
+      return dispatch(fetchArticles(lemma));
     }
   };
 }
