@@ -2,8 +2,8 @@ import { combineReducers } from 'redux';
 import {
   SELECT_SUBREDDIT,
   INVALIDATE_SUBREDDIT,
-  REQUEST_POSTS,
-  RECEIVE_POSTS
+  REQUEST_ARTICLES,
+  RECEIVE_ARTICLES
 } from './actions';
 
 function selectedSubreddit (state = 'guolli', action) {
@@ -15,7 +15,7 @@ function selectedSubreddit (state = 'guolli', action) {
   }
 }
 
-function posts (
+function articles (
   state = {
     isFetching: false,
     didInvalidate: false,
@@ -28,16 +28,16 @@ function posts (
       return Object.assign({}, state, {
         didInvalidate: true
       });
-    case REQUEST_POSTS:
+    case REQUEST_ARTICLES:
       return Object.assign({}, state, {
         isFetching: true,
         didInvalidate: false
       });
-    case RECEIVE_POSTS:
+    case RECEIVE_ARTICLES:
       return Object.assign({}, state, {
         isFetching: false,
         didInvalidate: false,
-        items: action.posts,
+        items: action.articles,
         lastUpdated: action.receivedAt
       });
     default:
@@ -45,13 +45,13 @@ function posts (
   }
 }
 
-function postsBySubreddit (state = {}, action) {
+function articlesBySubreddit (state = {}, action) {
   switch (action.type) {
     case INVALIDATE_SUBREDDIT:
-    case RECEIVE_POSTS:
-    case REQUEST_POSTS:
+    case RECEIVE_ARTICLES:
+    case REQUEST_ARTICLES:
       return Object.assign({}, state, {
-        [action.subreddit]: posts(state[action.subreddit], action)
+        [action.subreddit]: articles(state[action.subreddit], action)
       });
     default:
       return state;
@@ -59,7 +59,7 @@ function postsBySubreddit (state = {}, action) {
 }
 
 const rootReducer = combineReducers({
-  postsBySubreddit,
+  articlesBySubreddit,
   selectedSubreddit
 });
 
