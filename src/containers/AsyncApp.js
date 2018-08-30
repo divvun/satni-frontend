@@ -6,7 +6,6 @@ import {
   fetchArticlesIfNeeded,
   invalidateLemma
 } from '../actions';
-import Picker from '../components/Picker';
 import Articles from '../components/Articles';
 import Searcher from '../components/Searcher';
 
