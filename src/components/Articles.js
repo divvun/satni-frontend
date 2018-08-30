@@ -133,11 +133,9 @@ class Stems extends Component {
 
 export default class Articles extends Component {
   render () {
-    let data = this.props.articles;
-    const isjson = (data.indexOf('{') === 0) ? '[' + data.slice(data.indexOf('{') + 1, data.lastIndexOf('}')) + ']' : data;
     return (
       <div>
-        {JSON.parse(isjson).map((article, i) => {
+        {this.props.articles.map((article, i) => {
           if (article.termwikiref === '-1') {
             let stems = normaliseDict(article);
             return <Stems key={i} stems={stems} />;
@@ -155,5 +153,5 @@ export default class Articles extends Component {
 }
 
 Articles.propTypes = {
-  articles: PropTypes.string.isRequired
+  articles: PropTypes.array.isRequired
 };

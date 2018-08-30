@@ -50,7 +50,7 @@ class AsyncApp extends Component {
 
 AsyncApp.propTypes = {
   selectedLemma: PropTypes.string.isRequired,
-  articles: PropTypes.string.isRequired,
+  articles: PropTypes.array.isRequired,
   dispatch: PropTypes.func.isRequired
 };
 

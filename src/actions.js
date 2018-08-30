@@ -24,8 +24,16 @@ function receiveArticles (lemma, text) {
   return {
     type: RECEIVE_ARTICLES,
     lemma,
-    articles: text,
+    articles: text
   };
+}
+
+function toJson (text) {
+  // eXist sometimes sends misformed json, correct it here
+  return JSON.parse(
+    text.indexOf('{') === 0 ?
+    '[' + text.slice(text.indexOf('{') + 1, text.lastIndexOf('}')) + ']' :
+    text)
 }
 
 function fetchArticles (lemma) {
@@ -36,7 +44,7 @@ function fetchArticles (lemma) {
     console.log(encodeURI(url));
     return fetch(encodeURI(url))
       .then(response => response.text())
-      .then(text => dispatch(receiveArticles(lemma, text)));
+      .then(text => dispatch(receiveArticles(lemma, toJson(text))));
   };
 }
 
