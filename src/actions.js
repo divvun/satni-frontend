@@ -33,7 +33,7 @@ function toJson (text) {
   return JSON.parse(
     text.indexOf('{') === 0 ?
     '[' + text.slice(text.indexOf('{') + 1, text.lastIndexOf('}')) + ']' :
-    text)
+    text);
 }
 
 function fetchArticles (lemma) {
@@ -51,7 +51,9 @@ function fetchArticles (lemma) {
 function shouldFetchArticles (state, lemma) {
   console.log('shouldFetchArticles');
   const articles = state.articlesByLemma[lemma];
-  if (!articles) {
+  if (!lemma) {
+    return false;
+  } else if (!articles) {
     return true;
   } else if (articles.isFetching) {
     return false;

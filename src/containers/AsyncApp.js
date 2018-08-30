@@ -38,7 +38,7 @@ class AsyncApp extends Component {
       <div>
         <Searcher onChange={this.handleChange} />
         {isFetching && articles.length === 0 && <h2>Loading...</h2>}
-        {!isFetching && articles.length === 0 && <h2>Empty.</h2>}
+        {selectedLemma && !isFetching && articles.length === 0 && <h2>Empty.</h2>}
         {articles.length > 0 &&
           <div style={{ opacity: isFetching ? 0.5 : 1 }}>
             <Articles articles={articles} />
@@ -60,7 +60,7 @@ function mapStateToProps (state) {
     isFetching,
     items: articles
   } = articlesByLemma[selectedLemma] || {
-    isFetching: true,
+    isFetching: false,
     items: []
   };
 
