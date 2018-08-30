@@ -5,7 +5,7 @@ import {
   RECEIVE_ARTICLES
 } from './actions';
 
-function selectedLemma (state = 'guolli', action) {
+function selectedLemma (state = '', action) {
   switch (action.type) {
     case SELECT_LEMMA:
       return action.lemma;
