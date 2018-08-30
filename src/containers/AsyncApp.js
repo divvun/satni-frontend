@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
   selectLemma,
-  fetchArticlesIfNeeded,
-  invalidateLemma
+  fetchArticlesIfNeeded
 } from '../actions';
 import Articles from '../components/Articles';
 import Searcher from '../components/Searcher';
@@ -13,7 +12,6 @@ class AsyncApp extends Component {
   constructor (props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
-    this.handleRefreshClick = this.handleRefreshClick.bind(this);
   }
 
   componentDidMount () {
@@ -34,30 +32,11 @@ class AsyncApp extends Component {
     this.props.dispatch(fetchArticlesIfNeeded(nextLemma));
   }
 
-  handleRefreshClick (e) {
-    e.preventDefault();
-
-    const { dispatch, selectedLemma } = this.props;
-    dispatch(invalidateLemma(selectedLemma));
-    dispatch(fetchArticlesIfNeeded(selectedLemma));
-  }
-
   render () {
-    const { selectedLemma, articles, isFetching, lastUpdated } = this.props;
+    const { selectedLemma, articles, isFetching } = this.props;
     return (
       <div>
         <Searcher onChange={this.handleChange} />
-        <p>
-          {lastUpdated &&
-            <span>
-              Last updated at {new Date(lastUpdated).toLocaleTimeString()}.
-              {' '}
-            </span>}
-          {!isFetching &&
-            <button onClick={this.handleRefreshClick}>
-              Refresh
-            </button>}
-        </p>
         {isFetching && articles.length === 0 && <h2>Loading...</h2>}
         {!isFetching && articles.length === 0 && <h2>Empty.</h2>}
         {articles.length > 0 &&
@@ -72,8 +51,6 @@ class AsyncApp extends Component {
 AsyncApp.propTypes = {
   selectedLemma: PropTypes.string.isRequired,
   articles: PropTypes.string.isRequired,
-  isFetching: PropTypes.bool.isRequired,
-  lastUpdated: PropTypes.number,
   dispatch: PropTypes.func.isRequired
 };
 
@@ -81,7 +58,6 @@ function mapStateToProps (state) {
   const { selectedLemma, articlesByLemma } = state;
   const {
     isFetching,
-    lastUpdated,
     items: articles
   } = articlesByLemma[selectedLemma] || {
     isFetching: true,
@@ -91,8 +67,7 @@ function mapStateToProps (state) {
   return {
     selectedLemma,
     articles,
-    isFetching,
-    lastUpdated
+    isFetching
   };
 }
 

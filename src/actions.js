@@ -3,18 +3,10 @@ import fetch from 'cross-fetch';
 export const REQUEST_ARTICLES = 'REQUEST_ARTICLES';
 export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES';
 export const SELECT_LEMMA = 'SELECT_LEMMA';
-export const INVALIDATE_LEMMA = 'INVALIDATE_LEMMA';
 
 export function selectLemma (lemma) {
   return {
     type: SELECT_LEMMA,
-    lemma
-  };
-}
-
-export function invalidateLemma (lemma) {
-  return {
-    type: INVALIDATE_LEMMA,
     lemma
   };
 }
@@ -33,7 +25,6 @@ function receiveArticles (lemma, text) {
     type: RECEIVE_ARTICLES,
     lemma,
     articles: text,
-    receivedAt: Date.now()
   };
 }
 
@@ -57,7 +48,7 @@ function shouldFetchArticles (state, lemma) {
   } else if (articles.isFetching) {
     return false;
   } else {
-    return articles.didInvalidate;
+    return true;
   }
 }
 
