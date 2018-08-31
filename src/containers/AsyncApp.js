@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
   selectLemma,
-  fetchArticlesIfNeeded
+  fetchArticlesIfNeeded,
+  fetchItemsIfNeeded
 } from '../actions';
 import Articles from '../components/Articles';
 import Searcher from '../components/Searcher';
@@ -12,6 +13,7 @@ class AsyncApp extends Component {
   constructor (props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount () {
@@ -26,6 +28,11 @@ class AsyncApp extends Component {
     }
   }
 
+  handleSearch (key) {
+    console.log('handleSearch');
+    this.props.dispatch(fetchItemsIfNeeded(key));
+  }
+
   handleChange (nextLemma) {
     console.log(nextLemma);
     this.props.dispatch(selectLemma(nextLemma));
@@ -33,7 +40,7 @@ class AsyncApp extends Component {
   }
 
   render () {
-    const { selectedLemma, articles, isFetching } = this.props;
+    const { selectedLemma, articles, isFetching, search } = this.props;
     return (
       <div>
         <Searcher onChange={this.handleChange} />
@@ -51,11 +58,12 @@ class AsyncApp extends Component {
 AsyncApp.propTypes = {
   selectedLemma: PropTypes.string.isRequired,
   articles: PropTypes.array.isRequired,
-  dispatch: PropTypes.func.isRequired
+  dispatch: PropTypes.func.isRequired,
+  search: PropTypes.object.isRequired
 };
 
 function mapStateToProps (state) {
-  const { selectedLemma, articlesByLemma } = state;
+  const { selectedLemma, articlesByLemma, search } = state;
   const {
     isFetching,
     items: articles
@@ -67,7 +75,8 @@ function mapStateToProps (state) {
   return {
     selectedLemma,
     articles,
-    isFetching
+    isFetching,
+    search
   };
 }
 

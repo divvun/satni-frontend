@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux';
+
 import {
   SELECT_LEMMA,
   REQUEST_ARTICLES,
-  RECEIVE_ARTICLES
+  RECEIVE_ARTICLES,
+  REQUEST_ITEMS,
+  RECEIVE_ITEMS
 } from './actions';
 
 function selectedLemma (state = '', action) {
@@ -48,9 +51,47 @@ function articlesByLemma (state = {}, action) {
   }
 }
 
+function setUnion (thisSet, thatSet) {
+  let result = new Set();
+
+  thisSet.forEach((item) => {
+    result.add(item);
+  });
+
+  thatSet.forEach((item) => {
+    result.add(item);
+  });
+
+  return result;
+}
+function search (
+  state = {
+    isSearching: false,
+    usedSearchKeys: new Set(),
+    searchItems: new Set()
+  },
+  action
+) {
+  switch (action.type) {
+    case REQUEST_ITEMS:
+      return Object.assign({}, state, {
+        isSearching: true
+      });
+    case RECEIVE_ITEMS:
+      return Object.assign({}, state, {
+        isSearching: false,
+        usedSearchKeys: state.usedSearchKeys.add(action.key),
+        searchItems: setUnion(state.searchItems, action.searchItems)
+      });
+    default:
+      return state;
+  }
+}
+
 const rootReducer = combineReducers({
   articlesByLemma,
-  selectedLemma
+  selectedLemma,
+  search
 });
 
 export default rootReducer;

@@ -4,6 +4,9 @@ export const REQUEST_ARTICLES = 'REQUEST_ARTICLES';
 export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES';
 export const SELECT_LEMMA = 'SELECT_LEMMA';
 
+export const REQUEST_ITEMS = 'REQUEST_ITEMS';
+export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
+
 export function selectLemma (lemma) {
   return {
     type: SELECT_LEMMA,
@@ -19,12 +22,28 @@ function requestArticles (lemma) {
   };
 }
 
+function requestItems (key) {
+  console.log(key);
+  return {
+    type: REQUEST_ITEMS
+  };
+}
+
 function receiveArticles (lemma, text) {
   console.log('receiveArticles');
   return {
     type: RECEIVE_ARTICLES,
     lemma,
     articles: text
+  };
+}
+
+function receiveItems (key, json) {
+  console.log('receiveItems');
+  return {
+    type: RECEIVE_ITEMS,
+    key,
+    searchItems: json
   };
 }
 
@@ -48,6 +67,18 @@ function fetchArticles (lemma) {
   };
 }
 
+function fetchItems (key) {
+  console.log('fetchItems');
+  return dispatch => {
+    dispatch(requestItems(key));
+    let url = `http://satni.uit.no:8080/exist/restxq/satni/search?query=${key}`;
+    console.log(encodeURI(url));
+    return fetch(encodeURI(url))
+      .then(response => response.json())
+      .then(json => dispatch(receiveItems(key, json)));
+  };
+}
+
 function shouldFetchArticles (state, lemma) {
   console.log('shouldFetchArticles');
   const articles = state.articlesByLemma[lemma];
@@ -62,10 +93,30 @@ function shouldFetchArticles (state, lemma) {
   }
 }
 
+function shouldFetchItems (state, key) {
+  console.log('shouldFetchItems');
+  console.log(state, key);
+  // return false;
+
+  if (state.usedSearchKeys.has(key) || state.isSearching) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
 export function fetchArticlesIfNeeded (lemma) {
   return (dispatch, getState) => {
     if (shouldFetchArticles(getState(), lemma)) {
       return dispatch(fetchArticles(lemma));
+    }
+  };
+}
+
+export function fetchItemsIfNeeded (key) {
+  return (dispatch, getState) => {
+    if (shouldFetchItems(getState().search, key)) {
+      return dispatch(fetchItems(key));
     }
   };
 }
