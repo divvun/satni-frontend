@@ -74,8 +74,8 @@ function fetchItems (key) {
     let url = `http://satni.uit.no:8080/exist/restxq/satni/search?query=${key}`;
     console.log(encodeURI(url));
     return fetch(encodeURI(url))
-      .then(response => response.json())
-      .then(json => dispatch(receiveItems(key, json)));
+      .then(response => response.text())
+      .then(text => dispatch(receiveItems(key, toJson(text))));
   };
 }
 
