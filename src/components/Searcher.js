@@ -676,55 +676,51 @@ const items = [...new Set(original.map(item => item.term))];
 
 export default class Searcher extends Component {
   render () {
-    const { onChange } = this.props;
+    const { onSelect, onInputChange, search } = this.props;
     return (
       <Downshift
-        onChange={selection => onChange(selection)}
-        itemToString={item => (item ? item : '')} >
+        onSelect={selection => onSelect(selection)} >
         {({
-      getInputProps,
-      getItemProps,
-      getLabelProps,
-      isOpen,
-      inputValue,
-      highlightedIndex,
-      selectedItem
-    }) => (
-      <div>
-        <label {...getLabelProps()}>Enter a word</label>
-        <input {...getInputProps()} />
-        {isOpen ? (
-          <div>
-            {items
-              .filter(item => !inputValue || item.includes(inputValue))
-              .map((item, index) => (
-                <div
-                  {...getItemProps({
-                    key: item,
-                    index,
-                    item,
-                    style: {
-                      backgroundColor: highlightedIndex === index
-                        ? 'lightgray'
-                        : 'white',
-                      fontWeight: selectedItem === item
-                        ? 'bold'
-                        : 'normal'
-                    }
-                  })}
-                >
-                  {item}
+          selectedItem,
+          getInputProps,
+          getItemProps,
+          getLabelProps,
+          highlightedIndex,
+          isOpen,
+          inputValue
+        }) => {
+          return (
+            <div>
+              <label {...getLabelProps()}>Enter a word</label>
+              <input {...getInputProps({
+                onChange: event => {
+                  const value = event.target.value;
+                  console.log(value);
+                  console.log(this.props.onInputChange);
+                  if (!value) {
+                    return;
+                  }
+                  this.props.onInputChange(value);
+                }
+              })} />
+              {isOpen ? (
+                <div>
+                  <hr />
+                  {[...this.props.search.usedSearchKeys].join(', ')}<br />
+                  size of search: {this.props.search.searchItems.size} <br />
+                  {this.props.search.isSearching ? (
+                    <div>loading …</div>
+                  ) : <div>result will come here…</div>}
                 </div>
-              ))}
-          </div>
-        ) : null}
-      </div>
-    )}
+                  ) : null}
+            </div>
+          );
+        }}
       </Downshift>
     );
   }
 }
 
 Searcher.propTypes = {
-  onChange: PropTypes.func.isRequired
+  onSelect: PropTypes.func.isRequired
 };

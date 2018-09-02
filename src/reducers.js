@@ -58,9 +58,11 @@ function setUnion (thisSet, thatSet) {
     result.add(item);
   });
 
-  thatSet.forEach((item) => {
-    result.add(item);
-  });
+  if (thatSet) {
+    thatSet.forEach((item) => {
+      result.add(item);
+    });
+  }
 
   return result;
 }

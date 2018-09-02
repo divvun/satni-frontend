@@ -96,9 +96,9 @@ function shouldFetchArticles (state, lemma) {
 function shouldFetchItems (state, key) {
   console.log('shouldFetchItems');
   console.log(state, key);
-  // return false;
+  // return true;
 
-  if (state.usedSearchKeys.has(key) || state.isSearching) {
+  if (state.usedSearchKeys.has(key)) {
     return false;
   } else {
     return true;

@@ -22,7 +22,7 @@ class NameForm extends React.Component {
   handleChange (event) {
     console.log(this.props.search);
     this.setState({value: event.target.value});
-    this.props.onChange(event.target.value);
+    this.props.onSelect(event.target.value);
   }
 
   handleSubmit (event) {
@@ -81,8 +81,11 @@ class AsyncApp extends Component {
     const { selectedLemma, articles, isFetching, search } = this.props;
     return (
       <div>
-        <NameForm search={search} onChange={this.handleSearch} />
-        <Searcher onChange={this.handleChange} />
+        <Searcher
+          onSelect={this.handleChange}
+          onInputChange={this.handleSearch}
+          search={search}
+          />
         {isFetching && articles.length === 0 && <h2>Loading...</h2>}
         {selectedLemma && !isFetching && articles.length === 0 && <h2>Empty.</h2>}
         {articles.length > 0 &&
