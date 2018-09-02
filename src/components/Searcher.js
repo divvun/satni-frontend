@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Downshift from 'downshift';
 import PropTypes from 'prop-types';
+import { Set } from 'immutable';
 
 const original = [
   {
@@ -675,6 +676,13 @@ const original = [
 const items = [...new Set(original.map(item => item.term))];
 
 export default class Searcher extends Component {
+  setting = value => {
+    return Set([...this.props.search.searchItems]
+    .map(item => item.term))
+    .filter(term => term.toLowerCase().startsWith(value))
+    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+  }
+
   render () {
     const { onSelect, onInputChange, search } = this.props;
     return (
@@ -710,7 +718,25 @@ export default class Searcher extends Component {
                   size of search: {this.props.search.searchItems.size} <br />
                   {this.props.search.isSearching ? (
                     <div>loading …</div>
-                  ) : <div>result will come here…</div>}
+                  ) : <div>{this.setting(inputValue)
+                    .map((item, index) => (
+                      <div
+                        {...getItemProps({
+                          key: index,
+                          item,
+                          style: {
+                        backgroundColor: highlightedIndex === index
+                          ? 'lightgray'
+                          : 'white',
+                        fontWeight: selectedItem === item
+                          ? 'bold'
+                          : 'normal'
+                          },
+                        })}
+                      >
+                        {item}
+                      </div>
+                    ))}</div>}
                 </div>
                   ) : null}
             </div>
