@@ -8,6 +8,7 @@ import {
 } from '../actions';
 import Articles from '../components/Articles';
 import Searcher from '../components/Searcher';
+import { debounce } from 'throttle-debounce'
 
 class AsyncApp extends Component {
   constructor (props) {
@@ -28,10 +29,10 @@ class AsyncApp extends Component {
     }
   }
 
-  handleSearch (key) {
+  handleSearch = debounce(300, (key) => {
     console.log('handleSearch');
     this.props.dispatch(fetchItemsIfNeeded(key));
-  }
+  })
 
   handleChange (nextLemma) {
     console.log(nextLemma);
