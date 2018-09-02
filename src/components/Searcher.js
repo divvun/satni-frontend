@@ -31,8 +31,6 @@ export default class Searcher extends Component {
               <input {...getInputProps({
                 onChange: event => {
                   const value = event.target.value;
-                  console.log(value);
-                  console.log(this.props.onInputChange);
                   if (!value) {
                     return;
                   }
@@ -41,9 +39,6 @@ export default class Searcher extends Component {
               })} />
               {isOpen ? (
                 <div>
-                  <hr />
-                  {[...this.props.search.usedSearchKeys].join(', ')}<br />
-                  size of search: {this.props.search.searchItems.size} <br />
                   {this.props.search.isSearching ? (
                     <div>loading …</div>
                   ) : <div>{this.setting(inputValue)
