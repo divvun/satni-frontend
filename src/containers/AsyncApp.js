@@ -9,44 +9,6 @@ import {
 import Articles from '../components/Articles';
 import Searcher from '../components/Searcher';
 
-class NameForm extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {value: ''};
-
-    console.log(props.search);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange (event) {
-    console.log(this.props.search);
-    this.setState({value: event.target.value});
-    this.props.onSelect(event.target.value);
-  }
-
-  handleSubmit (event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-
-  render () {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type='text' value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type='submit' value='Submit' />
-        <hr />
-        inputvalue: {this.state.value}<br />
-        size of search: {this.props.search.searchItems.size}<br />
-        search: {JSON.stringify(this.props.search)}
-      </form>
-    );
-  }
-}
-
 class AsyncApp extends Component {
   constructor (props) {
     super(props);
