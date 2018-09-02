@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import {Set} from 'immutable';
 
 import {
   SELECT_LEMMA,
@@ -51,26 +52,11 @@ function articlesByLemma (state = {}, action) {
   }
 }
 
-function setUnion (thisSet, thatSet) {
-  let result = new Set();
-
-  thisSet.forEach((item) => {
-    result.add(item);
-  });
-
-  if (thatSet) {
-    thatSet.forEach((item) => {
-      result.add(item);
-    });
-  }
-
-  return result;
-}
 function search (
   state = {
     isSearching: false,
-    usedSearchKeys: new Set(),
-    searchItems: new Set()
+    usedSearchKeys: Set(),
+    searchItems: Set()
   },
   action
 ) {
@@ -83,7 +69,7 @@ function search (
       return Object.assign({}, state, {
         isSearching: false,
         usedSearchKeys: state.usedSearchKeys.add(action.key),
-        searchItems: setUnion(state.searchItems, action.searchItems)
+        searchItems: state.searchItems.union(action.searchItems)
       });
     default:
       return state;
