@@ -31,7 +31,7 @@ export default class Searcher extends Component {
               <input {...getInputProps({
                 onChange: event => {
                   const value = event.target.value;
-                  if (!value) {
+                  if (!value || value.length < 3) {
                     return;
                   }
                   this.props.onInputChange(value);
