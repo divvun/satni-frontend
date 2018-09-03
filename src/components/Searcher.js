@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Downshift from 'downshift';
 import PropTypes from 'prop-types';
 import { Set } from 'immutable';
+import { inHTMLData } from 'xss-filters'
 
 export default class Searcher extends Component {
   setting = value => {
@@ -30,7 +31,7 @@ export default class Searcher extends Component {
               <label {...getLabelProps()}>Enter a word</label>
               <input {...getInputProps({
                 onChange: event => {
-                  const value = event.target.value;
+                  const value = inHTMLData(event.target.value);
                   if (!value || value.length < 3) {
                     return;
                   }
