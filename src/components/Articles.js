@@ -59,15 +59,19 @@ const normaliseTermWiki = (existTerm) => {
   const terms = [];
 
   existTerm.tg.forEach((tg) => {
-    let stem = {};
-    stem['lemma'] = tg.t['#text'].trim();
-    stem['lang'] = term2dict[tg['xml:lang']];
-    stem['pos'] = tg.t.pos;
+    try {
+      let stem = {};
+      stem['lemma'] = tg.t['#text'].trim();
+      stem['lang'] = term2dict[tg['xml:lang']];
+      stem['pos'] = tg.t.pos;
 
-    if (stem['lemma'] === existTerm.term.trim()) {
-      terms.unshift(stem);
-    } else {
-      terms.push(stem);
+      if (stem['lemma'] === existTerm.term.trim()) {
+        terms.unshift(stem);
+      } else {
+        terms.push(stem);
+      }
+    } catch (TypeError) {
+
     }
   });
 
