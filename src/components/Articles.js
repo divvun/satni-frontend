@@ -152,6 +152,7 @@ class TermArticle extends Component {
       <div>
         <div>{this.props.article.dict}</div>
         <Stems stems={normaliseTermWiki(this.props.article)} />
+        <div><a href={`https://satni.uit.no/termwiki/index.php?title=${this.props.article.termwikiref}`}>{this.props.article.termwikiref}</a></div>
       </div>
     );
   }
