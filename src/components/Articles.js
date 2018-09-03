@@ -23,6 +23,28 @@ const translationStems = (tg) => {
   return stems;
 };
 
+const translationExamples = (tg) => {
+  let examples = [];
+  let xg = tg.xg;
+  if (xg instanceof Object && xg instanceof Array) {
+    xg.forEach((x) => {
+      let example = {
+        'x': x.x,
+        'xt': x.xt
+      };
+      examples.push(example);
+    });
+  } else {
+    let example = {
+      'x': xg.x,
+      'xt': xg.xt
+    };
+    examples.push(example);
+  }
+
+  return examples;
+};
+
 const normaliseDict = (existDict) => {
   let stem = {};
   stem['lemma'] = existDict.term;
@@ -32,7 +54,9 @@ const normaliseDict = (existDict) => {
   let translations = translationStems(existDict.tg);
   translations.unshift(stem);
 
-  return translations;
+  let examples = existDict.tg.xg ? translationExamples(existDict.tg) : [];
+
+  return {translations, examples};
 };
 
 const term2dict = {
@@ -148,12 +172,28 @@ class Stems extends Component {
   }
 }
 
+class Examples extends Component {
+  render () {
+    const examples = this.props.examples.map((example, i) => (
+      <div key={i}>
+        <div>{example.t}</div>
+        <div>{example.xt}</div>
+      </div>)
+    );
+    return (
+      <div>{examples}</div>
+    );
+  }
+}
+
 class DictArticle extends Component {
   render () {
+    const {translations, examples} = normaliseDict(this.props.article);
     return (
       <div>
         <div>{this.props.article.dict}</div>
-        <Stems stems={normaliseDict(this.props.article)} />
+        <Stems stems={translations} />
+        <Examples examples={examples} />
       </div>
     );
   }
