@@ -135,20 +135,50 @@ class Stems extends Component {
   }
 }
 
+class DictArticle extends Component {
+  render () {
+    return (
+      <div>
+        <div>{this.props.article.dict}</div>
+        <Stems stems={normaliseDict(this.props.article)} />
+      </div>
+    );
+  }
+}
+
+class TermArticle extends Component {
+  render () {
+    return (
+      <div>
+        <div>{this.props.article.dict}</div>
+        <Stems stems={normaliseTermWiki(this.props.article)} />
+      </div>
+    );
+  }
+}
+
+class SDTermArticle extends Component {
+  render () {
+    return (
+      <div>
+        <div>{this.props.article.dict}</div>
+        <Stems stems={normaliseSDTerm(this.props.article)} />
+      </div>
+    );
+  }
+}
+
 export default class Articles extends Component {
   render () {
     return (
       <div>
         {this.props.articles.map((article, i) => {
           if (article.termwikiref === '-1') {
-            let stems = normaliseDict(article);
-            return <Stems key={i} stems={stems} />;
+            return <DictArticle key={i} article={article} />;
           } else if (article.dict === 'termwiki') {
-            let stems = normaliseTermWiki(article);
-            return <Stems key={i} stems={stems} />;
+            return <TermArticle key={i} article={article} />;
           } else {
-            let stems = normaliseSDTerm(article);
-            return <Stems key={i} stems={stems} />;
+            return <SDTermArticle key={i} article={article} />;
           }
         })}
       </div>
