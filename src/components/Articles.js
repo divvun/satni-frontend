@@ -58,22 +58,35 @@ const term2dict = {
 const normaliseTermWiki = (existTerm) => {
   const terms = [];
 
-  existTerm.tg.forEach((tg) => {
+  const tg = existTerm.tg;
+  if (tg instanceof Object && tg instanceof Array) {
+    tg.forEach((tg) => {
+      try {
+        let stem = {};
+        stem['lemma'] = tg.t['#text'].trim();
+        stem['lang'] = term2dict[tg['xml:lang']];
+        stem['pos'] = tg.t.pos;
+
+        if (stem['lemma'] === existTerm.term.trim()) {
+          terms.unshift(stem);
+        } else {
+          terms.push(stem);
+        }
+      } catch (TypeError) {
+
+      }
+    });
+  } else {
     try {
       let stem = {};
       stem['lemma'] = tg.t['#text'].trim();
       stem['lang'] = term2dict[tg['xml:lang']];
       stem['pos'] = tg.t.pos;
-
-      if (stem['lemma'] === existTerm.term.trim()) {
-        terms.unshift(stem);
-      } else {
-        terms.push(stem);
-      }
+      terms.push(stem);
     } catch (TypeError) {
 
     }
-  });
+  }
 
   return terms;
 };
