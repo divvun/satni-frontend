@@ -69,7 +69,7 @@ function search (
       return Object.assign({}, state, {
         isSearching: false,
         usedSearchKeys: state.usedSearchKeys.add(action.key),
-        searchItems: state.searchItems.union(action.searchItems)
+        searchItems: action.searchItems ? state.searchItems.union(action.searchItems) : state.searchItems
       });
     default:
       return state;
