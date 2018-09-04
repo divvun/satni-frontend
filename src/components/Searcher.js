@@ -39,7 +39,7 @@ export default class Searcher extends Component {
           highlightedIndex,
         }) => {
           return (
-            <div className={css({ width: 250, margin: 'auto' })}>
+            <div className={css({ margin: 'auto' })}>
             <Div position="relative" css={{ paddingRight: '1.75em' }}>
               <Input
               {...getInputProps({

@@ -234,7 +234,7 @@ class SDTermArticle extends Component {
 export default class Articles extends Component {
   render () {
     return (
-      <div className={css({ width: 250, margin: 'auto', paddingLeft: '0.60em', textAlign: 'left' })}>
+      <div className={css({ margin: 'auto', paddingLeft: '0.60em',  paddingRight: '1.75em', textAlign: 'left' })}>
         {this.props.articles.map((article, i) => {
           if (article.termwikiref === '-1') {
             return <DictArticle key={i} article={article} />;

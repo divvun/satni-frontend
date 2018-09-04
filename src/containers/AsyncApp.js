@@ -9,7 +9,26 @@ import {
 import Articles from '../components/Articles';
 import Searcher from '../components/Searcher';
 import { debounce } from 'throttle-debounce'
-import { Div } from 'glamorous';
+import glamorous, { Div, A } from 'glamorous';
+
+const MyGrid = glamorous.div({
+  margin: 'auto',
+  // You can use @supports with glamor!
+  // So you can use @supports with glamorous as well!
+  '@supports (display: grid)': {
+    display: 'grid',
+    gridGap: 10,
+    gridTemplateAreas: `
+      "....... header ......."
+      "content content content"
+    `,
+  },
+});
+
+const Box = glamorous.div({
+  padding: 10,
+  fontSize: '150%',
+});
 
 class AsyncApp extends Component {
   constructor (props) {
@@ -44,28 +63,27 @@ class AsyncApp extends Component {
   render () {
     const { selectedLemma, articles, isFetching, search } = this.props;
     return (
-      <Div
-        css={{
-          display: 'flex',
-          flexDirection: 'column',
-          fontFamily: 'sans-serif',
-          justifyContent: 'center',
-          textAlign: 'center'
-        }}
-      >
-        <h2>Satni.org</h2>
-        <Searcher
-          onSelect={this.handleChange}
-          onInputChange={this.handleSearch}
-          search={search}
+      <MyGrid>
+        <Box css={{ gridArea: 'header', textAlign: 'center' }}>
+          <Div css={{
+            fontWeight: "bold",
+            fontSize: "120%"}}>sátni.org</Div>
+          <Div>Sámi dictionaries and terms delivered by<br/><A href="http://divvun.no">divvun.no</A></Div>
+        </Box>
+        <Box css={{ gridArea: 'content' }}>
+         <Searcher
+            onSelect={this.handleChange}
+            onInputChange={this.handleSearch}
+            search={search}
           />
-        {isFetching && articles.length === 0 && <h2>Loading...</h2>}
-        {selectedLemma && !isFetching && articles.length === 0 && <h2>Empty.</h2>}
-        {articles.length > 0 &&
-          <Div position="relative" >
-            <Articles articles={articles} />
-          </Div>}
-      </Div>
+            {isFetching && articles.length === 0 && <h2>Loading...</h2>}
+            {selectedLemma && !isFetching && articles.length === 0 && <h2>Empty.</h2>}
+            {articles.length > 0 &&
+              <Div position="relative" >
+                <Articles articles={articles} />
+              </Div>}
+        </Box>
+      </MyGrid>
     );
   }
 }
