@@ -9,6 +9,7 @@ import {
 import Articles from '../components/Articles';
 import Searcher from '../components/Searcher';
 import { debounce } from 'throttle-debounce'
+import { Div } from 'glamorous';
 
 class AsyncApp extends Component {
   constructor (props) {
@@ -43,7 +44,16 @@ class AsyncApp extends Component {
   render () {
     const { selectedLemma, articles, isFetching, search } = this.props;
     return (
-      <div>
+      <Div
+        css={{
+          display: 'flex',
+          flexDirection: 'column',
+          fontFamily: 'sans-serif',
+          justifyContent: 'center',
+          textAlign: 'center'
+        }}
+      >
+        <h2>Satni.org</h2>
         <Searcher
           onSelect={this.handleChange}
           onInputChange={this.handleSearch}
@@ -52,10 +62,10 @@ class AsyncApp extends Component {
         {isFetching && articles.length === 0 && <h2>Loading...</h2>}
         {selectedLemma && !isFetching && articles.length === 0 && <h2>Empty.</h2>}
         {articles.length > 0 &&
-          <div style={{ opacity: isFetching ? 0.5 : 1 }}>
+          <Div position="relative" >
             <Articles articles={articles} />
-          </div>}
-      </div>
+          </Div>}
+      </Div>
     );
   }
 }
