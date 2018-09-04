@@ -46,7 +46,8 @@ export default class Searcher extends Component {
                 placeholder: 'Search for a word',
                 isOpen,
                 onChange: event => {
-                  const value = inHTMLData(event.target.value);
+                  const value = inHTMLData(event.target.value.toLowerCase());
+                  console.log(value)
                   if (!value || value.length < 3) {
                     return;
                   }
@@ -71,7 +72,7 @@ export default class Searcher extends Component {
                   {this.props.search.isSearching ? (
                     <div>loading …</div>
                   ) : <Menu>
-                  {this.setting(inputValue)
+                  {this.setting(inputValue.toLowerCase())
                     .map((item, index) => (
                       <Item
                         {...getItemProps({
