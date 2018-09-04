@@ -68,7 +68,9 @@ class AsyncApp extends Component {
           <Div css={{
             fontWeight: "bold",
             fontSize: "120%"}}>sátni.org</Div>
-          <Div>Sámi dictionaries and terms delivered by<br/><A href="http://divvun.no">divvun.no</A></Div>
+          <Div>Sámi dictionaries and terms delivered by<br/>
+            <A href="http://divvun.no">Divvun</A>, <A href="http://giella.org">Giellagáldu</A> and <A href="http://giellatekno.uit.no">Giellatekno</A>
+            </Div>
         </Box>
         <Box css={{ gridArea: 'content' }}>
          <Searcher
