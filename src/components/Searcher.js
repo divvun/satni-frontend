@@ -3,6 +3,16 @@ import Downshift from 'downshift';
 import PropTypes from 'prop-types';
 import { Set } from 'immutable';
 import { inHTMLData } from 'xss-filters'
+import { css } from 'glamor';
+import glamorous, { Div } from 'glamorous';
+import {
+  Menu,
+  ControllerButton,
+  Input,
+  Item,
+  ArrowIcon,
+  XIcon
+} from '../components';
 
 export default class Searcher extends Component {
   setting = value => {
@@ -18,18 +28,23 @@ export default class Searcher extends Component {
       <Downshift
         onSelect={selection => onSelect(selection)} >
         {({
-          selectedItem,
           getInputProps,
+          getToggleButtonProps,
           getItemProps,
-          getLabelProps,
-          highlightedIndex,
           isOpen,
-          inputValue
+          toggleMenu,
+          clearSelection,
+          selectedItem,
+          inputValue,
+          highlightedIndex,
         }) => {
           return (
-            <div>
-              <label {...getLabelProps()}>Enter a word</label>
-              <input {...getInputProps({
+            <div className={css({ width: 250, margin: 'auto' })}>
+            <Div position="relative" css={{ paddingRight: '1.75em' }}>
+              <Input
+              {...getInputProps({
+                placeholder: 'Search for a word',
+                isOpen,
                 onChange: event => {
                   const value = inHTMLData(event.target.value);
                   if (!value || value.length < 3) {
@@ -37,30 +52,40 @@ export default class Searcher extends Component {
                   }
                   this.props.onInputChange(value);
                 }
-              })} />
+              })}
+              />
+              {selectedItem
+                ? <ControllerButton
+                    css={{ paddingTop: 4 }}
+                    onClick={clearSelection}
+                    aria-label="clear selection"
+                  >
+                    <XIcon />
+                  </ControllerButton>
+                : <ControllerButton {...getToggleButtonProps()}>
+                    <ArrowIcon isOpen={isOpen} />
+                  </ControllerButton>}
+              </Div>
               {isOpen ? (
                 <div>
                   {this.props.search.isSearching ? (
                     <div>loading …</div>
-                  ) : <div>{this.setting(inputValue)
+                  ) : <Menu>
+                  {this.setting(inputValue)
                     .map((item, index) => (
-                      <div
+                      <Item
                         {...getItemProps({
                           key: index,
                           item,
-                          style: {
-                        backgroundColor: highlightedIndex === index
-                          ? 'lightgray'
-                          : 'white',
-                        fontWeight: selectedItem === item
-                          ? 'bold'
-                          : 'normal'
-                          },
+                          index,
+                          isActive: highlightedIndex === index,
+                          isSelected: selectedItem === item
                         })}
                       >
                         {item}
-                      </div>
-                    ))}</div>}
+                      </Item>
+                    ))}
+                    </Menu>}
                 </div>
                   ) : null}
             </div>
