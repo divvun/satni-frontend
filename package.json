@@ -2,6 +2,7 @@
   "name": "satni.org",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "cross-fetch": "^2.2.2",
