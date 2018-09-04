@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { css } from 'glamor';
+import { Div, Span } from 'glamorous';
+import {
+  ArticleDiv
+} from '../components';
 
 const translationStems = (tg) => {
   let stems = [];
@@ -160,14 +165,14 @@ class Stems extends Component {
   render () {
     const stems = this.props.stems.map((stem, i) => {
       if (i === 0) {
-        return <dt key={i}>{stem.lemma} {stem.pos} {stem.lang}</dt>;
+        return <Div key={i}>{stem.lemma} {stem.pos} {stem.lang}</Div>;
       } else {
-        return <dd key={i}>{stem.lemma} {stem.pos} {stem.lang}</dd>;
+        return <Div key={i} css={{marginLeft: '2%'}}><Span css={{fontWeight: 'bold'}}>{stem.lemma}</Span> {stem.pos} {stem.lang}</Div>;
       }
     });
 
     return (
-      <dl>{stems}</dl>
+      <Div>{stems}</Div>
     );
   }
 }
@@ -175,10 +180,10 @@ class Stems extends Component {
 class Examples extends Component {
   render () {
     const examples = this.props.examples.map((example, i) => (
-      <div key={i}>
-        <div>{example.t}</div>
-        <div>{example.xt}</div>
-      </div>)
+      <Div key={i} css={{ paddingTop: '3%', paddingLeft: '2%'}}>
+        <div>{example.x}</div>
+        <Div css={{fontStyle: 'italic'}}>{example.xt}</Div>
+      </Div>)
     );
     return (
       <div>{examples}</div>
@@ -190,11 +195,11 @@ class DictArticle extends Component {
   render () {
     const {translations, examples} = normaliseDict(this.props.article);
     return (
-      <div>
-        <div>{this.props.article.dict}</div>
+      <ArticleDiv>
         <Stems stems={translations} />
         <Examples examples={examples} />
-      </div>
+        <Div css={{textAlign: 'right', marginTop: '1%', paddingBottom: '0', fontSize: '90%'}}>Source: {this.props.article.dict}</Div>
+      </ArticleDiv>
     );
   }
 }
@@ -202,11 +207,15 @@ class DictArticle extends Component {
 class TermArticle extends Component {
   render () {
     return (
-      <div>
-        <div>{this.props.article.dict}</div>
+      <ArticleDiv>
         <Stems stems={normaliseTermWiki(this.props.article)} />
-        <div><a href={`https://satni.uit.no/termwiki/index.php?title=${this.props.article.termwikiref}`}>This article on the TermWiki</a></div>
-      </div>
+        <Div css={{textAlign: 'right', marginTop: '1%', paddingBottom: '0', fontSize: '90%'}}>
+          <a
+            href={`https://satni.uit.no/termwiki/index.php?title=${this.props.article.termwikiref}`}
+            target='_blank'
+          >This article on the TermWiki</a>
+        </Div>
+      </ArticleDiv>
     );
   }
 }
@@ -214,10 +223,10 @@ class TermArticle extends Component {
 class SDTermArticle extends Component {
   render () {
     return (
-      <div>
-        <div>{this.props.article.dict}</div>
+      <ArticleDiv>
         <Stems stems={normaliseSDTerm(this.props.article)} />
-      </div>
+        <Div css={{textAlign: 'right', paddingTop: '1%', paddingBottom: '0', fontSize: '90%'}}>Source: {this.props.article.dict}</Div>
+      </ArticleDiv>
     );
   }
 }
@@ -225,7 +234,7 @@ class SDTermArticle extends Component {
 export default class Articles extends Component {
   render () {
     return (
-      <div>
+      <div className={css({ width: 250, margin: 'auto', paddingLeft: '0.60em', textAlign: 'left' })}>
         {this.props.articles.map((article, i) => {
           if (article.termwikiref === '-1') {
             return <DictArticle key={i} article={article} />;
