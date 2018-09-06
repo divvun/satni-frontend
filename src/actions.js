@@ -1,4 +1,5 @@
 import fetch from 'cross-fetch';
+import {toJson, removeDuplicates} from './utils';
 
 export const REQUEST_ARTICLES = 'REQUEST_ARTICLES';
 export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES';
@@ -47,14 +48,6 @@ function receiveItems (key, json) {
   };
 }
 
-function toJson (text) {
-  // eXist sometimes sends misformed json, correct it here
-  return JSON.parse(
-    text.indexOf('{') === 0 ?
-    '[' + text.slice(text.indexOf('{') + 1, text.lastIndexOf('}')) + ']' :
-    text);
-}
-
 function fetchArticles (lemma) {
   console.log('fetchArticles');
   return dispatch => {
@@ -63,7 +56,7 @@ function fetchArticles (lemma) {
     console.log(encodeURI(url));
     return fetch(encodeURI(url))
       .then(response => response.text())
-      .then(text => dispatch(receiveArticles(lemma, toJson(text))));
+      .then(text => dispatch(receiveArticles(lemma, removeDuplicates(toJson(text)))));
   };
 }
 
