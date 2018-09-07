@@ -23,4 +23,153 @@ const removeDuplicates = (existTerms) => {
   });
 };
 
-export {toJson, removeDuplicates};
+const translationStems = (tg) => {
+  let stems = [];
+
+  if (tg.t instanceof Object && tg.t instanceof Array) {
+    tg.t.forEach((tr) => {
+      stems.push({
+        'lemma': tr['#text'],
+        'lang': tg['xml:lang'],
+        'pos': tr.pos
+      });
+    });
+  } else {
+    stems.push({
+      'lemma': tg.t['#text'],
+      'lang': tg['xml:lang'],
+      'pos': tg.t.pos
+    });
+  }
+
+  return stems;
+};
+
+const translationExamples = (xg) => {
+  let examples = [];
+  if (xg instanceof Object && xg instanceof Array) {
+    xg.forEach((x) => {
+      examples.push({'x': x.x, 'xt': x.xt});
+    });
+  } else {
+    examples.push({'x': xg.x, 'xt': xg.xt});
+  }
+
+  return examples;
+};
+
+const normaliseDict = (existDict) => {
+  let translations = translationStems(existDict.tg);
+  translations.unshift({
+    'lemma': existDict.term,
+    'lang': existDict.lang,
+    'pos': existDict.pos
+  });
+
+  let examples = existDict.tg.xg ? translationExamples(existDict.tg.xg) : [];
+
+  return {translations, examples};
+};
+
+const term2dict = {
+  'se': 'sme',
+  'sme': 'sme',
+  'fi': 'fin',
+  'fin': 'fin',
+  'nb': 'nob',
+  'nor': 'nob',
+  'nob': 'nob',
+  'nn': 'nno',
+  'nno': 'nno',
+  'sv': 'swe',
+  'swe': 'swe',
+  'smn': 'smn',
+  'sma': 'sma',
+  'smj': 'smj',
+  'lat': 'lat',
+  'en': 'eng',
+  'eng': 'eng'
+};
+
+const normaliseTermWiki = (existTerm) => {
+  const terms = [];
+
+  const tg = existTerm.tg;
+  if (tg instanceof Object && tg instanceof Array) {
+    tg.forEach((tg) => {
+      let stem = {};
+      try {
+        stem['lemma'] = tg.t['#text'].trim();
+      } catch (TypeError) {
+        stem['lemma'] = tg.t.trim();
+      }
+      stem['lang'] = term2dict[tg['xml:lang']];
+      stem['pos'] = tg.t.pos;
+
+      if (stem['lemma']) {
+        if (stem['lemma'] === existTerm.term.trim()) {
+          terms.unshift(stem);
+        } else {
+          terms.push(stem);
+        }
+      }
+    });
+  } else {
+    let stem = {};
+    try {
+      stem['lemma'] = tg.t['#text'].trim();
+    } catch (TypeError) {
+      stem['lemma'] = tg.t.trim();
+    }
+    stem['lang'] = term2dict[tg['xml:lang']];
+    stem['pos'] = tg.t.pos;
+    terms.push(stem);
+  }
+
+  return terms;
+};
+
+const sdTranslationStems = (t, lang, pos) => {
+  let stems = [];
+
+  if (t instanceof Object && t instanceof Array) {
+    t.forEach((tr) => {
+      stems.push({
+        'lemma': tr.trim(),
+        'lang': lang,
+        'pos': pos
+      });
+    });
+  } else {
+    stems.push({
+      'lemma': t.trim(),
+      'lang': lang,
+      'pos': pos
+    });
+  }
+
+  return stems;
+};
+
+const normaliseSDTerm = (existTerm) => {
+  const terms = [];
+
+  existTerm.tg.forEach((tg) => {
+    let stems = sdTranslationStems(tg.t, term2dict[tg['xml:lang']], existTerm.pos);
+
+    stems.forEach((stem) => {
+      if (stem['lemma'] === existTerm.term.trim()) {
+        terms.unshift(stem);
+      } else {
+        terms.push(stem);
+      }
+    }
+  );
+  });
+  return terms;
+};
+
+export {
+  toJson, removeDuplicates, translationStems, translationExamples,
+  normaliseDict, normaliseTermWiki, normaliseSDTerm
+};
