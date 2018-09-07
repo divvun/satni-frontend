@@ -9,7 +9,7 @@ import {
 import Articles from '../components/Articles';
 import Searcher from '../components/Searcher';
 import { debounce } from 'throttle-debounce'
-import glamorous, { Div, A } from 'glamorous';
+import glamorous, { Div, A, Footer } from 'glamorous';
 
 const MyGrid = glamorous.div({
   margin: 'auto',
@@ -19,15 +19,15 @@ const MyGrid = glamorous.div({
     display: 'grid',
     gridGap: 10,
     gridTemplateAreas: `
-      "....... header ......."
-      "content content content"
+      "header"
+      "content"
     `,
   },
 });
 
 const Box = glamorous.div({
   padding: 10,
-  fontSize: '150%',
+  fontSize: '120%'
 });
 
 class AsyncApp extends Component {
@@ -64,15 +64,18 @@ class AsyncApp extends Component {
     const { selectedLemma, articles, isFetching, search } = this.props;
     return (
       <MyGrid>
-        <Box css={{ gridArea: 'header', textAlign: 'center' }}>
+        <Box css={{ gridArea: 'header'}}>
           <Div css={{
             fontWeight: "bold",
-            fontSize: "120%"}}>sátni.org</Div>
-          <Div>Sámi dictionaries and terms delivered by<br/>
-            <A href="http://divvun.no">Divvun</A>, <A href="http://giella.org">Giellagáldu</A> and <A href="http://giellatekno.uit.no">Giellatekno</A>
-            </Div>
+            fontSize: "200%",
+            textAlign: "center"}}>
+            sátni.org
+          </Div>
         </Box>
-        <Box css={{ gridArea: 'content' }}>
+        <Box css={{
+          gridArea: 'content',
+          paddingBottom: "50px"
+        }}>
          <Searcher
             onSelect={this.handleChange}
             onInputChange={this.handleSearch}
@@ -85,6 +88,19 @@ class AsyncApp extends Component {
                 <Articles articles={articles} />
               </Div>}
         </Box>
+        <Footer css={{
+          gridArea: 'footer',
+          position:"fixed",
+          left:"0px",
+          bottom:"0px",
+          height:"50px",
+          width:"100%",
+          background:"#999",
+          textAlign: "center"
+        }}>
+          Sámi dictionaries and terms delivered by<br/>
+          <A href="http://divvun.no">Divvun</A>, <A href="http://giella.org">Giellagáldu</A> and <A href="http://giellatekno.uit.no">Giellatekno</A>
+          </Footer>
       </MyGrid>
     );
   }
