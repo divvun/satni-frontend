@@ -1,3 +1,5 @@
+import cheerio from 'cheerio';
+
 function toJson (text) {
   // eXist sometimes sends misformed json, correct it here
   return JSON.parse(
@@ -169,7 +171,41 @@ const normaliseSDTerm = (existTerm) => {
   return terms;
 };
 
+const normaliseParadigm = (html) => {
+  const dom = cheerio.load(html);
+  const fontsElements = dom('font[color=red]');
+  const want = {};
+  let splits = [];
+  fontsElements.each((index, elem) => {
+    if (elem.parent.prev.prev.children[0].data.trim()) {
+      splits = elem.parent.prev.prev.children[0].data.split(' ');
+      if (splits.length === 3) {
+        if (!want[splits[2]]) {
+          want[splits[2]] = {};
+          want[splits[2]][splits[1]] = [];
+        } else {
+          want[splits[2]][splits[1]] = [];
+        }
+        want[splits[2]][splits[1]].push(elem.children[0].data);
+      } else {
+        if (!want[splits[1]]) {
+          want[splits[1]] = [];
+        }
+        want[splits[1]].push(elem.children[0].data);
+      }
+    } else {
+      if (splits.length === 3) {
+        want[splits[2]][splits[1]].push(elem.children[0].data);
+      } else {
+        want[splits[1]].push(elem.children[0].data);
+      }
+    }
+  });
+
+  return want;
+};
+
 export {
   toJson, removeDuplicates, translationStems, translationExamples,
-  normaliseDict, normaliseTermWiki, normaliseSDTerm
+  normaliseDict, normaliseTermWiki, normaliseSDTerm, normaliseParadigm
 };
