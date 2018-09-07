@@ -90,31 +90,33 @@ const normaliseTermWiki = (existTerm) => {
   const tg = existTerm.tg;
   if (tg instanceof Object && tg instanceof Array) {
     tg.forEach((tg) => {
+      let stem = {};
       try {
-        let stem = {};
         stem['lemma'] = tg.t['#text'].trim();
-        stem['lang'] = term2dict[tg['xml:lang']];
-        stem['pos'] = tg.t.pos;
+      } catch (TypeError) {
+        stem['lemma'] = tg.t.trim();
+      }
+      stem['lang'] = term2dict[tg['xml:lang']];
+      stem['pos'] = tg.t.pos;
 
+      if (stem['lemma']) {
         if (stem['lemma'] === existTerm.term.trim()) {
           terms.unshift(stem);
         } else {
           terms.push(stem);
         }
-      } catch (TypeError) {
-
       }
     });
   } else {
+    let stem = {};
     try {
-      let stem = {};
       stem['lemma'] = tg.t['#text'].trim();
-      stem['lang'] = term2dict[tg['xml:lang']];
-      stem['pos'] = tg.t.pos;
-      terms.push(stem);
     } catch (TypeError) {
-
+      stem['lemma'] = tg.t.trim();
     }
+    stem['lang'] = term2dict[tg['xml:lang']];
+    stem['pos'] = tg.t.pos;
+    terms.push(stem);
   }
 
   return terms;
