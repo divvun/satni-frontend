@@ -1,12 +1,14 @@
 import fetch from 'cross-fetch';
 import {normaliseArticles, toJson} from './utils';
 
+export const REQUEST_PARADIGM = 'REQUEST_PARADIGM';
 export const REQUEST_ARTICLES = 'REQUEST_ARTICLES';
-export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES';
+export const REQUEST_ITEMS = 'REQUEST_ITEMS';
 export const SELECT_LEMMA = 'SELECT_LEMMA';
 export const SELECT_KEY = 'SELECT_KEY';
 
-export const REQUEST_ITEMS = 'REQUEST_ITEMS';
+export const RECEIVE_PARADIGM = 'RECEIVE_PARADIGM';
+export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES';
 export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
 
 export const selectLemma = (lemma) => ({
@@ -28,6 +30,11 @@ export const requestItems = (key) => ({
   type: REQUEST_ITEMS
 });
 
+export const requestParadigm = (stem) => ({
+    type: REQUEST_PARADIGM,
+    stem
+  });
+
 export const receiveArticles = (lemma, json) => ({
   type: RECEIVE_ARTICLES,
   lemma,
@@ -39,6 +46,12 @@ export const receiveItems = (key, json) => ({
   key,
   searchItems: json
 });
+
+export const receiveParadigm = (stem, text) => ({
+    type: RECEIVE_PARADIGM,
+    stem,
+    paradigm: text
+  });
 
 export const fetchArticles = (lemma) => {
   return dispatch => {
@@ -59,6 +72,18 @@ const fetchItems = (key) => {
       .then(text => dispatch(receiveItems(key, toJson(text))));
   };
 };
+
+export const fetchParadigm = (stem) => {
+  console.log('fetchItems');
+  return dispatch => {
+    dispatch(requestParadigm(stem));
+    let url = `http://gtweb.uit.no/cgi-bin/smi/smi.cgi?text=${stem.lemma}&pos=${stem.pos}&mode=standard&action=paradigm&lang=${stem.lang}`;
+    console.log(encodeURI(url));
+    return fetch(encodeURI(url, {credentials: 'same-origin', mode: 'no-cors'}))
+      .then(response => response.text())
+      .then(text => dispatch(receiveParadigm(stem, text)));
+  };
+}
 
 export const shouldFetchArticles = (state, lemma) => {
   const articles = state.articlesByLemma[lemma];
