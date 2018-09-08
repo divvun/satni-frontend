@@ -1,20 +1,35 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'glamor';
-import { Div, Span } from 'glamorous';
+import { Div, Span, A } from 'glamorous';
 import { ArticleDiv } from '../components';
 import {
   normaliseDict,
   normaliseTermWiki,
   normaliseSDTerm } from '../utils';
+import { List } from 'immutable';
+
+const addKorpLink = (lang, lemma) => {
+  const korpLangs = Set.of('sma', 'sme', 'smj', 'smn', 'sms');
+
+  if (korpLangs.has(lang)) {
+    const searchString = `Search for ${lemma} in Korp`;
+    const korpAddress = (lang !== 'sme' && korpLangs.has(lang))
+                        ? `http://gtweb.uit.no/korp/?mode=${lang}#?search=cqp|[lemma%3D"${lemma}"]`
+                        : `http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D"${lemma}"]`;
+    return <A href={korpAddress} target='_blank'>{searchString}</A>;
+  } else {
+    return '';
+  }
+};
 
 class Stems extends Component {
   render () {
     const stems = this.props.stems.map((stem, i) => {
       if (i === 0) {
-        return <Div key={i}>{stem.lemma} {stem.pos} {stem.lang}</Div>;
+        return <Div key={i}>{stem.lemma} {stem.pos} {stem.lang} {addKorpLink(stem.lang, stem.lemma)}</Div>;
       } else {
-        return <Div key={i} css={{marginLeft: '2%'}}><Span css={{fontWeight: 'bold'}}>{stem.lemma}</Span> {stem.pos} {stem.lang}</Div>;
+        return <Div key={i} css={{marginLeft: '2%'}}><Span css={{fontWeight: 'bold'}}>{stem.lemma}</Span> {stem.pos} {stem.lang} {addKorpLink(stem.lang, stem.lemma)}</Div>;
       }
     });
 
