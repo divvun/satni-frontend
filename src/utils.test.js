@@ -603,5 +603,222 @@ describe('Massage noun data from the cgi-bin paradigm generator', () => {
 
     expect(normaliseNounParadigm(html)).toEqual(want);
   });
+
+  it('Turn sme nouns html into something usable', () => {
+    const html = `<html>
+    <head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>Generating North Saami inflectional paradigms</title></head>
+<body>
+<a href="http://uit.no/">The University of Troms&oslash; ></a>
+<a href="http://giellatekno.uit.no/">Giellatekno ></a>
+<br></br>
+<p></p>
+<form action="http://gtweb.uit.no/cgi-bin/smi/smi.cgi" method="get" name="form3" target="_self">
+<table border="0" cellpadding="2" cellspacing="1">
+<tr>
+<td>
+<input name="text" size="50" type="text"></input>
+<select name="pos">
+<option value="Any">Any</option>
+<option value="N">Noun</option>
+<option value="V">Verb</option>
+<option value="Pron">Pronoun</option>
+<option value="A">Adjective</option>
+<option value="Adv">Adverb</option>
+<option value="Num">Numeral</option>
+</select>
+</td>
+<td>
+<a href="http://giellatekno.uit.no/">
+<img src="http://giellatekno.uit.no/images/project.png" style="border: none;" title="Giellatekno"></img>
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<input name="mode" type="radio" value="minimal">Give minimal paradigm</input>
+<br></br>
+<input checked="1" name="mode" type="radio" value="standard">Standard</input>
+<br></br>
+<input name="mode" type="radio" value="full">Full paradigm</input>
+<br></br>
+<input name="lang" type="hidden" value="sme"></input>
+<input name="plang" type="hidden" value="eng"></input>
+<input name="action" type="hidden" value="paradigm"></input>
+</td>
+</tr>
+<tr>
+<td>
+<input type="submit" value="Send form"></input>
+<input type="reset" value="Reset form"></input>
+</td>
+</tr>
+</table>
+</form>
+<p>
+<b>guolli: Noun (N)</b>
+</p>
+<table>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Sg Nom</td>
+<td>
+<font color="red">guolli</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Sg Gen</td>
+<td>
+<font color="red">guole</font>
+</td>
+<td>
+<font color="red">guoli</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Sg Acc</td>
+<td>
+<font color="red">guoli</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Sg Ill</td>
+<td>
+<font color="red">guollái</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Sg Loc</td>
+<td>
+<font color="red">guolis</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Sg Com</td>
+<td>
+<font color="red">guliin</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Pl Nom</td>
+<td>
+<font color="red">guolit</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Pl Gen</td>
+<td>
+<font color="red">guliid</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Pl Acc</td>
+<td>
+<font color="red">guliid</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Pl Ill</td>
+<td>
+<font color="red">guliide</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Pl Loc</td>
+<td>
+<font color="red">guliin</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Pl Com</td>
+<td>
+<font color="red">guliiguin</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolli</font>
+</td>
+<td>N Ess</td>
+<td>
+<font color="red">guollin</font>
+</td>
+</tr>
+</table>
+<hr></hr>
+<p>
+<br></br>
+<a href="http://giellatekno.uit.no/doc/lang/sme/docu-mini-smi-grammartags.html">Morphological tags</a></p>
+</body>
+</html>
+`;
+
+    const want = {
+      'Nom': {
+        'Sg': ['guolli'],
+        'Pl': ['guolit']
+      },
+      'Gen': {
+        'Sg': ['guole', 'guoli'],
+        'Pl': ['guliid']
+      },
+      'Acc': {
+        'Sg': ['guoli'],
+        'Pl': ['guliid']
+      },
+      'Ill': {
+        'Sg': ['guollái'],
+        'Pl': ['guliide']
+      },
+      'Loc': {
+        'Sg': ['guolis'],
+        'Pl': ['guliin']
+      },
+      'Com': {
+        'Sg': ['guliin'],
+        'Pl': ['guliiguin']
+      },
+      'Ess': ['guollin']
+    };
+
+    expect(normaliseNounParadigm(html)).toEqual(want);
+  });
+
   });
 });
