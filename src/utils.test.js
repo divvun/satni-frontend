@@ -820,5 +820,427 @@ describe('Massage noun data from the cgi-bin paradigm generator', () => {
     expect(normaliseNounParadigm(html)).toEqual(want);
   });
 
+  it('Turn sma nouns html into something usable', () => {
+    const html = `<html>
+    <head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>Generating South Saami inflectional paradigms</title></head>
+<body>
+<a href="http://uit.no/">The University of Troms&oslash; ></a>
+<a href="http://giellatekno.uit.no/">Giellatekno ></a>
+<br></br>
+<p></p>
+<form action="http://gtweb.uit.no/cgi-bin/smi/smi.cgi" method="get" name="form3" target="_self">
+<table border="0" cellpadding="2" cellspacing="1">
+<tr>
+<td>
+<input name="text" size="50" type="text"></input>
+<select name="pos">
+<option value="Any">Any</option>
+<option value="N">Noun</option>
+<option value="V">Verb</option>
+<option value="Pron">Pronoun</option>
+<option value="A">Adjective</option>
+<option value="Adv">Adverb</option>
+<option value="Num">Numeral</option>
+</select>
+</td>
+<td>
+<a href="http://giellatekno.uit.no/">
+<img src="http://giellatekno.uit.no/images/project.png" style="border: none;" title="Giellatekno"></img>
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<input name="mode" type="radio" value="minimal">Give minimal paradigm</input>
+<br></br>
+<input checked="1" name="mode" type="radio" value="standard">Standard</input>
+<br></br>
+<input name="mode" type="radio" value="full">Full paradigm</input>
+<br></br>
+<input name="lang" type="hidden" value="sma"></input>
+<input name="plang" type="hidden" value="eng"></input>
+<input name="action" type="hidden" value="paradigm"></input>
+</td>
+</tr>
+<tr>
+<td>
+<input type="submit" value="Send form"></input>
+<input type="reset" value="Reset form"></input>
+</td>
+</tr>
+</table>
+</form>
+<p>
+<b>guelie: Noun (N)</b>
+</p>
+<table>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Nom</td>
+<td>
+<font color="red">guelie</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Gen</td>
+<td>
+<font color="red">guelien</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Acc</td>
+<td>
+<font color="red">gueliem</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Ill</td>
+<td>
+<font color="red">gualan</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Ine</td>
+<td>
+<font color="red">guelesne</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Ela</td>
+<td>
+<font color="red">gueleste</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Com</td>
+<td>
+<font color="red">gööline</font>
+</td>
+<td>
+<font color="red">gueline</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Pl Nom</td>
+<td>
+<font color="red">guelieh</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Pl Gen</td>
+<td>
+<font color="red">gööli</font>
+</td>
+<td>
+<font color="red">gueliej</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Pl Acc</td>
+<td>
+<font color="red">göölide</font>
+</td>
+<td>
+<font color="red">guelide</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Pl Ill</td>
+<td>
+<font color="red">göölide</font>
+</td>
+<td>
+<font color="red">guelide</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Pl Ine</td>
+<td>
+<font color="red">gööline</font>
+</td>
+<td>
+<font color="red">gueline</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Pl Ela</td>
+<td>
+<font color="red">göölijste</font>
+</td>
+<td>
+<font color="red">guelijste</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Pl Com</td>
+<td>
+<font color="red">gööligujmie</font>
+</td>
+<td>
+<font color="red">gueliejgujmie</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Ess</td>
+<td>
+<font color="red">gööline</font>
+</td>
+<td>
+<font color="red">gueline</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Nom PxSg1</td>
+<td>
+<font color="red">gualeme</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Nom PxSg2</td>
+<td>
+<font color="red">gualedh</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Nom PxSg3</td>
+<td>
+<font color="red">guelese</font>
+</td>
+<td>
+<font color="red">guelebe</font>
+</td>
+<td>
+<font color="red">guelebe</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Gen PxSg1</td>
+<td>
+<font color="red">gualene</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Gen PxSg3</td>
+<td>
+<font color="red">gueleben</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Acc PxSg1</td>
+<td>
+<font color="red">gualeme</font>
+</td>
+<td>
+<font color="red">gualemem</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Acc PxSg2</td>
+<td>
+<font color="red">gualemdh</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Acc PxSg3</td>
+<td>
+<font color="red">guelemse</font>
+</td>
+<td>
+<font color="red">guelebem</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Ill PxSg1</td>
+<td>
+<font color="red">gualasanne</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Ill PxSg2</td>
+<td>
+<font color="red">gualasadth</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Ill PxSg3</td>
+<td>
+<font color="red">gueliebasse</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Ine PxSg3</td>
+<td>
+<font color="red">gueliebinie</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Ela PxSg1</td>
+<td>
+<font color="red">gueliestanne</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Ela PxSg2</td>
+<td>
+<font color="red">gueliestadth</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Ela PxSg3</td>
+<td>
+<font color="red">gueliebistie</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Com PxSg2</td>
+<td>
+<font color="red">gualanadth</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guelie</font>
+</td>
+<td>N Sg Com PxSg3</td>
+<td>
+<font color="red">gueliebinie</font>
+</td>
+</tr>
+</table>
+<hr></hr>
+<p>
+<br></br>
+<a href="http://giellatekno.uit.no/doc/lang/sme/docu-mini-smi-grammartags.html">Morphological tags</a></p>
+</body>
+</html>
+`;
+
+    const want = {
+      'Nom': {
+        'Sg': ['guelie'],
+        'Pl': ['guelieh']
+      },
+      'Gen': {
+        'Sg': ['guelien'],
+        'Pl': ['gööli', 'gueliej']
+      },
+      'Acc': {
+        'Sg': ['gueliem'],
+        'Pl': ['göölide', 'guelide']
+      },
+      'Ill': {
+        'Sg': ['gualan'],
+        'Pl': ['göölide', 'guelide']
+      },
+      'Ine': {
+        'Sg': ['guelesne'],
+        'Pl': ['gööline', 'gueline']
+      },
+      'Ela': {
+        'Sg': ['gueleste'],
+        'Pl': ['göölijste', 'guelijste']
+      },
+      'Com': {
+        'Sg': ['gööline', 'gueline'],
+        'Pl': ['gööligujmie', 'gueliejgujmie']
+      },
+      'Ess': ['gööline', 'gueline']
+    };
+
+    expect(normaliseNounParadigm(html)).toEqual(want);
   });
 });
