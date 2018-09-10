@@ -196,7 +196,7 @@ const normaliseSDTerm = (existTerm) => {
   };
 };
 
-const normaliseParadigm = (html) => {
+const normaliseNounParadigm = (html) => {
   const dom = cheerio.load(html);
   const fontsElements = dom('font[color=red]');
   const want = {};
@@ -232,5 +232,5 @@ const normaliseParadigm = (html) => {
 
 export {
   toJson, removeDuplicates, translationStems, translationExamples,
-  normaliseDict, normaliseTermWiki, normaliseSDTerm, normaliseParadigm
+  normaliseDict, normaliseTermWiki, normaliseSDTerm, normaliseNounParadigm
 };
