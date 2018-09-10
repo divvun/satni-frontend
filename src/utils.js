@@ -204,25 +204,29 @@ const normaliseNounParadigm = (html) => {
   fontsElements.each((index, elem) => {
     if (elem.parent.prev.prev.children[0].data.trim()) {
       splits = elem.parent.prev.prev.children[0].data.split(' ');
-      if (splits.length === 3) {
-        if (!want[splits[2]]) {
-          want[splits[2]] = {};
-          want[splits[2]][splits[1]] = [];
+      if (splits.length < 4) {
+        if (splits.length === 3) {
+          if (!want[splits[2]]) {
+            want[splits[2]] = {};
+            want[splits[2]][splits[1]] = [];
+          } else {
+            want[splits[2]][splits[1]] = [];
+          }
+          want[splits[2]][splits[1]].push(elem.children[0].data);
         } else {
-          want[splits[2]][splits[1]] = [];
+          if (!want[splits[1]]) {
+            want[splits[1]] = [];
+          }
+          want[splits[1]].push(elem.children[0].data);
         }
-        want[splits[2]][splits[1]].push(elem.children[0].data);
-      } else {
-        if (!want[splits[1]]) {
-          want[splits[1]] = [];
-        }
-        want[splits[1]].push(elem.children[0].data);
       }
     } else {
-      if (splits.length === 3) {
-        want[splits[2]][splits[1]].push(elem.children[0].data);
-      } else {
-        want[splits[1]].push(elem.children[0].data);
+      if (splits.length < 4) {
+        if (splits.length === 3) {
+          want[splits[2]][splits[1]].push(elem.children[0].data);
+        } else {
+          want[splits[1]].push(elem.children[0].data);
+        }
       }
     }
   });
