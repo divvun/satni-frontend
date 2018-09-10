@@ -6,7 +6,7 @@ import {
   normaliseDict,
   normaliseTermWiki,
   normaliseSDTerm,
-  normaliseParadigm
+  normaliseNounParadigm
 } from './utils';
 import {
   resultSDTerm,
@@ -355,7 +355,7 @@ describe('Massage data from eXist', () => {
   });
 });
 
-describe('Massage data from the cgi-bin paradigm generator', () => {
+describe('Massage noun data from the cgi-bin paradigm generator', () => {
   it('Turn smn nouns html into something usable', () => {
     const html = `<html>
                     <head>
@@ -601,6 +601,7 @@ describe('Massage data from the cgi-bin paradigm generator', () => {
       'Ess': ['kyellin']
     };
 
-    expect(normaliseParadigm(html)).toEqual(want);
+    expect(normaliseNounParadigm(html)).toEqual(want);
+  });
   });
 });
