@@ -17,7 +17,7 @@ const addKorpLink = (lang, lemma) => {
     const korpAddress = (lang !== 'sme' && korpLangs.has(lang))
                         ? `http://gtweb.uit.no/korp/?mode=${lang}#?search=cqp|[lemma%3D"${lemma}"]`
                         : `http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D"${lemma}"]`;
-    return <A href={korpAddress} target='_blank'>{searchString}</A>;
+    return <Div css={{float: 'right', display: 'inline'}}><A href={korpAddress} target='_blank'>{searchString}</A></Div>;
   } else {
     return '';
   }
@@ -27,9 +27,19 @@ class Stems extends Component {
   render () {
     const stems = this.props.stems.map((stem, i) => {
       if (i === 0) {
-        return <Div key={i}>{stem.lemma} {stem.pos} {stem.lang} {addKorpLink(stem.lang, stem.lemma)}</Div>;
+        return (
+          <Div css={{width: '100%'}}>
+            <Div key={i} css={{ display: 'inline'}}>{stem.lemma} {stem.pos} {stem.lang}</Div>
+            {addKorpLink(stem.lang, stem.lemma)}
+          </Div>
+        );
       } else {
-        return <Div key={i} css={{marginLeft: '2%'}}><Span css={{fontWeight: 'bold'}}>{stem.lemma}</Span> {stem.pos} {stem.lang} {addKorpLink(stem.lang, stem.lemma)}</Div>;
+        return (
+          <div>
+            <Div key={i} css={{marginLeft: '2%', display: 'inline'}}><Span css={{fontWeight: 'bold'}}>{stem.lemma}</Span> {stem.pos} {stem.lang}</Div>
+            {addKorpLink(stem.lang, stem.lemma)}
+          </div>
+        );
       }
     });
 
