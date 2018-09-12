@@ -1,4 +1,5 @@
-import cheerio from 'cheerio';
+import xpath from 'xpath';
+import {DOMParser} from 'xmldom';
 
 const toJson = (text) => {
   // eXist sometimes sends misformed json, correct it here
@@ -197,36 +198,24 @@ const normaliseSDTerm = (existTerm) => {
 };
 
 const normaliseNounParadigm = (html) => {
-  const dom = cheerio.load(html);
-  const fontsElements = dom('font[color=red]');
+  const doc = new DOMParser().parseFromString(html);
+  const tables = xpath.select('.//table', doc);
+  const tableRows = xpath.select('.//tr', tables[1]);
   const want = {};
   let splits = [];
-  fontsElements.each((index, elem) => {
-    if (elem.parent.prev.prev.children[0].data.trim()) {
-      splits = elem.parent.prev.prev.children[0].data.split(' ');
-      if (splits.length < 4) {
-        if (splits.length === 3) {
-          if (!want[splits[2]]) {
-            want[splits[2]] = {};
-            want[splits[2]][splits[1]] = [];
-          } else {
-            want[splits[2]][splits[1]] = [];
-          }
-          want[splits[2]][splits[1]].push(elem.children[0].data);
-        } else {
-          if (!want[splits[1]]) {
-            want[splits[1]] = [];
-          }
-          want[splits[1]].push(elem.children[0].data);
+
+  tableRows.forEach((tr) => {
+    splits = xpath.select('.//td', tr)[1].firstChild.data.split(' ');
+    if (splits.length < 4) {
+      if (splits.length === 3) {
+        if (!want[splits[2]]) {
+          want[splits[2]] = {};
         }
-      }
-    } else {
-      if (splits.length < 4) {
-        if (splits.length === 3) {
-          want[splits[2]][splits[1]].push(elem.children[0].data);
-        } else {
-          want[splits[1]].push(elem.children[0].data);
-        }
+        want[splits[2]][splits[1]] = xpath.select('.//font[@color="red"]', tr)
+          .map((font) => font.firstChild.data);
+      } else {
+        want[splits[1]] = xpath.select('.//font[@color="red"]', tr)
+          .map((font) => font.firstChild.data);
       }
     }
   });
