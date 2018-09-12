@@ -597,8 +597,8 @@ describe('Massage noun data from the cgi-bin paradigm generator', () => {
         'Sg': ['kyelettáá'],
         'Pl': ['kuolijttáá']
       },
-      'Par': ['kyellid'],
-      'Ess': ['kyellin']
+      'Par_both': ['kyellid'],
+      'Ess_both': ['kyellin']
     };
 
     expect(normaliseNounParadigm(html)).toEqual(want);
@@ -814,7 +814,7 @@ describe('Massage noun data from the cgi-bin paradigm generator', () => {
         'Sg': ['guliin'],
         'Pl': ['guliiguin']
       },
-      'Ess': ['guollin']
+      'Ess_both': ['guollin']
     };
 
     expect(normaliseNounParadigm(html)).toEqual(want);
@@ -1238,7 +1238,320 @@ describe('Massage noun data from the cgi-bin paradigm generator', () => {
         'Sg': ['gööline', 'gueline'],
         'Pl': ['gööligujmie', 'gueliejgujmie']
       },
-      'Ess': ['gööline', 'gueline']
+      'Ess_both': ['gööline', 'gueline']
+    };
+
+    expect(normaliseNounParadigm(html)).toEqual(want);
+  });
+
+  it('Turn smj nouns html into something usable', () => {
+    const html = `<html>
+    <head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>Generating Lule Saami inflectional paradigms</title></head>
+<body>
+<a href="http://uit.no/">The University of Troms&oslash; ></a>
+<a href="http://giellatekno.uit.no/">Giellatekno ></a>
+<br></br>
+<p></p>
+<form action="http://gtweb.uit.no/cgi-bin/smi/smi.cgi" method="get" name="form3" target="_self">
+<table border="0" cellpadding="2" cellspacing="1">
+<tr>
+<td>
+<input name="text" size="50" type="text"></input>
+<select name="pos">
+<option value="Any">Any</option>
+<option value="N">Noun</option>
+<option value="V">Verb</option>
+<option value="Pron">Pronoun</option>
+<option value="A">Adjective</option>
+<option value="Adv">Adverb</option>
+<option value="Num">Numeral</option>
+</select>
+</td>
+<td>
+<a href="http://giellatekno.uit.no/">
+<img src="http://giellatekno.uit.no/images/project.png" style="border: none;" title="Giellatekno"></img>
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<input name="mode" type="radio" value="minimal">Give minimal paradigm</input>
+<br></br>
+<input checked="1" name="mode" type="radio" value="standard">Standard</input>
+<br></br>
+<input name="mode" type="radio" value="full">Full paradigm</input>
+<br></br>
+<input name="lang" type="hidden" value="smj"></input>
+<input name="plang" type="hidden" value="eng"></input>
+<input name="action" type="hidden" value="paradigm"></input>
+</td>
+</tr>
+<tr>
+<td>
+<input type="submit" value="Send form"></input>
+<input type="reset" value="Reset form"></input>
+</td>
+</tr>
+</table>
+</form>
+<p>
+<b>guolle: Noun (N)</b>
+</p>
+<table>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Sg Nom</td>
+<td>
+<font color="red">guolle</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Sg Gen</td>
+<td>
+<font color="red">guole</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Sg Acc</td>
+<td>
+<font color="red">guolev</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Sg Ill</td>
+<td>
+<font color="red">guolláj</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Sg Ine</td>
+<td>
+<font color="red">guolen</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Sg Ela</td>
+<td>
+<font color="red">guoles</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Sg Com</td>
+<td>
+<font color="red">guolijn</font>
+</td>
+<td>
+<font color="red">guolijn</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Sg Abe</td>
+<td>
+<font color="red">guoledagá</font>
+</td>
+<td>
+<font color="red">guoledagi</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Pl Nom</td>
+<td>
+<font color="red">guole</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Pl Gen</td>
+<td>
+<font color="red">guolij</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Pl Acc</td>
+<td>
+<font color="red">guolijt</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Pl Ill</td>
+<td>
+<font color="red">guolijda</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Pl Ine</td>
+<td>
+<font color="red">guolijn</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Pl Ela</td>
+<td>
+<font color="red">guolijs</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Pl Com</td>
+<td>
+<font color="red">guolij</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Pl Abe</td>
+<td>
+<font color="red">guolijdagá</font>
+</td>
+<td>
+<font color="red">guolijdagi</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Abe</td>
+<td>
+<font color="red">guoledak</font>
+</td>
+<td>
+<font color="red">guoleda</font>
+</td>
+</tr>
+<tr>
+<td>
+<font color="white">guolle</font>
+</td>
+<td>N Ess</td>
+<td>
+<font color="red">guollen</font>
+</td>
+</tr>
+</table>
+<hr></hr>
+<p>
+<br></br>
+<a href="http://giellatekno.uit.no/doc/lang/sme/docu-mini-smi-grammartags.html">Morphological tags</a></p>
+</body>
+</html>
+    `;
+
+    const want = {
+      'Abe': {
+        'Pl': ['guolijdagá', 'guolijdagi'],
+        'Sg': ['guoledagá', 'guoledagi']
+      },
+      'Abe_both': [
+        'guoledak',
+        'guoleda'
+      ],
+      'Acc': {
+        'Pl': [
+          'guolijt'
+        ],
+        'Sg': [
+          'guolev'
+        ]
+      },
+      'Com': {
+        'Pl': [
+          'guolij'
+        ],
+        'Sg': [
+          'guolijn',
+          'guolijn'
+        ]
+      },
+      'Ela': {
+        'Pl': [
+          'guolijs'
+        ],
+        'Sg': [
+          'guoles'
+        ]
+      },
+      'Ess_both': [
+        'guollen'
+      ],
+      'Gen': {
+        'Pl': [
+          'guolij'
+        ],
+        'Sg': [
+          'guole'
+        ]
+      },
+      'Ill': {
+        'Pl': [
+          'guolijda'
+        ],
+        'Sg': [
+          'guolláj'
+        ]
+      },
+      'Ine': {
+        'Pl': [
+          'guolijn'
+        ],
+        'Sg': [
+          'guolen'
+        ]
+      },
+      'Nom': {
+        'Pl': [
+          'guole'
+        ],
+        'Sg': [
+          'guolle'
+        ]
+      }
     };
 
     expect(normaliseNounParadigm(html)).toEqual(want);
