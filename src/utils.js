@@ -214,7 +214,7 @@ const normaliseNounParadigm = (html) => {
         want[splits[2]][splits[1]] = xpath.select('.//font[@color="red"]', tr)
           .map((font) => font.firstChild.data);
       } else {
-        want[splits[1]] = xpath.select('.//font[@color="red"]', tr)
+        want[splits[1] + '_both'] = xpath.select('.//font[@color="red"]', tr)
           .map((font) => font.firstChild.data);
       }
     }
