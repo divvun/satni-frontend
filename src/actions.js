@@ -15,7 +15,7 @@ export function selectLemma (lemma) {
   };
 }
 
-function requestArticles (lemma) {
+export function requestArticles (lemma) {
   console.log(lemma);
   return {
     type: REQUEST_ARTICLES,
@@ -23,23 +23,23 @@ function requestArticles (lemma) {
   };
 }
 
-function requestItems (key) {
+export function requestItems (key) {
   console.log(key);
   return {
     type: REQUEST_ITEMS
   };
 }
 
-function receiveArticles (lemma, text) {
+export function receiveArticles (lemma, json) {
   console.log('receiveArticles');
   return {
     type: RECEIVE_ARTICLES,
     lemma,
-    articles: text
+    articles: json
   };
 }
 
-function receiveItems (key, json) {
+export function receiveItems (key, json) {
   console.log('receiveItems');
   return {
     type: RECEIVE_ITEMS,
@@ -72,7 +72,7 @@ function fetchItems (key) {
   };
 }
 
-function shouldFetchArticles (state, lemma) {
+export function shouldFetchArticles (state, lemma) {
   console.log('shouldFetchArticles');
   const articles = state.articlesByLemma[lemma];
   if (!lemma) {
