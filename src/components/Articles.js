@@ -7,7 +7,7 @@ import {
   normaliseDict,
   normaliseTermWiki,
   normaliseSDTerm } from '../utils';
-import { List } from 'immutable';
+import { Set } from 'immutable';
 
 const addKorpLink = (lang, lemma) => {
   const korpLangs = Set.of('sma', 'sme', 'smj', 'smn', 'sms');
