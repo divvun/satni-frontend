@@ -23,10 +23,9 @@ export default class Searcher extends Component {
   }
 
   render () {
-    const { onSelect, onInputChange, search } = this.props;
     return (
       <Downshift
-        onSelect={selection => onSelect(selection)} >
+        onSelect={selection => this.props.onSelect(selection)} >
         {({
           getInputProps,
           getToggleButtonProps,
