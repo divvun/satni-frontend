@@ -52,3 +52,41 @@ describe('actions', () => {
   });
 });
 
+describe('test conditions for fetching articles', () => {
+  it('If lemma is empty, do not fetch articles', () => {
+    const lemma = '';
+    const state = {articlesByLemma: {}};
+    expect(actions.shouldFetchArticles(state, lemma)).toEqual(false);
+  });
+
+  it('If lemma is set and no articles have been cached, fetch articles', () => {
+    const lemma = 'guolle';
+    const state = {articlesByLemma: {}};
+    expect(actions.shouldFetchArticles(state, lemma)).toEqual(true);
+  });
+
+  it('If lemma is set and the app is fetching articles, do not try to fetch articles', () => {
+    const lemma = 'guolle';
+    const state = {
+      articlesByLemma: {
+        'guolle': {isFetching: true}
+      }
+    };
+    expect(actions.shouldFetchArticles(state, lemma)).toEqual(false);
+  });
+
+  it('If lemma is set and the app is not fetching articles, and articles have been cached, do not try to fetch articles', () => {
+    const lemma = 'guolle';
+    const state = {
+      articlesByLemma: {
+        'guolle': {
+          isFetching: false,
+          items: [
+            {key: 'value'}
+          ]
+        }
+      }
+    };
+    expect(actions.shouldFetchArticles(state, lemma)).toEqual(false);
+  });
+});

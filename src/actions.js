@@ -75,11 +75,9 @@ function fetchItems (key) {
 export function shouldFetchArticles (state, lemma) {
   console.log('shouldFetchArticles');
   const articles = state.articlesByLemma[lemma];
-  if (!lemma) {
-    return false;
-  } else if (!articles) {
-    return true;
-  } else if (articles.isFetching) {
+  if (!lemma
+      || (articles && articles.isFetching)
+      || (articles && !articles.isFetching && articles.items)) {
     return false;
   } else {
     return true;
