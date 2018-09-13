@@ -84,7 +84,7 @@ export function shouldFetchArticles (state, lemma) {
   }
 }
 
-function shouldFetchItems (state, key) {
+export function shouldFetchItems (state, key) {
   console.log('shouldFetchItems');
   console.log(state, key);
   // return true;
