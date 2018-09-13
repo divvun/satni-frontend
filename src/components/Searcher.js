@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Set } from 'immutable';
 import { inHTMLData } from 'xss-filters'
 import { css } from 'glamor';
-import glamorous, { Div } from 'glamorous';
+import { Div } from 'glamorous';
 import {
   Menu,
   ControllerButton,
