@@ -5,8 +5,10 @@
   "homepage": ".",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "cheerio": "^1.0.0-rc.2",
     "cross-fetch": "^2.2.2",
     "downshift": "^2.1.5",
+    "fetch-mock": "^7.0.0-alpha.6",
     "glamor": "^2.20.40",
     "glamorous": "^4.13.1",
     "immutable": "^3.8.2",
@@ -16,6 +18,7 @@
     "react-scripts": "1.1.5",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.3",
     "redux-thunk": "^2.3.0",
     "throttle-debounce": "^2.0.1",
     "xss-filters": "^1.2.7"
