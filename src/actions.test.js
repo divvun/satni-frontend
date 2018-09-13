@@ -1,4 +1,5 @@
 import * as actions from './actions';
+import {Set} from 'immutable';
 
 describe('actions', () => {
   it('should create an action to set a selected lemma', () => {
@@ -88,5 +89,19 @@ describe('test conditions for fetching articles', () => {
       }
     };
     expect(actions.shouldFetchArticles(state, lemma)).toEqual(false);
+  });
+});
+
+describe('test conditions for fetching search items', () => {
+  it('If key is among usedSearchKeys, do not fetch search items', () => {
+    const key = 'guo';
+    const state = { usedSearchKeys: Set.of('guo')};
+    expect(actions.shouldFetchItems(state, key)).toEqual(false);
+  });
+
+  it('If key is among usedSearchKeys, fetch search items', () => {
+    const key = 'guol';
+    const state = { usedSearchKeys: Set.of('guo')};
+    expect(actions.shouldFetchItems(state, key)).toEqual(true);
   });
 });
