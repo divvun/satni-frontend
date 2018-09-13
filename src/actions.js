@@ -16,7 +16,6 @@ export function selectLemma (lemma) {
 }
 
 export function requestArticles (lemma) {
-  console.log(lemma);
   return {
     type: REQUEST_ARTICLES,
     lemma
@@ -24,14 +23,12 @@ export function requestArticles (lemma) {
 }
 
 export function requestItems (key) {
-  console.log(key);
   return {
     type: REQUEST_ITEMS
   };
 }
 
 export function receiveArticles (lemma, json) {
-  console.log('receiveArticles');
   return {
     type: RECEIVE_ARTICLES,
     lemma,
@@ -40,7 +37,6 @@ export function receiveArticles (lemma, json) {
 }
 
 export function receiveItems (key, json) {
-  console.log('receiveItems');
   return {
     type: RECEIVE_ITEMS,
     key,
@@ -49,11 +45,9 @@ export function receiveItems (key, json) {
 }
 
 export function fetchArticles (lemma) {
-  console.log('fetchArticles');
   return dispatch => {
     dispatch(requestArticles(lemma));
     let url = `http://satni.uit.no:8080/exist/restxq/satni/article/${lemma}`;
-    console.log(encodeURI(url));
     return fetch(encodeURI(url))
       .then(response => response.text())
       .then(text => dispatch(receiveArticles(lemma, removeDuplicates(toJson(text)))));
@@ -61,11 +55,9 @@ export function fetchArticles (lemma) {
 }
 
 function fetchItems (key) {
-  console.log('fetchItems');
   return dispatch => {
     dispatch(requestItems(key));
     let url = `http://satni.uit.no:8080/exist/restxq/satni/search?query=${key}`;
-    console.log(encodeURI(url));
     return fetch(encodeURI(url))
       .then(response => response.text())
       .then(text => dispatch(receiveItems(key, toJson(text))));
@@ -73,7 +65,6 @@ function fetchItems (key) {
 }
 
 export function shouldFetchArticles (state, lemma) {
-  console.log('shouldFetchArticles');
   const articles = state.articlesByLemma[lemma];
   if (!lemma
       || (articles && articles.isFetching)
@@ -85,10 +76,6 @@ export function shouldFetchArticles (state, lemma) {
 }
 
 export function shouldFetchItems (state, key) {
-  console.log('shouldFetchItems');
-  console.log(state, key);
-  // return true;
-
   if (state.usedSearchKeys.has(key)) {
     return false;
   } else {
