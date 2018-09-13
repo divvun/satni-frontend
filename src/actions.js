@@ -48,7 +48,7 @@ export function receiveItems (key, json) {
   };
 }
 
-function fetchArticles (lemma) {
+export function fetchArticles (lemma) {
   console.log('fetchArticles');
   return dispatch => {
     dispatch(requestArticles(lemma));
