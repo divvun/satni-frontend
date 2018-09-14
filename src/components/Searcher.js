@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Downshift from 'downshift';
 import PropTypes from 'prop-types';
-import { Set } from 'immutable';
-import { inHTMLData } from 'xss-filters'
+import { inHTMLData } from 'xss-filters';
 import { css } from 'glamor';
 import { Div } from 'glamorous';
 import {
@@ -15,13 +14,6 @@ import {
 } from '../components';
 
 export default class Searcher extends Component {
-  setting = value => {
-    return Set([...this.props.search.searchItems]
-    .map(item => item.term))
-    .filter(term => term.toLowerCase().startsWith(value))
-    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
-  }
-
   render () {
     return (
       <Downshift
@@ -35,43 +27,43 @@ export default class Searcher extends Component {
           clearSelection,
           selectedItem,
           inputValue,
-          highlightedIndex,
+          highlightedIndex
         }) => {
           return (
             <div className={css({ margin: 'auto' })}>
-            <Div position="relative" css={{ paddingRight: '1.75em' }}>
-              <Input
-              {...getInputProps({
-                placeholder: 'Search for a word',
-                isOpen,
-                onChange: event => {
-                  const value = inHTMLData(event.target.value.toLowerCase());
-                  console.log(value)
-                  if (!value || value.length < 3) {
-                    return;
-                  }
-                  this.props.onInputChange(value);
-                }
-              })}
+              <Div position='relative' css={{ paddingRight: '1.75em' }}>
+                <Input
+                  {...getInputProps({
+                    placeholder: 'Search for a word',
+                    isOpen,
+                    onChange: event => {
+                      const value = inHTMLData(event.target.value.toLowerCase());
+                      console.log(value);
+                      if (!value || value.length < 3) {
+                        return;
+                      }
+                      this.props.onInputChange(value);
+                    }
+                  })}
               />
-              {selectedItem
+                {selectedItem
                 ? <ControllerButton
-                    css={{ paddingTop: 4 }}
-                    onClick={clearSelection}
-                    aria-label="clear selection"
+                  css={{ paddingTop: 4 }}
+                  onClick={clearSelection}
+                  aria-label='clear selection'
                   >
-                    <XIcon />
-                  </ControllerButton>
+                  <XIcon />
+                </ControllerButton>
                 : <ControllerButton {...getToggleButtonProps()}>
-                    <ArrowIcon isOpen={isOpen} />
-                  </ControllerButton>}
+                  <ArrowIcon isOpen={isOpen} />
+                </ControllerButton>}
               </Div>
               {isOpen ? (
                 <div>
                   {this.props.search.isSearching ? (
                     <div>loading …</div>
                   ) : <Menu>
-                  {this.setting(inputValue.toLowerCase())
+                    {this.props.search.resultItems
                     .map((item, index) => (
                       <Item
                         {...getItemProps({
@@ -85,7 +77,7 @@ export default class Searcher extends Component {
                         {item}
                       </Item>
                     ))}
-                    </Menu>}
+                  </Menu>}
                 </div>
                   ) : null}
             </div>
