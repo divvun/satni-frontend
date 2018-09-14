@@ -28,17 +28,17 @@ class Stems extends Component {
     const stems = this.props.stems.map((stem, i) => {
       if (i === 0) {
         return (
-          <Div css={{width: '100%'}}>
-            <Div key={i} css={{ display: 'inline'}}>{stem.lemma} {stem.pos} {stem.lang}</Div>
+          <Div key={i} css={{width: '100%'}}>
+            <Div css={{ display: 'inline'}}>{stem.lemma} {stem.pos} {stem.lang}</Div>
             {addKorpLink(stem.lang, stem.lemma)}
           </Div>
         );
       } else {
         return (
-          <div>
-            <Div key={i} css={{marginLeft: '2%', display: 'inline'}}><Span css={{fontWeight: 'bold'}}>{stem.lemma}</Span> {stem.pos} {stem.lang}</Div>
+          <Div key={i} css={{width: '100%'}}>
+            <Div css={{marginLeft: '2%', display: 'inline'}}><Span css={{fontWeight: 'bold'}}>{stem.lemma}</Span> {stem.pos} {stem.lang}</Div>
             {addKorpLink(stem.lang, stem.lemma)}
-          </div>
+          </Div>
         );
       }
     });

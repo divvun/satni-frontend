@@ -8,6 +8,7 @@ import {
 } from '../actions';
 import Articles from '../components/Articles';
 import Searcher from '../components/Searcher';
+import Languages from '../components/Languages';
 import { debounce } from 'throttle-debounce'
 import glamorous, { Div, A, Footer } from 'glamorous';
 
@@ -19,8 +20,9 @@ const MyGrid = glamorous.div({
     display: 'grid',
     gridGap: 10,
     gridTemplateAreas: `
-      "header"
-      "content"
+      "header header header"
+      "sidebar content content"
+      "footer footer footer"
     `,
   },
 });
@@ -73,6 +75,11 @@ class AsyncApp extends Component {
           </Div>
         </Box>
         <Box css={{
+          gridArea: 'sidebar'
+        }}>
+          <Languages/>
+        </Box>
+        <Box css={{
           gridArea: 'content',
           paddingBottom: "50px"
         }}>
@@ -88,8 +95,10 @@ class AsyncApp extends Component {
                 <Articles articles={articles} />
               </Div>}
         </Box>
+        <Box css={{
+          gridArea: 'footer'
+        }}>
         <Footer css={{
-          gridArea: 'footer',
           position:"fixed",
           left:"0px",
           bottom:"0px",
@@ -101,6 +110,7 @@ class AsyncApp extends Component {
           Sámi dictionaries and terms delivered by<br/>
           <A href="http://divvun.no">Divvun</A>, <A href="http://giella.org">Giellagáldu</A> and <A href="http://giellatekno.uit.no">Giellatekno</A>
           </Footer>
+          </Box>
       </MyGrid>
     );
   }
