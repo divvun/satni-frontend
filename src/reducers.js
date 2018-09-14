@@ -52,6 +52,13 @@ function articlesByLemma (state = {}, action) {
   }
 }
 
+const filterItems = (searchItems, key) => {
+  return Set([...searchItems]
+  .map(item => item.term))
+  .filter(term => term.toLowerCase().startsWith(key))
+  .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+};
+
 function search (
   state = {
     isSearching: false,
@@ -66,10 +73,12 @@ function search (
         isSearching: true
       });
     case RECEIVE_ITEMS:
+      const currentSearchItems = action.searchItems ? state.searchItems.union(action.searchItems) : state.searchItems;
       return Object.assign({}, state, {
         isSearching: false,
         usedSearchKeys: state.usedSearchKeys.add(action.key),
-        searchItems: action.searchItems ? state.searchItems.union(action.searchItems) : state.searchItems
+        searchItems: currentSearchItems,
+        resultItems: filterItems(currentSearchItems, action.key)
       });
     default:
       return state;

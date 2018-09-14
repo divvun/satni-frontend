@@ -1,6 +1,6 @@
 import reducer from './reducers';
 import * as actions from './actions';
-import {Set} from 'immutable';
+import {OrderedSet, Set} from 'immutable';
 
 const initialState = {
   articlesByLemma: {},
@@ -52,7 +52,7 @@ describe('reducers', () => {
       { term: 'guolleguhppár', dict: 'smenob', lang: 'sme', langs: 'nob' },
       { term: 'guolljut', dict: 'smefin', lang: 'sme', langs: 'fin' },
       { term: 'guollegáhkku', dict: 'smefin', lang: 'sme', langs: 'fin' }
-    ]
+    ];
     expect(reducer(initialState, {
       type: actions.RECEIVE_ITEMS,
       key: 'guol',
@@ -63,7 +63,13 @@ describe('reducers', () => {
       'search': {
         'isSearching': false,
         'searchItems': Set(receivedItems),
-        'usedSearchKeys': Set.of('guol')
+        'usedSearchKeys': Set.of('guol'),
+        'resultItems': OrderedSet.of(
+          'guollebuktin',
+          'guollegáhkku',
+          'guolleguhppár',
+          'guolljut'
+        )
       },
       'selectedLemma': ''
     });
