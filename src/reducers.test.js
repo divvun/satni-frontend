@@ -47,16 +47,22 @@ describe('reducers', () => {
   });
 
   it('should handle RECEIVE_ITEMS', () => {
+    const receivedItems = [
+      { term: 'guollebuktin', dict: 'smenob', lang: 'sme', langs: 'nob' },
+      { term: 'guolleguhppár', dict: 'smenob', lang: 'sme', langs: 'nob' },
+      { term: 'guolljut', dict: 'smefin', lang: 'sme', langs: 'fin' },
+      { term: 'guollegáhkku', dict: 'smefin', lang: 'sme', langs: 'fin' }
+    ]
     expect(reducer(initialState, {
       type: actions.RECEIVE_ITEMS,
       key: 'guol',
-      searchItems: Set.of({key: 'value'}),
+      searchItems: Set(receivedItems),
       usedSearchKeys: Set.of('guol')
     })).toEqual({
       'articlesByLemma': {},
       'search': {
         'isSearching': false,
-        'searchItems': Set.of({'key': 'value'}),
+        'searchItems': Set(receivedItems),
         'usedSearchKeys': Set.of('guol')
       },
       'selectedLemma': ''
