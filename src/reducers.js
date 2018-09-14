@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import {Set} from 'immutable';
+import { OrderedSet, Set } from 'immutable';
 
 import {
   SELECT_LEMMA,
@@ -63,7 +63,8 @@ function search (
   state = {
     isSearching: false,
     usedSearchKeys: Set(),
-    searchItems: Set()
+    searchItems: Set(),
+    resultItems: OrderedSet()
   },
   action
 ) {
