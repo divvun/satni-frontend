@@ -99,7 +99,7 @@ describe('test conditions for fetching search items', () => {
     expect(actions.shouldFetchItems(state, key)).toEqual(false);
   });
 
-  it('If key is among usedSearchKeys, fetch search items', () => {
+  it('If key is not among usedSearchKeys, fetch search items', () => {
     const key = 'guol';
     const state = { usedSearchKeys: Set.of('guo')};
     expect(actions.shouldFetchItems(state, key)).toEqual(true);
