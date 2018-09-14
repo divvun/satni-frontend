@@ -10,7 +10,8 @@ const initialState = {
     'usedSearchKeys': Set(),
     'resultItems': OrderedSet()
   },
-  selectedLemma: ''
+  selectedLemma: '',
+  form: {}
 };
 
 describe('reducers', () => {
@@ -30,7 +31,8 @@ describe('reducers', () => {
         usedSearchKeys: Set(),
         'resultItems': OrderedSet()
       },
-      selectedLemma: 'guolli'
+      selectedLemma: 'guolli',
+      form: {}
     });
   });
 
@@ -45,7 +47,8 @@ describe('reducers', () => {
         'usedSearchKeys': Set(),
         'resultItems': OrderedSet()
       },
-      selectedLemma: ''
+      selectedLemma: '',
+      form: {}
     });
   });
 
@@ -74,7 +77,8 @@ describe('reducers', () => {
           'guolljut'
         )
       },
-      'selectedLemma': ''
+      'selectedLemma': '',
+      'form': {}
     });
   });
 
@@ -105,7 +109,9 @@ describe('reducers', () => {
           'usedSearchKeys': Set(),
           'resultItems': OrderedSet()
         },
-        'selectedLemma': 'guolli'});
+        'selectedLemma': 'guolli',
+        'form': {}
+      });
   });
 
   it('should handle RECEIVE_ARTICLES', () => {
@@ -205,7 +211,8 @@ describe('reducers', () => {
           'usedSearchKeys': Set(),
           'resultItems': OrderedSet()
         },
-        'selectedLemma': 'guolli'
+        'selectedLemma': 'guolli',
+        'form': {}
       });
   });
 });

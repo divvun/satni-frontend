@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 import { OrderedSet, Set } from 'immutable';
 
 import {
@@ -89,7 +90,8 @@ function search (
 const rootReducer = combineReducers({
   articlesByLemma,
   selectedLemma,
-  search
+  search,
+  form: formReducer
 });
 
 export default rootReducer;
