@@ -7,7 +7,8 @@ const initialState = {
   search: {
     'isSearching': false,
     'searchItems': Set(),
-    'usedSearchKeys': Set()
+    'usedSearchKeys': Set(),
+    'resultItems': OrderedSet()
   },
   selectedLemma: ''
 };
@@ -26,7 +27,8 @@ describe('reducers', () => {
       search: {
         isSearching: false,
         searchItems: Set(),
-        usedSearchKeys: Set()
+        usedSearchKeys: Set(),
+        'resultItems': OrderedSet()
       },
       selectedLemma: 'guolli'
     });
@@ -40,7 +42,8 @@ describe('reducers', () => {
       search: {
         'isSearching': true,
         'searchItems': Set(),
-        'usedSearchKeys': Set()
+        'usedSearchKeys': Set(),
+        'resultItems': OrderedSet()
       },
       selectedLemma: ''
     });
@@ -81,7 +84,8 @@ describe('reducers', () => {
       search: {
         isSearching: false,
         searchItems: Set(),
-        usedSearchKeys: Set()
+        usedSearchKeys: Set(),
+        'resultItems': OrderedSet()
       },
       selectedLemma: 'guolli'
     },
@@ -98,7 +102,8 @@ describe('reducers', () => {
         'search': {
           'isSearching': false,
           'searchItems': Set(),
-          'usedSearchKeys': Set()
+          'usedSearchKeys': Set(),
+          'resultItems': OrderedSet()
         },
         'selectedLemma': 'guolli'});
   });
@@ -114,7 +119,8 @@ describe('reducers', () => {
       'search': {
         'isSearching': false,
         'searchItems': Set(),
-        'usedSearchKeys': Set()
+        'usedSearchKeys': Set(),
+        'resultItems': OrderedSet()
       },
       'selectedLemma': 'guolli'},
       {
@@ -196,7 +202,8 @@ describe('reducers', () => {
         'search': {
           'isSearching': false,
           'searchItems': Set(),
-          'usedSearchKeys': Set()
+          'usedSearchKeys': Set(),
+          'resultItems': OrderedSet()
         },
         'selectedLemma': 'guolli'
       });
