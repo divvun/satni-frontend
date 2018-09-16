@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
-import configureStore from '../configureStore';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AsyncApp from './AsyncApp';
 
-const store = configureStore();
-
-export default class Root extends Component {
-  render () {
-    return (
-      <Provider store={store}>
-        <AsyncApp />
-      </Provider>
+const Root = ({ store }) => (
+  <Provider store={store}>
+    <MuiThemeProvider>
+      <AsyncApp />
+    </MuiThemeProvider>
+  </Provider>
     );
-  }
-}
+
+Root.propTypes = {
+  store: PropTypes.object.isRequired
+};
+
+export default Root;
