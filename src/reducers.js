@@ -10,22 +10,22 @@ import {
   RECEIVE_ITEMS
 } from './actions';
 
-function selectedLemma (state = '', action) {
+const selectedLemma = (state = '', action) => {
   switch (action.type) {
     case SELECT_LEMMA:
       return action.lemma;
     default:
       return state;
   }
-}
+};
 
-function articles (
+const articles = (
   state = {
     isFetching: false,
     items: []
   },
   action
-) {
+) => {
   switch (action.type) {
     case REQUEST_ARTICLES:
       return Object.assign({}, state, {
@@ -39,9 +39,9 @@ function articles (
     default:
       return state;
   }
-}
+};
 
-function articlesByLemma (state = {}, action) {
+const articlesByLemma = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ARTICLES:
     case REQUEST_ARTICLES:
@@ -51,7 +51,7 @@ function articlesByLemma (state = {}, action) {
     default:
       return state;
   }
-}
+};
 
 const filterItems = (searchItems, key) => {
   return Set([...searchItems]
@@ -60,7 +60,7 @@ const filterItems = (searchItems, key) => {
   .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 };
 
-function search (
+const search = (
   state = {
     isSearching: false,
     usedSearchKeys: Set(),
@@ -68,7 +68,7 @@ function search (
     resultItems: OrderedSet()
   },
   action
-) {
+) => {
   switch (action.type) {
     case REQUEST_ITEMS:
       return Object.assign({}, state, {
@@ -85,7 +85,7 @@ function search (
     default:
       return state;
   }
-}
+};
 
 const rootReducer = combineReducers({
   articlesByLemma,

@@ -1,12 +1,12 @@
 import cheerio from 'cheerio';
 
-function toJson (text) {
+const toJson = (text) => {
   // eXist sometimes sends misformed json, correct it here
   return JSON.parse(
     text.indexOf('{') === 0 ?
     '[' + text.slice(text.indexOf('{') + 1, text.lastIndexOf('}')) + ']' :
     text);
-}
+};
 
 const removeDuplicates = (existTerms) => {
   const foundTermWikiRef = [];

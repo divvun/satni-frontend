@@ -8,43 +8,33 @@ export const SELECT_LEMMA = 'SELECT_LEMMA';
 export const REQUEST_ITEMS = 'REQUEST_ITEMS';
 export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
 
-export function selectLemma (lemma) {
-  return {
-    type: SELECT_LEMMA,
-    lemma
-  };
-}
+export const selectLemma = (lemma) => ({
+  type: SELECT_LEMMA,
+  lemma
+});
 
-export function requestArticles (lemma) {
-  return {
-    type: REQUEST_ARTICLES,
-    lemma
-  };
-}
+export const requestArticles = (lemma) => ({
+  type: REQUEST_ARTICLES,
+  lemma
+});
 
-export function requestItems (key) {
-  return {
-    type: REQUEST_ITEMS
-  };
-}
+export const requestItems = (key) => ({
+  type: REQUEST_ITEMS
+});
 
-export function receiveArticles (lemma, json) {
-  return {
-    type: RECEIVE_ARTICLES,
-    lemma,
-    articles: json
-  };
-}
+export const receiveArticles = (lemma, json) => ({
+  type: RECEIVE_ARTICLES,
+  lemma,
+  articles: json
+});
 
-export function receiveItems (key, json) {
-  return {
-    type: RECEIVE_ITEMS,
-    key,
-    searchItems: json
-  };
-}
+export const receiveItems = (key, json) => ({
+  type: RECEIVE_ITEMS,
+  key,
+  searchItems: json
+});
 
-export function fetchArticles (lemma) {
+export const fetchArticles = (lemma) => {
   return dispatch => {
     dispatch(requestArticles(lemma));
     let url = `http://satni.uit.no:8080/exist/restxq/satni/article/${lemma}`;
@@ -52,9 +42,9 @@ export function fetchArticles (lemma) {
       .then(response => response.text())
       .then(text => dispatch(receiveArticles(lemma, removeDuplicates(toJson(text)))));
   };
-}
+};
 
-function fetchItems (key) {
+const fetchItems = (key) => {
   return dispatch => {
     dispatch(requestItems(key));
     let url = `http://satni.uit.no:8080/exist/restxq/satni/search?query=${key}`;
@@ -62,9 +52,9 @@ function fetchItems (key) {
       .then(response => response.text())
       .then(text => dispatch(receiveItems(key, toJson(text))));
   };
-}
+};
 
-export function shouldFetchArticles (state, lemma) {
+export const shouldFetchArticles = (state, lemma) => {
   const articles = state.articlesByLemma[lemma];
   if (!lemma
       || (articles && articles.isFetching)
@@ -73,28 +63,28 @@ export function shouldFetchArticles (state, lemma) {
   } else {
     return true;
   }
-}
+};
 
-export function shouldFetchItems (state, key) {
+export const shouldFetchItems = (state, key) => {
   if (state.usedSearchKeys.has(key)) {
     return false;
   } else {
     return true;
   }
-}
+};
 
-export function fetchArticlesIfNeeded (lemma) {
+export const fetchArticlesIfNeeded = (lemma) => {
   return (dispatch, getState) => {
     if (shouldFetchArticles(getState(), lemma)) {
       return dispatch(fetchArticles(lemma));
     }
   };
-}
+};
 
-export function fetchItemsIfNeeded (key) {
+export const fetchItemsIfNeeded = (key) => {
   return (dispatch, getState) => {
     if (shouldFetchItems(getState().search, key)) {
       return dispatch(fetchItems(key));
     }
   };
-}
+};
