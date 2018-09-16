@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Downshift from 'downshift';
 import PropTypes from 'prop-types';
 import { inHTMLData } from 'xss-filters';
@@ -13,12 +13,10 @@ import {
   XIcon
 } from '../components';
 
-export default class Searcher extends Component {
-  render () {
-    return (
-      <Downshift
-        onSelect={selection => this.props.onSelect(selection)} >
-        {({
+const Searcher = ({onSelect, onInputChange, search}) => (
+  <Downshift
+    onSelect={selection => onSelect(selection)} >
+    {({
           getInputProps,
           getToggleButtonProps,
           getItemProps,
@@ -29,24 +27,24 @@ export default class Searcher extends Component {
           inputValue,
           highlightedIndex
         }) => {
-          return (
-            <div className={css({ margin: 'auto' })}>
-              <Div position='relative' css={{ paddingRight: '1.75em' }}>
-                <Input
-                  {...getInputProps({
-                    placeholder: 'Search for a word',
-                    isOpen,
-                    onChange: event => {
-                      const value = inHTMLData(event.target.value.toLowerCase());
-                      console.log(value);
-                      if (!value || value.length < 3) {
-                        return;
-                      }
-                      this.props.onInputChange(value);
-                    }
-                  })}
+      return (
+        <div className={css({ margin: 'auto' })}>
+          <Div position='relative' css={{ paddingRight: '1.75em' }}>
+            <Input
+              {...getInputProps({
+                placeholder: 'Search for a word',
+                isOpen,
+                onChange: event => {
+                  const value = inHTMLData(event.target.value.toLowerCase());
+                  console.log(value);
+                  if (!value || value.length < 3) {
+                    return;
+                  }
+                  onInputChange(value);
+                }
+              })}
               />
-                {selectedItem
+            {selectedItem
                 ? <ControllerButton
                   css={{ paddingTop: 4 }}
                   onClick={clearSelection}
@@ -57,13 +55,13 @@ export default class Searcher extends Component {
                 : <ControllerButton {...getToggleButtonProps()}>
                   <ArrowIcon isOpen={isOpen} />
                 </ControllerButton>}
-              </Div>
-              {isOpen ? (
-                <div>
-                  {this.props.search.isSearching ? (
-                    <div>loading …</div>
+          </Div>
+          {isOpen ? (
+            <div>
+              {search.isSearching ? (
+                <div>loading …</div>
                   ) : <Menu>
-                    {this.props.search.resultItems
+                    {search.resultItems
                     .map((item, index) => (
                       <Item
                         {...getItemProps({
@@ -78,16 +76,18 @@ export default class Searcher extends Component {
                       </Item>
                     ))}
                   </Menu>}
-                </div>
-                  ) : null}
             </div>
-          );
-        }}
-      </Downshift>
-    );
-  }
-}
+                  ) : null}
+        </div>
+      );
+    }}
+  </Downshift>
+);
 
 Searcher.propTypes = {
-  onSelect: PropTypes.func.isRequired
+  onSelect: PropTypes.func.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  search: PropTypes.object.isRequired
 };
+
+export default Searcher;
