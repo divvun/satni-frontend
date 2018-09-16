@@ -33,33 +33,27 @@ const Box = glamorous.div({
 });
 
 class AsyncApp extends Component {
-  constructor (props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSearch = this.handleSearch.bind(this);
-  }
-
   componentDidMount () {
-    const { dispatch, selectedLemma } = this.props;
-    dispatch(fetchArticlesIfNeeded(selectedLemma));
+    this.props.fetchArticlesIfNeeded(this.props.selectedLemma);
   }
 
   componentDidUpdate (prevProps) {
     if (this.props.selectedLemma !== prevProps.selectedLemma) {
-      const { dispatch, selectedLemma } = this.props;
-      dispatch(fetchArticlesIfNeeded(selectedLemma));
+      this.props.fetchArticlesIfNeeded(this.props.selectedLemma);
     }
   }
 
   handleSearch = debounce(300, (key) => {
     console.log('handleSearch');
-    this.props.dispatch(fetchItemsIfNeeded(key));
+    this.props.fetchItemsIfNeeded(key);
   })
 
-  handleChange (nextLemma) {
-    console.log(nextLemma);
-    this.props.dispatch(selectLemma(nextLemma));
-    this.props.dispatch(fetchArticlesIfNeeded(nextLemma));
+  handleChange = (nextLemma) => {
+    this.props.handleChange(nextLemma)
+  }
+
+  fetchArticlesIfNeeded = (nextLemma) => {
+    this.props.fetchArticlesIfNeeded(nextLemma)
   }
 
   render () {
@@ -141,4 +135,19 @@ function mapStateToProps (state) {
   };
 }
 
-export default connect(mapStateToProps)(AsyncApp);
+const mapDispatchToProps = (dispatch) => {
+  return {
+      handleChange: (nextLemma) => {
+        dispatch(selectLemma(nextLemma));
+        dispatch(fetchArticlesIfNeeded(nextLemma));
+      },
+      fetchArticlesIfNeeded: (nextLemma) => {
+       dispatch(fetchArticlesIfNeeded(nextLemma))
+     },
+     fetchItemsIfNeeded: (key) => {
+       dispatch(fetchItemsIfNeeded(key))
+     }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AsyncApp);
