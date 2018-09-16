@@ -1,9 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Downshift from 'downshift';
 import PropTypes from 'prop-types';
 import { inHTMLData } from 'xss-filters';
 import { css } from 'glamor';
 import { Div } from 'glamorous';
+import { debounce } from 'throttle-debounce';
 import {
   Menu,
   ControllerButton,
@@ -12,6 +14,11 @@ import {
   ArrowIcon,
   XIcon
 } from '../components';
+import {
+  selectLemma,
+  fetchArticlesIfNeeded,
+  fetchItemsIfNeeded
+} from '../actions';
 
 const Searcher = ({onSelect, onInputChange, search}) => (
   <Downshift
@@ -90,4 +97,20 @@ Searcher.propTypes = {
   search: PropTypes.object.isRequired
 };
 
-export default Searcher;
+const mapStateToProps = (state) => (
+  { search: state.search}
+);
+
+const mapDispatchToProps = (dispatch) => (
+  {
+    onSelect: (nextLemma) => {
+      dispatch(selectLemma(nextLemma));
+      dispatch(fetchArticlesIfNeeded(nextLemma));
+    },
+    onInputChange: (key) => {
+      dispatch(fetchItemsIfNeeded(key));
+    }
+  }
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Searcher);

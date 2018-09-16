@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {
-  selectLemma,
-  fetchArticlesIfNeeded,
-  fetchItemsIfNeeded
-} from '../actions';
+import { fetchArticlesIfNeeded } from '../actions';
 import Articles from '../components/Articles';
 import Searcher from '../components/Searcher';
 import Languages from '../components/Languages';
@@ -43,21 +39,12 @@ class AsyncApp extends Component {
     }
   }
 
-  handleSearch = debounce(300, (key) => {
-    console.log('handleSearch');
-    this.props.fetchItemsIfNeeded(key);
-  })
-
-  handleChange = (nextLemma) => {
-    this.props.handleChange(nextLemma)
-  }
-
   fetchArticlesIfNeeded = (nextLemma) => {
     this.props.fetchArticlesIfNeeded(nextLemma)
   }
 
   render () {
-    const { selectedLemma, articles, isFetching, search } = this.props;
+    const { selectedLemma, articles, isFetching } = this.props;
     return (
       <MyGrid>
         <Box css={{ gridArea: 'header'}}>
@@ -77,11 +64,7 @@ class AsyncApp extends Component {
           gridArea: 'content',
           paddingBottom: "50px"
         }}>
-         <Searcher
-            onSelect={this.handleChange}
-            onInputChange={this.handleSearch}
-            search={search}
-          />
+         <Searcher />
             {isFetching && articles.length === 0 && <h2>Loading...</h2>}
             {selectedLemma && !isFetching && articles.length === 0 && <h2>Empty.</h2>}
             {articles.length > 0 &&
@@ -113,12 +96,10 @@ class AsyncApp extends Component {
 AsyncApp.propTypes = {
   selectedLemma: PropTypes.string.isRequired,
   articles: PropTypes.array.isRequired,
-  dispatch: PropTypes.func.isRequired,
-  search: PropTypes.object.isRequired
 };
 
-function mapStateToProps (state) {
-  const { selectedLemma, articlesByLemma, search } = state;
+const mapStateToProps = (state) => {
+  const { selectedLemma, articlesByLemma } = state;
   const {
     isFetching,
     items: articles
@@ -131,22 +112,14 @@ function mapStateToProps (state) {
     selectedLemma,
     articles,
     isFetching,
-    search
   };
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-      handleChange: (nextLemma) => {
-        dispatch(selectLemma(nextLemma));
-        dispatch(fetchArticlesIfNeeded(nextLemma));
-      },
-      fetchArticlesIfNeeded: (nextLemma) => {
-       dispatch(fetchArticlesIfNeeded(nextLemma))
-     },
-     fetchItemsIfNeeded: (key) => {
-       dispatch(fetchItemsIfNeeded(key))
-     }
+    fetchArticlesIfNeeded: (nextLemma) => {
+     dispatch(fetchArticlesIfNeeded(nextLemma))
+    }
   }
 }
 
