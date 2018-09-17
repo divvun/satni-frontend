@@ -108,7 +108,7 @@ const mapDispatchToProps = (dispatch) => (
       dispatch(fetchArticlesIfNeeded(nextLemma));
     },
     onInputChange: (key) => {
-      dispatch(fetchItemsIfNeeded(key));
+      debounce(300, dispatch(fetchItemsIfNeeded(key)));
     }
   }
 );
