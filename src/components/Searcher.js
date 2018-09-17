@@ -15,6 +15,7 @@ import {
   XIcon
 } from '../components';
 import {
+  selectKey,
   selectLemma,
   fetchArticlesIfNeeded,
   fetchItemsIfNeeded
@@ -108,6 +109,7 @@ const mapDispatchToProps = (dispatch) => (
       dispatch(fetchArticlesIfNeeded(nextLemma));
     },
     onInputChange: (key) => {
+      dispatch(selectKey(key));
       debounce(300, dispatch(fetchItemsIfNeeded(key)));
     }
   }

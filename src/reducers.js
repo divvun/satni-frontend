@@ -4,6 +4,7 @@ import { OrderedSet, Set } from 'immutable';
 
 import {
   SELECT_LEMMA,
+  SELECT_KEY,
   REQUEST_ARTICLES,
   RECEIVE_ARTICLES,
   REQUEST_ITEMS,
@@ -62,6 +63,7 @@ const filterItems = (searchItems, key) => {
 
 const search = (
   state = {
+    searchKey: '',
     isSearching: false,
     usedSearchKeys: Set(),
     searchItems: Set(),
@@ -70,6 +72,11 @@ const search = (
   action
 ) => {
   switch (action.type) {
+    case SELECT_KEY:
+      return Object.assign({}, state, {
+        searchKey: action.key,
+        resultItems: filterItems(state.searchItems, action.key)
+      });
     case REQUEST_ITEMS:
       return Object.assign({}, state, {
         isSearching: true
@@ -80,7 +87,7 @@ const search = (
         isSearching: false,
         usedSearchKeys: state.usedSearchKeys.add(action.key),
         searchItems: currentSearchItems,
-        resultItems: filterItems(currentSearchItems, action.key)
+        resultItems: filterItems(currentSearchItems, state.searchKey)
       });
     default:
       return state;

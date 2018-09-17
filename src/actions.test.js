@@ -11,6 +11,15 @@ describe('actions', () => {
     expect(actions.selectLemma(lemma)).toEqual(expectedAction);
   });
 
+  it('should create an action to set the search key', () => {
+    const key = 'guo';
+    const expectedAction = {
+      type: actions.SELECT_KEY,
+      key
+    };
+    expect(actions.selectKey(key)).toEqual(expectedAction);
+  });
+
   it('should create an action to request dictionary and term articles for the given lemma', () => {
     const lemma = 'guolle';
     const expectedAction = {

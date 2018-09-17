@@ -5,6 +5,7 @@ import {OrderedSet, Set} from 'immutable';
 const initialState = {
   articlesByLemma: {},
   search: {
+    'searchKey': '',
     'isSearching': false,
     'searchItems': Set(),
     'usedSearchKeys': Set(),
@@ -26,6 +27,7 @@ describe('reducers', () => {
     })).toEqual({
       articlesByLemma: {},
       search: {
+        searchKey: '',
         isSearching: false,
         searchItems: Set(),
         usedSearchKeys: Set(),
@@ -42,6 +44,7 @@ describe('reducers', () => {
     })).toEqual({
       articlesByLemma: {},
       search: {
+        'searchKey': '',
         'isSearching': true,
         'searchItems': Set(),
         'usedSearchKeys': Set(),
@@ -57,9 +60,17 @@ describe('reducers', () => {
       { term: 'guollebuktin', dict: 'smenob', lang: 'sme', langs: 'nob' },
       { term: 'guolleguhppár', dict: 'smenob', lang: 'sme', langs: 'nob' },
       { term: 'guolljut', dict: 'smefin', lang: 'sme', langs: 'fin' },
-      { term: 'guollegáhkku', dict: 'smefin', lang: 'sme', langs: 'fin' }
+      { term: 'guollegáhkku', dict: 'smefin', lang: 'sme', langs: 'fin' },
+      { term: 'suolljut', dict: 'smefin', lang: 'sme', langs: 'fin' }
     ];
-    expect(reducer(initialState, {
+    const thisSearch = Object.assign({}, initialState.search, {
+      searchKey: 'guol'
+    });
+    const thisState = Object.assign({}, initialState, {
+      search: thisSearch
+    });
+
+    expect(reducer(thisState, {
       type: actions.RECEIVE_ITEMS,
       key: 'guol',
       searchItems: Set(receivedItems),
@@ -67,6 +78,7 @@ describe('reducers', () => {
     })).toEqual({
       'articlesByLemma': {},
       'search': {
+        'searchKey': 'guol',
         'isSearching': false,
         'searchItems': Set(receivedItems),
         'usedSearchKeys': Set.of('guol'),
