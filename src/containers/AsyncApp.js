@@ -115,12 +115,10 @@ const mapStateToProps = (state) => {
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchArticlesIfNeeded: (nextLemma) => {
-     dispatch(fetchArticlesIfNeeded(nextLemma))
-    }
+const mapDispatchToProps = (dispatch) => ({
+  fetchArticlesIfNeeded: (nextLemma) => {
+   dispatch(fetchArticlesIfNeeded(nextLemma))
   }
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(AsyncApp);
