@@ -4,6 +4,7 @@ import {toJson, removeDuplicates} from './utils';
 export const REQUEST_ARTICLES = 'REQUEST_ARTICLES';
 export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES';
 export const SELECT_LEMMA = 'SELECT_LEMMA';
+export const SELECT_KEY = 'SELECT_KEY';
 
 export const REQUEST_ITEMS = 'REQUEST_ITEMS';
 export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
@@ -11,6 +12,11 @@ export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
 export const selectLemma = (lemma) => ({
   type: SELECT_LEMMA,
   lemma
+});
+
+export const selectKey = (key) => ({
+  type: SELECT_KEY,
+  key
 });
 
 export const requestArticles = (lemma) => ({
