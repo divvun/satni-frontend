@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Div, Span, A } from 'glamorous';
+import { Set } from 'immutable';
+import { connect } from 'react-redux';
+import { fetchArticlesIfNeeded } from '../actions';
 import { ArticleDiv } from '../components';
 import {
   normaliseDict,
   normaliseTermWiki,
   normaliseSDTerm } from '../utils';
-import { Set } from 'immutable';
 
 const addKorpLink = (lang, lemma) => {
   const korpLangs = Set.of('sma', 'sme', 'smj', 'smn', 'sms');
@@ -91,28 +93,70 @@ const SDTermArticle = ({article}) => (
   </ArticleDiv>
 );
 
-const Articles = ({articles}) => (
-  <Div css={{
-    margin: 'auto',
-    paddingLeft: '0.60em',
-    paddingRight:
-      '1.75em',
-    textAlign: 'left'
-  }}>
-    {articles.map((article, i) => {
-      if (article.termwikiref === '-1') {
-        return <DictArticle key={i} article={article} />;
-      } else if (article.dict === 'termwiki') {
-        return <TermArticle key={i} article={article} />;
-      } else {
-        return <SDTermArticle key={i} article={article} />;
-      }
-    })}
-  </Div>
-);
+class Articles extends Component {
+  uff = () => {
+    const {isFetching, selectedLemma, articles} = this.props
+
+    if (isFetching && articles.length === 0) {
+      return <h2>Loading...</h2>
+    } else if (selectedLemma && !isFetching && articles.length === 0) {
+      return <h2>Empty.</h2>
+    } else if (articles.length > 0) {
+    return (
+      <Div css={{
+        margin: 'auto',
+        paddingLeft: '0.60em',
+        paddingRight:
+          '1.75em',
+        textAlign: 'left',
+        position: "relative"
+      }}>
+        {articles.map((article, i) => {
+          if (article.termwikiref === '-1') {
+            return <DictArticle key={i} article={article} />;
+          } else if (article.dict === 'termwiki') {
+            return <TermArticle key={i} article={article} />;
+          } else {
+            return <SDTermArticle key={i} article={article} />;
+          }
+        })}
+      </Div>
+      )
+    } else {
+      return <Div/>
+    }
+  }
+
+  render () {
+    return this.uff()
+  }
+}
 
 Articles.propTypes = {
   articles: PropTypes.array.isRequired
 };
 
-export default Articles;
+const mapStateToProps = (state) => {
+  const { selectedLemma, articlesByLemma } = state;
+  const {
+    isFetching,
+    items: articles
+  } = articlesByLemma[selectedLemma] || {
+    isFetching: false,
+    items: []
+  };
+
+  return {
+    isFetching,
+    selectedLemma,
+    articles
+  };
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchArticlesIfNeeded: (nextLemma) => {
+   dispatch(fetchArticlesIfNeeded(nextLemma))
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Articles);
