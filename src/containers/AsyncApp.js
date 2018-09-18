@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Languages from '../components/Languages';
 import glamorous, { Div, A, Footer } from 'glamorous';
 import Searcher from '../components/Searcher';
