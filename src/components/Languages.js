@@ -23,5 +23,16 @@ class Languages extends Component {
 }
 
 export default reduxForm({
-  form: 'languages'  // a unique identifier for this form
+  form: 'languages',  // a unique identifier for this form
+  initialValues: {
+    'sma': true,
+    'sme': true,
+    'smj': true,
+    'smn': true,
+    'fin': true,
+    'nob': true,
+    'swe': true,
+    'eng': true,
+    'lat': true
+  }
 })(Languages);
