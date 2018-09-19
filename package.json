@@ -36,9 +36,11 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@storybook/react": "^3.4.11",
+    "@storybook/addon-storyshots": "^3.4.11",
     "@storybook/addons": "^3.4.11",
+    "@storybook/react": "^3.4.11",
     "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "react-test-renderer": "^16.5.2"
   }
 }
