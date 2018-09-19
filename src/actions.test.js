@@ -99,6 +99,21 @@ describe('test conditions for fetching articles', () => {
     };
     expect(actions.shouldFetchArticles(state, lemma)).toEqual(false);
   });
+
+  it('map object to array', () => {
+    const data = {
+      a: true,
+      b: false,
+      c: true
+    };
+
+    const mapTrue = (data) => {
+      return Object.keys(data).filter((key) => {
+        return data[key];
+      });
+    };
+    expect(mapTrue(data)).toEqual(['a', 'c']);
+  });
 });
 
 describe('test conditions for fetching search items', () => {
