@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Example default 1`] = `
+<div
+  className="css-11m1ind"
+>
+  <div
+    className="css-nil"
+  >
+    original
+  </div>
+  <div
+    className="css-r494z3"
+  >
+    translation
+  </div>
+</div>
+`;
+
 exports[`Storyshots Stem default 1`] = `
 <div
   className="css-63oe3q"
