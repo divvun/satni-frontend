@@ -36,6 +36,9 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@kadira/storybook": "^2.21.0"
+    "@storybook/react": "^3.4.11",
+    "@storybook/addons": "^3.4.11",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0"
   }
 }
