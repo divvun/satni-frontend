@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Stem default 1`] = `
+<div
+  className="css-63oe3q"
+>
+  <span
+    className="css-1dps91a"
+  >
+    guolli
+     
+    N
+     
+    sme
+  </span>
+  <span
+    className="css-1omoydn"
+  >
+    <a
+      className="css-nil"
+      href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+      target="_blank"
+    >
+      Search for guolli in Korp
+    </a>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Stem key_nonzero 1`] = `
+<div
+  className="css-63oe3q"
+>
+  <span
+    className="css-1dps91a"
+  >
+    <span
+      className="css-l6c9n4"
+    >
+      guolli
+    </span>
+     
+    N
+     
+    sme
+  </span>
+  <span
+    className="css-1omoydn"
+  >
+    <a
+      className="css-nil"
+      href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+      target="_blank"
+    >
+      Search for guolli in Korp
+    </a>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Stem non_sami 1`] = `
+<div
+  className="css-63oe3q"
+>
+  <span
+    className="css-1dps91a"
+  >
+    guolli
+     
+    N
+     
+    nob
+  </span>
+</div>
+`;
