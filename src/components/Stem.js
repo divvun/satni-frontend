@@ -15,7 +15,7 @@ const KorpLink = (lang, lemma) => {
 const Stem = ({ stem: {lemma, pos, lang, key}}) => {
   return (
     <Div key={key} css={{width: '100%'}}>
-      <Span css={{ display: 'inline'}}>{key ? <Span css={{fontWeight: 'bold'}}>{lemma}</Span> : lemma} {pos} {lang}</Span>
+      <Span css={{ display: 'inline'}}>{key ? <Span css={{fontWeight: 'bold', marginLeft: '2%'}}>{lemma}</Span> : lemma} {pos} {lang}</Span>
       {korpLangs.has(lang) && (KorpLink(lang, lemma))}
     </Div>
   );
