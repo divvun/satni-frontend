@@ -1,5 +1,757 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Articles All three types 1`] = `
+<div
+  className="css-f9fbtt"
+>
+  <div
+    className="css-1pq8i0c"
+  >
+    <div
+      className="css-nil"
+    >
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          oainnáhus
+           
+          N
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"oainnáhus\\"]"
+            target="_blank"
+          >
+            Search for oainnáhus in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            syn
+          </span>
+           
+          N
+           
+          nob
+        </span>
+      </div>
+    </div>
+    <div
+      className="css-nil"
+    >
+      <div
+        className="css-11m1ind"
+      >
+        <div
+          className="css-nil"
+        >
+          Iskkan sihkkut váivves oainnáhusa iežan čalmmiin, muhto dat liikká čuovvu mu.
+        </div>
+        <div
+          className="css-r494z3"
+        >
+          Jeg prøver å vaske vekk det triste synet fra øynene mine, men det følger med likevel.
+        </div>
+      </div>
+      <div
+        className="css-11m1ind"
+      >
+        <div
+          className="css-nil"
+        >
+          Lean áidna vilges olmmoš ja dieđusge oainnáhus.
+        </div>
+        <div
+          className="css-r494z3"
+        >
+          Jeg er det eneste hvite mennesket og selvfølgelig et syn.
+        </div>
+      </div>
+    </div>
+    <div
+      className="css-oebrgw"
+    >
+      Source: 
+      smenob
+    </div>
+  </div>
+  <div
+    className="css-1pq8i0c"
+  >
+    <div
+      className="css-nil"
+    >
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          androgyn
+           
+          N
+           
+          smn
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgyn\\"]"
+            target="_blank"
+          >
+            Search for androgyn in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            androgyne
+          </span>
+           
+          N
+           
+          eng
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            androgynlâšvuotâ
+          </span>
+           
+          A
+           
+          smn
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynlâšvuotâ\\"]"
+            target="_blank"
+          >
+            Search for androgynlâšvuotâ in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            androgynvuotâ
+          </span>
+           
+           
+          smn
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynvuotâ\\"]"
+            target="_blank"
+          >
+            Search for androgynvuotâ in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            androgyna
+          </span>
+           
+          N
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"androgyna\\"]"
+            target="_blank"
+          >
+            Search for androgyna in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            androgyyni
+          </span>
+           
+          N
+           
+          fin
+        </span>
+      </div>
+    </div>
+    <div
+      className="css-oebrgw"
+    >
+      <a
+        className="css-nil"
+        href="https://satni.uit.no/termwiki/index.php?title=Girji:androgyna"
+        target="_blank"
+      >
+        This article on the TermWiki
+      </a>
+    </div>
+  </div>
+  <div
+    className="css-1pq8i0c"
+  >
+    <div
+      className="css-nil"
+    >
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          gođđinmuorra
+           
+          S
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"gođđinmuorra\\"]"
+            target="_blank"
+          >
+            Search for gođđinmuorra in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            guolládat
+          </span>
+           
+          S
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolládat\\"]"
+            target="_blank"
+          >
+            Search for guolládat in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            guolla
+          </span>
+           
+          S
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolla\\"]"
+            target="_blank"
+          >
+            Search for guolla in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            målepinne
+          </span>
+           
+          S
+           
+          nob
+        </span>
+      </div>
+    </div>
+    <div
+      className="css-oebrgw"
+    >
+      Source: 
+      SD-Term
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Articles Loading 1`] = `
+<div
+  className="css-nil"
+>
+  Loading …
+</div>
+`;
+
+exports[`Storyshots Articles Only DictArticle 1`] = `
+<div
+  className="css-f9fbtt"
+>
+  <div
+    className="css-1pq8i0c"
+  >
+    <div
+      className="css-nil"
+    >
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          oainnáhus
+           
+          N
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"oainnáhus\\"]"
+            target="_blank"
+          >
+            Search for oainnáhus in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            syn
+          </span>
+           
+          N
+           
+          nob
+        </span>
+      </div>
+    </div>
+    <div
+      className="css-nil"
+    >
+      <div
+        className="css-11m1ind"
+      >
+        <div
+          className="css-nil"
+        >
+          Iskkan sihkkut váivves oainnáhusa iežan čalmmiin, muhto dat liikká čuovvu mu.
+        </div>
+        <div
+          className="css-r494z3"
+        >
+          Jeg prøver å vaske vekk det triste synet fra øynene mine, men det følger med likevel.
+        </div>
+      </div>
+      <div
+        className="css-11m1ind"
+      >
+        <div
+          className="css-nil"
+        >
+          Lean áidna vilges olmmoš ja dieđusge oainnáhus.
+        </div>
+        <div
+          className="css-r494z3"
+        >
+          Jeg er det eneste hvite mennesket og selvfølgelig et syn.
+        </div>
+      </div>
+    </div>
+    <div
+      className="css-oebrgw"
+    >
+      Source: 
+      smenob
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Articles Only SDTermArticle 1`] = `
+<div
+  className="css-f9fbtt"
+>
+  <div
+    className="css-1pq8i0c"
+  >
+    <div
+      className="css-nil"
+    >
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          gođđinmuorra
+           
+          S
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"gođđinmuorra\\"]"
+            target="_blank"
+          >
+            Search for gođđinmuorra in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            guolládat
+          </span>
+           
+          S
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolládat\\"]"
+            target="_blank"
+          >
+            Search for guolládat in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            guolla
+          </span>
+           
+          S
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolla\\"]"
+            target="_blank"
+          >
+            Search for guolla in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            målepinne
+          </span>
+           
+          S
+           
+          nob
+        </span>
+      </div>
+    </div>
+    <div
+      className="css-oebrgw"
+    >
+      Source: 
+      SD-Term
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Articles Only TermWikiArticle 1`] = `
+<div
+  className="css-f9fbtt"
+>
+  <div
+    className="css-1pq8i0c"
+  >
+    <div
+      className="css-nil"
+    >
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          androgyn
+           
+          N
+           
+          smn
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgyn\\"]"
+            target="_blank"
+          >
+            Search for androgyn in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            androgyne
+          </span>
+           
+          N
+           
+          eng
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            androgynlâšvuotâ
+          </span>
+           
+          A
+           
+          smn
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynlâšvuotâ\\"]"
+            target="_blank"
+          >
+            Search for androgynlâšvuotâ in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            androgynvuotâ
+          </span>
+           
+           
+          smn
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynvuotâ\\"]"
+            target="_blank"
+          >
+            Search for androgynvuotâ in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            androgyna
+          </span>
+           
+          N
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"androgyna\\"]"
+            target="_blank"
+          >
+            Search for androgyna in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            androgyyni
+          </span>
+           
+          N
+           
+          fin
+        </span>
+      </div>
+    </div>
+    <div
+      className="css-oebrgw"
+    >
+      <a
+        className="css-nil"
+        href="https://satni.uit.no/termwiki/index.php?title=Girji:androgyna"
+        target="_blank"
+      >
+        This article on the TermWiki
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots DictArticle default 1`] = `
 <div
   className="css-1pq8i0c"
