@@ -11,6 +11,5 @@ const stems = [
   {...stem, lang: 'nob'}
 ];
 
-console.log(stems);
 storiesOf('Stems', module)
   .add('default', () => <Stems stems={stems} />);
