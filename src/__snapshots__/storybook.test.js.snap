@@ -118,7 +118,7 @@ exports[`Storyshots DictArticle default 1`] = `
 </div>
 `;
 
-exports[`Storyshots DictArticle with_examples 1`] = `
+exports[`Storyshots DictArticle without_examples 1`] = `
 <div
   className="css-1pq8i0c"
 >
@@ -256,6 +256,15 @@ exports[`Storyshots Examples default 1`] = `
       translation1
     </div>
   </div>
+</div>
+`;
+
+exports[`Storyshots Source default 1`] = `
+<div
+  className="css-oebrgw"
+>
+  Source: 
+  smenob
 </div>
 `;
 

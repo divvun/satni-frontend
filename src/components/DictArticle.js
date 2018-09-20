@@ -4,13 +4,14 @@ import { Div} from 'glamorous';
 import { ArticleDiv } from '../components';
 import Examples from './Examples';
 import Stems from './Stems';
+import Source from './Source';
 
 const DictArticle = ({stems, examples, dictionary}) => {
   return (
     <ArticleDiv>
       <Stems stems={stems} />
       {examples && (<Examples examples={examples} />)}
-      <Div css={{textAlign: 'right', marginTop: '1%', paddingBottom: '0', fontSize: '90%'}}>Source: {dictionary}</Div>
+      <Source source={dictionary} />
     </ArticleDiv>
   );
 };
