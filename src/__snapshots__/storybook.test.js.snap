@@ -17,6 +17,41 @@ exports[`Storyshots Example default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Examples default 1`] = `
+<div
+  className="css-nil"
+>
+  <div
+    className="css-11m1ind"
+  >
+    <div
+      className="css-nil"
+    >
+      original0
+    </div>
+    <div
+      className="css-r494z3"
+    >
+      translation0
+    </div>
+  </div>
+  <div
+    className="css-11m1ind"
+  >
+    <div
+      className="css-nil"
+    >
+      original1
+    </div>
+    <div
+      className="css-r494z3"
+    >
+      translation1
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Stem default 1`] = `
 <div
   className="css-63oe3q"
