@@ -110,6 +110,33 @@ exports[`Storyshots Stem key_nonzero 1`] = `
 </div>
 `;
 
+exports[`Storyshots Stem lang_nonsme 1`] = `
+<div
+  className="css-63oe3q"
+>
+  <span
+    className="css-1dps91a"
+  >
+    guolli
+     
+    N
+     
+    smj
+  </span>
+  <span
+    className="css-1omoydn"
+  >
+    <a
+      className="css-nil"
+      href="http://gtweb.uit.no/korp/?mode=smj#?search=cqp|[lemma%3D\\"guolli\\"]"
+      target="_blank"
+    >
+      Search for guolli in Korp
+    </a>
+  </span>
+</div>
+`;
+
 exports[`Storyshots Stem non_sami 1`] = `
 <div
   className="css-63oe3q"
