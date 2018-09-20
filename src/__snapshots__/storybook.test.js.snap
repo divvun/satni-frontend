@@ -1,5 +1,212 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots DictArticle default 1`] = `
+<div
+  className="css-1pq8i0c"
+>
+  <div
+    className="css-nil"
+  >
+    <div
+      className="css-63oe3q"
+    >
+      <span
+        className="css-1dps91a"
+      >
+        guolli
+         
+        N
+         
+        sme
+      </span>
+      <span
+        className="css-1omoydn"
+      >
+        <a
+          className="css-nil"
+          href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+          target="_blank"
+        >
+          Search for guolli in Korp
+        </a>
+      </span>
+    </div>
+    <div
+      className="css-63oe3q"
+    >
+      <span
+        className="css-1dps91a"
+      >
+        <span
+          className="css-1oipxyn"
+        >
+          guolli
+        </span>
+         
+        N
+         
+        sme
+      </span>
+      <span
+        className="css-1omoydn"
+      >
+        <a
+          className="css-nil"
+          href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+          target="_blank"
+        >
+          Search for guolli in Korp
+        </a>
+      </span>
+    </div>
+    <div
+      className="css-63oe3q"
+    >
+      <span
+        className="css-1dps91a"
+      >
+        <span
+          className="css-1oipxyn"
+        >
+          guolli
+        </span>
+         
+        N
+         
+        nob
+      </span>
+    </div>
+  </div>
+  <div
+    className="css-nil"
+  >
+    <div
+      className="css-11m1ind"
+    >
+      <div
+        className="css-nil"
+      >
+        original0
+      </div>
+      <div
+        className="css-r494z3"
+      >
+        translation0
+      </div>
+    </div>
+    <div
+      className="css-11m1ind"
+    >
+      <div
+        className="css-nil"
+      >
+        original1
+      </div>
+      <div
+        className="css-r494z3"
+      >
+        translation1
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-oebrgw"
+  >
+    Source: 
+    smenob
+  </div>
+</div>
+`;
+
+exports[`Storyshots DictArticle with_examples 1`] = `
+<div
+  className="css-1pq8i0c"
+>
+  <div
+    className="css-nil"
+  >
+    <div
+      className="css-63oe3q"
+    >
+      <span
+        className="css-1dps91a"
+      >
+        guolli
+         
+        N
+         
+        sme
+      </span>
+      <span
+        className="css-1omoydn"
+      >
+        <a
+          className="css-nil"
+          href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+          target="_blank"
+        >
+          Search for guolli in Korp
+        </a>
+      </span>
+    </div>
+    <div
+      className="css-63oe3q"
+    >
+      <span
+        className="css-1dps91a"
+      >
+        <span
+          className="css-1oipxyn"
+        >
+          guolli
+        </span>
+         
+        N
+         
+        sme
+      </span>
+      <span
+        className="css-1omoydn"
+      >
+        <a
+          className="css-nil"
+          href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+          target="_blank"
+        >
+          Search for guolli in Korp
+        </a>
+      </span>
+    </div>
+    <div
+      className="css-63oe3q"
+    >
+      <span
+        className="css-1dps91a"
+      >
+        <span
+          className="css-1oipxyn"
+        >
+          guolli
+        </span>
+         
+        N
+         
+        nob
+      </span>
+    </div>
+  </div>
+  <div
+    className="css-nil"
+  />
+  <div
+    className="css-oebrgw"
+  >
+    Source: 
+    smenob
+  </div>
+</div>
+`;
+
 exports[`Storyshots Example default 1`] = `
 <div
   className="css-11m1ind"
