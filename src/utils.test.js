@@ -80,6 +80,43 @@ export const resultSDTerm = {
   dict: 'SD-terms'
 };
 
+export const resultTermWiki = {
+  stems: [
+    {
+      'lemma': 'androgyn',
+      'lang': 'smn',
+      'pos': 'N'
+    },
+    {
+      'lemma': 'androgyne',
+      'lang': 'eng',
+      'pos': 'N'
+    },
+    {
+      'lemma': 'androgynlâšvuotâ',
+      'lang': 'smn',
+      'pos': 'A'
+    },
+    {
+      'lemma': 'androgynvuotâ',
+      'lang': 'smn',
+      'pos': undefined
+    },
+    {
+      'lemma': 'androgyna',
+      'lang': 'sme',
+      'pos': 'N'
+    },
+    {
+      'lemma': 'androgyyni',
+      'lang': 'fin',
+      'pos': 'N'
+    }
+  ],
+  termwikiref: 'Servodatdieđa:androgyna',
+  dict: 'termwiki'
+};
+
 describe('Massage data from eXist', () => {
   it('Turn text in to JSON', () => {
     const gotQuery = '{{ "term" : "juolahtaa mieleen", "dict" : "finsmn", "lang" : "fin", "langs" : "smn" }}';
@@ -379,40 +416,7 @@ describe('Massage data from eXist', () => {
       'dict': 'termwiki'
     };
 
-    const result = [
-      {
-        'lemma': 'androgyn',
-        'lang': 'smn',
-        'pos': 'N'
-      },
-      {
-        'lemma': 'androgyne',
-        'lang': 'eng',
-        'pos': 'N'
-      },
-      {
-        'lemma': 'androgynlâšvuotâ',
-        'lang': 'smn',
-        'pos': 'A'
-      },
-      {
-        'lemma': 'androgynvuotâ',
-        'lang': 'smn',
-        'pos': undefined
-      },
-      {
-        'lemma': 'androgyna',
-        'lang': 'sme',
-        'pos': 'N'
-      },
-      {
-        'lemma': 'androgyyni',
-        'lang': 'fin',
-        'pos': 'N'
-      }
-    ];
-
-    expect(normaliseTermWiki(termWiki)).toEqual(result);
+    expect(normaliseTermWiki(termWiki)).toEqual(resultTermWiki);
   });
 
   it('Normalise a SDTerm article into an object', () => {

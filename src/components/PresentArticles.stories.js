@@ -3,47 +3,10 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import Articles from './PresentArticles';
-import { resultSDTerm, resultDictWithExamples, resultDictWithoutExamples } from '../utils.test';
+import { resultSDTerm, resultDictWithExamples, resultDictWithoutExamples, resultTermWiki } from '../utils.test';
 
 const isFetching = true;
 const articles = [];
-
-const resultTermWiki = {
-  stems: [
-    {
-      'lemma': 'androgyn',
-      'lang': 'smn',
-      'pos': 'N'
-    },
-    {
-      'lemma': 'androgyne',
-      'lang': 'eng',
-      'pos': 'N'
-    },
-    {
-      'lemma': 'androgynlâšvuotâ',
-      'lang': 'smn',
-      'pos': 'A'
-    },
-    {
-      'lemma': 'androgynvuotâ',
-      'lang': 'smn',
-      'pos': undefined
-    },
-    {
-      'lemma': 'androgyna',
-      'lang': 'sme',
-      'pos': 'N'
-    },
-    {
-      'lemma': 'androgyyni',
-      'lang': 'fin',
-      'pos': 'N'
-    }
-  ],
-  termwikiref: 'Girji:androgyna',
-  dict: 'termwiki'
-};
 
 storiesOf('Articles', module)
   .add('Loading', () => <Articles isFetching={isFetching} articles={articles} />)
