@@ -133,7 +133,11 @@ const normaliseTermWiki = (existTerm) => {
     terms.push(stem);
   }
 
-  return terms;
+  return {
+    stems: terms,
+    termwikiref: existTerm.termwikiref,
+    dict: existTerm.dict
+  };
 };
 
 const sdTranslationStems = (t, lang, pos) => {
