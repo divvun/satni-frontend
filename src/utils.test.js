@@ -9,6 +9,51 @@ import {
   normaliseParadigm
 } from './utils';
 
+export const resultDictWithExamples = {
+  'translations': [
+    {
+      'pos': 'N',
+      'lang': 'sme',
+      'lemma': 'oainnáhus'
+    },
+    {
+      'pos': 'N',
+      'lang': 'nob',
+      'lemma': 'syn'
+    }
+  ],
+  'examples': [
+    {
+      'x': 'Iskkan sihkkut váivves oainnáhusa iežan čalmmiin, muhto dat liikká čuovvu mu.',
+      'xt': 'Jeg prøver å vaske vekk det triste synet fra øynene mine, men det følger med likevel.'
+    },
+    {
+      'x': 'Lean áidna vilges olmmoš ja dieđusge oainnáhus.',
+      'xt': 'Jeg er det eneste hvite mennesket og selvfølgelig et syn.'
+    }
+  ],
+  termwikiref: '-1',
+  dict: 'smenob'
+};
+
+export const resultDictWithoutExamples = {
+  'dict': 'smefin',
+  'examples': [],
+  'termwikiref': '-1',
+  'translations': [
+    {
+      'pos': 'N',
+      'lang': 'sme',
+      'lemma': 'guolladat'
+    },
+    {
+      'pos': 'N',
+      'lang': 'fin',
+      'lemma': 'kalvoin verkonkudonnassa'
+    }
+  ]
+};
+
 export const resultSDTerm = {
   stems: [
     {
@@ -205,32 +250,8 @@ describe('Massage data from eXist', () => {
       },
       'lang': 'sme'
     };
-    const resultDict = {
-      'translations': [
-        {
-          'pos': 'N',
-          'lang': 'sme',
-          'lemma': 'oainnáhus'
-        },
-        {
-          'pos': 'N',
-          'lang': 'nob',
-          'lemma': 'syn'
-        }
-      ],
-      'examples': [
-        {
-          'x': 'Iskkan sihkkut váivves oainnáhusa iežan čalmmiin, muhto dat liikká čuovvu mu.',
-          'xt': 'Jeg prøver å vaske vekk det triste synet fra øynene mine, men det følger med likevel.'
-        },
-        {
-          'x': 'Lean áidna vilges olmmoš ja dieđusge oainnáhus.',
-          'xt': 'Jeg er det eneste hvite mennesket og selvfølgelig et syn.'
-        }
-      ]
-    };
 
-    expect(normaliseDict(existDict)).toEqual(resultDict);
+    expect(normaliseDict(existDict)).toEqual(resultDictWithExamples);
   });
 
   it('Normalise a dict article without examples into an object', () => {
@@ -256,23 +277,7 @@ describe('Massage data from eXist', () => {
       'def': null
     };
 
-    const resultDict = {
-      'examples': [],
-      'translations': [
-        {
-          'pos': 'N',
-          'lang': 'sme',
-          'lemma': 'guolladat'
-        },
-        {
-          'pos': 'N',
-          'lang': 'fin',
-          'lemma': 'kalvoin verkonkudonnassa'
-        }
-      ]
-    };
-
-    expect(normaliseDict(existDict)).toEqual(resultDict);
+    expect(normaliseDict(existDict)).toEqual(resultDictWithoutExamples);
   });
 
   it('Normalise a termwiki article into an object', () => {
