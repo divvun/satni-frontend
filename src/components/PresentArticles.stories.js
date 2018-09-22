@@ -3,7 +3,12 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import Articles from './PresentArticles';
-import { resultSDTerm, resultDictWithExamples, resultDictWithoutExamples, resultTermWiki } from '../utils.test';
+import {
+  resultSDTerm,
+  resultDictWithExamples,
+  resultDictWithoutExamples,
+  resultTermWiki
+} from '../utils_testdata';
 
 const isFetching = true;
 const articles = [];
