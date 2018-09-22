@@ -70,7 +70,12 @@ const normaliseDict = (existDict) => {
 
   let examples = existDict.tg.xg ? translationExamples(existDict.tg.xg) : [];
 
-  return {translations, examples};
+  return {
+    translations,
+    examples,
+    termwikiref: existDict.termwikiref,
+    dict: existDict.dict
+  };
 };
 
 const term2dict = {
