@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import Articles from './PresentArticles';
+import { resultSDTerm } from '../utils.test.js';
 
 const isFetching = true;
 const articles = [];
@@ -69,32 +70,6 @@ const resultTermWiki = {
   ],
   termwikiref: 'Girji:androgyna',
   dict: 'termwiki'
-};
-
-const resultSDTerm = {
-  stems: [
-    {
-      'lemma': 'gođđinmuorra',
-      'pos': 'S',
-      'lang': 'sme'
-    },
-    {
-      'lemma': 'guolládat',
-      'pos': 'S',
-      'lang': 'sme'
-    },
-    {
-      'lemma': 'guolla',
-      'pos': 'S',
-      'lang': 'sme'
-    },
-    {
-      'lemma': 'målepinne',
-      'pos': 'S',
-      'lang': 'nob'
-    }
-  ],
-  dict: 'SD-Term'
 };
 
 storiesOf('Articles', module)
