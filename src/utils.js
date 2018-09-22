@@ -168,7 +168,11 @@ const normaliseSDTerm = (existTerm) => {
     }
   );
   });
-  return terms;
+
+  return {
+    stems: terms,
+    dict: existTerm.dict
+  };
 };
 
 const normaliseParadigm = (html) => {
