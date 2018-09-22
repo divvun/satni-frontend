@@ -9,6 +9,32 @@ import {
   normaliseParadigm
 } from './utils';
 
+export const resultSDTerm = {
+  stems: [
+    {
+      'lemma': 'gođđinmuorra',
+      'pos': 'S',
+      'lang': 'sme'
+    },
+    {
+      'lemma': 'guolládat',
+      'pos': 'S',
+      'lang': 'sme'
+    },
+    {
+      'lemma': 'guolla',
+      'pos': 'S',
+      'lang': 'sme'
+    },
+    {
+      'lemma': 'målepinne',
+      'pos': 'S',
+      'lang': 'nob'
+    }
+  ],
+  dict: 'SD-terms'
+};
+
 describe('Massage data from eXist', () => {
   it('Turn text in to JSON', () => {
     const gotQuery = '{{ "term" : "juolahtaa mieleen", "dict" : "finsmn", "lang" : "fin", "langs" : "smn" }}';
@@ -417,30 +443,8 @@ describe('Massage data from eXist', () => {
       'lang': 'sme',
       'def': null
     };
-    const result = [
-      {
-        'lemma': 'gođđinmuorra',
-        'pos': 'S',
-        'lang': 'sme'
-      },
-      {
-        'lemma': 'guolládat',
-        'pos': 'S',
-        'lang': 'sme'
-      },
-      {
-        'lemma': 'guolla',
-        'pos': 'S',
-        'lang': 'sme'
-      },
-      {
-        'lemma': 'målepinne',
-        'pos': 'S',
-        'lang': 'nob'
-      }
-    ];
 
-    expect(normaliseSDTerm(SDTerm)).toEqual(result);
+    expect(normaliseSDTerm(SDTerm)).toEqual(resultSDTerm);
   });
 });
 
