@@ -3,37 +3,10 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import Articles from './PresentArticles';
-import { resultSDTerm } from '../utils.test.js';
+import { resultSDTerm, resultDictWithExamples, resultDictWithoutExamples } from '../utils.test';
 
 const isFetching = true;
 const articles = [];
-
-const resultDict = {
-  'translations': [
-    {
-      'pos': 'N',
-      'lang': 'sme',
-      'lemma': 'oainnáhus'
-    },
-    {
-      'pos': 'N',
-      'lang': 'nob',
-      'lemma': 'syn'
-    }
-  ],
-  'examples': [
-    {
-      'x': 'Iskkan sihkkut váivves oainnáhusa iežan čalmmiin, muhto dat liikká čuovvu mu.',
-      'xt': 'Jeg prøver å vaske vekk det triste synet fra øynene mine, men det følger med likevel.'
-    },
-    {
-      'x': 'Lean áidna vilges olmmoš ja dieđusge oainnáhus.',
-      'xt': 'Jeg er det eneste hvite mennesket og selvfølgelig et syn.'
-    }
-  ],
-  termwikiref: '-1',
-  dict: 'smenob'
-};
 
 const resultTermWiki = {
   stems: [
@@ -74,8 +47,9 @@ const resultTermWiki = {
 
 storiesOf('Articles', module)
   .add('Loading', () => <Articles isFetching={isFetching} articles={articles} />)
-  .add('Only DictArticle', () => <Articles isFetching={!isFetching} articles={[resultDict]} />)
+  .add('DictArticle with examples', () => <Articles isFetching={!isFetching} articles={[resultDictWithExamples]} />)
+  .add('DictArticle without examples', () => <Articles isFetching={!isFetching} articles={[resultDictWithoutExamples]} />)
   .add('Only TermWikiArticle', () => <Articles isFetching={!isFetching} articles={[resultTermWiki]} />)
   .add('Only SDTermArticle', () => <Articles isFetching={!isFetching} articles={[resultSDTerm]} />)
-  .add('All three types', () => <Articles isFetching={!isFetching}
-    articles={[resultDict, resultTermWiki, resultSDTerm]} />);
+  .add('All types', () => <Articles isFetching={!isFetching}
+    articles={[resultDictWithExamples, resultDictWithoutExamples, resultTermWiki, resultSDTerm]} />);
