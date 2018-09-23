@@ -1,5 +1,4 @@
 import React from 'react';
-import { Div} from 'glamorous';
 
 import { ArticleDiv } from '../components';
 import Stems from './Stems';
