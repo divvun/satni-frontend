@@ -25,17 +25,19 @@ const Articles = ({isFetching, articles}) => {
             stems={article.translations}
             examples={article.examples}
             dictionary={article.dict} />;
-        } else if (article.dict === 'termwiki') {
+        }
+
+        if (article.dict === 'termwiki') {
           return <TermWikiArticle
             key={i}
             stems={article.stems}
             termwikiref={article.termwikiref} />;
-        } else {
-          return <SDTermArticle
-            key={i}
-            stems={article.stems}
-            dictionary={article.dict} />;
         }
+
+        return <SDTermArticle
+          key={i}
+          stems={article.stems}
+          dictionary={article.dict} />;
       })}
     </Div>
   );

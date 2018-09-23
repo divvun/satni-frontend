@@ -18,38 +18,18 @@ describe('async actions', () => {
         'lemma': 'guolle',
         'type': 'REQUEST_ARTICLES'
       },
-      {'articles': [
-        {
-          'def': null,
-          'dict': 'SD-terms',
-          'expl': null,
-          'lang': 'smj',
-          'pos': 'S',
-          'status': null,
-          'term': 'guolle',
-          'termwikiref': '6046',
-          'tg': [
-            {
-              '#text': [`\n            `, `\n        `],
-              't': 'guolli',
-              'xml:lang': 'sme'
-            }, {
-              '#text': [`\n            `, `\n        `],
-              't': 'fisk',
-              'xml:lang': 'nor'
-            },
-            {
-              '#text': [`\n            `, `\n        `],
-              't': 'guolle',
-              'xml:lang': 'smj'
-            },
-            {
-              '#text': [`\n            `, `\n        `],
-              't': 'guelie',
-              'xml:lang': 'sma'
-            }
-          ]
-        }],
+      {
+        'articles': [
+          {
+            'dict': 'SD-terms',
+            'stems': [
+               {'lang': 'smj', 'lemma': 'guolle', 'pos': 'S'},
+               {'lang': 'sme', 'lemma': 'guolli', 'pos': 'S'},
+               {'lang': 'nob', 'lemma': 'fisk', 'pos': 'S'},
+               {'lang': 'sma', 'lemma': 'guelie', 'pos': 'S'}
+            ]
+          }
+        ],
         'lemma': 'guolle',
         'type': 'RECEIVE_ARTICLES'
       }

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Articles All three types 1`] = `
+exports[`Storyshots Articles All types 1`] = `
 <div
   className="css-f9fbtt"
 >
@@ -89,6 +89,64 @@ exports[`Storyshots Articles All three types 1`] = `
     >
       Source: 
       smenob
+    </div>
+  </div>
+  <div
+    className="css-1pq8i0c"
+  >
+    <div
+      className="css-nil"
+    >
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          guolladat
+           
+          N
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolladat\\"]"
+            target="_blank"
+          >
+            Search for guolladat in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            kalvoin verkonkudonnassa
+          </span>
+           
+          N
+           
+          fin
+        </span>
+      </div>
+    </div>
+    <div
+      className="css-nil"
+    />
+    <div
+      className="css-oebrgw"
+    >
+      Source: 
+      smefin
     </div>
   </div>
   <div
@@ -244,7 +302,7 @@ exports[`Storyshots Articles All three types 1`] = `
     >
       <a
         className="css-nil"
-        href="https://satni.uit.no/termwiki/index.php?title=Girji:androgyna"
+        href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
         target="_blank"
       >
         This article on the TermWiki
@@ -359,21 +417,13 @@ exports[`Storyshots Articles All three types 1`] = `
       className="css-oebrgw"
     >
       Source: 
-      SD-Term
+      SD-terms
     </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots Articles Loading 1`] = `
-<div
-  className="css-nil"
->
-  Loading …
-</div>
-`;
-
-exports[`Storyshots Articles Only DictArticle 1`] = `
+exports[`Storyshots Articles DictArticle with examples 1`] = `
 <div
   className="css-f9fbtt"
 >
@@ -464,6 +514,79 @@ exports[`Storyshots Articles Only DictArticle 1`] = `
       smenob
     </div>
   </div>
+</div>
+`;
+
+exports[`Storyshots Articles DictArticle without examples 1`] = `
+<div
+  className="css-f9fbtt"
+>
+  <div
+    className="css-1pq8i0c"
+  >
+    <div
+      className="css-nil"
+    >
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          guolladat
+           
+          N
+           
+          sme
+        </span>
+        <span
+          className="css-1omoydn"
+        >
+          <a
+            className="css-nil"
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolladat\\"]"
+            target="_blank"
+          >
+            Search for guolladat in Korp
+          </a>
+        </span>
+      </div>
+      <div
+        className="css-63oe3q"
+      >
+        <span
+          className="css-1dps91a"
+        >
+          <span
+            className="css-1oipxyn"
+          >
+            kalvoin verkonkudonnassa
+          </span>
+           
+          N
+           
+          fin
+        </span>
+      </div>
+    </div>
+    <div
+      className="css-nil"
+    />
+    <div
+      className="css-oebrgw"
+    >
+      Source: 
+      smefin
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Articles Loading 1`] = `
+<div
+  className="css-nil"
+>
+  Loading …
 </div>
 `;
 
@@ -579,7 +702,7 @@ exports[`Storyshots Articles Only SDTermArticle 1`] = `
       className="css-oebrgw"
     >
       Source: 
-      SD-Term
+      SD-terms
     </div>
   </div>
 </div>
@@ -742,7 +865,7 @@ exports[`Storyshots Articles Only TermWikiArticle 1`] = `
     >
       <a
         className="css-nil"
-        href="https://satni.uit.no/termwiki/index.php?title=Girji:androgyna"
+        href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
         target="_blank"
       >
         This article on the TermWiki
