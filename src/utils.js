@@ -25,6 +25,18 @@ const removeDuplicates = (existTerms) => {
   });
 };
 
+export const normaliseArticles = (existTerms) => {
+  return removeDuplicates(existTerms).map((existTerm) => {
+    if (existTerm.termwikiref === '-1') {
+      return normaliseDict(existTerm);
+    } else if (existTerm.dict === 'termwiki') {
+      return normaliseTermWiki(existTerm);
+    } else {
+      return normaliseSDTerm(existTerm);
+    }
+  });
+};
+
 const translationStems = (tg) => {
   let stems = [];
 

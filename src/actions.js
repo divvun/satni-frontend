@@ -1,5 +1,5 @@
 import fetch from 'cross-fetch';
-import {toJson, removeDuplicates} from './utils';
+import {normaliseArticles, toJson} from './utils';
 
 export const REQUEST_ARTICLES = 'REQUEST_ARTICLES';
 export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES';
@@ -46,7 +46,7 @@ export const fetchArticles = (lemma) => {
     let url = `http://satni.uit.no:8080/exist/restxq/satni/article/${lemma}`;
     return fetch(encodeURI(url))
       .then(response => response.text())
-      .then(text => dispatch(receiveArticles(lemma, removeDuplicates(toJson(text)))));
+      .then(text => dispatch(receiveArticles(lemma, normaliseArticles(toJson(text)))));
   };
 };
 
