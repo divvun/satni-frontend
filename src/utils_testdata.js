@@ -105,3 +105,133 @@ export const resultTermWiki = {
   termwikiref: 'Servodatdieđa:androgyna',
   dict: 'termwiki'
 };
+
+export const resultSmnNounParadigm = {
+  'Nom': {
+    'Sg': ['kyeli'],
+    'Pl': ['kyeleh']
+  },
+  'Gen': {
+    'Sg': ['kyele'],
+    'Pl': ['kuolij']
+  },
+  'Acc': {
+    'Sg': ['kyele'],
+    'Pl': ['kuolijd']
+  },
+  'Ill': {
+    'Sg': ['kuálán'],
+    'Pl': ['kuolijd']
+  },
+  'Loc': {
+    'Sg': ['kyeleest'],
+    'Pl': ['kuolijn']
+  },
+  'Com': {
+    'Sg': ['kuolijn'],
+    'Pl': ['kuolijguin', 'kuolijgijn']
+  },
+  'Abe': {
+    'Sg': ['kyelettáá'],
+    'Pl': ['kuolijttáá']
+  },
+  'Par_both': ['kyellid'],
+  'Ess_both': ['kyellin']
+};
+
+export const resultSmeNounParadigm = {
+  'Nom': {
+    'Sg': ['guolli'],
+    'Pl': ['guolit']
+  },
+  'Gen': {
+    'Sg': ['guole', 'guoli'],
+    'Pl': ['guliid']
+  },
+  'Acc': {
+    'Sg': ['guoli'],
+    'Pl': ['guliid']
+  },
+  'Ill': {
+    'Sg': ['guollái'],
+    'Pl': ['guliide']
+  },
+  'Loc': {
+    'Sg': ['guolis'],
+    'Pl': ['guliin']
+  },
+  'Com': {
+    'Sg': ['guliin'],
+    'Pl': ['guliiguin']
+  },
+  'Ess_both': ['guollin']
+};
+
+export const resultSmaNounParadigm = {
+  'Nom': {
+    'Sg': ['guelie'],
+    'Pl': ['guelieh']
+  },
+  'Gen': {
+    'Sg': ['guelien'],
+    'Pl': ['gööli', 'gueliej']
+  },
+  'Acc': {
+    'Sg': ['gueliem'],
+    'Pl': ['göölide', 'guelide']
+  },
+  'Ill': {
+    'Sg': ['gualan'],
+    'Pl': ['göölide', 'guelide']
+  },
+  'Ine': {
+    'Sg': ['guelesne'],
+    'Pl': ['gööline', 'gueline']
+  },
+  'Ela': {
+    'Sg': ['gueleste'],
+    'Pl': ['göölijste', 'guelijste']
+  },
+  'Com': {
+    'Sg': ['gööline', 'gueline'],
+    'Pl': ['gööligujmie', 'gueliejgujmie']
+  },
+  'Ess_both': ['gööline', 'gueline']
+};
+
+export const resultSmjNounParadigm = {
+  'Nom': {
+    'Sg': ['guolle'],
+    'Pl': ['guole']
+  },
+  'Gen': {
+    'Sg': ['guole'],
+    'Pl': ['guolij']
+  },
+  'Acc': {
+    'Sg': ['guolev'],
+    'Pl': ['guolijt']
+  },
+  'Ill': {
+    'Sg': ['guolláj'],
+    'Pl': ['guolijda']
+  },
+  'Ine': {
+    'Sg': ['guolen'],
+    'Pl': ['guolijn']
+  },
+  'Ela': {
+    'Sg': ['guoles'],
+    'Pl': ['guolijs']
+  },
+  'Com': {
+    'Sg': ['guolijn', 'guolijn'],
+    'Pl': ['guolij']
+  },
+  'Abe': {
+    'Sg': ['guoledagá', 'guoledagi'],
+    'Pl': ['guolijdagá', 'guolijdagi']
+  },
+  'Abe_both': ['guoledak', 'guoleda'],
+  'Ess_both': ['guollen']
+};
