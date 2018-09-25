@@ -1,42 +1,48 @@
 import React from 'react';
-import { Div, Span, Table, Thead, Td, Tr, Th, Tbody } from 'glamorous';
+import { css } from 'react-emotion';
 
 const CaseRow = ({wcase, value}) => {
   if (value instanceof Array) {
     return (
-      <Tr>
-        <Td>{wcase.replace('_both', '')}</Td>
-        <Td css={{colSpan: '2'}}>{value.map((word, i) => {
-          return (<Div key={i}>{word}</Div>);
-        })}</Td>
-      </Tr>
+      <tr>
+        <td>{wcase.replace('_both', '')}</td>
+        <td className={css({colSpan: '2'})}>{value.map((word, i) => {
+          return (
+            <div key={i}>{word}</div>
+          );
+        })}</td>
+      </tr>
     );
   }
 
   return (
-    <Tr>
-      <Td>{wcase}</Td>
+    <tr>
+      <td>{wcase}</td>
       {Object.keys(value).map((key, j) => {
-        return <Td key={j}>{value[key].map((word, i) => {
-          return (<Div key={i}>{word}</Div>);
-        })}</Td>;
+        return (
+          <td key={j}>{value[key].map((word, i) => {
+            return (
+              <div key={i}>{word}</div>
+            );
+          })}</td>
+        );
       })}
-    </Tr>
+    </tr>
   );
 };
 
 const NounParadigm = ({paradigm}) => {
   return (
-    <Table>
-      <Thead>
-        <Th>&nbsp;</Th><Th>Sg</Th><Th>Pl</Th>
-      </Thead>
-      <Tbody>
+    <table>
+      <thead>
+        <th>&nbsp;</th><th>Sg</th><th>Pl</th>
+      </thead>
+      <tbody>
         {Object.keys(paradigm).map((p, i) => {
           return <CaseRow key={p} wcase={p} value={paradigm[p]} />;
         })}
-      </Tbody>
-    </Table>
+      </tbody>
+    </table>
   );
 };
 

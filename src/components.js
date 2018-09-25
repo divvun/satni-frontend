@@ -1,79 +1,73 @@
 import React from 'react';
-import glamorous from 'glamorous';
+import styled from "react-emotion";
 
-const Item = glamorous.div(
-  {
-    position: 'relative',
-    cursor: 'pointer',
-    display: 'block',
-    border: 'none',
-    height: 'auto',
-    textAlign: 'left',
-    borderTop: 'none',
-    lineHeight: '1em',
-    color: 'rgba(0,0,0,.87)',
-    fontSize: '1rem',
-    textTransform: 'none',
-    fontWeight: '400',
-    boxShadow: 'none',
-    padding: '.8rem 1.1rem',
-    whiteSpace: 'normal',
-    wordWrap: 'normal'
-  },
-  ({isActive, isSelected}) => {
-    const styles = [];
-    if (isActive) {
-      styles.push({
-        color: 'rgba(0,0,0,.95)',
-        background: 'rgba(0,0,0,.03)'
-      });
-    }
-    if (isSelected) {
-      styles.push({
-        color: 'rgba(0,0,0,.95)',
-        fontWeight: '700'
-      });
-    }
-    return styles;
-  },
-);
+const Item = styled("div")({
+  position: 'relative',
+  cursor: 'pointer',
+  display: 'block',
+  border: 'none',
+  height: 'auto',
+  textAlign: 'left',
+  borderTop: 'none',
+  lineHeight: '1em',
+  color: 'rgba(0,0,0,.87)',
+  fontSize: '1rem',
+  textTransform: 'none',
+  fontWeight: '400',
+  boxShadow: 'none',
+  padding: '.8rem 1.1rem',
+  whiteSpace: 'normal',
+  wordWrap: 'normal'
+}, ({isActive, isSelected}) => {
+  const styles = [];
+  if (isActive) {
+    styles.push({
+      color: 'rgba(0,0,0,.95)',
+      background: 'rgba(0,0,0,.03)'
+    });
+  }
+  if (isSelected) {
+    styles.push({
+      color: 'rgba(0,0,0,.95)',
+      fontWeight: '700'
+    });
+  }
+  return styles;
+});
 const onAttention = '&:hover, &:focus';
-const Input = glamorous.input(
-  {
-    width: 'calc(100% - 16px)', // full width - icon width/2 - border
-    fontSize: 14,
-    wordWrap: 'break-word',
-    lineHeight: '1em',
-    outline: 0,
-    whiteSpace: 'normal',
-    minHeight: '2em',
-    background: '#fff',
-    display: 'inline-block',
-    padding: '.5em 2em .5em 1em',
-    color: 'rgba(0,0,0,.87)',
-    boxShadow: 'none',
-    border: '1px solid rgba(34,36,38,.15)',
-    borderRadius: '.30rem',
-    transition: 'box-shadow .1s ease,width .1s ease',
-    ':hover': {
-      borderColor: 'rgba(34,36,38,.35)',
-      boxShadow: 'none'
-    },
-    [onAttention]: {
-      borderColor: '#96c8da',
-      boxShadow: '0 2px 3px 0 rgba(34,36,38,.15)'
-    }
+const Input = styled("input")({
+  width: 'calc(100% - 16px)', // full width - icon width/2 - border
+  fontSize: 14,
+  wordWrap: 'break-word',
+  lineHeight: '1em',
+  outline: 0,
+  whiteSpace: 'normal',
+  minHeight: '2em',
+  background: '#fff',
+  display: 'inline-block',
+  padding: '.5em 2em .5em 1em',
+  color: 'rgba(0,0,0,.87)',
+  boxShadow: 'none',
+  border: '1px solid rgba(34,36,38,.15)',
+  borderRadius: '.30rem',
+  transition: 'box-shadow .1s ease,width .1s ease',
+  ':hover': {
+    borderColor: 'rgba(34,36,38,.35)',
+    boxShadow: 'none'
   },
-  ({isOpen}) =>
-    isOpen
-      ? {
-        borderBottomLeftRadius: '0',
-        borderBottomRightRadius: '0'
-      }
-      : null,
-);
+  [onAttention]: {
+    borderColor: '#96c8da',
+    boxShadow: '0 2px 3px 0 rgba(34,36,38,.15)'
+  }
+}, ({isOpen}) =>
+  isOpen
+    ? {
+      borderBottomLeftRadius: '0',
+      borderBottomRightRadius: '0'
+    }
+    : null);
 
-const Menu = glamorous.div({
+const Menu = styled("div")({
   maxHeight: '20rem',
   overflowY: 'auto',
   overflowX: 'hidden',
@@ -89,7 +83,7 @@ const Menu = glamorous.div({
   borderStyle: 'solid'
 });
 
-const ControllerButton = glamorous.button({
+const ControllerButton = styled("button")({
   backgroundColor: 'transparent',
   border: 'none',
   position: 'absolute',
@@ -130,7 +124,7 @@ function XIcon () {
   );
 }
 
-const ArticleDiv = glamorous.div({
+const ArticleDiv = styled("div")({
   borderRadius: '0 0 .28571429rem .28571429rem',
   borderColor: '#96c8da',
   borderTopWidth: '1',
@@ -145,4 +139,8 @@ const ArticleDiv = glamorous.div({
   paddingBottom: '1%'
 });
 
-export {Menu, ControllerButton, Input, Item, ArrowIcon, XIcon, ArticleDiv};
+const ParadigmDiv = styled("div")({
+  padding: '5%',
+});
+
+export {Menu, ControllerButton, Input, Item, ArrowIcon, XIcon, ArticleDiv, ParadigmDiv};
