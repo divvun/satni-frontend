@@ -1402,3 +1402,553 @@ describe('Massage noun data from the cgi-bin paradigm generator', () => {
     expect(normaliseNounParadigm(html)).toEqual(resultSmjNounParadigm);
   });
 });
+
+describe('Massage adjective data from the cgi-bin paradigm generator', () => {
+  it('Turn sme adjective html into something usable', () => {
+    const html = `<html>
+      <head>
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+        <title>Generere davvis&#xE1;megiel sojahanparadigmaid</title>
+      </head>
+      <body>
+        <a href="http://uit.no/">The University of Troms&#xF8; &gt;</a>
+        <a href="http://giellatekno.uit.no/">Giellatekno &gt;</a>
+        <br/>
+        <p/>
+        <form action="http://gtweb.uit.no/cgi-bin/smi/smi.cgi" method="get" name="form3" target="_self">
+          <table border="0" cellpadding="2" cellspacing="1">
+            <tr>
+              <td>
+                <input name="text" size="50" type="text"/>
+                <select name="pos">
+                  <option value="Any">Vaikko makk&#xE1;r</option>
+                  <option value="N">Substantiiva</option>
+                  <option value="V">Vearba</option>
+                  <option value="A">Adjektiiva</option>
+                  <option value="Adv">Advearba</option>
+                  <option value="Pron">Pronomena</option>
+                  <option value="Num">Lohkos&#xE1;tni</option>
+                </select>
+              </td>
+              <td>
+                <a href="http://giellatekno.uit.no/">
+                  <img src="http://giellatekno.uit.no/images/project.png" style="border: none;" title="Giellatekno"/>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input name="mode" type="radio" value="minimal">Atte minim&#xE1;la paradigma</input>
+                <br/>
+                <input checked="1" name="mode" type="radio" value="standard">Atte stand&#xE1;rdaparadigma</input>
+                <br/>
+                <input name="mode" type="radio" value="full">Atte buot sojahanh&#xE1;miid</input>
+                <br/>
+                <input name="lang" type="hidden" value="sme"/>
+                <input name="plang" type="hidden" value="sme"/>
+                <input name="action" type="hidden" value="paradigm"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" value="S&#xE1;dde"/>
+                <input type="reset" value="Sihko"/>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <p>
+          <b>linis: Adjektiiva (A)</b>
+        </p>
+        <table>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Attr</td>
+            <td>
+              <font color="red">litna</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Attr</td>
+            <td>
+              <font color="red">litn&#xE1;sut</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sit</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;set</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sat</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Attr</td>
+            <td>
+              <font color="red">litn&#xE1;seamos</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samos</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Sg Nom</td>
+            <td>
+              <font color="red">linis</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Sg Gen</td>
+            <td>
+              <font color="red">litn&#xE1;sa</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Sg Acc</td>
+            <td>
+              <font color="red">litn&#xE1;sa</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Sg Ill</td>
+            <td>
+              <font color="red">litn&#xE1;sii</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Sg Loc</td>
+            <td>
+              <font color="red">litn&#xE1;sis</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Sg Com</td>
+            <td>
+              <font color="red">litn&#xE1;siin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Pl Nom</td>
+            <td>
+              <font color="red">litn&#xE1;sat</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Pl Gen</td>
+            <td>
+              <font color="red">litn&#xE1;siid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Pl Acc</td>
+            <td>
+              <font color="red">litn&#xE1;siid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Pl Ill</td>
+            <td>
+              <font color="red">litn&#xE1;siidda</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Pl Loc</td>
+            <td>
+              <font color="red">litn&#xE1;siin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Pl Com</td>
+            <td>
+              <font color="red">litn&#xE1;siiguin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Ess</td>
+            <td>
+              <font color="red">linisin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Ess</td>
+            <td>
+              <font color="red">litn&#xE1;seabbon</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbon</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Sg Nom</td>
+            <td>
+              <font color="red">litn&#xE1;sut</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sit</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;set</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;seabbo</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sat</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbo</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Sg Gen</td>
+            <td>
+              <font color="red">litn&#xE1;seappo</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbo</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Sg Acc</td>
+            <td>
+              <font color="red">litn&#xE1;seappo</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbo</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Sg Ill</td>
+            <td>
+              <font color="red">litn&#xE1;sebbui</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbui</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Sg Loc</td>
+            <td>
+              <font color="red">litn&#xE1;seappos</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbos</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Sg Com</td>
+            <td>
+              <font color="red">litn&#xE1;seappuin</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbuin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Pl Nom</td>
+            <td>
+              <font color="red">litn&#xE1;seappot</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbot</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Pl Gen</td>
+            <td>
+              <font color="red">litn&#xE1;seappuid</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbuid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Pl Acc</td>
+            <td>
+              <font color="red">litn&#xE1;seappuid</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbuid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Pl Ill</td>
+            <td>
+              <font color="red">litn&#xE1;seappuide</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbuide</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Pl Loc</td>
+            <td>
+              <font color="red">litn&#xE1;seappuin</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbuin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Comp Pl Com</td>
+            <td>
+              <font color="red">litn&#xE1;seappuiguin</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;sabbuiguin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Ess</td>
+            <td>
+              <font color="red">litn&#xE1;seamosin</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Sg Nom</td>
+            <td>
+              <font color="red">litn&#xE1;seamos</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samos</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Sg Gen</td>
+            <td>
+              <font color="red">litn&#xE1;sepmosa</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosa</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Sg Acc</td>
+            <td>
+              <font color="red">litn&#xE1;sepmosa</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosa</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Sg Ill</td>
+            <td>
+              <font color="red">litn&#xE1;sepmosii</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosii</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Sg Loc</td>
+            <td>
+              <font color="red">litn&#xE1;sepmosis</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosis</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Sg Com</td>
+            <td>
+              <font color="red">litn&#xE1;sepmosiin</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosiin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Pl Nom</td>
+            <td>
+              <font color="red">litn&#xE1;sepmosat</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosat</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Pl Gen</td>
+            <td>
+              <font color="red">litn&#xE1;sepmosiid</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosiid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Pl Acc</td>
+            <td>
+              <font color="red">litn&#xE1;sepmosiid</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosiid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Pl Ill</td>
+            <td>
+              <font color="red">litn&#xE1;sepmosiidda</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosiidda</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Pl Loc</td>
+            <td>
+              <font color="red">litn&#xE1;sepmosiin</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosiin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">linis</font>
+            </td>
+            <td>A Superl Pl Com</td>
+            <td>
+              <font color="red">litn&#xE1;sepmosiiguin</font>
+            </td>
+            <td>
+              <font color="red">litn&#xE1;samosiiguin</font>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+        <p>
+          <br/>
+          <a href="http://giellatekno.uit.no/doc/lang/sme/docu-mini-smi-grammartags.html">Morphological tags</a>
+        </p>
+      </body>
+    </html>`;
+    expect(normaliseNounParadigm(html)).toEqual(resultSmjNounParadigm);
+  });
+});
