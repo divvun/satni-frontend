@@ -1,5 +1,250 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
+<table
+  className="MuiTable-root-1"
+>
+  <thead
+    className="MuiTableHead-root-2"
+  >
+    <tr
+      className="MuiTableRow-root-3 MuiTableRow-head-6"
+    >
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        scope="col"
+      >
+         
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        colSpan={2}
+        scope="col"
+      >
+        Uff
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        colSpan={2}
+        scope="col"
+      >
+        Comp
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        colSpan={2}
+        scope="col"
+      >
+        Superl
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="MuiTableBody-root-16"
+  >
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Attr
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        colSpan={2}
+        scope={undefined}
+      >
+        litna
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        colSpan={2}
+        scope={undefined}
+      >
+        <div>
+          litnásut
+        </div>
+        <div>
+          litnásit
+        </div>
+        <div>
+          litnáset
+        </div>
+        <div>
+          litnásat
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        colSpan={2}
+        scope={undefined}
+      >
+        <div>
+          litnáseamos
+        </div>
+        <div>
+          litnásamos
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      />
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        Sg
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        Pl
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        Sg
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        Pl
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        Sg
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        Pl
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Nom
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          linis
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásat
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásut
+        </div>
+        <div>
+          litnásit
+        </div>
+        <div>
+          litnáset
+        </div>
+        <div>
+          litnáseabbo
+        </div>
+        <div>
+          litnásat
+        </div>
+        <div>
+          litnásabbo
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseappot
+        </div>
+        <div>
+          litnásabbot
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseamos
+        </div>
+        <div>
+          litnásamos
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosat
+        </div>
+        <div>
+          litnásamosat
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
 exports[`Storyshots Articles All types 1`] = `
 <div
   className="css-1f4j338"
