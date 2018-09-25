@@ -1,13 +1,14 @@
 import React from 'react';
-import { Div} from 'glamorous';
+import { css } from "react-emotion";
 
 const Source = ({source}) => {
   return (
-    <Div css={{
+    <div className={css({
       textAlign: 'right',
       marginTop: '1%',
       paddingBottom: '0',
-      fontSize: '90%'}}>Source: {source}</Div>
+      fontSize: '90%'
+    })}>Source: {source}</div>
   );
 };
 

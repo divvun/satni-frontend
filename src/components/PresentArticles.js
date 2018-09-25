@@ -1,5 +1,5 @@
 import React from 'react';
-import { Div} from 'glamorous';
+import { css } from "react-emotion";
 
 import DictArticle from './DictArticle';
 import TermWikiArticle from './TermWikiArticle';
@@ -7,17 +7,17 @@ import SDTermArticle from './SDTermArticle';
 
 const Articles = ({isFetching, articles}) => {
   if (isFetching) {
-    return <Div>Loading …</Div>;
+    return <div>Loading …</div>;
   }
 
   return (
-    <Div css={{
+    <div className={css({
       margin: 'auto',
       paddingLeft: '0.60em',
       paddingRight: '1.75em',
       textAlign: 'left',
       position: 'relative'
-    }}>
+    })}>
       {articles.map((article, i) => {
         if (article.termwikiref === '-1') {
           return <DictArticle
@@ -39,7 +39,7 @@ const Articles = ({isFetching, articles}) => {
           stems={article.stems}
           dictionary={article.dict} />;
       })}
-    </Div>
+    </div>
   );
 };
 

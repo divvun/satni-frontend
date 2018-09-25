@@ -1,10 +1,10 @@
 import React from 'react';
 import Languages from '../components/Languages';
-import glamorous, { Div, A, Footer } from 'glamorous';
+import styled, { css } from "react-emotion";
 import Searcher from '../components/Searcher';
 import Articles from '../components/Articles';
 
-const MyGrid = glamorous.div({
+const MyGrid = styled("div")({
   margin: 'auto',
   // You can use @supports with glamor!
   // So you can use @supports with glamorous as well!
@@ -19,7 +19,7 @@ const MyGrid = glamorous.div({
   }
 });
 
-const Box = glamorous.div({
+const Box = styled("div")({
   padding: 10,
   fontSize: '120%'
 });
@@ -27,12 +27,13 @@ const Box = glamorous.div({
 const AsyncApp = () => (
   <MyGrid>
     <Box css={{ gridArea: 'header'}}>
-      <Div css={{
+      <div className={css({
         fontWeight: 'bold',
         fontSize: '200%',
-        textAlign: 'center'}}>
+        textAlign: 'center'
+      })}>
             sátni.org
-          </Div>
+          </div>
     </Box>
     <Box css={{
       gridArea: 'sidebar'
@@ -49,7 +50,7 @@ const AsyncApp = () => (
     <Box css={{
       gridArea: 'footer'
     }}>
-      <Footer css={{
+      <footer className={css({
         position: 'fixed',
         left: '0px',
         bottom: '0px',
@@ -57,10 +58,10 @@ const AsyncApp = () => (
         width: '100%',
         background: '#999',
         textAlign: 'center'
-      }}>
+      })}>
           Sámi dictionaries and terms delivered by<br />
-        <A href='http://divvun.no'>Divvun</A>, <A href='http://giella.org'>Giellagáldu</A> and <A href='http://giellatekno.uit.no'>Giellatekno</A>
-      </Footer>
+        <a href='http://divvun.no'>Divvun</a>, <a href='http://giella.org'>Giellagáldu</a> and <a href='http://giellatekno.uit.no'>Giellatekno</a>
+      </footer>
     </Box>
   </MyGrid>
     );

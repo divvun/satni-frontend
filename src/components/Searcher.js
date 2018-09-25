@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import Downshift from 'downshift';
 import PropTypes from 'prop-types';
 import { inHTMLData } from 'xss-filters';
-import { css } from 'glamor';
-import { Div } from 'glamorous';
+import { css } from 'react-emotion';
 import { debounce } from 'throttle-debounce';
 import {
   Menu,
@@ -37,7 +36,11 @@ const Searcher = ({onSelect, onInputChange, search}) => (
         }) => {
       return (
         <div className={css({ margin: 'auto' })}>
-          <Div position='relative' css={{ paddingRight: '1.75em' }}>
+          <div
+            className={css({
+              paddingRight: '1.75em',
+              position: 'relative'
+            })}>
             <Input
               {...getInputProps({
                 placeholder: 'Search for a word',
@@ -63,7 +66,7 @@ const Searcher = ({onSelect, onInputChange, search}) => (
                 : <ControllerButton {...getToggleButtonProps()}>
                   <ArrowIcon isOpen={isOpen} />
                 </ControllerButton>}
-          </Div>
+          </div>
           {isOpen ? (
             <div>
               {search.isSearching ? (

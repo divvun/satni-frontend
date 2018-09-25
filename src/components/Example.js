@@ -1,12 +1,15 @@
 import React from 'react';
-import { Div} from 'glamorous';
+import { css } from "react-emotion";
 
 const Example = ({example}) => {
   return (
-    <Div css={{ paddingTop: '3%', paddingLeft: '2%'}}>
-      <Div>{example.x}</Div>
-      <Div css={{fontStyle: 'italic'}}>{example.xt}</Div>
-    </Div>
+    <div className={css({
+      paddingTop: '3%',
+      paddingLeft: '2%'
+    })}>
+      <div>{example.x}</div>
+      <div className={css({fontStyle: 'italic'})}>{example.xt}</div>
+    </div>
   );
 };
 

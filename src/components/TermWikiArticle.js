@@ -1,5 +1,5 @@
 import React from 'react';
-import { Div, A } from 'glamorous';
+import { css } from 'react-emotion';
 
 import { ArticleDiv } from '../components';
 import Stems from './Stems';
@@ -8,12 +8,18 @@ const TermWikiArticle = ({stems, termwikiref}) => {
   return (
     <ArticleDiv>
       <Stems stems={stems} />
-      <Div css={{textAlign: 'right', marginTop: '1%', paddingBottom: '0', fontSize: '90%'}}>
-        <A
+      <div className={css({
+        textAlign: 'right',
+        marginTop: '1%',
+        paddingBottom: '0',
+        fontSize: '90%'
+      })}>
+        <a
           href={`https://satni.uit.no/termwiki/index.php?title=${termwikiref}`}
-          target='_blank'
-            >This article on the TermWiki</A>
-      </Div>
+          target='_blank'>
+          This article on the TermWiki
+        </a>
+      </div>
     </ArticleDiv>
   );
 };
