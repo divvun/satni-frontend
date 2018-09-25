@@ -1,10 +1,10 @@
 import React from 'react';
 import Languages from '../components/Languages';
-import styled, { css } from "react-emotion";
+import styled, { css } from 'react-emotion';
 import Searcher from '../components/Searcher';
 import Articles from '../components/Articles';
 
-const MyGrid = styled("div")({
+const MyGrid = styled('div')({
   margin: 'auto',
   // You can use @supports with glamor!
   // So you can use @supports with glamorous as well!
@@ -19,7 +19,7 @@ const MyGrid = styled("div")({
   }
 });
 
-const Box = styled("div")({
+const Box = styled('div')({
   padding: 10,
   fontSize: '120%'
 });
