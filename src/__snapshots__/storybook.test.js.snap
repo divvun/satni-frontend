@@ -1057,104 +1057,206 @@ exports[`Storyshots Examples default 1`] = `
 `;
 
 exports[`Storyshots NounParadigm Inari saami noun 1`] = `
-<table>
-  <thead>
-    <th>
+<table
+  className="MuiTable-root-65"
+>
+  <thead
+    className="MuiTableHead-root-66"
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-67 MuiTableCell-head-68"
+      scope="col"
+    >
        
     </th>
-    <th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-67 MuiTableCell-head-68"
+      scope="col"
+    >
       Sg
     </th>
-    <th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-67 MuiTableCell-head-68"
+      scope="col"
+    >
       Pl
     </th>
   </thead>
-  <tbody>
-    <tr>
-      <td>
+  <tbody
+    className="MuiTableBody-root-75"
+  >
+    <tr
+      className="MuiTableRow-root-76"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         Nom
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kyeli
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kyeleh
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-76"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         Gen
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kyele
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kuolij
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-76"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         Acc
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kyele
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kuolijd
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-76"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         Ill
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kuálán
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kuolijd
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-76"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         Loc
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kyeleest
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kuolijn
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-76"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         Com
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kuolijn
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kuolijguin
         </div>
@@ -1163,39 +1265,71 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-76"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         Abe
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kyelettáá
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         <div>
           kuolijttáá
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-76"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         Par
       </td>
       <td
-        className="css-jxayus"
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        colSpan={2}
+        scope={undefined}
       >
         <div>
           kyellid
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-76"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        scope={undefined}
+      >
         Ess
       </td>
       <td
-        className="css-jxayus"
+        aria-sort={null}
+        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        colSpan={2}
+        scope={undefined}
       >
         <div>
           kyellin
@@ -1207,114 +1341,226 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
 `;
 
 exports[`Storyshots NounParadigm Lule saami noun 1`] = `
-<table>
-  <thead>
-    <th>
+<table
+  className="MuiTable-root-49"
+>
+  <thead
+    className="MuiTableHead-root-50"
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-51 MuiTableCell-head-52"
+      scope="col"
+    >
        
     </th>
-    <th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-51 MuiTableCell-head-52"
+      scope="col"
+    >
       Sg
     </th>
-    <th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-51 MuiTableCell-head-52"
+      scope="col"
+    >
       Pl
     </th>
   </thead>
-  <tbody>
-    <tr>
-      <td>
+  <tbody
+    className="MuiTableBody-root-59"
+  >
+    <tr
+      className="MuiTableRow-root-60"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         Nom
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolle
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guole
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-60"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         Gen
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guole
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolij
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-60"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         Acc
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolev
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolijt
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-60"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         Ill
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolláj
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolijda
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-60"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         Ine
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolen
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolijn
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-60"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         Ela
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guoles
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolijs
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-60"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         Com
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolijn
         </div>
@@ -1322,17 +1568,31 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
           guolijn
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolij
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-60"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         Abe
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guoledagá
         </div>
@@ -1340,7 +1600,11 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
           guoledagi
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         <div>
           guolijdagá
         </div>
@@ -1349,12 +1613,21 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-60"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         Abe
       </td>
       <td
-        className="css-jxayus"
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        colSpan={2}
+        scope={undefined}
       >
         <div>
           guoledak
@@ -1364,12 +1637,21 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-60"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        scope={undefined}
+      >
         Ess
       </td>
       <td
-        className="css-jxayus"
+        aria-sort={null}
+        className="MuiTableCell-root-51 MuiTableCell-body-53"
+        colSpan={2}
+        scope={undefined}
       >
         <div>
           guollen
@@ -1381,39 +1663,81 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
 `;
 
 exports[`Storyshots NounParadigm North saami noun 1`] = `
-<table>
-  <thead>
-    <th>
+<table
+  className="MuiTable-root-33"
+>
+  <thead
+    className="MuiTableHead-root-34"
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-35 MuiTableCell-head-36"
+      scope="col"
+    >
        
     </th>
-    <th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-35 MuiTableCell-head-36"
+      scope="col"
+    >
       Sg
     </th>
-    <th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-35 MuiTableCell-head-36"
+      scope="col"
+    >
       Pl
     </th>
   </thead>
-  <tbody>
-    <tr>
-      <td>
+  <tbody
+    className="MuiTableBody-root-43"
+  >
+    <tr
+      className="MuiTableRow-root-44"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         Nom
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guolli
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guolit
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-44"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         Gen
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guole
         </div>
@@ -1421,78 +1745,147 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
           guoli
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guliid
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-44"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         Acc
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guoli
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guliid
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-44"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         Ill
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guollái
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guliide
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-44"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         Loc
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guolis
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guliin
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-44"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         Com
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guliin
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         <div>
           guliiguin
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-44"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        scope={undefined}
+      >
         Ess
       </td>
       <td
-        className="css-jxayus"
+        aria-sort={null}
+        className="MuiTableCell-root-35 MuiTableCell-body-37"
+        colSpan={2}
+        scope={undefined}
       >
         <div>
           guollin
@@ -1504,44 +1897,90 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
 `;
 
 exports[`Storyshots NounParadigm South saami noun 1`] = `
-<table>
-  <thead>
-    <th>
+<table
+  className="MuiTable-root-17"
+>
+  <thead
+    className="MuiTableHead-root-18"
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-19 MuiTableCell-head-20"
+      scope="col"
+    >
        
     </th>
-    <th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-19 MuiTableCell-head-20"
+      scope="col"
+    >
       Sg
     </th>
-    <th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-19 MuiTableCell-head-20"
+      scope="col"
+    >
       Pl
     </th>
   </thead>
-  <tbody>
-    <tr>
-      <td>
+  <tbody
+    className="MuiTableBody-root-27"
+  >
+    <tr
+      className="MuiTableRow-root-28"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         Nom
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           guelie
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           guelieh
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-28"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         Gen
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           guelien
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           gööli
         </div>
@@ -1550,16 +1989,30 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-28"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         Acc
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           gueliem
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           göölide
         </div>
@@ -1568,16 +2021,30 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-28"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         Ill
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           gualan
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           göölide
         </div>
@@ -1586,16 +2053,30 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-28"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         Ine
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           guelesne
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           gööline
         </div>
@@ -1604,16 +2085,30 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-28"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         Ela
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           gueleste
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           göölijste
         </div>
@@ -1622,11 +2117,21 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-28"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         Com
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           gööline
         </div>
@@ -1634,7 +2139,11 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
           gueline
         </div>
       </td>
-      <td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         <div>
           gööligujmie
         </div>
@@ -1643,12 +2152,21 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
         </div>
       </td>
     </tr>
-    <tr>
-      <td>
+    <tr
+      className="MuiTableRow-root-28"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        scope={undefined}
+      >
         Ess
       </td>
       <td
-        className="css-jxayus"
+        aria-sort={null}
+        className="MuiTableCell-root-19 MuiTableCell-body-21"
+        colSpan={2}
+        scope={undefined}
       >
         <div>
           gööline
