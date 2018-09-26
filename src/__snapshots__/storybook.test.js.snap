@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
+exports[`Storyshots AdjParadigm North saami adjective 1`] = `
 <table
   className="MuiTable-root-1"
 >
@@ -20,26 +20,23 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       <th
         aria-sort={null}
         className="MuiTableCell-root-8 MuiTableCell-head-9"
-        colSpan={2}
         scope="col"
       >
-        Uff
+        Positive
       </th>
       <th
         aria-sort={null}
         className="MuiTableCell-root-8 MuiTableCell-head-9"
-        colSpan={2}
         scope="col"
       >
-        Comp
+        Comparative
       </th>
       <th
         aria-sort={null}
         className="MuiTableCell-root-8 MuiTableCell-head-9"
-        colSpan={2}
         scope="col"
       >
-        Superl
+        Superlative
       </th>
     </tr>
   </thead>
@@ -53,23 +50,36 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
         aria-sort={null}
         className="MuiTableCell-root-8 MuiTableCell-body-10"
         scope={undefined}
-      >
-        <span>
-          Attr
-        </span>
-      </td>
+      />
       <td
         aria-sort={null}
         className="MuiTableCell-root-8 MuiTableCell-body-10"
-        colSpan={2}
+        colSpan={3}
         scope={undefined}
       >
-        litna
+        Attr
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      />
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litna
+        </div>
       </td>
       <td
         aria-sort={null}
         className="MuiTableCell-root-8 MuiTableCell-body-10"
-        colSpan={2}
         scope={undefined}
       >
         <div>
@@ -88,7 +98,6 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       <td
         aria-sort={null}
         className="MuiTableCell-root-8 MuiTableCell-body-10"
-        colSpan={2}
         scope={undefined}
       >
         <div>
@@ -110,44 +119,10 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       <td
         aria-sort={null}
         className="MuiTableCell-root-8 MuiTableCell-body-10"
+        colSpan={3}
         scope={undefined}
       >
-        Sg
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-        scope={undefined}
-      >
-        Pl
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-        scope={undefined}
-      >
-        Sg
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-        scope={undefined}
-      >
-        Pl
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-        scope={undefined}
-      >
-        Sg
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-        scope={undefined}
-      >
-        Pl
+        Singular
       </td>
     </tr>
     <tr
@@ -169,15 +144,6 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       >
         <div>
           linis
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-8 MuiTableCell-body-10"
-        scope={undefined}
-      >
-        <div>
-          litnásat
         </div>
       </td>
       <td
@@ -210,6 +176,290 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
         scope={undefined}
       >
         <div>
+          litnáseamos
+        </div>
+        <div>
+          litnásamos
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Gen
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnása
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseappo
+        </div>
+        <div>
+          litnásabbo
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosa
+        </div>
+        <div>
+          litnásamosa
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Acc
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnása
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseappo
+        </div>
+        <div>
+          litnásabbo
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosa
+        </div>
+        <div>
+          litnásamosa
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Ill
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásii
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásebbui
+        </div>
+        <div>
+          litnásabbui
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosii
+        </div>
+        <div>
+          litnásamosii
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Loc
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásis
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseappos
+        </div>
+        <div>
+          litnásabbos
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosis
+        </div>
+        <div>
+          litnásamosis
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Com
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosis
+        </div>
+        <div>
+          litnásamosis
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseappuin
+        </div>
+        <div>
+          litnásabbuin
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosiin
+        </div>
+        <div>
+          litnásamosiin
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      />
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        colSpan={3}
+        scope={undefined}
+      >
+        Pluralis
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Nom
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásat
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
           litnáseappot
         </div>
         <div>
@@ -222,10 +472,32 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
         scope={undefined}
       >
         <div>
-          litnáseamos
+          litnásepmosat
         </div>
         <div>
-          litnásamos
+          litnásamosat
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Gen
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásiid
         </div>
       </td>
       <td
@@ -234,10 +506,269 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
         scope={undefined}
       >
         <div>
-          litnásepmosat
+          litnáseappuid
         </div>
         <div>
-          litnásamosat
+          litnásabbuid
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosiid
+        </div>
+        <div>
+          litnásamosiid
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Acc
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásiid
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseappuid
+        </div>
+        <div>
+          litnásabbuid
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosiid
+        </div>
+        <div>
+          litnásamosiid
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Ill
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásiidda
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseappuide
+        </div>
+        <div>
+          litnásabbuide
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosiidda
+        </div>
+        <div>
+          litnásamosiidda
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Loc
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásiin
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseappuin
+        </div>
+        <div>
+          litnásabbuin
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosiin
+        </div>
+        <div>
+          litnásamosiin
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Com
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásiiguin
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseappuiguin
+        </div>
+        <div>
+          litnásabbuiguin
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnásepmosiiguin
+        </div>
+        <div>
+          litnásamosiiguin
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      />
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        colSpan={3}
+        scope={undefined}
+      >
+        Both singularis and pluralis
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <span>
+          Ess
+        </span>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          linisin
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseabbon
+        </div>
+        <div>
+          litnásabbon
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        <div>
+          litnáseamosin
+        </div>
+        <div>
+          litnásamosin
         </div>
       </td>
     </tr>
