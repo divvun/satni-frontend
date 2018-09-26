@@ -11,4 +11,4 @@ import {
 } from '../utils_testdata';
 
 storiesOf('AdjParadigm', module)
-  .add('Inari saami adjective', () => <AdjParadigm paradigm={resultSmnNounParadigm} />);
+  .add('North saami adjective', () => <AdjParadigm paradigm={resultSmeNounParadigm} />);

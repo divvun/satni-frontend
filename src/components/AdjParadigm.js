@@ -12,62 +12,255 @@ const AdjParadigm = ({paradigm}) => {
       <TableHead>
         <TableRow>
           <TableCell>&nbsp;</TableCell>
-          <TableCell colSpan={2}>Uff</TableCell>
-          <TableCell colSpan={2}>Comp</TableCell>
-          <TableCell colSpan={2}>Superl</TableCell>
+          <TableCell>Positive</TableCell>
+          <TableCell>Comparative</TableCell>
+          <TableCell>Superlative</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
         <TableRow>
-          <TableCell><span>Attr</span></TableCell>
-          <TableCell colSpan={2}>litna</TableCell>
-          <TableCell colSpan={2}><div>litnásut</div><div>litnásit</div><div>litnáset</div><div>litnásat</div></TableCell>
-          <TableCell colSpan={2}><div>litnáseamos</div><div>litnásamos</div></TableCell>
+          <TableCell />
+          <TableCell colSpan={3}>Attr</TableCell>
         </TableRow>
         <TableRow>
           <TableCell />
-          <TableCell>Sg</TableCell>
-          <TableCell>Pl</TableCell>
-          <TableCell>Sg</TableCell>
-          <TableCell>Pl</TableCell>
-          <TableCell>Sg</TableCell>
-          <TableCell>Pl</TableCell>
+          <TableCell>
+            <div>litna</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásut</div>
+            <div>litnásit</div>
+            <div>litnáset</div>
+            <div>litnásat</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseamos</div>
+            <div>litnásamos</div>
+          </TableCell>
         </TableRow>
         <TableRow>
-          <TableCell><span>Nom</span></TableCell>
+          <TableCell />
+          <TableCell colSpan={3}>Singular</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Nom</span>
+          </TableCell>
           <TableCell>
             <div>linis</div>
           </TableCell>
           <TableCell>
+            <div>litnásut</div>
+            <div>litnásit</div>
+            <div>litnáset</div>
+            <div>litnáseabbo</div>
+            <div>litnásat</div>
+            <div>litnásabbo</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseamos</div>
+            <div>litnásamos</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Gen</span>
+          </TableCell>
+          <TableCell>
+            <div>litnása</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseappo</div>
+            <div>litnásabbo</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásepmosa</div>
+            <div>litnásamosa</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Acc</span>
+          </TableCell>
+          <TableCell>
+            <div>litnása</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseappo</div>
+            <div>litnásabbo</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásepmosa</div>
+            <div>litnásamosa</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Ill</span>
+          </TableCell>
+          <TableCell>
+            <div>litnásii</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásebbui</div>
+            <div>litnásabbui</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásepmosii</div>
+            <div>litnásamosii</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Loc</span>
+          </TableCell>
+          <TableCell>
+            <div>litnásis</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseappos</div>
+            <div>litnásabbos</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásepmosis</div>
+            <div>litnásamosis</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Com</span>
+          </TableCell>
+          <TableCell>
+            <div>litnásepmosis</div>
+            <div>litnásamosis</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseappuin</div>
+            <div>litnásabbuin</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásepmosiin</div>
+            <div>litnásamosiin</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell />
+          <TableCell colSpan={3}>Pluralis</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Nom</span>
+          </TableCell>
+          <TableCell>
             <div>litnásat</div>
           </TableCell>
-
           <TableCell>
-            <div>litnásut</div><div>
-          litnásit</div><div>
-          litnáset</div><div>
-          litnáseabbo</div><div>
-          litnásat</div><div>
-          litnásabbo
-        </div>
+            <div>litnáseappot</div>
+            <div>litnásabbot</div>
           </TableCell>
           <TableCell>
-            <div>
-              litnáseappot</div><div>
-              litnásabbot
-            </div>
+            <div>litnásepmosat</div>
+            <div>litnásamosat</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Gen</span>
           </TableCell>
           <TableCell>
-            <div>
-          litnáseamos</div><div>
-          litnásamos
-          </div>
+            <div>litnásiid</div>
           </TableCell>
           <TableCell>
-            <div>
-              litnásepmosat</div><div>
-              litnásamosat
-            </div>
+            <div>litnáseappuid</div>
+            <div>litnásabbuid</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásepmosiid</div>
+            <div>litnásamosiid</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Acc</span>
+          </TableCell>
+          <TableCell>
+            <div>litnásiid</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseappuid</div>
+            <div>litnásabbuid</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásepmosiid</div>
+            <div>litnásamosiid</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Ill</span>
+          </TableCell>
+          <TableCell>
+            <div>litnásiidda</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseappuide</div>
+            <div>litnásabbuide</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásepmosiidda</div>
+            <div>litnásamosiidda</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Loc</span>
+          </TableCell>
+          <TableCell>
+            <div>litnásiin</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseappuin</div>
+            <div>litnásabbuin</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásepmosiin</div>
+            <div>litnásamosiin</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Com</span>
+          </TableCell>
+          <TableCell>
+            <div>litnásiiguin</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseappuiguin</div>
+            <div>litnásabbuiguin</div>
+          </TableCell>
+          <TableCell>
+            <div>litnásepmosiiguin</div>
+            <div>litnásamosiiguin</div>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell />
+          <TableCell colSpan={3}>Both singularis and pluralis</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <span>Ess</span>
+          </TableCell>
+          <TableCell>
+            <div>linisin</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseabbon</div>
+            <div>litnásabbon</div>
+          </TableCell>
+          <TableCell>
+            <div>litnáseamosin</div>
+            <div>litnásamosin</div>
           </TableCell>
         </TableRow>
       </TableBody>
