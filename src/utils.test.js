@@ -6,7 +6,8 @@ import {
   normaliseDict,
   normaliseTermWiki,
   normaliseSDTerm,
-  normaliseNounParadigm
+  normaliseNounParadigm,
+  normaliseAdjParadigm
 } from './utils';
 import {
   resultSDTerm,
@@ -16,7 +17,8 @@ import {
   resultSmaNounParadigm,
   resultSmeNounParadigm,
   resultSmjNounParadigm,
-  resultSmnNounParadigm
+  resultSmnNounParadigm,
+  resultSmeAdjParadigm
 } from './utils_testdata';
 
 describe('Massage data from eXist', () => {
@@ -1408,7 +1410,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
     const html = `<html>
       <head>
         <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
-        <title>Generere davvis&#xE1;megiel sojahanparadigmaid</title>
+        <title>Generere davvisámegiel sojahanparadigmaid</title>
       </head>
       <body>
         <a href="http://uit.no/">The University of Troms&#xF8; &gt;</a>
@@ -1421,13 +1423,13 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
               <td>
                 <input name="text" size="50" type="text"/>
                 <select name="pos">
-                  <option value="Any">Vaikko makk&#xE1;r</option>
+                  <option value="Any">Vaikko makkár</option>
                   <option value="N">Substantiiva</option>
                   <option value="V">Vearba</option>
                   <option value="A">Adjektiiva</option>
                   <option value="Adv">Advearba</option>
                   <option value="Pron">Pronomena</option>
-                  <option value="Num">Lohkos&#xE1;tni</option>
+                  <option value="Num">Lohkosátni</option>
                 </select>
               </td>
               <td>
@@ -1438,11 +1440,11 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </tr>
             <tr>
               <td>
-                <input name="mode" type="radio" value="minimal">Atte minim&#xE1;la paradigma</input>
+                <input name="mode" type="radio" value="minimal">Atte minimála paradigma</input>
                 <br/>
-                <input checked="1" name="mode" type="radio" value="standard">Atte stand&#xE1;rdaparadigma</input>
+                <input checked="1" name="mode" type="radio" value="standard">Atte standárdaparadigma</input>
                 <br/>
-                <input name="mode" type="radio" value="full">Atte buot sojahanh&#xE1;miid</input>
+                <input name="mode" type="radio" value="full">Atte buot sojahanhámiid</input>
                 <br/>
                 <input name="lang" type="hidden" value="sme"/>
                 <input name="plang" type="hidden" value="sme"/>
@@ -1451,7 +1453,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </tr>
             <tr>
               <td>
-                <input type="submit" value="S&#xE1;dde"/>
+                <input type="submit" value="Sádde"/>
                 <input type="reset" value="Sihko"/>
               </td>
             </tr>
@@ -1476,16 +1478,16 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Attr</td>
             <td>
-              <font color="red">litn&#xE1;sut</font>
+              <font color="red">litnásut</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sit</font>
+              <font color="red">litnásit</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;set</font>
+              <font color="red">litnáset</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sat</font>
+              <font color="red">litnásat</font>
             </td>
           </tr>
           <tr>
@@ -1494,10 +1496,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Attr</td>
             <td>
-              <font color="red">litn&#xE1;seamos</font>
+              <font color="red">litnáseamos</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samos</font>
+              <font color="red">litnásamos</font>
             </td>
           </tr>
           <tr>
@@ -1515,7 +1517,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Sg Gen</td>
             <td>
-              <font color="red">litn&#xE1;sa</font>
+              <font color="red">litnása</font>
             </td>
           </tr>
           <tr>
@@ -1524,7 +1526,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Sg Acc</td>
             <td>
-              <font color="red">litn&#xE1;sa</font>
+              <font color="red">litnása</font>
             </td>
           </tr>
           <tr>
@@ -1533,7 +1535,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Sg Ill</td>
             <td>
-              <font color="red">litn&#xE1;sii</font>
+              <font color="red">litnásii</font>
             </td>
           </tr>
           <tr>
@@ -1542,7 +1544,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Sg Loc</td>
             <td>
-              <font color="red">litn&#xE1;sis</font>
+              <font color="red">litnásis</font>
             </td>
           </tr>
           <tr>
@@ -1551,7 +1553,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Sg Com</td>
             <td>
-              <font color="red">litn&#xE1;siin</font>
+              <font color="red">litnásiin</font>
             </td>
           </tr>
           <tr>
@@ -1560,7 +1562,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Pl Nom</td>
             <td>
-              <font color="red">litn&#xE1;sat</font>
+              <font color="red">litnásat</font>
             </td>
           </tr>
           <tr>
@@ -1569,7 +1571,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Pl Gen</td>
             <td>
-              <font color="red">litn&#xE1;siid</font>
+              <font color="red">litnásiid</font>
             </td>
           </tr>
           <tr>
@@ -1578,7 +1580,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Pl Acc</td>
             <td>
-              <font color="red">litn&#xE1;siid</font>
+              <font color="red">litnásiid</font>
             </td>
           </tr>
           <tr>
@@ -1587,7 +1589,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Pl Ill</td>
             <td>
-              <font color="red">litn&#xE1;siidda</font>
+              <font color="red">litnásiidda</font>
             </td>
           </tr>
           <tr>
@@ -1596,7 +1598,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Pl Loc</td>
             <td>
-              <font color="red">litn&#xE1;siin</font>
+              <font color="red">litnásiin</font>
             </td>
           </tr>
           <tr>
@@ -1605,7 +1607,7 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Pl Com</td>
             <td>
-              <font color="red">litn&#xE1;siiguin</font>
+              <font color="red">litnásiiguin</font>
             </td>
           </tr>
           <tr>
@@ -1623,10 +1625,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Ess</td>
             <td>
-              <font color="red">litn&#xE1;seabbon</font>
+              <font color="red">litnáseabbon</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbon</font>
+              <font color="red">litnásabbon</font>
             </td>
           </tr>
           <tr>
@@ -1635,22 +1637,22 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Sg Nom</td>
             <td>
-              <font color="red">litn&#xE1;sut</font>
+              <font color="red">litnásut</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sit</font>
+              <font color="red">litnásit</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;set</font>
+              <font color="red">litnáset</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;seabbo</font>
+              <font color="red">litnáseabbo</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sat</font>
+              <font color="red">litnásat</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbo</font>
+              <font color="red">litnásabbo</font>
             </td>
           </tr>
           <tr>
@@ -1659,10 +1661,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Sg Gen</td>
             <td>
-              <font color="red">litn&#xE1;seappo</font>
+              <font color="red">litnáseappo</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbo</font>
+              <font color="red">litnásabbo</font>
             </td>
           </tr>
           <tr>
@@ -1671,10 +1673,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Sg Acc</td>
             <td>
-              <font color="red">litn&#xE1;seappo</font>
+              <font color="red">litnáseappo</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbo</font>
+              <font color="red">litnásabbo</font>
             </td>
           </tr>
           <tr>
@@ -1683,10 +1685,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Sg Ill</td>
             <td>
-              <font color="red">litn&#xE1;sebbui</font>
+              <font color="red">litnásebbui</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbui</font>
+              <font color="red">litnásabbui</font>
             </td>
           </tr>
           <tr>
@@ -1695,10 +1697,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Sg Loc</td>
             <td>
-              <font color="red">litn&#xE1;seappos</font>
+              <font color="red">litnáseappos</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbos</font>
+              <font color="red">litnásabbos</font>
             </td>
           </tr>
           <tr>
@@ -1707,10 +1709,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Sg Com</td>
             <td>
-              <font color="red">litn&#xE1;seappuin</font>
+              <font color="red">litnáseappuin</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbuin</font>
+              <font color="red">litnásabbuin</font>
             </td>
           </tr>
           <tr>
@@ -1719,10 +1721,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Pl Nom</td>
             <td>
-              <font color="red">litn&#xE1;seappot</font>
+              <font color="red">litnáseappot</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbot</font>
+              <font color="red">litnásabbot</font>
             </td>
           </tr>
           <tr>
@@ -1731,10 +1733,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Pl Gen</td>
             <td>
-              <font color="red">litn&#xE1;seappuid</font>
+              <font color="red">litnáseappuid</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbuid</font>
+              <font color="red">litnásabbuid</font>
             </td>
           </tr>
           <tr>
@@ -1743,10 +1745,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Pl Acc</td>
             <td>
-              <font color="red">litn&#xE1;seappuid</font>
+              <font color="red">litnáseappuid</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbuid</font>
+              <font color="red">litnásabbuid</font>
             </td>
           </tr>
           <tr>
@@ -1755,10 +1757,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Pl Ill</td>
             <td>
-              <font color="red">litn&#xE1;seappuide</font>
+              <font color="red">litnáseappuide</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbuide</font>
+              <font color="red">litnásabbuide</font>
             </td>
           </tr>
           <tr>
@@ -1767,10 +1769,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Pl Loc</td>
             <td>
-              <font color="red">litn&#xE1;seappuin</font>
+              <font color="red">litnáseappuin</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbuin</font>
+              <font color="red">litnásabbuin</font>
             </td>
           </tr>
           <tr>
@@ -1779,10 +1781,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Comp Pl Com</td>
             <td>
-              <font color="red">litn&#xE1;seappuiguin</font>
+              <font color="red">litnáseappuiguin</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;sabbuiguin</font>
+              <font color="red">litnásabbuiguin</font>
             </td>
           </tr>
           <tr>
@@ -1791,10 +1793,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Ess</td>
             <td>
-              <font color="red">litn&#xE1;seamosin</font>
+              <font color="red">litnáseamosin</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosin</font>
+              <font color="red">litnásamosin</font>
             </td>
           </tr>
           <tr>
@@ -1803,10 +1805,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Sg Nom</td>
             <td>
-              <font color="red">litn&#xE1;seamos</font>
+              <font color="red">litnáseamos</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samos</font>
+              <font color="red">litnásamos</font>
             </td>
           </tr>
           <tr>
@@ -1815,10 +1817,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Sg Gen</td>
             <td>
-              <font color="red">litn&#xE1;sepmosa</font>
+              <font color="red">litnásepmosa</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosa</font>
+              <font color="red">litnásamosa</font>
             </td>
           </tr>
           <tr>
@@ -1827,10 +1829,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Sg Acc</td>
             <td>
-              <font color="red">litn&#xE1;sepmosa</font>
+              <font color="red">litnásepmosa</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosa</font>
+              <font color="red">litnásamosa</font>
             </td>
           </tr>
           <tr>
@@ -1839,10 +1841,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Sg Ill</td>
             <td>
-              <font color="red">litn&#xE1;sepmosii</font>
+              <font color="red">litnásepmosii</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosii</font>
+              <font color="red">litnásamosii</font>
             </td>
           </tr>
           <tr>
@@ -1851,10 +1853,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Sg Loc</td>
             <td>
-              <font color="red">litn&#xE1;sepmosis</font>
+              <font color="red">litnásepmosis</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosis</font>
+              <font color="red">litnásamosis</font>
             </td>
           </tr>
           <tr>
@@ -1863,10 +1865,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Sg Com</td>
             <td>
-              <font color="red">litn&#xE1;sepmosiin</font>
+              <font color="red">litnásepmosiin</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosiin</font>
+              <font color="red">litnásamosiin</font>
             </td>
           </tr>
           <tr>
@@ -1875,10 +1877,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Pl Nom</td>
             <td>
-              <font color="red">litn&#xE1;sepmosat</font>
+              <font color="red">litnásepmosat</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosat</font>
+              <font color="red">litnásamosat</font>
             </td>
           </tr>
           <tr>
@@ -1887,10 +1889,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Pl Gen</td>
             <td>
-              <font color="red">litn&#xE1;sepmosiid</font>
+              <font color="red">litnásepmosiid</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosiid</font>
+              <font color="red">litnásamosiid</font>
             </td>
           </tr>
           <tr>
@@ -1899,10 +1901,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Pl Acc</td>
             <td>
-              <font color="red">litn&#xE1;sepmosiid</font>
+              <font color="red">litnásepmosiid</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosiid</font>
+              <font color="red">litnásamosiid</font>
             </td>
           </tr>
           <tr>
@@ -1911,10 +1913,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Pl Ill</td>
             <td>
-              <font color="red">litn&#xE1;sepmosiidda</font>
+              <font color="red">litnásepmosiidda</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosiidda</font>
+              <font color="red">litnásamosiidda</font>
             </td>
           </tr>
           <tr>
@@ -1923,10 +1925,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Pl Loc</td>
             <td>
-              <font color="red">litn&#xE1;sepmosiin</font>
+              <font color="red">litnásepmosiin</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosiin</font>
+              <font color="red">litnásamosiin</font>
             </td>
           </tr>
           <tr>
@@ -1935,10 +1937,10 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
             </td>
             <td>A Superl Pl Com</td>
             <td>
-              <font color="red">litn&#xE1;sepmosiiguin</font>
+              <font color="red">litnásepmosiiguin</font>
             </td>
             <td>
-              <font color="red">litn&#xE1;samosiiguin</font>
+              <font color="red">litnásamosiiguin</font>
             </td>
           </tr>
         </table>
@@ -1949,6 +1951,6 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
         </p>
       </body>
     </html>`;
-    expect(normaliseNounParadigm(html)).toEqual(resultSmjNounParadigm);
+    expect(normaliseAdjParadigm(html)).toEqual(resultSmeAdjParadigm);
   });
 });

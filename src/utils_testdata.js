@@ -235,3 +235,80 @@ export const resultSmjNounParadigm = {
   'Abe_both': ['guoledak', 'guoleda'],
   'Ess_both': ['guollen']
 };
+
+export const resultSmeAdjParadigm = {
+  'Attr': {
+    'Positive': ['litna'],
+    'Comp': ['litnásut', 'litnásit', 'litnáset', 'litnásat'],
+    'Superl': ['litnáseamos', 'litnásamos']
+  },
+  'Sg': {
+    'Nom': {
+      'Positive': ['linis'],
+      'Comp': ['litnásut', 'litnásit', 'litnáset', 'litnáseabbo', 'litnásat', 'litnásabbo'],
+      'Superl': ['litnáseamos', 'litnásamos']
+    },
+    'Gen': {
+      'Positive': ['litnása'],
+      'Comp': ['litnáseappo', 'litnásabbo'],
+      'Superl': ['litnásepmosa', 'litnásamosa']
+    },
+    'Acc': {
+      'Positive': ['litnása'],
+      'Comp': ['litnáseappo', 'litnásabbo'],
+      'Superl': ['litnásepmosa', 'litnásamosa']
+    },
+    'Ill': {
+      'Positive': ['litnásii'],
+      'Comp': ['litnásebbui', 'litnásabbui'],
+      'Superl': ['litnásepmosii', 'litnásamosii']
+    },
+    'Loc': {
+      'Positive': ['litnásis'],
+      'Comp': ['litnáseappos', 'litnásabbos'],
+      'Superl': ['litnásepmosis', 'litnásamosis']
+    },
+    'Com': {
+      'Positive': ['litnásiin'],
+      'Comp': ['litnáseappuin', 'litnásabbuin'],
+      'Superl': ['litnásepmosiin', 'litnásamosiin']
+    }
+  },
+  'Pl': {
+    'Nom': {
+      'Positive': ['litnásat'],
+      'Comp': ['litnáseappot', 'litnásabbot'],
+      'Superl': ['litnásepmosat', 'litnásamosat']
+    },
+    'Gen': {
+      'Positive': ['litnásiid'],
+      'Comp': ['litnáseappuid', 'litnásabbuid'],
+      'Superl': ['litnásepmosiid', 'litnásamosiid']
+    },
+    'Acc': {
+      'Positive': ['litnásiid'],
+      'Comp': ['litnáseappuid', 'litnásabbuid'],
+      'Superl': ['litnásepmosiid', 'litnásamosiid']
+    },
+    'Ill': {
+      'Positive': ['litnásiidda'],
+      'Comp': ['litnáseappuide', 'litnásabbuide'],
+      'Superl': ['litnásepmosiidda', 'litnásamosiidda']
+    },
+    'Loc': {
+      'Positive': ['litnásiin'],
+      'Comp': ['litnáseappuin', 'litnásabbuin'],
+      'Superl': ['litnásepmosiin', 'litnásamosiin']
+    },
+    'Com': {
+      'Positive': ['litnásiiguin'],
+      'Comp': ['litnáseappuiguin', 'litnásabbuiguin'],
+      'Superl': ['litnásepmosiiguin', 'litnásamosiiguin']
+    }
+  },
+  'Ess_both': {
+    'Positive': ['linisin'],
+    'Comp': ['litnáseabbon', 'litnásabbon'],
+    'Superl': ['litnáseamosin', 'litnásamosin']
+  }
+};

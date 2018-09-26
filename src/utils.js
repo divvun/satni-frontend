@@ -1,5 +1,8 @@
 import xpath from 'xpath';
 import {DOMParser} from 'xmldom';
+import { Set } from 'immutable';
+
+const num = Set.of('Sg', 'Pl');
 
 const toJson = (text) => {
   // eXist sometimes sends misformed json, correct it here
@@ -223,7 +226,48 @@ const normaliseNounParadigm = (html) => {
   return want;
 };
 
+const normaliseAdjParadigm = (html) => {
+  const doc = new DOMParser().parseFromString(html);
+  const tables = xpath.select('.//table', doc);
+  const tableRows = xpath.select('.//tr', tables[1]);
+  const want = {};
+  let splits = [];
+
+  tableRows.forEach((tr) => {
+    splits = xpath.select('.//td', tr)[1].firstChild.data.split(' ');
+    if (
+      (splits.length === 3 && num.has(splits[1]))
+      || (splits.length == 2)
+    ) {
+      splits.splice(1, 0, 'Positive');
+    }
+
+    if (splits.length === 4) {
+      if (!want[splits[2]]) {
+        want[splits[2]] = {};
+      }
+      if (!want[splits[2]][splits[3]]) {
+        want[splits[2]][splits[3]] = {};
+      }
+      want[splits[2]][splits[3]][splits[1]] = xpath.select('.//font[@color="red"]', tr)
+        .map((font) => font.firstChild.data);
+    }
+    if (splits.length === 3) {
+      const caseClass = splits[2] === 'Attr' ? splits[2] : splits[2] + '_both';
+      if (!want[caseClass]) {
+        want[caseClass] = {};
+      }
+
+      want[caseClass][splits[1]] = xpath.select('.//font[@color="red"]', tr)
+        .map((font) => font.firstChild.data);
+    }
+  });
+
+  return want;
+};
+
 export {
   toJson, removeDuplicates, translationStems, translationExamples,
-  normaliseDict, normaliseTermWiki, normaliseSDTerm, normaliseNounParadigm
+  normaliseDict, normaliseTermWiki, normaliseSDTerm, normaliseNounParadigm,
+  normaliseAdjParadigm
 };
