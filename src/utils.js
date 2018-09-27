@@ -270,8 +270,40 @@ const normaliseAdjParadigm = (html) => {
   return want;
 };
 
+const normaliseVerbParadigm = (html) => {
+  const doc = new DOMParser().parseFromString(html);
+  const tables = xpath.select('.//table', doc);
+  const tableRows = xpath.select('.//tr', tables[1]);
+  const want = {};
+  let splits = [];
+
+  tableRows.forEach((tr) => {
+    const idText = xpath.select('.//td', tr)[1].firstChild.data
+    const wordForms = xpath.select('.//font[@color="red"]', tr)
+        .map((font) => font.firstChild.data);
+
+    if ( idText === 'V Ind Prs ConNeg') {
+      want['PrsConNeg'] = wordForms;
+    } else if (idText === 'V Ind Prt ConNeg') {
+      want['PrtConNeg'] = wordForms;
+    } else if (idText === 'V PrfPrc') {
+      want['PrfPrc'] = wordForms
+    } else {
+      splits = idText.split(' ');
+      if (splits.length === 4 && splits[3] !== 'ConNeg') {
+        if (!want[splits[2]]) {
+          want[splits[2]] = {};
+        }
+        want[splits[2]][splits[3]] = wordForms
+      }
+    }
+  });
+
+  return want;
+};
+
 export {
   toJson, removeDuplicates, translationStems, translationExamples,
   normaliseDict, normaliseTermWiki, normaliseSDTerm, normaliseNounParadigm,
-  normaliseAdjParadigm
+  normaliseAdjParadigm, normaliseVerbParadigm
 };
