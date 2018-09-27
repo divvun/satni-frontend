@@ -236,6 +236,95 @@ export const resultSmjNounParadigm = {
   'Ess_both': ['guollen']
 };
 
+export const resultSmaAdjParadigm = {
+  'Attr': {
+    'Positive': ['mïevhke'],
+    'Comp': ['mïevhkebe'],
+    'Superl': ['mïevhkemes']
+  },
+  'Sg': {
+    'Nom': {
+      'Positive': ['mïevhkes'],
+      'Comp': ['mïevhkebe'],
+      'Superl': ['mïevhkemes']
+    },
+    'Gen': {
+      'Positive': ['mïevhkesen'],
+      'Comp': ['mïevhkeben'],
+      'Superl': ['mïevhkemassen']
+    },
+    'Acc': {
+      'Positive': ['mïevhkesem'],
+      'Comp': ['mïevhkebem'],
+      'Superl': ['mïevhkemassem']
+    },
+    'Ill': {
+      'Positive': ['mïevhkesasse'],
+      'Comp': ['mïevhkebasse'],
+      'Superl': ['mïevhkemassese']
+    },
+    'Ine': {
+      'Positive': ['mïevhkesisnie'],
+      'Comp': ['mïevhkebisnie'],
+      'Superl': ['mïevhkemassesne']
+    },
+    'Ela': {
+      'Positive': ['mïevhkesistie'],
+      'Comp': ['mïevhkebistie'],
+      'Superl': ['mïevhkemasseste']
+    },
+    'Com': {
+      'Positive': ['mïevhkesinie'],
+      'Comp': ['mïevhkebinie'],
+      'Superl': ['mïevhkemassine']
+    }
+  },
+  'Pl': {
+    'Nom': {
+      'Positive': ['mïevhkesh'],
+      'Comp': ['mïevhkebh'],
+      'Superl': ['mïevhkemassh']
+    },
+    'Gen': {
+      'Positive': ['mïevhkesi'],
+      'Comp': ['mïevhkebi'],
+      'Superl': ['mïevhkemassi']
+    },
+    'Acc': {
+      'Positive': ['mïevhkesidie'],
+      'Comp': ['mïevhkebidie'],
+      'Superl': ['mïevhkemasside']
+    },
+    'Ill': {
+      'Positive': ['mïevhkesidie'],
+      'Comp': ['mïevhkebidie'],
+      'Superl': ['mïevhkemasside']
+    },
+    'Ine': {
+      'Positive': ['mïevhkesinie'],
+      'Comp': ['mïevhkebinie'],
+      'Superl': ['mïevhkemassine']
+    },
+    'Ela': {
+      'Positive': ['mïevhkesijstie'],
+      'Comp': ['mïevhkebijstie'],
+      'Superl': ['mïevhkemassijste']
+    },
+    'Com': {
+      'Positive': ['mïevhkesigujmie'],
+      'Comp': ['mïevhkebigujmie'],
+      'Superl': ['mïevhkemassigujmie']
+    }
+  },
+  'Both': {
+    'Ess': {
+      'Positive': ['mïevhkesinie'],
+      'Comp': ['mïevhkebinie'],
+      'Superl': ['mïevhkemassine']
+    }
+  }
+};
+
 export const resultSmeAdjParadigm = {
   'Attr': {
     'Positive': ['litna'],

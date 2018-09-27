@@ -18,6 +18,7 @@ import {
   resultSmeNounParadigm,
   resultSmjNounParadigm,
   resultSmnNounParadigm,
+  resultSmaAdjParadigm,
   resultSmeAdjParadigm,
   resultSmjAdjParadigm
 } from './utils_testdata';
@@ -1407,6 +1408,507 @@ describe('Massage noun data from the cgi-bin paradigm generator', () => {
 });
 
 describe('Massage adjective data from the cgi-bin paradigm generator', () => {
+  it('Turn sma adjective html into something usable', () => {
+    const html = `<html>
+      <head>
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+        <title>Generere lullisámegiel sojahanparadigmaid</title>
+      </head>
+      <body>
+        <a href="http://uit.no/">The University of Tromsø; &gt;</a>
+        <a href="http://giellatekno.uit.no/">Giellatekno &gt;</a>
+        <br/>
+        <p/>
+        <form action="http://gtweb.uit.no/cgi-bin/smi/smi.cgi" method="get" name="form3" target="_self">
+          <table border="0" cellpadding="2" cellspacing="1">
+            <tr>
+              <td>
+                <input name="text" size="50" type="text"/>
+                <select name="pos">
+                  <option value="Any">Vaikko makkár</option>
+                  <option value="N">Substantiiva</option>
+                  <option value="V">Vearba</option>
+                  <option value="A">Adjektiiva</option>
+                  <option value="Adv">Advearba</option>
+                  <option value="Pron">Pronomena</option>
+                  <option value="Num">Lohkosátni</option>
+                </select>
+              </td>
+              <td>
+                <a href="http://giellatekno.uit.no/">
+                  <img src="http://giellatekno.uit.no/images/project.png" style="border: none;" title="Giellatekno"/>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input name="mode" type="radio" value="minimal">Atte minimála paradigma</input>
+                <br/>
+                <input checked="1" name="mode" type="radio" value="standard">Atte standárdaparadigma</input>
+                <br/>
+                <input name="mode" type="radio" value="full">Atte buot sojahanhámiid</input>
+                <br/>
+                <input name="lang" type="hidden" value="sma"/>
+                <input name="plang" type="hidden" value="sme"/>
+                <input name="action" type="hidden" value="paradigm"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" value="Sádde"/>
+                <input type="reset" value="Sihko"/>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <p>
+          <b>mïevhke: Adjektiiva (A)</b>
+        </p>
+        <table>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Sg Nom</td>
+            <td>
+              <font color="red">mïevhkes</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Sg Gen</td>
+            <td>
+              <font color="red">mïevhkesen</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Sg Acc</td>
+            <td>
+              <font color="red">mïevhkesem</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Sg Ill</td>
+            <td>
+              <font color="red">mïevhkesasse</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Sg Ine</td>
+            <td>
+              <font color="red">mïevhkesisnie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Sg Ela</td>
+            <td>
+              <font color="red">mïevhkesistie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Sg Com</td>
+            <td>
+              <font color="red">mïevhkesinie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Pl Nom</td>
+            <td>
+              <font color="red">mïevhkesh</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Pl Gen</td>
+            <td>
+              <font color="red">mïevhkesi</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Pl Acc</td>
+            <td>
+              <font color="red">mïevhkesidie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Pl Ill</td>
+            <td>
+              <font color="red">mïevhkesidie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Pl Ine</td>
+            <td>
+              <font color="red">mïevhkesinie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Pl Ela</td>
+            <td>
+              <font color="red">mïevhkesijstie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Pl Com</td>
+            <td>
+              <font color="red">mïevhkesigujmie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Sg Nom</td>
+            <td>
+              <font color="red">mïevhkebe</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Sg Gen</td>
+            <td>
+              <font color="red">mïevhkeben</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Sg Acc</td>
+            <td>
+              <font color="red">mïevhkebem</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Sg Ill</td>
+            <td>
+              <font color="red">mïevhkebasse</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Sg Ine</td>
+            <td>
+              <font color="red">mïevhkebisnie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Sg Ela</td>
+            <td>
+              <font color="red">mïevhkebistie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Sg Com</td>
+            <td>
+              <font color="red">mïevhkebinie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Pl Nom</td>
+            <td>
+              <font color="red">mïevhkebh</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Pl Gen</td>
+            <td>
+              <font color="red">mïevhkebi</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Pl Acc</td>
+            <td>
+              <font color="red">mïevhkebidie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Pl Ill</td>
+            <td>
+              <font color="red">mïevhkebidie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Pl Ine</td>
+            <td>
+              <font color="red">mïevhkebinie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Pl Ela</td>
+            <td>
+              <font color="red">mïevhkebijstie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Pl Com</td>
+            <td>
+              <font color="red">mïevhkebigujmie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Sg Nom</td>
+            <td>
+              <font color="red">mïevhkemes</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Sg Gen</td>
+            <td>
+              <font color="red">mïevhkemassen</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Sg Acc</td>
+            <td>
+              <font color="red">mïevhkemassem</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Sg Ill</td>
+            <td>
+              <font color="red">mïevhkemassese</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Sg Ine</td>
+            <td>
+              <font color="red">mïevhkemassesne</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Sg Ela</td>
+            <td>
+              <font color="red">mïevhkemasseste</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Sg Com</td>
+            <td>
+              <font color="red">mïevhkemassine</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Pl Nom</td>
+            <td>
+              <font color="red">mïevhkemassh</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Pl Gen</td>
+            <td>
+              <font color="red">mïevhkemassi</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Pl Acc</td>
+            <td>
+              <font color="red">mïevhkemasside</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Pl Ill</td>
+            <td>
+              <font color="red">mïevhkemasside</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Pl Ine</td>
+            <td>
+              <font color="red">mïevhkemassine</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Pl Ela</td>
+            <td>
+              <font color="red">mïevhkemassijste</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Pl Com</td>
+            <td>
+              <font color="red">mïevhkemassigujmie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Ess</td>
+            <td>
+              <font color="red">mïevhkesinie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Ess</td>
+            <td>
+              <font color="red">mïevhkebinie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Ess</td>
+            <td>
+              <font color="red">mïevhkemassine</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Attr</td>
+            <td>
+              <font color="red">mïevhke</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Comp Attr</td>
+            <td>
+              <font color="red">mïevhkebe</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">mïevhke</font>
+            </td>
+            <td>A Superl Attr</td>
+            <td>
+              <font color="red">mïevhkemes</font>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+        <p>
+          <br/>
+          <a href="http://giellatekno.uit.no/doc/lang/sme/docu-mini-smi-grammartags.html">Morphological tags</a>
+        </p>
+      </body>
+    </html>
+    `;
+    expect(normaliseAdjParadigm(html)).toEqual(resultSmaAdjParadigm);
+  });
+
   it('Turn sme adjective html into something usable', () => {
     const html = `<html>
       <head>
