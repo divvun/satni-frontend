@@ -314,3 +314,102 @@ export const resultSmeAdjParadigm = {
     }
   }
 };
+
+export const resultSmjAdjParadigm = {
+  'Attr': {
+    'Comp': ['lidnásup', 'lidnásap'],
+    'Positive': ['lidna'],
+    'Superl': ['lidnásamos']
+  },
+  'Sg': {
+    'Nom': {
+      'Comp': ['lidnásabbo'],
+      'Positive': ['lines'],
+      'Superl': ['lidnásamos']
+    },
+    'Gen': {
+      'Comp': ['lidnásappo'],
+      'Positive': ['lidnása'],
+      'Superl': ['lidnásabmusa']
+    },
+    'Acc': {
+      'Comp': ['lidnásappov'],
+      'Positive': ['lidnásav'],
+      'Superl': ['lidnásabmusav']
+    },
+    'Ill': {
+      'Comp': ['lidnásabbuj'],
+      'Positive': ['lidnásij'],
+      'Superl': ['lidnásabmusij']
+    },
+    'Ine': {
+      'Comp': ['lidnásappon'],
+      'Positive': ['lidnásin'],
+      'Superl': ['lidnásabmusin']
+    },
+    'Ela': {
+      'Comp': ['lidnásappos'],
+      'Positive': ['lidnásis'],
+      'Superl': ['lidnásabmusis']
+    },
+    'Com': {
+      'Comp': ['lidnásappujn', 'lidnásappojn'],
+      'Positive': ['lidnásijn'],
+      'Superl': ['lidnásabmusijn']
+    },
+    'Abe': {
+      'Comp': ['lidnásappodagá', 'lidnásappodagi', 'lidnásappotagá'],
+      'Positive': ['lidnásadagá', 'lidnásadagi'],
+      'Superl': ['lidnásabmusadagá', 'lidnásabmusadagi', 'lidnásabmusatagá']
+    }
+  },
+  'Pl': {
+    'Nom': {
+      'Comp': ['lidnásappo'],
+      'Positive': ['lidnása'],
+      'Superl': ['lidnásabmusa']
+    },
+    'Gen': {
+      'Comp': ['lidnásappoj'],
+      'Positive': ['lidnásij'],
+      'Superl': ['lidnásabmusij']
+    },
+    'Acc': {
+      'Comp': ['lidnásappojt'],
+      'Positive': ['lidnásijt'],
+      'Superl': ['lidnásabmusijt']
+    },
+    'Ill': {
+      'Comp': ['lidnásappojda'],
+      'Positive': ['lidnásijda'],
+      'Superl': ['lidnásabmusijda']
+    },
+    'Ine': {
+      'Comp': ['lidnásappojn'],
+      'Positive': ['lidnásijn'],
+      'Superl': ['lidnásabmusijn']
+    },
+    'Ela': {
+      'Comp': ['lidnásappojs'],
+      'Positive': ['lidnásijs'],
+      'Superl': ['lidnásabmusijs']
+    },
+    'Com': {
+      'Comp': ['lidnásappoj'],
+      'Positive': ['lidnásij'],
+      'Superl': ['lidnásabmusij']
+    },
+    'Abe': {
+      'Comp': ['lidnásappojdagá', 'lidnásappojdagi', 'lidnásappojtagá'],
+      'Positive': ['lidnásijdagá', 'lidnásijdagi'],
+      'Superl': ['lidnásabmusijdagá', 'lidnásabmusijdagi', 'lidnásabmusijtagá']
+    }
+
+  },
+  'Both': {
+    'Ess': {'Comp': ['lidnásabbon'],
+      'Positive': ['lidnásin'],
+      'Superl': ['lidnásabmusin']
+    }
+  }
+};

@@ -6,6 +6,42 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
+const PartHeader = ({header}) => {
+  return (
+    <TableRow>
+      <TableCell colSpan={4}>{header}</TableCell>
+    </TableRow>
+  );
+};
+
+const AttrRow = ({attrRow, wCase}) => {
+  return (
+    <TableRow>
+      <TableCell>{wCase !== 'Attr' ? <span>{wCase}</span> : ''}</TableCell>
+      {Object.keys(attrRow).map((comparison, i) => {
+        return (
+          <TableCell key={i}>
+            {attrRow[comparison].map((word, j) => {
+              return (
+                <div key={j}>{word}</div>
+              );
+            })}
+          </TableCell>
+        );
+      })}
+    </TableRow>
+  );
+};
+
+const CaseRows = ({caseRows}) => {
+  return (
+    Object.keys(caseRows).map((wcase, i) => {
+      return (<AttrRow key={i} attrRow={caseRows[wcase]} wCase={wcase} />);
+    })
+
+  );
+};
+
 const AdjParadigm = ({paradigm}) => {
   return (
     <Table>
@@ -18,251 +54,17 @@ const AdjParadigm = ({paradigm}) => {
         </TableRow>
       </TableHead>
       <TableBody>
-        <TableRow>
-          <TableCell />
-          <TableCell colSpan={3}>Attr</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell />
-          <TableCell>
-            <div>litna</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásut</div>
-            <div>litnásit</div>
-            <div>litnáset</div>
-            <div>litnásat</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseamos</div>
-            <div>litnásamos</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell />
-          <TableCell colSpan={3}>Singular</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Nom</span>
-          </TableCell>
-          <TableCell>
-            <div>linis</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásut</div>
-            <div>litnásit</div>
-            <div>litnáset</div>
-            <div>litnáseabbo</div>
-            <div>litnásat</div>
-            <div>litnásabbo</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseamos</div>
-            <div>litnásamos</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Gen</span>
-          </TableCell>
-          <TableCell>
-            <div>litnása</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseappo</div>
-            <div>litnásabbo</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosa</div>
-            <div>litnásamosa</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Acc</span>
-          </TableCell>
-          <TableCell>
-            <div>litnása</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseappo</div>
-            <div>litnásabbo</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosa</div>
-            <div>litnásamosa</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Ill</span>
-          </TableCell>
-          <TableCell>
-            <div>litnásii</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásebbui</div>
-            <div>litnásabbui</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosii</div>
-            <div>litnásamosii</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Loc</span>
-          </TableCell>
-          <TableCell>
-            <div>litnásis</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseappos</div>
-            <div>litnásabbos</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosis</div>
-            <div>litnásamosis</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Com</span>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosis</div>
-            <div>litnásamosis</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseappuin</div>
-            <div>litnásabbuin</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosiin</div>
-            <div>litnásamosiin</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell />
-          <TableCell colSpan={3}>Pluralis</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Nom</span>
-          </TableCell>
-          <TableCell>
-            <div>litnásat</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseappot</div>
-            <div>litnásabbot</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosat</div>
-            <div>litnásamosat</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Gen</span>
-          </TableCell>
-          <TableCell>
-            <div>litnásiid</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseappuid</div>
-            <div>litnásabbuid</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosiid</div>
-            <div>litnásamosiid</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Acc</span>
-          </TableCell>
-          <TableCell>
-            <div>litnásiid</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseappuid</div>
-            <div>litnásabbuid</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosiid</div>
-            <div>litnásamosiid</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Ill</span>
-          </TableCell>
-          <TableCell>
-            <div>litnásiidda</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseappuide</div>
-            <div>litnásabbuide</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosiidda</div>
-            <div>litnásamosiidda</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Loc</span>
-          </TableCell>
-          <TableCell>
-            <div>litnásiin</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseappuin</div>
-            <div>litnásabbuin</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosiin</div>
-            <div>litnásamosiin</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Com</span>
-          </TableCell>
-          <TableCell>
-            <div>litnásiiguin</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseappuiguin</div>
-            <div>litnásabbuiguin</div>
-          </TableCell>
-          <TableCell>
-            <div>litnásepmosiiguin</div>
-            <div>litnásamosiiguin</div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell />
-          <TableCell colSpan={3}>Both singularis and pluralis</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
-            <span>Ess</span>
-          </TableCell>
-          <TableCell>
-            <div>linisin</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseabbon</div>
-            <div>litnásabbon</div>
-          </TableCell>
-          <TableCell>
-            <div>litnáseamosin</div>
-            <div>litnásamosin</div>
-          </TableCell>
-        </TableRow>
+        {Object.keys(paradigm).map((mainCategory, i) => {
+          const rows = [];
+          rows.push(<PartHeader key={mainCategory} header={mainCategory} />);
+          rows.push(
+          mainCategory === 'Attr'
+          ? <AttrRow key={mainCategory + i} attrRow={paradigm[mainCategory]} wCase={mainCategory} />
+          : <CaseRows key={mainCategory + i} caseRows={paradigm[mainCategory]} />
+          );
+
+          return rows;
+        })}
       </TableBody>
     </Table>
   );
