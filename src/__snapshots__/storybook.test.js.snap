@@ -5636,3 +5636,472 @@ exports[`Storyshots TermWikiArticle default 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots VerbParadigm North saami verbs 1`] = `
+<table
+  className="MuiTable-root-129"
+>
+  <thead
+    className="MuiTableHead-root-130"
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      scope="col"
+    />
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      scope="col"
+    >
+      Present
+    </th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      scope="col"
+    >
+      Prs ConNeg
+    </th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      scope="col"
+    >
+      Perfectum
+    </th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      scope="col"
+    >
+      PrfPrc
+    </th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      scope="col"
+    >
+      Prt ConNeg
+    </th>
+  </thead>
+  <tbody
+    className="MuiTableBody-root-139"
+  >
+    <tr
+      className="MuiTableRow-root-140"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        mun
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        váccán
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (in) vácce
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vázzen
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (lean) vázzán
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (in) vázzán
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-140"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        don
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        váccát
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (it) vácce
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vázzet
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (leat) vázzán
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (it) vázzán
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-140"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        son
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vázzá
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (ii) vácce
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        váccii
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (lea) vázzán
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (ii) vázzán
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-140"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        moai
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vázze
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (ean) vácce
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vácciime
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (ledne) vázzán
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (ean) vázzán
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-140"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        doai
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vázzibeahtti
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (eahppi) vácce
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vácciide
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (leahppi) vázzán
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (eahppi) vázzán
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-140"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        soai
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vázziba
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (eaba) vácce
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vácciiga
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (leaba) vázzán
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (eaba) vázzán
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-140"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        mii
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vázzit
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (eat) vácce
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vácciimet
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (leat) vázzán
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (leat) vázzán
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-140"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        dii
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vázzibehtet
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (ehpet) vácce
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vácciidet
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (lehpet) vázzán
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (ehpet) vázzán
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-140"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        sii
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vázzet
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (eai) vácce
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        vázze
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (leat) vázzán
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        scope={undefined}
+      >
+        (eat) vázzán
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
