@@ -237,9 +237,22 @@ const normaliseAdjParadigm = (html) => {
     splits = xpath.select('.//td', tr)[1].firstChild.data.split(' ');
     if (
       (splits.length === 3 && num.has(splits[1]))
-      || (splits.length == 2)
+      || (splits.length === 2)
     ) {
       splits.splice(1, 0, 'Positive');
+    }
+
+    if (splits.length === 3) {
+      if (splits[2] === 'Attr') {
+        if (!want[splits[2]]) {
+          want[splits[2]] = {};
+        }
+
+        want[splits[2]][splits[1]] = xpath.select('.//font[@color="red"]', tr)
+        .map((font) => font.firstChild.data);
+      } else {
+        splits.splice(2, 0, 'Both');
+      }
     }
 
     if (splits.length === 4) {
@@ -250,15 +263,6 @@ const normaliseAdjParadigm = (html) => {
         want[splits[2]][splits[3]] = {};
       }
       want[splits[2]][splits[3]][splits[1]] = xpath.select('.//font[@color="red"]', tr)
-        .map((font) => font.firstChild.data);
-    }
-    if (splits.length === 3) {
-      const caseClass = splits[2] === 'Attr' ? splits[2] : splits[2] + '_both';
-      if (!want[caseClass]) {
-        want[caseClass] = {};
-      }
-
-      want[caseClass][splits[1]] = xpath.select('.//font[@color="red"]', tr)
         .map((font) => font.firstChild.data);
     }
   });
