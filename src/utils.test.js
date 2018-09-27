@@ -20,7 +20,8 @@ import {
   resultSmnNounParadigm,
   resultSmaAdjParadigm,
   resultSmeAdjParadigm,
-  resultSmjAdjParadigm
+  resultSmjAdjParadigm,
+  resultSmnAdjParadigm
 } from './utils_testdata';
 
 describe('Massage data from eXist', () => {
@@ -3046,5 +3047,534 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
     </html>
 `;
     expect(normaliseAdjParadigm(html)).toEqual(resultSmjAdjParadigm);
+  });
+
+  it('Turn smn adjective html into something usable', () => {
+    const html = `<html>
+      <head>
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+        <title>Generere anársámegiel sojahanparadigmaid</title>
+      </head>
+      <body>
+        <a href="http://uit.no/">The University of Tromsø &gt;</a>
+        <a href="http://giellatekno.uit.no/">Giellatekno &gt;</a>
+        <br/>
+        <p/>
+        <form action="http://gtweb.uit.no/cgi-bin/smi/smi.cgi" method="get" name="form3" target="_self">
+          <table border="0" cellpadding="2" cellspacing="1">
+            <tr>
+              <td>
+                <input name="text" size="50" type="text"/>
+                <select name="pos">
+                  <option value="Any">Vaikko makkár</option>
+                  <option value="N">Substantiiva</option>
+                  <option value="V">Vearba</option>
+                  <option value="A">Adjektiiva</option>
+                  <option value="Adv">Advearba</option>
+                  <option value="Pron">Pronomena</option>
+                  <option value="Num">Lohkosátni</option>
+                </select>
+              </td>
+              <td>
+                <a href="http://giellatekno.uit.no/">
+                  <img src="http://giellatekno.uit.no/images/project.png" style="border: none;" title="Giellatekno"/>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input name="mode" type="radio" value="minimal">Atte minimála paradigma</input>
+                <br/>
+                <input checked="1" name="mode" type="radio" value="standard">Atte standárdaparadigma</input>
+                <br/>
+                <input name="mode" type="radio" value="full">Atte buot sojahanhámiid</input>
+                <br/>
+                <input name="lang" type="hidden" value="smn"/>
+                <input name="plang" type="hidden" value="sme"/>
+                <input name="action" type="hidden" value="paradigm"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" value="Sádde"/>
+                <input type="reset" value="Sihko"/>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <p>
+          <b>lines: Adjektiiva (A)</b>
+        </p>
+        <table>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Attr</td>
+            <td>
+              <font color="red">linnâ</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Attr</td>
+            <td>
+              <font color="red">linásumos</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Sg Nom</td>
+            <td>
+              <font color="red">lines</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Sg Gen</td>
+            <td>
+              <font color="red">linnáás</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Sg Acc</td>
+            <td>
+              <font color="red">linnáás</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Sg Ill</td>
+            <td>
+              <font color="red">linásân</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Sg Loc</td>
+            <td>
+              <font color="red">linásist</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Sg Com</td>
+            <td>
+              <font color="red">linásáin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Sg Abe</td>
+            <td>
+              <font color="red">linnáásttáá</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Pl Nom</td>
+            <td>
+              <font color="red">lináseh</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Pl Gen</td>
+            <td>
+              <font color="red">linásij</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Pl Acc</td>
+            <td>
+              <font color="red">linásijd</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Pl Ill</td>
+            <td>
+              <font color="red">linásáid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Pl Loc</td>
+            <td>
+              <font color="red">linásijn</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Pl Com</td>
+            <td>
+              <font color="red">linásijguin</font>
+            </td>
+            <td>
+              <font color="red">linásijgijn</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Pl Abe</td>
+            <td>
+              <font color="red">linásijttáá</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Par</td>
+            <td>
+              <font color="red">linesid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Ess</td>
+            <td>
+              <font color="red">linesin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Par</td>
+            <td>
+              <font color="red">linásubbod</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Ess</td>
+            <td>
+              <font color="red">linásubbon</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Sg Nom</td>
+            <td>
+              <font color="red">linásub</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Sg Gen</td>
+            <td>
+              <font color="red">linásub</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Sg Acc</td>
+            <td>
+              <font color="red">linásub</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Sg Ill</td>
+            <td>
+              <font color="red">linásuubon</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Sg Loc</td>
+            <td>
+              <font color="red">linásubboost</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Sg Com</td>
+            <td>
+              <font color="red">linásubboin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Sg Abe</td>
+            <td>
+              <font color="red">linásubttáá</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Pl Nom</td>
+            <td>
+              <font color="red">linásuboh</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Pl Gen</td>
+            <td>
+              <font color="red">linásuboi</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Pl Acc</td>
+            <td>
+              <font color="red">linásuboid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Pl Ill</td>
+            <td>
+              <font color="red">linásubboid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Pl Loc</td>
+            <td>
+              <font color="red">linásuboin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Pl Com</td>
+            <td>
+              <font color="red">linásuboiguin</font>
+            </td>
+            <td>
+              <font color="red">linásuboigijn</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Comp Pl Abe</td>
+            <td>
+              <font color="red">linásuboittáá</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Par</td>
+            <td>
+              <font color="red">linásumosid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Ess</td>
+            <td>
+              <font color="red">linásumosin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Sg Nom</td>
+            <td>
+              <font color="red">linásumos</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Sg Gen</td>
+            <td>
+              <font color="red">linásumos</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Sg Acc</td>
+            <td>
+              <font color="red">linásumos</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Sg Ill</td>
+            <td>
+              <font color="red">linásumosân</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Sg Loc</td>
+            <td>
+              <font color="red">linásumosist</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Sg Com</td>
+            <td>
+              <font color="red">linásumosáin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Sg Abe</td>
+            <td>
+              <font color="red">linásumosttáá</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Pl Nom</td>
+            <td>
+              <font color="red">linásumoseh</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Pl Gen</td>
+            <td>
+              <font color="red">linásumosij</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Pl Acc</td>
+            <td>
+              <font color="red">linásumosijd</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Pl Ill</td>
+            <td>
+              <font color="red">linásumosáid</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Pl Loc</td>
+            <td>
+              <font color="red">linásumosijn</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Pl Com</td>
+            <td>
+              <font color="red">linásumosijguin</font>
+            </td>
+            <td>
+              <font color="red">linásumosijgijn</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">lines</font>
+            </td>
+            <td>A Superl Pl Abe</td>
+            <td>
+              <font color="red">linásumosijttáá</font>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+        <p>
+          <br/>
+          <a href="http://giellatekno.uit.no/doc/lang/sme/docu-mini-smi-grammartags.html">Morphological tags</a>
+        </p>
+      </body>
+    </html>
+    `;
+
+    expect(normaliseAdjParadigm(html)).toEqual(resultSmnAdjParadigm);
   });
 });

@@ -502,3 +502,95 @@ export const resultSmjAdjParadigm = {
     }
   }
 };
+
+export const resultSmnAdjParadigm = {
+  'Attr': {
+    'Positive': ['linnâ'],
+    'Superl': ['linásumos']
+  },
+  'Sg': {
+    'Nom': {
+      'Positive': ['lines'],
+      'Comp': ['linásub'],
+      'Superl': ['linásumos']
+    },
+    'Gen': {
+      'Positive': ['linnáás'],
+      'Comp': ['linásub'],
+      'Superl': ['linásumos']
+    },
+    'Acc': {
+      'Positive': ['linnáás'],
+      'Comp': ['linásub'],
+      'Superl': ['linásumos']
+    },
+    'Ill': {
+      'Positive': ['linásân'],
+      'Comp': ['linásuubon'],
+      'Superl': ['linásumosân']
+    },
+    'Loc': {
+      'Positive': ['linásist'],
+      'Comp': ['linásubboost'],
+      'Superl': ['linásumosist']
+    },
+    'Com': {
+      'Positive': ['linásáin'],
+      'Comp': ['linásubboin'],
+      'Superl': ['linásumosáin']
+    },
+    'Abe': {
+      'Positive': ['linnáásttáá'],
+      'Comp': ['linásubttáá'],
+      'Superl': ['linásumosttáá']}
+  },
+  'Pl': {
+    'Nom': {
+      'Positive': ['lináseh'],
+      'Comp': ['linásuboh'],
+      'Superl': ['linásumoseh']
+    },
+    'Gen': {
+      'Positive': ['linásij'],
+      'Comp': ['linásuboi'],
+      'Superl': ['linásumosij']
+    },
+    'Acc': {
+      'Positive': ['linásijd'],
+      'Comp': ['linásuboid'],
+      'Superl': ['linásumosijd']
+    },
+    'Ill': {
+      'Positive': ['linásáid'],
+      'Comp': ['linásubboid'],
+      'Superl': ['linásumosáid']
+    },
+    'Loc': {
+      'Positive': ['linásijn'],
+      'Comp': ['linásuboin'],
+      'Superl': ['linásumosijn']
+    },
+    'Com': {
+      'Positive': ['linásijguin', 'linásijgijn'],
+      'Comp': ['linásuboiguin', 'linásuboigijn'],
+      'Superl': ['linásumosijguin', 'linásumosijgijn']
+    },
+    'Abe': {
+      'Positive': ['linásijttáá'],
+      'Comp': ['linásuboittáá'],
+      'Superl': ['linásumosijttáá']
+    }
+  },
+  'Both': {
+    'Par': {
+      'Positive': ['linesid'],
+      'Comp': ['linásubbod'],
+      'Superl': ['linásumosid']
+    },
+    'Ess': {
+      'Positive': ['linesin'],
+      'Comp': ['linásubbon'],
+      'Superl': ['linásumosin']
+    }
+  }
+};
