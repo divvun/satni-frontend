@@ -208,17 +208,19 @@ const normaliseNounParadigm = (html) => {
   let splits = [];
 
   tableRows.forEach((tr) => {
-    splits = xpath.select('.//td', tr)[1].firstChild.data.split(' ');
+    const idText = xpath.select('.//td', tr)[1].firstChild.data;
+    const wordForms = xpath.select('.//font[@color="red"]', tr)
+        .map((font) => font.firstChild.data);
+
+    splits = idText.split(' ');
     if (splits.length < 4) {
       if (splits.length === 3) {
         if (!want[splits[2]]) {
           want[splits[2]] = {};
         }
-        want[splits[2]][splits[1]] = xpath.select('.//font[@color="red"]', tr)
-          .map((font) => font.firstChild.data);
+        want[splits[2]][splits[1]] = wordForms;
       } else {
-        want[splits[1] + '_both'] = xpath.select('.//font[@color="red"]', tr)
-          .map((font) => font.firstChild.data);
+        want[splits[1] + '_both'] = wordForms;
       }
     }
   });
@@ -234,7 +236,11 @@ const normaliseAdjParadigm = (html) => {
   let splits = [];
 
   tableRows.forEach((tr) => {
-    splits = xpath.select('.//td', tr)[1].firstChild.data.split(' ');
+    const idText = xpath.select('.//td', tr)[1].firstChild.data;
+    const wordForms = xpath.select('.//font[@color="red"]', tr)
+        .map((font) => font.firstChild.data);
+
+    splits = idText.split(' ');
     if (
       (splits.length === 3 && num.has(splits[1]))
       || (splits.length === 2)
@@ -247,9 +253,7 @@ const normaliseAdjParadigm = (html) => {
         if (!want[splits[2]]) {
           want[splits[2]] = {};
         }
-
-        want[splits[2]][splits[1]] = xpath.select('.//font[@color="red"]', tr)
-        .map((font) => font.firstChild.data);
+        want[splits[2]][splits[1]] = wordForms;
       } else {
         splits.splice(2, 0, 'Both');
       }
@@ -262,8 +266,7 @@ const normaliseAdjParadigm = (html) => {
       if (!want[splits[2]][splits[3]]) {
         want[splits[2]][splits[3]] = {};
       }
-      want[splits[2]][splits[3]][splits[1]] = xpath.select('.//font[@color="red"]', tr)
-        .map((font) => font.firstChild.data);
+      want[splits[2]][splits[3]][splits[1]] = wordForms;
     }
   });
 
@@ -278,23 +281,23 @@ const normaliseVerbParadigm = (html) => {
   let splits = [];
 
   tableRows.forEach((tr) => {
-    const idText = xpath.select('.//td', tr)[1].firstChild.data
+    const idText = xpath.select('.//td', tr)[1].firstChild.data;
     const wordForms = xpath.select('.//font[@color="red"]', tr)
         .map((font) => font.firstChild.data);
 
-    if ( idText === 'V Ind Prs ConNeg') {
+    if (idText === 'V Ind Prs ConNeg') {
       want['PrsConNeg'] = wordForms;
     } else if (idText === 'V Ind Prt ConNeg') {
       want['PrtConNeg'] = wordForms;
     } else if (idText === 'V PrfPrc') {
-      want['PrfPrc'] = wordForms
+      want['PrfPrc'] = wordForms;
     } else {
       splits = idText.split(' ');
       if (splits.length === 4 && splits[3] !== 'ConNeg') {
         if (!want[splits[2]]) {
           want[splits[2]] = {};
         }
-        want[splits[2]][splits[3]] = wordForms
+        want[splits[2]][splits[3]] = wordForms;
       }
     }
   });
