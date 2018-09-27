@@ -306,9 +306,11 @@ export const resultSmeAdjParadigm = {
       'Superl': ['litnásepmosiiguin', 'litnásamosiiguin']
     }
   },
-  'Ess_both': {
-    'Positive': ['linisin'],
-    'Comp': ['litnáseabbon', 'litnásabbon'],
-    'Superl': ['litnáseamosin', 'litnásamosin']
+  'Both': {
+    'Ess': {
+      'Positive': ['linisin'],
+      'Comp': ['litnáseabbon', 'litnásabbon'],
+      'Superl': ['litnáseamosin', 'litnásamosin']
+    }
   }
 };
