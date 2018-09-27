@@ -594,3 +594,31 @@ export const resultSmnAdjParadigm = {
     }
   }
 };
+
+export const resultSmeVerbParadigm = {
+  Prs: {
+    Sg1: ['váccán'],
+    Sg2: ['váccát'],
+    Sg3: ['vázzá'],
+    Du1: ['vázze'],
+    Du2: ['vázzibeahtti'],
+    Du3: ['vázziba'],
+    Pl1: ['vázzit'],
+    Pl2: ['vázzibehtet'],
+    Pl3: ['vázzet']
+  },
+  PrsConNeg: ['vácce'],
+  Prt: {
+    Sg1: ['vázzen'],
+    Sg2: ['vázzet'],
+    Sg3: ['váccii'],
+    Du1: ['vácciime'],
+    Du2: ['vácciide'],
+    Du3: ['vácciiga'],
+    Pl1: ['vácciimet'],
+    Pl2: ['vácciidet'],
+    Pl3: ['vázze']
+  },
+  PrtConNeg: ['vázzán'],
+  PrfPrc: ['vázzán']
+};
