@@ -591,6 +591,7 @@ export const resultSmnAdjParadigm = {
       'Positive': ['linesin'],
       'Comp': ['linásubbon'],
       'Superl': ['linásumosin']
+
     }
   }
 };
@@ -621,4 +622,18 @@ export const resultSmeVerbParadigm = {
   },
   PrtConNeg: ['vázzán'],
   PrfPrc: ['vázzán']
+};
+
+export const resultSmaVerbParadigm = {
+  'Prs': {
+    'Sg1': ['vaadtsam'], 'Sg2': ['vaadtsah'], 'Sg3': ['vaadtsa'],
+    'Du1': ['vaedtsien'], 'Du2': ['vaedtseden', 'vaedtsiejidien'], 'Du3': ['vaedtsiejægan'],
+    'Pl1': ['vaedtsebe', 'vaedtsiejibie'], 'Pl2': ['vaedtsede', 'vaedtsiejidie'], 'Pl3': ['vaedtsieh']
+  },
+  'Prt': {
+    'Sg1': ['veedtsim', 'vaedtsiejim'], 'Sg2': ['veedtsih', 'vaedtsiejih'], 'Sg3': ['veedtsi', 'vaedtsieji'],
+    'Du1': ['veedtsimen', 'vaedtsiejimen'], 'Du2': ['veedtsiden', 'vaedtsiejiden'], 'Du3': ['veedtsigan', 'vaedtsiejigan'],
+    'Pl1': ['veedtsimh', 'vaedtsiejimh'], 'Pl2': ['veedtsidh', 'vaedtsiejidh'], 'Pl3': ['veedtsin', 'vaedtsiejin']
+  },
+  'PrfPrc': ['vaadtseme']
 };
