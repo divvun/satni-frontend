@@ -25,6 +25,7 @@ import {
   resultSmnAdjParadigm,
   resultSmaVerbParadigm,
   resultSmeVerbParadigm,
+  resultSmjVerbParadigm,
   resultSmnVerbParadigm
 } from './utils_testdata';
 
@@ -4170,6 +4171,264 @@ describe('Massage verb data from the cgi-bin paradigm generator', () => {
     </html>
     `;
     expect(normaliseVerbParadigm(html)).toEqual(resultSmeVerbParadigm);
+  });
+
+  it('Turn smj verb html into something usable', () => {
+    const html = `<html>
+      <head>
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+        <title>Generere julevsámegiel sojahanparadigmaid</title>
+      </head>
+      <body>
+        <a href="http://uit.no/">The University of Tromsø &gt;</a>
+        <a href="http://giellatekno.uit.no/">Giellatekno &gt;</a>
+        <br/>
+        <p/>
+        <form action="http://gtweb.uit.no/cgi-bin/smi/smi.cgi" method="get" name="form3" target="_self">
+          <table border="0" cellpadding="2" cellspacing="1">
+            <tr>
+              <td>
+                <input name="text" size="50" type="text"/>
+                <select name="pos">
+                  <option value="Any">Vaikko makkár</option>
+                  <option value="N">Substantiiva</option>
+                  <option value="V">Vearba</option>
+                  <option value="A">Adjektiiva</option>
+                  <option value="Adv">Advearba</option>
+                  <option value="Pron">Pronomena</option>
+                  <option value="Num">Lohkosátni</option>
+                </select>
+              </td>
+              <td>
+                <a href="http://giellatekno.uit.no/">
+                  <img src="http://giellatekno.uit.no/images/project.png" style="border: none;" title="Giellatekno"/>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input name="mode" type="radio" value="minimal">Atte minimála paradigma</input>
+                <br/>
+                <input checked="1" name="mode" type="radio" value="standard">Atte standárdaparadigma</input>
+                <br/>
+                <input name="mode" type="radio" value="full">Atte buot sojahanhámiid</input>
+                <br/>
+                <input name="lang" type="hidden" value="smj"/>
+                <input name="plang" type="hidden" value="sme"/>
+                <input name="action" type="hidden" value="paradigm"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" value="Sádde"/>
+                <input type="reset" value="Sihko"/>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <p>
+          <b>vádtset: Vearba (V)</b>
+        </p>
+        <table>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Inf</td>
+            <td>
+              <font color="red">vádtset</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind ConNeg</td>
+            <td>
+              <font color="red">váttse</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prs Sg1</td>
+            <td>
+              <font color="red">váttsáv</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prs Sg2</td>
+            <td>
+              <font color="red">váttsá</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prs Sg3</td>
+            <td>
+              <font color="red">vádtsá</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prs Du1</td>
+            <td>
+              <font color="red">vádtsin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prs Du2</td>
+            <td>
+              <font color="red">vádtsebihtte</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prs Du3</td>
+            <td>
+              <font color="red">vádtseba</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prs Pl1</td>
+            <td>
+              <font color="red">vádtsep</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prs Pl2</td>
+            <td>
+              <font color="red">vádtsebihtit</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prs Pl3</td>
+            <td>
+              <font color="red">vádtsi</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prt Sg1</td>
+            <td>
+              <font color="red">vádtsiv</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prt Sg2</td>
+            <td>
+              <font color="red">vádtsi</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prt Sg3</td>
+            <td>
+              <font color="red">váttsij</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prt Du1</td>
+            <td>
+              <font color="red">váttsijma</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prt Du2</td>
+            <td>
+              <font color="red">váttsijda</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prt Du3</td>
+            <td>
+              <font color="red">váttsijga</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prt Pl1</td>
+            <td>
+              <font color="red">váttsijma</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prt Pl2</td>
+            <td>
+              <font color="red">váttsijda</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V Ind Prt Pl3</td>
+            <td>
+              <font color="red">vádtsin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vádtset</font>
+            </td>
+            <td>V PrfPrc</td>
+            <td>
+              <font color="red">vádtsám</font>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+        <p>
+          <br/>
+          <a href="http://giellatekno.uit.no/doc/lang/sme/docu-mini-smi-grammartags.html">Morphological tags</a>
+        </p>
+      </body>
+    </html>
+    `;
+    expect(normaliseVerbParadigm(html)).toEqual(resultSmjVerbParadigm);
   });
 
   it('Turn smn verb html into something usable', () => {
