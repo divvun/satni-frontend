@@ -1,8 +1,91 @@
 import xpath from 'xpath';
 import {DOMParser} from 'xmldom';
-import { Set } from 'immutable';
+import { List, Set } from 'immutable';
 
 const num = Set.of('Sg', 'Pl');
+
+const verbSet = Set.of(
+  'V Ind Prs ConNeg',
+  'V Ind Prt ConNeg',
+  'V PrfPrc'
+);
+
+const verbNumber = List.of(
+  'Sg1', 'Sg2', 'Sg3',
+  'Du1', 'Du2', 'Du3',
+  'Pl1', 'Pl2', 'Pl3'
+);
+
+const verbDict = {
+  'sma': {
+    'V Ind Prs ConNeg': [
+      'in', 'it', 'ii',
+      'ean', 'eahppi', 'eaba',
+      'eat', 'ehpet', 'eai'
+    ],
+    'V Ind Prt ConNeg': [
+      'in', 'it', 'ii',
+      'ean', 'eahppi', 'eaba',
+      'eat', 'ehpet', 'eai'
+    ],
+    'V PrfPrc': [
+      'lean', 'leat', 'lea',
+      'ledne', 'leahppi', 'leaba',
+      'leat', 'lehpet', 'leat'
+    ]
+  },
+  'sme': {
+    'V Ind Prs ConNeg': [
+      'in', 'it', 'ii',
+      'ean', 'eahppi', 'eaba',
+      'eat', 'ehpet', 'eai'
+    ],
+    'V Ind Prt ConNeg': [
+      'in', 'it', 'ii',
+      'ean', 'eahppi', 'eaba',
+      'eat', 'ehpet', 'eai'
+    ],
+    'V PrfPrc': [
+      'lean', 'leat', 'lea',
+      'ledne', 'leahppi', 'leaba',
+      'leat', 'lehpet', 'leat'
+    ]
+  },
+  'smj': {
+    'V Ind Prs ConNeg': [
+      'in', 'it', 'ii',
+      'ean', 'eahppi', 'eaba',
+      'eat', 'ehpet', 'eai'
+    ],
+    'V Ind Prt ConNeg': [
+      'in', 'it', 'ii',
+      'ean', 'eahppi', 'eaba',
+      'eat', 'ehpet', 'eai'
+    ],
+    'V PrfPrc': [
+      'lean', 'leat', 'lea',
+      'ledne', 'leahppi', 'leaba',
+      'leat', 'lehpet', 'leat'
+    ]
+  },
+  'smn': {
+    'V Ind Prs ConNeg': [
+      'in', 'it', 'ii',
+      'ean', 'eahppi', 'eaba',
+      'eat', 'ehpet', 'eai'
+    ],
+    'V Ind Prt ConNeg': [
+      'in', 'it', 'ii',
+      'ean', 'eahppi', 'eaba',
+      'eat', 'ehpet', 'eai'
+    ],
+    'V PrfPrc': [
+      'lean', 'leat', 'lea',
+      'ledne', 'leahppi', 'leaba',
+      'leat', 'lehpet', 'leat'
+    ]
+  }
+};
 
 const toJson = (text) => {
   // eXist sometimes sends misformed json, correct it here
@@ -285,12 +368,11 @@ const normaliseVerbParadigm = (html) => {
     const wordForms = xpath.select('.//font[@color="red"]', tr)
         .map((font) => font.firstChild.data);
 
-    if (idText === 'V Ind Prs ConNeg') {
-      want['PrsConNeg'] = wordForms;
-    } else if (idText === 'V Ind Prt ConNeg') {
-      want['PrtConNeg'] = wordForms;
-    } else if (idText === 'V PrfPrc') {
-      want['PrfPrc'] = wordForms;
+    if (verbSet.has(idText)) {
+      want[idText] = {};
+      verbNumber.forEach((number, i) => {
+        want[idText][number] = wordForms.map((word) => `(${verbDict['sme'][idText][i]}) ${word}`);
+      });
     } else {
       splits = idText.split(' ');
       if (splits.length === 4 && splits[3] !== 'ConNeg') {
