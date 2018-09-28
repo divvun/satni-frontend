@@ -625,31 +625,45 @@ export const resultSmeVerbParadigm = {
 };
 
 export const resultSmaVerbParadigm = {
-  'Prs': {
-    'Sg1': ['vaadtsam'], 'Sg2': ['vaadtsah'], 'Sg3': ['vaadtsa'],
-    'Du1': ['vaedtsien'], 'Du2': ['vaedtseden', 'vaedtsiejidien'], 'Du3': ['vaedtsiejægan'],
-    'Pl1': ['vaedtsebe', 'vaedtsiejibie'], 'Pl2': ['vaedtsede', 'vaedtsiejidie'], 'Pl3': ['vaedtsieh']
+  Prs: {
+    Sg1: ['vaadtsam'], 'Sg2': ['vaadtsah'], 'Sg3': ['vaadtsa'],
+    Du1: ['vaedtsien'], 'Du2': ['vaedtseden', 'vaedtsiejidien'], 'Du3': ['vaedtsiejægan'],
+    Pl1: ['vaedtsebe', 'vaedtsiejibie'], 'Pl2': ['vaedtsede', 'vaedtsiejidie'], 'Pl3': ['vaedtsieh']
   },
-  'Prt': {
-    'Sg1': ['veedtsim', 'vaedtsiejim'], 'Sg2': ['veedtsih', 'vaedtsiejih'], 'Sg3': ['veedtsi', 'vaedtsieji'],
-    'Du1': ['veedtsimen', 'vaedtsiejimen'], 'Du2': ['veedtsiden', 'vaedtsiejiden'], 'Du3': ['veedtsigan', 'vaedtsiejigan'],
-    'Pl1': ['veedtsimh', 'vaedtsiejimh'], 'Pl2': ['veedtsidh', 'vaedtsiejidh'], 'Pl3': ['veedtsin', 'vaedtsiejin']
+  Prt: {
+    Sg1: ['veedtsim', 'vaedtsiejim'], 'Sg2': ['veedtsih', 'vaedtsiejih'], 'Sg3': ['veedtsi', 'vaedtsieji'],
+    Du1: ['veedtsimen', 'vaedtsiejimen'], 'Du2': ['veedtsiden', 'vaedtsiejiden'], 'Du3': ['veedtsigan', 'vaedtsiejigan'],
+    Pl1: ['veedtsimh', 'vaedtsiejimh'], 'Pl2': ['veedtsidh', 'vaedtsiejidh'], 'Pl3': ['veedtsin', 'vaedtsiejin']
   },
-  'PrfPrc': ['vaadtseme']
+  PrfPrc: ['vaadtseme']
+};
+
+export const resultSmjVerbParadigm = {
+  Prs: {
+    Sg1: ['váttsáv'], 'Sg2': ['váttsá'], 'Sg3': ['vádtsá'],
+    Du1: ['vádtsin'], 'Du2': ['vádtsebihtte'], 'Du3': ['vádtseba'],
+    Pl1: ['vádtsep'], 'Pl2': ['vádtsebihtit'], 'Pl3': ['vádtsi']
+  },
+  Prt: {
+    Sg1: ['vádtsiv'], 'Sg2': ['vádtsi'], 'Sg3': ['váttsij'],
+    Du1: ['váttsijma'], 'Du2': ['váttsijda'], 'Du3': ['váttsijga'],
+    Pl1: ['váttsijma'], 'Pl2': ['váttsijda'], 'Pl3': ['vádtsin']
+  },
+  PrfPrc: ['vádtsám']
 };
 
 export const resultSmnVerbParadigm = {
-  'Prs': {
-    'Sg1': ['váázám'], 'Sg2': ['váázáh'], 'Sg3': ['vázzá'],
-    'Du1': ['väzzeen'], 'Du2': ['väzzivettee'], 'Du3': ['väzziv'],
-    'Pl1': ['väzzip'], 'Pl2': ['väzzivetteđ'], 'Pl3': ['väzzih']
+  Prs: {
+    Sg1: ['váázám'], 'Sg2': ['váázáh'], 'Sg3': ['vázzá'],
+    Du1: ['väzzeen'], 'Du2': ['väzzivettee'], 'Du3': ['väzziv'],
+    Pl1: ['väzzip'], 'Pl2': ['väzzivetteđ'], 'Pl3': ['väzzih']
   },
   'PrsConNeg': ['vääzi'],
-  'Prt': {
-    'Du1': ['vazzijm'], 'Du2': ['vazzijd'], 'Du3': ['vazzijn'],
-    'Pl1': ['vaazijm'], 'Pl2': ['vaazijd'], 'Pl3': ['vazzii'],
-    'Sg1': ['vazzim'], 'Sg2': ['vazzih'], 'Sg3': ['vaazij']
+  Prt: {
+    Du1: ['vazzijm'], 'Du2': ['vazzijd'], 'Du3': ['vazzijn'],
+    Pl1: ['vaazijm'], 'Pl2': ['vaazijd'], 'Pl3': ['vazzii'],
+    Sg1: ['vazzim'], 'Sg2': ['vazzih'], 'Sg3': ['vaazij']
   },
   'PrtConNeg': ['vázzám'],
-  'PrfPrc': ['vázzám']
+  PrfPrc: ['vázzám']
 };
