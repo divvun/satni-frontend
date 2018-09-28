@@ -598,30 +598,30 @@ export const resultSmnAdjParadigm = {
 
 export const resultSmeVerbParadigm = {
   Prs: {
-    Sg1: ['váccán'],
-    Sg2: ['váccát'],
-    Sg3: ['vázzá'],
-    Du1: ['vázze'],
-    Du2: ['vázzibeahtti'],
-    Du3: ['vázziba'],
-    Pl1: ['vázzit'],
-    Pl2: ['vázzibehtet'],
-    Pl3: ['vázzet']
+    Sg1: ['váccán'], Sg2: ['váccát'], Sg3: ['vázzá'],
+    Du1: ['vázze'], Du2: ['vázzibeahtti'], Du3: ['vázziba'],
+    Pl1: ['vázzit'], Pl2: ['vázzibehtet'], Pl3: ['vázzet']
   },
-  PrsConNeg: ['vácce'],
+  'V Ind Prs ConNeg': {
+    Sg1: ['(in) vácce'], Sg2: ['(it) vácce'], Sg3: ['(ii) vácce'],
+    Du1: ['(ean) vácce'], Du2: ['(eahppi) vácce'], Du3: ['(eaba) vácce'],
+    Pl1: ['(eat) vácce'], Pl2: ['(ehpet) vácce'], Pl3: ['(eai) vácce']
+  },
   Prt: {
-    Sg1: ['vázzen'],
-    Sg2: ['vázzet'],
-    Sg3: ['váccii'],
-    Du1: ['vácciime'],
-    Du2: ['vácciide'],
-    Du3: ['vácciiga'],
-    Pl1: ['vácciimet'],
-    Pl2: ['vácciidet'],
-    Pl3: ['vázze']
+    Sg1: ['vázzen'], Sg2: ['vázzet'], Sg3: ['váccii'],
+    Du1: ['vácciime'], Du2: ['vácciide'], Du3: ['vácciiga'],
+    Pl1: ['vácciimet'], Pl2: ['vácciidet'], Pl3: ['vázze']
   },
-  PrtConNeg: ['vázzán'],
-  PrfPrc: ['vázzán']
+  'V Ind Prt ConNeg': {
+    Sg1: ['(in) vázzán'], Sg2: ['(it) vázzán'], Sg3: ['(ii) vázzán'],
+    Du1: ['(ean) vázzán'], Du2: ['(eahppi) vázzán'], Du3: ['(eaba) vázzán'],
+    Pl1: ['(eat) vázzán'], Pl2: ['(ehpet) vázzán'], Pl3: ['(eai) vázzán']
+  },
+  'V PrfPrc': {
+    Sg1: ['(lean) vázzán'], Sg2: ['(leat) vázzán'], Sg3: ['(lea) vázzán'],
+    Du1: ['(ledne) vázzán'], Du2: ['(leahppi) vázzán'], Du3: ['(leaba) vázzán'],
+    Pl1: ['(leat) vázzán'], Pl2: ['(lehpet) vázzán'], Pl3: ['(leat) vázzán']
+  }
 };
 
 export const resultSmaVerbParadigm = {
@@ -635,7 +635,11 @@ export const resultSmaVerbParadigm = {
     Du1: ['veedtsimen', 'vaedtsiejimen'], Du2: ['veedtsiden', 'vaedtsiejiden'], Du3: ['veedtsigan', 'vaedtsiejigan'],
     Pl1: ['veedtsimh', 'vaedtsiejimh'], Pl2: ['veedtsidh', 'vaedtsiejidh'], Pl3: ['veedtsin', 'vaedtsiejin']
   },
-  PrfPrc: ['vaadtseme']
+  'V PrfPrc': {
+    Sg1: ['(lean) vaadtseme'], Sg2: ['(leat) vaadtseme'], Sg3: ['(lea) vaadtseme'],
+    Du1: ['(ledne) vaadtseme'], Du2: ['(leahppi) vaadtseme'], Du3: ['(leaba) vaadtseme'],
+    Pl1: ['(leat) vaadtseme'], Pl2: ['(lehpet) vaadtseme'], Pl3: ['(leat) vaadtseme']
+  }
 };
 
 export const resultSmjVerbParadigm = {
@@ -649,7 +653,11 @@ export const resultSmjVerbParadigm = {
     Du1: ['váttsijma'], Du2: ['váttsijda'], Du3: ['váttsijga'],
     Pl1: ['váttsijma'], Pl2: ['váttsijda'], Pl3: ['vádtsin']
   },
-  PrfPrc: ['vádtsám']
+  'V PrfPrc': {
+    Sg1: ['(lean) vádtsám'], Sg2: ['(leat) vádtsám'], Sg3: ['(lea) vádtsám'],
+    Du1: ['(ledne) vádtsám'], Du2: ['(leahppi) vádtsám'], Du3: ['(leaba) vádtsám'],
+    Pl1: ['(leat) vádtsám'], Pl2: ['(lehpet) vádtsám'], Pl3: ['(leat) vádtsám']
+  }
 };
 
 export const resultSmnVerbParadigm = {
@@ -658,12 +666,24 @@ export const resultSmnVerbParadigm = {
     Du1: ['väzzeen'], Du2: ['väzzivettee'], Du3: ['väzziv'],
     Pl1: ['väzzip'], Pl2: ['väzzivetteđ'], Pl3: ['väzzih']
   },
-  PrsConNeg: ['vääzi'],
+  'V Ind Prs ConNeg': {
+    Sg1: ['(in) vääzi'], Sg2: ['(it) vääzi'], Sg3: ['(ii) vääzi'],
+    Du1: ['(ean) vääzi'], Du2: ['(eahppi) vääzi'], Du3: ['(eaba) vääzi'],
+    Pl1: ['(eat) vääzi'], Pl2: ['(ehpet) vääzi'], Pl3: ['(eai) vääzi']
+  },
   Prt: {
     Du1: ['vazzijm'], Du2: ['vazzijd'], Du3: ['vazzijn'],
     Pl1: ['vaazijm'], Pl2: ['vaazijd'], Pl3: ['vazzii'],
     Sg1: ['vazzim'], Sg2: ['vazzih'], Sg3: ['vaazij']
   },
-  PrtConNeg: ['vázzám'],
-  PrfPrc: ['vázzám']
+  'V Ind Prt ConNeg': {
+    Sg1: ['(in) vázzám'], Sg2: ['(it) vázzám'], Sg3: ['(ii) vázzám'],
+    Du1: ['(ean) vázzám'], Du2: ['(eahppi) vázzám'], Du3: ['(eaba) vázzám'],
+    Pl1: ['(eat) vázzám'], Pl2: ['(ehpet) vázzám'], Pl3: ['(eai) vázzám']
+  },
+  'V PrfPrc': {
+    Sg1: ['(lean) vázzám'], Sg2: ['(leat) vázzám'], Sg3: ['(lea) vázzám'],
+    Du1: ['(ledne) vázzám'], Du2: ['(leahppi) vázzám'], Du3: ['(leaba) vázzám'],
+    Pl1: ['(leat) vázzám'], Pl2: ['(lehpet) vázzám'], Pl3: ['(leat) vázzám']
+  }
 };
