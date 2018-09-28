@@ -23,6 +23,7 @@ import {
   resultSmeAdjParadigm,
   resultSmjAdjParadigm,
   resultSmnAdjParadigm,
+  resultSmaVerbParadigm,
   resultSmeVerbParadigm
 } from './utils_testdata';
 
@@ -3582,6 +3583,327 @@ describe('Massage adjective data from the cgi-bin paradigm generator', () => {
 });
 
 describe('Massage verb data from the cgi-bin paradigm generator', () => {
+  it('Turn sma verb html into something usable', () => {
+    const html = `<html>
+      <head>
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+        <title>Generere lullis&#xE1;megiel sojahanparadigmaid</title>
+      </head>
+      <body>
+        <a href="http://uit.no/">The University of Troms&#xF8; &gt;</a>
+        <a href="http://giellatekno.uit.no/">Giellatekno &gt;</a>
+        <br/>
+        <p/>
+        <form action="http://gtweb.uit.no/cgi-bin/smi/smi.cgi" method="get" name="form3" target="_self">
+          <table border="0" cellpadding="2" cellspacing="1">
+            <tr>
+              <td>
+                <input name="text" size="50" type="text"/>
+                <select name="pos">
+                  <option value="Any">Vaikko makk&#xE1;r</option>
+                  <option value="N">Substantiiva</option>
+                  <option value="V">Vearba</option>
+                  <option value="A">Adjektiiva</option>
+                  <option value="Adv">Advearba</option>
+                  <option value="Pron">Pronomena</option>
+                  <option value="Num">Lohkos&#xE1;tni</option>
+                </select>
+              </td>
+              <td>
+                <a href="http://giellatekno.uit.no/">
+                  <img src="http://giellatekno.uit.no/images/project.png" style="border: none;" title="Giellatekno"/>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input name="mode" type="radio" value="minimal">Atte minim&#xE1;la paradigma</input>
+                <br/>
+                <input checked="1" name="mode" type="radio" value="standard">Atte stand&#xE1;rdaparadigma</input>
+                <br/>
+                <input name="mode" type="radio" value="full">Atte buot sojahanh&#xE1;miid</input>
+                <br/>
+                <input name="lang" type="hidden" value="sma"/>
+                <input name="plang" type="hidden" value="sme"/>
+                <input name="action" type="hidden" value="paradigm"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" value="S&#xE1;dde"/>
+                <input type="reset" value="Sihko"/>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <p>
+          <b>vaedtsedh: Vearba (V)</b>
+        </p>
+        <table>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Inf</td>
+            <td>
+              <font color="red">vaedtsedh</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V PrfPrc</td>
+            <td>
+              <font color="red">vaadtseme</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ger</td>
+            <td>
+              <font color="red">vaedtsieminie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prs Sg1</td>
+            <td>
+              <font color="red">vaadtsam</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prs Sg2</td>
+            <td>
+              <font color="red">vaadtsah</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prs Sg3</td>
+            <td>
+              <font color="red">vaadtsa</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prs Du1</td>
+            <td>
+              <font color="red">vaedtsien</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prs Du2</td>
+            <td>
+              <font color="red">vaedtseden</font>
+            </td>
+            <td>
+              <font color="red">vaedtsiejidien</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prs Du3</td>
+            <td>
+              <font color="red">vaedtsiej&#xE6;gan</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prs Pl1</td>
+            <td>
+              <font color="red">vaedtsebe</font>
+            </td>
+            <td>
+              <font color="red">vaedtsiejibie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prs Pl2</td>
+            <td>
+              <font color="red">vaedtsede</font>
+            </td>
+            <td>
+              <font color="red">vaedtsiejidie</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prs Pl3</td>
+            <td>
+              <font color="red">vaedtsieh</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prt Sg1</td>
+            <td>
+              <font color="red">veedtsim</font>
+            </td>
+            <td>
+              <font color="red">vaedtsiejim</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prt Sg2</td>
+            <td>
+              <font color="red">veedtsih</font>
+            </td>
+            <td>
+              <font color="red">vaedtsiejih</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prt Sg3</td>
+            <td>
+              <font color="red">veedtsi</font>
+            </td>
+            <td>
+              <font color="red">vaedtsieji</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prt Du1</td>
+            <td>
+              <font color="red">veedtsimen</font>
+            </td>
+            <td>
+              <font color="red">vaedtsiejimen</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prt Du2</td>
+            <td>
+              <font color="red">veedtsiden</font>
+            </td>
+            <td>
+              <font color="red">vaedtsiejiden</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prt Du3</td>
+            <td>
+              <font color="red">veedtsigan</font>
+            </td>
+            <td>
+              <font color="red">vaedtsiejigan</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prt Pl1</td>
+            <td>
+              <font color="red">veedtsimh</font>
+            </td>
+            <td>
+              <font color="red">vaedtsiejimh</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prt Pl2</td>
+            <td>
+              <font color="red">veedtsidh</font>
+            </td>
+            <td>
+              <font color="red">vaedtsiejidh</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Ind Prt Pl3</td>
+            <td>
+              <font color="red">veedtsin</font>
+            </td>
+            <td>
+              <font color="red">vaedtsiejin</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Imprt Sg2</td>
+            <td>
+              <font color="red">vaedtsieh</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Imprt Du2</td>
+            <td>
+              <font color="red">vaedtseden</font>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">vaedtsedh</font>
+            </td>
+            <td>V Imprt Pl2</td>
+            <td>
+              <font color="red">vaedtsede</font>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+        <p>
+          <br/>
+          <a href="http://giellatekno.uit.no/doc/lang/sme/docu-mini-smi-grammartags.html">Morphological tags</a>
+        </p>
+      </body>
+    </html>
+    `;
+    expect(normaliseVerbParadigm(html)).toEqual(resultSmaVerbParadigm);
+  });
+
   it('Turn sme verb html into something usable', () => {
     const html = `<html>
       <head>
