@@ -637,3 +637,19 @@ export const resultSmaVerbParadigm = {
   },
   'PrfPrc': ['vaadtseme']
 };
+
+export const resultSmnVerbParadigm = {
+  'Prs': {
+    'Sg1': ['váázám'], 'Sg2': ['váázáh'], 'Sg3': ['vázzá'],
+    'Du1': ['väzzeen'], 'Du2': ['väzzivettee'], 'Du3': ['väzziv'],
+    'Pl1': ['väzzip'], 'Pl2': ['väzzivetteđ'], 'Pl3': ['väzzih']
+  },
+  'PrsConNeg': ['vääzi'],
+  'Prt': {
+    'Du1': ['vazzijm'], 'Du2': ['vazzijd'], 'Du3': ['vazzijn'],
+    'Pl1': ['vaazijm'], 'Pl2': ['vaazijd'], 'Pl3': ['vazzii'],
+    'Sg1': ['vazzim'], 'Sg2': ['vazzih'], 'Sg3': ['vaazij']
+  },
+  'PrtConNeg': ['vázzám'],
+  'PrfPrc': ['vázzám']
+};
