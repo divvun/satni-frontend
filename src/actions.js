@@ -31,9 +31,9 @@ export const requestItems = (key) => ({
 });
 
 export const requestParadigm = (stem) => ({
-    type: REQUEST_PARADIGM,
-    stem
-  });
+  type: REQUEST_PARADIGM,
+  stem
+});
 
 export const receiveArticles = (lemma, json) => ({
   type: RECEIVE_ARTICLES,
@@ -48,10 +48,10 @@ export const receiveItems = (key, json) => ({
 });
 
 export const receiveParadigm = (stem, text) => ({
-    type: RECEIVE_PARADIGM,
-    stem,
-    paradigm: text
-  });
+  type: RECEIVE_PARADIGM,
+  stem,
+  paradigm: text
+});
 
 export const fetchArticles = (lemma) => {
   return dispatch => {
@@ -83,7 +83,7 @@ export const fetchParadigm = (stem) => {
       .then(response => response.text())
       .then(text => dispatch(receiveParadigm(stem, text)));
   };
-}
+};
 
 export const shouldFetchArticles = (state, lemma) => {
   const articles = state.articlesByLemma[lemma];
