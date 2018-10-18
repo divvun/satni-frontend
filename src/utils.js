@@ -87,7 +87,7 @@ const verbDict = {
   }
 };
 
-const toJson = (text) => {
+export const toJson = (text) => {
   // eXist sometimes sends misformed json, correct it here
   return JSON.parse(
     text.indexOf('{') === 0 ?
@@ -95,7 +95,7 @@ const toJson = (text) => {
     text);
 };
 
-const removeDuplicates = (existTerms) => {
+export const removeDuplicates = (existTerms) => {
   const foundTermWikiRef = [];
 
   return existTerms.filter((term) => {
@@ -124,7 +124,7 @@ export const normaliseArticles = (existTerms) => {
   });
 };
 
-const translationStems = (tg) => {
+export const translationStems = (tg) => {
   let stems = [];
 
   if (tg.t instanceof Object && tg.t instanceof Array) {
@@ -146,7 +146,7 @@ const translationStems = (tg) => {
   return stems;
 };
 
-const translationExamples = (xg) => {
+export const translationExamples = (xg) => {
   let examples = [];
   if (xg instanceof Object && xg instanceof Array) {
     xg.forEach((x) => {
@@ -159,7 +159,7 @@ const translationExamples = (xg) => {
   return examples;
 };
 
-const normaliseDict = (existDict) => {
+export const normaliseDict = (existDict) => {
   let translations = translationStems(existDict.tg);
   translations.unshift({
     'lemma': existDict.term,
@@ -197,7 +197,7 @@ const term2dict = {
   'eng': 'eng'
 };
 
-const normaliseTermWiki = (existTerm) => {
+export const normaliseTermWiki = (existTerm) => {
   const terms = [];
 
   const tg = existTerm.tg;
@@ -261,7 +261,7 @@ const sdTranslationStems = (t, lang, pos) => {
   return stems;
 };
 
-const normaliseSDTerm = (existTerm) => {
+export const normaliseSDTerm = (existTerm) => {
   const terms = [];
 
   existTerm.tg.forEach((tg) => {
@@ -283,7 +283,7 @@ const normaliseSDTerm = (existTerm) => {
   };
 };
 
-const normaliseNounParadigm = (html) => {
+export const normaliseNounParadigm = (html) => {
   const doc = new DOMParser().parseFromString(html);
   const tables = xpath.select('.//table', doc);
   const tableRows = xpath.select('.//tr', tables[1]);
@@ -311,7 +311,7 @@ const normaliseNounParadigm = (html) => {
   return want;
 };
 
-const normaliseAdjParadigm = (html) => {
+export const normaliseAdjParadigm = (html) => {
   const doc = new DOMParser().parseFromString(html);
   const tables = xpath.select('.//table', doc);
   const tableRows = xpath.select('.//tr', tables[1]);
@@ -356,7 +356,7 @@ const normaliseAdjParadigm = (html) => {
   return want;
 };
 
-const normaliseVerbParadigm = (html) => {
+export const normaliseVerbParadigm = (html) => {
   const doc = new DOMParser().parseFromString(html);
   const tables = xpath.select('.//table', doc);
   const tableRows = xpath.select('.//tr', tables[1]);
@@ -385,10 +385,4 @@ const normaliseVerbParadigm = (html) => {
   });
 
   return want;
-};
-
-export {
-  toJson, removeDuplicates, translationStems, translationExamples,
-  normaliseDict, normaliseTermWiki, normaliseSDTerm, normaliseNounParadigm,
-  normaliseAdjParadigm, normaliseVerbParadigm
 };
