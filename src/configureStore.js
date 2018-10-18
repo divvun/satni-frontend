@@ -5,15 +5,18 @@ import rootReducer from './reducers';
 
 const loggerMiddleware = createLogger();
 
-const configureStore = (preloadedState) => (
-  createStore(
+const configureStore = (preloadedState) => {
+  const middlewares = [thunkMiddleware];
+
+  if (process.env.NODE_ENV !== 'production') {
+    middlewares.push(loggerMiddleware);
+  }
+
+  return createStore(
     rootReducer,
     preloadedState,
-    applyMiddleware(
-      thunkMiddleware,
-      loggerMiddleware
-    )
-  )
-);
+    applyMiddleware(...middlewares)
+  );
+};
 
 export default configureStore;
