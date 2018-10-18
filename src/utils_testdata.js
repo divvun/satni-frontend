@@ -687,3 +687,20 @@ export const resultSmnVerbParadigm = {
     Pl1: ['(leat) vázzám'], Pl2: ['(lehpet) vázzám'], Pl3: ['(leat) vázzám']
   }
 };
+
+export const resultJustermTana = {
+  'dict': 'JustermTana',
+  'stems': [
+    {
+      'lang': 'sme',
+      'lemma': 'garvit',
+      'pos': 'v'
+    },
+    {
+      'lang': 'fin',
+      'lemma': 'välttää',
+      'pos': 'v'
+    }
+  ],
+  'termwikiref': '-1'
+};

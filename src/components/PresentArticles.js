@@ -26,6 +26,13 @@ const Articles = ({isFetching, articles, errorMessage}) => {
       position: 'relative'
     })}>
       {articles.map((article, i) => {
+        if (article.dict === 'JustermTana') {
+          return <TermWikiArticle
+            key={i}
+            stems={article.stems}
+            termwikiref={article.termwikiref} />;
+        }
+
         if (article.termwikiref === '-1') {
           return <DictArticle
             key={i}
