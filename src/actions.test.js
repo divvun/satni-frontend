@@ -23,7 +23,7 @@ describe('actions', () => {
   it('should create an action to request dictionary and term articles for the given lemma', () => {
     const lemma = 'guolle';
     const expectedAction = {
-      type: actions.REQUEST_ARTICLES,
+      type: actions.FETCH_ARTICLES_REQUEST,
       lemma
     };
     expect(actions.requestArticles(lemma)).toEqual(expectedAction);
@@ -41,7 +41,7 @@ describe('actions', () => {
     const lemma = 'guolle';
     const json = {'key': 'value'};
     const expectedAction = {
-      type: actions.RECEIVE_ARTICLES,
+      type: actions.FETCH_ARTICLES_SUCCESS,
       lemma,
       articles: json
     };

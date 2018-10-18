@@ -2,13 +2,13 @@ import fetch from 'cross-fetch';
 import {normaliseArticles, toJson} from './utils';
 
 export const REQUEST_PARADIGM = 'REQUEST_PARADIGM';
-export const REQUEST_ARTICLES = 'REQUEST_ARTICLES';
+export const FETCH_ARTICLES_REQUEST = 'FETCH_ARTICLES_REQUEST';
 export const REQUEST_ITEMS = 'REQUEST_ITEMS';
 export const SELECT_LEMMA = 'SELECT_LEMMA';
 export const SELECT_KEY = 'SELECT_KEY';
 
 export const RECEIVE_PARADIGM = 'RECEIVE_PARADIGM';
-export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES';
+export const FETCH_ARTICLES_SUCCESS = 'FETCH_ARTICLES_SUCCESS';
 export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
 
 export const selectLemma = (lemma) => ({
@@ -22,7 +22,7 @@ export const selectKey = (key) => ({
 });
 
 export const requestArticles = (lemma) => ({
-  type: REQUEST_ARTICLES,
+  type: FETCH_ARTICLES_REQUEST,
   lemma
 });
 
@@ -36,7 +36,7 @@ export const requestParadigm = (stem) => ({
 });
 
 export const receiveArticles = (lemma, json) => ({
-  type: RECEIVE_ARTICLES,
+  type: FETCH_ARTICLES_SUCCESS,
   lemma,
   articles: json
 });
@@ -53,13 +53,19 @@ export const receiveParadigm = (stem, text) => ({
   paradigm: text
 });
 
+const apifetchArticle = (lemma) => {
+  let url = `http://satni.uit.no:8080/exist/restxq/satni/article/${lemma}`;
+  return fetch(encodeURI(url));
+};
+
 export const fetchArticles = (lemma) => (dispatch) => {
   dispatch(requestArticles(lemma));
 
-  let url = `http://satni.uit.no:8080/exist/restxq/satni/article/${lemma}`;
-  return fetch(encodeURI(url))
-      .then(response => response.text())
-      .then(text => dispatch(receiveArticles(lemma, normaliseArticles(toJson(text)))));
+  return apifetchArticle(lemma)
+    .then(response => {
+      return response.text();
+    })
+    .then(text => dispatch(receiveArticles(lemma, normaliseArticles(toJson(text)))));
 };
 
 const fetchItems = (key) => (dispatch) => {

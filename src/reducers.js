@@ -5,8 +5,8 @@ import { OrderedSet, Set } from 'immutable';
 import {
   SELECT_LEMMA,
   SELECT_KEY,
-  REQUEST_ARTICLES,
-  RECEIVE_ARTICLES,
+  FETCH_ARTICLES_REQUEST,
+  FETCH_ARTICLES_SUCCESS,
   REQUEST_ITEMS,
   RECEIVE_ITEMS
 } from './actions';
@@ -28,14 +28,14 @@ const articles = (
   action
 ) => {
   switch (action.type) {
-    case REQUEST_ARTICLES:
+    case FETCH_ARTICLES_REQUEST:
       return {
         ...state,
         ...{
           isFetching: true
         }
       };
-    case RECEIVE_ARTICLES:
+    case FETCH_ARTICLES_SUCCESS:
       return {
         ...state,
         ...{
@@ -50,8 +50,8 @@ const articles = (
 
 const articlesByLemma = (state = {}, action) => {
   switch (action.type) {
-    case RECEIVE_ARTICLES:
-    case REQUEST_ARTICLES:
+    case FETCH_ARTICLES_SUCCESS:
+    case FETCH_ARTICLES_REQUEST:
       return {
         ...state,
         ...{

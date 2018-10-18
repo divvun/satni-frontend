@@ -100,7 +100,7 @@ describe('reducers', () => {
     });
   });
 
-  it('should handle REQUEST_ARTICLES', () => {
+  it('should handle FETCH_ARTICLES_REQUEST', () => {
     expect(reducer({
       articlesByLemma: {},
       search: {
@@ -112,7 +112,7 @@ describe('reducers', () => {
       selectedLemma: 'guolli'
     },
       {
-        type: actions.REQUEST_ARTICLES,
+        type: actions.FETCH_ARTICLES_REQUEST,
         lemma: 'guolli'
       })).toEqual({
         'articlesByLemma': {
@@ -132,7 +132,7 @@ describe('reducers', () => {
       });
   });
 
-  it('should handle RECEIVE_ARTICLES', () => {
+  it('should handle FETCH_ARTICLES_SUCCESS', () => {
     expect(reducer({
       'articlesByLemma': {
         'guolli': {
@@ -148,7 +148,7 @@ describe('reducers', () => {
       },
       'selectedLemma': 'guolli'},
       {
-        type: actions.RECEIVE_ARTICLES,
+        type: actions.FETCH_ARTICLES_SUCCESS,
         lemma: 'guolli',
         articles: [
           {
