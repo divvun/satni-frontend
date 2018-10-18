@@ -53,36 +53,32 @@ export const receiveParadigm = (stem, text) => ({
   paradigm: text
 });
 
-export const fetchArticles = (lemma) => {
-  return dispatch => {
-    dispatch(requestArticles(lemma));
-    let url = `http://satni.uit.no:8080/exist/restxq/satni/article/${lemma}`;
-    return fetch(encodeURI(url))
+export const fetchArticles = (lemma) => (dispatch) => {
+  dispatch(requestArticles(lemma));
+
+  let url = `http://satni.uit.no:8080/exist/restxq/satni/article/${lemma}`;
+  return fetch(encodeURI(url))
       .then(response => response.text())
       .then(text => dispatch(receiveArticles(lemma, normaliseArticles(toJson(text)))));
-  };
 };
 
-const fetchItems = (key) => {
-  return dispatch => {
-    dispatch(requestItems(key));
-    let url = `http://satni.uit.no:8080/exist/restxq/satni/search?query=${key}`;
-    return fetch(encodeURI(url))
+const fetchItems = (key) => (dispatch) => {
+  dispatch(requestItems(key));
+
+  let url = `http://satni.uit.no:8080/exist/restxq/satni/search?query=${key}`;
+  return fetch(encodeURI(url))
       .then(response => response.text())
       .then(text => dispatch(receiveItems(key, toJson(text))));
-  };
 };
 
-export const fetchParadigm = (stem) => {
-  console.log('fetchItems');
-  return dispatch => {
-    dispatch(requestParadigm(stem));
-    let url = `http://gtweb.uit.no/cgi-bin/smi/smi.cgi?text=${stem.lemma}&pos=${stem.pos}&mode=standard&action=paradigm&lang=${stem.lang}`;
-    console.log(encodeURI(url));
-    return fetch(encodeURI(url, {credentials: 'same-origin', mode: 'no-cors'}))
+export const fetchParadigm = (stem) => (dispatch) => {
+  dispatch(requestParadigm(stem));
+
+  let url = `http://gtweb.uit.no/cgi-bin/smi/smi.cgi?text=${stem.lemma}&pos=${stem.pos}&mode=standard&action=paradigm&lang=${stem.lang}`;
+  console.log(encodeURI(url));
+  return fetch(encodeURI(url, {credentials: 'same-origin', mode: 'no-cors'}))
       .then(response => response.text())
       .then(text => dispatch(receiveParadigm(stem, text)));
-  };
 };
 
 export const shouldFetchArticles = (state, lemma) => {
@@ -104,18 +100,14 @@ export const shouldFetchItems = (state, key) => {
   }
 };
 
-export const fetchArticlesIfNeeded = (lemma) => {
-  return (dispatch, getState) => {
-    if (shouldFetchArticles(getState(), lemma)) {
-      return dispatch(fetchArticles(lemma));
-    }
-  };
+export const fetchArticlesIfNeeded = (lemma) => (dispatch, getState) => {
+  if (shouldFetchArticles(getState(), lemma)) {
+    return dispatch(fetchArticles(lemma));
+  }
 };
 
-export const fetchItemsIfNeeded = (key) => {
-  return (dispatch, getState) => {
-    if (shouldFetchItems(getState().search, key)) {
-      return dispatch(fetchItems(key));
-    }
-  };
+export const fetchItemsIfNeeded = (key) => (dispatch, getState) => {
+  if (shouldFetchItems(getState().search, key)) {
+    return dispatch(fetchItems(key));
+  }
 };
