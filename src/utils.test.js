@@ -332,7 +332,6 @@ describe('Massage data from eXist', () => {
     expect(normaliseTermWiki(termWiki)).toEqual(resultTermWiki);
   });
 
-  it('Normalise a SDTerm article into an object', () => {
   it('Normalise a JustermTana article into an object', () => {
     const justermTana = {
       'term': 'unngå',
@@ -372,6 +371,7 @@ describe('Massage data from eXist', () => {
     expect(normaliseTermWiki(justermTana)).toEqual(resultJustermTana);
   });
 
+  it('Normalise an SDTerm article into an object', () => {
     const SDTerm = {
       'status': null,
       'pos': 'S',
