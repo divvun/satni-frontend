@@ -11,12 +11,12 @@ describe('async actions', () => {
     fetchMock.reset();
     fetchMock.restore();
   });
-  it('creates RECEIVE_ARTICLES when fetching articles has been done', () => {
+  it('creates FETCH_ARTICLES_SUCCESS when fetching articles has been done', () => {
     const lemma = 'guolle';
     const expectedActions = [
       {
         'lemma': 'guolle',
-        'type': 'REQUEST_ARTICLES'
+        'type': 'FETCH_ARTICLES_REQUEST'
       },
       {
         'articles': [
@@ -31,7 +31,7 @@ describe('async actions', () => {
           }
         ],
         'lemma': 'guolle',
-        'type': 'RECEIVE_ARTICLES'
+        'type': 'FETCH_ARTICLES_SUCCESS'
       }
     ];
     const store = mockStore({});
