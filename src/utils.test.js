@@ -15,6 +15,7 @@ import {
   resultDictWithExamples,
   resultDictWithoutExamples,
   resultTermWiki,
+  resultJustermTana,
   resultSmaNounParadigm,
   resultSmeNounParadigm,
   resultSmjNounParadigm,
@@ -332,6 +333,45 @@ describe('Massage data from eXist', () => {
   });
 
   it('Normalise a SDTerm article into an object', () => {
+  it('Normalise a JustermTana article into an object', () => {
+    const justermTana = {
+      'term': 'unngå',
+      'pos': 'v',
+      'dict': 'JustermTana',
+      'status': null,
+      'lang': 'nob',
+      'termwikiref': '-1',
+      'def': null,
+      'expl': null,
+      'tg': [
+        {
+          'xml:lang': 'sme',
+          '#text': [
+            '\n            ',
+            '\n         '
+          ],
+          't': {
+            'pos': 'v',
+            '#text': 'garvit'
+          }
+        },
+        {
+          'xml:lang': 'fin',
+          '#text': [
+            '\n            ',
+            '\n         '
+          ],
+          't': {
+            'pos': 'v',
+            '#text': 'välttää'
+          }
+        }
+      ]
+    };
+
+    expect(normaliseTermWiki(justermTana)).toEqual(resultJustermTana);
+  });
+
     const SDTerm = {
       'status': null,
       'pos': 'S',
