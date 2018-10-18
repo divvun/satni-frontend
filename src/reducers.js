@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { reducer as formReducer } from 'redux-form';
 import { OrderedSet, Set } from 'immutable';
 
 import {
   SELECT_LEMMA,
   SELECT_KEY,
+  FETCH_ARTICLES_ERROR,
   FETCH_ARTICLES_REQUEST,
   FETCH_ARTICLES_SUCCESS,
   REQUEST_ITEMS,
@@ -41,6 +41,14 @@ const articles = (
         ...{
           isFetching: false,
           items: action.articles
+        }
+      };
+    case FETCH_ARTICLES_ERROR:
+      return {
+        ...state,
+        ...{
+          isFetching: false,
+          items: []
         }
       };
     default:
@@ -113,11 +121,23 @@ const search = (
   }
 };
 
+const errorMessage = (state = null, action) => {
+  switch (action.type) {
+    case 'FETCH_ARTICLES_ERROR':
+      return action.message;
+    case 'FETCH_ARTICLES_REQUEST':
+    case 'FETCH_ARTICLES_SUCCESS':
+      return null;
+    default:
+      return state;
+  }
+};
+
 const rootReducer = combineReducers({
   articlesByLemma,
   selectedLemma,
   search,
-  form: formReducer
+  errorMessage
 });
 
 export default rootReducer;
