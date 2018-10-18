@@ -1,11 +1,18 @@
 import React from 'react';
-import { css } from "react-emotion";
+import { css } from 'react-emotion';
 
 import DictArticle from './DictArticle';
 import TermWikiArticle from './TermWikiArticle';
 import SDTermArticle from './SDTermArticle';
+import FetchArticlesError from './FetchArticlesError';
 
-const Articles = ({isFetching, articles}) => {
+const Articles = ({isFetching, articles, errorMessage}) => {
+  if (errorMessage) {
+    return (
+      <FetchArticlesError message={errorMessage} />
+    );
+  }
+
   if (isFetching) {
     return <div>Loading …</div>;
   }

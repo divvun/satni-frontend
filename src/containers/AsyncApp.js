@@ -1,5 +1,4 @@
 import React from 'react';
-import Languages from '../components/Languages';
 import styled, { css } from 'react-emotion';
 import Searcher from '../components/Searcher';
 import Articles from '../components/Articles';

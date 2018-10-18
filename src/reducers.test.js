@@ -12,7 +12,7 @@ const initialState = {
     'resultItems': OrderedSet()
   },
   selectedLemma: '',
-  form: {}
+  errorMessage: null
 };
 
 describe('reducers', () => {
@@ -34,7 +34,7 @@ describe('reducers', () => {
         'resultItems': OrderedSet()
       },
       selectedLemma: 'guolli',
-      form: {}
+      errorMessage: null
     });
   });
 
@@ -51,7 +51,7 @@ describe('reducers', () => {
         'resultItems': OrderedSet()
       },
       selectedLemma: '',
-      form: {}
+      errorMessage: null
     });
   });
 
@@ -96,7 +96,7 @@ describe('reducers', () => {
         )
       },
       'selectedLemma': '',
-      'form': {}
+      errorMessage: null
     });
   });
 
@@ -128,7 +128,7 @@ describe('reducers', () => {
           'resultItems': OrderedSet()
         },
         'selectedLemma': 'guolli',
-        'form': {}
+        errorMessage: null
       });
   });
 
@@ -230,7 +230,7 @@ describe('reducers', () => {
           'resultItems': OrderedSet()
         },
         'selectedLemma': 'guolli',
-        'form': {}
+        errorMessage: null
       });
   });
 });

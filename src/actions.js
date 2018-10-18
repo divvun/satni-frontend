@@ -11,6 +11,8 @@ export const RECEIVE_PARADIGM = 'RECEIVE_PARADIGM';
 export const FETCH_ARTICLES_SUCCESS = 'FETCH_ARTICLES_SUCCESS';
 export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
 
+export const FETCH_ARTICLES_ERROR = 'FETCH_ARTICLES_ERROR';
+
 export const selectLemma = (lemma) => ({
   type: SELECT_LEMMA,
   lemma
@@ -62,10 +64,21 @@ export const fetchArticles = (lemma) => (dispatch) => {
   dispatch(requestArticles(lemma));
 
   return apifetchArticle(lemma)
-    .then(response => {
-      return response.text();
-    })
-    .then(text => dispatch(receiveArticles(lemma, normaliseArticles(toJson(text)))));
+    .then(
+      response => {
+        return response.text();
+      }
+    )
+    .then(text => {
+      try {
+        return dispatch(receiveArticles(lemma, normaliseArticles(toJson(text))));
+      } catch (error) {
+        dispatch({
+          type: FETCH_ARTICLES_ERROR,
+          message: `Could not show articles for «${lemma}»`
+        });
+      }
+    });
 };
 
 const fetchItems = (key) => (dispatch) => {

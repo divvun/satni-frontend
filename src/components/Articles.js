@@ -8,7 +8,7 @@ Articles.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-  const { selectedLemma, articlesByLemma } = state;
+  const { selectedLemma, articlesByLemma, errorMessage } = state;
   const {
     isFetching,
     items: articles
@@ -19,8 +19,8 @@ const mapStateToProps = (state) => {
 
   return {
     isFetching,
-    selectedLemma,
-    articles
+    articles,
+    errorMessage
   };
 };
 
