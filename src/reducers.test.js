@@ -63,12 +63,18 @@ describe('reducers', () => {
       { term: 'guollegáhkku', dict: 'smefin', lang: 'sme', langs: 'fin' },
       { term: 'suolljut', dict: 'smefin', lang: 'sme', langs: 'fin' }
     ];
-    const thisSearch = Object.assign({}, initialState.search, {
-      searchKey: 'guol'
-    });
-    const thisState = Object.assign({}, initialState, {
-      search: thisSearch
-    });
+    const thisSearch = {
+      ...initialState.search,
+      ...{
+        searchKey: 'guol'
+      }
+    };
+    const thisState = {
+      ...initialState,
+      ...{
+        search: thisSearch
+      }
+    };
 
     expect(reducer(thisState, {
       type: actions.RECEIVE_ITEMS,
