@@ -12,9 +12,9 @@ const MyGrid = styled('div')({
     display: 'grid',
     gridGap: 10,
     gridTemplateAreas: `
-      "header header header"
-      "sidebar content content"
-      "footer footer footer"
+      "header"
+      "content"
+      "footer"
     `
   }
 });
@@ -34,11 +34,6 @@ const AsyncApp = () => (
       })}>
             sátni.org
           </div>
-    </Box>
-    <Box css={{
-      gridArea: 'sidebar'
-    }}>
-      <Languages />
     </Box>
     <Box css={{
       gridArea: 'content',
