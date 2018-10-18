@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from "react-emotion";
+import styled from 'react-emotion';
 
-const Item = styled("div")({
+export const Item = styled('div')({
   position: 'relative',
   cursor: 'pointer',
   display: 'block',
@@ -34,8 +34,10 @@ const Item = styled("div")({
   }
   return styles;
 });
+
 const onAttention = '&:hover, &:focus';
-const Input = styled("input")({
+
+export const Input = styled('input')({
   width: 'calc(100% - 16px)', // full width - icon width/2 - border
   fontSize: 14,
   wordWrap: 'break-word',
@@ -67,7 +69,7 @@ const Input = styled("input")({
     }
     : null);
 
-const Menu = styled("div")({
+export const Menu = styled('div')({
   maxHeight: '20rem',
   overflowY: 'auto',
   overflowX: 'hidden',
@@ -83,7 +85,7 @@ const Menu = styled("div")({
   borderStyle: 'solid'
 });
 
-const ControllerButton = styled("button")({
+export const ControllerButton = styled('button')({
   backgroundColor: 'transparent',
   border: 'none',
   position: 'absolute',
@@ -92,7 +94,7 @@ const ControllerButton = styled("button")({
   cursor: 'pointer'
 });
 
-function ArrowIcon ({isOpen}) {
+export const ArrowIcon = ({isOpen}) => {
   return (
     <svg
       viewBox='0 0 20 20'
@@ -106,9 +108,9 @@ function ArrowIcon ({isOpen}) {
       <path d='M1,6 L10,15 L19,6' />
     </svg>
   );
-}
+};
 
-function XIcon () {
+export const XIcon = () => {
   return (
     <svg
       viewBox='0 0 20 20'
@@ -122,9 +124,9 @@ function XIcon () {
       <path d='M19,1 L1,19' />
     </svg>
   );
-}
+};
 
-const ArticleDiv = styled("div")({
+export const ArticleDiv = styled('div')({
   borderRadius: '0 0 .28571429rem .28571429rem',
   borderColor: '#96c8da',
   borderTopWidth: '1',
@@ -139,8 +141,6 @@ const ArticleDiv = styled("div")({
   paddingBottom: '1%'
 });
 
-const ParadigmDiv = styled("div")({
-  padding: '5%',
+export const ParadigmDiv = styled('div')({
+  padding: '5%'
 });
-
-export {Menu, ControllerButton, Input, Item, ArrowIcon, XIcon, ArticleDiv, ParadigmDiv};
