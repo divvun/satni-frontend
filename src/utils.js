@@ -114,12 +114,14 @@ export const removeDuplicates = (existTerms) => {
 
 export const normaliseArticles = (existTerms) => {
   return removeDuplicates(existTerms).map((existTerm) => {
-    if (existTerm.termwikiref === '-1') {
-      return normaliseDict(existTerm);
-    } else if (existTerm.dict === 'termwiki') {
+    if (existTerm.dict === 'termwiki') {
       return normaliseTermWiki(existTerm);
-    } else {
+    } else if (existTerm.dict === 'JustermTana') {
+      return normaliseJusterm(existTerm);
+    } else if (existTerm.dict === 'SD-terms') {
       return normaliseSDTerm(existTerm);
+    } else {
+      return normaliseDict(existTerm);
     }
   });
 };
