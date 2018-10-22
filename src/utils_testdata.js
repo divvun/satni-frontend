@@ -1,4 +1,4 @@
-export const resultDictWithExamples = {
+export const resultDictWithExamples = [{
   translations: [
     {
       pos: 'N',
@@ -23,9 +23,9 @@ export const resultDictWithExamples = {
   ],
   termwikiref: '-1',
   dict: 'smenob'
-};
+}];
 
-export const resultDictWithoutExamples = {
+export const resultDictWithoutExamples = [{
   dict: 'smefin',
   examples: [],
   termwikiref: '-1',
@@ -41,8 +41,44 @@ export const resultDictWithoutExamples = {
       lemma: 'kalvoin verkonkudonnassa'
     }
   ]
-};
+}];
 
+export const resultAehtjie = [
+  {
+    dict: 'smanob',
+    examples: [],
+    termwikiref: '-1',
+    translations: [
+      {
+        pos: 'N',
+        lang: 'sma',
+        lemma: 'aehtjie'
+      },
+      {
+        pos: 'N',
+        lang: 'nob',
+        lemma: 'far'
+      }
+    ]
+  },
+  {
+    dict: 'smanob',
+    examples: [],
+    termwikiref: '-1',
+    translations: [
+      {
+        pos: 'N',
+        lang: 'sma',
+        lemma: 'aehtjie'
+      },
+      {
+        pos: 'N',
+        lang: 'swe',
+        lemma: 'far'
+      }
+    ]
+  }
+];
 export const resultSDTerm = {
   stems: [
     {
@@ -686,4 +722,25 @@ export const resultSmnVerbParadigm = {
     Du1: ['(ledne) vázzám'], Du2: ['(leahppi) vázzám'], Du3: ['(leaba) vázzám'],
     Pl1: ['(leat) vázzám'], Pl2: ['(lehpet) vázzám'], Pl3: ['(leat) vázzám']
   }
+};
+
+export const resultJustermTana = {
+  'dict': 'JustermTana',
+  'stems': [
+    {
+      lang: 'nob',
+      lemma: 'unngå',
+      pos: 'v'
+    },
+    {
+      'lang': 'sme',
+      'lemma': 'garvit',
+      'pos': 'v'
+    },
+    {
+      'lang': 'fin',
+      'lemma': 'välttää',
+      'pos': 'v'
+    }
+  ]
 };

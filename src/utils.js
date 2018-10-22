@@ -114,12 +114,17 @@ export const removeDuplicates = (existTerms) => {
 
 export const normaliseArticles = (existTerms) => {
   return removeDuplicates(existTerms).map((existTerm) => {
-    if (existTerm.termwikiref === '-1') {
-      return normaliseDict(existTerm);
-    } else if (existTerm.dict === 'termwiki') {
+    if (existTerm.dict === 'termwiki') {
       return normaliseTermWiki(existTerm);
-    } else {
+    } else if (existTerm.dict === 'JustermTana') {
+      return normaliseJusterm(existTerm);
+    } else if (existTerm.dict === 'SD-terms') {
       return normaliseSDTerm(existTerm);
+    } else {
+      let dicts = normaliseDict(existTerm);
+      for (var i = 0, len = dicts.length; i < len; i++) {
+        return dicts[i];
+      }
     }
   });
 };
@@ -160,21 +165,50 @@ export const translationExamples = (xg) => {
 };
 
 export const normaliseDict = (existDict) => {
-  let translations = translationStems(existDict.tg);
-  translations.unshift({
-    'lemma': existDict.term,
-    'lang': existDict.lang,
-    'pos': existDict.pos
-  });
+  const results = [];
 
-  let examples = existDict.tg.xg ? translationExamples(existDict.tg.xg) : [];
+  const tg = existDict.tg;
+  if (tg instanceof Object && tg instanceof Array) {
+    tg.forEach((tr) => {
+      let translations = translationStems(tr);
+      translations.unshift({
+        'lemma': existDict.term,
+        'lang': existDict.lang,
+        'pos': existDict.pos
+      });
 
-  return {
-    translations,
-    examples,
-    termwikiref: existDict.termwikiref,
-    dict: existDict.dict
-  };
+      let examples = tr.xg ? translationExamples(tr.xg) : [];
+
+      results.push(
+        {
+          translations,
+          examples,
+          termwikiref: existDict.termwikiref,
+          dict: existDict.dict
+        }
+      );
+    });
+  } else {
+    let translations = translationStems(existDict.tg);
+    translations.unshift({
+      'lemma': existDict.term,
+      'lang': existDict.lang,
+      'pos': existDict.pos
+    });
+
+    let examples = existDict.tg.xg ? translationExamples(existDict.tg.xg) : [];
+
+    results.push(
+      {
+        translations,
+        examples,
+        termwikiref: existDict.termwikiref,
+        dict: existDict.dict
+      }
+    );
+  }
+
+  return results;
 };
 
 const term2dict = {
@@ -197,10 +231,10 @@ const term2dict = {
   'eng': 'eng'
 };
 
-export const normaliseTermWiki = (existTerm) => {
+const normaliseTranslationGroup = (existTerm) => {
   const terms = [];
-
   const tg = existTerm.tg;
+
   if (tg instanceof Object && tg instanceof Array) {
     tg.forEach((tg) => {
       let stem = {};
@@ -232,10 +266,28 @@ export const normaliseTermWiki = (existTerm) => {
     terms.push(stem);
   }
 
+  return terms;
+};
+
+export const normaliseTermWiki = (existTerm) => {
   return {
-    stems: terms,
+    stems: normaliseTranslationGroup(existTerm),
     termwikiref: existTerm.termwikiref,
     dict: existTerm.dict
+  };
+};
+
+export const normaliseJusterm = (jusTerm) => {
+  const stems = normaliseTranslationGroup(jusTerm);
+  stems.unshift({
+    lemma: jusTerm.term.trim(),
+    lang: jusTerm.lang,
+    pos: jusTerm.pos
+  });
+
+  return {
+    stems,
+    dict: jusTerm.dict
   };
 };
 

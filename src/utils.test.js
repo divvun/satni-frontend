@@ -6,6 +6,8 @@ import {
   normaliseDict,
   normaliseTermWiki,
   normaliseSDTerm,
+  normaliseJusterm,
+  normaliseArticles,
   normaliseNounParadigm,
   normaliseAdjParadigm,
   normaliseVerbParadigm
@@ -15,6 +17,8 @@ import {
   resultDictWithExamples,
   resultDictWithoutExamples,
   resultTermWiki,
+  resultJustermTana,
+  resultAehtjie,
   resultSmaNounParadigm,
   resultSmeNounParadigm,
   resultSmjNounParadigm,
@@ -28,6 +32,273 @@ import {
   resultSmjVerbParadigm,
   resultSmnVerbParadigm
 } from './utils_testdata';
+
+const existDictWithExamples = {
+  'expl': null,
+  'term': 'oainnáhus',
+  'def': null,
+  'pos': 'N',
+  'status': null,
+  'termwikiref': '-1',
+  'dict': 'smenob',
+  'tg': {
+    't': {
+      '#text': 'syn',
+      'pos': 'N'
+    },
+    'xg': [
+      {
+        'xt': 'Jeg prøver å vaske vekk det triste synet fra øynene mine, men det følger med likevel.',
+        'x': 'Iskkan sihkkut váivves oainnáhusa iežan čalmmiin, muhto dat liikká čuovvu mu.',
+        '#text': [
+          '\n               ',
+          '\n               ',
+          '\n            '
+        ]
+      },
+      {
+        'xt': 'Jeg er det eneste hvite mennesket og selvfølgelig et syn.',
+        'x': 'Lean áidna vilges olmmoš ja dieđusge oainnáhus.',
+        '#text': [
+          '\n               ',
+          '\n               ',
+          '\n            '
+        ]
+      }
+    ],
+    '#text': [
+      '\n            ',
+      '\n            ',
+      '\n            ',
+      '\n         '
+    ],
+    'xml:lang': 'nob'
+  },
+  'lang': 'sme'
+};
+
+const existDictWithoutExamples = {
+  'status': null,
+  'pos': 'N',
+  'dict': 'smefin',
+  'tg': {
+    't': {
+      'pos': 'N',
+      '#text': 'kalvoin verkonkudonnassa'
+    },
+    'xml:lang': 'fin',
+    '#text': [
+      '\n            ',
+      '\n         '
+    ]
+  },
+  'termwikiref': '-1',
+  'expl': null,
+  'term': 'guolladat',
+  'lang': 'sme',
+  'def': null
+};
+
+const termWiki = {
+  'termwikiref': 'Servodatdieđa:androgyna',
+  'expl': null,
+  'pos': 'N',
+  'category': 'Servodatdieđa',
+  'def': null,
+  'tg': [
+    {
+      '#text': [
+        '\n      ',
+        '\n    '
+      ],
+      'xml:lang': 'en',
+      't': {
+        '#text': '\n        androgyne\n\n      ',
+        'pos': 'N'
+      }
+    },
+    {
+      '#text': [
+        '\n      ',
+        '\n    '
+      ],
+      'xml:lang': 'smn',
+      't': {
+        '#text': '\n        androgynlâšvuotâ\n\n      ',
+        'pos': 'A'
+      }
+    },
+    {
+      '#text': [
+        '\n      ',
+        '\n    '
+      ],
+      'xml:lang': 'smn',
+      't': '\n        androgynvuotâ\n\n      '
+    },
+    {
+      '#text': [
+        '\n      ',
+        '\n    '
+      ],
+      'xml:lang': 'se',
+      't': {
+        '#text': '\n        androgyna\n\n      ',
+        'pos': 'N'
+      }
+    },
+    {
+      '#text': [
+        '\n      ',
+        '\n    '
+      ],
+      'xml:lang': 'fi',
+      't': {
+        '#text': '\n        androgyyni\n\n      ',
+        'pos': 'N'
+      }
+    },
+    {
+      '#text': [
+        '\n      ',
+        '\n    '
+      ],
+      'xml:lang': 'smn',
+      't': {
+        '#text': '\n        androgyn\n\n      ',
+        'pos': 'N'
+      }
+    },
+    {
+      '#text': [
+        '\n      ',
+        '\n    '
+      ],
+      'xml:lang': 'nb',
+      't': {
+        '#text': '\n        \n\n      ',
+        'pos': 'N'
+      }
+    },
+    {
+      '#text': [
+        '\n      ',
+        '\n    '
+      ],
+      'xml:lang': 'sv',
+      't': {
+        '#text': '\n        \n\n      ',
+        'pos': 'N'
+      }
+    }
+  ],
+  'term': 'androgyn',
+  'status': null,
+  'dict': 'termwiki'
+};
+
+const justermTana = {
+  'term': 'unngå',
+  'pos': 'v',
+  'dict': 'JustermTana',
+  'status': null,
+  'lang': 'nob',
+  'termwikiref': '-1',
+  'def': null,
+  'expl': null,
+  'tg': [
+    {
+      'xml:lang': 'sme',
+      '#text': [
+        '\n            ',
+        '\n         '
+      ],
+      't': {
+        'pos': 'v',
+        '#text': 'garvit'
+      }
+    },
+    {
+      'xml:lang': 'fin',
+      '#text': [
+        '\n            ',
+        '\n         '
+      ],
+      't': {
+        'pos': 'v',
+        '#text': 'välttää'
+      }
+    }
+  ]
+};
+
+const SDTerm = {
+  'status': null,
+  'pos': 'S',
+  'dict': 'SD-terms',
+  'tg': [
+    {
+      't': [
+        'gođđinmuorra',
+        'guolládat',
+        'guolla'
+      ],
+      'xml:lang': 'sme',
+      '#text': [
+        '\n            ',
+        '\n        '
+      ]
+    },
+    {
+      't': 'målepinne',
+      'xml:lang': 'nor',
+      '#text': [
+        '\n            ',
+        '\n        '
+      ]
+    }
+  ],
+  'termwikiref': '6035',
+  'expl': null,
+  'term': 'guolladat',
+  'lang': 'sme',
+  'def': null
+};
+
+const aehtjie = {
+  'term': 'aehtjie',
+  'pos': 'N',
+  'dict': 'smanob',
+  'status': null,
+  'lang': 'sma',
+  'termwikiref': '-1',
+  'def': null,
+  'expl': null,
+  'tg': [
+    {
+      'xml:lang': 'nob',
+      '#text': [
+        '\n            ',
+        '\n         '
+      ],
+      't': {
+        'pos': 'N',
+        '#text': 'far'
+      }
+    },
+    {
+      'xml:lang': 'swe',
+      '#text': [
+        '\n            ',
+        '\n         '
+      ],
+      't': {
+        'pos': 'N',
+        '#text': 'far'
+      }
+    }
+  ]
+};
 
 describe('Massage data from eXist', () => {
   it('Turn text in to JSON', () => {
@@ -156,216 +427,45 @@ describe('Massage data from eXist', () => {
   });
 
   it('Normalise a dict article with examples into an object', () => {
-    const existDict = {
-      'expl': null,
-      'term': 'oainnáhus',
-      'def': null,
-      'pos': 'N',
-      'status': null,
-      'termwikiref': '-1',
-      'dict': 'smenob',
-      'tg': {
-        't': {
-          '#text': 'syn',
-          'pos': 'N'
-        },
-        'xg': [
-          {
-            'xt': 'Jeg prøver å vaske vekk det triste synet fra øynene mine, men det følger med likevel.',
-            'x': 'Iskkan sihkkut váivves oainnáhusa iežan čalmmiin, muhto dat liikká čuovvu mu.',
-            '#text': [
-              '\n               ',
-              '\n               ',
-              '\n            '
-            ]
-          },
-          {
-            'xt': 'Jeg er det eneste hvite mennesket og selvfølgelig et syn.',
-            'x': 'Lean áidna vilges olmmoš ja dieđusge oainnáhus.',
-            '#text': [
-              '\n               ',
-              '\n               ',
-              '\n            '
-            ]
-          }
-        ],
-        '#text': [
-          '\n            ',
-          '\n            ',
-          '\n            ',
-          '\n         '
-        ],
-        'xml:lang': 'nob'
-      },
-      'lang': 'sme'
-    };
-
-    expect(normaliseDict(existDict)).toEqual(resultDictWithExamples);
+    expect(normaliseDict(existDictWithExamples)).toEqual(resultDictWithExamples);
   });
 
   it('Normalise a dict article without examples into an object', () => {
-    const existDict = {
-      'status': null,
-      'pos': 'N',
-      'dict': 'smefin',
-      'tg': {
-        't': {
-          'pos': 'N',
-          '#text': 'kalvoin verkonkudonnassa'
-        },
-        'xml:lang': 'fin',
-        '#text': [
-          '\n            ',
-          '\n         '
-        ]
-      },
-      'termwikiref': '-1',
-      'expl': null,
-      'term': 'guolladat',
-      'lang': 'sme',
-      'def': null
-    };
-
-    expect(normaliseDict(existDict)).toEqual(resultDictWithoutExamples);
+    expect(normaliseDict(existDictWithoutExamples)).toEqual(resultDictWithoutExamples);
   });
 
   it('Normalise a termwiki article into an object', () => {
-    const termWiki = {
-      'termwikiref': 'Servodatdieđa:androgyna',
-      'expl': null,
-      'pos': 'N',
-      'category': 'Servodatdieđa',
-      'def': null,
-      'tg': [
-        {
-          '#text': [
-            '\n      ',
-            '\n    '
-          ],
-          'xml:lang': 'en',
-          't': {
-            '#text': '\n        androgyne\n\n      ',
-            'pos': 'N'
-          }
-        },
-        {
-          '#text': [
-            '\n      ',
-            '\n    '
-          ],
-          'xml:lang': 'smn',
-          't': {
-            '#text': '\n        androgynlâšvuotâ\n\n      ',
-            'pos': 'A'
-          }
-        },
-        {
-          '#text': [
-            '\n      ',
-            '\n    '
-          ],
-          'xml:lang': 'smn',
-          't': '\n        androgynvuotâ\n\n      '
-        },
-        {
-          '#text': [
-            '\n      ',
-            '\n    '
-          ],
-          'xml:lang': 'se',
-          't': {
-            '#text': '\n        androgyna\n\n      ',
-            'pos': 'N'
-          }
-        },
-        {
-          '#text': [
-            '\n      ',
-            '\n    '
-          ],
-          'xml:lang': 'fi',
-          't': {
-            '#text': '\n        androgyyni\n\n      ',
-            'pos': 'N'
-          }
-        },
-        {
-          '#text': [
-            '\n      ',
-            '\n    '
-          ],
-          'xml:lang': 'smn',
-          't': {
-            '#text': '\n        androgyn\n\n      ',
-            'pos': 'N'
-          }
-        },
-        {
-          '#text': [
-            '\n      ',
-            '\n    '
-          ],
-          'xml:lang': 'nb',
-          't': {
-            '#text': '\n        \n\n      ',
-            'pos': 'N'
-          }
-        },
-        {
-          '#text': [
-            '\n      ',
-            '\n    '
-          ],
-          'xml:lang': 'sv',
-          't': {
-            '#text': '\n        \n\n      ',
-            'pos': 'N'
-          }
-        }
-      ],
-      'term': 'androgyn',
-      'status': null,
-      'dict': 'termwiki'
-    };
-
     expect(normaliseTermWiki(termWiki)).toEqual(resultTermWiki);
   });
 
-  it('Normalise a SDTerm article into an object', () => {
-    const SDTerm = {
-      'status': null,
-      'pos': 'S',
-      'dict': 'SD-terms',
-      'tg': [
-        {
-          't': [
-            'gođđinmuorra',
-            'guolládat',
-            'guolla'
-          ],
-          'xml:lang': 'sme',
-          '#text': [
-            '\n            ',
-            '\n        '
-          ]
-        },
-        {
-          't': 'målepinne',
-          'xml:lang': 'nor',
-          '#text': [
-            '\n            ',
-            '\n        '
-          ]
-        }
-      ],
-      'termwikiref': '6035',
-      'expl': null,
-      'term': 'guolladat',
-      'lang': 'sme',
-      'def': null
-    };
+  it('Normalise a JustermTana article into an object', () => {
+    expect(normaliseJusterm(justermTana)).toEqual(resultJustermTana);
+  });
 
+  it('Normalise an SDTerm article into an object', () => {
     expect(normaliseSDTerm(SDTerm)).toEqual(resultSDTerm);
+  });
+
+  it('Normalise all article types', () => {
+    expect(normaliseArticles(
+      [
+        existDictWithExamples,
+        existDictWithoutExamples,
+        termWiki,
+        justermTana,
+        SDTerm
+      ])).toEqual(
+      [
+        resultDictWithExamples[0],
+        resultDictWithoutExamples[0],
+        resultTermWiki,
+        resultJustermTana,
+        resultSDTerm
+      ]);
+  });
+
+  it('Normalise the aehtjie search result, it causes a crash', () => {
+    expect(normaliseDict(aehtjie)).toEqual(resultAehtjie);
   });
 });
 

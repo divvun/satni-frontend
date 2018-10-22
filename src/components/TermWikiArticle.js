@@ -3,6 +3,7 @@ import { css } from 'react-emotion';
 
 import { ArticleDiv } from '../components';
 import Stems from './Stems';
+import Source from './Source';
 
 const TermWikiArticle = ({stems, termwikiref}) => {
   return (
@@ -14,11 +15,14 @@ const TermWikiArticle = ({stems, termwikiref}) => {
         paddingBottom: '0',
         fontSize: '90%'
       })}>
-        <a
+        {termwikiref === 'termwiki'
+        ? <a
           href={`https://satni.uit.no/termwiki/index.php?title=${termwikiref}`}
           target='_blank'>
           This article on the TermWiki
         </a>
+        : <Source source='JustermTana' />
+        }
       </div>
     </ArticleDiv>
   );
