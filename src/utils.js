@@ -243,6 +243,20 @@ export const normaliseTermWiki = (existTerm) => {
   };
 };
 
+export const normaliseJusterm = (jusTerm) => {
+  const stems = normaliseTranslationGroup(jusTerm);
+  stems.unshift({
+    lemma: jusTerm.term.trim(),
+    lang: jusTerm.lang,
+    pos: jusTerm.pos
+  });
+
+  return {
+    stems,
+    dict: jusTerm.dict
+  };
+};
+
 const sdTranslationStems = (t, lang, pos) => {
   let stems = [];
 
