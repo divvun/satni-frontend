@@ -18,6 +18,7 @@ import {
   resultDictWithoutExamples,
   resultTermWiki,
   resultJustermTana,
+  resultAehtjie,
   resultSmaNounParadigm,
   resultSmeNounParadigm,
   resultSmjNounParadigm,
@@ -264,6 +265,41 @@ const SDTerm = {
   'def': null
 };
 
+const aehtjie = {
+  'term': 'aehtjie',
+  'pos': 'N',
+  'dict': 'smanob',
+  'status': null,
+  'lang': 'sma',
+  'termwikiref': '-1',
+  'def': null,
+  'expl': null,
+  'tg': [
+    {
+      'xml:lang': 'nob',
+      '#text': [
+        '\n            ',
+        '\n         '
+      ],
+      't': {
+        'pos': 'N',
+        '#text': 'far'
+      }
+    },
+    {
+      'xml:lang': 'swe',
+      '#text': [
+        '\n            ',
+        '\n         '
+      ],
+      't': {
+        'pos': 'N',
+        '#text': 'far'
+      }
+    }
+  ]
+};
+
 describe('Massage data from eXist', () => {
   it('Turn text in to JSON', () => {
     const gotQuery = '{{ "term" : "juolahtaa mieleen", "dict" : "finsmn", "lang" : "fin", "langs" : "smn" }}';
@@ -420,12 +456,16 @@ describe('Massage data from eXist', () => {
         SDTerm
       ])).toEqual(
       [
-        resultDictWithExamples,
-        resultDictWithoutExamples,
+        resultDictWithExamples[0],
+        resultDictWithoutExamples[0],
         resultTermWiki,
         resultJustermTana,
         resultSDTerm
       ]);
+  });
+
+  it('Normalise the aehtjie search result, it causes a crash', () => {
+    expect(normaliseDict(aehtjie)).toEqual(resultAehtjie);
   });
 });
 
