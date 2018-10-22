@@ -692,6 +692,11 @@ export const resultJustermTana = {
   'dict': 'JustermTana',
   'stems': [
     {
+      lang: 'nob',
+      lemma: 'unngå',
+      pos: 'v'
+    },
+    {
       'lang': 'sme',
       'lemma': 'garvit',
       'pos': 'v'
