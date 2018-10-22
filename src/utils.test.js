@@ -7,6 +7,7 @@ import {
   normaliseTermWiki,
   normaliseSDTerm,
   normaliseJusterm,
+  normaliseArticles,
   normaliseNounParadigm,
   normaliseAdjParadigm,
   normaliseVerbParadigm
@@ -407,6 +408,24 @@ describe('Massage data from eXist', () => {
 
   it('Normalise an SDTerm article into an object', () => {
     expect(normaliseSDTerm(SDTerm)).toEqual(resultSDTerm);
+  });
+
+  it('Normalise all article types', () => {
+    expect(normaliseArticles(
+      [
+        existDictWithExamples,
+        existDictWithoutExamples,
+        termWiki,
+        justermTana,
+        SDTerm
+      ])).toEqual(
+      [
+        resultDictWithExamples,
+        resultDictWithoutExamples,
+        resultTermWiki,
+        resultJustermTana,
+        resultSDTerm
+      ]);
   });
 });
 
