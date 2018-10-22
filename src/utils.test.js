@@ -6,6 +6,7 @@ import {
   normaliseDict,
   normaliseTermWiki,
   normaliseSDTerm,
+  normaliseJusterm,
   normaliseNounParadigm,
   normaliseAdjParadigm,
   normaliseVerbParadigm
@@ -368,7 +369,7 @@ describe('Massage data from eXist', () => {
       ]
     };
 
-    expect(normaliseTermWiki(justermTana)).toEqual(resultJustermTana);
+    expect(normaliseJusterm(justermTana)).toEqual(resultJustermTana);
   });
 
   it('Normalise an SDTerm article into an object', () => {

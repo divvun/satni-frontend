@@ -706,6 +706,5 @@ export const resultJustermTana = {
       'lemma': 'välttää',
       'pos': 'v'
     }
-  ],
-  'termwikiref': '-1'
+  ]
 };
