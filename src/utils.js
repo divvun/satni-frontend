@@ -197,10 +197,10 @@ const term2dict = {
   'eng': 'eng'
 };
 
-export const normaliseTermWiki = (existTerm) => {
+const normaliseTranslationGroup = (existTerm) => {
   const terms = [];
-
   const tg = existTerm.tg;
+
   if (tg instanceof Object && tg instanceof Array) {
     tg.forEach((tg) => {
       let stem = {};
@@ -232,8 +232,12 @@ export const normaliseTermWiki = (existTerm) => {
     terms.push(stem);
   }
 
+  return terms;
+};
+
+export const normaliseTermWiki = (existTerm) => {
   return {
-    stems: terms,
+    stems: normaliseTranslationGroup(existTerm),
     termwikiref: existTerm.termwikiref,
     dict: existTerm.dict
   };
