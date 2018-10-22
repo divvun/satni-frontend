@@ -142,6 +142,38 @@ export const resultTermWiki = {
   dict: 'termwiki'
 };
 
+export const resultMekanikk99 = {
+    'dict': 'mekanikk-1999',
+    'stems': [
+      {
+        'lang': 'swe',
+        'lemma': 'traktor',
+        'pos': undefined
+      },
+      {
+        'lang': 'nob',
+        'lemma': 'traktor',
+        'pos': undefined
+      },
+      {
+        'lang': 'sme',
+        'lemma': 'traktor',
+        'pos': undefined
+      },
+      {
+        'lang': 'fin',
+        'lemma': 'traktori',
+        'pos': undefined
+      },
+      {
+        'lang': 'eng',
+        'lemma': 'tractor',
+        'pos': undefined
+      }
+    ],
+    'termwikiref': 'x34074'
+  };
+
 export const resultSmnNounParadigm = {
   Nom: {
     Sg: ['kyeli'],

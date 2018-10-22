@@ -18,6 +18,7 @@ import {
   resultDictWithoutExamples,
   resultTermWiki,
   resultJustermTana,
+  resultMekanikk99,
   resultAehtjie,
   resultSmaNounParadigm,
   resultSmeNounParadigm,
@@ -32,6 +33,61 @@ import {
   resultSmjVerbParadigm,
   resultSmnVerbParadigm
 } from './utils_testdata';
+
+const mekanikk99 = [
+  {
+    'term': 'traktor',
+    'pos': null,
+    'dict': 'mekanikk-1999',
+    'status': null,
+    'lang': 'sme',
+    'termwikiref': 'x34074',
+    'def': 'mohtorfievru mainna geassá eanandoalloneavvuid ja/dahje addá fámu daidda',
+    'expl': null,
+    'tg': [
+      {
+        'xml:lang': 'sme',
+        '#text': [
+          '\n         ',
+          '\n      '
+        ],
+        't': 'traktor'
+      },
+      {
+        'xml:lang': 'nor',
+        '#text': [
+          '\n         ',
+          '\n      '
+        ],
+        't': 'traktor'
+      },
+      {
+        'xml:lang': 'swe',
+        '#text': [
+          '\n         ',
+          '\n      '
+        ],
+        't': 'traktor'
+      },
+      {
+        'xml:lang': 'fin',
+        '#text': [
+          '\n         ',
+          '\n      '
+        ],
+        't': 'traktori'
+      },
+      {
+        'xml:lang': 'eng',
+        '#text': [
+          '\n         ',
+          '\n      '
+        ],
+        't': 'tractor'
+      }
+    ]
+  }
+];
 
 const existDictWithExamples = {
   'expl': null,
@@ -462,6 +518,10 @@ describe('Massage data from eXist', () => {
         resultJustermTana,
         resultSDTerm
       ]);
+  });
+
+  it('Normalise mekanikk99', () => {
+    expect(normaliseArticles(mekanikk99)).toEqual([resultMekanikk99]);
   });
 
   it('Normalise the aehtjie search result, it causes a crash', () => {

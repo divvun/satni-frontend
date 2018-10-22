@@ -8,6 +8,7 @@ import {
   resultDictWithExamples,
   resultDictWithoutExamples,
   resultTermWiki,
+  resultMekanikk99,
   resultJustermTana
 } from '../utils_testdata';
 
@@ -30,6 +31,9 @@ storiesOf('Articles', module)
   .add('Only SDTermArticle', () => <Articles
     isFetching={!isFetching}
     articles={[resultSDTerm]} />)
+  .add('Only mekanikk99', () => <Articles
+    isFetching={!isFetching}
+    articles={[resultMekanikk99]} />)
   .add('Only JustermTana', () => <Articles
     isFetching={!isFetching}
     articles={[resultJustermTana]} />)
@@ -39,5 +43,6 @@ storiesOf('Articles', module)
       resultDictWithoutExamples[0],
       resultTermWiki,
       resultSDTerm,
+      resultMekanikk99,
       resultJustermTana
     ]} />);

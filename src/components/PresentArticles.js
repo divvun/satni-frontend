@@ -26,7 +26,7 @@ const Articles = ({isFetching, articles, errorMessage}) => {
       position: 'relative'
     })}>
       {articles.map((article, i) => {
-        if (article.dict === 'JustermTana') {
+        if (article.dict === 'JustermTana' || article.dict === 'termwiki' || article.dict === 'mekanikk-1999') {
           return <TermWikiArticle
             key={i}
             stems={article.stems}
@@ -39,13 +39,6 @@ const Articles = ({isFetching, articles, errorMessage}) => {
             stems={article.translations}
             examples={article.examples}
             dictionary={article.dict} />;
-        }
-
-        if (article.dict === 'termwiki') {
-          return <TermWikiArticle
-            key={i}
-            stems={article.stems}
-            termwikiref={article.termwikiref} />;
         }
 
         return <SDTermArticle
