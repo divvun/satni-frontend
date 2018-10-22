@@ -20,10 +20,10 @@ storiesOf('Articles', module)
     articles={articles} />)
   .add('DictArticle with examples', () => <Articles
     isFetching={!isFetching}
-    articles={[resultDictWithExamples]} />)
+    articles={[resultDictWithExamples[0]]} />)
   .add('DictArticle without examples', () => <Articles
     isFetching={!isFetching}
-    articles={[resultDictWithoutExamples]} />)
+    articles={[resultDictWithoutExamples[0]]} />)
   .add('Only TermWikiArticle', () => <Articles
     isFetching={!isFetching}
     articles={[resultTermWiki]} />)
@@ -35,8 +35,8 @@ storiesOf('Articles', module)
     articles={[resultJustermTana]} />)
   .add('All types', () => <Articles isFetching={!isFetching}
     articles={[
-      resultDictWithExamples,
-      resultDictWithoutExamples,
+      resultDictWithExamples[0],
+      resultDictWithoutExamples[0],
       resultTermWiki,
       resultSDTerm,
       resultJustermTana

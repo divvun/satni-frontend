@@ -121,7 +121,10 @@ export const normaliseArticles = (existTerms) => {
     } else if (existTerm.dict === 'SD-terms') {
       return normaliseSDTerm(existTerm);
     } else {
-      return normaliseDict(existTerm);
+      let dicts = normaliseDict(existTerm);
+      for (var i = 0, len = dicts.length; i < len; i++) {
+        return dicts[i];
+      }
     }
   });
 };
@@ -162,21 +165,50 @@ export const translationExamples = (xg) => {
 };
 
 export const normaliseDict = (existDict) => {
-  let translations = translationStems(existDict.tg);
-  translations.unshift({
-    'lemma': existDict.term,
-    'lang': existDict.lang,
-    'pos': existDict.pos
-  });
+  const results = [];
 
-  let examples = existDict.tg.xg ? translationExamples(existDict.tg.xg) : [];
+  const tg = existDict.tg;
+  if (tg instanceof Object && tg instanceof Array) {
+    tg.forEach((tr) => {
+      let translations = translationStems(tr);
+      translations.unshift({
+        'lemma': existDict.term,
+        'lang': existDict.lang,
+        'pos': existDict.pos
+      });
 
-  return {
-    translations,
-    examples,
-    termwikiref: existDict.termwikiref,
-    dict: existDict.dict
-  };
+      let examples = tr.xg ? translationExamples(tr.xg) : [];
+
+      results.push(
+        {
+          translations,
+          examples,
+          termwikiref: existDict.termwikiref,
+          dict: existDict.dict
+        }
+      );
+    });
+  } else {
+    let translations = translationStems(existDict.tg);
+    translations.unshift({
+      'lemma': existDict.term,
+      'lang': existDict.lang,
+      'pos': existDict.pos
+    });
+
+    let examples = existDict.tg.xg ? translationExamples(existDict.tg.xg) : [];
+
+    results.push(
+      {
+        translations,
+        examples,
+        termwikiref: existDict.termwikiref,
+        dict: existDict.dict
+      }
+    );
+  }
+
+  return results;
 };
 
 const term2dict = {
