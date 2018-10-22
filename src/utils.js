@@ -114,7 +114,7 @@ export const removeDuplicates = (existTerms) => {
 
 export const normaliseArticles = (existTerms) => {
   return removeDuplicates(existTerms).map((existTerm) => {
-    if (existTerm.dict === 'termwiki') {
+    if (existTerm.dict === 'termwiki' || existTerm.dict === 'mekanikk-1999') {
       return normaliseTermWiki(existTerm);
     } else if (existTerm.dict === 'JustermTana') {
       return normaliseJusterm(existTerm);
