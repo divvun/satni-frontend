@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/browser';
 import fetch from 'cross-fetch';
 import {normaliseArticles, toJson} from './utils';
 
@@ -73,6 +74,8 @@ export const fetchArticles = (lemma) => (dispatch) => {
       try {
         return dispatch(receiveArticles(lemma, normaliseArticles(toJson(text))));
       } catch (error) {
+        Sentry.captureException(lemma);
+        Sentry.captureException(error);
         dispatch({
           type: FETCH_ARTICLES_ERROR,
           message: `Could not show articles for «${lemma}»`
