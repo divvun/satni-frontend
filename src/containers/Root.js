@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AsyncApp from './AsyncApp';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <MuiThemeProvider>
-      <AsyncApp />
+      <ErrorBoundary>
+        <AsyncApp />
+      </ErrorBoundary>
     </MuiThemeProvider>
   </Provider>
     );
