@@ -9,7 +9,8 @@ import {
   resultDictWithoutExamples,
   resultTermWiki,
   resultMekanikk99,
-  resultJustermTana
+  resultJustermTana,
+  resultFordel
 } from '../utils_testdata';
 
 const isFetching = true;
@@ -31,6 +32,9 @@ storiesOf('Articles', module)
   .add('Only SDTermArticle', () => <Articles
     isFetching={!isFetching}
     articles={[resultSDTerm]} />)
+    .add('SDTerm, t is no array', () => <Articles
+      isFetching={!isFetching}
+      articles={[resultFordel]} />)
   .add('Only mekanikk99', () => <Articles
     isFetching={!isFetching}
     articles={[resultMekanikk99]} />)

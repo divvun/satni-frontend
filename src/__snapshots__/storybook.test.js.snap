@@ -4295,6 +4295,48 @@ exports[`Storyshots Articles Only mekanikk99 1`] = `
 </div>
 `;
 
+exports[`Storyshots Articles SDTerm, t is no array 1`] = `
+<div
+  className="css-1f4j338"
+>
+  <div
+    className="css-1xgunds"
+  >
+    <div>
+      <div
+        className="css-1jd5iyo"
+      >
+        <span
+          className="css-6n7j50"
+        >
+          fordel
+           
+          S
+           
+          sme
+        </span>
+        <span
+          className="css-1lyvo2c"
+        >
+          <a
+            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"fordel\\"]"
+            target="_blank"
+          >
+            Search for fordel in Korp
+          </a>
+        </span>
+      </div>
+    </div>
+    <div
+      className="css-jxikhn"
+    >
+      Source: 
+      SD-terms
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots DictArticle default 1`] = `
 <div
   className="css-1xgunds"
