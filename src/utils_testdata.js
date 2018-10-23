@@ -776,3 +776,14 @@ export const resultJustermTana = {
     }
   ]
 };
+
+export const resultFordel = {
+  'dict': 'SD-terms',
+  'stems': [
+    {
+      'lang': 'sme',
+      'lemma': 'fordel',
+      'pos': 'S'
+    }
+  ]
+};

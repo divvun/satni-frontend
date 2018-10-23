@@ -316,8 +316,21 @@ const sdTranslationStems = (t, lang, pos) => {
 export const normaliseSDTerm = (existTerm) => {
   const terms = [];
 
-  existTerm.tg.forEach((tg) => {
-    let stems = sdTranslationStems(tg.t, term2dict[tg['xml:lang']], existTerm.pos);
+  const etg = existTerm.tg;
+  if (etg instanceof Object && etg instanceof Array) {
+    etg.forEach((tg) => {
+      let stems = sdTranslationStems(tg.t, term2dict[tg['xml:lang']], existTerm.pos);
+
+      stems.forEach((stem) => {
+        if (stem['lemma'] === existTerm.term.trim()) {
+          terms.unshift(stem);
+        } else {
+          terms.push(stem);
+        }
+      });
+    });
+  } else {
+    let stems = sdTranslationStems(etg.t, term2dict[etg['xml:lang']], existTerm.pos);
 
     stems.forEach((stem) => {
       if (stem['lemma'] === existTerm.term.trim()) {
@@ -325,9 +338,8 @@ export const normaliseSDTerm = (existTerm) => {
       } else {
         terms.push(stem);
       }
-    }
-  );
-  });
+    });
+  }
 
   return {
     stems: terms,

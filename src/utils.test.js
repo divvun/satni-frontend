@@ -20,6 +20,7 @@ import {
   resultJustermTana,
   resultMekanikk99,
   resultAehtjie,
+  resultFordel,
   resultSmaNounParadigm,
   resultSmeNounParadigm,
   resultSmjNounParadigm,
@@ -33,6 +34,25 @@ import {
   resultSmjVerbParadigm,
   resultSmnVerbParadigm
 } from './utils_testdata';
+
+const fordel = {
+  'term': 'fordel',
+  'pos': 'S',
+  'dict': 'SD-terms',
+  'status': null,
+  'lang': 'sme',
+  'termwikiref': '19257',
+  'def': null,
+  'expl': null,
+  'tg': {
+    'xml:lang': 'sme',
+    '#text': [
+      '\n            ',
+      '\n        '
+    ],
+    't': 'fordel'
+  }
+};
 
 const mekanikk99 = [
   {
@@ -526,6 +546,10 @@ describe('Massage data from eXist', () => {
 
   it('Normalise the aehtjie search result, it causes a crash', () => {
     expect(normaliseDict(aehtjie)).toEqual(resultAehtjie);
+  });
+
+  it('Normalise fordel, tg is not an array', () => {
+    expect(normaliseSDTerm(fordel)).toEqual(resultFordel);
   });
 });
 
