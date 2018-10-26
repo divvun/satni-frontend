@@ -5,7 +5,7 @@ import { ArticleDiv } from '../components';
 import Stems from './Stems';
 import Source from './Source';
 
-const TermWikiArticle = ({stems, termwikiref}) => {
+const TermWikiArticle = ({stems, termwikiref, dictionary}) => {
   return (
     <ArticleDiv>
       <Stems stems={stems} />
@@ -15,13 +15,13 @@ const TermWikiArticle = ({stems, termwikiref}) => {
         paddingBottom: '0',
         fontSize: '90%'
       })}>
-        {termwikiref === 'termwiki'
+        {dictionary === 'termwiki'
         ? <a
           href={`https://satni.uit.no/termwiki/index.php?title=${termwikiref}`}
           target='_blank'>
           This article on the TermWiki
         </a>
-        : <Source source='JustermTana' />
+        : <Source source={dictionary} />
         }
       </div>
     </ArticleDiv>
