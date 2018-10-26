@@ -30,7 +30,8 @@ const Articles = ({isFetching, articles, errorMessage}) => {
           return <TermWikiArticle
             key={i}
             stems={article.stems}
-            termwikiref={article.termwikiref} />;
+            termwikiref={article.termwikiref}
+            dictionary={article.dict} />;
         }
 
         if (article.termwikiref === '-1') {

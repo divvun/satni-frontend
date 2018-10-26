@@ -3390,12 +3390,12 @@ exports[`Storyshots Articles All types 1`] = `
     <div
       className="css-jxikhn"
     >
-      <div
-        className="css-jxikhn"
+      <a
+        href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
+        target="_blank"
       >
-        Source: 
-        JustermTana
-      </div>
+        This article on the TermWiki
+      </a>
     </div>
   </div>
   <div
@@ -3602,7 +3602,7 @@ exports[`Storyshots Articles All types 1`] = `
         className="css-jxikhn"
       >
         Source: 
-        JustermTana
+        mekanikk-1999
       </div>
     </div>
   </div>
@@ -4175,12 +4175,12 @@ exports[`Storyshots Articles Only TermWikiArticle 1`] = `
     <div
       className="css-jxikhn"
     >
-      <div
-        className="css-jxikhn"
+      <a
+        href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
+        target="_blank"
       >
-        Source: 
-        JustermTana
-      </div>
+        This article on the TermWiki
+      </a>
     </div>
   </div>
 </div>
@@ -4288,7 +4288,7 @@ exports[`Storyshots Articles Only mekanikk99 1`] = `
         className="css-jxikhn"
       >
         Source: 
-        JustermTana
+        mekanikk-1999
       </div>
     </div>
   </div>
@@ -6037,7 +6037,6 @@ exports[`Storyshots TermWikiArticle default 1`] = `
       className="css-jxikhn"
     >
       Source: 
-      JustermTana
     </div>
   </div>
 </div>
