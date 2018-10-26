@@ -70,7 +70,7 @@ const Searcher = ({onSelect, onInputChange, search}) => (
           {isOpen ? (
             <div>
               {search.isSearching ? (
-                <div>loading …</div>
+                <div>Fetching search results …</div>
                   ) : <Menu>
                     {search.resultItems
                     .map((item, index) => (

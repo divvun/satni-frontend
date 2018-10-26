@@ -3829,7 +3829,7 @@ exports[`Storyshots Articles DictArticle without examples 1`] = `
 
 exports[`Storyshots Articles Loading 1`] = `
 <div>
-  Loading …
+  Loading articles …
 </div>
 `;
 

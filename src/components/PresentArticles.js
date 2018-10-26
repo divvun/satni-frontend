@@ -14,7 +14,7 @@ const Articles = ({isFetching, articles, errorMessage}) => {
   }
 
   if (isFetching) {
-    return <div>Loading …</div>;
+    return <div>Loading articles …</div>;
   }
 
   return (
