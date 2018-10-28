@@ -1,6 +1,7 @@
 import {
-  removeDuplicates,
   toJson,
+  removeDuplicates,
+  ensureTranslationGroupIsArray,
   translationStems,
   translationExamples,
   normaliseDict,
@@ -433,6 +434,32 @@ describe('Massage data from eXist', () => {
     expect(removeDuplicates(gotAndro)).toEqual(halfAndro);
   });
 
+  it('Ensure tg always is an array', () => {
+    const fordelWithArraytg = {
+      'term': 'fordel',
+      'pos': 'S',
+      'dict': 'SD-terms',
+      'status': null,
+      'lang': 'sme',
+      'termwikiref': '19257',
+      'def': null,
+      'expl': null,
+      'tg': [
+        {
+          'xml:lang': 'sme',
+          '#text': [
+            '\n            ',
+            '\n        '
+          ],
+          't': 'fordel'
+        }
+      ]
+    };
+
+    expect(ensureTranslationGroupIsArray([fordel]))
+    .toEqual([fordelWithArraytg]);
+  });
+
   it('Turns dict tg where t is an object into an array of stems', () => {
     const tgElement = {
       't': {
@@ -503,11 +530,13 @@ describe('Massage data from eXist', () => {
   });
 
   it('Normalise a dict article with examples into an object', () => {
-    expect(normaliseDict(existDictWithExamples)).toEqual(resultDictWithExamples);
+    expect(normaliseArticles([existDictWithExamples]))
+    .toEqual(resultDictWithExamples);
   });
 
   it('Normalise a dict article without examples into an object', () => {
-    expect(normaliseDict(existDictWithoutExamples)).toEqual(resultDictWithoutExamples);
+    expect(normaliseArticles([existDictWithoutExamples]))
+    .toEqual(resultDictWithoutExamples);
   });
 
   it('Normalise a termwiki article into an object', () => {
@@ -545,7 +574,7 @@ describe('Massage data from eXist', () => {
   });
 
   it('Normalise the aehtjie search result, it causes a crash', () => {
-    expect(normaliseDict(aehtjie)).toEqual(resultAehtjie);
+    expect(normaliseArticles([aehtjie])).toEqual(resultAehtjie);
   });
 
   it('Normalise fordel, tg is not an array', () => {
