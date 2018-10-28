@@ -60,25 +60,9 @@ export const resultAehtjie = [
         lemma: 'far'
       }
     ]
-  },
-  {
-    dict: 'smanob',
-    examples: [],
-    termwikiref: '-1',
-    translations: [
-      {
-        pos: 'N',
-        lang: 'sma',
-        lemma: 'aehtjie'
-      },
-      {
-        pos: 'N',
-        lang: 'swe',
-        lemma: 'far'
-      }
-    ]
   }
 ];
+
 export const resultSDTerm = {
   stems: [
     {
