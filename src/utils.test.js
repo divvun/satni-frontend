@@ -377,6 +377,17 @@ const aehtjie = {
   ]
 };
 
+const withoutTranslationGroup = {
+  'term': 'dáhppa',
+  'pos': null,
+  'dict': 'mekanikk-1999',
+  'status': null,
+  'lang': 'sme',
+  'termwikiref': '-1',
+  'def': null,
+  'expl': null
+};
+
 describe('Massage data from eXist', () => {
   it('Turn text in to JSON', () => {
     const gotQuery = '{{ "term" : "juolahtaa mieleen", "dict" : "finsmn", "lang" : "fin", "langs" : "smn" }}';
@@ -558,7 +569,8 @@ describe('Massage data from eXist', () => {
         existDictWithoutExamples,
         termWiki,
         justermTana,
-        SDTerm
+        SDTerm,
+        withoutTranslationGroup
       ])).toEqual(
       [
         resultDictWithExamples[0],

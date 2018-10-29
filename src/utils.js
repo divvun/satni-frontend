@@ -113,7 +113,9 @@ export const removeDuplicates = (existTerms) => {
 };
 
 export const ensureTranslationGroupIsArray = (existTerms) => {
-  return existTerms.map((existTerm) => {
+  return existTerms
+  .filter(existTerm => existTerm.tg)
+  .map((existTerm) => {
     const tg = existTerm.tg;
     if (tg instanceof Object && !(tg instanceof Array)) {
       existTerm.tg = [tg];
