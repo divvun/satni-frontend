@@ -240,26 +240,7 @@ const normaliseTranslationGroup = (existTerm) => {
   const terms = [];
   const tg = existTerm.tg;
 
-  if (tg instanceof Object && tg instanceof Array) {
-    tg.forEach((tg) => {
-      let stem = {};
-      try {
-        stem['lemma'] = tg.t['#text'].trim();
-      } catch (TypeError) {
-        stem['lemma'] = tg.t.trim();
-      }
-      stem['lang'] = term2dict[tg['xml:lang']];
-      stem['pos'] = tg.t.pos;
-
-      if (stem['lemma']) {
-        if (stem['lemma'] === existTerm.term.trim()) {
-          terms.unshift(stem);
-        } else {
-          terms.push(stem);
-        }
-      }
-    });
-  } else {
+  tg.forEach((tg) => {
     let stem = {};
     try {
       stem['lemma'] = tg.t['#text'].trim();
@@ -268,8 +249,15 @@ const normaliseTranslationGroup = (existTerm) => {
     }
     stem['lang'] = term2dict[tg['xml:lang']];
     stem['pos'] = tg.t.pos;
-    terms.push(stem);
-  }
+
+    if (stem['lemma']) {
+      if (stem['lemma'] === existTerm.term.trim()) {
+        terms.unshift(stem);
+      } else {
+        terms.push(stem);
+      }
+    }
+  });
 
   return terms;
 };
@@ -322,20 +310,8 @@ export const normaliseSDTerm = (existTerm) => {
   const terms = [];
 
   const etg = existTerm.tg;
-  if (etg instanceof Object && etg instanceof Array) {
-    etg.forEach((tg) => {
-      let stems = sdTranslationStems(tg.t, term2dict[tg['xml:lang']], existTerm.pos);
-
-      stems.forEach((stem) => {
-        if (stem['lemma'] === existTerm.term.trim()) {
-          terms.unshift(stem);
-        } else {
-          terms.push(stem);
-        }
-      });
-    });
-  } else {
-    let stems = sdTranslationStems(etg.t, term2dict[etg['xml:lang']], existTerm.pos);
+  etg.forEach((tg) => {
+    let stems = sdTranslationStems(tg.t, term2dict[tg['xml:lang']], existTerm.pos);
 
     stems.forEach((stem) => {
       if (stem['lemma'] === existTerm.term.trim()) {
@@ -344,7 +320,7 @@ export const normaliseSDTerm = (existTerm) => {
         terms.push(stem);
       }
     });
-  }
+  });
 
   return {
     stems: terms,
