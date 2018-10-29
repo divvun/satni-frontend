@@ -234,6 +234,7 @@ const term2dict = {
   'lat': 'lat',
   'en': 'eng',
   'eng': 'eng'
+  'sms': 'sms',
 };
 
 const normaliseTranslationGroup = (existTerm) => {
