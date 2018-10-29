@@ -217,24 +217,24 @@ export const normaliseDict = (existDict) => {
 };
 
 const term2dict = {
-  'se': 'sme',
-  'sme': 'sme',
+  'en': 'eng',
+  'eng': 'eng',
   'fi': 'fin',
   'fin': 'fin',
+  'lat': 'lat',
   'nb': 'nob',
-  'nor': 'nob',
-  'nob': 'nob',
   'nn': 'nno',
   'nno': 'nno',
-  'sv': 'swe',
-  'swe': 'swe',
-  'smn': 'smn',
+  'nob': 'nob',
+  'nor': 'nob',
+  'se': 'sme',
   'sma': 'sma',
+  'sme': 'sme',
   'smj': 'smj',
-  'lat': 'lat',
-  'en': 'eng',
-  'eng': 'eng'
+  'smn': 'smn',
   'sms': 'sms',
+  'sv': 'swe',
+  'swe': 'swe'
 };
 
 const normaliseTranslationGroup = (existTerm) => {
