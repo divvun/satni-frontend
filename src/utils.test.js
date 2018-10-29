@@ -377,6 +377,43 @@ const aehtjie = {
   ]
 };
 
+const withSms = {
+  'term': 'piste',
+  'pos': 'N',
+  'dict': 'termwiki',
+  'status': null,
+  'category': [
+    'Dáidda ja girjjálašvuohta'
+  ],
+  'termwikiref': 'Dáidda ja girjjálašvuohta:ceäkldõs',
+  'def': null,
+  'expl': null,
+  'tg': [
+    {
+      'xml:lang': 'sms',
+      '#text': [
+        '\n      ',
+        '\n    '
+      ],
+      't': {
+        'pos': 'N',
+        '#text': 'ceäkldõs'
+      }
+    },
+    {
+      'xml:lang': 'fi',
+      '#text': [
+        '\n      ',
+        '\n    '
+      ],
+      't': {
+        'pos': 'N',
+        '#text': 'piste'
+      }
+    }
+  ]
+};
+
 const withoutTranslationGroup = {
   'term': 'dáhppa',
   'pos': null,
@@ -591,6 +628,27 @@ describe('Massage data from eXist', () => {
 
   it('Normalise fordel, tg is not an array', () => {
     expect(normaliseSDTerm(fordel)).toEqual(resultFordel);
+  });
+
+  it('Normalise sms article', () => {
+    const resultWithSms = {
+      'dict': 'termwiki',
+      'stems': [
+        {
+          'lang': 'fin',
+          'lemma': 'piste',
+          'pos': 'N'
+        },
+        {
+          'lang': 'sms',
+          'lemma': 'ceäkldõs',
+          'pos': 'N'
+        }
+      ],
+      'termwikiref': 'Dáidda ja girjjálašvuohta:ceäkldõs'
+    };
+
+    expect(normaliseTermWiki(withSms)).toEqual(resultWithSms);
   });
 });
 
