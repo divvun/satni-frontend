@@ -65,22 +65,17 @@ export const fetchArticles = (lemma) => (dispatch) => {
   dispatch(requestArticles(lemma));
 
   return apifetchArticle(lemma)
-    .then(
-      response => {
-        return response.text();
-      }
-    )
+    .then(response => response.text())
     .then(text => {
-      try {
-        return dispatch(receiveArticles(lemma, normaliseArticles(toJson(text))));
-      } catch (error) {
-        Sentry.captureException(lemma);
-        Sentry.captureException(error);
-        dispatch({
-          type: FETCH_ARTICLES_ERROR,
-          message: `Could not show articles for «${lemma}»`
-        });
-      }
+      return dispatch(receiveArticles(lemma, normaliseArticles(toJson(text))));
+    })
+    .catch(error => {
+      Sentry.captureException(lemma);
+      Sentry.captureException(error);
+      dispatch({
+        type: FETCH_ARTICLES_ERROR,
+        message: `Could not show articles for «${lemma}»`
+      });
     });
 };
 
