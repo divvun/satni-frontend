@@ -100,9 +100,9 @@ export const fetchParadigm = (stem) => (dispatch) => {
 
 export const shouldFetchArticles = (state, lemma) => {
   const articles = state.articlesByLemma[lemma];
-  if (!lemma
-      || (articles && articles.isFetching)
-      || (articles && !articles.isFetching && articles.items)) {
+  if (!lemma || 
+    (articles && articles.isFetching) || 
+    (articles && !articles.isFetching && articles.items)) {
     return false;
   } else {
     return true;
