@@ -6,6 +6,10 @@ import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
 
 class Articles extends Component {
+  componentDidUpdate () {
+    this.props.fetchArticlesIfNeeded(this.props.lemma);
+  }
+
   componentDidMount () {
     this.props.fetchArticlesIfNeeded(this.props.lemma);
   }
