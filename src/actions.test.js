@@ -2,15 +2,6 @@ import * as actions from './actions';
 import {Set} from 'immutable';
 
 describe('actions', () => {
-  it('should create an action to set a selected lemma', () => {
-    const lemma = 'guolle';
-    const expectedAction = {
-      type: actions.SELECT_LEMMA,
-      lemma
-    };
-    expect(actions.selectLemma(lemma)).toEqual(expectedAction);
-  });
-
   it('should create an action to set the search key', () => {
     const key = 'guo';
     const expectedAction = {

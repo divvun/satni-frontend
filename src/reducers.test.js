@@ -11,7 +11,6 @@ const initialState = {
     'usedSearchKeys': Set(),
     'resultItems': OrderedSet()
   },
-  selectedLemma: '',
   errorMessage: null
 };
 
@@ -33,7 +32,6 @@ describe('reducers', () => {
         usedSearchKeys: Set(),
         'resultItems': OrderedSet()
       },
-      selectedLemma: 'guolli',
       errorMessage: null
     });
   });
@@ -50,7 +48,6 @@ describe('reducers', () => {
         'usedSearchKeys': Set(),
         'resultItems': OrderedSet()
       },
-      selectedLemma: '',
       errorMessage: null
     });
   });
@@ -95,7 +92,6 @@ describe('reducers', () => {
           'guolljut'
         )
       },
-      'selectedLemma': '',
       errorMessage: null
     });
   });
@@ -109,7 +105,6 @@ describe('reducers', () => {
         usedSearchKeys: Set(),
         'resultItems': OrderedSet()
       },
-      selectedLemma: 'guolli'
     },
       {
         type: actions.FETCH_ARTICLES_REQUEST,
@@ -127,7 +122,6 @@ describe('reducers', () => {
           'usedSearchKeys': Set(),
           'resultItems': OrderedSet()
         },
-        'selectedLemma': 'guolli',
         errorMessage: null
       });
   });
@@ -145,8 +139,8 @@ describe('reducers', () => {
         'searchItems': Set(),
         'usedSearchKeys': Set(),
         'resultItems': OrderedSet()
+        },
       },
-      'selectedLemma': 'guolli'},
       {
         type: actions.FETCH_ARTICLES_SUCCESS,
         lemma: 'guolli',
@@ -229,7 +223,6 @@ describe('reducers', () => {
           'usedSearchKeys': Set(),
           'resultItems': OrderedSet()
         },
-        'selectedLemma': 'guolli',
         errorMessage: null
       });
   });
