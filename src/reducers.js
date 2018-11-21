@@ -2,7 +2,6 @@ import { combineReducers } from 'redux';
 import { OrderedSet, Set } from 'immutable';
 
 import {
-  SELECT_LEMMA,
   SELECT_KEY,
   FETCH_ARTICLES_ERROR,
   FETCH_ARTICLES_REQUEST,
@@ -10,15 +9,6 @@ import {
   REQUEST_ITEMS,
   RECEIVE_ITEMS
 } from './actions';
-
-const selectedLemma = (state = '', action) => {
-  switch (action.type) {
-    case SELECT_LEMMA:
-      return action.lemma;
-    default:
-      return state;
-  }
-};
 
 const articles = (
   state = {
@@ -135,7 +125,6 @@ const errorMessage = (state = null, action) => {
 
 const rootReducer = combineReducers({
   articlesByLemma,
-  selectedLemma,
   search,
   errorMessage
 });

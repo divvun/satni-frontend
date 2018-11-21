@@ -16,8 +16,6 @@ import {
 } from '../components';
 import {
   selectKey,
-  selectLemma,
-  fetchArticlesIfNeeded,
   fetchItemsIfNeeded
 } from '../actions';
 
@@ -30,12 +28,12 @@ class Searcher extends Component {
     };
   }
 
-  handleChange = (selectedItem, downshiftState) => {
+  handleChange = (selectedItem) => {
     this.setState({articlepath: `/article/${selectedItem}`})
   };
 
   render () {
-    const {onSelect, onInputChange, search} = this.props;
+    const {onInputChange, search} = this.props;
     return (
       <Downshift
         onSelect={this.handleChange} >
