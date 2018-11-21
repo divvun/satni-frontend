@@ -32,7 +32,6 @@ class Searcher extends Component {
 
   handleChange = (selectedItem, downshiftState) => {
     this.setState({articlepath: `/article/${selectedItem}`})
-    return this.props.onSelect(selectedItem)
   };
 
   render () {
@@ -122,7 +121,6 @@ class Searcher extends Component {
 }
 
 Searcher.propTypes = {
-  onSelect: PropTypes.func.isRequired,
   onInputChange: PropTypes.func.isRequired,
   search: PropTypes.object.isRequired
 };
@@ -133,10 +131,6 @@ const mapStateToProps = (state) => (
 
 const mapDispatchToProps = (dispatch) => (
   {
-    onSelect: (nextLemma) => {
-      dispatch(selectLemma(nextLemma));
-      dispatch(fetchArticlesIfNeeded(nextLemma));
-    },
     onInputChange: (key) => {
       dispatch(selectKey(key));
       debounce(300, dispatch(fetchItemsIfNeeded(key)));
