@@ -1,25 +1,52 @@
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchArticlesIfNeeded } from '../actions';
-import Articles from './PresentArticles';
+import PresentArticles from './PresentArticles';
+import FetchArticlesError from './FetchArticlesError';
+
+class Articles extends Component {
+  componentDidMount () {
+    this.props.fetchArticlesIfNeeded(this.props.lemma);
+  }
+
+  render () {
+    const {errorMessage, articlesByLemma, lemma} = this.props;
+
+    const {
+      isFetching,
+      items
+    } = articlesByLemma[lemma] || {
+      isFetching: false,
+      items: []
+    };
+
+    console.log('uff', errorMessage, isFetching);
+
+    if (errorMessage) {
+      return (
+        <FetchArticlesError message={errorMessage} />
+      );
+    }
+
+    if (isFetching) {
+      return <div>Loading articles …</div>;
+    }
+    //
+    console.log(items);
+    return <PresentArticles articles={items} />;
+  }
+}
 
 Articles.propTypes = {
-  articles: PropTypes.array.isRequired
+  articlesByLemma: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => {
-  const { selectedLemma, articlesByLemma, errorMessage } = state;
-  const {
-    isFetching,
-    items: articles
-  } = articlesByLemma[selectedLemma] || {
-    isFetching: false,
-    items: []
-  };
+  const { articlesByLemma, errorMessage } = state;
 
   return {
-    isFetching,
-    articles,
+    articlesByLemma,
     errorMessage
   };
 };
