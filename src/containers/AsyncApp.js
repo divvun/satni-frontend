@@ -23,7 +23,7 @@ const Box = styled('div')({
   fontSize: '120%'
 });
 
-const AsyncApp = () => (
+const AsyncApp = ({match}) => (
   <MyGrid>
     <Box css={{ gridArea: 'header'}}>
       <div className={css({
@@ -39,7 +39,10 @@ const AsyncApp = () => (
       paddingBottom: '50px'
     }}>
       <Searcher />
-      <Articles />
+      {match.params.lemma ?
+        <Articles lemma={match.params.lemma} /> :
+        null
+      }
     </Box>
     <Box css={{
       gridArea: 'footer'
