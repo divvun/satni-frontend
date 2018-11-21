@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import Articles from './PresentArticles';
+import PresentArticles from './PresentArticles';
 import {
   resultSDTerm,
   resultDictWithExamples,
@@ -13,35 +13,24 @@ import {
   resultFordel
 } from '../utils_testdata';
 
-const isFetching = true;
 const articles = [];
 
-storiesOf('Articles', module)
-  .add('Loading', () => <Articles
-    isFetching={isFetching}
-    articles={articles} />)
-  .add('DictArticle with examples', () => <Articles
-    isFetching={!isFetching}
+storiesOf('PresentArticles', module)
+  .add('DictArticle with examples', () => <PresentArticles
     articles={[resultDictWithExamples[0]]} />)
-  .add('DictArticle without examples', () => <Articles
-    isFetching={!isFetching}
+  .add('DictArticle without examples', () => <PresentArticles
     articles={[resultDictWithoutExamples[0]]} />)
-  .add('Only TermWikiArticle', () => <Articles
-    isFetching={!isFetching}
+  .add('Only TermWikiArticle', () => <PresentArticles
     articles={[resultTermWiki]} />)
-  .add('Only SDTermArticle', () => <Articles
-    isFetching={!isFetching}
+  .add('Only SDTermArticle', () => <PresentArticles
     articles={[resultSDTerm]} />)
-    .add('SDTerm, t is no array', () => <Articles
-      isFetching={!isFetching}
-      articles={[resultFordel]} />)
-  .add('Only mekanikk99', () => <Articles
-    isFetching={!isFetching}
+  .add('SDTerm, t is no array', () => <PresentArticles
+    articles={[resultFordel]} />)
+  .add('Only mekanikk99', () => <PresentArticles
     articles={[resultMekanikk99]} />)
-  .add('Only JustermTana', () => <Articles
-    isFetching={!isFetching}
+  .add('Only JustermTana', () => <PresentArticles
     articles={[resultJustermTana]} />)
-  .add('All types', () => <Articles isFetching={!isFetching}
+  .add('All types', () => <PresentArticles
     articles={[
       resultDictWithExamples[0],
       resultDictWithoutExamples[0],
