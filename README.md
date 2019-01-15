@@ -1,4 +1,8 @@
+# Satni.org frontend
+
 This is a frontend for the Divvun eXist rest api.
+
+[![Build Status](https://travis-ci.org/divvun/satni-frontend.svg?branch=master)](https://travis-ci.org/divvun/satni-frontend)
 
 * Search queries: ```http://satni.uit.no:8080/exist/restxq/satni/search?query=<query>```
 * Article queries: ```http://satni.uit.no:8080/exist/restxq/satni/article/<existing term>```
