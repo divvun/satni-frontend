@@ -244,15 +244,15 @@ const normaliseTranslationGroup = (existTerm) => {
   tg.forEach((tg) => {
     let stem = {};
     try {
-      stem['lemma'] = tg.t['#text'].trim();
+      stem.lemma = tg.t['#text'].trim();
     } catch (TypeError) {
-      stem['lemma'] = tg.t.trim();
+      stem.lemma = tg.t.trim();
     }
-    stem['lang'] = term2dict[tg['xml:lang']];
-    stem['pos'] = tg.t.pos;
+    stem.lang = term2dict[tg['xml:lang']];
+    stem.pos = tg.t.pos;
 
-    if (stem['lemma']) {
-      if (stem['lemma'] === existTerm.term.trim()) {
+    if (stem.lemma) {
+      if (stem.lemma === existTerm.term.trim()) {
         terms.unshift(stem);
       } else {
         terms.push(stem);
@@ -315,7 +315,7 @@ export const normaliseSDTerm = (existTerm) => {
     let stems = sdTranslationStems(tg.t, term2dict[tg['xml:lang']], existTerm.pos);
 
     stems.forEach((stem) => {
-      if (stem['lemma'] === existTerm.term.trim()) {
+      if (stem.lemma === existTerm.term.trim()) {
         terms.unshift(stem);
       } else {
         terms.push(stem);
@@ -371,8 +371,8 @@ export const normaliseAdjParadigm = (html) => {
 
     splits = idText.split(' ');
     if (
-      (splits.length === 3 && num.has(splits[1]))
-      || (splits.length === 2)
+      (splits.length === 3 && num.has(splits[1])) || 
+       (splits.length === 2)
     ) {
       splits.splice(1, 0, 'Positive');
     }
@@ -417,7 +417,7 @@ export const normaliseVerbParadigm = (html) => {
     if (verbSet.has(idText)) {
       want[idText] = {};
       verbNumber.forEach((number, i) => {
-        want[idText][number] = wordForms.map((word) => `(${verbDict['sme'][idText][i]}) ${word}`);
+        want[idText][number] = wordForms.map((word) => `(${verbDict.sme[idText][i]}) ${word}`);
       });
     } else {
       splits = idText.split(' ');

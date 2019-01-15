@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Downshift from 'downshift';
 import PropTypes from 'prop-types';
@@ -15,15 +16,28 @@ import {
 } from '../components';
 import {
   selectKey,
-  selectLemma,
-  fetchArticlesIfNeeded,
   fetchItemsIfNeeded
 } from '../actions';
 
-const Searcher = ({onSelect, onInputChange, search}) => (
-  <Downshift
-    onSelect={selection => onSelect(selection)} >
-    {({
+class Searcher extends Component {
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      articlepath: ''
+    };
+  }
+
+  handleChange = (selectedItem) => {
+    this.setState({articlepath: `/article/${selectedItem}`})
+  };
+
+  render () {
+    const {onInputChange, search} = this.props;
+    return (
+      <Downshift
+        onSelect={this.handleChange} >
+        {({
           getInputProps,
           getToggleButtonProps,
           getItemProps,
@@ -34,28 +48,28 @@ const Searcher = ({onSelect, onInputChange, search}) => (
           inputValue,
           highlightedIndex
         }) => {
-      return (
-        <div className={css({ margin: 'auto' })}>
-          <div
-            className={css({
-              paddingRight: '1.75em',
-              position: 'relative'
-            })}>
-            <Input
-              {...getInputProps({
-                placeholder: 'Search for a word',
-                isOpen,
-                onChange: event => {
-                  const value = inHTMLData(event.target.value.toLowerCase());
-                  console.log(value);
-                  if (!value || value.length < 3) {
-                    return;
-                  }
-                  onInputChange(value);
-                }
-              })}
+          return (
+            <div className={css({ margin: 'auto' })}>
+              <div
+                className={css({
+                  paddingRight: '1.75em',
+                  position: 'relative'
+                })}>
+                <Input
+                  {...getInputProps({
+                    placeholder: 'Search for a word',
+                    isOpen,
+                    onChange: event => {
+                      const value = inHTMLData(event.target.value.toLowerCase());
+                      console.log(value);
+                      if (!value || value.length < 3) {
+                        return;
+                      }
+                      onInputChange(value);
+                    }
+                  })}
               />
-            {selectedItem
+                {selectedItem
                 ? <ControllerButton
                   css={{ paddingTop: 4 }}
                   onClick={clearSelection}
@@ -66,51 +80,55 @@ const Searcher = ({onSelect, onInputChange, search}) => (
                 : <ControllerButton {...getToggleButtonProps()}>
                   <ArrowIcon isOpen={isOpen} />
                 </ControllerButton>}
-          </div>
-          {isOpen ? (
-            <div>
-              {search.isSearching ? (
-                <div>Fetching search results …</div>
-                  ) : <Menu>
-                    {search.resultItems
-                    .map((item, index) => (
-                      <Item
-                        {...getItemProps({
-                          key: index,
-                          item,
-                          index,
-                          isActive: highlightedIndex === index,
-                          isSelected: selectedItem === item
-                        })}
-                      >
-                        {item}
-                      </Item>
-                    ))}
-                  </Menu>}
+              </div>
+              {isOpen ?
+                <div>
+                  {search.isSearching ?
+                    <div>Fetching search results …</div> :
+                    <Menu>
+                      {search.resultItems
+                      .map((item, index) => (
+                        <Item
+                          {...getItemProps({
+                            key: index,
+                            item,
+                            index,
+                            isActive: highlightedIndex === index,
+                            isSelected: selectedItem === item
+                          })}
+                        >
+                          {item}
+                        </Item>
+                      ))}
+                    </Menu>
+                  }
+                </div> :
+                null
+              }
+              {this.state.articlepath ?
+                <Redirect to={this.state.articlepath} push={true}/> :
+                null
+              }
             </div>
-                  ) : null}
-        </div>
-      );
-    }}
-  </Downshift>
-);
+
+          );
+        }}
+      </Downshift>
+    );
+  }
+}
 
 Searcher.propTypes = {
-  onSelect: PropTypes.func.isRequired,
   onInputChange: PropTypes.func.isRequired,
   search: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => (
-  { search: state.search}
+  { search: state.search }
 );
 
 const mapDispatchToProps = (dispatch) => (
   {
-    onSelect: (nextLemma) => {
-      dispatch(selectLemma(nextLemma));
-      dispatch(fetchArticlesIfNeeded(nextLemma));
-    },
     onInputChange: (key) => {
       dispatch(selectKey(key));
       debounce(300, dispatch(fetchItemsIfNeeded(key)));

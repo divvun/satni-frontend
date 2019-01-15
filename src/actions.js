@@ -5,7 +5,6 @@ import {normaliseArticles, toJson} from './utils';
 export const REQUEST_PARADIGM = 'REQUEST_PARADIGM';
 export const FETCH_ARTICLES_REQUEST = 'FETCH_ARTICLES_REQUEST';
 export const REQUEST_ITEMS = 'REQUEST_ITEMS';
-export const SELECT_LEMMA = 'SELECT_LEMMA';
 export const SELECT_KEY = 'SELECT_KEY';
 
 export const RECEIVE_PARADIGM = 'RECEIVE_PARADIGM';
@@ -13,11 +12,6 @@ export const FETCH_ARTICLES_SUCCESS = 'FETCH_ARTICLES_SUCCESS';
 export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
 
 export const FETCH_ARTICLES_ERROR = 'FETCH_ARTICLES_ERROR';
-
-export const selectLemma = (lemma) => ({
-  type: SELECT_LEMMA,
-  lemma
-});
 
 export const selectKey = (key) => ({
   type: SELECT_KEY,
@@ -100,9 +94,9 @@ export const fetchParadigm = (stem) => (dispatch) => {
 
 export const shouldFetchArticles = (state, lemma) => {
   const articles = state.articlesByLemma[lemma];
-  if (!lemma
-      || (articles && articles.isFetching)
-      || (articles && !articles.isFetching && articles.items)) {
+  if (!lemma ||
+    (articles && articles.isFetching) ||
+    (articles && !articles.isFetching && articles.items)) {
     return false;
   } else {
     return true;
