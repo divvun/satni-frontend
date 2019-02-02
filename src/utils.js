@@ -371,7 +371,7 @@ export const normaliseAdjParadigm = (html) => {
 
     splits = idText.split(' ');
     if (
-      (splits.length === 3 && num.has(splits[1])) || 
+      (splits.length === 3 && num.has(splits[1])) ||
        (splits.length === 2)
     ) {
       splits.splice(1, 0, 'Positive');
