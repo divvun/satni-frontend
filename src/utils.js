@@ -147,18 +147,26 @@ export const translationStems = (tg) => {
 
   if (tg.t instanceof Object && tg.t instanceof Array) {
     tg.t.forEach((tr) => {
-      stems.push({
+      const result = {
         'lemma': tr['#text'],
         'lang': tg['xml:lang'],
         'pos': tr.pos
-      });
+      };
+      if (tg['re']) {
+        result['re'] = '(' + tg['re'] + ')';
+      }
+      stems.push(result);
     });
   } else {
-    stems.push({
+    const result = {
       'lemma': tg.t['#text'],
       'lang': tg['xml:lang'],
       'pos': tg.t.pos
-    });
+    };
+    if (tg['re']) {
+      result['re'] = '(' + tg['re'] + ')';
+    }
+    stems.push(result);
   }
 
   return stems;

@@ -22,6 +22,7 @@ import {
   resultMekanikk99,
   resultAehtjie,
   resultFordel,
+  resultSnakkeWithRe,
   resultSmaNounParadigm,
   resultSmeNounParadigm,
   resultSmjNounParadigm,
@@ -425,6 +426,32 @@ const withoutTranslationGroup = {
   'expl': null
 };
 
+const snakkeWithRe = {
+  'term': 'snakke',
+  'pos': 'V',
+  'dict': 'nobsme',
+  'status': null,
+  'lang': 'nob',
+  'termwikiref': '-1',
+  'def': null,
+  'expl': null,
+  'tg': {
+    'xml:lang': 'sme',
+    'tw_id': 'snakke d6a858f4-79a8-49fe-8ab8-3f3bf2f3f933',
+    '#text': [
+      '\n            ',
+      '\n            ',
+      '\n         '
+    ],
+    're': 'snakke samisk',
+    't': {
+      'pos': 'V',
+      'src': 'fad',
+      '#text': 'sámástit'
+    }
+  }
+};
+
 describe('Massage data from eXist', () => {
   it('Turn text in to JSON', () => {
     const gotQuery = '{{ "term" : "juolahtaa mieleen", "dict" : "finsmn", "lang" : "fin", "langs" : "smn" }}';
@@ -649,6 +676,11 @@ describe('Massage data from eXist', () => {
     };
 
     expect(normaliseTermWiki(withSms)).toEqual(resultWithSms);
+  });
+
+  it('Normalise dict with re', () => {
+    expect(normaliseArticles([snakkeWithRe]))
+    .toEqual(resultSnakkeWithRe);
   });
 });
 

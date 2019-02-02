@@ -158,6 +158,27 @@ export const resultMekanikk99 = {
   'termwikiref': 'x34074'
 };
 
+export const resultSnakkeWithRe = [
+  {
+    'dict': 'nobsme',
+    'examples': [],
+    'termwikiref': '-1',
+    'translations': [
+      {
+        'lang': 'nob',
+        'lemma':
+      'snakke',
+        'pos': 'V'
+      },
+      {
+        'lang': 'sme',
+        'lemma': 'sámástit',
+        'pos': 'V',
+        're': '(snakke samisk)'
+      }
+    ]
+  }];
+
 export const resultSmnNounParadigm = {
   Nom: {
     Sg: ['kyeli'],
