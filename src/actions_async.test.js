@@ -21,12 +21,15 @@ describe('async actions', () => {
       {
         'articles': [
           {
-            'dict': 'SD-terms',
+            'dict': 'termwiki',
+            'termwikiref': 'Luonddudieđa ja matematihkka:guolli',
             'stems': [
-               {'lang': 'smj', 'lemma': 'guolle', 'pos': 'S'},
-               {'lang': 'sme', 'lemma': 'guolli', 'pos': 'S'},
-               {'lang': 'nob', 'lemma': 'fisk', 'pos': 'S'},
-               {'lang': 'sma', 'lemma': 'guelie', 'pos': 'S'}
+               {'lang': 'smj', 'lemma': 'guolle', 'pos': 'N'},
+               {'lang': 'nob', 'lemma': 'fisk', 'pos': 'N'},
+               {'lang': 'sme', 'lemma': 'guolli', 'pos': 'N'},
+               {'lang': 'sma', 'lemma': 'guelie', 'pos': 'N'},
+               {'lang': 'smn', 'lemma': 'kyeli', 'pos': 'N'},
+               {'lang': 'fin', 'lemma': 'kala', 'pos': 'N'}
             ]
           }
         ],
