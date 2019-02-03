@@ -3,7 +3,6 @@ import { css } from 'react-emotion';
 
 import DictArticle from './DictArticle';
 import TermWikiArticle from './TermWikiArticle';
-import SDTermArticle from './SDTermArticle';
 
 const Articles = ({articles}) => {
   return (
@@ -15,26 +14,19 @@ const Articles = ({articles}) => {
       position: 'relative'
     })}>
       {articles.map((article, i) => {
-        if (article.dict === 'JustermTana' || article.dict === 'termwiki' || article.dict === 'mekanikk-1999') {
+        if (article.dict === 'termwiki') {
           return <TermWikiArticle
             key={i}
             stems={article.stems}
             termwikiref={article.termwikiref}
             dictionary={article.dict} />;
-        }
-
-        if (article.termwikiref === '-1') {
+        } else {
           return <DictArticle
             key={i}
             stems={article.translations}
             examples={article.examples}
             dictionary={article.dict} />;
         }
-
-        return <SDTermArticle
-          key={i}
-          stems={article.stems}
-          dictionary={article.dict} />;
       })}
     </div>
   );

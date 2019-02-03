@@ -127,12 +127,8 @@ export const ensureTranslationGroupIsArray = (existTerms) => {
 export const normaliseArticles = (existTerms) => {
   return removeDuplicates(
     ensureTranslationGroupIsArray(existTerms)).map((existTerm) => {
-      if (existTerm.dict === 'termwiki' || existTerm.dict === 'mekanikk-1999') {
+      if (existTerm.dict === 'termwiki') {
         return normaliseTermWiki(existTerm);
-      } else if (existTerm.dict === 'JustermTana') {
-        return normaliseJusterm(existTerm);
-      } else if (existTerm.dict === 'SD-terms') {
-        return normaliseSDTerm(existTerm);
       } else {
         let dicts = normaliseDict(existTerm);
         for (var i = 0, len = dicts.length; i < len; i++) {
@@ -275,64 +271,6 @@ export const normaliseTermWiki = (existTerm) => {
   return {
     stems: normaliseTranslationGroup(existTerm),
     termwikiref: existTerm.termwikiref,
-    dict: existTerm.dict
-  };
-};
-
-export const normaliseJusterm = (jusTerm) => {
-  const stems = normaliseTranslationGroup(jusTerm);
-  stems.unshift({
-    lemma: jusTerm.term.trim(),
-    lang: jusTerm.lang,
-    pos: jusTerm.pos
-  });
-
-  return {
-    stems,
-    dict: jusTerm.dict
-  };
-};
-
-const sdTranslationStems = (t, lang, pos) => {
-  let stems = [];
-
-  if (t instanceof Object && t instanceof Array) {
-    t.forEach((tr) => {
-      stems.push({
-        'lemma': tr.trim(),
-        'lang': lang,
-        'pos': pos
-      });
-    });
-  } else {
-    stems.push({
-      'lemma': t.trim(),
-      'lang': lang,
-      'pos': pos
-    });
-  }
-
-  return stems;
-};
-
-export const normaliseSDTerm = (existTerm) => {
-  const terms = [];
-
-  const etg = existTerm.tg;
-  etg.forEach((tg) => {
-    let stems = sdTranslationStems(tg.t, term2dict[tg['xml:lang']], existTerm.pos);
-
-    stems.forEach((stem) => {
-      if (stem.lemma === existTerm.term.trim()) {
-        terms.unshift(stem);
-      } else {
-        terms.push(stem);
-      }
-    });
-  });
-
-  return {
-    stems: terms,
     dict: existTerm.dict
   };
 };

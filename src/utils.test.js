@@ -6,22 +6,16 @@ import {
   translationExamples,
   normaliseDict,
   normaliseTermWiki,
-  normaliseSDTerm,
-  normaliseJusterm,
   normaliseArticles,
   normaliseNounParadigm,
   normaliseAdjParadigm,
   normaliseVerbParadigm
 } from './utils';
 import {
-  resultSDTerm,
   resultDictWithExamples,
   resultDictWithoutExamples,
   resultTermWiki,
-  resultJustermTana,
-  resultMekanikk99,
   resultAehtjie,
-  resultFordel,
   resultSnakkeWithRe,
   resultSmaNounParadigm,
   resultSmeNounParadigm,
@@ -36,80 +30,6 @@ import {
   resultSmjVerbParadigm,
   resultSmnVerbParadigm
 } from './utils_testdata';
-
-const fordel = {
-  'term': 'fordel',
-  'pos': 'S',
-  'dict': 'SD-terms',
-  'status': null,
-  'lang': 'sme',
-  'termwikiref': '19257',
-  'def': null,
-  'expl': null,
-  'tg': {
-    'xml:lang': 'sme',
-    '#text': [
-      '\n            ',
-      '\n        '
-    ],
-    't': 'fordel'
-  }
-};
-
-const mekanikk99 = [
-  {
-    'term': 'traktor',
-    'pos': null,
-    'dict': 'mekanikk-1999',
-    'status': null,
-    'lang': 'sme',
-    'termwikiref': 'x34074',
-    'def': 'mohtorfievru mainna geassá eanandoalloneavvuid ja/dahje addá fámu daidda',
-    'expl': null,
-    'tg': [
-      {
-        'xml:lang': 'sme',
-        '#text': [
-          '\n         ',
-          '\n      '
-        ],
-        't': 'traktor'
-      },
-      {
-        'xml:lang': 'nor',
-        '#text': [
-          '\n         ',
-          '\n      '
-        ],
-        't': 'traktor'
-      },
-      {
-        'xml:lang': 'swe',
-        '#text': [
-          '\n         ',
-          '\n      '
-        ],
-        't': 'traktor'
-      },
-      {
-        'xml:lang': 'fin',
-        '#text': [
-          '\n         ',
-          '\n      '
-        ],
-        't': 'traktori'
-      },
-      {
-        'xml:lang': 'eng',
-        '#text': [
-          '\n         ',
-          '\n      '
-        ],
-        't': 'tractor'
-      }
-    ]
-  }
-];
 
 const existDictWithExamples = {
   'expl': null,
@@ -275,74 +195,6 @@ const termWiki = {
   'dict': 'termwiki'
 };
 
-const justermTana = {
-  'term': 'unngå',
-  'pos': 'v',
-  'dict': 'JustermTana',
-  'status': null,
-  'lang': 'nob',
-  'termwikiref': '-1',
-  'def': null,
-  'expl': null,
-  'tg': [
-    {
-      'xml:lang': 'sme',
-      '#text': [
-        '\n            ',
-        '\n         '
-      ],
-      't': {
-        'pos': 'v',
-        '#text': 'garvit'
-      }
-    },
-    {
-      'xml:lang': 'fin',
-      '#text': [
-        '\n            ',
-        '\n         '
-      ],
-      't': {
-        'pos': 'v',
-        '#text': 'välttää'
-      }
-    }
-  ]
-};
-
-const SDTerm = {
-  'status': null,
-  'pos': 'S',
-  'dict': 'SD-terms',
-  'tg': [
-    {
-      't': [
-        'gođđinmuorra',
-        'guolládat',
-        'guolla'
-      ],
-      'xml:lang': 'sme',
-      '#text': [
-        '\n            ',
-        '\n        '
-      ]
-    },
-    {
-      't': 'målepinne',
-      'xml:lang': 'nor',
-      '#text': [
-        '\n            ',
-        '\n        '
-      ]
-    }
-  ],
-  'termwikiref': '6035',
-  'expl': null,
-  'term': 'guolladat',
-  'lang': 'sme',
-  'def': null
-};
-
 const aehtjie = {
   'term': 'aehtjie',
   'pos': 'N',
@@ -413,17 +265,6 @@ const withSms = {
       }
     }
   ]
-};
-
-const withoutTranslationGroup = {
-  'term': 'dáhppa',
-  'pos': null,
-  'dict': 'mekanikk-1999',
-  'status': null,
-  'lang': 'sme',
-  'termwikiref': '-1',
-  'def': null,
-  'expl': null
 };
 
 const snakkeWithRe = {
@@ -509,32 +350,6 @@ describe('Massage data from eXist', () => {
     expect(removeDuplicates(gotAndro)).toEqual(halfAndro);
   });
 
-  it('Ensure tg always is an array', () => {
-    const fordelWithArraytg = {
-      'term': 'fordel',
-      'pos': 'S',
-      'dict': 'SD-terms',
-      'status': null,
-      'lang': 'sme',
-      'termwikiref': '19257',
-      'def': null,
-      'expl': null,
-      'tg': [
-        {
-          'xml:lang': 'sme',
-          '#text': [
-            '\n            ',
-            '\n        '
-          ],
-          't': 'fordel'
-        }
-      ]
-    };
-
-    expect(ensureTranslationGroupIsArray([fordel]))
-    .toEqual([fordelWithArraytg]);
-  });
-
   it('Turns dict tg where t is an object into an array of stems', () => {
     const tgElement = {
       't': {
@@ -618,43 +433,22 @@ describe('Massage data from eXist', () => {
     expect(normaliseTermWiki(termWiki)).toEqual(resultTermWiki);
   });
 
-  it('Normalise a JustermTana article into an object', () => {
-    expect(normaliseJusterm(justermTana)).toEqual(resultJustermTana);
-  });
-
-  it('Normalise an SDTerm article into an object', () => {
-    expect(normaliseSDTerm(SDTerm)).toEqual(resultSDTerm);
-  });
-
   it('Normalise all article types', () => {
     expect(normaliseArticles(
       [
         existDictWithExamples,
         existDictWithoutExamples,
-        termWiki,
-        justermTana,
-        SDTerm,
-        withoutTranslationGroup
+        termWiki
       ])).toEqual(
       [
         resultDictWithExamples[0],
         resultDictWithoutExamples[0],
-        resultTermWiki,
-        resultJustermTana,
-        resultSDTerm
+        resultTermWiki
       ]);
-  });
-
-  it('Normalise mekanikk99', () => {
-    expect(normaliseArticles(mekanikk99)).toEqual([resultMekanikk99]);
   });
 
   it('Normalise the aehtjie search result, it causes a crash', () => {
     expect(normaliseArticles([aehtjie])).toEqual(resultAehtjie);
-  });
-
-  it('Normalise fordel, tg is not an array', () => {
-    expect(normaliseSDTerm(fordel)).toEqual(resultFordel);
   });
 
   it('Normalise sms article', () => {

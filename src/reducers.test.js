@@ -104,7 +104,7 @@ describe('reducers', () => {
         searchItems: Set(),
         usedSearchKeys: Set(),
         'resultItems': OrderedSet()
-      },
+      }
     },
       {
         type: actions.FETCH_ARTICLES_REQUEST,
@@ -139,40 +139,87 @@ describe('reducers', () => {
         'searchItems': Set(),
         'usedSearchKeys': Set(),
         'resultItems': OrderedSet()
-        },
-      },
+      }
+    },
       {
         type: actions.FETCH_ARTICLES_SUCCESS,
         lemma: 'guolli',
         articles: [
           {
-            'def': null,
-            'dict': 'SD-terms',
-            'expl': null,
-            'lang': 'smj',
-            'pos': 'S',
+            'term': 'guolli',
+            'pos': 'N',
+            'dict': 'termwiki',
             'status': null,
-            'term': 'guolle',
-            'termwikiref': '6046',
+            'category': 'Luonddudieđa ja matematihkka',
+            'termwikiref': 'Luonddudieđa ja matematihkka:guolli',
+            'def': null,
+            'expl': null,
             'tg': [
               {
-                '#text': [`\n            `, `\n        `],
-                't': 'guolli',
-                'xml:lang': 'sme'
-              }, {
-                '#text': [`\n            `, `\n        `],
-                't': 'fisk',
-                'xml:lang': 'nor'
+                'xml:lang': 'nb',
+                '#text': [
+                  '\n      ',
+                  '\n    '
+                ],
+                't': {
+                  'pos': 'N',
+                  '#text': 'fisk'
+                }
               },
               {
-                '#text': [`\n            `, `\n        `],
-                't': 'guolle',
-                'xml:lang': 'smj'
+                'xml:lang': 'se',
+                '#text': [
+                  '\n      ',
+                  '\n    '
+                ],
+                't': {
+                  'pos': 'N',
+                  '#text': 'guolli'
+                }
               },
               {
-                '#text': [`\n            `, `\n        `],
-                't': 'guelie',
-                'xml:lang': 'sma'
+                'xml:lang': 'sma',
+                '#text': [
+                  '\n      ',
+                  '\n    '
+                ],
+                't': {
+                  'pos': 'N',
+                  '#text': 'guelie'
+                }
+              },
+              {
+                'xml:lang': 'smj',
+                '#text': [
+                  '\n      ',
+                  '\n    '
+                ],
+                't': {
+                  'pos': 'N',
+                  '#text': 'guolle'
+                }
+              },
+              {
+                'xml:lang': 'smn',
+                '#text': [
+                  '\n      ',
+                  '\n    '
+                ],
+                't': {
+                  'pos': 'N',
+                  '#text': 'kyeli'
+                }
+              },
+              {
+                'xml:lang': 'fi',
+                '#text': [
+                  '\n      ',
+                  '\n    '
+                ],
+                't': {
+                  'pos': 'N',
+                  '#text': 'kala'
+                }
               }
             ]
           }
@@ -183,34 +230,38 @@ describe('reducers', () => {
             'isFetching': false,
             'items': [
               {
+                'category': 'Luonddudieđa ja matematihkka',
                 'def': null,
-                'dict': 'SD-terms',
+                'dict': 'termwiki',
                 'expl': null,
-                'lang': 'smj',
-                'pos': 'S',
+                'pos': 'N',
                 'status': null,
-                'term': 'guolle',
-                'termwikiref': '6046',
+                'term': 'guolli',
+                'termwikiref': 'Luonddudieđa ja matematihkka:guolli',
                 'tg': [
                   {
-                    '#text': [`\n            `, `\n        `],
-                    't': 'guolli',
-                    'xml:lang': 'sme'
+                    '#text': ['\n      ', '\n    '],
+                    't': {'#text': 'fisk', 'pos': 'N'}, 'xml:lang': 'nb'
                   },
                   {
-                    '#text': [`\n            `, `\n        `],
-                    't': 'fisk',
-                    'xml:lang': 'nor'
+                    '#text': ['\n      ', '\n    '],
+                    't': {'#text': 'guolli', 'pos': 'N'}, 'xml:lang': 'se'
                   },
                   {
-                    '#text': [`\n            `, `\n        `],
-                    't': 'guolle',
-                    'xml:lang': 'smj'
+                    '#text': ['\n      ', '\n    '],
+                    't': {'#text': 'guelie', 'pos': 'N'}, 'xml:lang': 'sma'
                   },
                   {
-                    '#text': [`\n            `, `\n        `],
-                    't': 'guelie',
-                    'xml:lang': 'sma'
+                    '#text': ['\n      ', '\n    '],
+                    't': {'#text': 'guolle', 'pos': 'N'}, 'xml:lang': 'smj'
+                  },
+                  {
+                    '#text': ['\n      ', '\n    '],
+                    't': {'#text': 'kyeli', 'pos': 'N'}, 'xml:lang': 'smn'
+                  },
+                  {
+                    '#text': ['\n      ', '\n    '],
+                    't': {'#text': 'kala', 'pos': 'N'}, 'xml:lang': 'fi'
                   }
                 ]
               }
