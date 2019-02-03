@@ -17,7 +17,7 @@ const KorpLink = (lang, lemma) => {
   );
 };
 
-const Stem = ({ stem: {lemma, pos, lang, key}}) => {
+const Stem = ({ stem: {lemma, pos, lang, key, re}}) => {
   return (
     <div
       className={css({
@@ -27,7 +27,7 @@ const Stem = ({ stem: {lemma, pos, lang, key}}) => {
       <span className={css({ display: 'inline'})}>{key ? <span className={css({
         fontWeight: 'bold',
         marginLeft: '2%'
-      })}>{lemma}</span> : lemma} {pos} {lang}</span>
+      })}>{lemma}</span> : lemma} {re} {pos} {lang}</span>
       {korpLangs.has(lang) && (KorpLink(lang, lemma))}
     </div>
   );
