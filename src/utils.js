@@ -127,15 +127,16 @@ export const ensureTranslationGroupIsArray = (existTerms) => {
 export const normaliseArticles = (existTerms) => {
   return removeDuplicates(
     ensureTranslationGroupIsArray(existTerms)).map((existTerm) => {
-      if (existTerm.dict === 'termwiki') {
-        return normaliseTermWiki(existTerm);
-      } else {
+      if (existTerm.dict !== 'termwiki') {
         let dicts = normaliseDict(existTerm);
         for (var i = 0, len = dicts.length; i < len; i++) {
           return dicts[i];
         }
       }
-    });
+
+      return normaliseTermWiki(existTerm);
+    }
+  );
 };
 
 export const translationStems = (tg) => {
