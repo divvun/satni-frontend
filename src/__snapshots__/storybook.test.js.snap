@@ -2,38 +2,38 @@
 
 exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
 <table
-  className="MuiTable-root-49"
+  className="MuiTable-root-61"
 >
   <thead
-    className="MuiTableHead-root-50"
+    className="MuiTableHead-root-62"
   >
     <tr
-      className="MuiTableRow-root-51 MuiTableRow-head-54"
+      className="MuiTableRow-root-63 MuiTableRow-head-66"
     >
       <th
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-head-57"
+        className="MuiTableCell-root-68 MuiTableCell-head-69"
         scope="col"
       >
          
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-head-57"
+        className="MuiTableCell-root-68 MuiTableCell-head-69"
         scope="col"
       >
         Positive
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-head-57"
+        className="MuiTableCell-root-68 MuiTableCell-head-69"
         scope="col"
       >
         Comparative
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-head-57"
+        className="MuiTableCell-root-68 MuiTableCell-head-69"
         scope="col"
       >
         Superlative
@@ -41,31 +41,31 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
     </tr>
   </thead>
   <tbody
-    className="MuiTableBody-root-64"
+    className="MuiTableBody-root-80"
   >
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
         colSpan={4}
       >
         Attr
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linnâ
@@ -73,7 +73,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumos
@@ -81,22 +81,22 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
         colSpan={4}
       >
         Sg
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Nom
@@ -104,7 +104,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           lines
@@ -112,7 +112,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásub
@@ -120,7 +120,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumos
@@ -128,11 +128,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Gen
@@ -140,7 +140,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linnáás
@@ -148,7 +148,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásub
@@ -156,7 +156,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumos
@@ -164,11 +164,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Acc
@@ -176,7 +176,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linnáás
@@ -184,7 +184,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásub
@@ -192,7 +192,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumos
@@ -200,11 +200,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Ill
@@ -212,7 +212,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásân
@@ -220,7 +220,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásuubon
@@ -228,7 +228,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosân
@@ -236,11 +236,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Loc
@@ -248,7 +248,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásist
@@ -256,7 +256,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásubboost
@@ -264,7 +264,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosist
@@ -272,11 +272,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Com
@@ -284,7 +284,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásáin
@@ -292,7 +292,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásubboin
@@ -300,7 +300,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosáin
@@ -308,11 +308,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Abe
@@ -320,7 +320,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linnáásttáá
@@ -328,7 +328,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásubttáá
@@ -336,7 +336,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosttáá
@@ -344,22 +344,22 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
         colSpan={4}
       >
         Pl
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Nom
@@ -367,7 +367,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           lináseh
@@ -375,7 +375,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásuboh
@@ -383,7 +383,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumoseh
@@ -391,11 +391,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Gen
@@ -403,7 +403,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásij
@@ -411,7 +411,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásuboi
@@ -419,7 +419,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosij
@@ -427,11 +427,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Acc
@@ -439,7 +439,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásijd
@@ -447,7 +447,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásuboid
@@ -455,7 +455,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosijd
@@ -463,11 +463,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Ill
@@ -475,7 +475,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásáid
@@ -483,7 +483,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásubboid
@@ -491,7 +491,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosáid
@@ -499,11 +499,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Loc
@@ -511,7 +511,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásijn
@@ -519,7 +519,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásuboin
@@ -527,7 +527,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosijn
@@ -535,11 +535,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Com
@@ -547,7 +547,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásijguin
@@ -558,7 +558,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásuboiguin
@@ -569,7 +569,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosijguin
@@ -580,11 +580,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Abe
@@ -592,7 +592,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásijttáá
@@ -600,7 +600,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásuboittáá
@@ -608,7 +608,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosijttáá
@@ -616,22 +616,22 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
         colSpan={4}
       >
         Both
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Par
@@ -639,7 +639,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linesid
@@ -647,7 +647,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásubbod
@@ -655,7 +655,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosid
@@ -663,11 +663,11 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-51"
+      className="MuiTableRow-root-63"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <span>
           Ess
@@ -675,7 +675,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linesin
@@ -683,7 +683,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásubbon
@@ -691,7 +691,7 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-56 MuiTableCell-body-58"
+        className="MuiTableCell-root-68 MuiTableCell-body-70"
       >
         <div>
           linásumosin
@@ -704,38 +704,38 @@ exports[`Storyshots AdjParadigm Inari saami adjective 1`] = `
 
 exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
 <table
-  className="MuiTable-root-33"
+  className="MuiTable-root-41"
 >
   <thead
-    className="MuiTableHead-root-34"
+    className="MuiTableHead-root-42"
   >
     <tr
-      className="MuiTableRow-root-35 MuiTableRow-head-38"
+      className="MuiTableRow-root-43 MuiTableRow-head-46"
     >
       <th
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-head-41"
+        className="MuiTableCell-root-48 MuiTableCell-head-49"
         scope="col"
       >
          
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-head-41"
+        className="MuiTableCell-root-48 MuiTableCell-head-49"
         scope="col"
       >
         Positive
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-head-41"
+        className="MuiTableCell-root-48 MuiTableCell-head-49"
         scope="col"
       >
         Comparative
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-head-41"
+        className="MuiTableCell-root-48 MuiTableCell-head-49"
         scope="col"
       >
         Superlative
@@ -743,31 +743,31 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
     </tr>
   </thead>
   <tbody
-    className="MuiTableBody-root-48"
+    className="MuiTableBody-root-60"
   >
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
         colSpan={4}
       >
         Attr
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásup
@@ -778,7 +778,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidna
@@ -786,7 +786,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásamos
@@ -794,22 +794,22 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
         colSpan={4}
       >
         Sg
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Nom
@@ -817,7 +817,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabbo
@@ -825,7 +825,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lines
@@ -833,7 +833,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásamos
@@ -841,11 +841,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Gen
@@ -853,7 +853,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappo
@@ -861,7 +861,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnása
@@ -869,7 +869,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusa
@@ -877,11 +877,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Acc
@@ -889,7 +889,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappov
@@ -897,7 +897,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásav
@@ -905,7 +905,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusav
@@ -913,11 +913,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Ill
@@ -925,7 +925,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabbuj
@@ -933,7 +933,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásij
@@ -941,7 +941,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusij
@@ -949,11 +949,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Ine
@@ -961,7 +961,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappon
@@ -969,7 +969,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásin
@@ -977,7 +977,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusin
@@ -985,11 +985,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Ela
@@ -997,7 +997,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappos
@@ -1005,7 +1005,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásis
@@ -1013,7 +1013,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusis
@@ -1021,11 +1021,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Com
@@ -1033,7 +1033,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappujn
@@ -1044,7 +1044,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásijn
@@ -1052,7 +1052,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusijn
@@ -1060,11 +1060,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Abe
@@ -1072,7 +1072,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappodagá
@@ -1086,7 +1086,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásadagá
@@ -1097,7 +1097,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusadagá
@@ -1111,22 +1111,22 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
         colSpan={4}
       >
         Pl
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Nom
@@ -1134,7 +1134,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappo
@@ -1142,7 +1142,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnása
@@ -1150,7 +1150,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusa
@@ -1158,11 +1158,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Gen
@@ -1170,7 +1170,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappoj
@@ -1178,7 +1178,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásij
@@ -1186,7 +1186,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusij
@@ -1194,11 +1194,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Acc
@@ -1206,7 +1206,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappojt
@@ -1214,7 +1214,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásijt
@@ -1222,7 +1222,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusijt
@@ -1230,11 +1230,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Ill
@@ -1242,7 +1242,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappojda
@@ -1250,7 +1250,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásijda
@@ -1258,7 +1258,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusijda
@@ -1266,11 +1266,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Ine
@@ -1278,7 +1278,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappojn
@@ -1286,7 +1286,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásijn
@@ -1294,7 +1294,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusijn
@@ -1302,11 +1302,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Ela
@@ -1314,7 +1314,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappojs
@@ -1322,7 +1322,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásijs
@@ -1330,7 +1330,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusijs
@@ -1338,11 +1338,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Com
@@ -1350,7 +1350,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappoj
@@ -1358,7 +1358,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásij
@@ -1366,7 +1366,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusij
@@ -1374,11 +1374,11 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Abe
@@ -1386,7 +1386,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásappojdagá
@@ -1400,7 +1400,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásijdagá
@@ -1411,7 +1411,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusijdagá
@@ -1425,22 +1425,22 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
         colSpan={4}
       >
         Both
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-35"
+      className="MuiTableRow-root-43"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <span>
           Ess
@@ -1448,7 +1448,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabbon
@@ -1456,7 +1456,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásin
@@ -1464,7 +1464,7 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-40 MuiTableCell-body-42"
+        className="MuiTableCell-root-48 MuiTableCell-body-50"
       >
         <div>
           lidnásabmusin
@@ -1477,38 +1477,38 @@ exports[`Storyshots AdjParadigm Lule saami adjective 1`] = `
 
 exports[`Storyshots AdjParadigm North saami adjective 1`] = `
 <table
-  className="MuiTable-root-17"
+  className="MuiTable-root-21"
 >
   <thead
-    className="MuiTableHead-root-18"
+    className="MuiTableHead-root-22"
   >
     <tr
-      className="MuiTableRow-root-19 MuiTableRow-head-22"
+      className="MuiTableRow-root-23 MuiTableRow-head-26"
     >
       <th
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-head-25"
+        className="MuiTableCell-root-28 MuiTableCell-head-29"
         scope="col"
       >
          
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-head-25"
+        className="MuiTableCell-root-28 MuiTableCell-head-29"
         scope="col"
       >
         Positive
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-head-25"
+        className="MuiTableCell-root-28 MuiTableCell-head-29"
         scope="col"
       >
         Comparative
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-head-25"
+        className="MuiTableCell-root-28 MuiTableCell-head-29"
         scope="col"
       >
         Superlative
@@ -1516,31 +1516,31 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
     </tr>
   </thead>
   <tbody
-    className="MuiTableBody-root-32"
+    className="MuiTableBody-root-40"
   >
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
         colSpan={4}
       >
         Attr
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litna
@@ -1548,7 +1548,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásut
@@ -1565,7 +1565,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseamos
@@ -1576,22 +1576,22 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
         colSpan={4}
       >
         Sg
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Nom
@@ -1599,7 +1599,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           linis
@@ -1607,7 +1607,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásut
@@ -1630,7 +1630,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseamos
@@ -1641,11 +1641,11 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Gen
@@ -1653,7 +1653,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnása
@@ -1661,7 +1661,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseappo
@@ -1672,7 +1672,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásepmosa
@@ -1683,11 +1683,11 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Acc
@@ -1695,7 +1695,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnása
@@ -1703,7 +1703,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseappo
@@ -1714,7 +1714,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásepmosa
@@ -1725,11 +1725,11 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Ill
@@ -1737,7 +1737,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásii
@@ -1745,7 +1745,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásebbui
@@ -1756,7 +1756,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásepmosii
@@ -1767,11 +1767,11 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Loc
@@ -1779,7 +1779,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásis
@@ -1787,7 +1787,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseappos
@@ -1798,7 +1798,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásepmosis
@@ -1809,11 +1809,11 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Com
@@ -1821,7 +1821,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásiin
@@ -1829,7 +1829,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseappuin
@@ -1840,7 +1840,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásepmosiin
@@ -1851,22 +1851,22 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
         colSpan={4}
       >
         Pl
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Nom
@@ -1874,7 +1874,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásat
@@ -1882,7 +1882,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseappot
@@ -1893,7 +1893,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásepmosat
@@ -1904,11 +1904,11 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Gen
@@ -1916,7 +1916,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásiid
@@ -1924,7 +1924,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseappuid
@@ -1935,7 +1935,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásepmosiid
@@ -1946,11 +1946,11 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Acc
@@ -1958,7 +1958,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásiid
@@ -1966,7 +1966,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseappuid
@@ -1977,7 +1977,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásepmosiid
@@ -1988,11 +1988,11 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Ill
@@ -2000,7 +2000,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásiidda
@@ -2008,7 +2008,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseappuide
@@ -2019,7 +2019,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásepmosiidda
@@ -2030,11 +2030,11 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Loc
@@ -2042,7 +2042,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásiin
@@ -2050,7 +2050,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseappuin
@@ -2061,7 +2061,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásepmosiin
@@ -2072,11 +2072,11 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Com
@@ -2084,7 +2084,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásiiguin
@@ -2092,7 +2092,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseappuiguin
@@ -2103,7 +2103,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnásepmosiiguin
@@ -2114,22 +2114,22 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
         colSpan={4}
       >
         Both
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-19"
+      className="MuiTableRow-root-23"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <span>
           Ess
@@ -2137,7 +2137,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           linisin
@@ -2145,7 +2145,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseabbon
@@ -2156,7 +2156,7 @@ exports[`Storyshots AdjParadigm North saami adjective 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-24 MuiTableCell-body-26"
+        className="MuiTableCell-root-28 MuiTableCell-body-30"
       >
         <div>
           litnáseamosin
@@ -2211,7 +2211,7 @@ exports[`Storyshots AdjParadigm South saami adjective 1`] = `
     </tr>
   </thead>
   <tbody
-    className="MuiTableBody-root-16"
+    className="MuiTableBody-root-20"
   >
     <tr
       className="MuiTableRow-root-3"
@@ -3078,48 +3078,48 @@ exports[`Storyshots Examples default 1`] = `
 
 exports[`Storyshots NounParadigm Inari saami noun 1`] = `
 <table
-  className="MuiTable-root-113"
+  className="MuiTable-root-141"
 >
   <thead
-    className="MuiTableHead-root-114"
+    className="MuiTableHead-root-142"
   >
     <th
       aria-sort={null}
-      className="MuiTableCell-root-115 MuiTableCell-head-116"
+      className="MuiTableCell-root-143 MuiTableCell-head-144"
       scope="col"
     >
        
     </th>
     <th
       aria-sort={null}
-      className="MuiTableCell-root-115 MuiTableCell-head-116"
+      className="MuiTableCell-root-143 MuiTableCell-head-144"
       scope="col"
     >
       Sg
     </th>
     <th
       aria-sort={null}
-      className="MuiTableCell-root-115 MuiTableCell-head-116"
+      className="MuiTableCell-root-143 MuiTableCell-head-144"
       scope="col"
     >
       Pl
     </th>
   </thead>
   <tbody
-    className="MuiTableBody-root-123"
+    className="MuiTableBody-root-155"
   >
     <tr
-      className="MuiTableRow-root-124"
+      className="MuiTableRow-root-156"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         Nom
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kyeli
@@ -3127,7 +3127,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kyeleh
@@ -3135,17 +3135,17 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-124"
+      className="MuiTableRow-root-156"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         Gen
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kyele
@@ -3153,7 +3153,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kuolij
@@ -3161,17 +3161,17 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-124"
+      className="MuiTableRow-root-156"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         Acc
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kyele
@@ -3179,7 +3179,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kuolijd
@@ -3187,17 +3187,17 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-124"
+      className="MuiTableRow-root-156"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         Ill
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kuálán
@@ -3205,7 +3205,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kuolijd
@@ -3213,17 +3213,17 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-124"
+      className="MuiTableRow-root-156"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         Loc
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kyeleest
@@ -3231,7 +3231,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kuolijn
@@ -3239,17 +3239,17 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-124"
+      className="MuiTableRow-root-156"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         Com
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kuolijn
@@ -3257,7 +3257,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kuolijguin
@@ -3268,17 +3268,17 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-124"
+      className="MuiTableRow-root-156"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         Abe
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kyelettáá
@@ -3286,7 +3286,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         <div>
           kuolijttáá
@@ -3294,17 +3294,17 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-124"
+      className="MuiTableRow-root-156"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         Par
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
         colSpan={2}
       >
         <div>
@@ -3313,17 +3313,17 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-124"
+      className="MuiTableRow-root-156"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
       >
         Ess
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-115 MuiTableCell-body-117"
+        className="MuiTableCell-root-143 MuiTableCell-body-145"
         colSpan={2}
       >
         <div>
@@ -3337,48 +3337,48 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
 
 exports[`Storyshots NounParadigm Lule saami noun 1`] = `
 <table
-  className="MuiTable-root-97"
+  className="MuiTable-root-121"
 >
   <thead
-    className="MuiTableHead-root-98"
+    className="MuiTableHead-root-122"
   >
     <th
       aria-sort={null}
-      className="MuiTableCell-root-99 MuiTableCell-head-100"
+      className="MuiTableCell-root-123 MuiTableCell-head-124"
       scope="col"
     >
        
     </th>
     <th
       aria-sort={null}
-      className="MuiTableCell-root-99 MuiTableCell-head-100"
+      className="MuiTableCell-root-123 MuiTableCell-head-124"
       scope="col"
     >
       Sg
     </th>
     <th
       aria-sort={null}
-      className="MuiTableCell-root-99 MuiTableCell-head-100"
+      className="MuiTableCell-root-123 MuiTableCell-head-124"
       scope="col"
     >
       Pl
     </th>
   </thead>
   <tbody
-    className="MuiTableBody-root-107"
+    className="MuiTableBody-root-135"
   >
     <tr
-      className="MuiTableRow-root-108"
+      className="MuiTableRow-root-136"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         Nom
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolle
@@ -3386,7 +3386,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guole
@@ -3394,17 +3394,17 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-108"
+      className="MuiTableRow-root-136"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         Gen
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guole
@@ -3412,7 +3412,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolij
@@ -3420,17 +3420,17 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-108"
+      className="MuiTableRow-root-136"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         Acc
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolev
@@ -3438,7 +3438,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolijt
@@ -3446,17 +3446,17 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-108"
+      className="MuiTableRow-root-136"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         Ill
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolláj
@@ -3464,7 +3464,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolijda
@@ -3472,17 +3472,17 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-108"
+      className="MuiTableRow-root-136"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         Ine
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolen
@@ -3490,7 +3490,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolijn
@@ -3498,17 +3498,17 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-108"
+      className="MuiTableRow-root-136"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         Ela
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guoles
@@ -3516,7 +3516,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolijs
@@ -3524,17 +3524,17 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-108"
+      className="MuiTableRow-root-136"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         Com
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolijn
@@ -3545,7 +3545,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolij
@@ -3553,17 +3553,17 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-108"
+      className="MuiTableRow-root-136"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         Abe
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guoledagá
@@ -3574,7 +3574,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         <div>
           guolijdagá
@@ -3585,17 +3585,17 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-108"
+      className="MuiTableRow-root-136"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         Abe
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
         colSpan={2}
       >
         <div>
@@ -3607,17 +3607,17 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-108"
+      className="MuiTableRow-root-136"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
       >
         Ess
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-99 MuiTableCell-body-101"
+        className="MuiTableCell-root-123 MuiTableCell-body-125"
         colSpan={2}
       >
         <div>
@@ -3630,6 +3630,220 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
 `;
 
 exports[`Storyshots NounParadigm North saami noun 1`] = `
+<table
+  className="MuiTable-root-101"
+>
+  <thead
+    className="MuiTableHead-root-102"
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-103 MuiTableCell-head-104"
+      scope="col"
+    >
+       
+    </th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-103 MuiTableCell-head-104"
+      scope="col"
+    >
+      Sg
+    </th>
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root-103 MuiTableCell-head-104"
+      scope="col"
+    >
+      Pl
+    </th>
+  </thead>
+  <tbody
+    className="MuiTableBody-root-115"
+  >
+    <tr
+      className="MuiTableRow-root-116"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        Nom
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guolli
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guolit
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-116"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        Gen
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guole
+        </div>
+        <div>
+          guoli
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guliid
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-116"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        Acc
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guoli
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guliid
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-116"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        Ill
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guollái
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guliide
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-116"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        Loc
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guolis
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guliin
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-116"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        Com
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guliin
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        <div>
+          guliiguin
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-116"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+      >
+        Ess
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-103 MuiTableCell-body-105"
+        colSpan={2}
+      >
+        <div>
+          guollin
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Storyshots NounParadigm South saami noun 1`] = `
 <table
   className="MuiTable-root-81"
 >
@@ -3659,10 +3873,10 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
     </th>
   </thead>
   <tbody
-    className="MuiTableBody-root-91"
+    className="MuiTableBody-root-95"
   >
     <tr
-      className="MuiTableRow-root-92"
+      className="MuiTableRow-root-96"
     >
       <td
         aria-sort={null}
@@ -3673,220 +3887,6 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
       <td
         aria-sort={null}
         className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guolli
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guolit
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-92"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        Gen
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guole
-        </div>
-        <div>
-          guoli
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guliid
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-92"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        Acc
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guoli
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guliid
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-92"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        Ill
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guollái
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guliide
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-92"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        Loc
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guolis
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guliin
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-92"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        Com
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guliin
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        <div>
-          guliiguin
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-92"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-      >
-        Ess
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-83 MuiTableCell-body-85"
-        colSpan={2}
-      >
-        <div>
-          guollin
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-`;
-
-exports[`Storyshots NounParadigm South saami noun 1`] = `
-<table
-  className="MuiTable-root-65"
->
-  <thead
-    className="MuiTableHead-root-66"
-  >
-    <th
-      aria-sort={null}
-      className="MuiTableCell-root-67 MuiTableCell-head-68"
-      scope="col"
-    >
-       
-    </th>
-    <th
-      aria-sort={null}
-      className="MuiTableCell-root-67 MuiTableCell-head-68"
-      scope="col"
-    >
-      Sg
-    </th>
-    <th
-      aria-sort={null}
-      className="MuiTableCell-root-67 MuiTableCell-head-68"
-      scope="col"
-    >
-      Pl
-    </th>
-  </thead>
-  <tbody
-    className="MuiTableBody-root-75"
-  >
-    <tr
-      className="MuiTableRow-root-76"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
-      >
-        Nom
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
       >
         <div>
           guelie
@@ -3894,7 +3894,7 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           guelieh
@@ -3902,17 +3902,17 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-76"
+      className="MuiTableRow-root-96"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         Gen
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           guelien
@@ -3920,7 +3920,7 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           gööli
@@ -3931,17 +3931,17 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-76"
+      className="MuiTableRow-root-96"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         Acc
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           gueliem
@@ -3949,7 +3949,7 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           göölide
@@ -3960,17 +3960,17 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-76"
+      className="MuiTableRow-root-96"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         Ill
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           gualan
@@ -3978,7 +3978,7 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           göölide
@@ -3989,17 +3989,17 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-76"
+      className="MuiTableRow-root-96"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         Ine
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           guelesne
@@ -4007,7 +4007,7 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           gööline
@@ -4018,17 +4018,17 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-76"
+      className="MuiTableRow-root-96"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         Ela
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           gueleste
@@ -4036,7 +4036,7 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           göölijste
@@ -4047,17 +4047,17 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-76"
+      className="MuiTableRow-root-96"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         Com
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           gööline
@@ -4068,7 +4068,7 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         <div>
           gööligujmie
@@ -4079,17 +4079,17 @@ exports[`Storyshots NounParadigm South saami noun 1`] = `
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-76"
+      className="MuiTableRow-root-96"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
       >
         Ess
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-67 MuiTableCell-body-69"
+        className="MuiTableCell-root-83 MuiTableCell-body-85"
         colSpan={2}
       >
         <div>
@@ -5024,411 +5024,411 @@ exports[`Storyshots TermWikiArticle default 1`] = `
 
 exports[`Storyshots VerbParadigm North saami verbs 1`] = `
 <table
-  className="MuiTable-root-129"
+  className="MuiTable-root-161"
 >
   <thead
-    className="MuiTableHead-root-130"
+    className="MuiTableHead-root-162"
   >
     <th
       aria-sort={null}
-      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      className="MuiTableCell-root-163 MuiTableCell-head-164"
       scope="col"
     />
     <th
       aria-sort={null}
-      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      className="MuiTableCell-root-163 MuiTableCell-head-164"
       scope="col"
     >
       Present
     </th>
     <th
       aria-sort={null}
-      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      className="MuiTableCell-root-163 MuiTableCell-head-164"
       scope="col"
     >
       Prs ConNeg
     </th>
     <th
       aria-sort={null}
-      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      className="MuiTableCell-root-163 MuiTableCell-head-164"
       scope="col"
     >
       Perfectum
     </th>
     <th
       aria-sort={null}
-      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      className="MuiTableCell-root-163 MuiTableCell-head-164"
       scope="col"
     >
       PrfPrc
     </th>
     <th
       aria-sort={null}
-      className="MuiTableCell-root-131 MuiTableCell-head-132"
+      className="MuiTableCell-root-163 MuiTableCell-head-164"
       scope="col"
     >
       Prt ConNeg
     </th>
   </thead>
   <tbody
-    className="MuiTableBody-root-139"
+    className="MuiTableBody-root-175"
   >
     <tr
-      className="MuiTableRow-root-140"
+      className="MuiTableRow-root-176"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         mun
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         váccán
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (in) vácce
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vázzen
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (lean) vázzán
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (in) vázzán
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-140"
+      className="MuiTableRow-root-176"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         don
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         váccát
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (it) vácce
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vázzet
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (leat) vázzán
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (it) vázzán
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-140"
+      className="MuiTableRow-root-176"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         son
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vázzá
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (ii) vácce
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         váccii
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (lea) vázzán
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (ii) vázzán
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-140"
+      className="MuiTableRow-root-176"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         moai
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vázze
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (ean) vácce
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vácciime
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (ledne) vázzán
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (ean) vázzán
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-140"
+      className="MuiTableRow-root-176"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         doai
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vázzibeahtti
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (eahppi) vácce
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vácciide
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (leahppi) vázzán
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (eahppi) vázzán
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-140"
+      className="MuiTableRow-root-176"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         soai
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vázziba
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (eaba) vácce
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vácciiga
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (leaba) vázzán
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (eaba) vázzán
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-140"
+      className="MuiTableRow-root-176"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         mii
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vázzit
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (eat) vácce
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vácciimet
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (leat) vázzán
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (leat) vázzán
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-140"
+      className="MuiTableRow-root-176"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         dii
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vázzibehtet
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (ehpet) vácce
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vácciidet
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (lehpet) vázzán
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (ehpet) vázzán
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-140"
+      className="MuiTableRow-root-176"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         sii
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vázzet
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (eai) vácce
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         vázze
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (leat) vázzán
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-131 MuiTableCell-body-133"
+        className="MuiTableCell-root-163 MuiTableCell-body-165"
       >
         (eat) vázzán
       </td>
