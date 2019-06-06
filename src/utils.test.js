@@ -14,6 +14,7 @@ import {
 import {
   resultDictWithExamples,
   resultDictWithoutExamples,
+  resultDictWithLatin,
   resultTermWiki,
   resultAehtjie,
   resultSnakkeWithRe,
@@ -95,6 +96,33 @@ const existDictWithoutExamples = {
   'term': 'guolladat',
   'lang': 'sme',
   'def': null
+};
+
+const existDictWithLatin = {
+  'term': 'makrellterne',
+  'pos': 'N',
+  'dict': 'nobsma',
+  'status': null,
+  'lang': 'nob',
+  'termwikiref': '-1',
+  'def': null,
+  'expl': null,
+  'tg': {
+    'xml:lang': 'sma',
+    '#text': [
+      '\n            ',
+      '\n            ',
+      '\n         '
+    ],
+    're': {
+      'xml:lang': 'lat',
+      '#text': 'sterna hirundo'
+    },
+    't': {
+      'pos': 'N',
+      '#text': 'makrelle-dearne'
+    }
+  }
 };
 
 const termWiki = {
@@ -427,6 +455,11 @@ describe('Massage data from eXist', () => {
   it('Normalise a dict article without examples into an object', () => {
     expect(normaliseArticles([existDictWithoutExamples]))
     .toEqual(resultDictWithoutExamples);
+  });
+
+  it('Normalise a dict article with re with lat', () => {
+    expect(normaliseArticles([existDictWithLatin]))
+    .toEqual(resultDictWithLatin);
   });
 
   it('Normalise a termwiki article into an object', () => {

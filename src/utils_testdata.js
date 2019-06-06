@@ -43,6 +43,25 @@ export const resultDictWithoutExamples = [{
   ]
 }];
 
+export const resultDictWithLatin = [{
+  dict: 'nobsma',
+  examples: [],
+  termwikiref: '-1',
+  translations: [
+    {
+      pos: 'N',
+      lang: 'nob',
+      lemma: 'makrellterne'
+    },
+    {
+      lang: 'sma',
+      lemma: 'makrelle-dearne',
+      pos: 'N',
+      re: '(lat: sterna hirundo)'
+    }
+  ]
+}];
+
 export const resultAehtjie = [
   {
     dict: 'smanob',

@@ -161,7 +161,11 @@ export const translationStems = (tg) => {
       'pos': tg.t.pos
     };
     if (tg['re']) {
-      result['re'] = '(' + tg['re'] + ')';
+      if (tg['re'] instanceof Object) {
+        result['re'] = '(' + tg['re']['xml:lang'] + ': ' + tg['re']['#text'] + ')';
+      } else {
+        result['re'] = '(' + tg['re'] + ')';
+      }
     }
     stems.push(result);
   }
