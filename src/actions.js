@@ -51,7 +51,7 @@ export const receiveParadigm = (stem, text) => ({
 });
 
 const apifetchArticle = (lemma) => {
-  let url = `http://satni.uit.no:8080/exist/restxq/satni/article/${lemma}`;
+  let url = `https://satni.uit.no/satnibackend/article/${lemma}`;
   return fetch(encodeURI(url));
 };
 
@@ -76,7 +76,7 @@ export const fetchArticles = (lemma) => (dispatch) => {
 const fetchItems = (key) => (dispatch) => {
   dispatch(requestItems(key));
 
-  let url = `http://satni.uit.no:8080/exist/restxq/satni/search?query=${key}`;
+  let url = `https://satni.uit.no/satnibackend/search?query=${key}`;
   return fetch(encodeURI(url))
       .then(response => response.text())
       .then(text => dispatch(receiveItems(key, toJson(text))));
