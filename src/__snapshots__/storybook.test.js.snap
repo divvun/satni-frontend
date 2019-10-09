@@ -2858,6 +2858,7 @@ exports[`Storyshots DictArticle default 1`] = `
       >
         <a
           href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Search for guolli in Korp
@@ -2886,6 +2887,7 @@ exports[`Storyshots DictArticle default 1`] = `
       >
         <a
           href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Search for guolli in Korp
@@ -2941,6 +2943,8 @@ exports[`Storyshots DictArticle default 1`] = `
     className="css-jxikhn"
   >
     Source: 
+    Neahttadigisánit
+     
     smenob
   </div>
 </div>
@@ -2969,6 +2973,7 @@ exports[`Storyshots DictArticle without_examples 1`] = `
       >
         <a
           href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Search for guolli in Korp
@@ -2997,6 +3002,7 @@ exports[`Storyshots DictArticle without_examples 1`] = `
       >
         <a
           href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Search for guolli in Korp
@@ -3027,6 +3033,8 @@ exports[`Storyshots DictArticle without_examples 1`] = `
     className="css-jxikhn"
   >
     Source: 
+    Neahttadigisánit
+     
     smenob
   </div>
 </div>
@@ -4130,6 +4138,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"oainnáhus\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for oainnáhus in Korp
@@ -4185,6 +4194,8 @@ exports[`Storyshots PresentArticles All types 1`] = `
       className="css-jxikhn"
     >
       Source: 
+      Neahttadigisánit
+       
       smenob
     </div>
   </div>
@@ -4210,6 +4221,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolladat\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for guolladat in Korp
@@ -4240,6 +4252,8 @@ exports[`Storyshots PresentArticles All types 1`] = `
       className="css-jxikhn"
     >
       Source: 
+      Neahttadigisánit
+       
       smefin
     </div>
   </div>
@@ -4265,6 +4279,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgyn\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for androgyn in Korp
@@ -4311,6 +4326,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynlâšvuotâ\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for androgynlâšvuotâ in Korp
@@ -4338,6 +4354,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynvuotâ\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for androgynvuotâ in Korp
@@ -4366,6 +4383,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"androgyna\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for androgyna in Korp
@@ -4396,6 +4414,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
     >
       <a
         href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
+        rel="noopener noreferrer"
         target="_blank"
       >
         This article on the TermWiki
@@ -4431,6 +4450,7 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"oainnáhus\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for oainnáhus in Korp
@@ -4486,6 +4506,8 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
       className="css-jxikhn"
     >
       Source: 
+      Neahttadigisánit
+       
       smenob
     </div>
   </div>
@@ -4518,6 +4540,7 @@ exports[`Storyshots PresentArticles DictArticle without examples 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolladat\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for guolladat in Korp
@@ -4548,6 +4571,8 @@ exports[`Storyshots PresentArticles DictArticle without examples 1`] = `
       className="css-jxikhn"
     >
       Source: 
+      Neahttadigisánit
+       
       smefin
     </div>
   </div>
@@ -4580,6 +4605,7 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgyn\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for androgyn in Korp
@@ -4626,6 +4652,7 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynlâšvuotâ\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for androgynlâšvuotâ in Korp
@@ -4653,6 +4680,7 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynvuotâ\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for androgynvuotâ in Korp
@@ -4681,6 +4709,7 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
         >
           <a
             href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"androgyna\\"]"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Search for androgyna in Korp
@@ -4711,6 +4740,7 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
     >
       <a
         href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
+        rel="noopener noreferrer"
         target="_blank"
       >
         This article on the TermWiki
@@ -4725,6 +4755,8 @@ exports[`Storyshots Source default 1`] = `
   className="css-jxikhn"
 >
   Source: 
+  Neahttadigisánit
+   
   smenob
 </div>
 `;
@@ -4748,6 +4780,7 @@ exports[`Storyshots Stem default 1`] = `
   >
     <a
       href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+      rel="noopener noreferrer"
       target="_blank"
     >
       Search for guolli in Korp
@@ -4779,6 +4812,7 @@ exports[`Storyshots Stem key_nonzero 1`] = `
   >
     <a
       href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+      rel="noopener noreferrer"
       target="_blank"
     >
       Search for guolli in Korp
@@ -4806,6 +4840,7 @@ exports[`Storyshots Stem lang_nonsme 1`] = `
   >
     <a
       href="http://gtweb.uit.no/korp/?mode=smj#?search=cqp|[lemma%3D\\"guolli\\"]"
+      rel="noopener noreferrer"
       target="_blank"
     >
       Search for guolli in Korp
@@ -4851,6 +4886,7 @@ exports[`Storyshots Stem with_re 1`] = `
   >
     <a
       href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+      rel="noopener noreferrer"
       target="_blank"
     >
       Search for guolli in Korp
@@ -4879,6 +4915,7 @@ exports[`Storyshots Stems default 1`] = `
     >
       <a
         href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+        rel="noopener noreferrer"
         target="_blank"
       >
         Search for guolli in Korp
@@ -4907,6 +4944,7 @@ exports[`Storyshots Stems default 1`] = `
     >
       <a
         href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+        rel="noopener noreferrer"
         target="_blank"
       >
         Search for guolli in Korp
@@ -4957,6 +4995,7 @@ exports[`Storyshots TermWikiArticle default 1`] = `
       >
         <a
           href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Search for guolli in Korp
@@ -4985,6 +5024,7 @@ exports[`Storyshots TermWikiArticle default 1`] = `
       >
         <a
           href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Search for guolli in Korp
@@ -5017,6 +5057,7 @@ exports[`Storyshots TermWikiArticle default 1`] = `
       className="css-jxikhn"
     >
       Source: 
+       
     </div>
   </div>
 </div>
