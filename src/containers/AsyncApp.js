@@ -9,7 +9,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-import styled, { css } from 'react-emotion';
 import Searcher from '../components/Searcher';
 import Articles from '../components/Articles';
 
