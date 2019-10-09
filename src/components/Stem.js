@@ -13,7 +13,7 @@ const KorpLink = (lang, lemma) => {
     <span className={css({
       float: 'right',
       display: 'inline'
-    })}><a href={korpAddress} target='_blank'>{searchString}</a></span>
+    })}><a href={korpAddress} target='_blank' rel='noopener noreferrer'>{searchString}</a></span>
   );
 };
 
