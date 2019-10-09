@@ -1,5 +1,20 @@
 import React from 'react';
-import { css } from "react-emotion";
+import { css } from 'react-emotion';
+
+const names = {
+  'smenob': 'Neahttadigisánit',
+  'smesmn': 'Neahttadigisánit',
+  'nobsme': 'Neahttadigisánit',
+  'smefin': 'Neahttadigisánit',
+  'finsme': 'Neahttadigisánit',
+  'smsfin': 'Neahttadigisánit',
+  'finsms': 'Neahttadigisánit',
+  'smanob': 'Nedtedigibaahkoeh',
+  'nobsma': 'Nedtedigibaahkoeh',
+  'smnfin': 'Nettidigsäänih',
+  'smnsme': 'Nettidigsäänih',
+  'finsmn': 'Nettidigsäänih'
+};
 
 const Source = ({source}) => {
   return (
@@ -8,7 +23,7 @@ const Source = ({source}) => {
       marginTop: '1%',
       paddingBottom: '0',
       fontSize: '90%'
-    })}>Source: {source}</div>
+    })}>Source: {names[source]} {source}</div>
   );
 };
 
