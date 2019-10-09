@@ -18,7 +18,7 @@ const TermWikiArticle = ({stems, termwikiref, dictionary}) => {
         {dictionary === 'termwiki'
         ? <a
           href={`https://satni.uit.no/termwiki/index.php?title=${termwikiref}`}
-          target='_blank'>
+          target='_blank' rel='noopener noreferrer'>
           This article on the TermWiki
         </a>
         : <Source source={dictionary} />
