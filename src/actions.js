@@ -68,7 +68,7 @@ export const fetchArticles = (lemma) => (dispatch) => {
       Sentry.captureException(error);
       dispatch({
         type: FETCH_ARTICLES_ERROR,
-        message: `Could not show articles for «${lemma}»`
+        message: lemma
       });
     });
 };
