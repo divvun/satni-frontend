@@ -3,8 +3,7 @@ import React from 'react';
 
 const FetchArticlesError = ({ message }) => (
   <div>
-    <p>Woops! {message}</p>
-    <button onClick={() => Sentry.showReportDialog()}>Report feedback</button>
+    <p>The word «{message}» is not in the database.</p>
   </div>
 );
 
