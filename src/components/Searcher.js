@@ -29,7 +29,9 @@ class Searcher extends Component {
   }
 
   handleChange = (selectedItem) => {
-    this.setState({articlepath: `/article/${selectedItem}`})
+    selectedItem
+    ? this.setState({articlepath: `/article/${selectedItem}`})
+    : this.setState({articlepath: '/'})
   };
 
   render () {
