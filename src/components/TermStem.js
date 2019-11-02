@@ -17,20 +17,17 @@ const KorpLink = (lang, lemma) => {
   );
 };
 
-const Stem = ({ stem: {lemma, pos, lang, key, re}}) => {
+const TermStem = ({ stem: {lemma, pos, lang, key, re}}) => {
   return (
     <div
       className={css({
         width: '100%',
         key: key
       })}>
-      <span className={css({ display: 'inline'})}>{key ? <span className={css({
-        fontWeight: 'bold',
-        marginLeft: '2%'
-      })}>{lemma}</span> : lemma} {re} ({pos}) {lang}</span>
+      <span className={css({ display: 'inline'})}>{lemma} {re} ({pos})</span>
       {korpLangs.has(lang) && (KorpLink(lang, lemma))}
     </div>
   );
 };
 
-export default Stem;
+export default TermStem;
