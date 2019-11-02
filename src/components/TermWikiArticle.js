@@ -2,13 +2,13 @@ import React from 'react';
 import { css } from 'react-emotion';
 
 import { ArticleDiv } from '../components';
-import Stems from './Stems';
+import TermStems from './TermStems';
 import Source from './Source';
 
 const TermWikiArticle = ({stems, termwikiref, dictionary}) => {
   return (
     <ArticleDiv>
-      <Stems stems={stems} />
+      <TermStems stems={stems} />
       <div className={css({
         textAlign: 'right',
         marginTop: '1%',

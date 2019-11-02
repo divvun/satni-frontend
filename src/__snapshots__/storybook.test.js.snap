@@ -2848,9 +2848,9 @@ exports[`Storyshots DictArticle default 1`] = `
       >
         guolli
          
-         
+         (
         N
-         
+        ) 
         sme
       </span>
       <span
@@ -2877,9 +2877,9 @@ exports[`Storyshots DictArticle default 1`] = `
           guolli
         </span>
          
-         
+         (
         N
-         
+        ) 
         sme
       </span>
       <span
@@ -2906,9 +2906,9 @@ exports[`Storyshots DictArticle default 1`] = `
           guolli
         </span>
          
-         
+         (
         N
-         
+        ) 
         nob
       </span>
     </div>
@@ -2963,9 +2963,9 @@ exports[`Storyshots DictArticle without_examples 1`] = `
       >
         guolli
          
-         
+         (
         N
-         
+        ) 
         sme
       </span>
       <span
@@ -2992,9 +2992,9 @@ exports[`Storyshots DictArticle without_examples 1`] = `
           guolli
         </span>
          
-         
+         (
         N
-         
+        ) 
         sme
       </span>
       <span
@@ -3021,9 +3021,9 @@ exports[`Storyshots DictArticle without_examples 1`] = `
           guolli
         </span>
          
-         
+         (
         N
-         
+        ) 
         nob
       </span>
     </div>
@@ -4128,9 +4128,9 @@ exports[`Storyshots PresentArticles All types 1`] = `
         >
           oainnáhus
            
-           
+           (
           N
-           
+          ) 
           sme
         </span>
         <span
@@ -4157,9 +4157,9 @@ exports[`Storyshots PresentArticles All types 1`] = `
             syn
           </span>
            
-           
+           (
           N
-           
+          ) 
           nob
         </span>
       </div>
@@ -4211,9 +4211,9 @@ exports[`Storyshots PresentArticles All types 1`] = `
         >
           guolladat
            
-           
+           (
           N
-           
+          ) 
           sme
         </span>
         <span
@@ -4240,9 +4240,9 @@ exports[`Storyshots PresentArticles All types 1`] = `
             kalvoin verkonkudonnassa
           </span>
            
-           
+           (
           N
-           
+          ) 
           fin
         </span>
       </div>
@@ -4260,155 +4260,167 @@ exports[`Storyshots PresentArticles All types 1`] = `
   <div
     className="css-1xgunds"
   >
-    <div>
-      <div
-        className="css-1jd5iyo"
+    <table
+      className="css-8atqhb"
+    >
+      <tr
+        className="css-1hgawz4"
       >
-        <span
-          className="css-6n7j50"
-        >
-          androgyn
-           
-           
-          N
-           
-          smn
-        </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgyn\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Search for androgyn in Korp
-          </a>
-        </span>
-      </div>
-      <div
-        className="css-1inwbm7"
-      >
-        <span
-          className="css-6n7j50"
-        >
-          <span
-            className="css-1xbsv2t"
-          >
-            androgyne
-          </span>
-           
-           
-          N
-           
-          eng
-        </span>
-      </div>
-      <div
-        className="css-1idyajt"
-      >
-        <span
-          className="css-6n7j50"
-        >
-          <span
-            className="css-1xbsv2t"
-          >
-            androgynlâšvuotâ
-          </span>
-           
-           
-          A
-           
-          smn
-        </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynlâšvuotâ\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Search for androgynlâšvuotâ in Korp
-          </a>
-        </span>
-      </div>
-      <div
-        className="css-57uot7"
-      >
-        <span
-          className="css-6n7j50"
-        >
-          <span
-            className="css-1xbsv2t"
-          >
-            androgynvuotâ
-          </span>
-           
-           
-           
-          smn
-        </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynvuotâ\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Search for androgynvuotâ in Korp
-          </a>
-        </span>
-      </div>
-      <div
-        className="css-f0vlhc"
-      >
-        <span
-          className="css-6n7j50"
-        >
-          <span
-            className="css-1xbsv2t"
-          >
-            androgyna
-          </span>
-           
-           
-          N
-           
+        <td>
           sme
-        </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"androgyna\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
+        </td>
+        <td>
+          <div
+            className="css-1jd5iyo"
           >
-            Search for androgyna in Korp
-          </a>
-        </span>
-      </div>
-      <div
-        className="css-1bntkfq"
+            <span
+              className="css-6n7j50"
+            >
+              androgyna
+               
+               (
+              N
+              )
+            </span>
+            <span
+              className="css-1lyvo2c"
+            >
+              <a
+                href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"androgyna\\"]"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Search for androgyna in Korp
+              </a>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="css-1hgawz4"
       >
-        <span
-          className="css-6n7j50"
-        >
-          <span
-            className="css-1xbsv2t"
+        <td>
+          smn
+        </td>
+        <td>
+          <div
+            className="css-1jd5iyo"
           >
-            androgyyni
-          </span>
-           
-           
-          N
-           
+            <span
+              className="css-6n7j50"
+            >
+              androgyn
+               
+               (
+              N
+              )
+            </span>
+            <span
+              className="css-1lyvo2c"
+            >
+              <a
+                href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgyn\\"]"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Search for androgyn in Korp
+              </a>
+            </span>
+          </div>
+          <div
+            className="css-1inwbm7"
+          >
+            <span
+              className="css-6n7j50"
+            >
+              androgynlâšvuotâ
+               
+               (
+              A
+              )
+            </span>
+            <span
+              className="css-1lyvo2c"
+            >
+              <a
+                href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynlâšvuotâ\\"]"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Search for androgynlâšvuotâ in Korp
+              </a>
+            </span>
+          </div>
+          <div
+            className="css-1idyajt"
+          >
+            <span
+              className="css-6n7j50"
+            >
+              androgynvuotâ
+               
+               (
+              )
+            </span>
+            <span
+              className="css-1lyvo2c"
+            >
+              <a
+                href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynvuotâ\\"]"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Search for androgynvuotâ in Korp
+              </a>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="css-1hgawz4"
+      >
+        <td>
           fin
-        </span>
-      </div>
-    </div>
+        </td>
+        <td>
+          <div
+            className="css-1jd5iyo"
+          >
+            <span
+              className="css-6n7j50"
+            >
+              androgyyni
+               
+               (
+              N
+              )
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="css-1hgawz4"
+      >
+        <td>
+          eng
+        </td>
+        <td>
+          <div
+            className="css-1jd5iyo"
+          >
+            <span
+              className="css-6n7j50"
+            >
+              androgyne
+               
+               (
+              N
+              )
+            </span>
+          </div>
+        </td>
+      </tr>
+    </table>
     <div
       className="css-jxikhn"
     >
@@ -4440,9 +4452,9 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
         >
           oainnáhus
            
-           
+           (
           N
-           
+          ) 
           sme
         </span>
         <span
@@ -4469,9 +4481,9 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
             syn
           </span>
            
-           
+           (
           N
-           
+          ) 
           nob
         </span>
       </div>
@@ -4530,9 +4542,9 @@ exports[`Storyshots PresentArticles DictArticle without examples 1`] = `
         >
           guolladat
            
-           
+           (
           N
-           
+          ) 
           sme
         </span>
         <span
@@ -4559,9 +4571,9 @@ exports[`Storyshots PresentArticles DictArticle without examples 1`] = `
             kalvoin verkonkudonnassa
           </span>
            
-           
+           (
           N
-           
+          ) 
           fin
         </span>
       </div>
@@ -4586,155 +4598,167 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
   <div
     className="css-1xgunds"
   >
-    <div>
-      <div
-        className="css-1jd5iyo"
+    <table
+      className="css-8atqhb"
+    >
+      <tr
+        className="css-1hgawz4"
       >
-        <span
-          className="css-6n7j50"
-        >
-          androgyn
-           
-           
-          N
-           
-          smn
-        </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgyn\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Search for androgyn in Korp
-          </a>
-        </span>
-      </div>
-      <div
-        className="css-1inwbm7"
-      >
-        <span
-          className="css-6n7j50"
-        >
-          <span
-            className="css-1xbsv2t"
-          >
-            androgyne
-          </span>
-           
-           
-          N
-           
-          eng
-        </span>
-      </div>
-      <div
-        className="css-1idyajt"
-      >
-        <span
-          className="css-6n7j50"
-        >
-          <span
-            className="css-1xbsv2t"
-          >
-            androgynlâšvuotâ
-          </span>
-           
-           
-          A
-           
-          smn
-        </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynlâšvuotâ\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Search for androgynlâšvuotâ in Korp
-          </a>
-        </span>
-      </div>
-      <div
-        className="css-57uot7"
-      >
-        <span
-          className="css-6n7j50"
-        >
-          <span
-            className="css-1xbsv2t"
-          >
-            androgynvuotâ
-          </span>
-           
-           
-           
-          smn
-        </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynvuotâ\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Search for androgynvuotâ in Korp
-          </a>
-        </span>
-      </div>
-      <div
-        className="css-f0vlhc"
-      >
-        <span
-          className="css-6n7j50"
-        >
-          <span
-            className="css-1xbsv2t"
-          >
-            androgyna
-          </span>
-           
-           
-          N
-           
+        <td>
           sme
-        </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"androgyna\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
+        </td>
+        <td>
+          <div
+            className="css-1jd5iyo"
           >
-            Search for androgyna in Korp
-          </a>
-        </span>
-      </div>
-      <div
-        className="css-1bntkfq"
+            <span
+              className="css-6n7j50"
+            >
+              androgyna
+               
+               (
+              N
+              )
+            </span>
+            <span
+              className="css-1lyvo2c"
+            >
+              <a
+                href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"androgyna\\"]"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Search for androgyna in Korp
+              </a>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="css-1hgawz4"
       >
-        <span
-          className="css-6n7j50"
-        >
-          <span
-            className="css-1xbsv2t"
+        <td>
+          smn
+        </td>
+        <td>
+          <div
+            className="css-1jd5iyo"
           >
-            androgyyni
-          </span>
-           
-           
-          N
-           
+            <span
+              className="css-6n7j50"
+            >
+              androgyn
+               
+               (
+              N
+              )
+            </span>
+            <span
+              className="css-1lyvo2c"
+            >
+              <a
+                href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgyn\\"]"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Search for androgyn in Korp
+              </a>
+            </span>
+          </div>
+          <div
+            className="css-1inwbm7"
+          >
+            <span
+              className="css-6n7j50"
+            >
+              androgynlâšvuotâ
+               
+               (
+              A
+              )
+            </span>
+            <span
+              className="css-1lyvo2c"
+            >
+              <a
+                href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynlâšvuotâ\\"]"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Search for androgynlâšvuotâ in Korp
+              </a>
+            </span>
+          </div>
+          <div
+            className="css-1idyajt"
+          >
+            <span
+              className="css-6n7j50"
+            >
+              androgynvuotâ
+               
+               (
+              )
+            </span>
+            <span
+              className="css-1lyvo2c"
+            >
+              <a
+                href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynvuotâ\\"]"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Search for androgynvuotâ in Korp
+              </a>
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="css-1hgawz4"
+      >
+        <td>
           fin
-        </span>
-      </div>
-    </div>
+        </td>
+        <td>
+          <div
+            className="css-1jd5iyo"
+          >
+            <span
+              className="css-6n7j50"
+            >
+              androgyyni
+               
+               (
+              N
+              )
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="css-1hgawz4"
+      >
+        <td>
+          eng
+        </td>
+        <td>
+          <div
+            className="css-1jd5iyo"
+          >
+            <span
+              className="css-6n7j50"
+            >
+              androgyne
+               
+               (
+              N
+              )
+            </span>
+          </div>
+        </td>
+      </tr>
+    </table>
     <div
       className="css-jxikhn"
     >
@@ -4770,9 +4794,9 @@ exports[`Storyshots Stem default 1`] = `
   >
     guolli
      
-     
+     (
     N
-     
+    ) 
     sme
   </span>
   <span
@@ -4802,9 +4826,9 @@ exports[`Storyshots Stem key_nonzero 1`] = `
       guolli
     </span>
      
-     
+     (
     N
-     
+    ) 
     sme
   </span>
   <span
@@ -4830,9 +4854,9 @@ exports[`Storyshots Stem lang_nonsme 1`] = `
   >
     guolli
      
-     
+     (
     N
-     
+    ) 
     smj
   </span>
   <span
@@ -4858,9 +4882,9 @@ exports[`Storyshots Stem non_sami 1`] = `
   >
     guolli
      
-     
+     (
     N
-     
+    ) 
     nob
   </span>
 </div>
@@ -4876,9 +4900,9 @@ exports[`Storyshots Stem with_re 1`] = `
     guolli
      
     (restring)
-     
+     (
     N
-     
+    ) 
     sme
   </span>
   <span
@@ -4905,9 +4929,9 @@ exports[`Storyshots Stems default 1`] = `
     >
       guolli
        
-       
+       (
       N
-       
+      ) 
       sme
     </span>
     <span
@@ -4934,9 +4958,9 @@ exports[`Storyshots Stems default 1`] = `
         guolli
       </span>
        
-       
+       (
       N
-       
+      ) 
       sme
     </span>
     <span
@@ -4963,9 +4987,9 @@ exports[`Storyshots Stems default 1`] = `
         guolli
       </span>
        
-       
+       (
       N
-       
+      ) 
       nob
     </span>
   </div>
@@ -4976,89 +5000,178 @@ exports[`Storyshots TermWikiArticle default 1`] = `
 <div
   className="css-1xgunds"
 >
-  <div>
-    <div
-      className="css-1jd5iyo"
+  <table
+    className="css-8atqhb"
+  >
+    <tr
+      className="css-1hgawz4"
     >
-      <span
-        className="css-6n7j50"
-      >
-        guolli
-         
-         
-        N
-         
+      <td>
         sme
-      </span>
-      <span
-        className="css-1lyvo2c"
-      >
-        <a
-          href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
-          rel="noopener noreferrer"
-          target="_blank"
+      </td>
+      <td>
+        <div
+          className="css-1jd5iyo"
         >
-          Search for guolli in Korp
-        </a>
-      </span>
-    </div>
-    <div
-      className="css-1inwbm7"
+          <span
+            className="css-6n7j50"
+          >
+            androgyna
+             
+             (
+            A
+            )
+          </span>
+          <span
+            className="css-1lyvo2c"
+          >
+            <a
+              href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"androgyna\\"]"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Search for androgyna in Korp
+            </a>
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="css-1hgawz4"
     >
-      <span
-        className="css-6n7j50"
-      >
-        <span
-          className="css-1xbsv2t"
+      <td>
+        smn
+      </td>
+      <td>
+        <div
+          className="css-1jd5iyo"
         >
-          guolli
-        </span>
-         
-         
-        N
-         
-        sme
-      </span>
-      <span
-        className="css-1lyvo2c"
-      >
-        <a
-          href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
-          rel="noopener noreferrer"
-          target="_blank"
+          <span
+            className="css-6n7j50"
+          >
+            androgyn
+             
+             (
+            A
+            )
+          </span>
+          <span
+            className="css-1lyvo2c"
+          >
+            <a
+              href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgyn\\"]"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Search for androgyn in Korp
+            </a>
+          </span>
+        </div>
+        <div
+          className="css-1inwbm7"
         >
-          Search for guolli in Korp
-        </a>
-      </span>
-    </div>
-    <div
-      className="css-1idyajt"
+          <span
+            className="css-6n7j50"
+          >
+            androgynlâšvuotâ
+             
+             (
+            A
+            )
+          </span>
+          <span
+            className="css-1lyvo2c"
+          >
+            <a
+              href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynlâšvuotâ\\"]"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Search for androgynlâšvuotâ in Korp
+            </a>
+          </span>
+        </div>
+        <div
+          className="css-1idyajt"
+        >
+          <span
+            className="css-6n7j50"
+          >
+            androgynvuotâ
+             
+             (
+            A
+            )
+          </span>
+          <span
+            className="css-1lyvo2c"
+          >
+            <a
+              href="http://gtweb.uit.no/korp/?mode=smn#?search=cqp|[lemma%3D\\"androgynvuotâ\\"]"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Search for androgynvuotâ in Korp
+            </a>
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="css-1hgawz4"
     >
-      <span
-        className="css-6n7j50"
-      >
-        <span
-          className="css-1xbsv2t"
+      <td>
+        fin
+      </td>
+      <td>
+        <div
+          className="css-1jd5iyo"
         >
-          guolli
-        </span>
-         
-         
-        N
-         
-        nob
-      </span>
-    </div>
-  </div>
+          <span
+            className="css-6n7j50"
+          >
+            androgyyni
+             
+             (
+            A
+            )
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="css-1hgawz4"
+    >
+      <td>
+        eng
+      </td>
+      <td>
+        <div
+          className="css-1jd5iyo"
+        >
+          <span
+            className="css-6n7j50"
+          >
+            androgyne
+             
+             (
+            A
+            )
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
   <div
     className="css-jxikhn"
   >
-    <div
-      className="css-jxikhn"
+    <a
+      href="https://satni.uit.no/termwiki/index.php?title=Luonddudieđa ja matematihkka:androgyn"
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      Source: 
-       
-    </div>
+      This article on the TermWiki
+    </a>
   </div>
 </div>
 `;
