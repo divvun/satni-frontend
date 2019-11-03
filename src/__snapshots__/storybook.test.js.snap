@@ -3049,16 +3049,68 @@ exports[`Storyshots Korp invalid language 1`] = `
 </div>
 `;
 
+exports[`Storyshots Korp invalid lemma 1`] = `
+<div>
+  <span>
+    asdfghjlo
+     was not found in 
+    sme
+     Korp
+  </span>
+</div>
+`;
+
+exports[`Storyshots Korp sma valid lemma 1`] = `
+<div>
+  <span>
+    gïele
+     was not found in 
+    sma
+     Korp
+  </span>
+</div>
+`;
+
 exports[`Storyshots Korp sme valid lemma 1`] = `
 <div>
   <span>
-    <a
-      href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"juolgi\\"]"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Search for juolgi in Korp
-    </a>
+    juolgi
+     was not found in 
+    sme
+     Korp
+  </span>
+</div>
+`;
+
+exports[`Storyshots Korp smj valid lemma 1`] = `
+<div>
+  <span>
+    guolle
+     was not found in 
+    smj
+     Korp
+  </span>
+</div>
+`;
+
+exports[`Storyshots Korp smn valid lemma 1`] = `
+<div>
+  <span>
+    ja
+     was not found in 
+    smn
+     Korp
+  </span>
+</div>
+`;
+
+exports[`Storyshots Korp sms valid lemma 1`] = `
+<div>
+  <span>
+    ja
+     was not found in 
+    sms
+     Korp
   </span>
 </div>
 `;
@@ -3092,13 +3144,10 @@ exports[`Storyshots LemmaDetails valid korp language 1`] = `
   </span>
   <div>
     <span>
-      <a
-        href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"juolgi\\"]"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Search for juolgi in Korp
-      </a>
+      juolgi
+       was not found in 
+      sme
+       Korp
     </span>
   </div>
 </div>
