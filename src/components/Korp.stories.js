@@ -11,4 +11,9 @@ const korpInfo = {
 
 storiesOf('Korp', module)
   .add('invalid language', () => <Korp language='eng' lemma='juolgi' />)
+  .add('invalid lemma', () => <Korp language='sme' lemma='asdfghjlo' />)
+  .add('sma valid lemma', () => <Korp language='sma' lemma='gïele' />)
+  .add('smj valid lemma', () => <Korp language='smj' lemma='guolle' />)
+  .add('sms valid lemma', () => <Korp language='sms' lemma='ja' />)
+  .add('smn valid lemma', () => <Korp language='smn' lemma='ja' />)
   .add('sme valid lemma', () => <Korp language='sme' lemma='juolgi' />);
