@@ -2853,17 +2853,6 @@ exports[`Storyshots DictArticle default 1`] = `
         ) 
         sme
       </span>
-      <span
-        className="css-1lyvo2c"
-      >
-        <a
-          href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Search for guolli in Korp
-        </a>
-      </span>
     </div>
     <div
       className="css-1inwbm7"
@@ -2881,17 +2870,6 @@ exports[`Storyshots DictArticle default 1`] = `
         N
         ) 
         sme
-      </span>
-      <span
-        className="css-1lyvo2c"
-      >
-        <a
-          href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Search for guolli in Korp
-        </a>
       </span>
     </div>
     <div
@@ -2968,17 +2946,6 @@ exports[`Storyshots DictArticle without_examples 1`] = `
         ) 
         sme
       </span>
-      <span
-        className="css-1lyvo2c"
-      >
-        <a
-          href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Search for guolli in Korp
-        </a>
-      </span>
     </div>
     <div
       className="css-1inwbm7"
@@ -2996,17 +2963,6 @@ exports[`Storyshots DictArticle without_examples 1`] = `
         N
         ) 
         sme
-      </span>
-      <span
-        className="css-1lyvo2c"
-      >
-        <a
-          href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Search for guolli in Korp
-        </a>
       </span>
     </div>
     <div
@@ -3080,6 +3036,70 @@ exports[`Storyshots Examples default 1`] = `
     >
       translation1
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Korp invalid language 1`] = `
+<div>
+  <span>
+    There is no corpus for 
+    eng
+  </span>
+</div>
+`;
+
+exports[`Storyshots Korp sme valid lemma 1`] = `
+<div>
+  <span>
+    <a
+      href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"juolgi\\"]"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Search for juolgi in Korp
+    </a>
+  </span>
+</div>
+`;
+
+exports[`Storyshots LemmaDetails invalid korp language 1`] = `
+<div>
+  <span>
+    juolgi
+     
+    N
+     
+    eng
+  </span>
+  <div>
+    <span>
+      There is no corpus for 
+      eng
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots LemmaDetails valid korp language 1`] = `
+<div>
+  <span>
+    juolgi
+     
+    N
+     
+    sme
+  </span>
+  <div>
+    <span>
+      <a
+        href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"juolgi\\"]"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Search for juolgi in Korp
+      </a>
+    </span>
   </div>
 </div>
 `;
@@ -4133,17 +4153,6 @@ exports[`Storyshots PresentArticles All types 1`] = `
           ) 
           sme
         </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"oainnáhus\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Search for oainnáhus in Korp
-          </a>
-        </span>
       </div>
       <div
         className="css-1inwbm7"
@@ -4215,17 +4224,6 @@ exports[`Storyshots PresentArticles All types 1`] = `
           N
           ) 
           sme
-        </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolladat\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Search for guolladat in Korp
-          </a>
         </span>
       </div>
       <div
@@ -4457,17 +4455,6 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
           ) 
           sme
         </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"oainnáhus\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Search for oainnáhus in Korp
-          </a>
-        </span>
       </div>
       <div
         className="css-1inwbm7"
@@ -4546,17 +4533,6 @@ exports[`Storyshots PresentArticles DictArticle without examples 1`] = `
           N
           ) 
           sme
-        </span>
-        <span
-          className="css-1lyvo2c"
-        >
-          <a
-            href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolladat\\"]"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Search for guolladat in Korp
-          </a>
         </span>
       </div>
       <div
@@ -4799,17 +4775,6 @@ exports[`Storyshots Stem default 1`] = `
     ) 
     sme
   </span>
-  <span
-    className="css-1lyvo2c"
-  >
-    <a
-      href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Search for guolli in Korp
-    </a>
-  </span>
 </div>
 `;
 
@@ -4831,17 +4796,6 @@ exports[`Storyshots Stem key_nonzero 1`] = `
     ) 
     sme
   </span>
-  <span
-    className="css-1lyvo2c"
-  >
-    <a
-      href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Search for guolli in Korp
-    </a>
-  </span>
 </div>
 `;
 
@@ -4858,17 +4812,6 @@ exports[`Storyshots Stem lang_nonsme 1`] = `
     N
     ) 
     smj
-  </span>
-  <span
-    className="css-1lyvo2c"
-  >
-    <a
-      href="http://gtweb.uit.no/korp/?mode=smj#?search=cqp|[lemma%3D\\"guolli\\"]"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Search for guolli in Korp
-    </a>
   </span>
 </div>
 `;
@@ -4905,17 +4848,6 @@ exports[`Storyshots Stem with_re 1`] = `
     ) 
     sme
   </span>
-  <span
-    className="css-1lyvo2c"
-  >
-    <a
-      href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Search for guolli in Korp
-    </a>
-  </span>
 </div>
 `;
 
@@ -4934,17 +4866,6 @@ exports[`Storyshots Stems default 1`] = `
       ) 
       sme
     </span>
-    <span
-      className="css-1lyvo2c"
-    >
-      <a
-        href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Search for guolli in Korp
-      </a>
-    </span>
   </div>
   <div
     className="css-1inwbm7"
@@ -4962,17 +4883,6 @@ exports[`Storyshots Stems default 1`] = `
       N
       ) 
       sme
-    </span>
-    <span
-      className="css-1lyvo2c"
-    >
-      <a
-        href="http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D\\"guolli\\"]"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Search for guolli in Korp
-      </a>
     </span>
   </div>
   <div
