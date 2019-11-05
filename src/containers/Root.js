@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AsyncApp from './AsyncApp';
 import ErrorBoundary from '../components/ErrorBoundary';
+import LemmaDetails from '../components/LemmaDetails.js';
 
 const NoMatch = () => <Redirect to='/' />;
 
@@ -16,7 +17,7 @@ const Root = ({ store }) => (
           <Switch>
             <Route path='/' exact component={AsyncApp} />
             <Route path='/article/:lemma' component={AsyncApp} />
-            <Route path='*' component={NoMatch} />
+            <Route path='/details' component={LemmaDetails} />
           </Switch>
         </Router>
       </ErrorBoundary>
