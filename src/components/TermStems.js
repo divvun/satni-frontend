@@ -27,7 +27,11 @@ const createTable = (stems) => {
 };
 
 const TermStems = ({stems}) => {
-  return <table className={css({width: '100%'})}>{createTable(stems)}</table>;
+  return <table className={css({width: '100%'})}>
+    <tbody>
+      {createTable(stems)}
+    </tbody>
+  </table>;
 };
 
 export default TermStems;
