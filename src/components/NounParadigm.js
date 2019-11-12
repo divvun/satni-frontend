@@ -314,17 +314,17 @@ const Content = ({analyses, language}) => {
     case 'smj':
       return <SmjContent analyses={analyses} />;
       break;
-      case 'smn':
-        return <SmnContent analyses={analyses} />;
-        break;
+    case 'smn':
+      return <SmnContent analyses={analyses} />;
+      break;
     case 'sme':
       return <SmeContent analyses={analyses} />;
       break;
-      case 'fin':
-        return <FinContent analyses={analyses} />;
-        break;
+    case 'fin':
+      return <FinContent analyses={analyses} />;
+      break;
     default:
-      null;
+      return null;
   }
 };
 
