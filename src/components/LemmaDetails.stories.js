@@ -4,12 +4,9 @@ import { action } from '@storybook/addon-actions';
 
 import LemmaDetails from './LemmaDetails';
 
-const lemmaInfo = {
-  lemma: 'juolgi',
-  pos: 'N',
-  language: 'sme'
-};
+const valid_korp_language = { search: '?lemma=juolgi&pos=N&lang=sme'};
+const invalid_korp_language = { search: '?lemma=juolgi&pos=N&lang=eng'};
 
 storiesOf('LemmaDetails', module)
-  .add('valid korp language', () => <LemmaDetails lemma='juolgi' pos='N' language='sme' />)
-  .add('invalid korp language', () => <LemmaDetails lemma='juolgi' pos='N' language='eng' />);
+  .add('valid korp language', () => <LemmaDetails location={valid_korp_language} />)
+  .add('invalid korp language', () => <LemmaDetails location={invalid_korp_language} />);
