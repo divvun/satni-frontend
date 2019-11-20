@@ -28,6 +28,15 @@ describe('actions', () => {
     expect(actions.requestItems(key)).toEqual(expectedAction);
   });
 
+  it('should create an action to request a paradigm for the given stem', () => {
+    const stem = {lemma: 'guolle', pos: 'N', lang: 'smj'};
+    const expectedAction = {
+      type: actions.FETCH_PARADIGM_REQUEST,
+      stem
+    };
+    expect(actions.requestParadigm(stem)).toEqual(expectedAction);
+  });
+
   it('should create an action to receive articles as text for the given lemma', () => {
     const lemma = 'guolle';
     const json = {'key': 'value'};
@@ -37,6 +46,18 @@ describe('actions', () => {
       articles: json
     };
     expect(actions.receiveArticles(lemma, json))
+      .toEqual(expectedAction);
+  });
+
+  it('should create an action to receive a paradigm as json for the given stem', () => {
+    const stem = {lemma: 'guolle', pos: 'N', lang: 'smj'};
+    const json = {'key': 'value'};
+    const expectedAction = {
+      type: actions.FETCH_PARADIGM_SUCCESS,
+      stem,
+      paradigm: json
+    };
+    expect(actions.receiveParadigm(stem, json))
       .toEqual(expectedAction);
   });
 

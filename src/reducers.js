@@ -6,6 +6,8 @@ import {
   FETCH_ARTICLES_ERROR,
   FETCH_ARTICLES_REQUEST,
   FETCH_ARTICLES_SUCCESS,
+  FETCH_PARADIGM_REQUEST,
+  FETCH_PARADIGM_SUCCESS,
   REQUEST_ITEMS,
   RECEIVE_ITEMS
 } from './actions';
@@ -54,6 +56,57 @@ const articlesByLemma = (state = {}, action) => {
         ...state,
         ...{
           [action.lemma]: articles(state[action.lemma], action)
+        }
+      };
+    default:
+      return state;
+  }
+};
+
+const paradigm = (
+  state = {
+    isFetching: false,
+    analyses: {}
+  },
+  action
+) => {
+  switch (action.type) {
+    case FETCH_PARADIGM_REQUEST:
+      return {
+        ...state,
+        ...{
+          isFetching: true
+        }
+      };
+    case FETCH_PARADIGM_SUCCESS:
+      return {
+        ...state,
+        ...{
+          isFetching: false,
+          analyses: action.json
+        }
+      };
+    case FETCH_ARTICLES_ERROR:
+      return {
+        ...state,
+        ...{
+          isFetching: false,
+          analyses: {}
+        }
+      };
+    default:
+      return state;
+  }
+};
+
+const paradigmByStem = (state = {}, action) => {
+  switch (action.type) {
+    case FETCH_ARTICLES_SUCCESS:
+    case FETCH_ARTICLES_REQUEST:
+      return {
+        ...state,
+        ...{
+          [action.stemAsKey]: paradigm(state[action.stemAsKey], action)
         }
       };
     default:
@@ -125,6 +178,7 @@ const errorMessage = (state = null, action) => {
 
 const rootReducer = combineReducers({
   articlesByLemma,
+  paradigmByStem,
   search,
   errorMessage
 });

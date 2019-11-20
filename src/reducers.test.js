@@ -4,6 +4,7 @@ import {OrderedSet, Set} from 'immutable';
 
 const initialState = {
   articlesByLemma: {},
+  paradigmByStem: {},
   search: {
     'searchKey': '',
     'isSearching': false,
@@ -25,6 +26,7 @@ describe('reducers', () => {
       lemma: 'guolli'
     })).toEqual({
       articlesByLemma: {},
+      paradigmByStem: {},
       search: {
         searchKey: '',
         isSearching: false,
@@ -41,6 +43,7 @@ describe('reducers', () => {
       type: actions.REQUEST_ITEMS
     })).toEqual({
       articlesByLemma: {},
+      paradigmByStem: {},
       search: {
         'searchKey': '',
         'isSearching': true,
@@ -80,6 +83,7 @@ describe('reducers', () => {
       usedSearchKeys: Set.of('guol')
     })).toEqual({
       'articlesByLemma': {},
+      paradigmByStem: {},
       'search': {
         'searchKey': 'guol',
         'isSearching': false,
@@ -116,6 +120,7 @@ describe('reducers', () => {
             'items': []
           }
         },
+        paradigmByStem: {},
         'search': {
           'isSearching': false,
           'searchItems': Set(),
@@ -268,6 +273,7 @@ describe('reducers', () => {
             ]
           }
         },
+        paradigmByStem: {},
         'search': {
           'isSearching': false,
           'searchItems': Set(),
