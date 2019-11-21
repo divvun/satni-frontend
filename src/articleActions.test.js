@@ -20,7 +20,7 @@ describe('actions', () => {
         articles: json
       }
     };
-    expect(actions.fetchArticlesSucces(lemma, json))
+    expect(actions.fetchArticlesSuccess(lemma, json))
       .toEqual(expectedAction);
   });
 });

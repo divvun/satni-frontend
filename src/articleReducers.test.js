@@ -152,6 +152,6 @@ describe('reducers', () => {
         'items': []
       }
     },
-    actions.fetchArticlesSucces('guolli', inputArticles))).toEqual(resultArticles);
+    actions.fetchArticlesSuccess('guolli', inputArticles))).toEqual(resultArticles);
   });
 });
