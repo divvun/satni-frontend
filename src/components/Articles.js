@@ -25,8 +25,6 @@ class Articles extends Component {
       items: []
     };
 
-    console.log('uff', errorMessage, isFetching);
-
     if (errorMessage) {
       return (
         <FetchArticlesError message={errorMessage} />
@@ -37,8 +35,11 @@ class Articles extends Component {
       return <div>Loading articles …</div>;
     }
     //
-    console.log(items);
-    return <PresentArticles articles={items} />;
+    if (items.length > 0) {
+      return <PresentArticles articles={items} />;
+    } else {
+      return <div>No results found for {lemma}</div>;
+    }
   }
 }
 
