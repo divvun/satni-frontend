@@ -4,10 +4,10 @@ describe('actions', () => {
   it('should create an action to request dictionary and term articles for the given lemma', () => {
     const lemma = 'guolle';
     const expectedAction = {
-      type: actions.FETCH_ARTICLES_REQUEST,
-      lemma
+      type: actions.FETCH_ARTICLES_BEGIN,
+      payload: {lemma}
     };
-    expect(actions.requestArticles(lemma)).toEqual(expectedAction);
+    expect(actions.fetchArticlesBegin(lemma)).toEqual(expectedAction);
   });
 
   it('should create an action to receive articles as text for the given lemma', () => {
@@ -15,10 +15,12 @@ describe('actions', () => {
     const json = {'key': 'value'};
     const expectedAction = {
       type: actions.FETCH_ARTICLES_SUCCESS,
-      lemma,
-      articles: json
+      payload: {
+        lemma,
+        articles: json
+      }
     };
-    expect(actions.receiveArticles(lemma, json))
+    expect(actions.fetchArticlesSucces(lemma, json))
       .toEqual(expectedAction);
   });
 });

@@ -2,19 +2,23 @@ import * as Sentry from '@sentry/browser';
 import fetch from 'cross-fetch';
 import {handleErrors, normaliseArticles, toJson} from './utils';
 
-export const FETCH_ARTICLES_REQUEST = 'FETCH_ARTICLES_REQUEST';
+export const FETCH_ARTICLES_BEGIN = 'FETCH_ARTICLES_BEGIN';
 export const FETCH_ARTICLES_SUCCESS = 'FETCH_ARTICLES_SUCCESS';
-export const FETCH_ARTICLES_ERROR = 'FETCH_ARTICLES_ERROR';
+export const FETCH_ARTICLES_FAILURE = 'FETCH_ARTICLES_FAILURE';
 
-export const requestArticles = (lemma) => ({
-  type: FETCH_ARTICLES_REQUEST,
-  lemma
+export const fetchArticlesBegin = (lemma) => ({
+  type: FETCH_ARTICLES_BEGIN,
+  payload: {lemma}
 });
 
-export const receiveArticles = (lemma, json) => ({
+export const fetchArticlesSucces = (lemma, json) => ({
   type: FETCH_ARTICLES_SUCCESS,
-  lemma,
-  articles: json
+  payload: { lemma, articles: json}
+});
+
+export const fetchArticleFailure = (lemma, error) => ({
+  type: FETCH_ARTICLES_FAILURE,
+  payload: {lemma, error}
 });
 
 const apifetchArticle = (lemma) => {
@@ -23,21 +27,18 @@ const apifetchArticle = (lemma) => {
 };
 
 export const fetchArticles = (lemma) => (dispatch) => {
-  dispatch(requestArticles(lemma));
+  dispatch(fetchArticlesBegin(lemma));
 
   return apifetchArticle(lemma)
     .then(handleErrors)
     .then(response => response.text())
     .then(text => {
-      return dispatch(receiveArticles(lemma, normaliseArticles(toJson(text))));
+      return dispatch(fetchArticlesSucces(lemma, normaliseArticles(toJson(text))));
     })
     .catch(error => {
       Sentry.captureException(lemma);
       Sentry.captureException(error);
-      dispatch({
-        type: FETCH_ARTICLES_ERROR,
-        message: `Could not show articles for «${lemma}»`
-      });
+      dispatch(fetchArticleFailure(lemma, error));
     });
 };
 
