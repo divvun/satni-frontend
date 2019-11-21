@@ -11,7 +11,7 @@ export const fetchArticlesBegin = (lemma) => ({
   payload: {lemma}
 });
 
-export const fetchArticlesSucces = (lemma, json) => ({
+export const fetchArticlesSuccess = (lemma, json) => ({
   type: FETCH_ARTICLES_SUCCESS,
   payload: { lemma, articles: json}
 });
@@ -33,7 +33,7 @@ export const fetchArticles = (lemma) => (dispatch) => {
     .then(handleErrors)
     .then(response => response.text())
     .then(text => {
-      return dispatch(fetchArticlesSucces(lemma, normaliseArticles(toJson(text))));
+      return dispatch(fetchArticlesSuccess(lemma, normaliseArticles(toJson(text))));
     })
     .catch(error => {
       Sentry.captureException(lemma);
@@ -58,4 +58,3 @@ export const fetchArticlesIfNeeded = (lemma) => (dispatch, getState) => {
     return dispatch(fetchArticles(lemma));
   }
 };
-
