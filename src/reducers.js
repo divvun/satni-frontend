@@ -1,65 +1,13 @@
 import { combineReducers } from 'redux';
 import { OrderedSet, Set } from 'immutable';
 
+import { articlesByLemma, errorMessage } from './articleReducers';
+
 import {
   SELECT_KEY,
-  FETCH_ARTICLES_ERROR,
-  FETCH_ARTICLES_REQUEST,
-  FETCH_ARTICLES_SUCCESS,
   REQUEST_ITEMS,
   RECEIVE_ITEMS
 } from './actions';
-
-const articles = (
-  state = {
-    isFetching: false,
-    items: []
-  },
-  action
-) => {
-  switch (action.type) {
-    case FETCH_ARTICLES_REQUEST:
-      return {
-        ...state,
-        ...{
-          isFetching: true
-        }
-      };
-    case FETCH_ARTICLES_SUCCESS:
-      return {
-        ...state,
-        ...{
-          isFetching: false,
-          items: action.articles
-        }
-      };
-    case FETCH_ARTICLES_ERROR:
-      return {
-        ...state,
-        ...{
-          isFetching: false,
-          items: []
-        }
-      };
-    default:
-      return state;
-  }
-};
-
-const articlesByLemma = (state = {}, action) => {
-  switch (action.type) {
-    case FETCH_ARTICLES_SUCCESS:
-    case FETCH_ARTICLES_REQUEST:
-      return {
-        ...state,
-        ...{
-          [action.lemma]: articles(state[action.lemma], action)
-        }
-      };
-    default:
-      return state;
-  }
-};
 
 const filterItems = (searchItems, key) => {
   return Set(
@@ -106,18 +54,6 @@ const search = (
           resultItems: filterItems(currentSearchItems, state.searchKey)
         }
       };
-    default:
-      return state;
-  }
-};
-
-const errorMessage = (state = null, action) => {
-  switch (action.type) {
-    case 'FETCH_ARTICLES_ERROR':
-      return action.message;
-    case 'FETCH_ARTICLES_REQUEST':
-    case 'FETCH_ARTICLES_SUCCESS':
-      return null;
     default:
       return state;
   }

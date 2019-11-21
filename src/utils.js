@@ -383,3 +383,11 @@ export const normaliseVerbParadigm = (html) => {
 
   return want;
 };
+
+// Handle HTTP errors since fetch won't.
+export const handleErrors = (response) => {
+  if (!response.ok) {
+    throw Error(response.statusText);
+  }
+  return response;
+};
