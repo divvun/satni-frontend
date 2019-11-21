@@ -10,8 +10,7 @@ const initialState = {
     'searchItems': Set(),
     'usedSearchKeys': Set(),
     'resultItems': OrderedSet()
-  },
-  errorMessage: null
+  }
 };
 
 describe('reducers', () => {
@@ -31,8 +30,7 @@ describe('reducers', () => {
         searchItems: Set(),
         usedSearchKeys: Set(),
         'resultItems': OrderedSet()
-      },
-      errorMessage: null
+      }
     });
   });
 
@@ -47,8 +45,7 @@ describe('reducers', () => {
         'searchItems': Set(),
         'usedSearchKeys': Set(),
         'resultItems': OrderedSet()
-      },
-      errorMessage: null
+      }
     });
   });
 
@@ -91,8 +88,7 @@ describe('reducers', () => {
           'guolleguhppár',
           'guolljut'
         )
-      },
-      errorMessage: null
+      }
     });
   });
 });

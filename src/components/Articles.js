@@ -15,28 +15,20 @@ class Articles extends Component {
   }
 
   render () {
-    const {errorMessage, articlesByLemma, lemma} = this.props;
+    const {articlesByLemma, lemma} = this.props;
 
-    const {
-      isFetching,
-      items
-    } = articlesByLemma[lemma] || {
-      isFetching: false,
-      items: []
-    };
-
-    if (errorMessage) {
+    if (articlesByLemma.errorMessage) {
       return (
-        <FetchArticlesError message={errorMessage} />
+        <FetchArticlesError message={articlesByLemma.errorMessage} />
       );
     }
 
-    if (isFetching) {
+    if (articlesByLemma.isFetching) {
       return <div>Loading articles …</div>;
     }
-    //
-    if (items.length > 0) {
-      return <PresentArticles articles={items} />;
+
+    if (articlesByLemma[lemma] && articlesByLemma[lemma].length > 0) {
+      return <PresentArticles articles={articlesByLemma[lemma]} />;
     } else {
       return <div>No results found for {lemma}</div>;
     }
@@ -48,11 +40,10 @@ Articles.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-  const { articlesByLemma, errorMessage } = state;
+  const { articlesByLemma } = state;
 
   return {
-    articlesByLemma,
-    errorMessage
+    articlesByLemma
   };
 };
 
