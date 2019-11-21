@@ -36,8 +36,10 @@ export const fetchArticles = (lemma) => (dispatch) => {
       return dispatch(fetchArticlesSuccess(lemma, normaliseArticles(toJson(text))));
     })
     .catch(error => {
-      Sentry.captureException(lemma);
-      Sentry.captureException(error);
+      if (process.env.NODE_ENV !== 'development') {
+        Sentry.captureException(lemma);
+        Sentry.captureException(error);
+      }
       dispatch(fetchArticleFailure(lemma, error));
     });
 };
