@@ -5,36 +5,14 @@ import {
 } from './articleActions';
 
 const articles = (
-  state = {
-    isFetching: false,
-    items: []
-  },
+  state = [],
   action
 ) => {
   switch (action.type) {
-    case FETCH_ARTICLES_BEGIN:
-      return {
-        ...state,
-        ...{
-          isFetching: true
-        }
-      };
     case FETCH_ARTICLES_SUCCESS:
-      return {
-        ...state,
-        ...{
-          isFetching: false,
-          items: action.payload.articles
-        }
-      };
+      return action.payload.articles;
     case FETCH_ARTICLES_FAILURE:
-      return {
-        ...state,
-        ...{
-          isFetching: false,
-          items: []
-        }
-      };
+      return [];
     default:
       return state;
   }
@@ -43,10 +21,29 @@ const articles = (
 export const articlesByLemma = (state = {}, action) => {
   switch (action.type) {
     case FETCH_ARTICLES_SUCCESS:
+      return {
+        ...state,
+        ...{
+          isFetching: false,
+          errorMessage: null,
+          [action.payload.lemma]: articles(state[action.payload.lemma], action)
+        }
+      };
     case FETCH_ARTICLES_BEGIN:
       return {
         ...state,
         ...{
+          isFetching: true,
+          errorMessage: null,
+          [action.payload.lemma]: articles(state[action.payload.lemma], action)
+        }
+      };
+    case FETCH_ARTICLES_FAILURE:
+      return {
+        ...state,
+        ...{
+          isFetching: false,
+          errorMessage: action.payload.error,
           [action.payload.lemma]: articles(state[action.payload.lemma], action)
         }
       };

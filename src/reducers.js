@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { OrderedSet, Set } from 'immutable';
 
-import { articlesByLemma, errorMessage } from './articleReducers';
+import { articlesByLemma } from './articleReducers';
 
 import {
   SELECT_KEY,
@@ -61,9 +61,7 @@ const search = (
 
 const rootReducer = combineReducers({
   articlesByLemma,
-  paradigmByStem,
-  search,
-  errorMessage
+  search
 });
 
 export default rootReducer;

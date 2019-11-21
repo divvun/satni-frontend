@@ -13,10 +13,9 @@ describe('reducers', () => {
   it('should handle FETCH_ARTICLES_BEGIN', () => {
     expect(articlesByLemma({},
       actions.fetchArticlesBegin('guolli'))).toEqual({
-        'guolli': {
-          'isFetching': true,
-          'items': []
-        }
+        isFetching: true,
+        errorMessage: null,
+        'guolli': []
       });
   });
 
@@ -103,55 +102,59 @@ describe('reducers', () => {
     ];
 
     const resultArticles = {
-      'guolli': {
-        'isFetching': false,
-        'items': [
-          {
-            'category': 'Luonddudieđa ja matematihkka',
-            'def': null,
-            'dict': 'termwiki',
-            'expl': null,
-            'pos': 'N',
-            'status': null,
-            'term': 'guolli',
-            'termwikiref': 'Luonddudieđa ja matematihkka:guolli',
-            'tg': [
-              {
-                '#text': ['\n      ', '\n    '],
-                't': {'#text': 'fisk', 'pos': 'N'}, 'xml:lang': 'nb'
-              },
-              {
-                '#text': ['\n      ', '\n    '],
-                't': {'#text': 'guolli', 'pos': 'N'}, 'xml:lang': 'se'
-              },
-              {
-                '#text': ['\n      ', '\n    '],
-                't': {'#text': 'guelie', 'pos': 'N'}, 'xml:lang': 'sma'
-              },
-              {
-                '#text': ['\n      ', '\n    '],
-                't': {'#text': 'guolle', 'pos': 'N'}, 'xml:lang': 'smj'
-              },
-              {
-                '#text': ['\n      ', '\n    '],
-                't': {'#text': 'kyeli', 'pos': 'N'}, 'xml:lang': 'smn'
-              },
-              {
-                '#text': ['\n      ', '\n    '],
-                't': {'#text': 'kala', 'pos': 'N'}, 'xml:lang': 'fi'
-              }
-            ]
-          }
-        ]
-      }
+      isFetching: false,
+      errorMessage: null,
+      'guolli': [
+        {
+          'category': 'Luonddudieđa ja matematihkka',
+          'def': null,
+          'dict': 'termwiki',
+          'expl': null,
+          'pos': 'N',
+          'status': null,
+          'term': 'guolli',
+          'termwikiref': 'Luonddudieđa ja matematihkka:guolli',
+          'tg': [
+            {
+              '#text': ['\n      ', '\n    '],
+              't': {'#text': 'fisk', 'pos': 'N'}, 'xml:lang': 'nb'
+            },
+            {
+              '#text': ['\n      ', '\n    '],
+              't': {'#text': 'guolli', 'pos': 'N'}, 'xml:lang': 'se'
+            },
+            {
+              '#text': ['\n      ', '\n    '],
+              't': {'#text': 'guelie', 'pos': 'N'}, 'xml:lang': 'sma'
+            },
+            {
+              '#text': ['\n      ', '\n    '],
+              't': {'#text': 'guolle', 'pos': 'N'}, 'xml:lang': 'smj'
+            },
+            {
+              '#text': ['\n      ', '\n    '],
+              't': {'#text': 'kyeli', 'pos': 'N'}, 'xml:lang': 'smn'
+            },
+            {
+              '#text': ['\n      ', '\n    '],
+              't': {'#text': 'kala', 'pos': 'N'}, 'xml:lang': 'fi'
+            }
+          ]
+        }
+      ]
     };
 
     expect(articlesByLemma({
-      'guolli': {
-        'isFetching': true,
-        'items': []
-      }
-    },
+      'guolli': []},
     actions.fetchArticlesSuccess('guolli', inputArticles))).toEqual(resultArticles);
+  });
+
+  it('should handle FETCH_ARTICLES_FAILURE', () => {
+    expect(articlesByLemma({},
+      actions.fetchArticleFailure('guolli', 'Error'))).toEqual({
+        isFetching: false,
+        errorMessage: 'Error',
+        'guolli': []
+      });
   });
 });
