@@ -10,10 +10,10 @@ describe('reducers', () => {
     expect(articlesByLemma(undefined, {})).toEqual(initialState);
   });
 
-  it('should handle FETCH_ARTICLES_REQUEST', () => {
+  it('should handle FETCH_ARTICLES_BEGIN', () => {
     expect(articlesByLemma({},
       {
-        type: actions.FETCH_ARTICLES_REQUEST,
+        type: actions.FETCH_ARTICLES_BEGIN,
         lemma: 'guolli'
       })).toEqual({
         'guolli': {

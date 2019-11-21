@@ -15,25 +15,27 @@ describe('async actions', () => {
     const lemma = 'guolle';
     const expectedActions = [
       {
-        'lemma': 'guolle',
-        'type': 'FETCH_ARTICLES_REQUEST'
+        payload: {'lemma': 'guolle'},
+        type: 'FETCH_ARTICLES_BEGIN'
       },
       {
-        'articles': [
-          {
-            'dict': 'termwiki',
-            'termwikiref': 'Luonddudieđa ja matematihkka:guolli',
-            'stems': [
+        payload: {
+          'articles': [
+            {
+              'dict': 'termwiki',
+              'termwikiref': 'Luonddudieđa ja matematihkka:guolli',
+              'stems': [
                {'lang': 'smj', 'lemma': 'guolle', 'pos': 'N'},
                {'lang': 'nob', 'lemma': 'fisk', 'pos': 'N'},
                {'lang': 'sme', 'lemma': 'guolli', 'pos': 'N'},
                {'lang': 'sma', 'lemma': 'guelie', 'pos': 'N'},
                {'lang': 'smn', 'lemma': 'kyeli', 'pos': 'N'},
                {'lang': 'fin', 'lemma': 'kala', 'pos': 'N'}
-            ]
-          }
-        ],
-        'lemma': 'guolle',
+              ]
+            }
+          ],
+          'lemma': 'guolle'
+        },
         'type': 'FETCH_ARTICLES_SUCCESS'
       }
     ];

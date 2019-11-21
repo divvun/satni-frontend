@@ -1,6 +1,6 @@
 import {
-  FETCH_ARTICLES_ERROR,
-  FETCH_ARTICLES_REQUEST,
+  FETCH_ARTICLES_FAILURE,
+  FETCH_ARTICLES_BEGIN,
   FETCH_ARTICLES_SUCCESS
 } from './articleActions';
 
@@ -12,7 +12,7 @@ const articles = (
   action
 ) => {
   switch (action.type) {
-    case FETCH_ARTICLES_REQUEST:
+    case FETCH_ARTICLES_BEGIN:
       return {
         ...state,
         ...{
@@ -24,10 +24,10 @@ const articles = (
         ...state,
         ...{
           isFetching: false,
-          items: action.articles
+          items: action.payload.articles
         }
       };
-    case FETCH_ARTICLES_ERROR:
+    case FETCH_ARTICLES_FAILURE:
       return {
         ...state,
         ...{
@@ -43,11 +43,11 @@ const articles = (
 export const articlesByLemma = (state = {}, action) => {
   switch (action.type) {
     case FETCH_ARTICLES_SUCCESS:
-    case FETCH_ARTICLES_REQUEST:
+    case FETCH_ARTICLES_BEGIN:
       return {
         ...state,
         ...{
-          [action.lemma]: articles(state[action.lemma], action)
+          [action.payload.lemma]: articles(state[action.payload.lemma], action)
         }
       };
     default:
@@ -57,9 +57,9 @@ export const articlesByLemma = (state = {}, action) => {
 
 export const errorMessage = (state = null, action) => {
   switch (action.type) {
-    case 'FETCH_ARTICLES_ERROR':
-      return action.message;
-    case 'FETCH_ARTICLES_REQUEST':
+    case 'FETCH_ARTICLES_FAILURE':
+      return action.payload.error;
+    case 'FETCH_ARTICLES_BEGIN':
     case 'FETCH_ARTICLES_SUCCESS':
       return null;
     default:
