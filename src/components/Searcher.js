@@ -85,9 +85,11 @@ class Searcher extends Component {
               </div>
               {isOpen ?
                 <div>
-                  {search.isSearching ?
-                    <div>Fetching search results …</div> :
-                    <Menu>
+                  {search.errorMessage
+                    ? <div><b>{search.searchKey}</b> is not found in this database.</div>
+                    : search.isSearching
+                    ? <div>Fetching search results …</div>
+                    : <Menu>
                       {search.resultItems
                       .map((item, index) => (
                         <Item
