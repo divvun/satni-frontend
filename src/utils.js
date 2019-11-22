@@ -89,6 +89,9 @@ const verbDict = {
 
 export const toJson = (text) => {
   // eXist sometimes sends misformed json, correct it here
+  if (text === 'null') {
+    throw Error('text is null!');
+  }
   return JSON.parse(
     text.indexOf('{') === 0 ?
     '[' + text.slice(text.indexOf('{') + 1, text.lastIndexOf('}')) + ']' :

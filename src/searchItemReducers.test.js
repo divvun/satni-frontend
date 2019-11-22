@@ -7,7 +7,8 @@ const initialState = {
   'isSearching': false,
   'searchItems': Set(),
   'usedSearchKeys': Set(),
-  'resultItems': OrderedSet()
+  'resultItems': OrderedSet(),
+  errorMessage: null
 };
 
 describe('reducers', () => {
@@ -21,7 +22,8 @@ describe('reducers', () => {
       isSearching: false,
       searchItems: Set(),
       usedSearchKeys: Set(),
-      'resultItems': OrderedSet()
+      'resultItems': OrderedSet(),
+      errorMessage: null
     });
   });
 
@@ -31,7 +33,19 @@ describe('reducers', () => {
       'isSearching': true,
       'searchItems': Set(),
       'usedSearchKeys': Set(),
-      'resultItems': OrderedSet()
+      'resultItems': OrderedSet(),
+      errorMessage: null
+    });
+  });
+
+  it('should handle FETCH_SEARCHITEMS_FAILURE', () => {
+    expect(search(initialState, actions.fetchSearchItemsFailure('guolli', 'This is an error'))).toEqual({
+      'searchKey': 'guolli',
+      'isSearching': false,
+      'searchItems': Set(),
+      'usedSearchKeys': Set(),
+      'resultItems': OrderedSet(),
+      errorMessage: 'This is an error'
     });
   });
 
@@ -66,7 +80,8 @@ describe('reducers', () => {
           'guollegáhkku',
           'guolleguhppár',
           'guolljut'
-        )
+        ),
+      errorMessage: null
     });
   });
 });

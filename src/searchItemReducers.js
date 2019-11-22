@@ -3,7 +3,8 @@ import {OrderedSet, Set} from 'immutable';
 import {
   SELECT_KEY,
   FETCH_SEARCHITEMS_BEGIN,
-  FETCH_SEARCHITEMS_SUCCESS
+  FETCH_SEARCHITEMS_SUCCESS,
+  FETCH_SEARCHITEMS_FAILURE
 } from './searchItemActions';
 
 const filterItems = (searchItems, key) => {
@@ -20,7 +21,8 @@ export const search = (
     isSearching: false,
     usedSearchKeys: Set(),
     searchItems: Set(),
-    resultItems: OrderedSet()
+    resultItems: OrderedSet(),
+    errorMessage: null
   },
   action
 ) => {
@@ -31,7 +33,8 @@ export const search = (
         ...{
           searchKey: action.payload.key,
           resultItems: filterItems(state.searchItems, action.payload.key),
-          isSearching: false
+          isSearching: false,
+          errorMessage: null
         }
       };
     case FETCH_SEARCHITEMS_BEGIN:
@@ -39,7 +42,8 @@ export const search = (
         ...state,
         ...{
           searchKey: action.payload.key,
-          isSearching: true
+          isSearching: true,
+          errorMessage: null
         }
       };
     case FETCH_SEARCHITEMS_SUCCESS:
@@ -50,7 +54,17 @@ export const search = (
           isSearching: false,
           usedSearchKeys: state.usedSearchKeys.add(action.payload.key),
           searchItems: currentSearchItems,
-          resultItems: filterItems(currentSearchItems, state.searchKey)
+          resultItems: filterItems(currentSearchItems, state.searchKey),
+          errorMessage: null
+        }
+      };
+    case FETCH_SEARCHITEMS_FAILURE:
+      return {
+        ...state,
+        ...{
+          searchKey: action.payload.key,
+          isSearching: false,
+          errorMessage: action.payload.error
         }
       };
     default:
