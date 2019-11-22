@@ -1,4 +1,4 @@
-import * as actions from './actions';
+import * as actions from './searchItemActions';
 import {Set} from 'immutable';
 
 describe('actions', () => {

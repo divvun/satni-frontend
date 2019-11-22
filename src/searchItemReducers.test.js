@@ -1,51 +1,42 @@
-import reducer from './reducers';
-import * as actions from './actions';
+import { search } from './searchItemReducers';
+import * as actions from './searchItemActions';
 import {OrderedSet, Set} from 'immutable';
 
 const initialState = {
-  articlesByLemma: {},
-  search: {
-    'searchKey': '',
-    'isSearching': false,
-    'searchItems': Set(),
-    'usedSearchKeys': Set(),
-    'resultItems': OrderedSet()
-  }
+  'searchKey': '',
+  'isSearching': false,
+  'searchItems': Set(),
+  'usedSearchKeys': Set(),
+  'resultItems': OrderedSet()
 };
 
 describe('reducers', () => {
   it('should return the initial state', () => {
-    expect(reducer(undefined, {})).toEqual(initialState);
+    expect(search(undefined, {})).toEqual(initialState);
   });
 
   it('should handle SELECT_LEMMA', () => {
-    expect(reducer(initialState, {
+    expect(search(initialState, {
       type: actions.SELECT_LEMMA,
       lemma: 'guolli'
     })).toEqual({
-      articlesByLemma: {},
-      search: {
-        searchKey: '',
-        isSearching: false,
-        searchItems: Set(),
-        usedSearchKeys: Set(),
-        'resultItems': OrderedSet()
-      }
+      searchKey: '',
+      isSearching: false,
+      searchItems: Set(),
+      usedSearchKeys: Set(),
+      'resultItems': OrderedSet()
     });
   });
 
   it('should handle REQUEST_ITEMS', () => {
-    expect(reducer(initialState, {
+    expect(search(initialState, {
       type: actions.REQUEST_ITEMS
     })).toEqual({
-      articlesByLemma: {},
-      search: {
-        'searchKey': '',
-        'isSearching': true,
-        'searchItems': Set(),
-        'usedSearchKeys': Set(),
-        'resultItems': OrderedSet()
-      }
+      'searchKey': '',
+      'isSearching': true,
+      'searchItems': Set(),
+      'usedSearchKeys': Set(),
+      'resultItems': OrderedSet()
     });
   });
 
@@ -57,38 +48,29 @@ describe('reducers', () => {
       { term: 'guollegáhkku', dict: 'smefin', lang: 'sme', langs: 'fin' },
       { term: 'suolljut', dict: 'smefin', lang: 'sme', langs: 'fin' }
     ];
-    const thisSearch = {
-      ...initialState.search,
+    const thisState = {
+      ...initialState,
       ...{
         searchKey: 'guol'
       }
     };
-    const thisState = {
-      ...initialState,
-      ...{
-        search: thisSearch
-      }
-    };
 
-    expect(reducer(thisState, {
+    expect(search(thisState, {
       type: actions.RECEIVE_ITEMS,
       key: 'guol',
       searchItems: Set(receivedItems),
       usedSearchKeys: Set.of('guol')
     })).toEqual({
-      'articlesByLemma': {},
-      'search': {
-        'searchKey': 'guol',
-        'isSearching': false,
-        'searchItems': Set(receivedItems),
-        'usedSearchKeys': Set.of('guol'),
-        'resultItems': OrderedSet.of(
+      'searchKey': 'guol',
+      'isSearching': false,
+      'searchItems': Set(receivedItems),
+      'usedSearchKeys': Set.of('guol'),
+      'resultItems': OrderedSet.of(
           'guollebuktin',
           'guollegáhkku',
           'guolleguhppár',
           'guolljut'
         )
-      }
     });
   });
 });

@@ -17,7 +17,7 @@ import {
 import {
   selectKey,
   fetchItemsIfNeeded
-} from '../actions';
+} from '../searchItemActions';
 
 class Searcher extends Component {
   constructor (props) {
