@@ -37,6 +37,7 @@ export const search = (
       return {
         ...state,
         ...{
+          searchKey: action.payload.key,
           isSearching: true
         }
       };

@@ -13,7 +13,10 @@ export const selectKey = (key) => ({
 });
 
 export const fetchSearchItemsBegin = (key) => ({
-  type: FETCH_SEARCHITEMS_BEGIN
+  type: FETCH_SEARCHITEMS_BEGIN,
+  payload: {
+    key
+  }
 });
 
 export const fetchSearchItemsSuccess = (key, json) => ({
