@@ -15,12 +15,9 @@ describe('reducers', () => {
     expect(search(undefined, {})).toEqual(initialState);
   });
 
-  it('should handle SELECT_LEMMA', () => {
-    expect(search(initialState, {
-      type: actions.SELECT_LEMMA,
-      lemma: 'guolli'
-    })).toEqual({
-      searchKey: '',
+  it('should handle SELECT_KEY', () => {
+    expect(search(initialState, actions.selectKey('guolli'))).toEqual({
+      searchKey: 'guolli',
       isSearching: false,
       searchItems: Set(),
       usedSearchKeys: Set(),
