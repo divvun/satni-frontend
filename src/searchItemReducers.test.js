@@ -28,9 +28,9 @@ describe('reducers', () => {
     });
   });
 
-  it('should handle REQUEST_ITEMS', () => {
+  it('should handle FETCH_SEARCHITEMS_BEGIN', () => {
     expect(search(initialState, {
-      type: actions.REQUEST_ITEMS
+      type: actions.FETCH_SEARCHITEMS_BEGIN
     })).toEqual({
       'searchKey': '',
       'isSearching': true,
@@ -40,7 +40,7 @@ describe('reducers', () => {
     });
   });
 
-  it('should handle RECEIVE_ITEMS', () => {
+  it('should handle FETCH_SEARCHITEMS_SUCCESS', () => {
     const receivedItems = [
       { term: 'guollebuktin', dict: 'smenob', lang: 'sme', langs: 'nob' },
       { term: 'guolleguhppár', dict: 'smenob', lang: 'sme', langs: 'nob' },
@@ -56,10 +56,11 @@ describe('reducers', () => {
     };
 
     expect(search(thisState, {
-      type: actions.RECEIVE_ITEMS,
-      key: 'guol',
-      searchItems: Set(receivedItems),
-      usedSearchKeys: Set.of('guol')
+      type: actions.FETCH_SEARCHITEMS_SUCCESS,
+      payload: {
+        key: 'guol',
+        searchItems: Set(receivedItems)
+      }
     })).toEqual({
       'searchKey': 'guol',
       'isSearching': false,
