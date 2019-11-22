@@ -30,7 +30,8 @@ export const search = (
         ...state,
         ...{
           searchKey: action.payload.key,
-          resultItems: filterItems(state.searchItems, action.payload.key)
+          resultItems: filterItems(state.searchItems, action.payload.key),
+          isSearching: false
         }
       };
     case FETCH_SEARCHITEMS_BEGIN:
