@@ -14,7 +14,10 @@ describe('actions', () => {
   it('should create an action to request search items for the given key', () => {
     const key = 'guolle';
     const expectedAction = {
-      type: actions.FETCH_SEARCHITEMS_BEGIN
+      type: actions.FETCH_SEARCHITEMS_BEGIN,
+      payload: {
+        key
+      }
     };
     expect(actions.fetchSearchItemsBegin(key)).toEqual(expectedAction);
   });

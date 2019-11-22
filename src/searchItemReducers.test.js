@@ -29,10 +29,8 @@ describe('reducers', () => {
   });
 
   it('should handle FETCH_SEARCHITEMS_BEGIN', () => {
-    expect(search(initialState, {
-      type: actions.FETCH_SEARCHITEMS_BEGIN
-    })).toEqual({
-      'searchKey': '',
+    expect(search(initialState, actions.fetchSearchItemsBegin('guolli'))).toEqual({
+      'searchKey': 'guolli',
       'isSearching': true,
       'searchItems': Set(),
       'usedSearchKeys': Set(),
