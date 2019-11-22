@@ -2,8 +2,8 @@ import {OrderedSet, Set} from 'immutable';
 
 import {
   SELECT_KEY,
-  REQUEST_ITEMS,
-  RECEIVE_ITEMS
+  FETCH_SEARCHITEMS_BEGIN,
+  FETCH_SEARCHITEMS_SUCCESS
 } from './searchItemActions';
 
 const filterItems = (searchItems, key) => {
@@ -29,24 +29,24 @@ export const search = (
       return {
         ...state,
         ...{
-          searchKey: action.key,
-          resultItems: filterItems(state.searchItems, action.key)
+          searchKey: action.payload.key,
+          resultItems: filterItems(state.searchItems, action.payload.key)
         }
       };
-    case REQUEST_ITEMS:
+    case FETCH_SEARCHITEMS_BEGIN:
       return {
         ...state,
         ...{
           isSearching: true
         }
       };
-    case RECEIVE_ITEMS:
-      const currentSearchItems = action.searchItems ? state.searchItems.union(action.searchItems) : state.searchItems;
+    case FETCH_SEARCHITEMS_SUCCESS:
+      const currentSearchItems = action.payload.searchItems ? state.searchItems.union(action.payload.searchItems) : state.searchItems;
       return {
         ...state,
         ...{
           isSearching: false,
-          usedSearchKeys: state.usedSearchKeys.add(action.key),
+          usedSearchKeys: state.usedSearchKeys.add(action.payload.key),
           searchItems: currentSearchItems,
           resultItems: filterItems(currentSearchItems, state.searchKey)
         }

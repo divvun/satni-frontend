@@ -16,7 +16,7 @@ import {
 } from '../components';
 import {
   selectKey,
-  fetchItemsIfNeeded
+  fetchSearchItemsIfNeeded
 } from '../searchItemActions';
 
 class Searcher extends Component {
@@ -133,7 +133,7 @@ const mapDispatchToProps = (dispatch) => (
   {
     onInputChange: (key) => {
       dispatch(selectKey(key));
-      debounce(300, dispatch(fetchItemsIfNeeded(key)));
+      debounce(300, dispatch(fetchSearchItemsIfNeeded(key)));
     }
   }
 );

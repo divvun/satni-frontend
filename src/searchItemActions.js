@@ -1,36 +1,40 @@
 import fetch from 'cross-fetch';
 import {handleErrors, toJson} from './utils';
 
-export const REQUEST_ITEMS = 'REQUEST_ITEMS';
+export const FETCH_SEARCHITEMS_BEGIN = 'FETCH_SEARCHITEMS_BEGIN';
 export const SELECT_KEY = 'SELECT_KEY';
-export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
+export const FETCH_SEARCHITEMS_SUCCESS = 'FETCH_SEARCHITEMS_SUCCESS';
 
 export const selectKey = (key) => ({
   type: SELECT_KEY,
-  key
+  payload: {
+    key
+  }
 });
 
-export const requestItems = (key) => ({
-  type: REQUEST_ITEMS
+export const fetchSearchItemsBegin = (key) => ({
+  type: FETCH_SEARCHITEMS_BEGIN
 });
 
-export const receiveItems = (key, json) => ({
-  type: RECEIVE_ITEMS,
-  key,
-  searchItems: json
+export const fetchSearchItemsSuccess = (key, json) => ({
+  type: FETCH_SEARCHITEMS_SUCCESS,
+  payload: {
+    key,
+    searchItems: json
+  }
 });
 
-const fetchItems = (key) => (dispatch) => {
-  dispatch(requestItems(key));
+const fetchSearchItems = (key) => (dispatch) => {
+  dispatch(fetchSearchItemsBegin(key));
 
   let url = `https://satni.uit.no/satnibackend/search?query=${key}`;
   return fetch(encodeURI(url))
       .then(handleErrors)
       .then(response => response.text())
-      .then(text => dispatch(receiveItems(key, toJson(text))));
+      .then(text => dispatch(fetchSearchItemsSuccess(key, toJson(text))));
 };
 
-export const shouldFetchItems = (state, key) => {
+export const shouldFetchSearchItems = (state, key) => {
   if (state.usedSearchKeys.has(key)) {
     return false;
   } else {
@@ -38,8 +42,8 @@ export const shouldFetchItems = (state, key) => {
   }
 };
 
-export const fetchItemsIfNeeded = (key) => (dispatch, getState) => {
-  if (shouldFetchItems(getState().search, key)) {
-    return dispatch(fetchItems(key));
+export const fetchSearchItemsIfNeeded = (key) => (dispatch, getState) => {
+  if (shouldFetchSearchItems(getState().search, key)) {
+    return dispatch(fetchSearchItems(key));
   }
 };
