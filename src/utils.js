@@ -125,7 +125,8 @@ export const ensureTranslationGroupIsArray = (existTerms) => {
 };
 
 export const normaliseArticles = (existTerms) => {
-  return removeDuplicates(
+  try {
+    return removeDuplicates(
     ensureTranslationGroupIsArray(existTerms)).map((existTerm) => {
       if (existTerm.dict !== 'termwiki') {
         let dicts = normaliseDict(existTerm);
@@ -137,6 +138,9 @@ export const normaliseArticles = (existTerms) => {
       return normaliseTermWiki(existTerm);
     }
   );
+  } catch (error) {
+    return [];
+  }
 };
 
 export const translationStems = (tg) => {
@@ -386,4 +390,12 @@ export const normaliseVerbParadigm = (html) => {
 
 export const stemToKey = (stem) => {
   return `${stem.lemma}_${stem.pos}_${stem.lang}`;
+};
+
+// Handle HTTP errors since fetch won't.
+export const handleErrors = (response) => {
+  if (!response.ok) {
+    throw Error(response.statusText);
+  }
+  return response;
 };

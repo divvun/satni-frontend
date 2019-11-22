@@ -1,31 +1,13 @@
-import * as actions from './actions';
-import {Set} from 'immutable';
+import * as actions from './articleActions';
 
 describe('actions', () => {
-  it('should create an action to set the search key', () => {
-    const key = 'guo';
-    const expectedAction = {
-      type: actions.SELECT_KEY,
-      key
-    };
-    expect(actions.selectKey(key)).toEqual(expectedAction);
-  });
-
   it('should create an action to request dictionary and term articles for the given lemma', () => {
     const lemma = 'guolle';
     const expectedAction = {
-      type: actions.FETCH_ARTICLES_REQUEST,
-      lemma
+      type: actions.FETCH_ARTICLES_BEGIN,
+      payload: {lemma}
     };
-    expect(actions.requestArticles(lemma)).toEqual(expectedAction);
-  });
-
-  it('should create an action to request search items for the given key', () => {
-    const key = 'guolle';
-    const expectedAction = {
-      type: actions.REQUEST_ITEMS
-    };
-    expect(actions.requestItems(key)).toEqual(expectedAction);
+    expect(actions.fetchArticlesBegin(lemma)).toEqual(expectedAction);
   });
 
   it('should create an action to request a paradigm for the given stem', () => {
@@ -42,34 +24,12 @@ describe('actions', () => {
     const json = {'key': 'value'};
     const expectedAction = {
       type: actions.FETCH_ARTICLES_SUCCESS,
-      lemma,
-      articles: json
+      payload: {
+        lemma,
+        articles: json
+      }
     };
-    expect(actions.receiveArticles(lemma, json))
-      .toEqual(expectedAction);
-  });
-
-  it('should create an action to receive a paradigm as json for the given stem', () => {
-    const stem = {lemma: 'guolle', pos: 'N', lang: 'smj'};
-    const json = {'key': 'value'};
-    const expectedAction = {
-      type: actions.FETCH_PARADIGM_SUCCESS,
-      stem,
-      paradigm: json
-    };
-    expect(actions.receiveParadigm(stem, json))
-      .toEqual(expectedAction);
-  });
-
-  it('should create an action to receive search items as text for the given lemma', () => {
-    const key = 'guolle';
-    const json = {'key': 'value'};
-    const expectedAction = {
-      type: actions.RECEIVE_ITEMS,
-      key,
-      searchItems: json
-    };
-    expect(actions.receiveItems(key, json))
+    expect(actions.fetchArticlesSuccess(lemma, json))
       .toEqual(expectedAction);
   });
 });
@@ -104,7 +64,7 @@ describe('test conditions for fetching articles', () => {
         'guolle': {
           isFetching: false,
           items: [
-            {key: 'value'}
+              {key: 'value'}
           ]
         }
       }
@@ -125,19 +85,5 @@ describe('test conditions for fetching articles', () => {
       });
     };
     expect(mapTrue(data)).toEqual(['a', 'c']);
-  });
-});
-
-describe('test conditions for fetching search items', () => {
-  it('If key is among usedSearchKeys, do not fetch search items', () => {
-    const key = 'guo';
-    const state = { usedSearchKeys: Set.of('guo')};
-    expect(actions.shouldFetchItems(state, key)).toEqual(false);
-  });
-
-  it('If key is not among usedSearchKeys, fetch search items', () => {
-    const key = 'guol';
-    const state = { usedSearchKeys: Set.of('guo')};
-    expect(actions.shouldFetchItems(state, key)).toEqual(true);
   });
 });

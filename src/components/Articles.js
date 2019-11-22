@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchArticlesIfNeeded } from '../actions';
+import { fetchArticlesIfNeeded } from '../articleActions';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
 
@@ -15,30 +15,23 @@ class Articles extends Component {
   }
 
   render () {
-    const {errorMessage, articlesByLemma, lemma} = this.props;
+    const {articlesByLemma, lemma} = this.props;
 
-    const {
-      isFetching,
-      items
-    } = articlesByLemma[lemma] || {
-      isFetching: false,
-      items: []
-    };
-
-    console.log('uff', errorMessage, isFetching);
-
-    if (errorMessage) {
+    if (articlesByLemma.errorMessage) {
       return (
-        <FetchArticlesError message={errorMessage} />
+        <FetchArticlesError message={articlesByLemma.errorMessage} />
       );
     }
 
-    if (isFetching) {
+    if (articlesByLemma.isFetching) {
       return <div>Loading articles …</div>;
     }
-    //
-    console.log(items);
-    return <PresentArticles articles={items} />;
+
+    if (articlesByLemma[lemma] && articlesByLemma[lemma].length > 0) {
+      return <PresentArticles articles={articlesByLemma[lemma]} />;
+    } else {
+      return <div>No results found for {lemma}</div>;
+    }
   }
 }
 
@@ -47,11 +40,10 @@ Articles.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-  const { articlesByLemma, errorMessage } = state;
+  const { articlesByLemma } = state;
 
   return {
-    articlesByLemma,
-    errorMessage
+    articlesByLemma
   };
 };
 
