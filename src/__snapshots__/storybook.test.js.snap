@@ -4903,7 +4903,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
           className="css-1hgawz4"
         >
           <td>
-            sme
+            North Sami
           </td>
           <td>
             <div>
@@ -4922,7 +4922,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
           className="css-1hgawz4"
         >
           <td>
-            smn
+            Inari Sami
           </td>
           <td>
             <div>
@@ -4960,7 +4960,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
           className="css-1hgawz4"
         >
           <td>
-            fin
+            Finnish
           </td>
           <td>
             <div>
@@ -4979,7 +4979,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
           className="css-1hgawz4"
         >
           <td>
-            eng
+            English
           </td>
           <td>
             <div>
@@ -5178,7 +5178,7 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
           className="css-1hgawz4"
         >
           <td>
-            sme
+            North Sami
           </td>
           <td>
             <div>
@@ -5197,7 +5197,7 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
           className="css-1hgawz4"
         >
           <td>
-            smn
+            Inari Sami
           </td>
           <td>
             <div>
@@ -5235,7 +5235,7 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
           className="css-1hgawz4"
         >
           <td>
-            fin
+            Finnish
           </td>
           <td>
             <div>
@@ -5254,7 +5254,7 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
           className="css-1hgawz4"
         >
           <td>
-            eng
+            English
           </td>
           <td>
             <div>
@@ -5473,7 +5473,7 @@ exports[`Storyshots TermWikiArticle default 1`] = `
         className="css-1hgawz4"
       >
         <td>
-          sme
+          North Sami
         </td>
         <td>
           <div>
@@ -5492,7 +5492,7 @@ exports[`Storyshots TermWikiArticle default 1`] = `
         className="css-1hgawz4"
       >
         <td>
-          smn
+          Inari Sami
         </td>
         <td>
           <div>
@@ -5531,7 +5531,7 @@ exports[`Storyshots TermWikiArticle default 1`] = `
         className="css-1hgawz4"
       >
         <td>
-          fin
+          Finnish
         </td>
         <td>
           <div>
@@ -5550,7 +5550,7 @@ exports[`Storyshots TermWikiArticle default 1`] = `
         className="css-1hgawz4"
       >
         <td>
-          eng
+          English
         </td>
         <td>
           <div>
