@@ -4875,9 +4875,29 @@ exports[`Storyshots PresentArticles All types 1`] = `
   <div
     className="css-1xgunds"
   >
+    <div>
+      Source: 
+      <a
+        href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        TermWiki
+      </a>
+    </div>
     <table
       className="css-8atqhb"
     >
+      <thead>
+        <tr>
+          <th>
+            Language
+          </th>
+          <th>
+            Expression
+          </th>
+        </tr>
+      </thead>
       <tbody>
         <tr
           className="css-1hgawz4"
@@ -4976,15 +4996,14 @@ exports[`Storyshots PresentArticles All types 1`] = `
         </tr>
       </tbody>
     </table>
-    <div
-      className="css-jxikhn"
-    >
+    <div>
+      Category: 
       <a
-        href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
+        href="https://satni.uit.no/termwiki/index.php?title=Kategoriija:Servodatdieđa"
         rel="noopener noreferrer"
         target="_blank"
       >
-        This article on the TermWiki
+        Servodatdieđa
       </a>
     </div>
   </div>
@@ -5131,9 +5150,29 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
   <div
     className="css-1xgunds"
   >
+    <div>
+      Source: 
+      <a
+        href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        TermWiki
+      </a>
+    </div>
     <table
       className="css-8atqhb"
     >
+      <thead>
+        <tr>
+          <th>
+            Language
+          </th>
+          <th>
+            Expression
+          </th>
+        </tr>
+      </thead>
       <tbody>
         <tr
           className="css-1hgawz4"
@@ -5232,15 +5271,14 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
         </tr>
       </tbody>
     </table>
-    <div
-      className="css-jxikhn"
-    >
+    <div>
+      Category: 
       <a
-        href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
+        href="https://satni.uit.no/termwiki/index.php?title=Kategoriija:Servodatdieđa"
         rel="noopener noreferrer"
         target="_blank"
       >
-        This article on the TermWiki
+        Servodatdieđa
       </a>
     </div>
   </div>
@@ -5407,9 +5445,29 @@ exports[`Storyshots TermWikiArticle default 1`] = `
 <div
   className="css-1xgunds"
 >
+  <div>
+    Source: 
+    <a
+      href="https://satni.uit.no/termwiki/index.php?title=Luonddudieđa ja matematihkka:androgyn"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      TermWiki
+    </a>
+  </div>
   <table
     className="css-8atqhb"
   >
+    <thead>
+      <tr>
+        <th>
+          Language
+        </th>
+        <th>
+          Expression
+        </th>
+      </tr>
+    </thead>
     <tbody>
       <tr
         className="css-1hgawz4"
@@ -5509,15 +5567,14 @@ exports[`Storyshots TermWikiArticle default 1`] = `
       </tr>
     </tbody>
   </table>
-  <div
-    className="css-jxikhn"
-  >
+  <div>
+    Category: 
     <a
-      href="https://satni.uit.no/termwiki/index.php?title=Luonddudieđa ja matematihkka:androgyn"
+      href="https://satni.uit.no/termwiki/index.php?title=Kategoriija:Luonddudieđa ja matematihkka"
       rel="noopener noreferrer"
       target="_blank"
     >
-      This article on the TermWiki
+      Luonddudieđa ja matematihkka
     </a>
   </div>
 </div>
