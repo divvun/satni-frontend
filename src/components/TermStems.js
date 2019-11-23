@@ -28,6 +28,12 @@ const createTable = (stems) => {
 
 const TermStems = ({stems}) => {
   return <table className={css({width: '100%'})}>
+    <thead>
+      <tr>
+        <th>Language</th>
+        <th>Expression</th>
+      </tr>
+    </thead>
     <tbody>
       {createTable(stems)}
     </tbody>

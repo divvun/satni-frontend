@@ -6,24 +6,17 @@ import TermStems from './TermStems';
 import Source from './Source';
 
 const TermWikiArticle = ({stems, termwikiref, dictionary}) => {
+  const category = termwikiref.split(':')[0];
   return (
     <ArticleDiv>
-      <TermStems stems={stems} />
-      <div className={css({
-        textAlign: 'right',
-        marginTop: '1%',
-        paddingBottom: '0',
-        fontSize: '90%'
-      })}>
-        {dictionary === 'termwiki'
-        ? <a
+      <div>
+        Source: <a
           href={`https://satni.uit.no/termwiki/index.php?title=${termwikiref}`}
-          target='_blank' rel='noopener noreferrer'>
-          This article on the TermWiki
-        </a>
-        : <Source source={dictionary} />
-        }
+          target='_blank' rel='noopener noreferrer'>TermWiki</a>
       </div>
+      <TermStems stems={stems} />
+      <div>Category: <a href={`https://satni.uit.no/termwiki/index.php?title=Kategoriija:${category}`}
+        target='_blank' rel='noopener noreferrer'>{category}</a></div>
     </ArticleDiv>
   );
 };
