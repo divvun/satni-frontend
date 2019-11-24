@@ -17,11 +17,11 @@ const Articles = () => {
 
   useEffect(() => {
     dispatch(fetchArticlesIfNeeded(lemma));
-  }, []);
+  });
 
   if (articlesByLemma.errorMessage) {
     if (articlesByLemma.errorMessage.message === 'text is null!') {
-      return <div>No results found for {lemma}</div>;
+      return <div>No results found for {lemma} errorMessase</div>;
     } else {
       return <FetchArticlesError message={articlesByLemma.errorMessage.message} />;
     }
@@ -34,7 +34,7 @@ const Articles = () => {
   if (articlesByLemma[lemma] && articlesByLemma[lemma].length > 0) {
     return <PresentArticles articles={articlesByLemma[lemma]} />;
   } else {
-    return <div>No results found for {lemma} no error message</div>;
+    return <div>No results found for {lemma} empty array {articlesByLemma.isFetching}</div>;
   }
 };
 
