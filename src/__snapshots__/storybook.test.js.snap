@@ -2846,7 +2846,11 @@ exports[`Storyshots DictArticle default 1`] = `
       <span
         className="css-6n7j50"
       >
-        guolli
+        <a
+          href="/details?lemma=guolli&lang=sme&pos=N"
+        >
+          guolli
+        </a>
          
          (
         N
@@ -2863,7 +2867,11 @@ exports[`Storyshots DictArticle default 1`] = `
         <span
           className="css-1xbsv2t"
         >
-          guolli
+          <a
+            href="/details?lemma=guolli&lang=sme&pos=N"
+          >
+            guolli
+          </a>
         </span>
          
          (
@@ -2881,7 +2889,11 @@ exports[`Storyshots DictArticle default 1`] = `
         <span
           className="css-1xbsv2t"
         >
-          guolli
+          <a
+            href="/details?lemma=guolli&lang=nob&pos=N"
+          >
+            guolli
+          </a>
         </span>
          
          (
@@ -2939,7 +2951,11 @@ exports[`Storyshots DictArticle without_examples 1`] = `
       <span
         className="css-6n7j50"
       >
-        guolli
+        <a
+          href="/details?lemma=guolli&lang=sme&pos=N"
+        >
+          guolli
+        </a>
          
          (
         N
@@ -2956,7 +2972,11 @@ exports[`Storyshots DictArticle without_examples 1`] = `
         <span
           className="css-1xbsv2t"
         >
-          guolli
+          <a
+            href="/details?lemma=guolli&lang=sme&pos=N"
+          >
+            guolli
+          </a>
         </span>
          
          (
@@ -2974,7 +2994,11 @@ exports[`Storyshots DictArticle without_examples 1`] = `
         <span
           className="css-1xbsv2t"
         >
-          guolli
+          <a
+            href="/details?lemma=guolli&lang=nob&pos=N"
+          >
+            guolli
+          </a>
         </span>
          
          (
@@ -4763,7 +4787,11 @@ exports[`Storyshots PresentArticles All types 1`] = `
         <span
           className="css-6n7j50"
         >
-          oainnáhus
+          <a
+            href="/details?lemma=oainnáhus&lang=sme&pos=N"
+          >
+            oainnáhus
+          </a>
            
            (
           N
@@ -4780,7 +4808,11 @@ exports[`Storyshots PresentArticles All types 1`] = `
           <span
             className="css-1xbsv2t"
           >
-            syn
+            <a
+              href="/details?lemma=syn&lang=nob&pos=N"
+            >
+              syn
+            </a>
           </span>
            
            (
@@ -4835,7 +4867,11 @@ exports[`Storyshots PresentArticles All types 1`] = `
         <span
           className="css-6n7j50"
         >
-          guolladat
+          <a
+            href="/details?lemma=guolladat&lang=sme&pos=N"
+          >
+            guolladat
+          </a>
            
            (
           N
@@ -4852,7 +4888,11 @@ exports[`Storyshots PresentArticles All types 1`] = `
           <span
             className="css-1xbsv2t"
           >
-            kalvoin verkonkudonnassa
+            <a
+              href="/details?lemma=kalvoin verkonkudonnassa&lang=fin&pos=N"
+            >
+              kalvoin verkonkudonnassa
+            </a>
           </span>
            
            (
@@ -5024,7 +5064,11 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
         <span
           className="css-6n7j50"
         >
-          oainnáhus
+          <a
+            href="/details?lemma=oainnáhus&lang=sme&pos=N"
+          >
+            oainnáhus
+          </a>
            
            (
           N
@@ -5041,7 +5085,11 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
           <span
             className="css-1xbsv2t"
           >
-            syn
+            <a
+              href="/details?lemma=syn&lang=nob&pos=N"
+            >
+              syn
+            </a>
           </span>
            
            (
@@ -5103,7 +5151,11 @@ exports[`Storyshots PresentArticles DictArticle without examples 1`] = `
         <span
           className="css-6n7j50"
         >
-          guolladat
+          <a
+            href="/details?lemma=guolladat&lang=sme&pos=N"
+          >
+            guolladat
+          </a>
            
            (
           N
@@ -5120,7 +5172,11 @@ exports[`Storyshots PresentArticles DictArticle without examples 1`] = `
           <span
             className="css-1xbsv2t"
           >
-            kalvoin verkonkudonnassa
+            <a
+              href="/details?lemma=kalvoin verkonkudonnassa&lang=fin&pos=N"
+            >
+              kalvoin verkonkudonnassa
+            </a>
           </span>
            
            (
@@ -5303,7 +5359,11 @@ exports[`Storyshots Stem default 1`] = `
   <span
     className="css-6n7j50"
   >
-    guolli
+    <a
+      href="/details?lemma=guolli&lang=sme&pos=N"
+    >
+      guolli
+    </a>
      
      (
     N
@@ -5323,7 +5383,11 @@ exports[`Storyshots Stem key_nonzero 1`] = `
     <span
       className="css-1xbsv2t"
     >
-      guolli
+      <a
+        href="/details?lemma=guolli&lang=sme&pos=N"
+      >
+        guolli
+      </a>
     </span>
      
      (
@@ -5341,7 +5405,11 @@ exports[`Storyshots Stem lang_nonsme 1`] = `
   <span
     className="css-6n7j50"
   >
-    guolli
+    <a
+      href="/details?lemma=guolli&lang=smj&pos=N"
+    >
+      guolli
+    </a>
      
      (
     N
@@ -5358,7 +5426,11 @@ exports[`Storyshots Stem non_sami 1`] = `
   <span
     className="css-6n7j50"
   >
-    guolli
+    <a
+      href="/details?lemma=guolli&lang=nob&pos=N"
+    >
+      guolli
+    </a>
      
      (
     N
@@ -5375,7 +5447,11 @@ exports[`Storyshots Stem with_re 1`] = `
   <span
     className="css-6n7j50"
   >
-    guolli
+    <a
+      href="/details?lemma=guolli&lang=sme&pos=N"
+    >
+      guolli
+    </a>
      
     (restring)
      (
@@ -5394,7 +5470,11 @@ exports[`Storyshots Stems default 1`] = `
     <span
       className="css-6n7j50"
     >
-      guolli
+      <a
+        href="/details?lemma=guolli&lang=sme&pos=N"
+      >
+        guolli
+      </a>
        
        (
       N
@@ -5411,7 +5491,11 @@ exports[`Storyshots Stems default 1`] = `
       <span
         className="css-1xbsv2t"
       >
-        guolli
+        <a
+          href="/details?lemma=guolli&lang=sme&pos=N"
+        >
+          guolli
+        </a>
       </span>
        
        (
@@ -5429,7 +5513,11 @@ exports[`Storyshots Stems default 1`] = `
       <span
         className="css-1xbsv2t"
       >
-        guolli
+        <a
+          href="/details?lemma=guolli&lang=nob&pos=N"
+        >
+          guolli
+        </a>
       </span>
        
        (
