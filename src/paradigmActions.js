@@ -1,29 +1,46 @@
 import fetch from 'cross-fetch';
-import {handleErrors, toJson} from './utils';
+import {handleErrors} from './utils';
 
-export const FETCH_PARADIGM_REQUEST = 'FETCH_PARADIGM_REQUEST';
+export const FETCH_PARADIGM_BEGIN = 'FETCH_PARADIGM_BEGIN';
 export const FETCH_PARADIGM_SUCCESS = 'FETCH_PARADIGM_SUCCESS';
+export const FETCH_PARADIGM_FAILURE = 'FETCH_PARADIGM_FAILURE';
 
-export const requestParadigm = (stem) => ({
-  type: FETCH_PARADIGM_REQUEST,
-  stem
+export const fetchParadigmBegin = (stem) => ({
+  type: FETCH_PARADIGM_BEGIN,
+  payload: {
+    stem
+  }
 });
 
-export const receiveParadigm = (stem, json) => ({
+export const fetchParadigmSuccess = (stem, json) => ({
   type: FETCH_PARADIGM_SUCCESS,
-  stem,
-  paradigm: json
+  payload: {
+    stem,
+    paradigm: json
+  }
+});
+
+export const fetchParadigmFailure = (stem, error) => ({
+  type: FETCH_PARADIGM_FAILURE,
+  payload: {
+    stem,
+    error
+  }
 });
 
 export const fetchParadigm = (stem) => (dispatch) => {
-  dispatch(requestParadigm(stem));
+  dispatch(fetchParadigmBegin(stem));
 
   let url = `http://gtweb.uit.no/cgi-bin/smi/smi.cgi?json=true&text=${stem.lemma}&pos=${stem.pos}&mode=standard&action=paradigm&lang=${stem.lang}`;
-  console.log(encodeURI(url));
+
   return fetch(encodeURI(url, {credentials: 'same-origin', mode: 'no-cors'}))
       .then(handleErrors)
       .then(response => response.json())
-      .then(json => dispatch(receiveParadigm(stem, json)));
+      .then(json => dispatch(fetchParadigmSuccess(stem, json)))
+      .catch(error => (
+        dispatch(fetchParadigmFailure(stem, error))
+      )
+    );
 };
 
 export const shouldFetchParadigm = (state, key) => {
