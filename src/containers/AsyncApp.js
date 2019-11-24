@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -11,6 +12,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Searcher from '../components/Searcher';
 import Articles from '../components/Articles';
+import LemmaDetails from '../components/LemmaDetails.js';
 
 const styles = theme => ({
   '@global': {
@@ -75,6 +77,12 @@ const footers = [
   }
 ];
 
+const Home = () => (
+  <div>Welcome!</div>
+);
+
+const NoMatch = () => <Redirect to='/' />;
+
 const AsyncApp = ({classes, match}) => (
   <React.Fragment>
     <CssBaseline />
@@ -86,13 +94,18 @@ const AsyncApp = ({classes, match}) => (
       </Toolbar>
     </AppBar>
     <main className={classes.layout}>
-      <div className={classes.heroContent}>
-        <Searcher />
-        {match.params.lemma ?
-          <Articles lemma={match.params.lemma} /> :
-        null
-      }
-      </div>
+      <Router>
+        <div className={classes.heroContent}>
+          <Searcher />
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/article/:lemma'>
+              <Articles />
+            </Route>
+            <Route path='/details' component={LemmaDetails} />
+          </Switch>
+        </div>
+      </Router>
     </main>
     {/* Footer */}
     <footer className={classNames(classes.footer, classes.layout)}>
@@ -117,8 +130,7 @@ const AsyncApp = ({classes, match}) => (
     );
 
 AsyncApp.propTypes = {
-  classes: PropTypes.object.isRequired,
-  matches: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(AsyncApp);
