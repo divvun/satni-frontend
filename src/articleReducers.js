@@ -20,20 +20,20 @@ const articles = (
 
 export const articlesByLemma = (state = {}, action) => {
   switch (action.type) {
-    case FETCH_ARTICLES_SUCCESS:
-      return {
-        ...state,
-        ...{
-          isFetching: false,
-          errorMessage: null,
-          [action.payload.lemma]: articles(state[action.payload.lemma], action)
-        }
-      };
     case FETCH_ARTICLES_BEGIN:
       return {
         ...state,
         ...{
           isFetching: true,
+          errorMessage: null,
+          [action.payload.lemma]: articles(state[action.payload.lemma], action)
+        }
+      };
+    case FETCH_ARTICLES_SUCCESS:
+      return {
+        ...state,
+        ...{
+          isFetching: false,
           errorMessage: null,
           [action.payload.lemma]: articles(state[action.payload.lemma], action)
         }
