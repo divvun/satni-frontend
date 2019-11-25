@@ -329,14 +329,18 @@ const Content = ({analyses, language}) => {
 };
 
 const NounParadigm = ({paradigm, language}) => {
-  return (
-    <Table>
+  if (paradigm) {
+    return <Table>
       <TableHead>
-        <TableCell>&nbsp;</TableCell><TableCell>Sg</TableCell><TableCell>Pl</TableCell>
+        <TableRow>
+          <TableCell>&nbsp;</TableCell><TableCell>Sg</TableCell><TableCell>Pl</TableCell>
+        </TableRow>
       </TableHead>
       <Content analyses={paradigm['analyses']} language={language} />
-    </Table>
-  );
+    </Table>;
+  } else {
+    return <div>Paradigm undefined {language}</div>;
+  }
 };
 
 export default NounParadigm;
