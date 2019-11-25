@@ -3,12 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import NounParadigm from './NounParadigm';
-import {
-  resultSmaNounParadigm,
-  resultSmeNounParadigm,
-  resultSmjNounParadigm,
-  resultSmnNounParadigm
-} from '../utils_testdata';
 
 const paradigm = {
   sme: {
@@ -939,6 +933,68 @@ const paradigm = {
       ]
     }
   },
+  sms: {
+    analyses: {
+      'N+Sg+Nom': [
+        'kueʹll'
+      ],
+      'N+Sg+Gen': [
+        'kueʹl'
+      ],
+      'N+Sg+Acc': [
+        'kueʹl'
+      ],
+      'N+Sg+Ill': [
+        'kuâlla'
+      ],
+      'N+Sg+Loc': [
+        'kueʹlest'
+      ],
+      'N+Sg+Com': [
+        'kuõʹlin',
+        'kueʹlin'
+      ],
+      'N+Sg+Abe': [
+        'kueʹltaa',
+        'kueʹltää'
+      ],
+      'N+Pl+Nom': [
+        'kueʹl'
+      ],
+      'N+Pl+Gen': [
+        'kuõʹli',
+        'kueʹli'
+      ],
+      'N+Pl+Acc': [
+        'kuõʹlid',
+        'kueʹlid'
+      ],
+      'N+Pl+Ill': [
+        'kuõʹlid',
+        'kueʹlid'
+      ],
+      'N+Pl+Loc': [
+        'kuõʹlin',
+        'kueʹlin'
+      ],
+      'N+Pl+Com': [
+        'kuõʹlivuiʹm',
+        'kueʹlivuiʹm'
+      ],
+      'N+Pl+Abe': [
+        'kuõʹlitaa',
+        'kuõʹlitää',
+        'kueʹlitaa',
+        'kueʹlitää'
+      ],
+      'N+Par': [
+        'kueʹlled'
+      ],
+      'N+Ess': [
+        'kueʹllen'
+      ]
+    }
+  },
   smn: {
     'analyses': {
       'N+Sg+Nom': [
@@ -1777,7 +1833,8 @@ const paradigm = {
 
 storiesOf('NounParadigm', module)
   .add('South saami noun', () => <NounParadigm paradigm={paradigm['sma']} language='sma' />)
+  .add('North saami noun', () => <NounParadigm paradigm={paradigm['sme']} language='sme' />)
   .add('Lule saami noun', () => <NounParadigm paradigm={paradigm['smj']} language='smj' />)
   .add('Inari saami noun', () => <NounParadigm paradigm={paradigm['smn']} language='smn' />)
-  .add('Finnish noun', () => <NounParadigm paradigm={paradigm['fin']} language='fin' />)
-  .add('North saami noun', () => <NounParadigm paradigm={paradigm['sme']} language='sme' />);
+  .add('Skolt saami noun', () => <NounParadigm paradigm={paradigm['sms']} language='sms' />)
+  .add('Finnish noun', () => <NounParadigm paradigm={paradigm['fin']} language='fin' />);

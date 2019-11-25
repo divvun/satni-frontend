@@ -4,9 +4,10 @@ import { Set } from 'immutable';
 import { stemToKey } from '../utils';
 import { fetchParadigmIfNeeded } from '../paradigmActions';
 import NounParadigm from './NounParadigm';
+import VerbParadigm from './VerbParadigm';
 
-const langs = Set.of('fin', 'sma', 'sme', 'smj', 'smn');
-const poses = Set.of('N');
+const langs = Set.of('fin', 'sma', 'sme', 'smj', 'smn', 'sms');
+const poses = Set.of('N', 'V', 'Adj');
 
 const Paradigm = ({lemma, language, pos}) => {
   if (poses.has(pos) && langs.has(language)) {
@@ -27,7 +28,20 @@ const Paradigm = ({lemma, language, pos}) => {
       return <div>Loading paradigms…</div>;
     }
 
-    return <NounParadigm paradigm={paradigmByStem[stemToKey({lemma, pos, language})]} language={language} />;
+    switch (pos) {
+      case 'N':
+        return <NounParadigm
+          paradigm={paradigmByStem[stemToKey({lemma, pos, language})]}
+          language={language} />;
+        break;
+      case 'V':
+        return <VerbParadigm
+          paradigm={paradigmByStem[stemToKey({lemma, pos, language})]}
+          language={language} />;
+        break;
+      default:
+        return <div>{lemma}, {language}, {pos}</div>;
+    }
   } else {
     return <div>{lemma}, {language}, {pos}</div>;
   }
