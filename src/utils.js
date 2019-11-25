@@ -392,7 +392,7 @@ export const normaliseVerbParadigm = (html) => {
 };
 
 export const stemToKey = (stem) => {
-  return `${stem.lemma}_${stem.pos}_${stem.lang}`;
+  return `${stem.lemma}_${stem.pos}_${stem.language}`;
 };
 
 // Handle HTTP errors since fetch won't.
