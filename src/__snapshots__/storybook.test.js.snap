@@ -2844,6 +2844,8 @@ exports[`Storyshots DictArticle default 1`] = `
   >
     <a
       href="https://sanit.oahpa.no/detail/sme/nob/guolli.html"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       Source
     </a>
@@ -2953,6 +2955,8 @@ exports[`Storyshots DictArticle without_examples 1`] = `
   >
     <a
       href="https://sanit.oahpa.no/detail/sme/nob/guolli.html"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       Source
     </a>
@@ -3149,6 +3153,382 @@ exports[`Storyshots Korp sms valid lemma 1`] = `
 
 exports[`Storyshots NounParadigm Finnish noun 1`] = `
 <table
+  className="MuiTable-root-181"
+>
+  <thead
+    className="MuiTableHead-root-182"
+  >
+    <tr
+      className="MuiTableRow-root-183 MuiTableRow-head-186"
+    >
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-head-189"
+        scope="col"
+      >
+         
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-head-189"
+        scope="col"
+      >
+        Sg
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-head-189"
+        scope="col"
+      >
+        Pl
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="MuiTableBody-root-200"
+  >
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Nom
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kala
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalat
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Gen
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalan
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalojen
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Par
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalaa
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kaloja
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        All
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalalle
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kaloille
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Abl
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalalta
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kaloilta
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Ade
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalalla
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kaloilla
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Ill
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalaan
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kaloihin
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Ine
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalassa
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kaloissa
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Ela
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalasta
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kaloista
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Abe
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalatta
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kaloitta
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Ess
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalana
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kaloina
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Tra
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kalaksi
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kaloiksi
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-183"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        Ins
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+         
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-188 MuiTableCell-body-190"
+      >
+        <div>
+          kaloin
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Storyshots NounParadigm Inari saami noun 1`] = `
+<table
   className="MuiTable-root-141"
 >
   <thead
@@ -3197,7 +3577,7 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
         className="MuiTableCell-root-148 MuiTableCell-body-150"
       >
         <div>
-          kala
+          kyeli
         </div>
       </td>
       <td
@@ -3205,7 +3585,33 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
         className="MuiTableCell-root-148 MuiTableCell-body-150"
       >
         <div>
-          kalat
+          kyeleh
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-143"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-148 MuiTableCell-body-150"
+      >
+        Acc
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-148 MuiTableCell-body-150"
+      >
+        <div>
+          kyele
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-148 MuiTableCell-body-150"
+      >
+        <div>
+          kuolijd
         </div>
       </td>
     </tr>
@@ -3223,7 +3629,7 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
         className="MuiTableCell-root-148 MuiTableCell-body-150"
       >
         <div>
-          kalan
+          kyele
         </div>
       </td>
       <td
@@ -3231,111 +3637,7 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
         className="MuiTableCell-root-148 MuiTableCell-body-150"
       >
         <div>
-          kalojen
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-143"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        Par
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kalaa
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kaloja
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-143"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        All
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kalalle
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kaloille
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-143"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        Abl
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kalalta
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kaloilta
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-143"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        Ade
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kalalla
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kaloilla
+          kuolij
         </div>
       </td>
     </tr>
@@ -3353,7 +3655,7 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
         className="MuiTableCell-root-148 MuiTableCell-body-150"
       >
         <div>
-          kalaan
+          kuálán
         </div>
       </td>
       <td
@@ -3361,33 +3663,7 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
         className="MuiTableCell-root-148 MuiTableCell-body-150"
       >
         <div>
-          kaloihin
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-143"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        Ine
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kalassa
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kaloissa
+          kuolijd
         </div>
       </td>
     </tr>
@@ -3398,14 +3674,14 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
         aria-sort={null}
         className="MuiTableCell-root-148 MuiTableCell-body-150"
       >
-        Ela
+        Loc
       </td>
       <td
         aria-sort={null}
         className="MuiTableCell-root-148 MuiTableCell-body-150"
       >
         <div>
-          kalasta
+          kyeleest
         </div>
       </td>
       <td
@@ -3413,7 +3689,36 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
         className="MuiTableCell-root-148 MuiTableCell-body-150"
       >
         <div>
-          kaloista
+          kuolijn
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-143"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-148 MuiTableCell-body-150"
+      >
+        Com
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-148 MuiTableCell-body-150"
+      >
+        <div>
+          kuolijn
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-148 MuiTableCell-body-150"
+      >
+        <div>
+          kuolijguin
+        </div>
+        <div>
+          kuolijgijn
         </div>
       </td>
     </tr>
@@ -3431,7 +3736,7 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
         className="MuiTableCell-root-148 MuiTableCell-body-150"
       >
         <div>
-          kalatta
+          kyelettáá
         </div>
       </td>
       <td
@@ -3439,7 +3744,26 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
         className="MuiTableCell-root-148 MuiTableCell-body-150"
       >
         <div>
-          kaloitta
+          kuolijttáá
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-143"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-148 MuiTableCell-body-150"
+      >
+        Par
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-148 MuiTableCell-body-150 MuiTableCell-alignCenter-157"
+        colSpan={2}
+      >
+        <div>
+          kyellid
         </div>
       </td>
     </tr>
@@ -3454,68 +3778,11 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
+        className="MuiTableCell-root-148 MuiTableCell-body-150 MuiTableCell-alignCenter-157"
+        colSpan={2}
       >
         <div>
-          kalana
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kaloina
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-143"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        Tra
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kalaksi
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kaloiksi
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-143"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        Ins
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-         
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-148 MuiTableCell-body-150"
-      >
-        <div>
-          kaloin
+          kyellin
         </div>
       </td>
     </tr>
@@ -3523,7 +3790,7 @@ exports[`Storyshots NounParadigm Finnish noun 1`] = `
 </table>
 `;
 
-exports[`Storyshots NounParadigm Inari saami noun 1`] = `
+exports[`Storyshots NounParadigm Lule saami noun 1`] = `
 <table
   className="MuiTable-root-121"
 >
@@ -3573,7 +3840,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kyeli
+          guolle
         </div>
       </td>
       <td
@@ -3581,7 +3848,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kyeleh
+          guole
         </div>
       </td>
     </tr>
@@ -3599,7 +3866,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kyele
+          guolev
         </div>
       </td>
       <td
@@ -3607,7 +3874,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kuolijd
+          guolijt
         </div>
       </td>
     </tr>
@@ -3625,7 +3892,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kyele
+          guole
         </div>
       </td>
       <td
@@ -3633,7 +3900,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kuolij
+          guolij
         </div>
       </td>
     </tr>
@@ -3651,7 +3918,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kuálán
+          guolláj
         </div>
       </td>
       <td
@@ -3659,7 +3926,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kuolijd
+          guolijda
         </div>
       </td>
     </tr>
@@ -3670,14 +3937,14 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         aria-sort={null}
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
-        Loc
+        Ine
       </td>
       <td
         aria-sort={null}
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kyeleest
+          guolen
         </div>
       </td>
       <td
@@ -3685,7 +3952,33 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kuolijn
+          guolijn
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-123"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-128 MuiTableCell-body-130"
+      >
+        Ela
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-128 MuiTableCell-body-130"
+      >
+        <div>
+          guoles
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-128 MuiTableCell-body-130"
+      >
+        <div>
+          guolijs
         </div>
       </td>
     </tr>
@@ -3703,7 +3996,10 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kuolijn
+          guolijn
+        </div>
+        <div>
+          guolijn
         </div>
       </td>
       <td
@@ -3711,10 +4007,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kuolijguin
-        </div>
-        <div>
-          kuolijgijn
+          guolij
         </div>
       </td>
     </tr>
@@ -3732,7 +4025,10 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kyelettáá
+          guoledagá
+        </div>
+        <div>
+          guoledagi
         </div>
       </td>
       <td
@@ -3740,26 +4036,10 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         className="MuiTableCell-root-128 MuiTableCell-body-130"
       >
         <div>
-          kuolijttáá
+          guolijdagá
         </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-123"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-128 MuiTableCell-body-130"
-      >
-        Par
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-128 MuiTableCell-body-130 MuiTableCell-alignCenter-137"
-        colSpan={2}
-      >
         <div>
-          kyellid
+          guolijdagi
         </div>
       </td>
     </tr>
@@ -3778,7 +4058,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
         colSpan={2}
       >
         <div>
-          kyellin
+          guollen
         </div>
       </td>
     </tr>
@@ -3786,7 +4066,7 @@ exports[`Storyshots NounParadigm Inari saami noun 1`] = `
 </table>
 `;
 
-exports[`Storyshots NounParadigm Lule saami noun 1`] = `
+exports[`Storyshots NounParadigm North saami noun 1`] = `
 <table
   className="MuiTable-root-101"
 >
@@ -3836,7 +4116,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
         <div>
-          guolle
+          guolli
         </div>
       </td>
       <td
@@ -3844,7 +4124,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
         <div>
-          guole
+          guolit
         </div>
       </td>
     </tr>
@@ -3862,7 +4142,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
         <div>
-          guolev
+          guoli
         </div>
       </td>
       <td
@@ -3870,7 +4150,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
         <div>
-          guolijt
+          guliid
         </div>
       </td>
     </tr>
@@ -3890,13 +4170,16 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         <div>
           guole
         </div>
+        <div>
+          guoli
+        </div>
       </td>
       <td
         aria-sort={null}
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
         <div>
-          guolij
+          guliid
         </div>
       </td>
     </tr>
@@ -3914,7 +4197,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
         <div>
-          guolláj
+          guollái
         </div>
       </td>
       <td
@@ -3922,33 +4205,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
         <div>
-          guolijda
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-103"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-108 MuiTableCell-body-110"
-      >
-        Ine
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-108 MuiTableCell-body-110"
-      >
-        <div>
-          guolen
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-108 MuiTableCell-body-110"
-      >
-        <div>
-          guolijn
+          guliide
         </div>
       </td>
     </tr>
@@ -3959,14 +4216,14 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         aria-sort={null}
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
-        Ela
+        Loc
       </td>
       <td
         aria-sort={null}
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
         <div>
-          guoles
+          guolis
         </div>
       </td>
       <td
@@ -3974,7 +4231,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
         <div>
-          guolijs
+          guliin
         </div>
       </td>
     </tr>
@@ -3992,10 +4249,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
         <div>
-          guolijn
-        </div>
-        <div>
-          guolijn
+          guliin
         </div>
       </td>
       <td
@@ -4003,39 +4257,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         className="MuiTableCell-root-108 MuiTableCell-body-110"
       >
         <div>
-          guolij
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-103"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-108 MuiTableCell-body-110"
-      >
-        Abe
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-108 MuiTableCell-body-110"
-      >
-        <div>
-          guoledagá
-        </div>
-        <div>
-          guoledagi
-        </div>
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-108 MuiTableCell-body-110"
-      >
-        <div>
-          guolijdagá
-        </div>
-        <div>
-          guolijdagi
+          guliiguin
         </div>
       </td>
     </tr>
@@ -4054,7 +4276,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
         colSpan={2}
       >
         <div>
-          guollen
+          guollin
         </div>
       </td>
     </tr>
@@ -4062,7 +4284,7 @@ exports[`Storyshots NounParadigm Lule saami noun 1`] = `
 </table>
 `;
 
-exports[`Storyshots NounParadigm North saami noun 1`] = `
+exports[`Storyshots NounParadigm Skolt saami noun 1`] = `
 <table
   className="MuiTable-root-161"
 >
@@ -4112,7 +4334,7 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guolli
+          kueʹll
         </div>
       </td>
       <td
@@ -4120,7 +4342,7 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guolit
+          kueʹl
         </div>
       </td>
     </tr>
@@ -4138,7 +4360,7 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guoli
+          kueʹl
         </div>
       </td>
       <td
@@ -4146,7 +4368,10 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guliid
+          kuõʹlid
+        </div>
+        <div>
+          kueʹlid
         </div>
       </td>
     </tr>
@@ -4164,10 +4389,7 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guole
-        </div>
-        <div>
-          guoli
+          kueʹl
         </div>
       </td>
       <td
@@ -4175,7 +4397,10 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guliid
+          kuõʹli
+        </div>
+        <div>
+          kueʹli
         </div>
       </td>
     </tr>
@@ -4193,7 +4418,7 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guollái
+          kuâlla
         </div>
       </td>
       <td
@@ -4201,7 +4426,10 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guliide
+          kuõʹlid
+        </div>
+        <div>
+          kueʹlid
         </div>
       </td>
     </tr>
@@ -4219,7 +4447,7 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guolis
+          kueʹlest
         </div>
       </td>
       <td
@@ -4227,7 +4455,10 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guliin
+          kuõʹlin
+        </div>
+        <div>
+          kueʹlin
         </div>
       </td>
     </tr>
@@ -4245,7 +4476,10 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guliin
+          kuõʹlin
+        </div>
+        <div>
+          kueʹlin
         </div>
       </td>
       <td
@@ -4253,7 +4487,48 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         className="MuiTableCell-root-168 MuiTableCell-body-170"
       >
         <div>
-          guliiguin
+          kuõʹlivuiʹm
+        </div>
+        <div>
+          kueʹlivuiʹm
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-163"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-168 MuiTableCell-body-170"
+      >
+        Abe
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-168 MuiTableCell-body-170"
+      >
+        <div>
+          kueʹltaa
+        </div>
+        <div>
+          kueʹltää
+        </div>
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-168 MuiTableCell-body-170"
+      >
+        <div>
+          kuõʹlitaa
+        </div>
+        <div>
+          kuõʹlitää
+        </div>
+        <div>
+          kueʹlitaa
+        </div>
+        <div>
+          kueʹlitää
         </div>
       </td>
     </tr>
@@ -4272,7 +4547,26 @@ exports[`Storyshots NounParadigm North saami noun 1`] = `
         colSpan={2}
       >
         <div>
-          guollin
+          kueʹllen
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-163"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-168 MuiTableCell-body-170"
+      >
+        Par
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-168 MuiTableCell-body-170 MuiTableCell-alignCenter-177"
+        colSpan={2}
+      >
+        <div>
+          kueʹlled
         </div>
       </td>
     </tr>
@@ -4557,6 +4851,8 @@ exports[`Storyshots PresentArticles All types 1`] = `
     >
       <a
         href="https://sanit.oahpa.no/detail/sme/nob/oainnáhus.html"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Source
       </a>
@@ -4642,6 +4938,8 @@ exports[`Storyshots PresentArticles All types 1`] = `
     >
       <a
         href="https://sanit.oahpa.no/detail/sme/fin/guolladat.html"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Source
       </a>
@@ -4846,6 +5144,8 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
     >
       <a
         href="https://sanit.oahpa.no/detail/sme/nob/oainnáhus.html"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Source
       </a>
@@ -4938,6 +5238,8 @@ exports[`Storyshots PresentArticles DictArticle without examples 1`] = `
     >
       <a
         href="https://sanit.oahpa.no/detail/sme/fin/guolladat.html"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Source
       </a>
@@ -5143,6 +5445,8 @@ exports[`Storyshots Source default 1`] = `
 >
   <a
     href="https://sanit.oahpa.no/detail/sme/nob/undefined.html"
+    rel="noopener noreferrer"
+    target="_blank"
   >
     Source
   </a>
@@ -5465,417 +5769,1458 @@ exports[`Storyshots TermWikiArticle default 1`] = `
 </div>
 `;
 
+exports[`Storyshots VerbParadigm Inari saami verbs 1`] = `
+<div>
+  <table
+    className="MuiTable-root-261"
+  >
+    <thead
+      className="MuiTableHead-root-262"
+    >
+      <tr
+        className="MuiTableRow-root-263 MuiTableRow-head-266"
+      >
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-head-269"
+          scope="col"
+        />
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-head-269"
+          scope="col"
+        >
+          Present
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-head-269"
+          scope="col"
+        >
+          Perfectum
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root-280"
+    >
+      <tr
+        className="MuiTableRow-root-263"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          mun
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            váázám
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            vazzim
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-263"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          tom
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            váázáh
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            vazzih
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-263"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          sun
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            vázzá
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            vaazij
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-263"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          muoi
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            väzzeen
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            vazzijm
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-263"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          tuoi
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            väzzivettee
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            vazzijd
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-263"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          suoi
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            väzziv
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            vazzijn
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-263"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          mii
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            väzzip
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            vaazijm
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-263"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          tij
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            väzzivetteđ
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            vaazijd
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-263"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          sij
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            väzzih
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-268 MuiTableCell-body-270"
+        >
+          <div>
+            vazzii
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    (onne jiem) 
+    <span>
+      vääzi
+    </span>
+  </div>
+  <div>
+    (jieht jiem) 
+    <span>
+      vázzám
+    </span>
+  </div>
+  <div>
+    (lam) 
+    <span>
+      vázzám
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VerbParadigm Lule saami verbs 1`] = `
+<div>
+  <table
+    className="MuiTable-root-241"
+  >
+    <thead
+      className="MuiTableHead-root-242"
+    >
+      <tr
+        className="MuiTableRow-root-243 MuiTableRow-head-246"
+      >
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-head-249"
+          scope="col"
+        />
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-head-249"
+          scope="col"
+        >
+          Present
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-head-249"
+          scope="col"
+        >
+          Perfectum
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root-260"
+    >
+      <tr
+        className="MuiTableRow-root-243"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          mån
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            váldáv
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            válldiv
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-243"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          duon
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            váldá
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            válldi
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-243"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          sån
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            válldá
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            váldij
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-243"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          måj
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            válldin
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            váldijma
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-243"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          dåj
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            válldebihtte
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            váldijda
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-243"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          såj
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            válldeba
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            váldijga
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-243"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          mij
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            válldep
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            váldijma
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-243"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          dij
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            válldebihtit
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            váldijda
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-243"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          sij
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            válldi
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-248 MuiTableCell-body-250"
+        >
+          <div>
+            válldin
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    (uddni iv) 
+    <span>
+      válde
+    </span>
+  </div>
+  <div>
+    (iektu ittjiv) 
+    <span>
+      válde
+    </span>
+  </div>
+  <div>
+    (lav) 
+    <span>
+      válldám
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Storyshots VerbParadigm North saami verbs 1`] = `
-<table
-  className="MuiTable-root-181"
->
-  <thead
-    className="MuiTableHead-root-182"
+<div>
+  <table
+    className="MuiTable-root-221"
   >
-    <th
-      aria-sort={null}
-      className="MuiTableCell-root-183 MuiTableCell-head-184"
-      scope="col"
-    />
-    <th
-      aria-sort={null}
-      className="MuiTableCell-root-183 MuiTableCell-head-184"
-      scope="col"
+    <thead
+      className="MuiTableHead-root-222"
     >
-      Present
-    </th>
-    <th
-      aria-sort={null}
-      className="MuiTableCell-root-183 MuiTableCell-head-184"
-      scope="col"
+      <tr
+        className="MuiTableRow-root-223 MuiTableRow-head-226"
+      >
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-head-229"
+          scope="col"
+        />
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-head-229"
+          scope="col"
+        >
+          Present
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-head-229"
+          scope="col"
+        >
+          Perfectum
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root-240"
     >
-      Prs ConNeg
-    </th>
-    <th
-      aria-sort={null}
-      className="MuiTableCell-root-183 MuiTableCell-head-184"
-      scope="col"
-    >
-      Perfectum
-    </th>
-    <th
-      aria-sort={null}
-      className="MuiTableCell-root-183 MuiTableCell-head-184"
-      scope="col"
-    >
-      PrfPrc
-    </th>
-    <th
-      aria-sort={null}
-      className="MuiTableCell-root-183 MuiTableCell-head-184"
-      scope="col"
-    >
-      Prt ConNeg
-    </th>
-  </thead>
-  <tbody
-    className="MuiTableBody-root-195"
+      <tr
+        className="MuiTableRow-root-223"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          mun
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            válddán
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            válden
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-223"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          don
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            válddát
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            váldet
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-223"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          son
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            váldá
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            válddii
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-223"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          moai
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            válde
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            válddiime
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-223"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          doai
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            váldibeahtti
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            válddiide
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-223"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          soai
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            váldiba
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            válddiiga
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-223"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          mii
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            váldit
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            válddiimet
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-223"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          dii
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            váldibehtet
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            válddiidet
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-223"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          sii
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            váldet
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-228 MuiTableCell-body-230"
+        >
+          <div>
+            válde
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    (otne in) 
+    <span>
+      váldde
+    </span>
+  </div>
+  <div>
+    (ikte in) 
+    <span>
+      váldán
+    </span>
+  </div>
+  <div>
+    (lean) 
+    <span>
+      váldán
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VerbParadigm Skolt saami verbs 1`] = `
+<div>
+  <table
+    className="MuiTable-root-281"
   >
-    <tr
-      className="MuiTableRow-root-196"
+    <thead
+      className="MuiTableHead-root-282"
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+      <tr
+        className="MuiTableRow-root-283 MuiTableRow-head-286"
       >
-        mun
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        váccán
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (in) vácce
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        vázzen
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (lean) vázzán
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (in) vázzán
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-196"
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-head-289"
+          scope="col"
+        />
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-head-289"
+          scope="col"
+        >
+          Present
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-head-289"
+          scope="col"
+        >
+          Perfectum
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root-300"
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+      <tr
+        className="MuiTableRow-root-283"
       >
-        don
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          mon
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            vääʒʒam
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            vaʹʒʒem
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-283"
       >
-        váccát
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          ton
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            vääʒʒak
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            vaʹʒʒiǩ
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-283"
       >
-        (it) vácce
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          son
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            väʒʒ
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            vaaʹʒʒi
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-283"
       >
-        vázzet
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          mii
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            väʹʒʒep
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            vaaʹʒʒin
+          </div>
+          <div>
+            vaaʹʒʒiim
+          </div>
+          <div>
+            vaaʹʒʒim
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-283"
       >
-        (leat) vázzán
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          tij
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            väʹʒʒveʹted
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            vaaʹʒʒid
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-283"
       >
-        (it) vázzán
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-196"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          sij
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            väʹʒʒe
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            vaʹʒʒe
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-283"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+           
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            vääʹʒʒet
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-288 MuiTableCell-body-290"
+        >
+          <div>
+            vaʹʒʒeš
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    (täʹbbe jiõm) 
+    <span>
+      vääʹʒʒ
+    </span>
+  </div>
+  <div>
+    (jåhtta jiõm) 
+    <span>
+      väʒʒam
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VerbParadigm South saami verbs 1`] = `
+<div>
+  <table
+    className="MuiTable-root-201"
+  >
+    <thead
+      className="MuiTableHead-root-202"
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+      <tr
+        className="MuiTableRow-root-203 MuiTableRow-head-206"
       >
-        son
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        vázzá
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (ii) vácce
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        váccii
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (lea) vázzán
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (ii) vázzán
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-196"
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-head-209"
+          scope="col"
+        />
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-head-209"
+          scope="col"
+        >
+          Present
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-head-209"
+          scope="col"
+        >
+          Perfectum
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root-220"
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+      <tr
+        className="MuiTableRow-root-203"
       >
-        moai
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          manne
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            vaaltam
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            veeltim
+          </div>
+          <div>
+            vaeltiejim
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-203"
       >
-        vázze
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          datne
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            vaaltah
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            veeltih
+          </div>
+          <div>
+            vaeltiejih
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-203"
       >
-        (ean) vácce
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          dïhte
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            vaalta
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            veelti
+          </div>
+          <div>
+            vaeltieji
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-203"
       >
-        vácciime
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          månnoeh
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            vaeltien
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            veeltimen
+          </div>
+          <div>
+            vaeltiejimen
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-203"
       >
-        (ledne) vázzán
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          dotne/dåtnoeh
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            vaelteden
+          </div>
+          <div>
+            vaeltiejidien
+          </div>
+          <div>
+            vaeltiejidien
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            veeltiden
+          </div>
+          <div>
+            vaeltiejiden
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-203"
       >
-        (ean) vázzán
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-196"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          dah guaktah
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            vaeltiejægan
+          </div>
+          <div>
+            vaeltiejægan
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            veeltigan
+          </div>
+          <div>
+            vaeltiejigan
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-203"
       >
-        doai
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          mij
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            vaeltebe
+          </div>
+          <div>
+            vaeltiejibie
+          </div>
+          <div>
+            vaeltiejibie
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            veeltimh
+          </div>
+          <div>
+            vaeltiejimh
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-203"
       >
-        vázzibeahtti
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          dijjieh
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            vaeltede
+          </div>
+          <div>
+            vaeltiejidie
+          </div>
+          <div>
+            vaeltiejidie
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            veeltidh
+          </div>
+          <div>
+            vaeltiejidh
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-203"
       >
-        (eahppi) vácce
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        vácciide
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (leahppi) vázzán
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (eahppi) vázzán
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-196"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        soai
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        vázziba
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (eaba) vácce
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        vácciiga
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (leaba) vázzán
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (eaba) vázzán
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-196"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        mii
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        vázzit
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (eat) vácce
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        vácciimet
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (leat) vázzán
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (leat) vázzán
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-196"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        dii
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        vázzibehtet
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (ehpet) vácce
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        vácciidet
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (lehpet) vázzán
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (ehpet) vázzán
-      </td>
-    </tr>
-    <tr
-      className="MuiTableRow-root-196"
-    >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        sii
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        vázzet
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (eai) vácce
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        vázze
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (leat) vázzán
-      </td>
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root-183 MuiTableCell-body-185"
-      >
-        (eat) vázzán
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          dah
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            vaeltieh
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-208 MuiTableCell-body-210"
+        >
+          <div>
+            veeltin
+          </div>
+          <div>
+            vaeltiejin
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    (ij) 
+    <span>
+      vaeltieh
+    </span>
+  </div>
+  <div>
+    (lea) 
+    <span>
+      vaalteme
+    </span>
+  </div>
+  <div>
+    (lea) 
+    <span>
+      vaeltieminie
+    </span>
+  </div>
+</div>
 `;

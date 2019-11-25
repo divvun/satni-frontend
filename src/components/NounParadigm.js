@@ -143,7 +143,7 @@ const SmjContent = ({analyses}) => {
   );
 };
 
-const SmnContent = ({analyses, language}) => {
+const SmnContent = ({analyses}) => {
   return (
     <TableBody>
       <TableRow>
@@ -193,7 +193,7 @@ const SmnContent = ({analyses, language}) => {
   );
 };
 
-const SmsContent = ({analyses, language}) => {
+const SmsContent = ({analyses}) => {
   return (
     <TableBody>
       <TableRow>
@@ -227,14 +227,23 @@ const SmsContent = ({analyses, language}) => {
         <TableCell>{analyses['N+Pl+Com'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
       </TableRow>
       <TableRow>
+        <TableCell>Abe</TableCell>
+        <TableCell>{analyses['N+Sg+Abe'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
+        <TableCell>{analyses['N+Pl+Abe'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
+      </TableRow>
+      <TableRow>
         <TableCell>Ess</TableCell>
         <TableCell colSpan={2} align='center'>{analyses['N+Ess'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>Par</TableCell>
+        <TableCell colSpan={2} align='center'>{analyses['N+Par'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
       </TableRow>
     </TableBody>
   );
 };
 
-const FinContent = ({analyses, language}) => {
+const FinContent = ({analyses}) => {
   return (
     <TableBody>
       <TableRow>
@@ -319,6 +328,9 @@ const Content = ({analyses, language}) => {
       break;
     case 'sme':
       return <SmeContent analyses={analyses} />;
+      break;
+    case 'sms':
+      return <SmsContent analyses={analyses} />;
       break;
     case 'fin':
       return <FinContent analyses={analyses} />;
