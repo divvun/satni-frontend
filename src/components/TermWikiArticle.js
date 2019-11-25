@@ -3,7 +3,6 @@ import { css } from 'react-emotion';
 
 import { ArticleDiv } from '../components';
 import TermStems from './TermStems';
-import Source from './Source';
 
 const TermWikiArticle = ({stems, termwikiref, dictionary}) => {
   const category = termwikiref.split(':')[0];

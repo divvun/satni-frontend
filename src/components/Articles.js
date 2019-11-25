@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
 import {
-  useRouteMatch,
   useParams
 } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { fetchArticlesIfNeeded } from '../articleActions';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
