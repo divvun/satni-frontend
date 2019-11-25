@@ -89,8 +89,8 @@ const AsyncApp = ({classes, match}) => (
     <AppBar position='static' color='default' className={classes.appBar}>
       <Toolbar>
         <Typography variant='h6' color='inherit' noWrap className={classes.toolbarTitle}>
-        sátni.org
-      </Typography>
+          <a href='http://sátni.org'>sátni.org</a>
+        </Typography>
       </Toolbar>
     </AppBar>
     <main className={classes.layout}>
