@@ -8,9 +8,9 @@ import Source from './Source';
 const DictArticle = ({stems, examples, dictionary}) => {
   return (
     <ArticleDiv>
+      <Source source={dictionary} />
       <Stems stems={stems} />
       {examples && (<Examples examples={examples} />)}
-      <Source source={dictionary} />
     </ArticleDiv>
   );
 };

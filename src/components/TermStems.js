@@ -1,21 +1,9 @@
 import React from 'react';
 import TermStem from './TermStem';
+import { langName } from '../langThings'
 import { css } from 'react-emotion';
 
 const langOrder = ['sme', 'smj', 'sma', 'smn', 'sms', 'nob', 'swe', 'fin', 'nno', 'eng', 'lat'];
-const langName = {
-  'sme': 'North Sami',
-  'smj': 'Lule Sami',
-  'sma': 'South Sami',
-  'smn': 'Inari Sami',
-  'sms': 'Skolt Sami',
-  'nob': 'Norwegian',
-  'swe': 'Swedish',
-  'fin': 'Finnish',
-  'nno': 'Nynorsk',
-  'eng': 'English',
-  'lat': 'Latin'
-};
 
 const createLang = (lang, stems) => (
   stems.filter(stem => stem.lang === lang).map((stem, i) => (
