@@ -45,9 +45,10 @@ export const fetchArticles = (lemma) => (dispatch) => {
 };
 
 export const shouldFetchArticles = (state, lemma) => {
-  const articles = state.articlesByLemma[lemma];
+  const articlesByLemma = state.articlesByLemma;
+  const articles = articlesByLemma[lemma];
   if (!lemma ||
-    (state.isFetching) ||
+    (articlesByLemma.isFetching) ||
     (articles && !state.isFetching)) {
     return false;
   } else {
