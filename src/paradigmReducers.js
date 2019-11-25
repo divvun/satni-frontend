@@ -12,8 +12,6 @@ const paradigm = (
   switch (action.type) {
     case FETCH_PARADIGM_SUCCESS:
       return action.payload.paradigm;
-    case FETCH_ARTICLES_FAILURE:
-      return {};
     default:
       return state;
   }
@@ -32,7 +30,7 @@ export const paradigmByStem = (state = initialState, action) => {
         ...{
           isFetching: true,
           errorMessage: null,
-          [stemToKey(action.payload.stem)]: paradigm(state[stemToKey(action.payload.lemma)], action)
+          [stemToKey(action.payload.stem)]: paradigm(state[stemToKey(action.payload.stem)], action)
         }
       };
     case FETCH_PARADIGM_SUCCESS:
@@ -41,7 +39,7 @@ export const paradigmByStem = (state = initialState, action) => {
         ...{
           isFetching: false,
           errorMessage: null,
-          [stemToKey(action.payload.stem)]: paradigm(state[stemToKey(action.payload.lemma)], action)
+          [stemToKey(action.payload.stem)]: paradigm(state[stemToKey(action.payload.stem)], action)
         }
       };
     case FETCH_PARADIGM_FAILURE:
@@ -50,7 +48,7 @@ export const paradigmByStem = (state = initialState, action) => {
         ...{
           isFetching: false,
           errorMessage: action.payload.error,
-          [stemToKey(action.payload.stem)]: paradigm(state[stemToKey(action.payload.lemma)], action)
+          [stemToKey(action.payload.stem)]: {}
         }
       };
     default:
