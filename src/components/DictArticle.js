@@ -8,7 +8,7 @@ import Source from './Source';
 const DictArticle = ({stems, examples, dictionary}) => {
   return (
     <ArticleDiv>
-      <Source source={dictionary} />
+      <Source source={dictionary} lemma={stems[0].lemma} />
       <Stems stems={stems} />
       {examples && (<Examples examples={examples} />)}
     </ArticleDiv>

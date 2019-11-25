@@ -2,6 +2,32 @@ import React from 'react';
 import { css } from 'react-emotion';
 import { langName } from '../langThings';
 
+const SourceLink = ({from, to, lemma, source}) => {
+  if (['nobsme', 'smenob', 'finsme', 'smefin'].includes(source)) {
+    return <a
+      href={`https://sanit.oahpa.no/detail/${from}/${to}/${lemma}.html`}
+      target='_blank'
+      rel='noopener noreferrer'>Source</a>;
+  } else if (['smanob', 'nobsma'].includes(source)) {
+    return <a
+      href={`https://baakoeh.oahpa.no/detail/${from}/${to}/${lemma}.html`}
+      target='_blank'
+      rel='noopener noreferrer'>Source</a>;
+  } else if (['smnfin', 'finsmn', 'smesmn', 'smnsme'].includes(source)) {
+    return <a
+      href={`https://saanih.oahpa.no/detail/${from}/${to}/${lemma}.html`}
+      target='_blank'
+      rel='noopener noreferrer'>Source</a>;
+  } else if (['smsfin', 'finsms'].includes(source)) {
+    return <a
+      href={`https://saan.oahpa.no/detail/${from}/${to}/${lemma}.html`}
+      target='_blank'
+      rel='noopener noreferrer'>Source</a>;
+  } else {
+    return 'Source';
+  }
+};
+
 const names = {
   smenob: {
     name: 'Neahttadigisánit',
@@ -65,12 +91,13 @@ const names = {
   }
 };
 
-const Source = ({source}) => {
+const Source = ({source, lemma}) => {
   return (
     <div className={css({
       textAlign: 'center',
       fontSize: '110%'
-    })}>Source: {langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</div>
+    })}>
+      <SourceLink from={names[source]['from']} to={names[source]['to']} lemma={lemma} source={source} />: {langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</div>
   );
 };
 

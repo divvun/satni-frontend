@@ -2839,6 +2839,21 @@ exports[`Storyshots DictArticle default 1`] = `
 <div
   className="css-1xgunds"
 >
+  <div
+    className="css-rlpzos"
+  >
+    <a
+      href="https://sanit.oahpa.no/detail/sme/nob/guolli.html"
+    >
+      Source
+    </a>
+    : 
+    North Sami
+     → 
+    Norwegian
+     
+    Neahttadigisánit
+  </div>
   <div>
     <div
       className="css-1jd5iyo"
@@ -2854,8 +2869,7 @@ exports[`Storyshots DictArticle default 1`] = `
          
          (
         N
-        ) 
-        sme
+        )
       </span>
     </div>
     <div
@@ -2876,8 +2890,7 @@ exports[`Storyshots DictArticle default 1`] = `
          
          (
         N
-        ) 
-        sme
+        )
       </span>
     </div>
     <div
@@ -2898,8 +2911,7 @@ exports[`Storyshots DictArticle default 1`] = `
          
          (
         N
-        ) 
-        nob
+        )
       </span>
     </div>
   </div>
@@ -2929,14 +2941,6 @@ exports[`Storyshots DictArticle default 1`] = `
       </div>
     </div>
   </div>
-  <div
-    className="css-jxikhn"
-  >
-    Source: 
-    Neahttadigisánit
-     
-    smenob
-  </div>
 </div>
 `;
 
@@ -2944,6 +2948,21 @@ exports[`Storyshots DictArticle without_examples 1`] = `
 <div
   className="css-1xgunds"
 >
+  <div
+    className="css-rlpzos"
+  >
+    <a
+      href="https://sanit.oahpa.no/detail/sme/nob/guolli.html"
+    >
+      Source
+    </a>
+    : 
+    North Sami
+     → 
+    Norwegian
+     
+    Neahttadigisánit
+  </div>
   <div>
     <div
       className="css-1jd5iyo"
@@ -2959,8 +2978,7 @@ exports[`Storyshots DictArticle without_examples 1`] = `
          
          (
         N
-        ) 
-        sme
+        )
       </span>
     </div>
     <div
@@ -2981,8 +2999,7 @@ exports[`Storyshots DictArticle without_examples 1`] = `
          
          (
         N
-        ) 
-        sme
+        )
       </span>
     </div>
     <div
@@ -3003,20 +3020,11 @@ exports[`Storyshots DictArticle without_examples 1`] = `
          
          (
         N
-        ) 
-        nob
+        )
       </span>
     </div>
   </div>
   <div />
-  <div
-    className="css-jxikhn"
-  >
-    Source: 
-    Neahttadigisánit
-     
-    smenob
-  </div>
 </div>
 `;
 
@@ -4544,6 +4552,21 @@ exports[`Storyshots PresentArticles All types 1`] = `
   <div
     className="css-1xgunds"
   >
+    <div
+      className="css-rlpzos"
+    >
+      <a
+        href="https://sanit.oahpa.no/detail/sme/nob/oainnáhus.html"
+      >
+        Source
+      </a>
+      : 
+      North Sami
+       → 
+      Norwegian
+       
+      Neahttadigisánit
+    </div>
     <div>
       <div
         className="css-1jd5iyo"
@@ -4559,8 +4582,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
            
            (
           N
-          ) 
-          sme
+          )
         </span>
       </div>
       <div
@@ -4581,8 +4603,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
            
            (
           N
-          ) 
-          nob
+          )
         </span>
       </div>
     </div>
@@ -4612,18 +4633,25 @@ exports[`Storyshots PresentArticles All types 1`] = `
         </div>
       </div>
     </div>
-    <div
-      className="css-jxikhn"
-    >
-      Source: 
-      Neahttadigisánit
-       
-      smenob
-    </div>
   </div>
   <div
     className="css-1xgunds"
   >
+    <div
+      className="css-rlpzos"
+    >
+      <a
+        href="https://sanit.oahpa.no/detail/sme/fin/guolladat.html"
+      >
+        Source
+      </a>
+      : 
+      North Sami
+       → 
+      Finnish
+       
+      Neahttadigisánit
+    </div>
     <div>
       <div
         className="css-1jd5iyo"
@@ -4639,8 +4667,7 @@ exports[`Storyshots PresentArticles All types 1`] = `
            
            (
           N
-          ) 
-          sme
+          )
         </span>
       </div>
       <div
@@ -4661,25 +4688,18 @@ exports[`Storyshots PresentArticles All types 1`] = `
            
            (
           N
-          ) 
-          fin
+          )
         </span>
       </div>
     </div>
     <div />
-    <div
-      className="css-jxikhn"
-    >
-      Source: 
-      Neahttadigisánit
-       
-      smefin
-    </div>
   </div>
   <div
     className="css-1xgunds"
   >
-    <div>
+    <div
+      className="css-rlpzos"
+    >
       Source: 
       <a
         href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
@@ -4821,6 +4841,21 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
   <div
     className="css-1xgunds"
   >
+    <div
+      className="css-rlpzos"
+    >
+      <a
+        href="https://sanit.oahpa.no/detail/sme/nob/oainnáhus.html"
+      >
+        Source
+      </a>
+      : 
+      North Sami
+       → 
+      Norwegian
+       
+      Neahttadigisánit
+    </div>
     <div>
       <div
         className="css-1jd5iyo"
@@ -4836,8 +4871,7 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
            
            (
           N
-          ) 
-          sme
+          )
         </span>
       </div>
       <div
@@ -4858,8 +4892,7 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
            
            (
           N
-          ) 
-          nob
+          )
         </span>
       </div>
     </div>
@@ -4889,14 +4922,6 @@ exports[`Storyshots PresentArticles DictArticle with examples 1`] = `
         </div>
       </div>
     </div>
-    <div
-      className="css-jxikhn"
-    >
-      Source: 
-      Neahttadigisánit
-       
-      smenob
-    </div>
   </div>
 </div>
 `;
@@ -4908,6 +4933,21 @@ exports[`Storyshots PresentArticles DictArticle without examples 1`] = `
   <div
     className="css-1xgunds"
   >
+    <div
+      className="css-rlpzos"
+    >
+      <a
+        href="https://sanit.oahpa.no/detail/sme/fin/guolladat.html"
+      >
+        Source
+      </a>
+      : 
+      North Sami
+       → 
+      Finnish
+       
+      Neahttadigisánit
+    </div>
     <div>
       <div
         className="css-1jd5iyo"
@@ -4923,8 +4963,7 @@ exports[`Storyshots PresentArticles DictArticle without examples 1`] = `
            
            (
           N
-          ) 
-          sme
+          )
         </span>
       </div>
       <div
@@ -4945,20 +4984,11 @@ exports[`Storyshots PresentArticles DictArticle without examples 1`] = `
            
            (
           N
-          ) 
-          fin
+          )
         </span>
       </div>
     </div>
     <div />
-    <div
-      className="css-jxikhn"
-    >
-      Source: 
-      Neahttadigisánit
-       
-      smefin
-    </div>
   </div>
 </div>
 `;
@@ -4970,7 +5000,9 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
   <div
     className="css-1xgunds"
   >
-    <div>
+    <div
+      className="css-rlpzos"
+    >
       Source: 
       <a
         href="https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:androgyna"
@@ -5107,12 +5139,19 @@ exports[`Storyshots PresentArticles Only TermWikiArticle 1`] = `
 
 exports[`Storyshots Source default 1`] = `
 <div
-  className="css-jxikhn"
+  className="css-rlpzos"
 >
-  Source: 
-  Neahttadigisánit
+  <a
+    href="https://sanit.oahpa.no/detail/sme/nob/undefined.html"
+  >
+    Source
+  </a>
+  : 
+  North Sami
+   → 
+  Norwegian
    
-  smenob
+  Neahttadigisánit
 </div>
 `;
 
@@ -5131,8 +5170,7 @@ exports[`Storyshots Stem default 1`] = `
      
      (
     N
-    ) 
-    sme
+    )
   </span>
 </div>
 `;
@@ -5156,8 +5194,7 @@ exports[`Storyshots Stem key_nonzero 1`] = `
      
      (
     N
-    ) 
-    sme
+    )
   </span>
 </div>
 `;
@@ -5177,8 +5214,7 @@ exports[`Storyshots Stem lang_nonsme 1`] = `
      
      (
     N
-    ) 
-    smj
+    )
   </span>
 </div>
 `;
@@ -5198,8 +5234,7 @@ exports[`Storyshots Stem non_sami 1`] = `
      
      (
     N
-    ) 
-    nob
+    )
   </span>
 </div>
 `;
@@ -5220,8 +5255,7 @@ exports[`Storyshots Stem with_re 1`] = `
     (restring)
      (
     N
-    ) 
-    sme
+    )
   </span>
 </div>
 `;
@@ -5242,8 +5276,7 @@ exports[`Storyshots Stems default 1`] = `
        
        (
       N
-      ) 
-      sme
+      )
     </span>
   </div>
   <div
@@ -5264,8 +5297,7 @@ exports[`Storyshots Stems default 1`] = `
        
        (
       N
-      ) 
-      sme
+      )
     </span>
   </div>
   <div
@@ -5286,8 +5318,7 @@ exports[`Storyshots Stems default 1`] = `
        
        (
       N
-      ) 
-      nob
+      )
     </span>
   </div>
 </div>
@@ -5297,7 +5328,9 @@ exports[`Storyshots TermWikiArticle default 1`] = `
 <div
   className="css-1xgunds"
 >
-  <div>
+  <div
+    className="css-rlpzos"
+  >
     Source: 
     <a
       href="https://satni.uit.no/termwiki/index.php?title=Luonddudieđa ja matematihkka:androgyn"
