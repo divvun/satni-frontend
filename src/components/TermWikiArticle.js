@@ -9,7 +9,10 @@ const TermWikiArticle = ({stems, termwikiref, dictionary}) => {
   const category = termwikiref.split(':')[0];
   return (
     <ArticleDiv>
-      <div>
+      <div className={css({
+        textAlign: 'center',
+        fontSize: '110%'
+      })}>
         Source: <a
           href={`https://satni.uit.no/termwiki/index.php?title=${termwikiref}`}
           target='_blank' rel='noopener noreferrer'>TermWiki</a>
