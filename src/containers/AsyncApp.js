@@ -78,10 +78,8 @@ const footers = [
 ];
 
 const Home = () => (
-  <div>Welcome!</div>
+  null
 );
-
-const NoMatch = () => <Redirect to='/' />;
 
 const AsyncApp = ({classes, match}) => (
   <React.Fragment>
