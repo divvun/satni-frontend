@@ -1,5 +1,4 @@
 import React from 'react';
-import { css } from 'react-emotion';
 import { Set } from 'immutable';
 import fetch from 'cross-fetch';
 
