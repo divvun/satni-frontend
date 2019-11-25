@@ -1,5 +1,5 @@
 import fetch from 'cross-fetch';
-import {handleErrors} from './utils';
+import { handleErrors, stemToKey } from './utils';
 
 export const FETCH_PARADIGM_BEGIN = 'FETCH_PARADIGM_BEGIN';
 export const FETCH_PARADIGM_SUCCESS = 'FETCH_PARADIGM_SUCCESS';
@@ -31,21 +31,21 @@ export const fetchParadigmFailure = (stem, error) => ({
 export const fetchParadigm = (stem) => (dispatch) => {
   dispatch(fetchParadigmBegin(stem));
 
-  let url = `http://gtweb.uit.no/cgi-bin/smi/smi.cgi?json=true&text=${stem.lemma}&pos=${stem.pos}&mode=standard&action=paradigm&lang=${stem.lang}`;
+  const url = `http://gtweb.uit.no/cgi-bin/smi/smi.cgi?json=true&text=${stem.lemma}&pos=${stem.pos}&mode=standard&action=paradigm&lang=${stem.language}`;
 
-  return fetch(encodeURI(url, {credentials: 'same-origin', mode: 'no-cors'}))
+  return fetch(encodeURI(url), {credentials: 'same-origin', mode: 'no-cors'})
       .then(handleErrors)
       .then(response => response.json())
       .then(json => dispatch(fetchParadigmSuccess(stem, json)))
-      .catch(error => (
-        dispatch(fetchParadigmFailure(stem, error))
-      )
+      .catch(error => dispatch(fetchParadigmFailure(stem, error))
     );
 };
 
 export const shouldFetchParadigm = (state, key) => {
-  const paradigm = state.paradigm;
-  if (paradigm.has(key)) {
+  const paradigmByStem = state.paradigmByStem;
+  const paradigm = paradigmByStem[key];
+
+  if (paradigmByStem.isFetching || paradigm || (paradigm && paradigm.has(key))) {
     return false;
   } else {
     return true;
@@ -53,7 +53,8 @@ export const shouldFetchParadigm = (state, key) => {
 };
 
 export const fetchParadigmIfNeeded = (stem) => (dispatch, getState) => {
-  if (shouldFetchParadigm(getState(), `${stem.lemma}_${stem.pos}_${stem.lang}`)) {
+  if (shouldFetchParadigm(getState(), stemToKey(stem))) {
+    console.log('pActions', stem);
     return dispatch(fetchParadigm(stem));
   }
 };
