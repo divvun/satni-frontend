@@ -6849,7 +6849,7 @@ exports[`Storyshots VerbParadigm Skolt saami verbs 1`] = `
           aria-sort={null}
           className="MuiTableCell-root-288 MuiTableCell-body-290"
         >
-           
+          &nbsp;
         </td>
         <td
           aria-sort={null}
@@ -7220,6 +7220,145 @@ exports[`Storyshots VerbParadigm South saami verbs 1`] = `
     (lea) 
     <span>
       vaeltieminie
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots VerbParadigm čágadit 1`] = `
+<div>
+  <table
+    className="MuiTable-root-301"
+  >
+    <thead
+      className="MuiTableHead-root-302"
+    >
+      <tr
+        className="MuiTableRow-root-303 MuiTableRow-head-306"
+      >
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-head-309"
+          scope="col"
+        />
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-head-309"
+          scope="col"
+        >
+          Present
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-head-309"
+          scope="col"
+        >
+          Perfectum
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root-320"
+    >
+      <tr
+        className="MuiTableRow-root-303"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-body-310"
+        >
+          son
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-body-310"
+        >
+          <div>
+            čágada
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-body-310"
+        >
+          <div>
+            čágadii
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-303"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-body-310"
+        >
+          soai
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-body-310"
+        >
+          <div>
+            čágadeaba
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-body-310"
+        >
+          <div>
+            čágadeigga
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-303"
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-body-310"
+        >
+          sii
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-body-310"
+        >
+          <div>
+            čágadit
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-308 MuiTableCell-body-310"
+        >
+          <div>
+            čágade
+          </div>
+          <div>
+            čágadedje
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    (otne in) 
+    <span>
+      čágat
+    </span>
+  </div>
+  <div>
+    (ikte in) 
+    <span>
+      čágadan
+    </span>
+  </div>
+  <div>
+    (lean) 
+    <span>
+      čágadan
     </span>
   </div>
 </div>

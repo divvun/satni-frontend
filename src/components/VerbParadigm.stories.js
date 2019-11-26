@@ -376,9 +376,46 @@ const paradigm = {
   }
 };
 
+const čágadit = {
+  'analyses': {
+    'V+Inf': [
+      'čágadit'
+    ],
+    'V+Ind+Prs+Sg3': [
+      'čágada'
+    ],
+    'V+Ind+Prs+Du3': [
+      'čágadeaba'
+    ],
+    'V+Ind+Prs+Pl3': [
+      'čágadit'
+    ],
+    'V+Ind+Prs+ConNeg': [
+      'čágat'
+    ],
+    'V+Ind+Prt+Sg3': [
+      'čágadii'
+    ],
+    'V+Ind+Prt+Du3': [
+      'čágadeigga'
+    ],
+    'V+Ind+Prt+Pl3': [
+      'čágade',
+      'čágadedje'
+    ],
+    'V+Ind+Prt+ConNeg': [
+      'čágadan'
+    ],
+    'V+PrfPrc': [
+      'čágadan'
+    ]
+  }
+};
+
 storiesOf('VerbParadigm', module)
   .add('South saami verbs', () => <VerbParadigm paradigm={paradigm['sma']} language='sma' />)
   .add('North saami verbs', () => <VerbParadigm paradigm={paradigm['sme']} language='sme' />)
   .add('Lule saami verbs', () => <VerbParadigm paradigm={paradigm['smj']} language='smj' />)
   .add('Inari saami verbs', () => <VerbParadigm paradigm={paradigm['smn']} language='smn' />)
-  .add('Skolt saami verbs', () => <VerbParadigm paradigm={paradigm['sms']} language='sms' />);
+  .add('Skolt saami verbs', () => <VerbParadigm paradigm={paradigm['sms']} language='sms' />)
+  .add('čágadit', () => <VerbParadigm paradigm={čágadit} language='sme' />);
