@@ -5,312 +5,263 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
-const SmeContent = ({analyses}) => {
-  return (
-    <TableBody>
-      <TableRow>
-        <TableCell>Nom</TableCell>
-        <TableCell>{analyses['N+Sg+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Acc</TableCell>
-        <TableCell>{analyses['N+Sg+Acc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Acc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Gen</TableCell>
-        <TableCell>{analyses['N+Sg+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ill</TableCell>
-        <TableCell>{analyses['N+Sg+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Loc</TableCell>
-        <TableCell>{analyses['N+Sg+Loc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Loc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Com</TableCell>
-        <TableCell>{analyses['N+Sg+Com'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Com'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ess</TableCell>
-        <TableCell colSpan={2} align='center'>{analyses['N+Ess'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-    </TableBody>
-  );
+const MyTableRow = ({analyses, name, values}) => (
+  <TableRow key={name}>
+    <TableCell>{name}</TableCell>
+    {(values.length === 1)
+      && <TableCell key={`${name}_1`} colSpan={2} align='center'>{analyses[values[0]].map((analysis, index) => (
+        <div key={`${analysis}_${index}`}>{analysis}</div>))}</TableCell>}
+    {(values.length > 1)
+          && values.map((value, index1) => {
+            return <TableCell key={index1}>{(analyses[value]) && analyses[value].map((analysis, index) => (
+              <div key={`${analysis}_${index}`}>{analysis}</div>))}</TableCell>;
+          })}
+  </TableRow>
+);
+
+const TableRows = {
+  sma: [
+    {
+      name: 'Nom',
+      values: ['N+Sg+Nom', 'N+Pl+Nom']
+    },
+    {
+      name: 'Acc',
+      values: ['N+Sg+Acc', 'N+Pl+Acc']
+    },
+    {
+      name: 'Gen',
+      values: ['N+Sg+Gen', 'N+Pl+Gen']
+    },
+    {
+      name: 'Ill',
+      values: ['N+Sg+Ill', 'N+Pl+Ill']
+    },
+    {
+      name: 'Ine',
+      values: ['N+Sg+Ine', 'N+Pl+Ine']
+    },
+    {
+      name: 'Ela',
+      values: ['N+Sg+Ela', 'N+Pl+Ela']
+    },
+    {
+      name: 'Com',
+      values: ['N+Sg+Com', 'N+Pl+Com']
+    },
+    {
+      name: 'Ess',
+      values: ['N+Ess']
+    }
+  ],
+  sme: [
+    {
+      name: 'Nom',
+      values: ['N+Sg+Nom', 'N+Pl+Nom']
+    },
+    {
+      name: 'Acc',
+      values: ['N+Sg+Acc', 'N+Pl+Acc']
+    },
+    {
+      name: 'Gen',
+      values: ['N+Sg+Gen', 'N+Pl+Gen']
+    },
+    {
+      name: 'Ill',
+      values: ['N+Sg+Ill', 'N+Pl+Ill']
+    },
+    {
+      name: 'Loc',
+      values: ['N+Sg+Loc', 'N+Pl+Loc']
+    },
+    {
+      name: 'Com',
+      values: ['N+Sg+Com', 'N+Pl+Com']
+    },
+    {
+      name: 'Ess',
+      values: ['N+Ess']
+    }
+  ],
+  smj: [
+    {
+      name: 'Nom',
+      values: ['N+Sg+Nom', 'N+Pl+Nom']
+    },
+    {
+      name: 'Acc',
+      values: ['N+Sg+Acc', 'N+Pl+Acc']
+    },
+    {
+      name: 'Gen',
+      values: ['N+Sg+Gen', 'N+Pl+Gen']
+    },
+    {
+      name: 'Ill',
+      values: ['N+Sg+Ill', 'N+Pl+Ill']
+    },
+    {
+      name: 'Ine',
+      values: ['N+Sg+Ine', 'N+Pl+Ine']
+    },
+    {
+      name: 'Ela',
+      values: ['N+Sg+Ela', 'N+Pl+Ela']
+    },
+    {
+      name: 'Com',
+      values: ['N+Sg+Com', 'N+Pl+Com']
+    },
+    {
+      name: 'Abe',
+      values: ['N+Sg+Abe', 'N+Pl+Abe']
+    },
+    {
+      name: 'Ess',
+      values: ['N+Ess']
+    }
+  ],
+  smn: [
+    {
+      name: 'Nom',
+      values: ['N+Sg+Nom', 'N+Pl+Nom']
+    },
+    {
+      name: 'Acc',
+      values: ['N+Sg+Acc', 'N+Pl+Acc']
+    },
+    {
+      name: 'Gen',
+      values: ['N+Sg+Gen', 'N+Pl+Gen']
+    },
+    {
+      name: 'Ill',
+      values: ['N+Sg+Ill', 'N+Pl+Ill']
+    },
+    {
+      name: 'Loc',
+      values: ['N+Sg+Loc', 'N+Pl+Loc']
+    },
+    {
+      name: 'Com',
+      values: ['N+Sg+Com', 'N+Pl+Com']
+    },
+    {
+      name: 'Abe',
+      values: ['N+Sg+Abe', 'N+Pl+Abe']
+    },
+    {
+      name: 'Par',
+      values: ['N+Par']
+    },
+    {
+      name: 'Ess',
+      values: ['N+Ess']
+    }
+  ],
+  sms: [
+    {
+      name: 'Nom',
+      values: ['N+Sg+Nom', 'N+Pl+Nom']
+    },
+    {
+      name: 'Acc',
+      values: ['N+Sg+Acc', 'N+Pl+Acc']
+    },
+    {
+      name: 'Gen',
+      values: ['N+Sg+Gen', 'N+Pl+Gen']
+    },
+    {
+      name: 'Ill',
+      values: ['N+Sg+Ill', 'N+Pl+Ill']
+    },
+    {
+      name: 'Loc',
+      values: ['N+Sg+Loc', 'N+Pl+Loc']
+    },
+    {
+      name: 'Com',
+      values: ['N+Sg+Com', 'N+Pl+Com']
+    },
+    {
+      name: 'Abe',
+      values: ['N+Sg+Abe', 'N+Pl+Abe']
+    },
+    {
+      name: 'Par',
+      values: ['N+Par']
+    },
+    {
+      name: 'Ess',
+      values: ['N+Ess']
+    }
+  ],
+  fin: [
+    {
+      name: 'Nom',
+      values: ['N+Sg+Nom', 'N+Pl+Nom']
+    },
+    {
+      name: 'Gen',
+      values: ['N+Sg+Gen', 'N+Pl+Gen']
+    },
+    {
+      name: 'Par',
+      values: ['N+Sg+Par', 'N+Pl+Par']
+    },
+    {
+      name: 'All',
+      values: ['N+Sg+All', 'N+Pl+All']
+    },
+    {
+      name: 'Abl',
+      values: ['N+Sg+Abl', 'N+Pl+Abl']
+    },
+    {
+      name: 'Ade',
+      values: ['N+Sg+Ade', 'N+Pl+Ade']
+    },
+    {
+      name: 'Ill',
+      values: ['N+Sg+Ill', 'N+Pl+Ill']
+    },
+    {
+      name: 'Ine',
+      values: ['N+Sg+Ine', 'N+Pl+Ine']
+    },
+    {
+      name: 'Ela',
+      values: ['N+Sg+Ela', 'N+Pl+Ela']
+    },
+    {
+      name: 'Abe',
+      values: ['N+Sg+Abe', 'N+Pl+Abe']
+    },
+    {
+      name: 'Ess',
+      values: ['N+Sg+Ess', 'N+Pl+Ess']
+    },
+    {
+      name: 'Tra',
+      values: ['N+Sg+Tra', 'N+Pl+Tra']
+    },
+    {
+      name: 'Ins',
+      values: ['N+Sg+Ins', 'N+Pl+Ins']
+    }
+  ]
 };
 
-const SmaContent = ({analyses}) => {
+const LangTable = ({analyses, language}) => {
   return (
     <TableBody>
-      <TableRow>
-        <TableCell>Nom</TableCell>
-        <TableCell>{analyses['N+Sg+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Acc</TableCell>
-        <TableCell>{analyses['N+Sg+Acc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Acc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Gen</TableCell>
-        <TableCell>{analyses['N+Sg+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ill</TableCell>
-        <TableCell>{analyses['N+Sg+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ine</TableCell>
-        <TableCell>{analyses['N+Sg+Ine'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ine'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ela</TableCell>
-        <TableCell>{analyses['N+Sg+Ela'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ela'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Com</TableCell>
-        <TableCell>{analyses['N+Sg+Com'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Com'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ess</TableCell>
-        <TableCell colSpan={2} align='center'>{analyses['N+Ess'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-    </TableBody>
-  );
-};
-
-const SmjContent = ({analyses}) => {
-  return (
-    <TableBody>
-      <TableRow>
-        <TableCell>Nom</TableCell>
-        <TableCell>{analyses['N+Sg+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Acc</TableCell>
-        <TableCell>{analyses['N+Sg+Acc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Acc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Gen</TableCell>
-        <TableCell>{analyses['N+Sg+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ill</TableCell>
-        <TableCell>{analyses['N+Sg+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ine</TableCell>
-        <TableCell>{analyses['N+Sg+Ine'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ine'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ela</TableCell>
-        <TableCell>{analyses['N+Sg+Ela'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ela'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Com</TableCell>
-        <TableCell>{analyses['N+Sg+Com'].map((wordform, index) => <div key={wordform + index}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Com'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Abe</TableCell>
-        <TableCell>{analyses['N+Sg+Abe'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Abe'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ess</TableCell>
-        <TableCell colSpan={2} align='center'>{analyses['N+Ess'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-    </TableBody>
-  );
-};
-
-const SmnContent = ({analyses}) => {
-  return (
-    <TableBody>
-      <TableRow>
-        <TableCell>Nom</TableCell>
-        <TableCell>{analyses['N+Sg+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Acc</TableCell>
-        <TableCell>{analyses['N+Sg+Acc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Acc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Gen</TableCell>
-        <TableCell>{analyses['N+Sg+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ill</TableCell>
-        <TableCell>{analyses['N+Sg+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Loc</TableCell>
-        <TableCell>{analyses['N+Sg+Loc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Loc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Com</TableCell>
-        <TableCell>{analyses['N+Sg+Com'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Com'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Abe</TableCell>
-        <TableCell>{analyses['N+Sg+Abe'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Abe'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Par</TableCell>
-        <TableCell colSpan={2} align='center'>{analyses['N+Par'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ess</TableCell>
-        <TableCell colSpan={2} align='center'>{analyses['N+Ess'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-    </TableBody>
-  );
-};
-
-const SmsContent = ({analyses}) => {
-  return (
-    <TableBody>
-      <TableRow>
-        <TableCell>Nom</TableCell>
-        <TableCell>{analyses['N+Sg+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Acc</TableCell>
-        <TableCell>{analyses['N+Sg+Acc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Acc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Gen</TableCell>
-        <TableCell>{analyses['N+Sg+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ill</TableCell>
-        <TableCell>{analyses['N+Sg+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Loc</TableCell>
-        <TableCell>{analyses['N+Sg+Loc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Loc'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Com</TableCell>
-        <TableCell>{analyses['N+Sg+Com'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Com'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Abe</TableCell>
-        <TableCell>{analyses['N+Sg+Abe'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Abe'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ess</TableCell>
-        <TableCell colSpan={2} align='center'>{analyses['N+Ess'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Par</TableCell>
-        <TableCell colSpan={2} align='center'>{analyses['N+Par'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-    </TableBody>
-  );
-};
-
-const FinContent = ({analyses}) => {
-  return (
-    <TableBody>
-      <TableRow>
-        <TableCell>Nom</TableCell>
-        <TableCell>{analyses['N+Sg+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Nom'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Gen</TableCell>
-        <TableCell>{analyses['N+Sg+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Gen'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Par</TableCell>
-        <TableCell>{analyses['N+Sg+Par'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Par'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>All</TableCell>
-        <TableCell>{analyses['N+Sg+All'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+All'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Abl</TableCell>
-        <TableCell>{analyses['N+Sg+Abl'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Abl'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ade</TableCell>
-        <TableCell>{analyses['N+Sg+Ade'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ade'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ill</TableCell>
-        <TableCell>{analyses['N+Sg+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ill'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ine</TableCell>
-        <TableCell>{analyses['N+Sg+Ine'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ine'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ela</TableCell>
-        <TableCell>{analyses['N+Sg+Ela'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ela'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Abe</TableCell>
-        <TableCell>{analyses['N+Sg+Abe'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Abe'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ess</TableCell>
-        <TableCell>{analyses['N+Sg+Ess'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Ess'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Tra</TableCell>
-        <TableCell>{analyses['N+Sg+Tra'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-        <TableCell>{analyses['N+Pl+Tra'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Ins</TableCell>
-        <TableCell>&nbsp;</TableCell>
-        <TableCell>{analyses['N+Pl+Ins'].map(wordform => <div key={wordform}>{wordform}</div>)}</TableCell>
-      </TableRow>
+      {TableRows[language].map((TableRow, rowIndex) => {
+        if (TableRow['values'].some(value => analyses[value])) {
+          return <MyTableRow key={rowIndex} analyses={analyses} name={TableRow['name']} values={TableRow['values']} />;
+        }
+      })}
     </TableBody>
   );
 };
@@ -318,22 +269,12 @@ const FinContent = ({analyses}) => {
 const Content = ({analyses, language}) => {
   switch (language) {
     case 'sma':
-      return <SmaContent analyses={analyses} />;
-      break;
-    case 'smj':
-      return <SmjContent analyses={analyses} />;
-      break;
-    case 'smn':
-      return <SmnContent analyses={analyses} />;
-      break;
     case 'sme':
-      return <SmeContent analyses={analyses} />;
-      break;
+    case 'smj':
+    case 'smn':
     case 'sms':
-      return <SmsContent analyses={analyses} />;
-      break;
     case 'fin':
-      return <FinContent analyses={analyses} />;
+      return <LangTable analyses={analyses} language={language} />;
       break;
     default:
       return null;
