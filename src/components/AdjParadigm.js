@@ -499,19 +499,23 @@ const Content = ({analyses, language}) => {
 };
 
 const AdjParadigm = ({paradigm, language}) => {
-  return (
-    <Table>
-      <TableHead>
-        <TableRow>
-          <TableCell>&nbsp;</TableCell>
-          <TableCell>Positive</TableCell>
-          <TableCell>Comparative</TableCell>
-          <TableCell>Superlative</TableCell>
-        </TableRow>
-      </TableHead>
-      <Content analyses={paradigm['analyses']} language={language} />
-    </Table>
-  );
+  if (paradigm) {
+    return (
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>&nbsp;</TableCell>
+            <TableCell>Positive</TableCell>
+            <TableCell>Comparative</TableCell>
+            <TableCell>Superlative</TableCell>
+          </TableRow>
+        </TableHead>
+        <Content analyses={paradigm['analyses']} language={language} />
+      </Table>
+    );
+  } else {
+    return <div>Paradigm undefined {language}</div>;
+  }
 };
 
 export default AdjParadigm;
