@@ -229,7 +229,6 @@ const Content = ({analyses, language}) => {
         <div>(lea) {analyses['V+PrfPrc'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
         <div>(lea) {analyses['V+Ger'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
       </div>;
-      break;
     case 'sme':
       return <div>
         <LangTable analyses={analyses} language={language} />
@@ -237,7 +236,6 @@ const Content = ({analyses, language}) => {
         <div>(ikte in) {analyses['V+Ind+Prt+ConNeg'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
         <div>(lean) {analyses['V+PrfPrc'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
       </div>;
-      break;
     case 'smj':
       return <div>
         <LangTable analyses={analyses} language={language} />
@@ -245,7 +243,6 @@ const Content = ({analyses, language}) => {
         <div>(iektu ittjiv) {analyses['V+Ind+ConNeg'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
         <div>(lav) {analyses['V+PrfPrc'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
       </div>;
-      break;
     case 'smn':
       return <div>
         <LangTable analyses={analyses} language={language} />
@@ -253,17 +250,14 @@ const Content = ({analyses, language}) => {
         <div>(jieht jiem) {analyses['V+Ind+Prt+ConNeg'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
         <div>(lam) {analyses['V+PrfPrc'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
       </div>;
-      break;
     case 'sms':
       return <div>
         <LangTable analyses={analyses} language={language} />
         <div>(täʹbbe jiõm) {analyses['V+Ind+Prs+ConNeg'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
         <div>(jåhtta jiõm) {analyses['V+Ind+Prt+ConNeg'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
       </div>;
-      break;
     case 'fin':
       return <FinContent analyses={analyses} />;
-      break;
     default:
       return null;
   }
