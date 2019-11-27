@@ -275,7 +275,6 @@ const Content = ({analyses, language}) => {
     case 'sms':
     case 'fin':
       return <LangTable analyses={analyses} language={language} />;
-      break;
     default:
       return null;
   }
