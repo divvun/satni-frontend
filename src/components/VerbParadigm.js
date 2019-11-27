@@ -190,7 +190,7 @@ const TableRows = {
       values: ['V+Ind+Prs+Pl3', 'V+Ind+Prt+Pl3']
     },
     {
-      pron: '&nbsp;',
+      pron: '',
       values: ['V+Ind+Prs+Sg4', 'V+Ind+Prt+Sg4']
     }
   ]
