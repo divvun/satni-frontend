@@ -5,9 +5,10 @@ import { stemToKey } from '../utils';
 import { fetchParadigmIfNeeded } from '../paradigmActions';
 import NounParadigm from './NounParadigm';
 import VerbParadigm from './VerbParadigm';
+import AdjParadigm from './AdjParadigm';
 
 const langs = Set.of('fin', 'sma', 'sme', 'smj', 'smn', 'sms');
-const poses = Set.of('N', 'V', 'Adj');
+const poses = Set.of('N', 'V', 'A');
 
 const Paradigm = ({lemma, language, pos}) => {
   if (poses.has(pos) && langs.has(language)) {
@@ -19,7 +20,6 @@ const Paradigm = ({lemma, language, pos}) => {
       dispatch(fetchParadigmIfNeeded({lemma, pos, language}));
     });
 
-    console.log(paradigmByStem);
     if (paradigmByStem.errorMessage) {
       return <div>No paradigm for {lemma} {pos} {language}</div>;
     }
@@ -29,16 +29,18 @@ const Paradigm = ({lemma, language, pos}) => {
     }
 
     switch (pos) {
+      case 'A':
+        return <AdjParadigm
+          paradigm={paradigmByStem[stemToKey({lemma, pos, language})]}
+          language={language} />;
       case 'N':
         return <NounParadigm
           paradigm={paradigmByStem[stemToKey({lemma, pos, language})]}
           language={language} />;
-        break;
       case 'V':
         return <VerbParadigm
           paradigm={paradigmByStem[stemToKey({lemma, pos, language})]}
           language={language} />;
-        break;
       default:
         return <div>{lemma}, {language}, {pos}</div>;
     }

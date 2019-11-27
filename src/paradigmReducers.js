@@ -12,6 +12,8 @@ const paradigm = (
   switch (action.type) {
     case FETCH_PARADIGM_SUCCESS:
       return action.payload.paradigm;
+    case FETCH_PARADIGM_FAILURE:
+      return [];
     default:
       return state;
   }
