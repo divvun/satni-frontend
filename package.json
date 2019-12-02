@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.1.1",
+    "@reduxjs/toolkit": "^1.1.0",
     "@sentry/browser": "^4.1.1",
     "babel-polyfill": "^6.26.0",
     "cheerio": "^1.0.0-rc.2",
