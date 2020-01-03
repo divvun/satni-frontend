@@ -11,41 +11,37 @@ const langs = Set.of('fin', 'sma', 'sme', 'smj', 'smn', 'sms');
 const poses = Set.of('N', 'V', 'A');
 
 const Paradigm = ({lemma, language, pos}) => {
-  if (poses.has(pos) && langs.has(language)) {
-    const paradigmByStem = useSelector(state => state['paradigmByStem']);
-    const dispatch = useDispatch();
+  const paradigmByStem = useSelector(state => state['paradigmByStem']);
+  const dispatch = useDispatch();
 
     // return <div>Here comes the paradigm: {pos}, {lemma}, {language}</div>;
-    useEffect(() => {
-      dispatch(fetchParadigmIfNeeded({lemma, pos, language}));
-    });
+  useEffect(() => {
+    dispatch(fetchParadigmIfNeeded({lemma, pos, language}));
+  });
 
-    if (paradigmByStem.errorMessage) {
-      return <div>No paradigm for {lemma} {pos} {language}</div>;
-    }
+  if (paradigmByStem.errorMessage) {
+    return <div>No paradigm for {lemma} {pos} {language}</div>;
+  }
 
-    if (paradigmByStem.isFetching) {
-      return <div>Loading paradigms…</div>;
-    }
+  if (paradigmByStem.isFetching) {
+    return <div>Loading paradigms…</div>;
+  }
 
-    switch (pos) {
-      case 'A':
-        return <AdjParadigm
-          paradigm={paradigmByStem[stemToKey({lemma, pos, language})]}
-          language={language} />;
-      case 'N':
-        return <NounParadigm
-          paradigm={paradigmByStem[stemToKey({lemma, pos, language})]}
-          language={language} />;
-      case 'V':
-        return <VerbParadigm
-          paradigm={paradigmByStem[stemToKey({lemma, pos, language})]}
-          language={language} />;
-      default:
-        return <div>{lemma}, {language}, {pos}</div>;
-    }
-  } else {
-    return <div>{lemma}, {language}, {pos}</div>;
+  switch (pos) {
+    case 'A':
+      return <AdjParadigm
+        paradigm={paradigmByStem[stemToKey({lemma, pos, language})]}
+        language={language} />;
+    case 'N':
+      return <NounParadigm
+        paradigm={paradigmByStem[stemToKey({lemma, pos, language})]}
+        language={language} />;
+    case 'V':
+      return <VerbParadigm
+        paradigm={paradigmByStem[stemToKey({lemma, pos, language})]}
+        language={language} />;
+    default:
+      return <div>{lemma}, {language}, {pos}</div>;
   }
 };
 
