@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from 'react-emotion';
-import { langName } from '../langThings';
+import { langName } from 'langThings';
 
 const SourceLink = ({from, to, lemma, source}) => {
   if (['nobsme', 'smenob', 'finsme', 'smefin'].includes(source)) {

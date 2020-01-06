@@ -7,7 +7,7 @@ import {
   resultDictWithExamples,
   resultDictWithoutExamples,
   resultTermWiki
-} from '../utils_testdata';
+} from 'utils_testdata';
 
 const articles = [];
 

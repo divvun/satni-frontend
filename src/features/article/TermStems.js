@@ -1,6 +1,6 @@
 import React from 'react';
 import TermStem from './TermStem';
-import { langName } from '../langThings'
+import { langName } from 'langThings';
 import { css } from 'react-emotion';
 
 const langOrder = ['sme', 'smj', 'sma', 'smn', 'sms', 'nob', 'swe', 'fin', 'nno', 'eng', 'lat'];

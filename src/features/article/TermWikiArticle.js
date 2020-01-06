@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from 'react-emotion';
 
-import { ArticleDiv } from '../components';
+import { ArticleDiv } from 'components';
 import TermStems from './TermStems';
 
 const TermWikiArticle = ({stems, termwikiref, dictionary}) => {
