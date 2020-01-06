@@ -1,5 +1,5 @@
 import fetch from 'cross-fetch';
-import {handleErrors, toJson} from './utils';
+import {handleErrors, toJson} from 'utils';
 
 export const FETCH_SEARCHITEMS_BEGIN = 'FETCH_SEARCHITEMS_BEGIN';
 export const SELECT_KEY = 'SELECT_KEY';

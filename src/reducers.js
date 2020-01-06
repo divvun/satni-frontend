@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import articlesReducer from 'features/article/articleSlice';
-import { search } from './searchItemReducers';
+import { search } from 'features/search/searchItemReducers';
 import paradigmsReducer from 'features/paradigm/paradigmsSlice';
 
 const rootReducer = combineReducers({

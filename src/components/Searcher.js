@@ -13,11 +13,11 @@ import {
   Item,
   ArrowIcon,
   XIcon
-} from '../components';
+} from 'components';
 import {
   selectKey,
   fetchSearchItemsIfNeeded
-} from '../searchItemActions';
+} from 'features/search/searchItemActions';
 
 class Searcher extends Component {
   constructor (props) {
