@@ -52,10 +52,17 @@
     "babel-runtime": "^6.26.0",
     "react-test-renderer": "^16.5.2"
   },
-  "browserslist": [
+  "browserslist": {
+    "production": [
     ">0.2%",
     "not dead",
     "not ie <= 10",
     "not op_mini all"
-  ]
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
