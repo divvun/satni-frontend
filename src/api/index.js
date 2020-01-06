@@ -6,3 +6,8 @@ export async function fetchParadigm (stem) {
   const data = await response.json();
   return data;
 }
+
+export const apifetchArticle = (lemma) => {
+  let url = `https://satni.uit.no/satnibackend/article/${lemma}`;
+  return fetch(encodeURI(url));
+};
