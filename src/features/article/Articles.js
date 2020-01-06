@@ -3,35 +3,35 @@ import {
   useParams
 } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchArticlesIfNeeded } from './articleActions';
+import { fetchArticles } from './articleSlice';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
 
 const Articles = () => {
   const { lemma } = useParams();
-  const articlesByLemma = useSelector(state => state['articlesByLemma']);
+  const articles = useSelector(state => state['articles']);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchArticlesIfNeeded(lemma));
-  });
+    dispatch(fetchArticles(lemma));
+  }, [dispatch, lemma]);
 
-  if (articlesByLemma.errorMessage) {
-    if (articlesByLemma.errorMessage.message === 'text is null!') {
-      return <div>No results found for {lemma} errorMessase</div>;
+  if (articles.error) {
+    if (articles.error === 'Error: text is null!') {
+      return <div>The word «{lemma}» is not in the database.</div>;
     } else {
-      return <FetchArticlesError message={articlesByLemma.errorMessage.message} />;
+      return <FetchArticlesError message={articles.error} />;
     }
   }
 
-  if (articlesByLemma.isFetching) {
+  if (articles.isFetching) {
     return <div>Loading articles …</div>;
   }
 
-  if (articlesByLemma[lemma] && articlesByLemma[lemma].length > 0) {
-    return <PresentArticles articles={articlesByLemma[lemma]} />;
+  if (articles[lemma] && articles[lemma].length > 0) {
+    return <PresentArticles articles={articles[lemma]} />;
   } else {
-    return <div>No results found for {lemma} empty array {articlesByLemma.isFetching}</div>;
+    return <div>No results found for {lemma} empty array {articles.isFetching}</div>;
   }
 };
 
