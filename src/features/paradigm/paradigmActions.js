@@ -1,5 +1,5 @@
 import fetch from 'cross-fetch';
-import { handleErrors, stemToKey } from './utils';
+import { handleErrors, stemToKey } from 'utils';
 
 export const FETCH_PARADIGM_BEGIN = 'FETCH_PARADIGM_BEGIN';
 export const FETCH_PARADIGM_SUCCESS = 'FETCH_PARADIGM_SUCCESS';

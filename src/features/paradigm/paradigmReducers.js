@@ -1,4 +1,4 @@
-import { stemToKey } from './utils';
+import { stemToKey } from 'utils';
 import {
   FETCH_PARADIGM_BEGIN,
   FETCH_PARADIGM_SUCCESS,
