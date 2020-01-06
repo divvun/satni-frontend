@@ -1,8 +1,18 @@
-import paradigms, { getParadigmSuccess, getParadigmFailure} from './paradigmsSlice';
+import paradigms, { getParadigmStart, getParadigmSuccess, getParadigmFailure} from './paradigmsSlice';
 
 describe('reducers', () => {
   it('should return the initial state', () => {
     expect(paradigms(undefined, {})).toEqual({isFetching: false, error: null});
+  });
+
+  it('should handle FETCH_PARADIGM_START', () => {
+    expect(paradigms(undefined, {
+      type: getParadigmStart.type
+    }
+    )).toEqual({
+      error: null,
+      isFetching: true
+    });
   });
 
   it('should handle FETCH_PARADIGM_SUCCESS', () => {
@@ -11,7 +21,7 @@ describe('reducers', () => {
       pos: 'N',
       language: 'sme'
     };
-    const json = {
+    const paradigm = {
       'N+Sg+Nom': [
         'guolli'
       ],
@@ -23,11 +33,11 @@ describe('reducers', () => {
 
     expect(paradigms({}, {
       type: getParadigmSuccess.type,
-      payload: {stem, json}
+      payload: {stem, paradigm}
     })).toEqual({
       isFetching: false,
       error: null,
-      guolli_N_sme: json
+      guolli_N_sme: paradigm
     });
   });
 

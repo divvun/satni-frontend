@@ -8,7 +8,7 @@ import {
   resultSmeAdjParadigm,
   resultSmjAdjParadigm,
   resultSmnAdjParadigm
-} from '../utils_testdata';
+} from 'utils_testdata';
 
 const paradigm = {
   sma: {

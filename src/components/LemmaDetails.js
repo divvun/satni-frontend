@@ -1,7 +1,7 @@
 import React from 'react';
 import qs from 'qs';
 import Korp from './Korp';
-import Paradigm from './Paradigm';
+import Paradigm from 'features/paradigm/Paradigm';
 import { ArticleDiv } from '../components';
 
 const LemmaDetails = ({match, location}) => {
