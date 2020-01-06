@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Set } from 'immutable';
 import { stemToKey } from '../utils';
-import { fetchParadigmIfNeeded } from '../paradigmActions';
+import { fetchParadigmIfNeeded } from 'features/paradigm/paradigmActions';
 import NounParadigm from './NounParadigm';
 import VerbParadigm from './VerbParadigm';
 import AdjParadigm from './AdjParadigm';
