@@ -1,22 +1,19 @@
 import {OrderedSet, Set} from 'immutable';
+import articles, {getArticlesStart, getArticlesSuccess, getArticlesFailure } from './articleSlice';
 
-import { articlesByLemma } from './articleReducers';
-import * as actions from './articleActions';
-
-const initialState = {};
-
-describe('reducers', () => {
+describe('articles', () => {
   it('should return the initial state', () => {
-    expect(articlesByLemma(undefined, {})).toEqual(initialState);
+    expect(articles(undefined, {})).toEqual({isFetching: false, error: null});
   });
 
   it('should handle FETCH_ARTICLES_BEGIN', () => {
-    expect(articlesByLemma({},
-      actions.fetchArticlesBegin('guolli'))).toEqual({
-        isFetching: true,
-        errorMessage: null,
-        'guolli': []
-      });
+    expect(articles(undefined, {
+      type: getArticlesStart.type
+    }
+  )).toEqual({
+    error: null,
+    isFetching: true
+  });
   });
 
   it('should handle FETCH_ARTICLES_SUCCESS', () => {
@@ -103,7 +100,7 @@ describe('reducers', () => {
 
     const resultArticles = {
       isFetching: false,
-      errorMessage: null,
+      error: null,
       'guolli': [
         {
           'category': 'Luonddudieđa ja matematihkka',
@@ -144,17 +141,19 @@ describe('reducers', () => {
       ]
     };
 
-    expect(articlesByLemma({
-      'guolli': []},
-    actions.fetchArticlesSuccess('guolli', inputArticles))).toEqual(resultArticles);
+    expect(articles(undefined, {
+      type: getArticlesSuccess.type,
+      payload: {lemma: 'guolli', articles: inputArticles}
+    })).toEqual(resultArticles);
   });
 
   it('should handle FETCH_ARTICLES_FAILURE', () => {
-    expect(articlesByLemma({},
-      actions.fetchArticleFailure('guolli', 'Error'))).toEqual({
-        isFetching: false,
-        errorMessage: 'Error',
-        'guolli': []
-      });
+    expect(articles(undefined, {
+      type: getArticlesFailure.type,
+      payload: 'Error'
+    })).toEqual({
+      isFetching: false,
+      error: 'Error'
+    });
   });
 });

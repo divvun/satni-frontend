@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { articlesByLemma } from 'features/article/articleReducers';
+import articlesReducer from 'features/article/articleSlice';
 import { search } from './searchItemReducers';
 import paradigmsReducer from 'features/paradigm/paradigmsSlice';
 
 const rootReducer = combineReducers({
-  articlesByLemma,
+  articles: articlesReducer,
   search,
   paradigms: paradigmsReducer
 });
