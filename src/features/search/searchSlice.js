@@ -2,6 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 import { getSearchItems } from 'api';
 import { normaliseArticles, toJson} from 'utils';
 
+const filterItems = (searchItems) => {
+  return Array.from(new Set(searchItems.map(item => item.term)))
+    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+};
+
 const searchSlice = createSlice({
   name: 'search',
   initialState: {isFetching: false, error: null},
@@ -11,7 +16,7 @@ const searchSlice = createSlice({
     },
     getSearchItemsSuccess (state, action) {
       const {key, searchItems} = action.payload;
-      state[key] = searchItems;
+      state[key] = filterItems(searchItems);
       state.isFetching = false;
       state.error = null;
     },

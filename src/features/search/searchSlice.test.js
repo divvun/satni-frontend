@@ -1,4 +1,3 @@
-import {OrderedSet, Set} from 'immutable';
 import search, { getSearchItemsStart, getSearchItemsSuccess, getSearchItemsFailure } from './searchSlice';
 
 describe('reducers', () => {
@@ -37,12 +36,17 @@ describe('reducers', () => {
       type: getSearchItemsSuccess.type,
       payload: {
         key: 'guol',
-        searchItems: Set(receivedItems)
+        searchItems: receivedItems
       }
     })).toEqual({
       isFetching: false,
       error: null,
-      'guol': Set(receivedItems)
+      'guol': [
+        'guollebuktin',
+        'guollegáhkku',
+        'guolleguhppár',
+        'guolljut'
+      ]
     });
   });
 });
