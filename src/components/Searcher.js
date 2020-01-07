@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Downshift from 'downshift';
@@ -53,91 +53,84 @@ const SearchRenderer = ({
   );
 };
 
-class Searcher extends Component {
-  constructor (props) {
-    super(props);
+const Searcher = ({
+  onInputChange, search
+}) => {
+  const [articlePath, setArticlePath] = useState('');
 
-    this.state = {
-      articlepath: ''
-    };
-  }
-
-  handleChange = (selectedItem) => {
+  const handleChange = (selectedItem) => {
     selectedItem
-    ? this.setState({articlepath: `/article/${selectedItem}`})
-    : this.setState({articlepath: '/'})
+    ? setArticlePath(`/article/${selectedItem}`)
+    : setArticlePath(`/`);
   };
 
-  render () {
-    const {onInputChange, search} = this.props;
-    return (
-      <Downshift
-        onSelect={this.handleChange} >
-        {({
-          getInputProps,
-          getToggleButtonProps,
-          getItemProps,
-          isOpen,
-          toggleMenu,
-          clearSelection,
-          selectedItem,
-          inputValue,
-          highlightedIndex
-        }) => {
-          return (
-            <div className={css({ margin: 'auto' })}>
-              <div
-                className={css({
-                  paddingRight: '1.75em',
-                  position: 'relative'
-                })}>
-                <Input
-                  {...getInputProps({
-                    placeholder: 'Search for a word',
-                    isOpen,
-                    onChange: event => {
-                      const value = inHTMLData(event.target.value.toLowerCase());
-                      console.log(value);
-                      if (!value || value.length < 3) {
-                        return;
-                      }
-                      onInputChange(value);
+  return (
+    <Downshift
+      onSelect={handleChange} >
+      {({
+        getInputProps,
+        getToggleButtonProps,
+        getItemProps,
+        isOpen,
+        toggleMenu,
+        clearSelection,
+        selectedItem,
+        inputValue,
+        highlightedIndex
+      }) => {
+        return (
+          <div className={css({ margin: 'auto' })}>
+            <div
+              className={css({
+                paddingRight: '1.75em',
+                position: 'relative'
+              })}>
+              <Input
+                {...getInputProps({
+                  placeholder: 'Search for a word',
+                  isOpen,
+                  onChange: event => {
+                    const value = inHTMLData(event.target.value.toLowerCase());
+                    console.log(value);
+                    if (!value || value.length < 3) {
+                      return;
                     }
-                  })}
-              />
-                {selectedItem
-                ? <ControllerButton
-                  css={{ paddingTop: 4 }}
-                  onClick={clearSelection}
-                  aria-label='clear selection'
-                  >
-                  <XIcon />
-                </ControllerButton>
-                : <ControllerButton {...getToggleButtonProps()}>
-                  <ArrowIcon isOpen={isOpen} />
-                </ControllerButton>}
-              </div>
-              {isOpen ?
-                <SearchRenderer {...{
-                  search,
-                  selectedItem,
-                  highlightedIndex,
-                  getItemProps,
-                }}/> :
-                null
-              }
-              {this.state.articlepath ?
-                <Redirect to={this.state.articlepath} push={true}/> :
-                null
-              }
+                    onInputChange(value);
+                  }
+                })}
+            />
+              {selectedItem
+              ? <ControllerButton
+                css={{ paddingTop: 4 }}
+                onClick={clearSelection}
+                aria-label='clear selection'
+                >
+                <XIcon />
+              </ControllerButton>
+              : <ControllerButton {...getToggleButtonProps()}>
+                <ArrowIcon isOpen={isOpen} />
+              </ControllerButton>}
             </div>
+            {isOpen ?
+              <SearchRenderer {...{
+                search,
+                selectedItem,
+                highlightedIndex,
+                getItemProps
+              }} /> :
+              null
+            }
+            {articlePath ?
+              <Redirect to={articlePath} push /> :
+              null
+            }
+          </div>
 
-          );
-        }}
-      </Downshift>
-    );
-  }
-}
+        );
+      }}
+    </Downshift>
+  );
+};
 
 Searcher.propTypes = {
   onInputChange: PropTypes.func.isRequired,
