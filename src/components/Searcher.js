@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Downshift from 'downshift';
 import PropTypes from 'prop-types';
 import { inHTMLData } from 'xss-filters';
@@ -20,13 +20,21 @@ import {
 } from 'features/search/searchItemActions';
 
 const SearchRenderer = ({
-  search,
+  inputValue,
   selectedItem,
   highlightedIndex,
   getItemProps
 }) => {
+  const search = useSelector(state => state['search']);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(selectKey(inputValue));
+    debounce(300, dispatch(fetchSearchItemsIfNeeded(inputValue)));
+  }, [dispatch, inputValue]);
+
   if (search.errorMessage) {
-    return <div><b>{search.searchKey}</b> is not found in this database.</div>;
+    return <div><b>{inputValue}</b> is not found in this database.</div>;
   }
 
   if (search.isSearching) {
@@ -54,7 +62,7 @@ const SearchRenderer = ({
 };
 
 const Searcher = ({
-  onInputChange, search
+  onInputChange
 }) => {
   const [articlePath, setArticlePath] = useState('');
 
@@ -95,7 +103,7 @@ const Searcher = ({
                     if (!value || value.length < 3) {
                       return;
                     }
-                    onInputChange(value);
+                    return value;
                   }
                 })}
             />
@@ -113,7 +121,7 @@ const Searcher = ({
             </div>
             {isOpen ?
               <SearchRenderer {...{
-                search,
+                inputValue,
                 selectedItem,
                 highlightedIndex,
                 getItemProps
@@ -132,22 +140,4 @@ const Searcher = ({
   );
 };
 
-Searcher.propTypes = {
-  onInputChange: PropTypes.func.isRequired,
-  search: PropTypes.object.isRequired
-};
-
-const mapStateToProps = (state) => (
-  { search: state.search }
-);
-
-const mapDispatchToProps = (dispatch) => (
-  {
-    onInputChange: (key) => {
-      dispatch(selectKey(key));
-      debounce(300, dispatch(fetchSearchItemsIfNeeded(key)));
-    }
-  }
-);
-
-export default connect(mapStateToProps, mapDispatchToProps)(Searcher);
+export default Searcher;
