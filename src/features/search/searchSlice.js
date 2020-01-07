@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getSearchItems } from 'api';
-import { normaliseArticles, toJson} from 'utils';
+import { toJson} from 'utils';
 
 const filterItems = (searchItems) => {
   return Array.from(new Set(searchItems.map(item => item.term)))
