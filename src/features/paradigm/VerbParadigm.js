@@ -213,6 +213,7 @@ const LangTable = ({analyses, language}) => {
           if (TableRow['values'].some(value => analyses[value])) {
             return <MyTableRow key={rowIndex} analyses={analyses} pron={TableRow['pron']} values={TableRow['values']} />;
           }
+          return null;
         })
     }
       </TableBody>
