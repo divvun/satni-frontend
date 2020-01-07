@@ -14,10 +14,7 @@ import {
   ArrowIcon,
   XIcon
 } from 'components';
-import {
-  selectKey,
-  fetchSearchItemsIfNeeded
-} from 'features/search/searchItemActions';
+import { fetchSearchItems } from 'features/search/searchSlice';
 
 const SearchRenderer = ({
   inputValue,
@@ -29,36 +26,39 @@ const SearchRenderer = ({
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(selectKey(inputValue));
-    debounce(300, dispatch(fetchSearchItemsIfNeeded(inputValue)));
+    dispatch(fetchSearchItems(inputValue));
   }, [dispatch, inputValue]);
 
-  if (search.errorMessage) {
+  if (search.error) {
     return <div><b>{inputValue}</b> is not found in this database.</div>;
   }
 
-  if (search.isSearching) {
+  if (search.isFetching) {
     return <div>Fetching search results …</div>;
   }
 
-  return (
-    <Menu>
-      {search.resultItems
-      .map((item, index) => (
-        <Item
-          {...getItemProps({
-            key: index,
-            item,
-            index,
-            isActive: highlightedIndex === index,
-            isSelected: selectedItem === item
-          })}
-        >
-          {item}
-        </Item>
-      ))}
-    </Menu>
-  );
+  if (search[inputValue]) {
+    return (
+      <Menu>
+        {search[inputValue]
+        .map((item, index) => (
+          <Item
+            {...getItemProps({
+              key: index,
+              item,
+              index,
+              isActive: highlightedIndex === index,
+              isSelected: selectedItem === item
+            })}
+          >
+            {item}
+          </Item>
+        ))}
+      </Menu>
+    );
+  }
+
+  return null;
 };
 
 const Searcher = ({
@@ -96,16 +96,9 @@ const Searcher = ({
               <Input
                 {...getInputProps({
                   placeholder: 'Search for a word',
-                  isOpen,
-                  onChange: event => {
-                    const value = inHTMLData(event.target.value.toLowerCase());
-                    console.log(value);
-                    if (!value || value.length < 3) {
-                      return;
-                    }
-                    return value;
-                  }
-                })}
+                  isOpen
+                }
+              )}
             />
               {selectedItem
               ? <ControllerButton

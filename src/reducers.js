@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import articlesReducer from 'features/article/articleSlice';
-import { search } from 'features/search/searchItemReducers';
+import searchReducer from 'features/search/searchSlice';
 import paradigmsReducer from 'features/paradigm/paradigmsSlice';
 
 const rootReducer = combineReducers({
   articles: articlesReducer,
-  search,
+  search: searchReducer,
   paradigms: paradigmsReducer
 });
 
