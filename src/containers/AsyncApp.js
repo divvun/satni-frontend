@@ -10,7 +10,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-import Searcher from '../components/Searcher';
+import Searcher from 'features/search/Searcher';
 import Articles from 'features/article/Articles';
 import LemmaDetails from '../components/LemmaDetails.js';
 
