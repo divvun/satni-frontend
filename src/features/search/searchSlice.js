@@ -42,6 +42,6 @@ export const fetchSearchItems = (key) => async dispatch => {
     const searchItems = toJson(text);
     dispatch(getSearchItemsSuccess({key, searchItems}));
   } catch (err) {
-    dispatch(getArticlesFailure(err.toString()));
+    dispatch(getSearchItemsFailure(err.toString()));
   }
 };
