@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Downshift from 'downshift';
-import PropTypes from 'prop-types';
-import { inHTMLData } from 'xss-filters';
 import { css } from 'react-emotion';
-import { debounce } from 'throttle-debounce';
 import {
   Menu,
   ControllerButton,
