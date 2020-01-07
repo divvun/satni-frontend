@@ -19,6 +19,40 @@ import {
   fetchSearchItemsIfNeeded
 } from 'features/search/searchItemActions';
 
+const SearchRenderer = ({
+  search,
+  selectedItem,
+  highlightedIndex,
+  getItemProps
+}) => {
+  if (search.errorMessage) {
+    return <div><b>{search.searchKey}</b> is not found in this database.</div>;
+  }
+
+  if (search.isSearching) {
+    return <div>Fetching search results …</div>;
+  }
+
+  return (
+    <Menu>
+      {search.resultItems
+      .map((item, index) => (
+        <Item
+          {...getItemProps({
+            key: index,
+            item,
+            index,
+            isActive: highlightedIndex === index,
+            isSelected: selectedItem === item
+          })}
+        >
+          {item}
+        </Item>
+      ))}
+    </Menu>
+  );
+};
+
 class Searcher extends Component {
   constructor (props) {
     super(props);
@@ -84,29 +118,12 @@ class Searcher extends Component {
                 </ControllerButton>}
               </div>
               {isOpen ?
-                <div>
-                  {search.errorMessage
-                    ? <div><b>{search.searchKey}</b> is not found in this database.</div>
-                    : search.isSearching
-                    ? <div>Fetching search results …</div>
-                    : <Menu>
-                      {search.resultItems
-                      .map((item, index) => (
-                        <Item
-                          {...getItemProps({
-                            key: index,
-                            item,
-                            index,
-                            isActive: highlightedIndex === index,
-                            isSelected: selectedItem === item
-                          })}
-                        >
-                          {item}
-                        </Item>
-                      ))}
-                    </Menu>
-                  }
-                </div> :
+                <SearchRenderer {...{
+                  search,
+                  selectedItem,
+                  highlightedIndex,
+                  getItemProps,
+                }}/> :
                 null
               }
               {this.state.articlepath ?
