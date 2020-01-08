@@ -233,9 +233,9 @@ const Content = ({analyses, language}) => {
     case 'sme':
       return <div>
         <LangTable analyses={analyses} language={language} />
-        <div>(otne in) {analyses['V+Ind+Prs+ConNeg'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
-        <div>(ikte in) {analyses['V+Ind+Prt+ConNeg'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
-        <div>(lean) {analyses['V+PrfPrc'].map(wordform => <span key={wordform}>{wordform}</span>)}</div>
+        {analyses['V+Ind+Prs+ConNeg'] ? <div>(otne in) {analyses['V+Ind+Prs+ConNeg'].map(wordform => <span key={wordform}>{wordform}</span>)}</div> : null}
+        {analyses['V+Ind+Prt+ConNeg'] ? <div>(ikte in) {analyses['V+Ind+Prt+ConNeg'].map(wordform => <span key={wordform}>{wordform}</span>)}</div> : null}
+        {analyses['V+PrfPrc'] ? <div>(lean) {analyses['V+PrfPrc'].map(wordform => <span key={wordform}>{wordform}</span>)}</div> : null}
       </div>;
     case 'smj':
       return <div>
