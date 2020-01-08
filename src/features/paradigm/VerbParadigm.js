@@ -221,6 +221,12 @@ const LangTable = ({analyses, language}) => {
   );
 };
 
+const ExtraContent = ({listOfAnalyses, analyses}) => (
+  <>
+  {listOfAnalyses.map((uff, index) => analyses[uff[1]] ? <div>({uff[0]}) {analyses[uff[1]].map(wordform => <span key={wordform}>{wordform}</span>)}</div> : null)}
+  </>
+)
+
 const Content = ({analyses, language}) => {
   switch (language) {
     case 'sma':
@@ -233,7 +239,12 @@ const Content = ({analyses, language}) => {
     case 'sme':
       return <div>
         <LangTable analyses={analyses} language={language} />
-        {[['otne in', 'V+Ind+Prs+ConNeg'], ['ikte in', 'V+Ind+Prt+ConNeg'], ['lean', 'V+PrfPrc']].map((uff, index) => analyses[uff[1]] ? <div>({uff[0]}) {analyses[uff[1]].map(wordform => <span key={wordform}>{wordform}</span>)}</div> : null)}
+        <ExtraContent
+        listOfAnalyses={[
+          ['otne in', 'V+Ind+Prs+ConNeg'], 
+          ['ikte in', 'V+Ind+Prt+ConNeg'], 
+          ['lean', 'V+PrfPrc']]} 
+        analyses={analyses}/>
       </div>;
     case 'smj':
       return <div>
