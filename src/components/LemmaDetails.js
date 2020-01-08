@@ -1,6 +1,6 @@
 import React from 'react';
 import qs from 'qs';
-import Korp from './Korp';
+import Korp from 'features/korp/Korp';
 import Paradigm from 'features/paradigm/Paradigm';
 import { ArticleDiv } from '../components';
 
