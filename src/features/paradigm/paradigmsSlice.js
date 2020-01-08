@@ -10,10 +10,7 @@ const paradigmsSlice = createSlice({
       state.isFetching = true;
     },
     getParadigmSuccess (state, action) {
-      console.log('state', state);
-      console.log('action', action);
       const { stem, paradigm } = action.payload;
-      console.log('sus', stem, paradigm);
       state[`${stemToKey(stem)}`] = paradigm;
       state.isFetching = false;
       state.error = null;
@@ -37,10 +34,8 @@ export const fetchParadigms = (stem) => async dispatch => {
   try {
     dispatch(getParadigmStart());
     const paradigm = await fetchParadigm(stem);
-    console.log('abba', stem, paradigm);
     dispatch(getParadigmSuccess({stem, paradigm}));
   } catch (err) {
-    console.log('uff', err);
     dispatch(getParadigmFailure(err.toString()));
   }
 };
