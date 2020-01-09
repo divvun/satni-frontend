@@ -4535,10 +4535,9 @@ exports[`Storyshots Korp invalid lemma 1`] = `
 exports[`Storyshots Korp sma valid lemma 1`] = `
 <div>
   <span>
+    Checking if 
     gïele
-     was not found in 
-    sma
-     Korp
+     exists in Korp.
   </span>
 </div>
 `;
@@ -4546,10 +4545,9 @@ exports[`Storyshots Korp sma valid lemma 1`] = `
 exports[`Storyshots Korp sme valid lemma 1`] = `
 <div>
   <span>
+    Checking if 
     juolgi
-     was not found in 
-    sme
-     Korp
+     exists in Korp.
   </span>
 </div>
 `;
@@ -4557,10 +4555,9 @@ exports[`Storyshots Korp sme valid lemma 1`] = `
 exports[`Storyshots Korp smj valid lemma 1`] = `
 <div>
   <span>
+    Checking if 
     guolle
-     was not found in 
-    smj
-     Korp
+     exists in Korp.
   </span>
 </div>
 `;
@@ -4568,10 +4565,9 @@ exports[`Storyshots Korp smj valid lemma 1`] = `
 exports[`Storyshots Korp smn valid lemma 1`] = `
 <div>
   <span>
+    Checking if 
     ja
-     was not found in 
-    smn
-     Korp
+     exists in Korp.
   </span>
 </div>
 `;
@@ -4579,10 +4575,9 @@ exports[`Storyshots Korp smn valid lemma 1`] = `
 exports[`Storyshots Korp sms valid lemma 1`] = `
 <div>
   <span>
+    Checking if 
     ja
-     was not found in 
-    sms
-     Korp
+     exists in Korp.
   </span>
 </div>
 `;

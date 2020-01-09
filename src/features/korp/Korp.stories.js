@@ -1,7 +1,9 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
+import satniStore from 'configureStore';
 import Korp from './Korp';
 
 const korpInfo = {
@@ -10,10 +12,10 @@ const korpInfo = {
 };
 
 storiesOf('Korp', module)
-  .add('invalid language', () => <Korp language='eng' lemma='juolgi' />)
-  .add('invalid lemma', () => <Korp language='sme' lemma='asdfghjlo' />)
-  .add('sma valid lemma', () => <Korp language='sma' lemma='gïele' />)
-  .add('smj valid lemma', () => <Korp language='smj' lemma='guolle' />)
-  .add('sms valid lemma', () => <Korp language='sms' lemma='ja' />)
-  .add('smn valid lemma', () => <Korp language='smn' lemma='ja' />)
-  .add('sme valid lemma', () => <Korp language='sme' lemma='juolgi' />);
+  .add('invalid language', () => <Provider store={satniStore}><Korp language='eng' lemma='juolgi' /></Provider>)
+  .add('invalid lemma', () => <Provider store={satniStore}><Korp language='sme' lemma='asdfghjlo' /></Provider>)
+  .add('sma valid lemma', () => <Provider store={satniStore}><Korp language='sma' lemma='gïele' /></Provider>)
+  .add('smj valid lemma', () => <Provider store={satniStore}><Korp language='smj' lemma='guolle' /></Provider>)
+  .add('sms valid lemma', () => <Provider store={satniStore}><Korp language='sms' lemma='ja' /></Provider>)
+  .add('smn valid lemma', () => <Provider store={satniStore}><Korp language='smn' lemma='ja' /></Provider>)
+  .add('sme valid lemma', () => <Provider store={satniStore}><Korp language='sme' lemma='juolgi' /></Provider>);
