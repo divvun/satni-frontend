@@ -93,7 +93,8 @@ const Searcher = ({
               <Input
                 {...getInputProps({
                   placeholder: 'Search for a word',
-                  isOpen
+                  isOpen,
+                  autoFocus: true
                 }
               )}
             />
