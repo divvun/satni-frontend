@@ -28,9 +28,9 @@ const styles = theme => ({
   },
   layout: {
     width: 'auto',
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
-    [theme.breakpoints.up(900 + theme.spacing.unit * 3 * 2)]: {
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
+    [theme.breakpoints.up(900 + theme.spacing(3, 2))]: {
       width: 900,
       marginLeft: 'auto',
       marginRight: 'auto'
@@ -39,12 +39,12 @@ const styles = theme => ({
   heroContent: {
     maxWidth: 600,
     margin: '0 auto',
-    padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`
+    padding: `${theme.spacing(8)}px 0 ${theme.spacing(6)}px`
   },
   footer: {
-    marginTop: theme.spacing.unit * 8,
+    marginTop: theme.spacing(8),
     borderTop: `1px solid ${theme.palette.divider}`,
-    padding: `${theme.spacing.unit * 6}px 0`
+    padding: `${theme.spacing(6)}px 0`
   }
 });
 
@@ -107,7 +107,7 @@ const AsyncApp = ({classes, match}) => (
     </main>
     {/* Footer */}
     <footer className={classNames(classes.footer, classes.layout)}>
-      <Grid container spacing={32} justify='space-evenly'>
+      <Grid container spacing={0} justify='space-evenly'>
         {footers.map(footer => (
           <Grid item xs key={footer.title}>
             <Typography variant='h6' color='textPrimary' gutterBottom>
