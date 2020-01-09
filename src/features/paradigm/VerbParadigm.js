@@ -223,7 +223,7 @@ const LangTable = ({analyses, language}) => {
 
 const ExtraContent = ({listOfAnalyses, analyses}) => (
   <>
-  {listOfAnalyses.map((uff, index) => analyses[uff[1]] ? <div>({uff[0]}) {analyses[uff[1]].map(wordform => <span key={wordform}>{wordform}</span>)}</div> : null)}
+  {listOfAnalyses.map((uff, index) => analyses[uff[1]] ? <div key={index}>({uff[0]}) {analyses[uff[1]].map(wordform => <span key={wordform}>{wordform}</span>)}</div> : null)}
   </>
 )
 
