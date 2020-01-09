@@ -29,7 +29,12 @@ describe('reducers', () => {
       { term: 'guollebuktin', dict: 'smenob', lang: 'sme', langs: 'nob' },
       { term: 'guolleguhppár', dict: 'smenob', lang: 'sme', langs: 'nob' },
       { term: 'guolljut', dict: 'smefin', lang: 'sme', langs: 'fin' },
-      { term: 'guollegáhkku', dict: 'smefin', lang: 'sme', langs: 'fin' }
+      { term: 'guollegáhkku', dict: 'smefin', lang: 'sme', langs: 'fin' },
+      { term: 'guol le', dict: 'smefin', lang: 'sme', langs: 'fin' },
+      { term: 'guol-le', dict: 'smefin', lang: 'sme', langs: 'fin' },
+      { term: 'guol)le', dict: 'smefin', lang: 'sme', langs: 'fin' },
+      { term: 'guol(le', dict: 'smefin', lang: 'sme', langs: 'fin' },
+      { term: 'guol (suopungin', dict: 'smefin', lang: 'sme', langs: 'fin' }
     ];
 
     expect(search(undefined, {
@@ -42,6 +47,8 @@ describe('reducers', () => {
       isFetching: false,
       error: null,
       'guol': [
+        'guol le',
+        'guol-le',
         'guollebuktin',
         'guollegáhkku',
         'guolleguhppár',

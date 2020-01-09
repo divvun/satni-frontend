@@ -2,8 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 import { getSearchItems } from 'api';
 import { toJson} from 'utils';
 
+// Only keep search results containing letters, space and hyphen
 const filterItems = (searchItems) => {
   return Array.from(new Set(searchItems.map(item => item.term)))
+    .filter(term => /^( |[\wåäöøæáčđŋšŧžïâǩǯǧǥʒʹʼ-])+$/u.test(term))
     .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 };
 
