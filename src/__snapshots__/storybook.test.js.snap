@@ -7475,19 +7475,25 @@ exports[`Storyshots VerbParadigm Inari saami verbs 1`] = `
     </tbody>
   </table>
   <div>
-    (onne jiem) 
+    (
+    onne jiem
+    ) 
     <span>
       vääzi
     </span>
   </div>
   <div>
-    (jieht jiem) 
+    (
+    jieht jiem
+    ) 
     <span>
       vázzám
     </span>
   </div>
   <div>
-    (lam) 
+    (
+    lam
+    ) 
     <span>
       vázzám
     </span>
@@ -7767,19 +7773,25 @@ exports[`Storyshots VerbParadigm Lule saami verbs 1`] = `
     </tbody>
   </table>
   <div>
-    (uddni iv) 
+    (
+    uddni iv
+    ) 
     <span>
       válde
     </span>
   </div>
   <div>
-    (iektu ittjiv) 
+    (
+    iektu ittjiv
+    ) 
     <span>
       válde
     </span>
   </div>
   <div>
-    (lav) 
+    (
+    lav
+    ) 
     <span>
       válldám
     </span>
@@ -8059,19 +8071,25 @@ exports[`Storyshots VerbParadigm North saami verbs 1`] = `
     </tbody>
   </table>
   <div>
-    (otne in) 
+    (
+    otne in
+    ) 
     <span>
       váldde
     </span>
   </div>
   <div>
-    (ikte in) 
+    (
+    ikte in
+    ) 
     <span>
       váldán
     </span>
   </div>
   <div>
-    (lean) 
+    (
+    lean
+    ) 
     <span>
       váldán
     </span>
@@ -8305,13 +8323,17 @@ exports[`Storyshots VerbParadigm Skolt saami verbs 1`] = `
     </tbody>
   </table>
   <div>
-    (täʹbbe jiõm) 
+    (
+    täʹbbe jiõm
+    ) 
     <span>
       vääʹʒʒ
     </span>
   </div>
   <div>
-    (jåhtta jiõm) 
+    (
+    jåhtta jiõm
+    ) 
     <span>
       väʒʒam
     </span>
@@ -8639,19 +8661,25 @@ exports[`Storyshots VerbParadigm South saami verbs 1`] = `
     </tbody>
   </table>
   <div>
-    (ij) 
+    (
+    ij
+    ) 
     <span>
       vaeltieh
     </span>
   </div>
   <div>
-    (lea) 
+    (
+    lea
+    ) 
     <span>
       vaalteme
     </span>
   </div>
   <div>
-    (lea) 
+    (
+    lea
+    ) 
     <span>
       vaeltieminie
     </span>
@@ -8778,19 +8806,25 @@ exports[`Storyshots VerbParadigm čágadit 1`] = `
     </tbody>
   </table>
   <div>
-    (otne in) 
+    (
+    otne in
+    ) 
     <span>
       čágat
     </span>
   </div>
   <div>
-    (ikte in) 
+    (
+    ikte in
+    ) 
     <span>
       čágadan
     </span>
   </div>
   <div>
-    (lean) 
+    (
+    lean
+    ) 
     <span>
       čágadan
     </span>
