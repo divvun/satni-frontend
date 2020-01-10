@@ -12,7 +12,7 @@ const KorpLink = ({language, lemma}) => {
 
   useEffect(() => {
     dispatch(isLemmaInKorp(language, lemma));
-  }, [language, lemma]);
+  }, [dispatch, language, lemma]);
 
   if (korp.error) {
     return <span>An error occured {korp.error}</span>;
@@ -27,8 +27,6 @@ const KorpLink = ({language, lemma}) => {
   } else {
     return <span>{lemma} was not found in {language} Korp</span>;
   }
-
-  return null;
 };
 
 const Korp = ({language, lemma}) => {
