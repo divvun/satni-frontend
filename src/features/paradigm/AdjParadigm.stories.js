@@ -1,15 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 
 import AdjParadigm from './AdjParadigm';
-import {
-  resultSmaAdjParadigm,
-  resultSmeAdjParadigm,
-  resultSmjAdjParadigm,
-  resultSmnAdjParadigm
-} from 'utils_testdata';
-
 const paradigm = {
   sma: {
     'analyses': {
