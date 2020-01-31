@@ -1,28 +1,31 @@
 import React from 'react';
-import { css } from 'react-emotion';
+import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 import { langName } from 'langThings';
 
 const SourceLink = ({from, to, lemma, source}) => {
   if (['nobsme', 'smenob', 'finsme', 'smefin'].includes(source)) {
-    return <a
+    return <Link
       href={`https://sanit.oahpa.no/detail/${from}/${to}/${lemma}.html`}
       target='_blank'
-      rel='noopener noreferrer'>Source</a>;
+      rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
   } else if (['smanob', 'nobsma'].includes(source)) {
-    return <a
+    return <Link
       href={`https://baakoeh.oahpa.no/detail/${from}/${to}/${lemma}.html`}
       target='_blank'
-      rel='noopener noreferrer'>Source</a>;
+      rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
   } else if (['smnfin', 'finsmn', 'smesmn', 'smnsme'].includes(source)) {
-    return <a
+    return <Link
       href={`https://saanih.oahpa.no/detail/${from}/${to}/${lemma}.html`}
       target='_blank'
-      rel='noopener noreferrer'>Source</a>;
+      rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
   } else if (['smsfin', 'finsms'].includes(source)) {
-    return <a
+    return <Link
       href={`https://saan.oahpa.no/detail/${from}/${to}/${lemma}.html`}
       target='_blank'
-      rel='noopener noreferrer'>Source</a>;
+      rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
   } else {
     return 'Source';
   }
@@ -93,11 +96,11 @@ const names = {
 
 const Source = ({source, lemma}) => {
   return (
-    <div className={css({
-      textAlign: 'center',
-      fontSize: '110%'
-    })}>
-      <SourceLink from={names[source]['from']} to={names[source]['to']} lemma={lemma} source={source} />: {langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</div>
+    <Grid item xs={12}>
+      <Typography>
+        Source: <SourceLink from={names[source]['from']} to={names[source]['to']} lemma={lemma} source={source} />
+      </Typography>
+    </Grid>
   );
 };
 

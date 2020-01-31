@@ -1,12 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import DictArticle from './DictArticle';
-
-const examples = [
-  { x: 'original0 original0 original0 original0', xt: 'translation0 translation0 translation0 translation0' },
-  { x: 'original1', xt: 'translation1' }
-];
+import LemmaGroups from './LemmaGroups';
 
 const lemmaGroups = [
   {
@@ -54,5 +49,5 @@ const lemmaGroups = [
   }
 ];
 
-storiesOf('DictArticle', module)
-  .add('default', () => <DictArticle lemmaGroups={lemmaGroups} examples={examples} dictionary='smenob' />);
+storiesOf('LemmaGroups', module)
+  .add('default', () => <LemmaGroups lemmaGroups={lemmaGroups} />);

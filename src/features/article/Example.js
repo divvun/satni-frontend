@@ -1,15 +1,26 @@
 import React from 'react';
-import { css } from "react-emotion";
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles({
+  second: {
+    fontStyle: 'italic'
+  }
+});
 
 const Example = ({example}) => {
+  const classes = useStyles();
+
   return (
-    <div className={css({
-      paddingTop: '3%',
-      paddingLeft: '2%'
-    })}>
-      <div>{example.x}</div>
-      <div className={css({fontStyle: 'italic'})}>{example.xt}</div>
-    </div>
+    <Grid container>
+      <Grid item xs={6}>
+        <Typography>{example.x}</Typography>
+      </Grid>
+      <Grid item xs={6}>
+        <Typography className={classes.second}>{example.xt}</Typography>
+      </Grid>
+    </Grid>
   );
 };
 

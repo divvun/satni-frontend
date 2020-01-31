@@ -209,3 +209,34 @@ export const handleErrors = (response) => {
   }
   return response;
 };
+
+// new termwiki formatting from here
+const groupToStem = (group) => (
+  {
+    lemma: group.t['#text'],
+    pos: group.t.pos,
+    language: term2dict[group['xml:lang']]
+  }
+);
+
+const makeStemPair = (fromGroup, toGroup, dict, category, termwikiref) => (
+  {
+    from: groupToStem(fromGroup),
+    to: groupToStem(toGroup),
+    dict,
+    category,
+    termwikiref
+  }
+);
+
+export const termwikiPosts = (lemma, termpost) => {
+  const groupsWithLemma = termpost.tg.filter(tg => tg.t['#text'] === lemma);
+  const sami = new Set(['sma', 'sme', 'smj', 'sms', 'smn']);
+
+  return groupsWithLemma.map(groupWithLemma => termpost.tg
+    .filter(tg => tg !== groupWithLemma)
+    .map(tg => makeStemPair(groupWithLemma, tg, termpost.dict, termpost.category, termpost.termwikiref))
+  )
+  .flat()
+  .filter(stemPair => (sami.has(stemPair.from.language) || sami.has(stemPair.to.language)));
+};

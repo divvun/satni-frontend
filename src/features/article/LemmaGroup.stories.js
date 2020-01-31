@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import MinimalParadigm from './MinimalParadigm';
+import LemmaGroup from './LemmaGroup';
 
-export const paradigmData = {
+const paradigm = {
   'V+Inf': [
     'váldit'
   ],
@@ -21,5 +21,7 @@ export const paradigmData = {
   ]
 };
 
-storiesOf('MinimalParadigm', module)
-  .add('default', () => <MinimalParadigm paradigm={paradigmData} />);
+const stem = { lemma: 'váldit', pos: 'Verb'};
+
+storiesOf('LemmaGroup', module)
+  .add('default', () => <LemmaGroup stem={stem} paradigm={paradigm} />);
