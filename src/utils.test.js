@@ -7,7 +7,8 @@ import {
   normaliseDict,
   normaliseTermWiki,
   normaliseArticles,
-  termwikiPosts
+  termwikiPosts,
+  dictPosts
 } from './utils';
 import {
   resultDictWithExamples,
@@ -378,7 +379,7 @@ describe('Massage data from eXist', () => {
     };
 
     expect(translationStems(tgElement))
-  .toEqual([{'lemma': 'jalka', 'lang': 'fin', 'pos': 'N'}]);
+  .toEqual([{'lemma': 'jalka', language: 'fin', 'pos': 'N'}]);
   });
 
   it('Turns dict tg where t is an array into an array of stems', () => {
@@ -402,8 +403,8 @@ describe('Massage data from eXist', () => {
     };
 
     expect(translationStems(tgElement))
-  .toEqual([{'lemma': 'fot', 'lang': 'nob', 'pos': 'N'},
-            {'lemma': 'bein', 'lang': 'nob', 'pos': 'N'}]);
+  .toEqual([{'lemma': 'fot', language: 'nob', 'pos': 'N'},
+            {'lemma': 'bein', language: 'nob', 'pos': 'N'}]);
   });
 
   it('Turns dict xg where xg is an object into an array of examples', () => {
@@ -475,12 +476,12 @@ describe('Massage data from eXist', () => {
       'dict': 'termwiki',
       'stems': [
         {
-          'lang': 'fin',
+          language: 'fin',
           'lemma': 'piste',
           'pos': 'N'
         },
         {
-          'lang': 'sms',
+          language: 'sms',
           'lemma': 'ceäkldõs',
           'pos': 'N'
         }
@@ -497,7 +498,7 @@ describe('Massage data from eXist', () => {
   });
 });
 
-describe('Massage a termwiki post', () => {
+describe('Turn a termwiki article into display ready termwikiposts', () => {
   const got = {
     'term': 'syn',
     'pos': 'MWE',
@@ -571,35 +572,74 @@ describe('Massage a termwiki post', () => {
       dict: 'termwiki',
       category: 'Servodatdieđa',
       termwikiref: 'Servodatdieđa:åejviebaakoelæstoe 20110120 2180',
-      from: {
-        lemma: 'syn',
-        pos: 'N',
-        language: 'nob'
-      },
-      to: {
-        lemma: 'mov vuajnoen mietie',
-        pos: 'MWE',
-        language: 'sma'
-      }
+      stems: [
+        {
+          lemma: 'syn',
+          pos: 'N',
+          language: 'swe'
+        },
+        {
+          lemma: 'mov vuajnoen mietie',
+          pos: 'MWE',
+          language: 'sma'
+        }
+      ]
     },
     {
       dict: 'termwiki',
       category: 'Servodatdieđa',
       termwikiref: 'Servodatdieđa:åejviebaakoelæstoe 20110120 2180',
-      from: {
-        lemma: 'syn',
-        pos: 'N',
-        language: 'swe'
-      },
-      to: {
-        lemma: 'mov vuajnoen mietie',
-        pos: 'MWE',
-        language: 'sma'
-      }
+      stems: [
+        {
+          lemma: 'syn',
+          pos: 'N',
+          language: 'nob'
+        },
+        {
+          lemma: 'mov vuajnoen mietie',
+          pos: 'MWE',
+          language: 'sma'
+        }
+      ]
     }
   ];
 
   it('Turn termpost into pairs of stems', () => {
-    expect(termwikiPosts('syn', got)).toEqual(want);
+    expect(termwikiPosts('syn', normaliseTermWiki(got))).toEqual(want);
+  });
+});
+
+describe('Turn a dictionary article into display ready dictionary posts', () => {
+  const want = [
+    {
+      dict: 'smenob',
+      examples: [
+        {
+          x: 'Iskkan sihkkut váivves oainnáhusa iežan čalmmiin, muhto dat liikká čuovvu mu.',
+          xt: 'Jeg prøver å vaske vekk det triste synet fra øynene mine, men det følger med likevel.'
+        },
+        {
+          x: 'Lean áidna vilges olmmoš ja dieđusge oainnáhus.',
+          xt: 'Jeg er det eneste hvite mennesket og selvfølgelig et syn.'
+        }
+      ],
+      stems: [
+        {
+          language: 'sme',
+          lemma: 'oainnáhus',
+          pos: 'N'
+        },
+        {
+          language: 'nob',
+          lemma: 'syn',
+          pos: 'N'
+        }
+      ],
+      termwikiref: '-1'
+    }
+  ];
+
+  it('Turn dictpost into pairs of stems', () => {
+    expect(dictPosts(normaliseDict(existDictWithExamples)[0])).toEqual(want);
   });
 });
