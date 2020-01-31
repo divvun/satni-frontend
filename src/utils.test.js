@@ -6,7 +6,8 @@ import {
   translationExamples,
   normaliseDict,
   normaliseTermWiki,
-  normaliseArticles
+  normaliseArticles,
+  termwikiPosts
 } from './utils';
 import {
   resultDictWithExamples,
@@ -493,5 +494,112 @@ describe('Massage data from eXist', () => {
   it('Normalise dict with re', () => {
     expect(normaliseArticles([snakkeWithRe]))
     .toEqual(resultSnakkeWithRe);
+  });
+});
+
+describe('Massage a termwiki post', () => {
+  const got = {
+    'term': 'syn',
+    'pos': 'MWE',
+    'dict': 'termwiki',
+    'status': null,
+    'category': 'Servodatdieđa',
+    'termwikiref': 'Servodatdieđa:åejviebaakoelæstoe 20110120 2180',
+    'def': null,
+    'expl': null,
+    'tg': [
+      {
+        'xml:lang': 'sma',
+        '#text': [
+          '\n      ',
+          '\n    '
+        ],
+        't': {
+          'pos': 'MWE',
+          '#text': 'mov vuajnoen mietie'
+        }
+      },
+      {
+        'xml:lang': 'nb',
+        '#text': [
+          '\n      ',
+          '\n    '
+        ],
+        't': {
+          'pos': 'N',
+          '#text': 'syn'
+        }
+      },
+      {
+        'xml:lang': 'nb',
+        '#text': [
+          '\n      ',
+          '\n    '
+        ],
+        't': {
+          'pos': 'N',
+          '#text': 'synspunkt'
+        }
+      },
+      {
+        'xml:lang': 'sv',
+        '#text': [
+          '\n      ',
+          '\n    '
+        ],
+        't': {
+          'pos': 'N',
+          '#text': 'syn'
+        }
+      },
+      {
+        'xml:lang': 'sv',
+        '#text': [
+          '\n      ',
+          '\n    '
+        ],
+        't': {
+          'pos': 'N',
+          '#text': 'synpunkt'
+        }
+      }
+    ]
+  };
+
+  const want = [
+    {
+      dict: 'termwiki',
+      category: 'Servodatdieđa',
+      termwikiref: 'Servodatdieđa:åejviebaakoelæstoe 20110120 2180',
+      from: {
+        lemma: 'syn',
+        pos: 'N',
+        language: 'nob'
+      },
+      to: {
+        lemma: 'mov vuajnoen mietie',
+        pos: 'MWE',
+        language: 'sma'
+      }
+    },
+    {
+      dict: 'termwiki',
+      category: 'Servodatdieđa',
+      termwikiref: 'Servodatdieđa:åejviebaakoelæstoe 20110120 2180',
+      from: {
+        lemma: 'syn',
+        pos: 'N',
+        language: 'swe'
+      },
+      to: {
+        lemma: 'mov vuajnoen mietie',
+        pos: 'MWE',
+        language: 'sma'
+      }
+    }
+  ];
+
+  it('Turn termpost into pairs of stems', () => {
+    expect(termwikiPosts('syn', got)).toEqual(want);
   });
 });
