@@ -2,12 +2,12 @@ export const resultDictWithExamples = [{
   translations: [
     {
       pos: 'N',
-      lang: 'sme',
+      language: 'sme',
       lemma: 'oainnáhus'
     },
     {
       pos: 'N',
-      lang: 'nob',
+      language: 'nob',
       lemma: 'syn'
     }
   ],
@@ -32,12 +32,12 @@ export const resultDictWithoutExamples = [{
   translations: [
     {
       pos: 'N',
-      lang: 'sme',
+      language: 'sme',
       lemma: 'guolladat'
     },
     {
       pos: 'N',
-      lang: 'fin',
+      language: 'fin',
       lemma: 'kalvoin verkonkudonnassa'
     }
   ]
@@ -50,11 +50,11 @@ export const resultDictWithLatin = [{
   translations: [
     {
       pos: 'N',
-      lang: 'nob',
+      language: 'nob',
       lemma: 'makrellterne'
     },
     {
-      lang: 'sma',
+      language: 'sma',
       lemma: 'makrelle-dearne',
       pos: 'N',
       re: '(lat: sterna hirundo)'
@@ -70,12 +70,12 @@ export const resultAehtjie = [
     translations: [
       {
         pos: 'N',
-        lang: 'sma',
+        language: 'sma',
         lemma: 'aehtjie'
       },
       {
         pos: 'N',
-        lang: 'nob',
+        language: 'nob',
         lemma: 'far'
       }
     ]
@@ -86,32 +86,32 @@ export const resultTermWiki = {
   stems: [
     {
       lemma: 'androgyn',
-      lang: 'smn',
+      language: 'smn',
       pos: 'N'
     },
     {
       lemma: 'androgyne',
-      lang: 'eng',
+      language: 'eng',
       pos: 'N'
     },
     {
       lemma: 'androgynlâšvuotâ',
-      lang: 'smn',
+      language: 'smn',
       pos: 'A'
     },
     {
       lemma: 'androgynvuotâ',
-      lang: 'smn',
+      language: 'smn',
       pos: undefined
     },
     {
       lemma: 'androgyna',
-      lang: 'sme',
+      language: 'sme',
       pos: 'N'
     },
     {
       lemma: 'androgyyni',
-      lang: 'fin',
+      language: 'fin',
       pos: 'N'
     }
   ],
@@ -126,13 +126,12 @@ export const resultSnakkeWithRe = [
     'termwikiref': '-1',
     'translations': [
       {
-        'lang': 'nob',
-        'lemma':
-      'snakke',
+        language: 'nob',
+        'lemma': 'snakke',
         'pos': 'V'
       },
       {
-        'lang': 'sme',
+        language: 'sme',
         'lemma': 'sámástit',
         'pos': 'V',
         're': '(snakke samisk)'

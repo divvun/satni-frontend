@@ -64,7 +64,7 @@ export const translationStems = (tg) => {
     tg.t.forEach((tr) => {
       const result = {
         'lemma': tr['#text'],
-        'lang': tg['xml:lang'],
+        language: tg['xml:lang'],
         'pos': tr.pos
       };
       if (tg['re']) {
@@ -75,7 +75,7 @@ export const translationStems = (tg) => {
   } else {
     const result = {
       'lemma': tg.t['#text'],
-      'lang': tg['xml:lang'],
+      language: tg['xml:lang'],
       'pos': tg.t.pos
     };
     if (tg['re']) {
@@ -113,7 +113,7 @@ export const normaliseDict = (existDict) => {
     let translations = translationStems(tr);
     translations.unshift({
       'lemma': existDict.term,
-      'lang': existDict.lang,
+      language: existDict.lang,
       'pos': existDict.pos
     });
 
@@ -175,7 +175,7 @@ const normaliseTranslationGroup = (existTerm) => {
     } catch (TypeError) {
       stem.lemma = tg.t.trim();
     }
-    stem.lang = term2dict[tg['xml:lang']];
+    stem.language = term2dict[tg['xml:lang']];
     stem.pos = tg.t.pos;
 
     if (stem.lemma) {
@@ -211,32 +211,40 @@ export const handleErrors = (response) => {
 };
 
 // new termwiki formatting from here
-const groupToStem = (group) => (
-  {
-    lemma: group.t['#text'],
-    pos: group.t.pos,
-    language: term2dict[group['xml:lang']]
-  }
-);
-
-const makeStemPair = (fromGroup, toGroup, dict, category, termwikiref) => (
-  {
-    from: groupToStem(fromGroup),
-    to: groupToStem(toGroup),
-    dict,
-    category,
-    termwikiref
-  }
-);
-
 export const termwikiPosts = (lemma, termpost) => {
-  const groupsWithLemma = termpost.tg.filter(tg => tg.t['#text'] === lemma);
+  const stemsWithLemma = termpost.stems.filter(stem => stem.lemma === lemma);
   const sami = new Set(['sma', 'sme', 'smj', 'sms', 'smn']);
 
-  return groupsWithLemma.map(groupWithLemma => termpost.tg
-    .filter(tg => tg !== groupWithLemma)
-    .map(tg => makeStemPair(groupWithLemma, tg, termpost.dict, termpost.category, termpost.termwikiref))
+  return stemsWithLemma.map(stemWithLemma => termpost.stems
+    .filter(stem => stem !== stemWithLemma)
+    .map(stem => {
+      return {
+        stems: [
+          stemWithLemma,
+          stem
+        ],
+        dict: termpost.dict,
+        category: termpost.termwikiref.split(':')[0],
+        termwikiref: termpost.termwikiref
+      };
+    })
   )
   .flat()
-  .filter(stemPair => (sami.has(stemPair.from.language) || sami.has(stemPair.to.language)));
+  .filter(stemPair => (sami.has(stemPair.stems[0].language) || sami.has(stemPair.stems[1].language)));
+};
+
+export const dictPosts = (dictpost) => {
+  const [ stemWithLemma, ...otherStems ] = dictpost.translations;
+
+  return otherStems.map(otherStem => (
+    {
+      stems: [
+        stemWithLemma,
+        otherStem
+      ],
+      dict: dictpost.dict,
+      termwikiref: dictpost.termwikiref,
+      examples: dictpost.examples
+    }
+  ));
 };
