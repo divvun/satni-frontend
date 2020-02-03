@@ -13,10 +13,10 @@ const Stem = ({ stem }) => {
   const {lemma, pos, re} = stem
   return (
     <>
-    <Typography variant='h5' component='h2'>
+      <Typography variant='h5' component='h2'>
         {lemma} {re}
       </Typography>
-    <Typography className={classes.pos} color='textSecondary'>
+      <Typography className={classes.pos} color='textSecondary'>
         {pos}
       </Typography>
     </>
