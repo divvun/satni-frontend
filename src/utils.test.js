@@ -1,7 +1,6 @@
 import {
   toJson,
   removeDuplicates,
-  ensureTranslationGroupIsArray,
   translationStems,
   translationExamples,
   normaliseDict,
