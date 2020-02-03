@@ -7,17 +7,18 @@ import {
   resultDictWithoutExamples,
   resultTermWiki
 } from 'utils_testdata';
+import { dictPosts, termwikiPosts} from 'utils';
 
 storiesOf('PresentArticles', module)
   .add('DictArticle with examples', () => <PresentArticles
-    articles={[resultDictWithExamples[0]]} />)
+    articles={dictPosts(resultDictWithExamples[0])} />)
   .add('DictArticle without examples', () => <PresentArticles
-    articles={[resultDictWithoutExamples[0]]} />)
+    articles={dictPosts(resultDictWithoutExamples[0])} />)
   .add('Only TermWikiArticle', () => <PresentArticles
-    articles={[resultTermWiki]} />)
+    articles={termwikiPosts('androgyn', resultTermWiki)} />)
   .add('All types', () => <PresentArticles
     articles={[
-      resultDictWithExamples[0],
-      resultDictWithoutExamples[0],
-      resultTermWiki
-    ]} />);
+      ...dictPosts(resultDictWithExamples[0]),
+      ...dictPosts(resultDictWithoutExamples[0]),
+      ...termwikiPosts('androgyn', resultTermWiki)]
+    } />);

@@ -16,16 +16,10 @@ const Articles = ({articles}) => {
       {articles.map((article, i) => {
         if (article.dict === 'termwiki') {
           return <TermWikiArticle
-            key={i}
-            stems={article.stems}
-            termwikiref={article.termwikiref}
-            dictionary={article.dict} />;
+            termGroup={article} />;
         } else {
           return <DictArticle
-            key={i}
-            stems={article.translations}
-            examples={article.examples}
-            dictionary={article.dict} />;
+            dictGroup={article} />;
         }
       })}
     </div>

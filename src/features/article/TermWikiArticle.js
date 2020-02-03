@@ -19,33 +19,41 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const CategoryLink = ({category}) => {
+  return <Grid item xs={12}>
+    <Typography>
+      Category:
+      <Link href={`https://satni.uit.no/termwiki/index.php?title=Kategoriija:${category}`}
+        target='_blank' rel='noopener noreferrer'>
+        {category}
+      </Link>
+    </Typography>
+  </Grid>;
+};
+
+const SourceLink = ({termwikiref}) => (
+  <Grid item xs={12}>
+    <Typography>
+      Source:
+      <Link
+        href={`https://satni.uit.no/termwiki/index.php?title=${termwikiref}`}
+        target='_blank' rel='noopener noreferrer'>
+        TermWiki
+      </Link>
+    </Typography>
+  </Grid>
+);
+
 const TermWikiArticle = ({termGroup}) => {
   const classes = useStyles();
+  const { stems, category, termwikiref } = termGroup;
 
+  console.log(category, termwikiref);
   return (
     <Paper className={classes.paper}>
-      <LemmaGroups lemmaGroups={termGroup.lemmaGroups} />
-      <Grid container>
-        <Grid item xs={12}>
-          <Typography>
-            Category:
-            <Link href={`https://satni.uit.no/termwiki/index.php?title=Kategoriija:${termGroup.category}`}
-              target='_blank' rel='noopener noreferrer'>
-              {termGroup.category}
-            </Link>
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <Typography>
-            Source:
-            <Link
-              href={`https://satni.uit.no/termwiki/index.php?title=${termGroup.termwikiref}`}
-              target='_blank' rel='noopener noreferrer'>
-              TermWiki
-            </Link>
-          </Typography>
-        </Grid>
-      </Grid>
+      <LemmaGroups stems={stems} />
+      <SourceLink termwikiref={termwikiref} />
+      <CategoryLink category={category} />
     </Paper>
   );
 };

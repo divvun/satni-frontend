@@ -16,14 +16,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const LemmaGroups = ({lemmaGroups}) => {
+const LemmaGroups = ({stems}) => {
   const classes = useStyles();
   return (
     <Grid container className={classes.root}>
       <Grid container spacing={2}>
-        {lemmaGroups.map(lemmaGroup =>
+        {stems.map(stem =>
           <Grid item xs={6}>
-            <LemmaGroup stem={lemmaGroup.stem} paradigm={lemmaGroup.paradigm} />
+            <LemmaGroup stem={stem} />
           </Grid>)
         }
       </Grid>
