@@ -12,14 +12,15 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const DictArticle = ({lemmaGroups, examples, dictionary}) => {
+const DictArticle = ({dictGroup}) => {
   const classes = useStyles();
+  const { stems, examples, dict } = dictGroup;
 
   return (
     <Paper className={classes.paper}>
-      <LemmaGroups lemmaGroups={lemmaGroups} />
+      <LemmaGroups stems={stems} />
       {examples.length > 0 && (<Examples examples={examples} />)}
-      <Source source={dictionary} lemma={lemmaGroups[0].stem.lemma} />
+      <Source source={dict} lemma={stems[0].lemma} />
     </Paper>
   );
 };

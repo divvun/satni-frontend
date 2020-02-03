@@ -4,52 +4,20 @@ import { storiesOf } from '@storybook/react';
 import TermWikiArticle from './TermWikiArticle';
 
 const termGroup = {
-  lemmaGroups: [
+  stems: [
     {
-      stem: {
-        lemma: 'androgyn',
-        lang: 'smn',
-        pos: 'A'
-      },
-      paradigm: {
-        'V+Inf': [
-          'váldit'
-        ],
-        'V+Ind+Prs+Sg1': [
-          'válddán'
-        ],
-        'V+Ind+Prs+Sg2': [
-          'válddát'
-        ],
-        'V+Ind+Prs+Sg3': [
-          'váldá'
-        ],
-        'V+Ind+Prs+Du1': [
-          'válde'
-        ]
-      }
+      lemma: 'androgyn',
+      lang: 'smn',
+      pos: 'A'
     },
     {
-      stem: {
-        lemma: 'androgyne',
-        lang: 'eng',
-        pos: 'A'
-      },
-      paradigm: {
-        'V+Inf': [
-          'ta'
-        ],
-        'V+Ind+Prs+Sg1': [
-          'tar'
-        ],
-        'V+Ind+Prs+Sg2': [
-          'tok'
-        ]
-      }
+      lemma: 'androgyne',
+      lang: 'eng',
+      pos: 'A'
     }
   ],
-  termwikiref: 'Luonddudieđa ja matematihkka:androgyn',
-  category: 'Luonddudieđa ja matematihkka',
+  termwikiref: 'Luonddudieđa ja matematihkka:androgyn'.split(' ').join('_'),
+  category: 'Luonddudieđa ja matematihkka'.split(' ').join('_'),
   dict: 'termwiki'
 };
 

@@ -8,12 +8,13 @@ const useStyles = makeStyles({
   }
 });
 
-const MinimalParadigm = ({paradigm}) => {
+const MinimalParadigm = ({stem}) => {
   const classes = useStyles();
+  // {Object.keys(paradigm).map(key => paradigm[key]).flat().join(', ')}
 
   return (
     <Typography className={classes.paradigm}>
-      {Object.keys(paradigm).map(key => paradigm[key]).flat().join(', ')}
+      Here it comes!
     </Typography>
   );
 };
