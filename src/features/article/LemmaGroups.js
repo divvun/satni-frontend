@@ -20,7 +20,7 @@ const LemmaGroups = ({stems}) => {
   const classes = useStyles();
   return (
     <Grid container className={classes.root}>
-      <Grid container spacing={2}>
+      <Grid container spacing={1}>
         {stems.map(stem =>
           <Grid item xs={6}>
             <LemmaGroup stem={stem} />

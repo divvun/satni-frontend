@@ -1,6 +1,7 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 
 import { langName } from 'langThings';
@@ -94,9 +95,23 @@ const names = {
   }
 };
 
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1
+  },
+  paper: {
+    padding: theme.spacing(1)
+  },
+  title: {
+    fontSize: 14
+  }
+}));
+
 const Source = ({source, lemma}) => {
+  const classes = useStyles();
+
   return (
-    <Grid item xs={12}>
+    <Grid item xs={12} className={classes.paper}>
       <Typography>
         Source: <SourceLink from={names[source]['from']} to={names[source]['to']} lemma={lemma} source={source} />
       </Typography>

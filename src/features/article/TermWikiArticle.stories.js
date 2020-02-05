@@ -7,12 +7,12 @@ const termGroup = {
   stems: [
     {
       lemma: 'androgyn',
-      lang: 'smn',
+      language: 'smn',
       pos: 'A'
     },
     {
       lemma: 'androgyne',
-      lang: 'eng',
+      language: 'eng',
       pos: 'A'
     }
   ],

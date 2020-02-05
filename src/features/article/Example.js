@@ -13,7 +13,7 @@ const Example = ({example}) => {
   const classes = useStyles();
 
   return (
-    <Grid container>
+    <Grid container spacing={2}>
       <Grid item xs={6}>
         <Typography>{example.x}</Typography>
       </Grid>

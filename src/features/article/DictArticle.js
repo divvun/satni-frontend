@@ -17,11 +17,11 @@ const DictArticle = ({dictGroup}) => {
   const { stems, examples, dict } = dictGroup;
 
   return (
-    <Paper className={classes.paper}>
+    <>
       <LemmaGroups stems={stems} />
       {examples.length > 0 && (<Examples examples={examples} />)}
-      <Source source={dict} lemma={stems[0].lemma} />
-    </Paper>
+      <Source className={classes.paper} source={dict} lemma={stems[0].lemma} />
+    </>
   );
 };
 

@@ -2,22 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 import LemmaGroups from './LemmaGroups';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  paper: {
-    padding: theme.spacing(1)
-  },
-  title: {
-    fontSize: 14
-  }
-}));
 
 const CategoryLink = ({category}) => {
   return <Grid item xs={12}>
@@ -44,17 +31,35 @@ const SourceLink = ({termwikiref}) => (
   </Grid>
 );
 
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1
+  },
+  paper: {
+    padding: theme.spacing(1)
+  },
+  title: {
+    fontSize: 14
+  }
+}));
+
 const TermWikiArticle = ({termGroup}) => {
   const classes = useStyles();
   const { stems, category, termwikiref } = termGroup;
 
   console.log(category, termwikiref);
   return (
-    <Paper className={classes.paper}>
+    <>
       <LemmaGroups stems={stems} />
-      <SourceLink termwikiref={termwikiref} />
-      <CategoryLink category={category} />
-    </Paper>
+      <Grid container>
+        <Grid item className={classes.paper}>
+          <SourceLink termwikiref={termwikiref} />
+        </Grid>
+        <Grid item className={classes.paper}>
+          <CategoryLink category={category} />
+        </Grid>
+      </Grid>
+    </>
   );
 };
 

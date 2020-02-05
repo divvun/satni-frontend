@@ -7,7 +7,6 @@ const LemmaGroup = ({stem}) => {
   return (
     <>
       <Stem stem={stem} />
-      <MinimalParadigm stem={stem} />
     </>
   );
 };
