@@ -7,7 +7,7 @@ import Example from './Example';
 
 const useStyles = makeStyles(theme => ({
   title: {
-    fontSize: 14
+    fontSize: 12
   }
 }));
 
@@ -16,8 +16,8 @@ const Examples = ({examples}) => {
 
   return (
     <Grid container xs={12}>
-      <Typography className={classes.title} color='textSecondary' gutterBottom>
-        Examples
+      <Typography className={classes.title} color='textSecondary'>
+        Examples:
       </Typography>
       {examples.map((example, i) => (
         <Example key={i} example={example} />)

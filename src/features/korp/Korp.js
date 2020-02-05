@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
+
 import { isLemmaInKorp } from 'features/korp/korpSlice';
 
 const KorpLink = ({language, lemma}) => {
@@ -15,17 +18,17 @@ const KorpLink = ({language, lemma}) => {
   }, [dispatch, language, lemma]);
 
   if (korp.error) {
-    return <span>An error occured {korp.error}</span>;
+    return <Typography component='span'>An error occured {korp.error}</Typography>;
   }
 
   if (korp.isFetching) {
-    return <span>Checking if {lemma} exists in Korp.</span>;
+    return <Typography component='span'>Checking if {lemma} exists in Korp.</Typography>;
   }
 
   if (korp['lemmaExists']) {
-    return <span><a href={korpAddress} target='_blank' rel='noopener noreferrer'>{searchString}</a></span>;
+    return <Link href={korpAddress} target='_blank' rel='noopener noreferrer'><Typography component='span'>{searchString}</Typography></Link>;
   } else {
-    return <span>{lemma} was not found in {language} Korp</span>;
+    return <Typography component='span'>{lemma} was not found in {language} Korp</Typography>;
   }
 };
 
@@ -37,7 +40,7 @@ const Korp = ({language, lemma}) => {
       {
       korpLangs.has(language)
       ? <KorpLink language={language} lemma={lemma} />
-      : <span>There is no corpus for {language}</span>}
+      : <Typography component='span'>There is no corpus for {language}</Typography>}
     </div>
   );
 };

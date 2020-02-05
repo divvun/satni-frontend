@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Set } from 'immutable';
+import Typography from '@material-ui/core/Typography';
+
 import { stemToKey } from 'utils';
 import { fetchParadigms } from 'features/paradigm/paradigmsSlice';
 import NounParadigm from './NounParadigm';
@@ -19,19 +21,19 @@ const Paradigm = ({lemma, language, pos}) => {
   }, [dispatch, lemma, pos, language]);
 
   if (!langs.has(language)) {
-    return <div>Cannot produce paradigm for {language}</div>;
+    return <Typography>Cannot produce paradigm for {language}</Typography>;
   }
 
   if (!poses.has(pos)) {
-    return <div>Cannot produce paradigm for {pos} in {language}</div>;
+    return <Typography>Cannot produce paradigm for {pos} in {language}</Typography>;
   }
 
   if (paradigms.errorMessage) {
-    return <div>No paradigm for {lemma} {pos} {language}</div>;
+    return <Typography>No paradigm for {lemma} {pos} {language}</Typography>;
   }
 
   if (paradigms.isFetching) {
-    return <div>Loading paradigms…</div>;
+    return <Typography>Loading paradigms…</Typography>;
   }
 
   switch (pos) {
@@ -48,7 +50,7 @@ const Paradigm = ({lemma, language, pos}) => {
         paradigm={paradigms[stemToKey({lemma, pos, language})]}
         language={language} />;
     default:
-      return <div>Failed to make paradigm for {lemma}, {language}, {pos}</div>;
+      return <Typography>Failed to make paradigm for {lemma}, {language}, {pos}</Typography>;
   }
 };
 

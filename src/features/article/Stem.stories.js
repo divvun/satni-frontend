@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import Stem from './Stem';
 
-const stem = { lemma: 'guolli', pos: 'N', lang: 'sme', key: 0};
+const stem = { lemma: 'guolli', pos: 'N', language: 'sme', key: 0};
 
 storiesOf('Stem', module)
   .add('default', () => <Stem stem={stem} />)

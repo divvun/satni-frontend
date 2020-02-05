@@ -21,7 +21,7 @@ const paradigm = {
   ]
 };
 
-const stem = { lemma: 'váldit', pos: 'Verb'};
+const stem = { lemma: 'váldit', pos: 'Verb', lang: 'sme'};
 
 storiesOf('LemmaGroup', module)
   .add('default', () => <LemmaGroup stem={stem} paradigm={paradigm} />);

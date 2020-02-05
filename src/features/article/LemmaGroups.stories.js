@@ -6,11 +6,13 @@ import LemmaGroups from './LemmaGroups';
 const stems = [
   {
     lemma: 'váldit',
-    pos: 'Verb'
+    pos: 'Verb',
+    language: 'sme'
   },
   {
     lemma: 'ta',
-    pos: 'Verb'
+    pos: 'Verb',
+    language: 'nob'
   }
 ];
 
