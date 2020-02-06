@@ -7,7 +7,8 @@ import {
   normaliseTermWiki,
   normaliseArticles,
   termwikiPosts,
-  dictPosts
+  dictPosts,
+  mapArticlesByLanguagePair
 } from './utils';
 import {
   resultDictWithExamples,
@@ -640,5 +641,266 @@ describe('Turn a dictionary article into display ready dictionary posts', () => 
 
   it('Turn dictpost into pairs of stems', () => {
     expect(dictPosts(normaliseDict(existDictWithExamples)[0])).toEqual(want);
+  });
+});
+
+describe('Version 0.13.0 failed on these searches', () => {
+  const karasjok = [
+    {
+      'term': 'Karasjok',
+      'pos': 'Prop',
+      'dict': 'smesmn',
+      'status': null,
+      'lang': 'sme',
+      'termwikiref': '-1',
+      'def': null,
+      'expl': null,
+      'tg': {
+        'xml:lang': 'smn',
+        'tw_id': 'Karasjok af97d95d-22dd-49dc-aa9a-25efb3285ecd',
+        '#text': [
+          '\n            ',
+          '\n         '
+        ],
+        't': {
+          'pos': 'Prop',
+          '#text': 'Kárášjuuhâ'
+        }
+      }
+    },
+    {
+      'term': 'Karasjok',
+      'pos': 'N',
+      'dict': 'nobsma',
+      'status': null,
+      'lang': 'nob',
+      'termwikiref': '-1',
+      'def': null,
+      'expl': null,
+      'tg': {
+        'xml:lang': 'sma',
+        'tw_id': 'Karasjok 2ba61959-5f23-4820-961c-aa314f2a4887',
+        '#text': [
+          '\n            ',
+          '\n         '
+        ],
+        't': {
+          'pg': 'no',
+          'pos': 'N',
+          'type': 'Prop',
+          '#text': 'Kárášjohka'
+        }
+      }
+    },
+    {
+      'term': 'Karasjok',
+      'pos': 'N',
+      'dict': 'nobsma',
+      'status': null,
+      'lang': 'nob',
+      'termwikiref': '-1',
+      'def': null,
+      'expl': null,
+      'tg': {
+        'xml:lang': 'sma',
+        'tw_id': 'Karasjok 0d26c5e2-1257-4cb6-b808-85843904313b',
+        '#text': [
+          '\n            ',
+          '\n         '
+        ],
+        't': {
+          'pg': 'no',
+          'pos': 'N',
+          'type': 'Prop',
+          '#text': 'Kárášjohka'
+        }
+      }
+    },
+    {
+      'term': 'Karasjok',
+      'pos': 'N',
+      'dict': 'termwiki',
+      'status': null,
+      'category': 'Geografiija',
+      'termwikiref': 'Geografiija:Kárášjohka',
+      'def': null,
+      'expl': null,
+      'tg': [
+        {
+          'xml:lang': 'nb',
+          '#text': [
+            '\n      ',
+            '\n    '
+          ],
+          't': {
+            'pos': 'N',
+            '#text': 'Karasjok'
+          }
+        },
+        {
+          'xml:lang': 'se',
+          '#text': [
+            '\n      ',
+            '\n    '
+          ],
+          't': {
+            'pos': 'N',
+            '#text': 'Kárášjohka'
+          }
+        },
+        {
+          'xml:lang': 'smn',
+          '#text': [
+            '\n      ',
+            '\n    '
+          ],
+          't': {
+            'pos': 'N',
+            '#text': 'Kárášjuuhâ'
+          }
+        }
+      ]
+    },
+    {
+      'term': 'Karasjok',
+      'pos': 'N',
+      'dict': 'nobsme',
+      'status': null,
+      'lang': 'nob',
+      'termwikiref': '-1',
+      'def': null,
+      'expl': null,
+      'tg': {
+        'xml:lang': 'sme',
+        'tw_id': 'Karasjok c0edb897-2c82-47bc-a8d5-c3a557834c2d',
+        '#text': [
+          '\n            ',
+          '\n         '
+        ],
+        't': {
+          'pos': 'N',
+          'type': 'Prop',
+          'src': 'sk',
+          'freq': '0',
+          '#text': 'Kárášjohka'
+        }
+      }
+    }
+  ];
+  const want = {
+    'nobsma': [
+      {
+        'dict': 'nobsma',
+        'examples': [],
+        'stems': [
+          {
+            'language': 'nob',
+            'lemma': 'Karasjok',
+            'pos': 'N'
+          },
+          {
+            'language': 'sma',
+            'lemma': 'Kárášjohka',
+            'pos': 'N'
+          }
+        ],
+        'termwikiref': '-1'
+      },
+      {
+        'dict': 'nobsma',
+        'examples': [],
+        'stems': [
+          {
+            'language': 'nob',
+            'lemma': 'Karasjok',
+            'pos': 'N'
+          },
+          {
+            'language': 'sma',
+            'lemma': 'Kárášjohka',
+            'pos': 'N'
+          }
+        ],
+        'termwikiref': '-1'
+      }
+    ],
+    'nobsme': [
+      {
+        'category': 'Geografiija',
+        'dict': 'termwiki',
+        'stems': [
+          {
+            'language': 'nob',
+            'lemma': 'Karasjok',
+            'pos': 'N'
+          },
+          {
+            'language': 'sme',
+            'lemma': 'Kárášjohka',
+            'pos': 'N'
+          }
+        ],
+        'termwikiref': 'Geografiija:Kárášjohka'
+      },
+      {
+        'dict': 'nobsme',
+        'examples': [],
+        'stems': [
+          {
+            'language': 'nob',
+            'lemma': 'Karasjok',
+            'pos': 'N'
+          },
+          {
+            'language': 'sme',
+            'lemma': 'Kárášjohka',
+            'pos': 'N'
+          }
+        ],
+        'termwikiref': '-1'
+      }
+    ],
+    'nobsmn': [
+      {
+        'category': 'Geografiija',
+        'dict': 'termwiki',
+        'stems': [
+          {
+            'language': 'nob',
+            'lemma': 'Karasjok',
+            'pos': 'N'
+          },
+          {
+            'language': 'smn',
+            'lemma': 'Kárášjuuhâ',
+            'pos': 'N'
+          }
+        ],
+        'termwikiref': 'Geografiija:Kárášjohka'
+      }
+    ],
+    'smesmn': [
+      {
+        'dict': 'smesmn',
+        'examples': [],
+        'stems': [
+          {
+            'language': 'sme',
+            'lemma': 'Karasjok',
+            'pos': 'Prop'
+          },
+          {
+            'language': 'smn',
+            'lemma': 'Kárášjuuhâ',
+            'pos': 'Prop'
+          }
+        ],
+        'termwikiref': '-1'
+      }
+    ]
+  };
+
+  it('Turn the search for Karasjok into pairs of stems', () => {
+    expect(mapArticlesByLanguagePair(normaliseArticles(karasjok))).toEqual(want);
   });
 });

@@ -7,20 +7,10 @@ import ListItem from '@material-ui/core/ListItem';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-import { dictPosts, termwikiPosts} from 'utils';
+import { mapArticlesByLanguagePair } from 'utils';
 import DictArticle from './DictArticle';
 import TermWikiArticle from './TermWikiArticle';
 import { langName } from 'langThings'
-
-const mapByLanguagePair = (accumulator, currentValue) => {
-  const key = currentValue.stems.map(stem => stem.language).join('');
-  if (accumulator[key]) {
-    accumulator[key] = [...accumulator[key], currentValue];
-  } else {
-    accumulator[key] = [currentValue];
-  }
-  return accumulator;
-};
 
 const useStyles = makeStyles(theme => ({
   list: {
@@ -35,13 +25,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Articles = ({articles}) => {
-  const articlesByLanguagePair = articles.map(article => {
-    if (article.dict === 'termwiki') {
-      return termwikiPosts(article.stems[0].lemma, article);
-    }
-    return dictPosts(article);
-  });
-  const articlesMappedByLanguagePair = articlesByLanguagePair.flat().reduce(mapByLanguagePair, {});
+  const articlesMappedByLanguagePair = mapArticlesByLanguagePair(articles)
   const classes = useStyles();
 
   return (
