@@ -248,3 +248,29 @@ export const dictPosts = (dictpost) => {
     }
   ));
 };
+
+const mapByLanguagePair = (accumulator, currentValue) => {
+  const key = currentValue.stems.map(stem => stem.language).join('');
+  if (accumulator[key]) {
+    accumulator[key] = [...accumulator[key], currentValue];
+  } else {
+    accumulator[key] = [currentValue];
+  }
+  return accumulator;
+};
+
+// TODO: Edge does not support Array.flat(). Fix this properly by using the correct Bable something
+const flatten = (flatArray, articleArray) => ([...flatArray, ...articleArray]);
+
+export const mapArticlesByLanguagePair = (articles) => {
+  const articlesByLanguagePair = articles.map(article => {
+    if (article.dict === 'termwiki') {
+      return termwikiPosts(article.stems[0].lemma, article);
+    }
+    return dictPosts(article);
+  });
+
+  const flattened = articlesByLanguagePair.reduce(flatten, []);
+
+  return flattened.reduce(mapByLanguagePair, {});
+};
