@@ -1,4 +1,5 @@
-import 'babel-polyfill';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 import * as Sentry from '@sentry/browser';
 import React from 'react';
