@@ -259,9 +259,6 @@ const mapByLanguagePair = (accumulator, currentValue) => {
   return accumulator;
 };
 
-// TODO: Edge does not support Array.flat(). Fix this properly by using the correct Bable something
-const flatten = (flatArray, articleArray) => ([...flatArray, ...articleArray]);
-
 export const mapArticlesByLanguagePair = (articles) => {
   const articlesByLanguagePair = articles.map(article => {
     if (article.dict === 'termwiki') {
@@ -270,7 +267,5 @@ export const mapArticlesByLanguagePair = (articles) => {
     return dictPosts(article);
   });
 
-  const flattened = articlesByLanguagePair.reduce(flatten, []);
-
-  return flattened.reduce(mapByLanguagePair, {});
+  return articlesByLanguagePair.flat().reduce(mapByLanguagePair, {});
 };
