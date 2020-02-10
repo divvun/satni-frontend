@@ -59,6 +59,7 @@
   "browserslist": {
     "production": [
       ">0.2%",
+      "safari >= 10.1",
       "not dead",
       "not ie <= 10",
       "not op_mini all"
