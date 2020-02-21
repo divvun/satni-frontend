@@ -1,9 +1,10 @@
 import graphene
 
 import lemmas.schema
+import terms.schema
 
 
-class Query(lemmas.schema.Query, graphene.ObjectType):
+class Query(terms.schema.Query, lemmas.schema.Query, graphene.ObjectType):
     pass
 
 
