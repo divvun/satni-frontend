@@ -16,7 +16,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Concept',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id',
+                 models.AutoField(
+                     auto_created=True,
+                     primary_key=True,
+                     serialize=False,
+                     verbose_name='ID')),
                 ('language', models.TextField()),
                 ('definition', models.TextField(blank=True)),
                 ('explanation', models.TextField(blank=True)),
@@ -26,8 +31,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='MultiLingualConcept',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('concepts', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='terms.Concept')),
+                ('id',
+                 models.AutoField(
+                     auto_created=True,
+                     primary_key=True,
+                     serialize=False,
+                     verbose_name='ID')),
+                ('concepts',
+                 models.ForeignKey(
+                     on_delete=django.db.models.deletion.CASCADE,
+                     to='terms.Concept')),
             ],
         ),
     ]

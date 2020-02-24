@@ -18,7 +18,10 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='concept',
             name='mconcept',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='terms.MultiLingualConcept'),
+            field=models.ForeignKey(
+                default=1,
+                on_delete=django.db.models.deletion.CASCADE,
+                to='terms.MultiLingualConcept'),
             preserve_default=False,
         ),
     ]

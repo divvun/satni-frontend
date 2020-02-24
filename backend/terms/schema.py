@@ -8,9 +8,11 @@ class ConceptType(DjangoObjectType):
     class Meta:
         model = Concept
 
+
 class MultiLingualConceptType(DjangoObjectType):
     class Meta:
         model = MultiLingualConcept
+
 
 class Query(graphene.ObjectType):
     concepts = graphene.List(ConceptType)
