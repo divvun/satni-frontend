@@ -1,5 +1,6 @@
 import graphene
 from graphene_django import DjangoObjectType
+from django.db.models import Q
 
 from .models import Lemma
 
@@ -10,9 +11,13 @@ class LemmaType(DjangoObjectType):
 
 
 class Query(graphene.ObjectType):
-    lemmas = graphene.List(LemmaType)
+    lemmas = graphene.List(LemmaType, search=graphene.String())
 
-    def resolve_lemmas(self, info, **kwargs):
+    def resolve_lemmas(self, info, search=None, **kwargs):
+        if search:
+            filter = Q(lemma__istartswith=search)
+            return Lemma.objects.filter(filter)
+
         return Lemma.objects.all()
 
 class CreateLemma(graphene.Mutation):
