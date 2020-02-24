@@ -20,6 +20,7 @@ class Query(graphene.ObjectType):
 
         return Lemma.objects.all()
 
+
 class CreateLemma(graphene.Mutation):
     id = graphene.Int()
     lemma = graphene.String()
@@ -32,7 +33,8 @@ class CreateLemma(graphene.Mutation):
         language = graphene.String()
 
     def mutate(self, info, lemma, partOfSpeech, language):
-        lemmaInstance = Lemma(lemma=lemma, partOfSpeech=partOfSpeech, language=language)
+        lemmaInstance = Lemma(
+            lemma=lemma, partOfSpeech=partOfSpeech, language=language)
         lemmaInstance.save()
 
         return CreateLemma(
@@ -41,6 +43,7 @@ class CreateLemma(graphene.Mutation):
             partOfSpeech=lemmaInstance.partOfSpeech,
             language=lemmaInstance.language,
         )
+
 
 class Mutation(graphene.ObjectType):
     create_lemma = CreateLemma.Field()
