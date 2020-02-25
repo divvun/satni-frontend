@@ -407,6 +407,21 @@ describe('Massage data from eXist', () => {
             {'lemma': 'bein', language: 'nob', 'pos': 'N'}]);
   });
 
+  it('Turn example object into a string', () => {
+    const xgElement = {
+      x: {
+        '#text': 'original',
+        src: 'src1'
+      },
+      xt: {
+        '#text': 'translation',
+        src: 'src2'
+      }
+    };
+
+    expect(translationExamples(xgElement)).toEqual([{'x': 'original', 'xt': 'translation'}]);
+  });
+
   it('Turns dict xg where xg is an object into an array of examples', () => {
     const xgElement = {
       'x': 'original',

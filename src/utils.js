@@ -91,14 +91,22 @@ export const translationStems = (tg) => {
   return stems;
 };
 
+const exampleElementToText = (element) => {
+  if (element instanceof Object) {
+    return element['#text'];
+  }
+
+  return element;
+};
+
 export const translationExamples = (xg) => {
   let examples = [];
   if (xg instanceof Object && xg instanceof Array) {
     xg.forEach((x) => {
-      examples.push({'x': x.x, 'xt': x.xt});
+      examples.push({'x': exampleElementToText(x.x), 'xt': exampleElementToText(x.xt)});
     });
   } else {
-    examples.push({'x': xg.x, 'xt': xg.xt});
+    examples.push({'x': exampleElementToText(xg.x), 'xt': exampleElementToText(xg.xt)});
   }
 
   return examples;
