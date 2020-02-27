@@ -63,3 +63,67 @@ https://www.howtographql.com/graphql-python/1-getting-started/
 
     >>> Lemma.objects.get(id=10).multilingualconcept_set.all()
     <QuerySet [<MultiLingualConcept: MultiLingualConcept object (6)>]>
+
+Queries
+
+Find all lemmas
+
+    {
+        lemmas {
+            id
+            lemma
+            partOfSpeech
+            language
+        }
+    }
+
+Search for a lemma starting with a string
+
+    {
+        lemmas(search: "gu") {
+            id
+            lemma
+            partOfSpeech
+            language
+        }
+    }
+
+Find all MultiLingualConcepts
+
+    {
+        mconcepts {
+            id
+            name
+            concepts {
+                id
+                definition
+                explanation
+                terms {
+                    id
+                    lemma
+                    partOfSpeech
+                    language
+                }
+            }
+        }
+    }
+
+Get all MultiLingualConcepts where a particular lemma is found
+
+    {
+        mconcepts (search: "guolli") {
+            id
+            name
+            concepts {
+                id
+                definition
+                explanation
+                terms {
+                    id
+                    lemma
+                    partOfSpeech
+                    language
+                }
+            }
+        }
+    }
