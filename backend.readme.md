@@ -30,39 +30,48 @@ https://www.howtographql.com/graphql-python/1-getting-started/
     python manage.py migrate
 
     python manage.py shell -> then
+
     >>> from lemmas.models import Lemma
     >>> from terms.models import Concept, MultiLingualConcept
-    >>>
-    >>> m = MultiLingualConcept.objects.create(name='test')
-    >>> c = Concept.objects.create(language='sme', definition='Ealli mii vuodjá')
-    >>> m.terms.add(Lemma.objects.get(id=9))
-    >>> m.concept_set.add(c)
+    >>> Concept.objects.create(language='sme', definition='Ealli mii vuodjá')
+    <Concept: Concept object (4)>
+    >>> Concept.objects.create(language='sma')
+    <Concept: Concept object (5)>
+    >>> Concept.objects.create(language='smj')
+    <Concept: Concept object (6)>
 
+    >>> Lemma.objects.create(lemma='guolli', partOfSpeech='N', language='sme')
+    <Lemma: Lemma object (15)>
     >>> c = Concept.objects.create(language='sma')
-    >>> m.concept_set.add(c)
-    >>> m.terms.add(Lemma.objects.get(id=14))
-
+    >>> Lemma.objects.create(lemma='guelie', partOfSpeech='N', language='sma')
+    <Lemma: Lemma object (16)>
     >>> c = Concept.objects.create(language='smj')
-    >>> m.concept_set.add(c)
-    >>> m.terms.add(Lemma.objects.get(id=10))
+    >>> Lemma.objects.create(lemma='guolle', partOfSpeech='N', language='smj')
+    <Lemma: Lemma object (17)>
 
-    >>> m.concept_set.all()
-    <QuerySet [<Concept: Concept object (1)>, <Concept: Concept object (2)>, <Concept: Concept object (3)>]>
+    >>> Concept.objects.get(id=4).terms.add(Lemma.objects.get(id=15))
+    >>> Concept.objects.get(id=5).terms.add(Lemma.objects.get(id=16))
+    >>> Concept.objects.get(id=6).terms.add(Lemma.objects.get(id=17))
 
-    >>> MultiLingualConcept.objects.all()
-    <QuerySet [<MultiLingualConcept: MultiLingualConcept object (3)>, <MultiLingualConcept: MultiLingualConcept object (4)>, <MultiLingualConcept: MultiLingualConcept object (5)>, <MultiLingualConcept: MultiLingualConcept object (6)>]>
+    >>> Concept.objects.get(id=7).terms.add(Lemma.objects.get(id=18))
+    >>> Concept.objects.get(id=8).terms.add(Lemma.objects.get(id=19))
+    >>> Concept.objects.get(id=9).terms.add(Lemma.objects.get(id=20))
 
-    >>> Concept.objects.all()
-    <QuerySet [<Concept: Concept object (1)>, <Concept: Concept object (2)>, <Concept: Concept object (3)>]>
+    >>> m = MultiLingualConcept.objects.create(name='test')
+    <MultiLingualConcept: MultiLingualConcept object (7)>
 
-    >>> Lemma.objects.all()
-    <QuerySet [<Lemma: Lemma object (9)>, <Lemma: Lemma object (10)>, <Lemma: Lemma object (11)>, <Lemma: Lemma object (12)>, <Lemma: Lemma object (13)>, <Lemma: Lemma object (14)>]>
+    >>> m = MultiLingualConcept.objects.create(name='Luonddudieđa ja matematihkka:liibma')
+    <MultiLingualConcept: MultiLingualConcept object (8)>
 
-    >>> m.terms.all()
-    <QuerySet [<Lemma: Lemma object (9)>, <Lemma: Lemma object (10)>, <Lemma: Lemma object (14)>]>
+    >>> m = MultiLingualConcept.get(id=7)
+    >>> m.lemma.add(Lemma.objects.get(id=15))
+    >>> m.lemma.add(Lemma.objects.get(id=16))
+    >>> m.lemma.add(Lemma.objects.get(id=17))
 
-    >>> Lemma.objects.get(id=10).multilingualconcept_set.all()
-    <QuerySet [<MultiLingualConcept: MultiLingualConcept object (6)>]>
+    >>> m = MultiLingualConcept.objects.get(id=8)
+    >>> m.lemma.add(Lemma.objects.get(id=18))
+    >>> m.lemma.add(Lemma.objects.get(id=19))
+    >>> m.lemma.add(Lemma.objects.get(id=20))
 
 Queries
 
@@ -94,7 +103,7 @@ Find all MultiLingualConcepts
         mconcepts {
             id
             name
-            concepts {
+            conceptSet {
                 id
                 definition
                 explanation
@@ -111,18 +120,24 @@ Find all MultiLingualConcepts
 Get all MultiLingualConcepts where a particular lemma is found
 
     {
-        mconcepts (search: "guolli") {
+        lemmas (search: "lim") {
             id
-            name
-            concepts {
+            lemma
+            partOfSpeech
+            language
+            lemmaconcepts {
                 id
-                definition
-                explanation
-                terms {
+                name
+                conceptSet {
                     id
-                    lemma
-                    partOfSpeech
-                    language
+                    definition
+                    explanation
+                    terms {
+                        id
+                        lemma
+                        partOfSpeech
+                        language
+                    }
                 }
             }
         }

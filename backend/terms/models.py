@@ -1,10 +1,9 @@
 from django.db import models
-from lemmas.models import Lemma
 
 
 class MultiLingualConcept(models.Model):
-    name = models.TextField()
-    terms = models.ManyToManyField(Lemma)
+    name = models.TextField(unique=True)
+    lemma = models.ManyToManyField('lemmas.Lemma', related_name='lemmaconcepts', null=True)
 
 
 class Concept(models.Model):
