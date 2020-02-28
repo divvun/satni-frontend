@@ -12,10 +12,18 @@ class LemmaType(DjangoObjectType):
 
 class Query(graphene.ObjectType):
     lemmas = graphene.List(LemmaType, search=graphene.String())
+    elemmas = graphene.List(LemmaType, exact=graphene.String())
 
     def resolve_lemmas(self, info, search=None, **kwargs):
         if search:
             filter = Q(lemma__istartswith=search)
+            return Lemma.objects.filter(filter)
+
+        return Lemma.objects.all()
+
+    def resolve_elemmas(self, info, exact=None, **kwargs):
+        if exact:
+            filter = Q(lemma__iexact=exact)
             return Lemma.objects.filter(filter)
 
         return Lemma.objects.all()
