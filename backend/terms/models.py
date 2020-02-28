@@ -3,7 +3,7 @@ from django.db import models
 
 class MultiLingualConcept(models.Model):
     name = models.TextField(unique=True)
-    lemma = models.ManyToManyField('lemmas.Lemma', related_name='lemmaconcepts', null=True)
+    lemma = models.ManyToManyField('lemmas.Lemma', related_name='lemmaconcepts')
 
 
 class Concept(models.Model):
