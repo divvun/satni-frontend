@@ -118,25 +118,25 @@ Find all MultiLingualConcepts
     }
 
 Get all MultiLingualConcepts where a particular lemma is found
-
     {
-        lemmas (search: "lim") {
+        elemmas (exact: "lasehuámášuttem") {
             id
             lemma
             partOfSpeech
             language
             lemmaconcepts {
+            id
+            name
+            conceptSet {
                 id
-                name
-                conceptSet {
+                definition
+                explanation
+                language
+                terms {
                     id
-                    definition
-                    explanation
-                    terms {
-                        id
-                        lemma
-                        partOfSpeech
-                        language
+                    lemma
+                    partOfSpeech
+                    language
                     }
                 }
             }
