@@ -142,3 +142,10 @@ Get all MultiLingualConcepts where a particular lemma is found
             }
         }
     }
+
+
+Import dump:
+
+    python flush
+    python manage.py shell
+    >>> exec(open("./from_dump.py").read())
