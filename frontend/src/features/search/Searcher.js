@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import Downshift from 'downshift';
 import { css } from 'react-emotion';
 import {
-  Menu,
   ControllerButton,
   Input,
   Item,
@@ -12,51 +11,56 @@ import {
   XIcon
 } from 'components';
 import { fetchSearchItems } from 'features/search/searchSlice';
+import { useQuery } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
+import { Query } from '@apollo/react-components';
+
+const GET_LEMMAS = gql`
+  query AllLemmas($inputValue: String!) {
+    lemmas (search: $inputValue) {
+      id
+      lemma
+    }
+  }
+`;
 
 const SearchRenderer = ({
   inputValue,
   selectedItem,
   highlightedIndex,
   getItemProps
-}) => {
-  const search = useSelector(state => state['search']);
-  const dispatch = useDispatch();
+}) => (
+  <Query
+    query={GET_LEMMAS}
+    variables={{
+      inputValue
+    }}
+  >
+    {({ loading, error, data }) => {
+      if (loading) return <p>Loading...</p>;
+      if (error) return <p>Error {error.message}</p>;
+      if (!data) return <p>Not found</p>;
 
-  useEffect(() => {
-    dispatch(fetchSearchItems(inputValue));
-  }, [dispatch, inputValue]);
-
-  if (search.error) {
-    return <div><b>{inputValue}</b> is not found in this database.</div>;
-  }
-
-  if (search.isFetching) {
-    return <div>Fetching search results …</div>;
-  }
-
-  if (search[inputValue]) {
-    return (
-      <Menu>
-        {search[inputValue]
-        .map((item, index) => (
-          <Item
-            {...getItemProps({
-              key: index,
-              item,
-              index,
-              isActive: highlightedIndex === index,
-              isSelected: selectedItem === item
-            })}
+      return (
+        <div>
+          {data.lemmas.map((item, index) => (
+            <Item
+              {...getItemProps({
+                key: index,
+                item,
+                index,
+                isActive: highlightedIndex === index,
+                isSelected: selectedItem === item.lemma
+              })}
           >
-            {item}
-          </Item>
+              {item.lemma}
+            </Item>
         ))}
-      </Menu>
-    );
-  }
-
-  return null;
-};
+        </div>
+      );
+    }}
+  </Query>
+);
 
 const Searcher = ({
   onInputChange
@@ -65,13 +69,14 @@ const Searcher = ({
 
   const handleChange = (selectedItem) => {
     selectedItem
-    ? setArticlePath(`/article/${selectedItem}`)
+    ? setArticlePath(`/article/${selectedItem.lemma}`)
     : setArticlePath(`/`);
   };
 
   return (
     <Downshift
-      onSelect={handleChange} >
+      onSelect={handleChange}
+      itemToString={item => (item ? item.lemma : '')}>
       {({
         getInputProps,
         getToggleButtonProps,
