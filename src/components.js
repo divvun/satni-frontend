@@ -23,7 +23,7 @@ export const Item = styled('div')({
   if (isActive) {
     styles.push({
       color: 'rgba(0,0,0,.95)',
-      background: 'rgba(0,0,0,.03)'
+      background: 'rgb(190,190,190, .50)'
     });
   }
   if (isSelected) {
