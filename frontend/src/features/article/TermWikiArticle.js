@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 
+import Definitions from './Definitions';
 import LemmaGroups from './LemmaGroups';
 
 const CategoryLink = ({category}) => {
@@ -45,18 +46,17 @@ const useStyles = makeStyles(theme => ({
 
 const TermWikiArticle = ({termGroup}) => {
   const classes = useStyles();
-  const { stems, category, termwikiref } = termGroup;
 
-  console.log(category, termwikiref);
   return (
     <>
-      <LemmaGroups stems={stems} />
+      <LemmaGroups from={termGroup.from.terms} to={termGroup.to.terms} />
+      <Definitions definitions={[termGroup.from.definition, termGroup.to.definition]}/>
       <Grid container>
         <Grid item className={classes.paper}>
-          <SourceLink termwikiref={termwikiref} />
+          <SourceLink termwikiref={termGroup.termwikiref} />
         </Grid>
         <Grid item className={classes.paper}>
-          <CategoryLink category={category} />
+          <CategoryLink category={termGroup.category} />
         </Grid>
       </Grid>
     </>

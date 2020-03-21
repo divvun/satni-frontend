@@ -21,6 +21,19 @@ const paradigm = {
   ]
 };
 
+const stems = [
+  { id: '68360', lemma: 'bárdni', language: 'sme', partOfSpeech: 'N' },
+  { id: '68363', lemma: 'sønn', language: 'nob', partOfSpeech: 'N' },
+  {
+    id: '68362',
+    lemma: 'kjæreste',
+    language: 'nob',
+    partOfSpeech: 'N'
+  },
+  { id: '68361', lemma: 'ungkar', language: 'nob', partOfSpeech: 'N' },
+  { id: '7661', lemma: 'gutt', language: 'nob', partOfSpeech: 'N' }
+];
+
 const stem = { lemma: 'váldit', pos: 'Verb', lang: 'sme'};
 
 storiesOf('LemmaGroup', module)

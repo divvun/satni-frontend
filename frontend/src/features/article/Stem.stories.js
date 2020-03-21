@@ -3,11 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import Stem from './Stem';
 
-const stem = { lemma: 'guolli', pos: 'N', language: 'sme', key: 0};
+const stem = { id: '68360', lemma: 'bárdni', language: 'sme', partOfSpeech: 'N' };
 
 storiesOf('Stem', module)
-  .add('default', () => <Stem stem={stem} />)
-  .add('with_re', () => <Stem stem={{...stem, re: '(restring)'}} />)
-  .add('key_nonzero', () => <Stem stem={{...stem, key: 1}} />)
-  .add('lang_nonsme', () => <Stem stem={{...stem, lang: 'smj'}} />)
-  .add('non_sami', () => <Stem stem={{...stem, lang: 'nob'}} />);
+  .add('default', () => <Stem stem={stem} />);
