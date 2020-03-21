@@ -37,16 +37,16 @@ const Articles = ({articles}) => {
               <ListItem>
                 <Grid container>
                   <Grid item xs={5}>
-                    <Typography 
-                      variant='h5' 
-                      component='h3' 
+                    <Typography
+                      variant='h5'
+                      component='h3'
                       align='right'
                       className={classes.lang1}>{langName[langpair.slice(0, 3)]}</Typography>
                   </Grid>
                   <Grid item><Typography variant='h5' component='h3'>⟹</Typography></Grid>
                   <Grid item xs={5}>
-                    <Typography variant='h5' 
-                      component='h3' 
+                    <Typography variant='h5'
+                      component='h3'
                       align='left'
                       className={classes.lang2}>{langName[langpair.slice(3)]}</Typography>
                   </Grid>

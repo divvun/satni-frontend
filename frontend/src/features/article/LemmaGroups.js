@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import LemmaGroup from './LemmaGroup';
+import Stem from './Stem';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,15 +16,19 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const LemmaGroups = ({stems}) => {
+const LemmaGroups = ({ from, to }) => {
   const classes = useStyles();
+
   return (
-    <Grid container className={classes.root}>
-      <Grid container spacing={1}>
-        {stems.map(stem =>
-          <Grid item xs={6}>
-            <LemmaGroup stem={stem} />
-          </Grid>)
+    <Grid container spacing={1}>
+      <Grid item xs={6}>
+        {from.map(stem =>
+          <Stem stem={stem} />)
+      }
+      </Grid>
+      <Grid item xs={6}>
+        {to.map(stem =>
+          <Stem stem={stem} />)
         }
       </Grid>
     </Grid>

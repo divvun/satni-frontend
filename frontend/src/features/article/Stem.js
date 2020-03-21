@@ -11,16 +11,17 @@ const useStyles = makeStyles({
   }
 });
 
+// {re && <Typography component='span'> {re}</Typography>}
+
 const Stem = ({ stem }) => {
   const classes = useStyles();
-  const {lemma, pos, re, language} = stem;
+  const {lemma, partOfSpeech, language} = stem;
   return (
-    <Link href={`/details?lemma=${lemma}&lang=${language}&pos=${pos}`}>
+    <Link component='div' href={`/details?lemma=${lemma}&lang=${language}&pos=${partOfSpeech}`}>
       <Typography component='span' className={classes.lemma}>
         {lemma}
       </Typography>
-      {re && <Typography component='span'> {re}</Typography>}
-      {pos && <Typography component='span' color='textSecondary' className={classes.pos}> ({pos})</Typography>}
+      {partOfSpeech && <Typography component='span' color='textSecondary' className={classes.pos}> ({partOfSpeech})</Typography>}
     </Link>
   );
 };
