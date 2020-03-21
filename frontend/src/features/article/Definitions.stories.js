@@ -1,14 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import LemmaGroups from './LemmaGroups';
+import Definitions from './Definitions';
 
 const termGroup = {
   'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
   'category': 'Luonddudieđa ja matematihkka',
   'dict': 'termwiki',
   'from': {
-    'definition': '',
+    'definition': 'vätska',
     'language': 'swe',
     'terms': [
       {
@@ -39,5 +39,5 @@ const termGroup = {
   }
 };
 
-storiesOf('LemmaGroups', module)
-  .add('default', () => <LemmaGroups from={termGroup.from.terms} to={termGroup.to.terms} />);
+storiesOf('Definitions', module)
+  .add('default', () => <Definitions definitions={[termGroup.from.definition, termGroup.to.definition]} />);

@@ -4,21 +4,39 @@ import { storiesOf } from '@storybook/react';
 import TermWikiArticle from './TermWikiArticle';
 
 const termGroup = {
-  stems: [
-    {
-      lemma: 'androgyn',
-      language: 'smn',
-      pos: 'A'
-    },
-    {
-      lemma: 'androgyne',
-      language: 'eng',
-      pos: 'A'
-    }
-  ],
-  termwikiref: 'Luonddudieđa ja matematihkka:androgyn'.split(' ').join('_'),
-  category: 'Luonddudieđa ja matematihkka'.split(' ').join('_'),
-  dict: 'termwiki'
+  'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
+  'category': 'Luonddudieđa ja matematihkka',
+  'dict': 'termwiki',
+  'from': {
+    'definition': '',
+    'language': 'swe',
+    'terms': [
+      {
+        'id': '52476',
+        'language': 'swe',
+        'lemma': 'lim',
+        'partOfSpeech': ''
+      }
+    ]
+  },
+  'to': {
+    'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
+    'language': 'sme',
+    'terms': [
+      {
+        'id': '52479',
+        'language': 'sme',
+        'lemma': 'liima',
+        'partOfSpeech': 'N'
+      },
+      {
+        'id': '52477',
+        'language': 'sme',
+        'lemma': 'liibma',
+        'partOfSpeech': 'N'
+      }
+    ]
+  }
 };
 
 storiesOf('TermWikiArticle', module)
