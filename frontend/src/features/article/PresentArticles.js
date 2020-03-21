@@ -30,9 +30,9 @@ const Articles = ({articles}) => {
 
   return (
     <>
-      {Object.keys(articlesMappedByLanguagePair).map(langpair => {
+      {Object.keys(articlesMappedByLanguagePair).map((langpair, index) => {
         return (
-          <Paper className={classes.list}>
+          <Paper key={index} className={classes.list}>
             <List>
               <ListItem>
                 <Grid container>
