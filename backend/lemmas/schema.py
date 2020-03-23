@@ -1,6 +1,6 @@
 import graphene
 from graphene_django import DjangoObjectType
-from django.db.models import Q
+from djongo.models import Q
 
 from .models import Lemma
 
