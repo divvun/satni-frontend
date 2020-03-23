@@ -52,10 +52,10 @@ const Articles = ({articles}) => {
                   </Grid>
                 </Grid>
               </ListItem>
-              {articlesMappedByLanguagePair[langpair].map((article, i) => {
+              {articlesMappedByLanguagePair[langpair].map((article, index) => {
                 if (article.dict === 'termwiki') {
                   return (
-                    <ListItem>
+                    <ListItem key={index}>
                       <Grid container>
                         <TermWikiArticle termGroup={article} />
                       </Grid>
@@ -63,7 +63,7 @@ const Articles = ({articles}) => {
                   );
                 } else {
                   return (
-                    <ListItem>
+                    <ListItem key={index}>
                       <Grid container>
                         <DictArticle dictGroup={article} />
                         <Divider />
