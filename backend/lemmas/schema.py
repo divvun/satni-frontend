@@ -32,23 +32,23 @@ class Query(graphene.ObjectType):
 class CreateLemma(graphene.Mutation):
     id = graphene.Int()
     lemma = graphene.String()
-    partOfSpeech = graphene.String()
+    pos = graphene.String()
     language = graphene.String()
 
     class Arguments:
         lemma = graphene.String()
-        partOfSpeech = graphene.String()
+        pos = graphene.String()
         language = graphene.String()
 
-    def mutate(self, info, lemma, partOfSpeech, language):
+    def mutate(self, info, lemma, pos, language):
         lemmaInstance = Lemma(
-            lemma=lemma, partOfSpeech=partOfSpeech, language=language)
+            lemma=lemma, pos=pos, language=language)
         lemmaInstance.save()
 
         return CreateLemma(
             id=lemmaInstance.id,
             lemma=lemmaInstance.lemma,
-            partOfSpeech=lemmaInstance.partOfSpeech,
+            pos=lemmaInstance.pos,
             language=lemmaInstance.language,
         )
 
