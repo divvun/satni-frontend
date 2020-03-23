@@ -1,4 +1,4 @@
-from django.db import models
+from djongo import models
 
 class Lemma(models.Model):
     lemma = models.TextField()

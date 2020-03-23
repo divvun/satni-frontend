@@ -78,12 +78,8 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'term1',
-        'USER': 'termuser',
-        'PASSWORD': 'term1',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'djongo',
+        'NAME': 'satnibackend',
     }
 }
 
