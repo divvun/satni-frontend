@@ -2,7 +2,7 @@
 
 from termwikiimporter import bot
 from lemmas.models import Lemma
-from terms.models import Concept, MultiLingualConcept
+from terms.models import Concept, MultiLingualConcept, Term
 
 langs = {
     'en': 'eng',
@@ -22,15 +22,20 @@ langs = {
 def make_concept(lang, concept_infos, m):
     for concept_info in concept_infos:
         if lang == concept_info['language']:
-            if concept_info.get('definition'):
                 return Concept.objects.create(
                     language=langs[lang],
                     definition=concept_info.get('definition'),
-                    mconcept=m)
-            else:
-                return Concept.objects.create(language=langs[lang], mconcept=m)
+                    explanation=concept_info.get('explanation')
+                )
     else:
-        return Concept.objects.create(language=langs[lang], mconcept=m)
+        return Concept.objects.create(language=langs[lang])
+
+
+def same_lang_expressions(lang, expressions):
+    return [
+        expression for expression in expressions
+        if expression['language'] == lang
+    ]
 
 
 def run():
@@ -40,28 +45,27 @@ def run():
     x = 0
     for title, concept in dumphandler.concepts:
         print(f'Adding {title}')
-        if x > 500:
+        if x > 100:
             break
         x += 1
-        langset = {
-            expression['language']
-            for expression in concept.related_expressions
-        }
-        if title not in titles and concept.has_sanctioned_sami(
-        ) and len(langset) > 1:
+        if title not in titles:
             titles.add(title)
-            m = MultiLingualConcept.objects.create(name=f'{title}')
+            m, _ = MultiLingualConcept.objects.get_or_create(name=f'{title}')
 
-            for lang in langset:
+            for lang in concept.languages():
                 c = make_concept(lang, concept.data['concept_infos'], m)
-                expressions = [
-                    expression for expression in concept.related_expressions
-                    if expression['language'] == lang
-                ]
-                for expression in expressions:
+                for expression in same_lang_expressions(lang, concept.related_expressions):
                     l, _ = Lemma.objects.get_or_create(
                         lemma=expression['expression'],
                         pos=expression['pos'],
-                        language=langs[lang])
-                    c.terms.add(l)
-                    m.lemma.add(l)
+                        language=langs[lang]
+                    )
+                    term = Term.objects.create(
+                        status=expression.get('status'),
+                        sanctioned=expression.get('sanctioned', False),
+                        note=expression.get('note'),
+                        source=expression.get('source'),
+                    )
+                    c.turms.add(term)
+                    #l.multilingualconcept.add(m)
+                    #l.terms.add(term)
