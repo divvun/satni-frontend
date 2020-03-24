@@ -1,5 +1,8 @@
 https://www.howtographql.com/graphql-python/1-getting-started/
 
+Initial steps
+
+```
     cd satni-frontend
     python3.6 -m venv venv
     source venv/bin/activate
@@ -14,138 +17,195 @@ https://www.howtographql.com/graphql-python/1-getting-started/
 
     python manage.py makemigrations
     python manage.py migrate
-
-    python manage.py shell -> then
-    >>> from lemmas.models import Lemma
-    >>> Lemma.objects.create(lemma='guolli', partOfSpeech='N', language='sme')
-    >>> Lemma.objects.create(lemma='guolle', partOfSpeech='N', language='smj')
-    >>> Lemma.objects.create(lemma='kyeli', partOfSpeech='N', language='smn')
-    >>> Lemma.objects.create(lemma='kala', partOfSpeech='N', language='fin')
-    >>> Lemma.objects.create(lemma='fisk', partOfSpeech='N', language='nob')
-    >>> Lemma.objects.create(lemma='guelie', partOfSpeech='N', language='sma')
-
-    python manage.py startapp terms
-
-    python manage.py makemigrations
-    python manage.py migrate
-
-    python manage.py shell -> then
-
-    >>> from lemmas.models import Lemma
-    >>> from terms.models import Concept, MultiLingualConcept
-    >>> Concept.objects.create(language='sme', definition='Ealli mii vuodjá')
-    <Concept: Concept object (4)>
-    >>> Concept.objects.create(language='sma')
-    <Concept: Concept object (5)>
-    >>> Concept.objects.create(language='smj')
-    <Concept: Concept object (6)>
-
-    >>> Lemma.objects.create(lemma='guolli', partOfSpeech='N', language='sme')
-    <Lemma: Lemma object (15)>
-    >>> c = Concept.objects.create(language='sma')
-    >>> Lemma.objects.create(lemma='guelie', partOfSpeech='N', language='sma')
-    <Lemma: Lemma object (16)>
-    >>> c = Concept.objects.create(language='smj')
-    >>> Lemma.objects.create(lemma='guolle', partOfSpeech='N', language='smj')
-    <Lemma: Lemma object (17)>
-
-    >>> Concept.objects.get(id=4).terms.add(Lemma.objects.get(id=15))
-    >>> Concept.objects.get(id=5).terms.add(Lemma.objects.get(id=16))
-    >>> Concept.objects.get(id=6).terms.add(Lemma.objects.get(id=17))
-
-    >>> Concept.objects.get(id=7).terms.add(Lemma.objects.get(id=18))
-    >>> Concept.objects.get(id=8).terms.add(Lemma.objects.get(id=19))
-    >>> Concept.objects.get(id=9).terms.add(Lemma.objects.get(id=20))
-
-    >>> m = MultiLingualConcept.objects.create(name='test')
-    <MultiLingualConcept: MultiLingualConcept object (7)>
-
-    >>> m = MultiLingualConcept.objects.create(name='Luonddudieđa ja matematihkka:liibma')
-    <MultiLingualConcept: MultiLingualConcept object (8)>
-
-    >>> m = MultiLingualConcept.get(id=7)
-    >>> m.lemma.add(Lemma.objects.get(id=15))
-    >>> m.lemma.add(Lemma.objects.get(id=16))
-    >>> m.lemma.add(Lemma.objects.get(id=17))
-
-    >>> m = MultiLingualConcept.objects.get(id=8)
-    >>> m.lemma.add(Lemma.objects.get(id=18))
-    >>> m.lemma.add(Lemma.objects.get(id=19))
-    >>> m.lemma.add(Lemma.objects.get(id=20))
-
-Queries
-
-Find all lemmas
-
-    {
-        lemmas {
-            id
-            lemma
-            partOfSpeech
-            language
-        }
-    }
-
-Search for a lemma starting with a string
-
-    {
-        lemmas(search: "gu") {
-            id
-            lemma
-            partOfSpeech
-            language
-        }
-    }
-
-Find all MultiLingualConcepts
-
-    {
-        mconcepts {
-            id
-            name
-            conceptSet {
-                id
-                definition
-                explanation
-                terms {
-                    id
-                    lemma
-                    partOfSpeech
-                    language
-                }
-            }
-        }
-    }
-
-Get all MultiLingualConcepts where a particular lemma is found
-    {
-        elemmas (exact: "lasehuámášuttem") {
-            id
-            lemma
-            partOfSpeech
-            language
-            lemmaconcepts {
-            id
-            name
-            conceptSet {
-                id
-                definition
-                explanation
-                language
-                terms {
-                    id
-                    lemma
-                    partOfSpeech
-                    language
-                    }
-                }
-            }
-        }
-    }
-
+```
 
 Import dump:
 
-    python flush
-    python manage.py shell
-    >>> exec(open("./from_dump.py").read())
+Remove old content
+
+```
+mongo
+> use satnibackend
+switched to db satnibackend
+> db.dropDatabase()
+{ "dropped" : "satnibackend", "ok" : 1 }
+```
+
+Add content from termwiki
+
+```
+for i in lemmas terms
+  do rm -v $i/migrations/0*
+done
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runscript from_dump
+```
+
+Query for lemma, then all MultiLingualConcepts that has this lemma
+
+```
+python manage.py shell
+
+  >>> for l in Lemma.objects.filter(lemma__startswith='a'):
+  ...     for m in l.multilingualconcept.all():
+  ...             for c in m.concept_set.all():
+  ...                     for t in c.term_set.all():
+  ...                             t.sanctioned
+  ...                             t.lemma
+  ...
+```
+
+Query for lemmas starting with "a"
+
+```
+{
+  lemmas(search: "a") {
+    id
+    lemma
+  }
+}
+```
+
+Result
+
+```
+{
+  "data": {
+    "lemmas": [
+      {
+        "id": "4",
+        "lemma": "alttoviulu"
+      },
+      {
+        "id": "5",
+        "lemma": "alttoviulu"
+      },
+      {
+        "id": "36",
+        "lemma": "aluke"
+      },
+      {
+        "id": "37",
+        "lemma": "aalǥõs"
+      },
+      {
+        "id": "63",
+        "lemma": "arpeggio"
+      },
+      {
+        "id": "64",
+        "lemma": "arpeggio"
+      },
+      {
+        "id": "85",
+        "lemma": "artikulaatio"
+      },
+      {
+        "id": "86",
+        "lemma": "artikulaatio"
+      }
+    ]
+  }
+}
+```
+
+Query for multilingualconcepts that has exactly "balladi"
+
+```
+{
+  elemmas(exact: "balladi") {
+    id
+    lemma
+    language
+    pos
+    multilingualconcept {
+      id
+      name
+      conceptSet {
+        id
+        definition
+        explanation
+        termSet {
+          id
+          lemma {
+            id
+            language
+            lemma
+            pos
+          }
+          sanctioned
+          note
+          status
+          source
+        }
+      }
+    }
+  }
+}
+```
+
+Result
+
+```
+{
+  "data": {
+    "elemmas": [
+      {
+        "id": "152",
+        "lemma": "balladi",
+        "language": "fin",
+        "pos": "N",
+        "multilingualconcept": [
+          {
+            "id": "68",
+            "name": "Beaivválaš giella:Musikksannõs 16",
+            "conceptSet": [
+              {
+                "id": "149",
+                "definition": "",
+                "explanation": "",
+                "termSet": [
+                  {
+                    "id": "156",
+                    "lemma": {
+                      "id": "152",
+                      "language": "fin",
+                      "lemma": "balladi",
+                      "pos": "N"
+                    },
+                    "sanctioned": true,
+                    "note": null,
+                    "status": null,
+                    "source": null
+                  }
+                ]
+              },
+              {
+                "id": "150",
+                "definition": "",
+                "explanation": "",
+                "termSet": [
+                  {
+                    "id": "157",
+                    "lemma": {
+                      "id": "153",
+                      "language": "sms",
+                      "lemma": "ballaad",
+                      "pos": "N"
+                    },
+                    "sanctioned": true,
+                    "note": "(=, -aaʹde)",
+                    "status": null,
+                    "source": null
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```

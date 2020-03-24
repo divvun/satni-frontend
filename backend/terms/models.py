@@ -4,18 +4,21 @@ from djongo import models
 class MultiLingualConcept(models.Model):
     name = models.TextField()
 
+    def __str__(self):
+        return '%s' % (self.name)
 
-class Term(models.Model):
-    status = models.TextField(blank=True)
-    sanctioned = models.BooleanField(default=False)
-    note = models.TextField(blank=True)
-    source = models.TextField(blank=True)
 
 class Concept(models.Model):
     language = models.TextField()
     definition = models.TextField(blank=True)
     explanation = models.TextField(blank=True)
-    turms = models.ForeignKey(
-        Term, on_delete=models.CASCADE)
+    multilingualconcept = models.ForeignKey(MultiLingualConcept, on_delete=models.CASCADE)
 
 
+class Term(models.Model):
+    status = models.TextField(blank=True, null=True)
+    sanctioned = models.BooleanField(default=False)
+    note = models.TextField(blank=True, null=True)
+    source = models.TextField(blank=True, null=True)
+    concept = models.ForeignKey(Concept, on_delete=models.CASCADE)
+    lemma = models.ForeignKey('lemmas.Lemma', on_delete=models.CASCADE)

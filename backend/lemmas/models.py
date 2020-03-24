@@ -4,4 +4,7 @@ class Lemma(models.Model):
     lemma = models.TextField()
     pos = models.TextField()
     language = models.TextField()
-    concept = models.ManyToManyField('terms.Concept', related_name='terms')
+    multilingualconcept = models.ManyToManyField('terms.MultiLingualConcept')
+
+    def __str__(self):
+        return "%s %s %s" % (self.lemma, self.pos, self.language)

@@ -25,10 +25,14 @@ def make_concept(lang, concept_infos, m):
                 return Concept.objects.create(
                     language=langs[lang],
                     definition=concept_info.get('definition'),
-                    explanation=concept_info.get('explanation')
+                    explanation=concept_info.get('explanation'),
+                    multilingualconcept=m
                 )
     else:
-        return Concept.objects.create(language=langs[lang])
+        return Concept.objects.create(
+            language=langs[lang],
+            multilingualconcept=m
+        )
 
 
 def same_lang_expressions(lang, expressions):
@@ -54,6 +58,7 @@ def run():
 
             for lang in concept.languages():
                 c = make_concept(lang, concept.data['concept_infos'], m)
+                c.save()
                 for expression in same_lang_expressions(lang, concept.related_expressions):
                     l, _ = Lemma.objects.get_or_create(
                         lemma=expression['expression'],
@@ -65,7 +70,7 @@ def run():
                         sanctioned=expression.get('sanctioned', False),
                         note=expression.get('note'),
                         source=expression.get('source'),
+                        concept=c,
+                        lemma=l
                     )
-                    c.turms.add(term)
-                    #l.multilingualconcept.add(m)
-                    #l.terms.add(term)
+                    l.multilingualconcept.add(m)
