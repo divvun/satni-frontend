@@ -1,340 +1,432 @@
 import {
   moveLangFirst,
-  lemmaConcept2ConceptPairs,
+  cleanFrom,
+  multiLingualConcept2ConceptPairs,
   elemma2ConceptPairs,
   elemmas2ConceptPairs
 } from './utils';
 
 const elemmas = [
   {
-    'id': '52476',
-    'lemma': 'lim',
-    'language': 'swe',
-    'partOfSpeech': '',
-    'lemmaconcepts': [
+    'id': '3623',
+    'lemma': 'vuorká',
+    'language': 'sme',
+    'pos': 'N',
+    'multilingualconcepts': [
       {
-        'name': 'Luonddudieđa ja matematihkka:x33543',
+        'id': '1118',
+        'name': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
         'conceptSet': [
           {
+            'id': '3097',
+            'language': 'smj',
+            'definition': null,
+            'explanation': null,
+            'termSet': [
+              {
+                'id': '3717',
+                'expression': {
+                  'id': '3615',
+                  'language': 'smj',
+                  'lemma': 'fijlla',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': 'recommended',
+                'source': null
+              }
+            ]
+          },
+          {
+            'id': '3098',
+            'language': 'swe',
+            'definition': null,
+            'explanation': null,
+            'termSet': [
+              {
+                'id': '3718',
+                'expression': {
+                  'id': '3616',
+                  'language': 'swe',
+                  'lemma': 'fil',
+                  'pos': ''
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
+              }
+            ]
+          },
+          {
+            'id': '3099',
             'language': 'eng',
-            'definition': '',
-            'terms': [
+            'definition': null,
+            'explanation': null,
+            'termSet': [
               {
-                'id': '52480',
-                'lemma': 'cement',
-                'language': 'eng',
-                'partOfSpeech': ''
-              },
-              {
-                'id': '43353',
-                'lemma': 'glue',
-                'language': 'eng',
-                'partOfSpeech': ''
+                'id': '3719',
+                'expression': {
+                  'id': '3617',
+                  'language': 'eng',
+                  'lemma': 'file',
+                  'pos': ''
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
               }
             ]
           },
           {
+            'id': '3100',
+            'language': 'sma',
+            'definition': null,
+            'explanation': null,
+            'termSet': [
+              {
+                'id': '3720',
+                'expression': {
+                  'id': '3618',
+                  'language': 'sma',
+                  'lemma': 'fijle',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
+              }
+            ]
+          },
+          {
+            'id': '3101',
             'language': 'fin',
-            'definition': '',
-            'terms': [
+            'definition': null,
+            'explanation': null,
+            'termSet': [
               {
-                'id': '52479',
-                'lemma': 'liima',
-                'language': 'fin',
-                'partOfSpeech': 'N'
+                'id': '3721',
+                'expression': {
+                  'id': '3619',
+                  'language': 'fin',
+                  'lemma': 'viila',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
+              },
+              {
+                'id': '3722',
+                'expression': {
+                  'id': '3620',
+                  'language': 'fin',
+                  'lemma': 'kaista',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
+              },
+              {
+                'id': '3723',
+                'expression': {
+                  'id': '3455',
+                  'language': 'fin',
+                  'lemma': 'tiedosto',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
               }
             ]
           },
           {
+            'id': '3102',
             'language': 'nob',
-            'definition': 'klebrig væske eller masse til å binde saman stykke av tre, metall osv',
-            'terms': [
+            'definition': 'fil, i edb: en ordnet mengde av sammenhørende data',
+            'explanation': null,
+            'termSet': [
               {
-                'id': '52478',
-                'lemma': 'lim',
-                'language': 'nob',
-                'partOfSpeech': 'N'
+                'id': '3724',
+                'expression': {
+                  'id': '3621',
+                  'language': 'nob',
+                  'lemma': 'fil',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
               }
             ]
           },
           {
+            'id': '3103',
             'language': 'sme',
-            'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-            'terms': [
+            'definition': null,
+            'explanation': null,
+            'termSet': [
               {
-                'id': '52479',
-                'lemma': 'liima',
-                'language': 'sme',
-                'partOfSpeech': 'N'
+                'id': '3725',
+                'expression': {
+                  'id': '3622',
+                  'language': 'sme',
+                  'lemma': 'fiila',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
               },
               {
-                'id': '52477',
-                'lemma': 'liibma',
-                'language': 'sme',
-                'partOfSpeech': 'N'
-              }
-            ]
-          },
-          {
-            'language': 'swe',
-            'definition': '',
-            'terms': [
-              {
-                'id': '52476',
-                'lemma': 'lim',
-                'language': 'swe',
-                'partOfSpeech': ''
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    'id': '52478',
-    'lemma': 'lim',
-    'language': 'nob',
-    'partOfSpeech': 'N',
-    'lemmaconcepts': [
-      {
-        'name': 'Servodatdieđa:åejviebaakoelæstoe 20110120 2339',
-        'conceptSet': [
-          {
-            'language': 'swe',
-            'definition': '',
-            'terms': [
-              {
-                'id': '81663',
-                'lemma': 'lim',
-                'language': 'swe',
-                'partOfSpeech': 'N'
-              }
-            ]
-          },
-          {
-            'language': 'sma',
-            'definition': '',
-            'terms': [
-              {
-                'id': '82597',
-                'lemma': 'njimkehtse',
-                'language': 'sma',
-                'partOfSpeech': 'N'
-              }
-            ]
-          },
-          {
-            'language': 'nob',
-            'definition': '',
-            'terms': [
-              {
-                'id': '52478',
-                'lemma': 'lim',
-                'language': 'nob',
-                'partOfSpeech': 'N'
+                'id': '3726',
+                'expression': {
+                  'id': '3623',
+                  'language': 'sme',
+                  'lemma': 'vuorká',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
               }
             ]
           }
         ]
       },
       {
-        'name': 'Servodatdieđa:åejviebaakoelæstoe 20110120 1902',
+        'id': '1375',
+        'name': 'Dihtorteknologiija ja diehtoteknihkka:vuorká',
         'conceptSet': [
           {
+            'id': '3892',
             'language': 'swe',
-            'definition': '',
-            'terms': [
+            'definition': null,
+            'explanation': null,
+            'termSet': [
               {
-                'id': '81663',
-                'lemma': 'lim',
-                'language': 'swe',
-                'partOfSpeech': 'N'
+                'id': '4584',
+                'expression': {
+                  'id': '4454',
+                  'language': 'swe',
+                  'lemma': 'arkiv',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
               }
             ]
           },
           {
-            'language': 'sma',
-            'definition': '',
-            'terms': [
-              {
-                'id': '81662',
-                'lemma': '1. lïjme = lijmie',
-                'language': 'sma',
-                'partOfSpeech': 'MWE'
-              }
-            ]
-          },
-          {
+            'id': '3893',
             'language': 'nob',
-            'definition': '',
-            'terms': [
+            'definition': null,
+            'explanation': null,
+            'termSet': [
               {
-                'id': '52478',
-                'lemma': 'lim',
-                'language': 'nob',
-                'partOfSpeech': 'N'
+                'id': '4585',
+                'expression': {
+                  'id': '4455',
+                  'language': 'nob',
+                  'lemma': 'arkiv',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
+              }
+            ]
+          },
+          {
+            'id': '3894',
+            'language': 'sme',
+            'definition': null,
+            'explanation': null,
+            'termSet': [
+              {
+                'id': '4586',
+                'expression': {
+                  'id': '3623',
+                  'language': 'sme',
+                  'lemma': 'vuorká',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
               }
             ]
           }
         ]
       },
       {
-        'name': 'Luonddudieđa ja matematihkka:x33543',
+        'id': '3757',
+        'name': 'Ekonomiija ja gávppašeapmi:arkiiva',
         'conceptSet': [
           {
-            'language': 'eng',
-            'definition': '',
-            'terms': [
-              {
-                'id': '52480',
-                'lemma': 'cement',
-                'language': 'eng',
-                'partOfSpeech': ''
-              },
-              {
-                'id': '43353',
-                'lemma': 'glue',
-                'language': 'eng',
-                'partOfSpeech': ''
-              }
-            ]
-          },
-          {
+            'id': '12036',
             'language': 'fin',
-            'definition': '',
-            'terms': [
+            'definition': null,
+            'explanation': null,
+            'termSet': [
               {
-                'id': '52479',
-                'lemma': 'liima',
-                'language': 'fin',
-                'partOfSpeech': 'N'
+                'id': '13733',
+                'expression': {
+                  'id': '13265',
+                  'language': 'fin',
+                  'lemma': 'arkisto',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
               }
             ]
           },
           {
+            'id': '12037',
+            'language': 'sma',
+            'definition': null,
+            'explanation': null,
+            'termSet': [
+              {
+                'id': '13734',
+                'expression': {
+                  'id': '3670',
+                  'language': 'sma',
+                  'lemma': 'våarhkoe',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
+              }
+            ]
+          },
+          {
+            'id': '12038',
+            'language': 'smn',
+            'definition': null,
+            'explanation': null,
+            'termSet': [
+              {
+                'id': '13735',
+                'expression': {
+                  'id': '13266',
+                  'language': 'smn',
+                  'lemma': 'arkkâdâh',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
+              }
+            ]
+          },
+          {
+            'id': '12039',
+            'language': 'swe',
+            'definition': null,
+            'explanation': null,
+            'termSet': [
+              {
+                'id': '13736',
+                'expression': {
+                  'id': '4454',
+                  'language': 'swe',
+                  'lemma': 'arkiv',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
+              }
+            ]
+          },
+          {
+            'id': '12040',
             'language': 'nob',
-            'definition': 'klebrig væske eller masse til å binde saman stykke av tre, metall osv',
-            'terms': [
+            'definition': 'samling av brev og dokumenter; oppbevaringssted for brev og dokumenter',
+            'explanation': null,
+            'termSet': [
               {
-                'id': '52478',
-                'lemma': 'lim',
-                'language': 'nob',
-                'partOfSpeech': 'N'
+                'id': '13737',
+                'expression': {
+                  'id': '4455',
+                  'language': 'nob',
+                  'lemma': 'arkiv',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
               }
             ]
           },
           {
+            'id': '12041',
             'language': 'sme',
-            'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-            'terms': [
+            'definition': null,
+            'explanation': null,
+            'termSet': [
               {
-                'id': '52477',
-                'lemma': 'liibma',
-                'language': 'sme',
-                'partOfSpeech': 'N'
-              }
-            ]
-          },
-          {
-            'language': 'swe',
-            'definition': '',
-            'terms': [
+                'id': '13738',
+                'expression': {
+                  'id': '13267',
+                  'language': 'sme',
+                  'lemma': 'arkiiva',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
+              },
               {
-                'id': '52476',
-                'lemma': 'lim',
-                'language': 'swe',
-                'partOfSpeech': ''
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    'id': '81663',
-    'lemma': 'lim',
-    'language': 'swe',
-    'partOfSpeech': 'N',
-    'lemmaconcepts': [
-      {
-        'name': 'Servodatdieđa:åejviebaakoelæstoe 20110120 2339',
-        'conceptSet': [
-          {
-            'language': 'swe',
-            'definition': '',
-            'terms': [
+                'id': '13739',
+                'expression': {
+                  'id': '3623',
+                  'language': 'sme',
+                  'lemma': 'vuorká',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
+              },
               {
-                'id': '81663',
-                'lemma': 'lim',
-                'language': 'swe',
-                'partOfSpeech': 'N'
-              }
-            ]
-          },
-          {
-            'language': 'sma',
-            'definition': '',
-            'terms': [
-              {
-                'id': '82597',
-                'lemma': 'njimkehtse',
-                'language': 'sma',
-                'partOfSpeech': 'N'
-              }
-            ]
-          },
-          {
-            'language': 'nob',
-            'definition': '',
-            'terms': [
-              {
-                'id': '52478',
-                'lemma': 'lim',
-                'language': 'nob',
-                'partOfSpeech': 'N'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        'name': 'Servodatdieđa:åejviebaakoelæstoe 20110120 1902',
-        'conceptSet': [
-          {
-            'language': 'swe',
-            'definition': '',
-            'terms': [
-              {
-                'id': '81663',
-                'lemma': 'lim',
-                'language': 'swe',
-                'partOfSpeech': 'N'
-              }
-            ]
-          },
-          {
-            'language': 'sma',
-            'definition': '',
-            'terms': [
-              {
-                'id': '81662',
-                'lemma': '1. lïjme = lijmie',
-                'language': 'sma',
-                'partOfSpeech': 'MWE'
-              }
-            ]
-          },
-          {
-            'language': 'nob',
-            'definition': '',
-            'terms': [
-              {
-                'id': '52478',
-                'lemma': 'lim',
-                'language': 'nob',
-                'partOfSpeech': 'N'
+                'id': '13740',
+                'expression': {
+                  'id': '3623',
+                  'language': 'sme',
+                  'lemma': 'vuorká',
+                  'pos': 'N'
+                },
+                'sanctioned': true,
+                'note': null,
+                'status': null,
+                'source': null
               }
             ]
           }
@@ -344,188 +436,7 @@ const elemmas = [
   }
 ];
 
-export const elemmasConverted = [
-  {
-    'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
-    'category': 'Luonddudieđa ja matematihkka',
-    'dict': 'termwiki',
-    'from': {
-      'definition': '',
-      'language': 'swe',
-      'terms': [
-        {
-          'id': '52476',
-          'language': 'swe',
-          'lemma': 'lim',
-          'partOfSpeech': ''
-        }
-      ]
-    },
-    'to': {
-      'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-      'language': 'sme',
-      'terms': [
-        {
-          'id': '52479',
-          'language': 'sme',
-          'lemma': 'liima',
-          'partOfSpeech': 'N'
-        },
-        {
-          'id': '52477',
-          'language': 'sme',
-          'lemma': 'liibma',
-          'partOfSpeech': 'N'
-        }
-      ]
-    }
-  },
-  {
-    'termwikiref': 'Servodatdieđa:åejviebaakoelæstoe 20110120 2339',
-    'category': 'Servodatdieđa',
-    'dict': 'termwiki',
-    'from': {
-      'definition': '',
-      'language': 'nob',
-      'terms': [
-        {
-          'id': '52478',
-          'language': 'nob',
-          'lemma': 'lim',
-          'partOfSpeech': 'N'
-        }
-      ]
-    },
-    'to': {
-      'definition': '',
-      'language': 'sma',
-      'terms': [
-        {
-          'id': '82597',
-          'language': 'sma',
-          'lemma': 'njimkehtse',
-          'partOfSpeech': 'N'
-        }
-      ]
-    }
-  },
-  {
-    'termwikiref': 'Servodatdieđa:åejviebaakoelæstoe 20110120 1902',
-    'category': 'Servodatdieđa',
-    'dict': 'termwiki',
-    'from': {
-      'definition': '',
-      'language': 'nob',
-      'terms': [
-        {
-          'id': '52478',
-          'language': 'nob',
-          'lemma': 'lim',
-          'partOfSpeech': 'N'
-        }
-      ]
-    },
-    'to': {
-      'definition': '',
-      'language': 'sma',
-      'terms': [
-        {
-          'id': '81662',
-          'language': 'sma',
-          'lemma': '1. lïjme = lijmie',
-          'partOfSpeech': 'MWE'
-        }
-      ]
-    }
-  },
-  {
-    'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
-    'category': 'Luonddudieđa ja matematihkka',
-    'dict': 'termwiki',
-    'from': {
-      'definition': 'klebrig væske eller masse til å binde saman stykke av tre, metall osv',
-      'language': 'nob',
-      'terms': [
-        {
-          'id': '52478',
-          'language': 'nob',
-          'lemma': 'lim',
-          'partOfSpeech': 'N'
-        }
-      ]
-    },
-    'to': {
-      'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-      'language': 'sme',
-      'terms': [
-        {
-          'id': '52477',
-          'language': 'sme',
-          'lemma': 'liibma',
-          'partOfSpeech': 'N'
-        }
-      ]
-    }
-  },
-  {
-    'termwikiref': 'Servodatdieđa:åejviebaakoelæstoe 20110120 2339',
-    'category': 'Servodatdieđa',
-    'dict': 'termwiki',
-    'from': {
-      'definition': '',
-      'language': 'swe',
-      'terms': [
-        {
-          'id': '81663',
-          'language': 'swe',
-          'lemma': 'lim',
-          'partOfSpeech': 'N'
-        }
-      ]
-    },
-    'to': {
-      'definition': '',
-      'language': 'sma',
-      'terms': [
-        {
-          'id': '82597',
-          'language': 'sma',
-          'lemma': 'njimkehtse',
-          'partOfSpeech': 'N'
-        }
-      ]
-    }
-  },
-  {
-    'termwikiref': 'Servodatdieđa:åejviebaakoelæstoe 20110120 1902',
-    'category': 'Servodatdieđa',
-    'dict': 'termwiki',
-    'from': {
-      'definition': '',
-      'language': 'swe',
-      'terms': [
-        {
-          'id': '81663',
-          'language': 'swe',
-          'lemma': 'lim',
-          'partOfSpeech': 'N'
-        }
-      ]
-    },
-    'to': {
-      'definition': '',
-      'language': 'sma',
-      'terms': [
-        {
-          'id': '81662',
-          'language': 'sma',
-          'lemma': '1. lïjme = lijmie',
-          'partOfSpeech': 'MWE'
-        }
-      ]
-    }
-  }
-];
+export const elemmasConverted = [];
 
 describe('Massage termwiki data from backend', () => {
   it('Move the found lang to the start of the conceptSet', () => {
@@ -556,219 +467,1478 @@ describe('Massage termwiki data from backend', () => {
     expect(moveLangFirst('sma', got)).toEqual(want);
   });
 
-  it('Turn a lemmaconcept into concepts that contain language pairs', () => {
-    const got = elemmas[0].lemmaconcepts[0];
+  it('Move the found lemma first in its conceptSet', () => {
+    const got = elemmas[0].multilingualconcepts[0].conceptSet[6];
+    const id = elemmas[0].id;
+    const want = {
+      'id': '3103',
+      'language': 'sme',
+      'definition': null,
+      'explanation': null,
+      'termSet': [
+        {
+          'id': '3726',
+          'expression': {
+            'id': '3623',
+            'language': 'sme',
+            'lemma': 'vuorká',
+            'pos': 'N'
+          },
+          'sanctioned': true,
+          'note': null,
+          'status': null,
+          'source': null
+        },
+        {
+          'id': '3725',
+          'expression': {
+            'id': '3622',
+            'language': 'sme',
+            'lemma': 'fiila',
+            'pos': 'N'
+          },
+          'sanctioned': true,
+          'note': null,
+          'status': null,
+          'source': null
+        }
+      ]
+    };
+    expect(cleanFrom(id, got)).toEqual(want);
+  });
 
+  it('Turn a multilingualconcept into concepts that contain language pairs', () => {
+    const got = elemmas[0].multilingualconcepts[0];
     const want = [
       {
-        'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
-        'category': 'Luonddudieđa ja matematihkka',
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
         'dict': 'termwiki',
         'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
           'language': 'sme',
-          'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-          'terms': [
+          'termSet': [
             {
-              'id': '52477',
-              'lemma': 'liibma',
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
               'language': 'sme',
-              'partOfSpeech': 'N'
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
             },
             {
-              'id': '52479',
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
               'language': 'sme',
-              'lemma': 'liima',
-              'partOfSpeech': 'N'
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
             }
           ]
         },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
         'to': {
-          'language': 'eng',
-          'definition': '',
-          'terms': [
+          'definition': null,
+          'explanation': null,
+          'id': '3097',
+          'language': 'smj',
+          'termSet': [
             {
-              'id': '52480',
-              'lemma': 'cement',
-              'language': 'eng',
-              'partOfSpeech': ''
-            },
-            {
-              'id': '43353',
-              'lemma': 'glue',
-              'language': 'eng',
-              'partOfSpeech': ''
+              'expression': {
+                'id': '3615',
+                'language': 'smj',
+                'lemma': 'fijlla',
+                'pos': 'N'
+              },
+              'id': '3615',
+              'language': 'smj',
+              'lemma': 'fijlla',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': 'recommended'
             }
           ]
         }
       },
       {
-        'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
-        'category': 'Luonddudieđa ja matematihkka',
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
         'dict': 'termwiki',
         'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
           'language': 'sme',
-          'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-          'terms': [
+          'termSet': [
             {
-              'id': '52477',
-              'lemma': 'liibma',
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
               'language': 'sme',
-              'partOfSpeech': 'N'
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
             },
             {
-              'id': '52479',
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
               'language': 'sme',
-              'lemma': 'liima',
-              'partOfSpeech': 'N'
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
             }
           ]
         },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
         'to': {
-          'language': 'fin',
-          'definition': '',
-          'terms': [
-            {
-              'id': '52479',
-              'lemma': 'liima',
-              'language': 'fin',
-              'partOfSpeech': 'N'
-            }
-          ]
-        }
-      },
-      {
-        'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
-        'category': 'Luonddudieđa ja matematihkka',
-        'dict': 'termwiki',
-        'from': {
-          'language': 'sme',
-          'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-          'terms': [
-            {
-              'id': '52477',
-              'lemma': 'liibma',
-              'language': 'sme',
-              'partOfSpeech': 'N'
-            },
-            {
-              'id': '52479',
-              'language': 'sme',
-              'lemma': 'liima',
-              'partOfSpeech': 'N'
-            }
-          ]
-        },
-        'to': {
-          'language': 'nob',
-          'definition': 'klebrig væske eller masse til å binde saman stykke av tre, metall osv',
-          'terms': [
-            {
-              'id': '52478',
-              'lemma': 'lim',
-              'language': 'nob',
-              'partOfSpeech': 'N'
-            }
-          ]
-        }
-      },
-      {
-        'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
-        'category': 'Luonddudieđa ja matematihkka',
-        'dict': 'termwiki',
-        'from': {
-          'language': 'sme',
-          'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-          'terms': [
-            {
-              'id': '52477',
-              'lemma': 'liibma',
-              'language': 'sme',
-              'partOfSpeech': 'N'
-            },
-            {
-              'id': '52479',
-              'language': 'sme',
-              'lemma': 'liima',
-              'partOfSpeech': 'N'
-            }
-          ]
-        },
-        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3098',
           'language': 'swe',
-          'definition': '',
-          'terms': [
+          'termSet': [
             {
-              'id': '52476',
-              'lemma': 'lim',
+              'expression': {
+                'id': '3616',
+                'language': 'swe',
+                'lemma': 'fil',
+                'pos': ''
+              },
+              'id': '3616',
               'language': 'swe',
-              'partOfSpeech': ''
+              'lemma': 'fil',
+              'note': null,
+              'pos': '',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3099',
+          'language': 'eng',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3617',
+                'language': 'eng',
+                'lemma': 'file',
+                'pos': ''
+              },
+              'id': '3617',
+              'language': 'eng',
+              'lemma': 'file',
+              'note': null,
+              'pos': '',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3100',
+          'language': 'sma',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3618',
+                'language': 'sma',
+                'lemma': 'fijle',
+                'pos': 'N'
+              },
+              'id': '3618',
+              'language': 'sma',
+              'lemma': 'fijle',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3101',
+          'language': 'fin',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3619',
+                'language': 'fin',
+                'lemma': 'viila',
+                'pos': 'N'
+              },
+              'id': '3619',
+              'language': 'fin',
+              'lemma': 'viila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3620',
+                'language': 'fin',
+                'lemma': 'kaista',
+                'pos': 'N'
+              },
+              'id': '3620',
+              'language': 'fin',
+              'lemma': 'kaista',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3455',
+                'language': 'fin',
+                'lemma': 'tiedosto',
+                'pos': 'N'
+              },
+              'id': '3455',
+              'language': 'fin',
+              'lemma': 'tiedosto',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': 'fil, i edb: en ordnet mengde av sammenhørende data',
+          'explanation': null,
+          'id': '3102',
+          'language': 'nob',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3621',
+                'language': 'nob',
+                'lemma': 'fil',
+                'pos': 'N'
+              },
+              'id': '3621',
+              'language': 'nob',
+              'lemma': 'fil',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
             }
           ]
         }
       }
-    ];
+    ]
+;
 
-    expect(lemmaConcept2ConceptPairs('sme', '52477', got)).toEqual(want);
+    expect(multiLingualConcept2ConceptPairs(elemmas[0].multilingualconcepts[0].conceptSet[6].language, elemmas[0].id, got)).toEqual(want);
   });
 
   it('Turn an elemma into into concepts that contain language pairs', () => {
-    const got = elemmas[2];
+    const got = elemmas[0];
 
     const want = [
       {
-        'category': 'Servodatdieđa',
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
         'dict': 'termwiki',
         'from': {
-          'definition': '',
-          'language': 'swe',
-          'terms': [
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
             {
-              'id': '81663',
-              'language': 'swe',
-              'lemma': 'lim',
-              'partOfSpeech': 'N'
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
             }
           ]
         },
-        'termwikiref': 'Servodatdieđa:åejviebaakoelæstoe 20110120 2339',
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
         'to': {
-          'definition': '',
-          'language': 'sma',
-          'terms': [
+          'definition': null,
+          'explanation': null,
+          'id': '3097',
+          'language': 'smj',
+          'termSet': [
             {
-              'id': '82597',
-              'language': 'sma',
-              'lemma': 'njimkehtse',
-              'partOfSpeech': 'N'
+              'expression': {
+                'id': '3615',
+                'language': 'smj',
+                'lemma': 'fijlla',
+                'pos': 'N'
+              },
+              'id': '3615',
+              'language': 'smj',
+              'lemma': 'fijlla',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': 'recommended'
             }
           ]
         }
       },
       {
-        'category': 'Servodatdieđa',
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
         'dict': 'termwiki',
         'from': {
-          'definition': '',
-          'language': 'swe',
-          'terms': [
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
             {
-              'id': '81663',
-              'language': 'swe',
-              'lemma': 'lim',
-              'partOfSpeech': 'N'
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
             }
           ]
         },
-        'termwikiref': 'Servodatdieđa:åejviebaakoelæstoe 20110120 1902',
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
         'to': {
-          'definition': '',
-          'language': 'sma',
-          'terms': [
+          'definition': null,
+          'explanation': null,
+          'id': '3098',
+          'language': 'swe',
+          'termSet': [
             {
-              'id': '81662',
+              'expression': {
+                'id': '3616',
+                'language': 'swe',
+                'lemma': 'fil',
+                'pos': ''
+              },
+              'id': '3616',
+              'language': 'swe',
+              'lemma': 'fil',
+              'note': null,
+              'pos': '',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3099',
+          'language': 'eng',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3617',
+                'language': 'eng',
+                'lemma': 'file',
+                'pos': ''
+              },
+              'id': '3617',
+              'language': 'eng',
+              'lemma': 'file',
+              'note': null,
+              'pos': '',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3100',
+          'language': 'sma',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3618',
+                'language': 'sma',
+                'lemma': 'fijle',
+                'pos': 'N'
+              },
+              'id': '3618',
               'language': 'sma',
-              'lemma': '1. lïjme = lijmie',
-              'partOfSpeech': 'MWE'
+              'lemma': 'fijle',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3101',
+          'language': 'fin',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3619',
+                'language': 'fin',
+                'lemma': 'viila',
+                'pos': 'N'
+              },
+              'id': '3619',
+              'language': 'fin',
+              'lemma': 'viila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3620',
+                'language': 'fin',
+                'lemma': 'kaista',
+                'pos': 'N'
+              },
+              'id': '3620',
+              'language': 'fin',
+              'lemma': 'kaista',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3455',
+                'language': 'fin',
+                'lemma': 'tiedosto',
+                'pos': 'N'
+              },
+              'id': '3455',
+              'language': 'fin',
+              'lemma': 'tiedosto',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': 'fil, i edb: en ordnet mengde av sammenhørende data',
+          'explanation': null,
+          'id': '3102',
+          'language': 'nob',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3621',
+                'language': 'nob',
+                'lemma': 'fil',
+                'pos': 'N'
+              },
+              'id': '3621',
+              'language': 'nob',
+              'lemma': 'fil',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3894',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3892',
+          'language': 'swe',
+          'termSet': [
+            {
+              'expression': {
+                'id': '4454',
+                'language': 'swe',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'id': '4454',
+              'language': 'swe',
+              'lemma': 'arkiv',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3894',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3893',
+          'language': 'nob',
+          'termSet': [
+            {
+              'expression': {
+                'id': '4455',
+                'language': 'nob',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'id': '4455',
+              'language': 'nob',
+              'lemma': 'arkiv',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '12041',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '13267',
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'id': '13267',
+              'language': 'sme',
+              'lemma': 'arkiiva',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '12036',
+          'language': 'fin',
+          'termSet': [
+            {
+              'expression': {
+                'id': '13265',
+                'language': 'fin',
+                'lemma': 'arkisto',
+                'pos': 'N'
+              },
+              'id': '13265',
+              'language': 'fin',
+              'lemma': 'arkisto',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '12041',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '13267',
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'id': '13267',
+              'language': 'sme',
+              'lemma': 'arkiiva',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '12037',
+          'language': 'sma',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3670',
+                'language': 'sma',
+                'lemma': 'våarhkoe',
+                'pos': 'N'
+              },
+              'id': '3670',
+              'language': 'sma',
+              'lemma': 'våarhkoe',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '12041',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '13267',
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'id': '13267',
+              'language': 'sme',
+              'lemma': 'arkiiva',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '12038',
+          'language': 'smn',
+          'termSet': [
+            {
+              'expression': {
+                'id': '13266',
+                'language': 'smn',
+                'lemma': 'arkkâdâh',
+                'pos': 'N'
+              },
+              'id': '13266',
+              'language': 'smn',
+              'lemma': 'arkkâdâh',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '12041',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '13267',
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'id': '13267',
+              'language': 'sme',
+              'lemma': 'arkiiva',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '12039',
+          'language': 'swe',
+          'termSet': [
+            {
+              'expression': {
+                'id': '4454',
+                'language': 'swe',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'id': '4454',
+              'language': 'swe',
+              'lemma': 'arkiv',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '12041',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '13267',
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'id': '13267',
+              'language': 'sme',
+              'lemma': 'arkiiva',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': 'samling av brev og dokumenter; oppbevaringssted for brev og dokumenter',
+          'explanation': null,
+          'id': '12040',
+          'language': 'nob',
+          'termSet': [
+            {
+              'expression': {
+                'id': '4455',
+                'language': 'nob',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'id': '4455',
+              'language': 'nob',
+              'lemma': 'arkiv',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
             }
           ]
         }
@@ -780,7 +1950,985 @@ describe('Massage termwiki data from backend', () => {
 
   it('Turn elemmas into into concepts that contain language pairs', () => {
     const got = elemmas;
-    const want = elemmasConverted;
+    const want = [
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3097',
+          'language': 'smj',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3615',
+                'language': 'smj',
+                'lemma': 'fijlla',
+                'pos': 'N'
+              },
+              'id': '3615',
+              'language': 'smj',
+              'lemma': 'fijlla',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': 'recommended'
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3098',
+          'language': 'swe',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3616',
+                'language': 'swe',
+                'lemma': 'fil',
+                'pos': ''
+              },
+              'id': '3616',
+              'language': 'swe',
+              'lemma': 'fil',
+              'note': null,
+              'pos': '',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3099',
+          'language': 'eng',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3617',
+                'language': 'eng',
+                'lemma': 'file',
+                'pos': ''
+              },
+              'id': '3617',
+              'language': 'eng',
+              'lemma': 'file',
+              'note': null,
+              'pos': '',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3100',
+          'language': 'sma',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3618',
+                'language': 'sma',
+                'lemma': 'fijle',
+                'pos': 'N'
+              },
+              'id': '3618',
+              'language': 'sma',
+              'lemma': 'fijle',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3101',
+          'language': 'fin',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3619',
+                'language': 'fin',
+                'lemma': 'viila',
+                'pos': 'N'
+              },
+              'id': '3619',
+              'language': 'fin',
+              'lemma': 'viila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3620',
+                'language': 'fin',
+                'lemma': 'kaista',
+                'pos': 'N'
+              },
+              'id': '3620',
+              'language': 'fin',
+              'lemma': 'kaista',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3455',
+                'language': 'fin',
+                'lemma': 'tiedosto',
+                'pos': 'N'
+              },
+              'id': '3455',
+              'language': 'fin',
+              'lemma': 'tiedosto',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3103',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3622',
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'id': '3622',
+              'language': 'sme',
+              'lemma': 'fiila',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': 'fil, i edb: en ordnet mengde av sammenhørende data',
+          'explanation': null,
+          'id': '3102',
+          'language': 'nob',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3621',
+                'language': 'nob',
+                'lemma': 'fil',
+                'pos': 'N'
+              },
+              'id': '3621',
+              'language': 'nob',
+              'lemma': 'fil',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3894',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3892',
+          'language': 'swe',
+          'termSet': [
+            {
+              'expression': {
+                'id': '4454',
+                'language': 'swe',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'id': '4454',
+              'language': 'swe',
+              'lemma': 'arkiv',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '3894',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '3893',
+          'language': 'nob',
+          'termSet': [
+            {
+              'expression': {
+                'id': '4455',
+                'language': 'nob',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'id': '4455',
+              'language': 'nob',
+              'lemma': 'arkiv',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '12041',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '13267',
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'id': '13267',
+              'language': 'sme',
+              'lemma': 'arkiiva',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '12036',
+          'language': 'fin',
+          'termSet': [
+            {
+              'expression': {
+                'id': '13265',
+                'language': 'fin',
+                'lemma': 'arkisto',
+                'pos': 'N'
+              },
+              'id': '13265',
+              'language': 'fin',
+              'lemma': 'arkisto',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '12041',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '13267',
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'id': '13267',
+              'language': 'sme',
+              'lemma': 'arkiiva',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '12037',
+          'language': 'sma',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3670',
+                'language': 'sma',
+                'lemma': 'våarhkoe',
+                'pos': 'N'
+              },
+              'id': '3670',
+              'language': 'sma',
+              'lemma': 'våarhkoe',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '12041',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '13267',
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'id': '13267',
+              'language': 'sme',
+              'lemma': 'arkiiva',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '12038',
+          'language': 'smn',
+          'termSet': [
+            {
+              'expression': {
+                'id': '13266',
+                'language': 'smn',
+                'lemma': 'arkkâdâh',
+                'pos': 'N'
+              },
+              'id': '13266',
+              'language': 'smn',
+              'lemma': 'arkkâdâh',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '12041',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '13267',
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'id': '13267',
+              'language': 'sme',
+              'lemma': 'arkiiva',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'id': '12039',
+          'language': 'swe',
+          'termSet': [
+            {
+              'expression': {
+                'id': '4454',
+                'language': 'swe',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'id': '4454',
+              'language': 'swe',
+              'lemma': 'arkiv',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'id': '12041',
+          'language': 'sme',
+          'termSet': [
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '3623',
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'id': '3623',
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'id': '13267',
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'id': '13267',
+              'language': 'sme',
+              'lemma': 'arkiiva',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': 'samling av brev og dokumenter; oppbevaringssted for brev og dokumenter',
+          'explanation': null,
+          'id': '12040',
+          'language': 'nob',
+          'termSet': [
+            {
+              'expression': {
+                'id': '4455',
+                'language': 'nob',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'id': '4455',
+              'language': 'nob',
+              'lemma': 'arkiv',
+              'note': null,
+              'pos': 'N',
+              'sanctioned': true,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      }
+    ];
 
     expect(elemmas2ConceptPairs(got)).toEqual(want);
   });
