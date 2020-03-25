@@ -5,181 +5,79 @@ import PresentArticles from './PresentArticles';
 
 const articles = [
   {
-    'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
-    'category': 'Luonddudieđa ja matematihkka',
+    'category': 'Beaivválaš giella',
     'dict': 'termwiki',
     'from': {
-      'definition': '',
-      'language': 'swe',
-      'terms': [
+      'definition': 'sointu jonka sävelet soitetaan nopeasti peräkkäin, murrettu sointu (Kielitoimiston sanakirja)',
+      'explanation': null,
+      'id': '61',
+      'termSet': [
         {
-          'id': '52476',
-          'language': 'swe',
-          'lemma': 'lim',
-          'partOfSpeech': ''
+          'id': '63',
+          'language': 'fin',
+          'lemma': 'arpeggio',
+          'pos': 'N',
+          'note': '(murtosointu)',
+          'sanctioned': true,
+          'source': null,
+          'status': null
         }
       ]
     },
+    'termwikiref': 'Beaivválaš giella:Musikksannõs 12',
     'to': {
-      'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-      'language': 'sme',
-      'terms': [
+      'definition': null,
+      'explanation': null,
+      'id': '62',
+      'termSet': [
         {
-          'id': '52479',
-          'language': 'sme',
-          'lemma': 'liima',
-          'partOfSpeech': 'N'
-        },
-        {
-          'id': '52477',
-          'language': 'sme',
-          'lemma': 'liibma',
-          'partOfSpeech': 'N'
+          'id': '64',
+          'language': 'sms',
+          'lemma': 'arpeggio',
+          'pos': 'N',
+          'note': '(=, -ooʹje ~ =, arpeggiost)',
+          'sanctioned': true,
+          'source': null,
+          'status': null
         }
       ]
     }
   },
   {
-    'termwikiref': 'Servodatdieđa:åejviebaakoelæstoe 20110120 2339',
-    'category': 'Servodatdieđa',
+    'category': 'Beaivválaš giella',
     'dict': 'termwiki',
     'from': {
-      'definition': '',
-      'language': 'nob',
-      'terms': [
+      'definition': 'sointu jonka sävelet soitetaan nopeasti peräkkäin, murrettu sointu (Kielitoimiston sanakirja)',
+      'explanation': null,
+      'id': '61',
+      'termSet': [
         {
-          'id': '52478',
-          'language': 'nob',
-          'lemma': 'lim',
-          'partOfSpeech': 'N'
+          'id': '63',
+          'language': 'fin',
+          'lemma': 'arpeggio',
+          'pos': 'N',
+          'note': '(murtosointu)',
+          'sanctioned': true,
+          'source': null,
+          'status': null
         }
       ]
     },
+    'termwikiref': 'Beaivválaš giella:Musikksannõs 12',
     'to': {
-      'definition': '',
-      'language': 'sma',
-      'terms': [
+      'definition': null,
+      'explanation': null,
+      'id': '62',
+      'termSet': [
         {
-          'id': '82597',
-          'language': 'sma',
-          'lemma': 'njimkehtse',
-          'partOfSpeech': 'N'
-        }
-      ]
-    }
-  },
-  {
-    'termwikiref': 'Servodatdieđa:åejviebaakoelæstoe 20110120 1902',
-    'category': 'Servodatdieđa',
-    'dict': 'termwiki',
-    'from': {
-      'definition': '',
-      'language': 'nob',
-      'terms': [
-        {
-          'id': '52478',
-          'language': 'nob',
-          'lemma': 'lim',
-          'partOfSpeech': 'N'
-        }
-      ]
-    },
-    'to': {
-      'definition': '',
-      'language': 'sma',
-      'terms': [
-        {
-          'id': '81662',
-          'language': 'sma',
-          'lemma': '1. lïjme = lijmie',
-          'partOfSpeech': 'MWE'
-        }
-      ]
-    }
-  },
-  {
-    'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
-    'category': 'Luonddudieđa ja matematihkka',
-    'dict': 'termwiki',
-    'from': {
-      'definition': 'klebrig væske eller masse til å binde saman stykke av tre, metall osv',
-      'language': 'nob',
-      'terms': [
-        {
-          'id': '52478',
-          'language': 'nob',
-          'lemma': 'lim',
-          'partOfSpeech': 'N'
-        }
-      ]
-    },
-    'to': {
-      'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-      'language': 'sme',
-      'terms': [
-        {
-          'id': '52477',
-          'language': 'sme',
-          'lemma': 'liibma',
-          'partOfSpeech': 'N'
-        }
-      ]
-    }
-  },
-  {
-    'termwikiref': 'Servodatdieđa:åejviebaakoelæstoe 20110120 2339',
-    'category': 'Servodatdieđa',
-    'dict': 'termwiki',
-    'from': {
-      'definition': '',
-      'language': 'swe',
-      'terms': [
-        {
-          'id': '81663',
-          'language': 'swe',
-          'lemma': 'lim',
-          'partOfSpeech': 'N'
-        }
-      ]
-    },
-    'to': {
-      'definition': '',
-      'language': 'sma',
-      'terms': [
-        {
-          'id': '82597',
-          'language': 'sma',
-          'lemma': 'njimkehtse',
-          'partOfSpeech': 'N'
-        }
-      ]
-    }
-  },
-  {
-    'termwikiref': 'Servodatdieđa:åejviebaakoelæstoe 20110120 1902',
-    'category': 'Servodatdieđa',
-    'dict': 'termwiki',
-    'from': {
-      'definition': '',
-      'language': 'swe',
-      'terms': [
-        {
-          'id': '81663',
-          'language': 'swe',
-          'lemma': 'lim',
-          'partOfSpeech': 'N'
-        }
-      ]
-    },
-    'to': {
-      'definition': '',
-      'language': 'sma',
-      'terms': [
-        {
-          'id': '81662',
-          'language': 'sma',
-          'lemma': '1. lïjme = lijmie',
-          'partOfSpeech': 'MWE'
+          'id': '64',
+          'language': 'sms',
+          'lemma': 'arpeggio',
+          'pos': 'N',
+          'note': '(=, -ooʹje ~ =, arpeggiost)',
+          'sanctioned': true,
+          'source': null,
+          'status': null
         }
       ]
     }

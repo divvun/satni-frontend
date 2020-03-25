@@ -26,12 +26,12 @@ def make_concept(lang, concept_infos, m):
                     language=langs[lang],
                     definition=concept_info.get('definition'),
                     explanation=concept_info.get('explanation'),
-                    multilingualconcept=m
+                    multilingualconcepts=m
                 )
     else:
         return Concept.objects.create(
             language=langs[lang],
-            multilingualconcept=m
+            multilingualconcepts=m
         )
 
 
@@ -46,10 +46,9 @@ def run():
     dumphandler = bot.DumpHandler()
     titles = set()
 
-    x = 0
-    for title, concept in dumphandler.concepts:
-        print(f'Adding {title}')
-        if x > 100:
+    for x, (title, concept) in dumphandler.concepts:
+        print(f'Adding {x} {title}')
+        if x > 10000:
             break
         x += 1
         if title not in titles:
@@ -71,6 +70,6 @@ def run():
                         note=expression.get('note'),
                         source=expression.get('source'),
                         concept=c,
-                        lemma=l
+                        expression=l
                     )
-                    l.multilingualconcept.add(m)
+                    l.multilingualconcepts.add(m)

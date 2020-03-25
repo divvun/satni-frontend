@@ -10,9 +10,9 @@ class MultiLingualConcept(models.Model):
 
 class Concept(models.Model):
     language = models.TextField()
-    definition = models.TextField(blank=True)
-    explanation = models.TextField(blank=True)
-    multilingualconcept = models.ForeignKey(MultiLingualConcept, on_delete=models.CASCADE)
+    definition = models.TextField(blank=True, null=True)
+    explanation = models.TextField(blank=True, null=True)
+    multilingualconcepts = models.ForeignKey(MultiLingualConcept, on_delete=models.CASCADE)
 
 
 class Term(models.Model):
@@ -21,4 +21,4 @@ class Term(models.Model):
     note = models.TextField(blank=True, null=True)
     source = models.TextField(blank=True, null=True)
     concept = models.ForeignKey(Concept, on_delete=models.CASCADE)
-    lemma = models.ForeignKey('lemmas.Lemma', on_delete=models.CASCADE)
+    expression = models.ForeignKey('lemmas.Lemma', on_delete=models.CASCADE)

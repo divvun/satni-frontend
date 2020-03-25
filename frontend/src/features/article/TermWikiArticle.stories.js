@@ -10,30 +10,30 @@ const termGroup = {
   'from': {
     'definition': '',
     'language': 'swe',
-    'terms': [
+    'termSet': [
       {
         'id': '52476',
         'language': 'swe',
         'lemma': 'lim',
-        'partOfSpeech': ''
+        'pos': ''
       }
     ]
   },
   'to': {
     'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
     'language': 'sme',
-    'terms': [
+    'termSet': [
       {
         'id': '52479',
         'language': 'sme',
         'lemma': 'liima',
-        'partOfSpeech': 'N'
+        'pos': 'N'
       },
       {
         'id': '52477',
         'language': 'sme',
         'lemma': 'liibma',
-        'partOfSpeech': 'N'
+        'pos': 'N'
       }
     ]
   }

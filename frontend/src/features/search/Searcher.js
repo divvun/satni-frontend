@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 import Downshift from 'downshift';
 import { css } from 'react-emotion';
 import {
@@ -10,8 +9,6 @@ import {
   ArrowIcon,
   XIcon
 } from 'components';
-import { fetchSearchItems } from 'features/search/searchSlice';
-import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import { Query } from '@apollo/react-components';
 
