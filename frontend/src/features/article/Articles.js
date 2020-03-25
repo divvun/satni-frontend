@@ -2,37 +2,67 @@ import React, { useEffect } from 'react';
 import {
   useParams
 } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchArticles } from './articleSlice';
+
+import gql from 'graphql-tag';
+import { Query } from '@apollo/react-components';
+import { elemmas2ConceptPairs } from 'utils';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
 
-const Articles = () => {
-  const { lemma } = useParams();
-  const articles = useSelector(state => state['articles']);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchArticles(lemma));
-  }, [dispatch, lemma]);
-
-  if (articles.error) {
-    if (articles.error === 'Error: text is null!') {
-      return <div>The word «{lemma}» is not in the database.</div>;
-    } else {
-      return <FetchArticlesError message={articles.error} />;
+const GET_ARTICLES = gql`
+  query AllArticles($lemma: String!) {
+    elemmas (exact: $lemma) {
+      id
+      lemma
+      language
+      pos
+      multilingualconcepts {
+        id
+        name
+        conceptSet {
+          id
+          language
+          definition
+          explanation
+          termSet {
+            id
+            expression {
+              id
+              language
+              lemma
+              pos
+            }
+            sanctioned
+            note
+            status
+            source
+          }
+        }
+      }
     }
   }
+`;
+// return <div>{JSON.stringify(data.elemmas)}</div>;
 
-  if (articles.isFetching) {
-    return <div>Loading articles …</div>;
-  }
+const Articles = () => {
+  const { lemma } = useParams();
 
-  if (articles[lemma] && articles[lemma].length > 0) {
-    return <PresentArticles articles={articles[lemma]} />;
-  } else {
-    return <div>No results found for {lemma} empty array {articles.isFetching}</div>;
-  }
+  return (
+    <Query
+      query={GET_ARTICLES}
+      variables={{
+        lemma
+      }}
+    >
+      {({ loading, error, data }) => {
+        if (loading) return <p>Loading...</p>;
+        if (error) return <p>Error {error.message}</p>;
+        if (!data) return <p>Not found</p>;
+
+        return <PresentArticles articles={elemmas2ConceptPairs(data.elemmas)} />;
+      }}
+    </Query>
+  );
 };
 
 export default Articles;

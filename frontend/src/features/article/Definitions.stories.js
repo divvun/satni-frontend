@@ -15,7 +15,7 @@ const termGroup = {
         'id': '52476',
         'language': 'swe',
         'lemma': 'lim',
-        'partOfSpeech': ''
+        'pos': ''
       }
     ]
   },
@@ -27,13 +27,13 @@ const termGroup = {
         'id': '52479',
         'language': 'sme',
         'lemma': 'liima',
-        'partOfSpeech': 'N'
+        'pos': 'N'
       },
       {
         'id': '52477',
         'language': 'sme',
         'lemma': 'liibma',
-        'partOfSpeech': 'N'
+        'pos': 'N'
       }
     ]
   }

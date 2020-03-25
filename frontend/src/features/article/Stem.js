@@ -15,13 +15,13 @@ const useStyles = makeStyles({
 
 const Stem = ({ stem }) => {
   const classes = useStyles();
-  const {lemma, partOfSpeech, language} = stem;
+  const {lemma, pos, language} = stem;
   return (
-    <Link component='div' href={`/details?lemma=${lemma}&lang=${language}&pos=${partOfSpeech}`}>
+    <Link component='a' href={`/details?lemma=${lemma}&lang=${language}&pos=${pos}`}>
       <Typography component='span' className={classes.lemma}>
         {lemma}
       </Typography>
-      {partOfSpeech && <Typography component='span' color='textSecondary' className={classes.pos}> ({partOfSpeech})</Typography>}
+      {pos && <Typography component='span' color='textSecondary' className={classes.pos}> ({pos})</Typography>}
     </Link>
   );
 };

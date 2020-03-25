@@ -12,26 +12,17 @@ const client = new ApolloClient({
   uri: 'http://127.0.0.1:8000/graphql/'
 });
 
-// client
-//   .query({
-//     query: gql`
-//       {
-//         lemmas(search: "lim") {
-//           lemma
-//         }
-//       }
-//     `
-//   })
-//   .then(result => console.log(result));
+// Add this after Provider
+// <ErrorBoundary>
+// </ErrorBoundary>
+
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <MuiThemeProvider>
-      <ErrorBoundary>
         <ApolloProvider client={client}>
           <AsyncApp />
         </ApolloProvider>
-      </ErrorBoundary>
     </MuiThemeProvider>
   </Provider>
     );
