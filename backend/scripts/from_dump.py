@@ -19,9 +19,9 @@ langs = {
 }
 
 
-def make_concept(lang, concept_infos, m):
+def make_concept(lang, concept, m):
     def make_c():
-        for concept_info in concept_infos:
+        for concept_info in concept.data['concept_infos']:
             if lang == concept_info['language']:
                 return Concept.objects.create(
                     language=langs[lang],
@@ -34,20 +34,22 @@ def make_concept(lang, concept_infos, m):
 
 
     c = make_c()
-    for expression in same_lang_expressions(
-            lang, concept.related_expressions):
-        l, _ = Lemma.objects.get_or_create(
+    for x, expression in enumerate(same_lang_expressions(
+            lang, concept.related_expressions)):
+        print(expression['expression'],
+        expression['pos'],
+        langs[lang])
+        l = Lemma(
             lemma=expression['expression'],
             pos=expression['pos'],
             language=langs[lang])
+        l.save()
         term = Term.objects.create(
             status=expression.get('status'),
             sanctioned=expression.get('sanctioned', False),
             note=expression.get('note'),
             source=expression.get('source'),
-            concept=c,
-            expression=l)
-        l.multilingualconcepts.add(m)
+            concept=c)
 
     return c
 
@@ -72,7 +74,7 @@ def make_m():
 
 def make_c(m, concept):
     for lang in concept.languages():
-        c = make_concept(lang, concept.data['concept_infos'], m)
+        c = make_concept(lang, concept, m)
 
 def run():
     for m, concept in make_m():

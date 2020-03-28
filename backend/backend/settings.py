@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import mongoengine
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'corsheaders',
     'graphene_django',
+    'graphene_mongo',
     'lemmas',
     'terms',
 ]
@@ -77,9 +79,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'satnibackend',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
     }
 }
 
@@ -123,6 +125,21 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# MONGO DB connection\
+_MONGODB_USER = ""
+_MONGODB_PASSWD = ""
+_MONGODB_HOST = "localhost"
+_MONGODB_NAME = "satnibackend"
+_MONGODB_PORT = 27017
+_MONGODB_DATABASE_HOST = "mongodb://%s:%s@%s/%s" % (
+    _MONGODB_USER,
+    _MONGODB_PASSWD,
+    _MONGODB_HOST,
+    _MONGODB_NAME,
+)
+
+mongoengine.connect(_MONGODB_NAME, host=_MONGODB_HOST, port=_MONGODB_PORT)
+
 GRAPHENE = {
     'SCHEMA': 'backend.schema.schema',
 }
@@ -130,6 +147,6 @@ GRAPHENE = {
 CORS_ORIGIN_ALLOW_ALL = True
 
 #CORS_ORIGIN_WHITELIST = (
-    #'http://localhost:8000',
-    #'http://127.0.0.1:8000',
+#'http://localhost:8000',
+#'http://127.0.0.1:8000',
 #)
