@@ -1,24 +1,39 @@
-from djongo import models
+from mongoengine import Document, EmbeddedDocument
+from mongoengine.fields import (
+    BooleanField,
+    EmbeddedDocumentField,
+    ListField,
+    ObjectIdField,
+    ReferenceField,
+    StringField,
+)
+
+from lemmas.models import Lemma
 
 
-class MultiLingualConcept(models.Model):
-    name = models.TextField()
+class Term(EmbeddedDocument):
+    # meta = {'collection': 'terms'}
+    ID = ObjectIdField()
+    status = StringField(blank=True, null=True)
+    sanctioned = BooleanField(default=False)
+    note = StringField(blank=True, null=True)
+    source = StringField(blank=True, null=True)
+    expression = ReferenceField(Lemma)
+
+class Concept(EmbeddedDocument):
+    # meta = {'collection': 'concepts'}
+    ID = ObjectIdField()
+    language = StringField()
+    definition = StringField(blank=True, null=True)
+    explanation = StringField(blank=True, null=True)
+    terms = ListField(EmbeddedDocumentField(Term))
+
+
+class MultiLingualConcept(Document):
+    meta = {'collection': 'multilingualconcepts'}
+    ID = ObjectIdField()
+    name = StringField()
+    concepts = ListField(EmbeddedDocumentField(Concept))
 
     def __str__(self):
         return '%s' % (self.name)
-
-
-class Concept(models.Model):
-    language = models.TextField()
-    definition = models.TextField(blank=True, null=True)
-    explanation = models.TextField(blank=True, null=True)
-    multilingualconcepts = models.ForeignKey(MultiLingualConcept, on_delete=models.CASCADE)
-
-
-class Term(models.Model):
-    status = models.TextField(blank=True, null=True)
-    sanctioned = models.BooleanField(default=False)
-    note = models.TextField(blank=True, null=True)
-    source = models.TextField(blank=True, null=True)
-    concept = models.ForeignKey(Concept, on_delete=models.CASCADE)
-    expression = models.ForeignKey('lemmas.Lemma', on_delete=models.CASCADE)

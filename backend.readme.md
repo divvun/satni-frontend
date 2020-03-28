@@ -45,8 +45,10 @@ python manage.py runscript from_dump
 Query for lemma, then all MultiLingualConcepts that has this lemma
 
 ```
+
 python manage.py shell
 
+  >>> from lemmas.models import Lemma
   >>> for l in Lemma.objects.filter(lemma__startswith='a'):
   ...     for m in l.multilingualconcept.all():
   ...             for c in m.concept_set.all():
