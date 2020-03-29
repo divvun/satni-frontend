@@ -73,8 +73,10 @@ def make_m():
         if x > 100:
             break
         x += 1
-        m = MultiLingualConcept(name=f'{title}', concepts=make_c(concept))
-        m.save()
+        if concept.has_sanctioned_sami():
+            m = MultiLingualConcept(name=f'{title}', concepts=make_c(concept))
+            m.save()
+
 
 def make_c(concept):
     return [make_concept(lang, concept) for lang in concept.languages()]
