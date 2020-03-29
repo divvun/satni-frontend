@@ -18,38 +18,43 @@ langs = {
     'sms': 'sms',
 }
 
+def make_lemma(expression):
+    l = Lemma(
+        lemma=expression['expression'],
+        pos=expression['pos'],
+        language=langs[lang])
+    l.save()
 
-def make_concept(lang, concept, m):
-    def make_c():
-        for concept_info in concept.data['concept_infos']:
-            if lang == concept_info['language']:
-                return Concept.objects.create(
-                    language=langs[lang],
-                    definition=concept_info.get('definition'),
-                    explanation=concept_info.get('explanation'),
-                    multilingualconcepts=m)
-        else:
-            return Concept.objects.create(
-                language=langs[lang], multilingualconcepts=m)
+    return l
 
-
-    c = make_c()
-    for x, expression in enumerate(same_lang_expressions(
-            lang, concept.related_expressions)):
-        print(expression['expression'],
-        expression['pos'],
-        langs[lang])
-        l = Lemma(
-            lemma=expression['expression'],
-            pos=expression['pos'],
-            language=langs[lang])
-        l.save()
-        term = Term.objects.create(
+def make_terms(lang, concept):
+    for expression in same_lang_expressions(
+            lang, concept.related_expressions):
+        term = Term(
             status=expression.get('status'),
             sanctioned=expression.get('sanctioned', False),
             note=expression.get('note'),
             source=expression.get('source'),
-            concept=c)
+            expression=make_lemma(expression))
+        yield term
+
+def make_concept(lang, concept):
+    def make_c(terms):
+        for concept_info in concept.data['concept_infos']:
+            if lang == concept_info['language']:
+                c = Concept(
+                    language=langs[lang],
+                    definition=concept_info.get('definition'),
+                    explanation=concept_info.get('explanation'),
+                    terms=terms)
+                return c
+        else:
+            c = Concept(
+                language=langs[lang], terms=terms)
+            return c
+
+
+    c = make_c([term for term in make_terms(lang, concept)])
 
     return c
 
@@ -63,19 +68,17 @@ def same_lang_expressions(lang, expressions):
 def make_m():
     dumphandler = bot.DumpHandler()
 
-
     for x, (title, concept) in enumerate(dumphandler.concepts):
         print(f'Adding {x} {title}')
         if x > 100:
             break
         x += 1
-        m, _ = MultiLingualConcept.objects.get_or_create(name=f'{title}')
-        yield m, concept
+        m = MultiLingualConcept(name=f'{title}', concepts=make_c(concept))
+        m.save()
 
-def make_c(m, concept):
-    for lang in concept.languages():
-        c = make_concept(lang, concept, m)
+def make_c(concept):
+    return [make_concept(lang, concept) for lang in concept.languages()]
+
 
 def run():
-    for m, concept in make_m():
-        make_c(m, concept)
+    make_m()
