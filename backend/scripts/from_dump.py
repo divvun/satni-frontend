@@ -19,7 +19,7 @@ langs = {
 }
 
 
-def make_lemma(expression):
+def make_lemma(lang, expression):
     l = Lemma(
         lemma=expression['expression'],
         pos=expression['pos'],
@@ -36,7 +36,7 @@ def make_terms(lang, concept):
             sanctioned=expression.get('sanctioned', False),
             note=expression.get('note'),
             source=expression.get('source'),
-            expression=make_lemma(expression))
+            expression=make_lemma(lang, expression))
         yield term
 
 
@@ -70,11 +70,10 @@ def make_m():
     dumphandler = bot.DumpHandler()
 
     for x, (title, concept) in enumerate(dumphandler.concepts):
-        print(f'Adding {x} {title}')
-        if x > 100:
-            break
-        x += 1
+        # if x > 100:
+        #     break
         if concept.has_sanctioned_sami():
+            print(f'Adding {x} {title}')
             m = MultiLingualConcept(name=f'{title}', concepts=make_c(concept))
             m.save()
 
