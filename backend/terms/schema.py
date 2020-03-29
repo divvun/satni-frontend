@@ -1,9 +1,9 @@
 import graphene
+
 from graphene_mongo.fields import MongoengineConnectionField
 
 from .models import Concept, MultiLingualConcept, Term
 from .types import ConceptType, MultiLingualConceptType, TermType
-
 
 
 class Query(graphene.ObjectType):

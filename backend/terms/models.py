@@ -1,18 +1,10 @@
-from mongoengine import Document, EmbeddedDocument
-from mongoengine.fields import (
-    BooleanField,
-    EmbeddedDocumentField,
-    ListField,
-    ObjectIdField,
-    ReferenceField,
-    StringField,
-)
-
 from lemmas.models import Lemma
+from mongoengine import Document, EmbeddedDocument
+from mongoengine.fields import (BooleanField, EmbeddedDocumentField, ListField,
+                                ObjectIdField, ReferenceField, StringField)
 
 
 class Term(EmbeddedDocument):
-    # meta = {'collection': 'terms'}
     ID = ObjectIdField()
     status = StringField(blank=True, null=True)
     sanctioned = BooleanField(default=False)
@@ -20,8 +12,8 @@ class Term(EmbeddedDocument):
     source = StringField(blank=True, null=True)
     expression = ReferenceField(Lemma)
 
+
 class Concept(EmbeddedDocument):
-    # meta = {'collection': 'concepts'}
     ID = ObjectIdField()
     language = StringField()
     definition = StringField(blank=True, null=True)

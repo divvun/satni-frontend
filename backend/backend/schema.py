@@ -1,7 +1,7 @@
 import graphene
 
-import lemmas.types
 import lemmas.schema
+import lemmas.types
 import terms.schema
 
 
@@ -13,4 +13,5 @@ class Mutation(lemmas.schema.Mutations, graphene.ObjectType):
     pass
 
 
-schema = graphene.Schema(query=Query, mutation=Mutation, types=[lemmas.types.LemmaType])
+schema = graphene.Schema(
+    query=Query, mutation=Mutation, types=[lemmas.types.LemmaType])
