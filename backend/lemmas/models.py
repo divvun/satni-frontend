@@ -1,8 +1,5 @@
 from mongoengine import Document
-from mongoengine.fields import (
-    StringField,
-    ObjectIdField,
-)
+from mongoengine.fields import ObjectIdField, StringField
 
 
 class Lemma(Document):

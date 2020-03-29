@@ -1,9 +1,12 @@
 import graphene
+
 from graphene_mongo.fields import MongoengineConnectionField
 
-from .types import LemmaType
 from .models import Lemma
-from .mutations import CreateLemmaMutation, UpdateLemmaMutation, DeleteLemmaMutation
+from .mutations import (CreateLemmaMutation, DeleteLemmaMutation,
+                        UpdateLemmaMutation)
+from .types import LemmaType
+
 
 class Query(graphene.ObjectType):
     lemmas = MongoengineConnectionField(LemmaType)
@@ -11,6 +14,7 @@ class Query(graphene.ObjectType):
 
     def resolve_lemma_list(self, info):
         return Lemma.objects.all()
+
 
 class Mutations(graphene.ObjectType):
     create_lemma = CreateLemmaMutation.Field()

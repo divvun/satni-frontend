@@ -18,6 +18,7 @@ langs = {
     'sms': 'sms',
 }
 
+
 def make_lemma(expression):
     l = Lemma(
         lemma=expression['expression'],
@@ -27,9 +28,9 @@ def make_lemma(expression):
 
     return l
 
+
 def make_terms(lang, concept):
-    for expression in same_lang_expressions(
-            lang, concept.related_expressions):
+    for expression in same_lang_expressions(lang, concept.related_expressions):
         term = Term(
             status=expression.get('status'),
             sanctioned=expression.get('sanctioned', False),
@@ -37,6 +38,7 @@ def make_terms(lang, concept):
             source=expression.get('source'),
             expression=make_lemma(expression))
         yield term
+
 
 def make_concept(lang, concept):
     def make_c(terms):
@@ -49,10 +51,8 @@ def make_concept(lang, concept):
                     terms=terms)
                 return c
         else:
-            c = Concept(
-                language=langs[lang], terms=terms)
+            c = Concept(language=langs[lang], terms=terms)
             return c
-
 
     c = make_c([term for term in make_terms(lang, concept)])
 
@@ -64,6 +64,7 @@ def same_lang_expressions(lang, expressions):
         expression for expression in expressions
         if expression['language'] == lang
     ]
+
 
 def make_m():
     dumphandler = bot.DumpHandler()
