@@ -58,13 +58,15 @@ python manage.py shell
   ...
 ```
 
-Query for lemmas starting with "a"
+Query for lemmas starting with "ar"
 
 ```
 {
-  lemmas(search: "a") {
+  lemmaList(search: "ar") {
     id
     lemma
+    pos
+    language
   }
 }
 ```
@@ -74,72 +76,67 @@ Result
 ```
 {
   "data": {
-    "lemmas": [
-      {
-        "id": "4",
-        "lemma": "alttoviulu"
-      },
-      {
-        "id": "5",
-        "lemma": "alttoviulu"
-      },
-      {
-        "id": "36",
-        "lemma": "aluke"
-      },
-      {
-        "id": "37",
-        "lemma": "aalǥõs"
-      },
-      {
-        "id": "63",
-        "lemma": "arpeggio"
-      },
-      {
-        "id": "64",
-        "lemma": "arpeggio"
-      },
-      {
-        "id": "85",
-        "lemma": "artikulaatio"
-      },
-      {
-        "id": "86",
-        "lemma": "artikulaatio"
-      }
-    ]
+    "lemmas": {
+      "edges": [
+        {
+          "node": {
+            "lemma": "arpeggio",
+            "pos": "N",
+            "language": "fin"
+          }
+        },
+        {
+          "node": {
+            "lemma": "arpeggio",
+            "pos": "N",
+            "language": "sms"
+          }
+        },
+        {
+          "node": {
+            "lemma": "artikulaatio",
+            "pos": "N",
+            "language": "fin"
+          }
+        },
+        {
+          "node": {
+            "lemma": "artikulaatio",
+            "pos": "N",
+            "language": "sms"
+          }
+        }
+      ]
+    }
   }
 }
 ```
 
-Query for multilingualconcepts that has exactly "balladi"
+Query for multilingualconcepts that has exactly "arpeggio"
 
 ```
 {
-  elemmas(exact: "balladi") {
+  multilingualconceptList (exact: "arpeggio") {
     id
-    lemma
-    language
-    pos
-    multilingualconcept {
-      id
-      name
-      conceptSet {
-        id
-        definition
-        explanation
-        termSet {
-          id
-          lemma {
-            id
-            language
-            lemma
-            pos
+    name
+    concepts {
+      edges {
+        node {
+          definition
+          terms {
+            edges {
+              node {
+                sanctioned
+                source
+                status
+                note
+                expression {
+                  lemma
+                  pos
+                }
+              }
+            }
           }
-          sanctioned
-          note
-          status
-          source
         }
       }
     }
@@ -152,60 +149,56 @@ Result
 ```
 {
   "data": {
-    "elemmas": [
+    "multilingualconceptList": [
       {
-        "id": "152",
-        "lemma": "balladi",
-        "language": "fin",
-        "pos": "N",
-        "multilingualconcept": [
-          {
-            "id": "68",
-            "name": "Beaivválaš giella:Musikksannõs 16",
-            "conceptSet": [
-              {
-                "id": "149",
-                "definition": "",
-                "explanation": "",
-                "termSet": [
-                  {
-                    "id": "156",
-                    "lemma": {
-                      "id": "152",
-                      "language": "fin",
-                      "lemma": "balladi",
-                      "pos": "N"
-                    },
-                    "sanctioned": true,
-                    "note": null,
-                    "status": null,
-                    "source": null
-                  }
-                ]
-              },
-              {
-                "id": "150",
-                "definition": "",
-                "explanation": "",
-                "termSet": [
-                  {
-                    "id": "157",
-                    "lemma": {
-                      "id": "153",
-                      "language": "sms",
-                      "lemma": "ballaad",
-                      "pos": "N"
-                    },
-                    "sanctioned": true,
-                    "note": "(=, -aaʹde)",
-                    "status": null,
-                    "source": null
-                  }
-                ]
+        "id": "TXVsdGlMaW5ndWFsQ29uY2VwdFR5cGU6NWU4MGE5NmZmYjg2ODFmOWVkNWY4MjZh",
+        "name": "Beaivválaš giella:Musikksannõs 12",
+        "concepts": {
+          "edges": [
+            {
+              "node": {
+                "definition": "sointu jonka sävelet soitetaan nopeasti peräkkäin, murrettu sointu (Kielitoimiston sanakirja)",
+                "terms": {
+                  "edges": [
+                    {
+                      "node": {
+                        "sanctioned": true,
+                        "source": null,
+                        "status": null,
+                        "note": "(murtosointu)",
+                        "expression": {
+                          "lemma": "arpeggio",
+                          "pos": "N"
+                        }
+                      }
+                    }
+                  ]
+                }
               }
-            ]
-          }
-        ]
+            },
+            {
+              "node": {
+                "definition": null,
+                "terms": {
+                  "edges": [
+                    {
+                      "node": {
+                        "sanctioned": true,
+                        "source": null,
+                        "status": null,
+                        "note": "(=, -ooʹje ~ =, arpeggiost)",
+                        "expression": {
+                          "lemma": "arpeggio",
+                          "pos": "N"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   }
