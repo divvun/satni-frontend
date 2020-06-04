@@ -11,31 +11,23 @@ import FetchArticlesError from './FetchArticlesError';
 
 const GET_ARTICLES = gql`
   query AllArticles($lemma: String!) {
-    elemmas (exact: $lemma) {
+    multilingualconceptList (exact: $lemma) {
       id
-      lemma
-      language
-      pos
-      multilingualconcepts {
-        id
-        name
-        conceptSet {
-          id
-          language
-          definition
-          explanation
-          termSet {
+      name
+      concepts {
+        definition
+        explanation
+        language
+        terms {
+          note
+          sanctioned
+          source
+          status
+          expression {
             id
-            expression {
-              id
-              language
-              lemma
-              pos
-            }
-            sanctioned
-            note
-            status
-            source
+            lemma
+            pos
+            language
           }
         }
       }
@@ -59,7 +51,7 @@ const Articles = () => {
         if (error) return <p>Error {error.message}</p>;
         if (!data) return <p>Not found</p>;
 
-        return <PresentArticles articles={elemmas2ConceptPairs(data.elemmas)} />;
+        return <PresentArticles articles={elemmas2ConceptPairs(data.multilingualconceptList)} />;
       }}
     </Query>
   );
