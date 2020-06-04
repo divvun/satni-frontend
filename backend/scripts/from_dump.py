@@ -31,13 +31,14 @@ def make_lemma(lang, expression):
 
 def make_terms(lang, concept):
     for expression in same_lang_expressions(lang, concept.related_expressions):
-        term = Term(
-            status=expression.get('status'),
-            sanctioned=expression.get('sanctioned', False),
-            note=expression.get('note'),
-            source=expression.get('source'),
-            expression=make_lemma(lang, expression))
-        yield term
+        if expression.get('sanctioned'):
+            term = Term(
+                status=expression.get('status'),
+                sanctioned=expression.get('sanctioned', False),
+                note=expression.get('note'),
+                source=expression.get('source'),
+                expression=make_lemma(lang, expression))
+            yield term
 
 
 def make_concept(lang, concept):
