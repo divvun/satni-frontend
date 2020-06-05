@@ -3,41 +3,46 @@ import { storiesOf } from '@storybook/react';
 
 import LemmaGroups from './LemmaGroups';
 
-const termGroup = {
-  'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
-  'category': 'Luonddudieđa ja matematihkka',
-  'dict': 'termwiki',
-  'from': {
-    'definition': '',
-    'language': 'swe',
-    'terms': [
-      {
-        'id': '52476',
-        'language': 'swe',
-        'lemma': 'lim',
-        'pos': ''
-      }
-    ]
+const from = [
+  {
+    'expression': {
+      'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhZA==',
+      'language': 'sme',
+      'lemma': 'vuorká',
+      'pos': 'N'
+    },
+    'note': 'vuorkánote',
+    'sanctioned': true,
+    'source': 'vuorkásource',
+    'status': 'vuorkástatus'
   },
-  'to': {
-    'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-    'language': 'sme',
-    'terms': [
-      {
-        'id': '52479',
-        'language': 'sme',
-        'lemma': 'liima',
-        'pos': 'N'
-      },
-      {
-        'id': '52477',
-        'language': 'sme',
-        'lemma': 'liibma',
-        'pos': 'N'
-      }
-    ]
+  {
+    'expression': {
+      'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhYw==',
+      'language': 'sme',
+      'lemma': 'fiila',
+      'pos': 'N'
+    },
+    'note': 'fiilanote',
+    'sanctioned': true,
+    'source': 'fiilasource',
+    'status': 'fiilastatus'
   }
-};
+];
+const to = [
+  {
+    'expression': {
+      'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhOQ==',
+      'language': 'sma',
+      'lemma': 'fijle',
+      'pos': 'N'
+    },
+    'note': 'smanote ',
+    'sanctioned': true,
+    'source': 'smasource',
+    'status': 'smastatus'
+  }
+];
 
 storiesOf('LemmaGroups', module)
-  .add('default', () => <LemmaGroups from={termGroup.from.terms} to={termGroup.to.terms} />);
+  .add('default', () => <LemmaGroups from={from} to={to} />);
