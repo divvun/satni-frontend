@@ -51,7 +51,7 @@ const Articles = () => {
         if (error) return <p>Error {error.message}</p>;
         if (!data) return <p>Not found</p>;
 
-        return <PresentArticles articles={elemmas2ConceptPairs(data.multilingualconceptList)} />;
+        return <PresentArticles articles={elemmas2ConceptPairs(lemma, data.multilingualconceptList)} />;
       }}
     </Query>
   );
