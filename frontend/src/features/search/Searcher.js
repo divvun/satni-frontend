@@ -14,7 +14,7 @@ import { Query } from '@apollo/react-components';
 
 const GET_LEMMAS = gql`
   query AllLemmas($inputValue: String!) {
-    lemmas (search: $inputValue) {
+    lemmaList (search: $inputValue) {
       id
       lemma
     }
@@ -40,7 +40,7 @@ const SearchRenderer = ({
 
       return (
         <div>
-          {data.lemmas.map((item, index) => (
+          {data.lemmaList.map((item, index) => (
             <Item
               {...getItemProps({
                 key: index,
