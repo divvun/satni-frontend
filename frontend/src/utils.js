@@ -27,14 +27,14 @@ export const mapArticlesByLanguagePair = (articles) => {
   return articles.reduce(mapByLanguagePair, {});
 };
 
-const cleanedConceptSet = (language, conceptSet) => {
+const cleanedConcepts = (language, concepts) => {
   const nonSami = new Set(['nob', 'eng', 'fin', 'nno', 'swe']);
 
-  return nonSami.has(language) ? conceptSet.filter(concept => !nonSami.has(concept.language)) : conceptSet;
+  return nonSami.has(language) ? concepts.filter(concept => !nonSami.has(concept.language)) : concepts;
 };
 
-export const moveLangFirst = (language, conceptSet) => {
-  return conceptSet.reduce(
+export const moveLangFirst = (language, concepts) => {
+  return concepts.reduce(
     (accumulator, currentValue) => {
       if (currentValue.language !== language) {
         accumulator.push(currentValue);
@@ -48,13 +48,13 @@ export const moveLangFirst = (language, conceptSet) => {
   );
 };
 
-export const moveIdFirst = (id, termSet) => {
-  return termSet.reduce(
+export const moveLemmaFirst = (lemma, language, terms) => {
+  return terms.reduce(
     (accumulator, currentValue) => {
-      if (currentValue.expression.id !== id) {
-        accumulator.push(currentValue);
-      } else {
+      if (currentValue.expression.language === language && currentValue.expression.lemma === lemma) {
         accumulator.unshift(currentValue);
+      } else {
+        accumulator.push(currentValue);
       }
 
       return accumulator;
@@ -63,34 +63,50 @@ export const moveIdFirst = (id, termSet) => {
   );
 };
 
-export const cleanFrom = (id, concept) => {
+export const cleanFrom = (lemma, language, concept) => {
   return {
     ...concept,
-    termSet: moveIdFirst(id, concept.termSet)
+    terms: moveLemmaFirst(lemma, language, concept.terms)
   };
 };
 
-export const multiLingualConcept2ConceptPairs = (language, id, multilingualconcept) => {
-  const conceptSet = moveLangFirst(language, multilingualconcept.conceptSet);
-  const from = cleanFrom(id, conceptSet.shift());
+export const multiLingualConcept2ConceptPairs = (lemma, language, multilingualconcept) => {
+  const concepts = moveLangFirst(language, multilingualconcept.concepts);
+  const from = cleanFrom(lemma, language, concepts.shift());
   const termwikiref = multilingualconcept.name;
   const category = multilingualconcept.name.split(':')[0];
 
-  return cleanedConceptSet(language, conceptSet).map(concept => {
+  return cleanedConcepts(language, concepts).map(concept => {
     return {
       'termwikiref': termwikiref,
       'category': category,
       'dict': 'termwiki',
-      'from': {...from, termSet: from.termSet.map(term => ({...term, ...term.expression}))},
-      'to': {...concept, termSet: concept.termSet.map(term => ({...term, ...term.expression}))}
+      'from': from,
+      'to': concept
     };
   });
 };
 
-export const elemma2ConceptPairs = (elemma) => {
-  return elemma.multilingualconcepts.map(multilingualconcept => multiLingualConcept2ConceptPairs(elemma.language, elemma.id, multilingualconcept)).flat();
+export const multilingualconceptList2ConceptPairs = (lemma, language, multilingualconceptList) => {
+  return multilingualconceptList.map(multilingualconcept => multiLingualConcept2ConceptPairs(lemma, language, multilingualconcept)).flat();
 };
 
-export const elemmas2ConceptPairs = (elemmas) => {
-  return elemmas.map(elemma => elemma2ConceptPairs(elemma)).flat();
+export const languagesOfLemma = (lemma, multilingualconceptList) => {
+  const languages = new Set();
+  multilingualconceptList.forEach((multilingualconcept) => {
+    multilingualconcept.concepts.forEach((concept) => {
+      concept.terms.forEach((term) => {
+        if (term.expression.lemma === lemma) {
+          languages.add(term.expression.language);
+        }
+      });
+    });
+  });
+
+  return languages;
+};
+
+export const elemmas2ConceptPairs = (lemma, multilingualconceptList) => {
+  const languages = languagesOfLemma(lemma, multilingualconceptList);
+  return Array.from(languages).flatMap(language => multilingualconceptList2ConceptPairs(lemma, language, multilingualconceptList));
 };
