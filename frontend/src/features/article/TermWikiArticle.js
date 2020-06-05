@@ -49,7 +49,7 @@ const TermWikiArticle = ({termGroup}) => {
 
   return (
     <>
-      <LemmaGroups from={termGroup.from.termSet} to={termGroup.to.termSet} />
+      <LemmaGroups from={termGroup.from.terms} to={termGroup.to.terms} />
       <Definitions definitions={[termGroup.from.definition, termGroup.to.definition]}/>
       <Grid container>
         <Grid item className={classes.paper}>

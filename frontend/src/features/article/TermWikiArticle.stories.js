@@ -4,36 +4,56 @@ import { storiesOf } from '@storybook/react';
 import TermWikiArticle from './TermWikiArticle';
 
 const termGroup = {
-  'termwikiref': 'Luonddudieđa ja matematihkka:x33543',
-  'category': 'Luonddudieđa ja matematihkka',
+  'category': 'Dihtorteknologiija ja diehtoteknihkka',
   'dict': 'termwiki',
   'from': {
-    'definition': '',
-    'language': 'swe',
-    'termSet': [
+    'definition': 'smedefinition',
+    'explanation': 'smeexpl',
+    'language': 'sme',
+    'terms': [
       {
-        'id': '52476',
-        'language': 'swe',
-        'lemma': 'lim',
-        'pos': ''
+        'expression': {
+          'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhZA==',
+          'language': 'sme',
+          'lemma': 'vuorká',
+          'pos': 'N'
+        },
+        'note': 'vuorkánote',
+        'sanctioned': true,
+        'source': 'vuorkásource',
+        'status': 'vuorkástatus'
+      },
+      {
+        'expression': {
+          'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhYw==',
+          'language': 'sme',
+          'lemma': 'fiila',
+          'pos': 'N'
+        },
+        'note': 'fiilanote',
+        'sanctioned': true,
+        'source': 'fiilasource',
+        'status': 'fiilastatus'
       }
     ]
   },
+  'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
   'to': {
-    'definition': 'doahppi / njoahtti njalbi dahje suohkkadit ávnnas mainna čatná oktii muorrabihtáid, metállabihtáid jna',
-    'language': 'sme',
-    'termSet': [
+    'definition': 'smadefinition',
+    'explanation': 'smaexpl',
+    'language': 'sma',
+    'terms': [
       {
-        'id': '52479',
-        'language': 'sme',
-        'lemma': 'liima',
-        'pos': 'N'
-      },
-      {
-        'id': '52477',
-        'language': 'sme',
-        'lemma': 'liibma',
-        'pos': 'N'
+        'expression': {
+          'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhOQ==',
+          'language': 'sma',
+          'lemma': 'fijle',
+          'pos': 'N'
+        },
+        'note': 'smanote ',
+        'sanctioned': true,
+        'source': 'smasource',
+        'status': 'smastatus'
       }
     ]
   }

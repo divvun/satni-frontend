@@ -7,12 +7,12 @@ const LemmaGroups = ({ from, to }) => (
   <Grid container spacing={1}>
     <Grid item xs={6}>
       {from.map((stem, index) =>
-        <Stem key={index} stem={stem} />)
+        <Stem key={index} expression={stem.expression} />)
       }
     </Grid>
     <Grid item xs={6}>
       {to.map((stem, index) =>
-        <Stem key={index} stem={stem} />)
+        <Stem key={index} expression={stem.expression} />)
       }
     </Grid>
   </Grid>
