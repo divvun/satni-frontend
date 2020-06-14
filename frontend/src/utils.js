@@ -11,9 +11,6 @@ export const handleErrors = (response) => {
 };
 
 const mapByLanguagePair = (accumulator, currentValue) => {
-  console.log('currentValue', currentValue);
-  console.log('from', currentValue.from);
-  console.log('to', currentValue.to);
   const key = `${currentValue.from.language}${currentValue.to.language}`;
   if (accumulator[key]) {
     accumulator[key] = [...accumulator[key], currentValue];
