@@ -19,25 +19,10 @@ Initial steps
     python manage.py migrate
 ```
 
-Import dump:
-
-Remove old content
+Remove old content and import dump
 
 ```
-mongo
-use satnibackend
-db.dropDatabase()
-```
-
-Add content from termwiki
-
-```
-for i in lemmas terms
-  do rm -v $i/migrations/0*
-done
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runscript from_dump
+./init_backend.sh
 ```
 
 Query for lemma, then all MultiLingualConcepts that has this lemma
