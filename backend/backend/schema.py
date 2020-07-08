@@ -3,9 +3,10 @@ import graphene
 import lemmas.schema
 import lemmas.types
 import terms.schema
+import dicts.schema
 
 
-class Query(terms.schema.Query, lemmas.schema.Query, graphene.ObjectType):
+class Query(dicts.schema.Query, terms.schema.Query, lemmas.schema.Query, graphene.ObjectType):
     pass
 
 

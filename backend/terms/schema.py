@@ -1,7 +1,8 @@
 import graphene
-
 from graphene_mongo.fields import MongoengineConnectionField
+
 from lemmas.models import Lemma
+
 from .models import Concept, MultiLingualConcept, Term
 from .types import ConceptType, MultiLingualConceptType, TermType
 
