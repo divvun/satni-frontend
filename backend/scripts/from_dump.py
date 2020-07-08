@@ -31,7 +31,8 @@ def make_lemma(lang, expression):
 
 
 def make_terms(lang, concept):
-    for expression in same_lang_sanctioned_expressions(lang, concept.related_expressions):
+    for expression in same_lang_sanctioned_expressions(
+            lang, concept.related_expressions):
         lemma_key = (expression['expression'], expression['pos'], langs[lang])
         if not LEMMAS.get(lemma_key):
             LEMMAS[lemma_key] = make_lemma(lang, expression)
