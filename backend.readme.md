@@ -25,10 +25,8 @@ Remove old content
 
 ```
 mongo
-> use satnibackend
-switched to db satnibackend
-> db.dropDatabase()
-{ "dropped" : "satnibackend", "ok" : 1 }
+use satnibackend
+db.dropDatabase()
 ```
 
 Add content from termwiki
