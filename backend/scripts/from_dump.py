@@ -4,6 +4,7 @@ from lemmas.models import Lemma
 from terms.models import Concept, MultiLingualConcept, Term
 from termwikiimporter import bot
 
+LEMMAS = {}
 langs = {
     'en': 'eng',
     'fi': 'fin',
@@ -30,14 +31,18 @@ def make_lemma(lang, expression):
 
 
 def make_terms(lang, concept):
-            term = Term(
-                status=expression.get('status'),
-                sanctioned=expression.get('sanctioned', False),
-                note=expression.get('note'),
-                source=expression.get('source'),
-                expression=make_lemma(lang, expression))
-            yield term
     for expression in same_lang_sanctioned_expressions(lang, concept.related_expressions):
+        lemma_key = (expression['expression'], expression['pos'], langs[lang])
+        if not LEMMAS.get(lemma_key):
+            LEMMAS[lemma_key] = make_lemma(lang, expression)
+
+        term = Term(
+            status=expression.get('status'),
+            sanctioned=expression.get('sanctioned', False),
+            note=expression.get('note'),
+            source=expression.get('source'),
+            expression=LEMMAS.get(lemma_key))
+        yield term
 
 
 def make_concept(lang, concept):
