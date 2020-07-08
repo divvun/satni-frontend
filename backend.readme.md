@@ -204,3 +204,12 @@ Result
   }
 }
 ```
+
+(Dette gjøres ved import nå, må forandres når redigering skal gjøres)
+Regler for å kunne vise et lemma i søkefeltet
+* Om lemmaet er samisk, og
+** er brukt i en ordbok
+** eller er godkjent i en termartikkel
+* Om lemmaet ikke er samisk, og
+** er brukt i en ordbok
+** eller er del av minst en termartikkel med minst en godkjent samisk term
