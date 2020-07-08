@@ -30,8 +30,6 @@ def make_lemma(lang, expression):
 
 
 def make_terms(lang, concept):
-    for expression in same_lang_expressions(lang, concept.related_expressions):
-        if expression.get('sanctioned'):
             term = Term(
                 status=expression.get('status'),
                 sanctioned=expression.get('sanctioned', False),
@@ -39,6 +37,7 @@ def make_terms(lang, concept):
                 source=expression.get('source'),
                 expression=make_lemma(lang, expression))
             yield term
+    for expression in same_lang_sanctioned_expressions(lang, concept.related_expressions):
 
 
 def make_concept(lang, concept):
@@ -60,10 +59,10 @@ def make_concept(lang, concept):
     return c
 
 
-def same_lang_expressions(lang, expressions):
+def same_lang_sanctioned_expressions(lang, expressions):
     return [
-        expression for expression in expressions
-        if expression['language'] == lang
+        expression for expression in expressions if
+        expression['language'] == lang and expression['sanctioned'] == 'True'
     ]
 
 
