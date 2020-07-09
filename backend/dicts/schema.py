@@ -2,8 +2,8 @@ import graphene
 
 from graphene_mongo.fields import MongoengineConnectionField
 from lemmas.models import Lemma
-from .models import ExampleGroup, Reference, TranslationGroup, MeaningGroup, DictEntry
-from .types import ExampleGroupType, ReferenceType, TranslationGroupType, MeaningGroupType, DictEntryType
+from .models import ExampleGroup, Restriction, TranslationGroup, MeaningGroup, DictEntry
+from .types import ExampleGroupType, RestrictionType, TranslationGroupType, MeaningGroupType, DictEntryType
 
 
 class Query(graphene.ObjectType):

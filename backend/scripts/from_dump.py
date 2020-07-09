@@ -5,9 +5,10 @@ import sys
 
 from lxml import etree
 
+from dicts.models import (DictEntry, ExampleGroup, MeaningGroup, Restriction,
+                          TranslationGroup)
 from lemmas.models import Lemma
 from terms.models import Concept, MultiLingualConcept, Term
-from dicts.models import DictEntry, MeaningGroup, TranslationGroup
 from termwikiimporter import bot
 
 LEMMAS = {}
@@ -94,6 +95,9 @@ def make_c(concept):
     return [make_concept(lang, concept) for lang in concept.languages()]
 
 
+# Dict import below here
+
+
 def normalise_lemma(lemma: str) -> str:
     for offending, replacement in [('\n', ' '), ('  ', ' ')]:
         while offending in lemma:
@@ -103,9 +107,10 @@ def normalise_lemma(lemma: str) -> str:
 
 
 def l_or_t2stem(element, src):
-    print(element.tag, element.text, element.get('pos'), src)
     l = Lemma(
-        lemma=normalise_lemma(element.text), language=src, pos=element.get('pos'))
+        lemma=normalise_lemma(element.text),
+        language=src,
+        pos=element.get('pos'))
     l.save()
 
     return l
@@ -121,15 +126,34 @@ def make_dict_lemma(element, lang):
 
 def make_translation_lemmas(translations, target):
     return [
-        make_dict_lemma(translation, target)
-        for translation in translations if translation.text is not None
+        make_dict_lemma(translation, target) for translation in translations
+        if translation.text is not None
     ]
+
+
+def make_restriction(restriction_element):
+    if restriction_element is not None:
+        return Restriction(
+            restriction=restriction_element.text,
+            attributes=str(restriction_element.attrib))
+
+
+def make_example(example):
+    return ExampleGroup(
+        example=example.find('./x').text,
+        translation=example.find('./xt').text)
+
+
+def make_examples(examples):
+    return [make_example(example) for example in examples]
 
 
 def make_translation_group(translation_group, target):
     return TranslationGroup(
         translationLemmas=make_translation_lemmas(
-            translation_group.xpath('.//t'), target))
+            translation_group.xpath('./t'), target),
+        restriction=make_restriction(translation_group.find('./re')),
+        exampleGroups=make_examples(translation_group.xpath('./xg')))
 
 
 def make_translation_groups(translation_groups, target):
@@ -164,6 +188,7 @@ def make_entries(dictxml, src, target):
 
 
 def import_dict(pair):
+    print(f'Import Giellatekno {pair} dictionary')
     dict_root = os.path.join(os.getenv('GTHOME'), 'words/dicts', pair, 'src')
     for xml_file in glob.glob(dict_root + '/*.xml'):
         if not xml_file.endswith('meta.xml') and 'Der_' not in xml_file:
@@ -183,7 +208,7 @@ def import_dict(pair):
 def make_dicts():
     for pair in [
             'smenob', 'nobsme', 'nobsma', 'smanob', 'smefin', 'finsme',
-            # 'smesmn', 'smnsme'
+            'smesmn', 'smnsme'
     ]:
         import_dict(pair)
 

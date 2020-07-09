@@ -10,16 +10,16 @@ class ExampleGroup(EmbeddedDocument):
     translation = StringField()
 
 
-class Reference(EmbeddedDocument):
-    reference = StringField()
-    comment = StringField()
+class Restriction(EmbeddedDocument):
+    restriction = StringField()
+    attributes = StringField()
 
 
 class TranslationGroup(EmbeddedDocument):
     ID = ObjectIdField()
     translationLemmas = ListField(ReferenceField(Lemma))
-    # re = EmbeddedDocumentField(Reference)
-    # exampleGroups = ListField(EmbeddedDocumentField(ExampleGroup))
+    restriction = EmbeddedDocumentField(Restriction)
+    exampleGroups = ListField(EmbeddedDocumentField(ExampleGroup))
 
 
 class MeaningGroup(EmbeddedDocument):
