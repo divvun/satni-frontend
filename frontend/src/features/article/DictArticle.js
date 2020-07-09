@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Examples from './Examples';
-import LemmaGroups from './LemmaGroups';
-import Source from './Source';
+import LemmaGroup from './LemmaGroup';
+import Examples from './Examples'
+import Source from './Source'
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -13,13 +13,19 @@ const useStyles = makeStyles(theme => ({
 
 const DictArticle = ({dictGroup}) => {
   const classes = useStyles();
-  const { stems, examples, dict } = dictGroup;
-
+  const {dict, from, to} = dictGroup
   return (
     <>
-      <LemmaGroups stems={stems} />
-      {examples.length > 0 && (<Examples examples={examples} />)}
-      <Source className={classes.paper} source={dict} lemma={stems[0].lemma} />
+      {from.lookupLemmas.map((lemma, i) => <LemmaGroup key={i} stem={lemma}/>)}
+      {to.translationGroups.map((translationGroup, i) => {
+        return (
+          <React.Fragment key={i}>
+            {translationGroup.translations.map((lemma, j) => <LemmaGroup key={j} stem={lemma}/>)}
+            {translationGroup.examples && <Examples examples={translationGroup.examples}/>}
+          </React.Fragment>
+        )
+      })}
+      <Source className={classes.paper} source={dict} lemma={dictGroup.from.lookupLemmas[0].lemma} />
     </>
   );
 };

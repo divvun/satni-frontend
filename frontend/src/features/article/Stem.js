@@ -11,9 +11,9 @@ const useStyles = makeStyles({
   }
 });
 
-const Stem = ({ expression }) => {
+const Stem = ({ stem }) => {
   const classes = useStyles();
-  const {lemma, pos, language} = expression;
+  const {lemma, pos, language} = stem;
   return (
     <Typography>
       <Link component='a' href={`/details?lemma=${lemma}&lang=${language}&pos=${pos}`}>
