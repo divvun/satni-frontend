@@ -80,13 +80,11 @@ def same_lang_sanctioned_expressions(lang, expressions):
 
 
 def make_m():
+    print('Importing TermWiki content')
     dumphandler = bot.DumpHandler()
 
     for x, (title, concept) in enumerate(dumphandler.concepts):
-        # if x > 100:
-        #     break
         if concept.has_sanctioned_sami():
-            print(f'Adding {x} {title}')
             m = MultiLingualConcept(name=f'{title}', concepts=make_c(concept))
             m.save()
 
@@ -214,5 +212,5 @@ def make_dicts():
 
 
 def run():
-    # make_m()
+    make_m()
     make_dicts()
