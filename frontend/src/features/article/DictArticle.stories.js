@@ -4,29 +4,46 @@ import { storiesOf } from '@storybook/react';
 import DictArticle from './DictArticle';
 
 const dictGroup = {
-  examples: [
-    {
-      x: 'original0 original0 original0 original0',
-      xt: 'translation0 translation0 translation0 translation0'
-    },
-    {
-      x: 'original1',
-      xt: 'translation1'
-    }
-  ],
-  stems: [
-    {
-      lemma: 'váldit',
-      pos: 'Verb',
-      language: 'sme'
-    },
-    {
-      lemma: 'ta',
-      pos: 'Verb',
-      language: 'nob'
-    }
-  ],
-  dict: 'smenob'
+  'dict': 'nobsme',
+  'from': {
+    'language': 'nob',
+    'lookupLemmas': [
+      {
+        'lemma': 'kanskje',
+        'pos': 'Adv'
+      }
+    ]
+  },
+  'to': {
+    'language': 'sme',
+    'translationGroups': [
+      {
+        'examples': [
+          {
+            'example': 'Vi får kanskje ikke engang representant til Sametinget.',
+            'translation': 'Eat soaitte oba oažžut ge áirasa Sámediggái.'
+          },
+          {
+            'example': 'Mor stemmer kanskje ikke på Arbeiderpartiet ved årets valg.',
+            'translation': 'Eadni ii dáidde jienastit Bargiidbellodaga dán jagi válggas.'
+          }
+        ],
+        'restriction': 'om julenissen',
+        'translations': [
+          {
+            'language': 'sme',
+            'lemma': 'soaitit',
+            'pos': 'V'
+          },
+          {
+            'language': 'sme',
+            'lemma': 'várra',
+            'pos': 'Adv'
+          }
+        ]
+      }
+    ]
+  }
 };
 
 storiesOf('DictArticle', module)

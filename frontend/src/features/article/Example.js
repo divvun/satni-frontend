@@ -14,11 +14,9 @@ const Example = ({example}) => {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={6}>
-        <Typography>{example.x}</Typography>
-      </Grid>
-      <Grid item xs={6}>
-        <Typography className={classes.second}>{example.xt}</Typography>
+      <Grid item>
+        <Typography>{example.example}</Typography>
+        <Typography className={classes.second}>{example.translation}</Typography>
       </Grid>
     </Grid>
   );

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import Example from './Example';
 
-const example = { x: 'original', xt: 'translation'};
+const example = { example: 'original', translation: 'translation'};
 
 storiesOf('Example', module)
   .add('default', () => <Example example={example} />);

@@ -1815,9 +1815,9 @@ storiesOf('PresentArticles', module)
   //   articles={[resultDictWithExamples[0]]} />)
   // .add('DictArticle without examples', () => <PresentArticles
   //   articles={[resultDictWithoutExamples[0]]} />)
-  .add('Only TermWikiArticle', () => <PresentArticles
+  .add('TermWikiArticle arpeggio', () => <PresentArticles
     articles={arpeggio} />)
-  .add('Only TermWikiArticle', () => <PresentArticles
+  .add('TermWikiArticle vuorka', () => <PresentArticles
     articles={vuorka} />);
   // .add('All types', () => <PresentArticles
   //   articles={[
