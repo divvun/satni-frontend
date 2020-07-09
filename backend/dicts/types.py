@@ -1,16 +1,16 @@
 from graphene_mongo import MongoengineObjectType
 from graphene import relay
 
-from .models import ExampleGroup, Reference, TranslationGroup, MeaningGroup, DictEntry
+from .models import ExampleGroup, Restriction, TranslationGroup, MeaningGroup, DictEntry
 
 
 class ExampleGroupType(MongoengineObjectType):
     class Meta:
         model = ExampleGroup
 
-class ReferenceType(MongoengineObjectType):
+class RestrictionType(MongoengineObjectType):
     class Meta:
-        model = Reference
+        model = Restriction
 
 
 class TranslationGroupType(MongoengineObjectType):
