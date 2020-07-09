@@ -16,9 +16,6 @@ const Examples = ({examples}) => {
 
   return (
     <Grid container xs={12}>
-      <Typography className={classes.title} color='textSecondary'>
-        Examples:
-      </Typography>
       {examples.map((example, i) => (
         <Example key={i} example={example} />)
       )}
