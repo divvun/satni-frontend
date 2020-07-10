@@ -45,4 +45,4 @@ const to = [
 ];
 
 storiesOf('LemmaGroups', module)
-  .add('default', () => <LemmaGroups from={from} to={to} />);
+  .add('default', () => <LemmaGroups fromterms={from} toterms={to} />);
