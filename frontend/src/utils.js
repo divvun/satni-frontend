@@ -107,3 +107,25 @@ export const elemmas2ConceptPairs = (lemma, multilingualconceptList) => {
   const languages = languagesOfLemma(lemma, multilingualconceptList);
   return Array.from(languages).flatMap(language => multilingualconceptList2ConceptPairs(lemma, language, multilingualconceptList));
 };
+
+export const backendTranslationGroup2frontendTranslationGroup = (translationGroup) => {
+  return {
+    restriction: translationGroup.restriction,
+    translations: translationGroup.translationLemmas.edges.map(edge => edge.node),
+    examples: translationGroup.exampleGroups.map(exampleGroup => exampleGroup)
+  };
+};
+
+export const dictBackend2Frontend = (lemma, backendDictArticle) => {
+  return {
+    dict: `${backendDictArticle.srcLang}${backendDictArticle.targetLang}`,
+    from: {
+      language: backendDictArticle.srcLang,
+      lookupLemmas: [backendDictArticle.lookupLemma]
+    },
+    to: {
+      language: backendDictArticle.targetLang,
+      translationGroups: backendDictArticle.translationGroups.map(backendTranslationGroup2frontendTranslationGroup)
+    }
+  };
+};

@@ -3,7 +3,8 @@ import {
   cleanFrom,
   multiLingualConcept2ConceptPairs,
   multilingualconceptList2ConceptPairs,
-  elemmas2ConceptPairs
+  elemmas2ConceptPairs,
+  dictBackend2Frontend
 } from './utils';
 
 const multilingualconceptList = [
@@ -3176,5 +3177,97 @@ describe('Massage termwiki data from backend', () => {
     ];
 
     expect(elemmas2ConceptPairs(lemma, got)).toEqual(want);
+  });
+});
+
+describe('Massage Giellatekno dictionaries from backend', () => {
+  it('Turn backend dict article into frontend-compatible format', () => {
+    const lemma = 'kanskje';
+    const got = {
+      'id': '5f08334a053d5ae2cf91d402',
+      'srcLang': 'nob',
+      'targetLang': 'sme',
+      'lookupLemma': {
+        'lemma': 'kanskje',
+        'pos': 'Adv'
+      },
+      'translationGroups': [
+        {
+          'translationLemmas': {
+            'edges': [
+              {
+                'node': {
+                  'lemma': 'soaitit',
+                  'language': 'sme',
+                  'pos': 'V'
+                }
+              },
+              {
+                'node': {
+                  'lemma': 'várra',
+                  'language': 'sme',
+                  'pos': 'Adv'
+                }
+              }
+            ]
+          },
+          'restriction': 'om julenissen',
+          'exampleGroups': [
+            {
+              'example': 'Vi får kanskje ikke engang representant til Sametinget.',
+              'translation': 'Eat soaitte oba oažžut ge áirasa Sámediggái.'
+            },
+            {
+              'example': 'Mor stemmer kanskje ikke på Arbeiderpartiet ved årets valg.',
+              'translation': 'Eadni ii dáidde jienastit Bargiidbellodaga dán jagi válggas.'
+            }
+          ]
+        }
+      ]
+    };
+    const want = {
+      'dict': 'nobsme',
+      'from': {
+        'language': 'nob',
+        'lookupLemmas': [
+          {
+            'lemma': 'kanskje',
+            'pos': 'Adv'
+          }
+        ]
+      },
+      'to': {
+        'language': 'sme',
+        'translationGroups': [
+          {
+            'examples': [
+              {
+                'example': 'Vi får kanskje ikke engang representant til Sametinget.',
+                'translation': 'Eat soaitte oba oažžut ge áirasa Sámediggái.'
+              },
+              {
+                'example': 'Mor stemmer kanskje ikke på Arbeiderpartiet ved årets valg.',
+                'translation': 'Eadni ii dáidde jienastit Bargiidbellodaga dán jagi válggas.'
+              }
+            ],
+            'restriction': 'om julenissen',
+            'translations': [
+              {
+                'language': 'sme',
+                'lemma': 'soaitit',
+                'pos': 'V'
+              },
+              {
+                'language': 'sme',
+                'lemma': 'várra',
+                'pos': 'Adv'
+              }
+            ]
+          }
+        ]
+      }
+    };
+
+    expect(dictBackend2Frontend(lemma, got)).toEqual(want);
   });
 });
