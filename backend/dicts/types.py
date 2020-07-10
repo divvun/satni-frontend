@@ -1,7 +1,7 @@
 from graphene_mongo import MongoengineObjectType
 from graphene import relay
 
-from .models import ExampleGroup, Restriction, TranslationGroup, MeaningGroup, DictEntry
+from .models import ExampleGroup, Restriction, TranslationGroup, DictEntry
 
 
 class ExampleGroupType(MongoengineObjectType):
@@ -16,11 +16,6 @@ class RestrictionType(MongoengineObjectType):
 class TranslationGroupType(MongoengineObjectType):
     class Meta:
         model = TranslationGroup
-
-class MeaningGroupType(MongoengineObjectType):
-    class Meta:
-        model = MeaningGroup
-
 
 class DictEntryType(MongoengineObjectType):
     class Meta:

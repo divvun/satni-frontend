@@ -5,8 +5,7 @@ import sys
 
 from lxml import etree
 
-from dicts.models import (DictEntry, ExampleGroup, MeaningGroup, Restriction,
-                          TranslationGroup)
+from dicts.models import DictEntry, ExampleGroup, Restriction, TranslationGroup
 from lemmas.models import Lemma
 from terms.models import Concept, MultiLingualConcept, Term
 from termwikiimporter import bot
@@ -162,26 +161,14 @@ def make_translation_groups(translation_groups, target):
     ]
 
 
-def make_meaning_group(meaning_group, target):
-    return MeaningGroup(
-        translationsGroups=(
-            make_translation_groups(meaning_group.xpath('.//tg'), target)))
-
-
-def make_meaning_groups(meaning_groups, target):
-    return [
-        make_meaning_group(meaning_group, target)
-        for meaning_group in meaning_groups
-    ]
-
-
 def make_entries(dictxml, src, target):
     for entry in dictxml.iter('e'):
         d = DictEntry(
             srcLang=src,
             targetLang=target,
             lookupLemma=make_dict_lemma(entry.find('.//l'), src),
-            meaningGroups=make_meaning_groups(entry.xpath('.//mg'), target))
+            translationGroups=make_translation_groups(
+                entry.xpath('.//tg'), target))
         d.save()
 
 
