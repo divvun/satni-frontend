@@ -22,15 +22,10 @@ class TranslationGroup(EmbeddedDocument):
     exampleGroups = ListField(EmbeddedDocumentField(ExampleGroup))
 
 
-class MeaningGroup(EmbeddedDocument):
-    ID = ObjectIdField()
-    translationsGroups = ListField(EmbeddedDocumentField(TranslationGroup))
-
-
 class DictEntry(Document):
     meta = {'collection': 'giellateknodicts'}
     ID = ObjectIdField()
     srcLang = StringField()
     targetLang = StringField()
     lookupLemma = ReferenceField(Lemma)
-    meaningGroups = ListField(EmbeddedDocumentField(MeaningGroup))
+    translationGroups = ListField(EmbeddedDocumentField(TranslationGroup))
