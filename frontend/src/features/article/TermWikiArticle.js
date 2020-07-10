@@ -50,7 +50,7 @@ const TermWikiArticle = ({termGroup}) => {
   return (
     <>
       <LemmaGroups from={termGroup.from.terms} to={termGroup.to.terms} />
-      {termGroup.from.definition && <Definitions definitions={[termGroup.from.definition, termGroup.to.definition]}/>}
+      {(termGroup.from.definition || termGroup.to.definition) && <Definitions definitions={[termGroup.from.definition, termGroup.to.definition]}/>}
       <Grid container>
         <Grid item className={classes.paper}>
           <SourceLink termwikiref={termGroup.termwikiref} />
