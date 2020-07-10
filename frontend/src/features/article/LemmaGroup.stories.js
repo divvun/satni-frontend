@@ -3,25 +3,18 @@ import { storiesOf } from '@storybook/react';
 
 import LemmaGroup from './LemmaGroup';
 
-const paradigm = {
-  'V+Inf': [
-    'váldit'
-  ],
-  'V+Ind+Prs+Sg1': [
-    'válddán'
-  ],
-  'V+Ind+Prs+Sg2': [
-    'válddát'
-  ],
-  'V+Ind+Prs+Sg3': [
-    'váldá'
-  ],
-  'V+Ind+Prs+Du1': [
-    'válde'
-  ]
-};
-
-const stem = { lemma: 'váldit', pos: 'Verb', lang: 'sme'};
+const term = {
+    'expression': {
+      'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhZA==',
+      'language': 'sme',
+      'lemma': 'vuorká',
+      'pos': 'N'
+    },
+    'note': 'vuorkánote',
+    'sanctioned': true,
+    'source': 'vuorkásource',
+    'status': 'vuorkástatus'
+  }
 
 storiesOf('LemmaGroup', module)
-  .add('default', () => <LemmaGroup stem={stem} paradigm={paradigm} />);
+  .add('default', () => <LemmaGroup term={term} />);
