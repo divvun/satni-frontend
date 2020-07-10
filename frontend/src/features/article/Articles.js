@@ -5,12 +5,40 @@ import {
 
 import gql from 'graphql-tag';
 import { Query } from '@apollo/react-components';
-import { elemmas2ConceptPairs } from 'utils';
+import { elemmas2ConceptPairs, dictBackend2Frontend } from 'utils';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
 
 const GET_ARTICLES = gql`
   query AllArticles($lemma: String!) {
+    dictEntryList (exact: $lemma) {
+      id
+      srcLang
+      targetLang
+      lookupLemma {
+        lemma
+  			pos
+      }
+      translationGroups {
+        translationLemmas {
+          edges {
+            node {
+              lemma
+              language
+              pos
+            }
+          }
+        }
+        restriction {
+          restriction
+          attributes
+        }
+        exampleGroups {
+          example
+          translation
+        }
+      }
+    }
     multilingualconceptList (exact: $lemma) {
       id
       name
@@ -35,6 +63,12 @@ const GET_ARTICLES = gql`
   }
 `;
 // return <div>{JSON.stringify(data.elemmas)}</div>;
+const query2articlelist = (lemma, data) => {
+  const termList = elemmas2ConceptPairs(lemma, data.multilingualconceptList);
+  const dictList = data.dictEntryList.map(dictBackend2Frontend);
+
+  return dictList.concat(termList);
+};
 
 const Articles = () => {
   const { lemma } = useParams();
@@ -51,7 +85,7 @@ const Articles = () => {
         if (error) return <p>Error {error.message}</p>;
         if (!data) return <p>Not found</p>;
 
-        return <PresentArticles articles={elemmas2ConceptPairs(lemma, data.multilingualconceptList)} />;
+        return <PresentArticles articles={query2articlelist(lemma, data)} />;
       }}
     </Query>
   );
