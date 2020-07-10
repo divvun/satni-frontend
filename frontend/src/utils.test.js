@@ -3182,7 +3182,6 @@ describe('Massage termwiki data from backend', () => {
 
 describe('Massage Giellatekno dictionaries from backend', () => {
   it('Turn backend dict article into frontend-compatible format', () => {
-    const lemma = 'kanskje';
     const got = {
       'id': '5f08334a053d5ae2cf91d402',
       'srcLang': 'nob',
@@ -3268,6 +3267,6 @@ describe('Massage Giellatekno dictionaries from backend', () => {
       }
     };
 
-    expect(dictBackend2Frontend(lemma, got)).toEqual(want);
+    expect(dictBackend2Frontend(got)).toEqual(want);
   });
 });
