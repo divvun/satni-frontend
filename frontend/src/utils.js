@@ -116,7 +116,7 @@ export const backendTranslationGroup2frontendTranslationGroup = (translationGrou
   };
 };
 
-export const dictBackend2Frontend = (lemma, backendDictArticle) => {
+export const dictBackend2Frontend = (backendDictArticle) => {
   return {
     dict: `${backendDictArticle.srcLang}${backendDictArticle.targetLang}`,
     from: {
