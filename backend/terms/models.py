@@ -21,11 +21,16 @@ class Concept(EmbeddedDocument):
     terms = ListField(EmbeddedDocumentField(Term))
 
 
+class Collection(EmbeddedDocument):
+    name = StringField()
+
+
 class MultiLingualConcept(Document):
     meta = {'collection': 'multilingualconcepts'}
     ID = ObjectIdField()
     name = StringField()
     concepts = ListField(EmbeddedDocumentField(Concept))
+    collections = ListField(EmbeddedDocumentField(Collection))
 
     def __str__(self):
         return '%s' % (self.name)

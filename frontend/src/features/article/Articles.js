@@ -39,9 +39,12 @@ const GET_ARTICLES = gql`
         }
       }
     }
-    multilingualconceptList (exact: $lemma) {
+    multilingualconceptList(exact: $lemma) {
       id
       name
+      collections {
+        name
+      }
       concepts {
         definition
         explanation
