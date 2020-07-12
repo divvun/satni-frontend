@@ -78,6 +78,7 @@ export const multiLingualConcept2ConceptPairs = (lemma, language, multilingualco
       'termwikiref': termwikiref,
       'category': category,
       'dict': 'termwiki',
+      'collections': multilingualconcept.collections ? multilingualconcept.collections.map(collection => collection.name.replace('Collection:', '')) : [],
       'from': from,
       'to': concept
     };

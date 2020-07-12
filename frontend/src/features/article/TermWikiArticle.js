@@ -32,6 +32,19 @@ const SourceLink = ({termwikiref}) => (
   </Grid>
 );
 
+const CollectionLink = ({collection}) => (
+  <Grid item xs={12}>
+    <Typography>
+      <Link
+        href={`https://satni.uit.no/termwiki/index.php?title=Collection:${collection}`}
+        target='_blank' rel='noopener noreferrer'>
+        {collection}
+      </Link>
+    </Typography>
+  </Grid>
+);
+
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -58,6 +71,9 @@ const TermWikiArticle = ({termGroup}) => {
         <Grid item className={classes.paper}>
           <CategoryLink category={termGroup.category} />
         </Grid>
+      </Grid>
+      <Grid>
+        {termGroup.collections && termGroup.collections.map((collection, index) => <CollectionLink key={index} collection={collection}/>)}
       </Grid>
     </>
   );

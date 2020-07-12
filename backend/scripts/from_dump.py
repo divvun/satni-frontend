@@ -7,7 +7,7 @@ from lxml import etree
 
 from dicts.models import DictEntry, ExampleGroup, Restriction, TranslationGroup
 from lemmas.models import Lemma
-from terms.models import Concept, MultiLingualConcept, Term
+from terms.models import Collection, Concept, MultiLingualConcept, Term
 from termwikiimporter import bot
 
 LEMMAS = {}
@@ -84,7 +84,11 @@ def make_m():
 
     for x, (title, concept) in enumerate(dumphandler.concepts):
         if concept.has_sanctioned_sami():
-            m = MultiLingualConcept(name=f'{title}', concepts=make_c(concept))
+            m_collections = [
+                Collection(name=m_collection) for m_collection in concept.collections
+            ]
+            m = MultiLingualConcept(name=f'{title}', concepts=make_c(concept),
+                                    collections=m_collections)
             m.save()
 
 
@@ -179,6 +183,7 @@ def import_dict(pair):
         if not xml_file.endswith('meta.xml') and 'Der_' not in xml_file:
             # TODO: handle Der_ files
             try:
+                print(f'\t{xml_file}')
                 parser = etree.XMLParser(
                     remove_comments=True, dtd_validation=True)
                 dictxml = etree.parse(xml_file, parser=parser)

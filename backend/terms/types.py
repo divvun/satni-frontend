@@ -1,7 +1,7 @@
 from graphene_mongo import MongoengineObjectType
 from graphene import relay
 
-from .models import Concept, MultiLingualConcept, Term
+from .models import Collection, Concept, MultiLingualConcept, Term
 
 
 class TermType(MongoengineObjectType):
@@ -12,6 +12,11 @@ class TermType(MongoengineObjectType):
 class ConceptType(MongoengineObjectType):
     class Meta:
         model = Concept
+
+
+class CollectionType(MongoengineObjectType):
+    class Meta:
+        model = Collection
 
 
 class MultiLingualConceptType(MongoengineObjectType):
