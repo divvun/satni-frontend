@@ -6,6 +6,10 @@ import TermWikiArticle from './TermWikiArticle';
 const termGroup = {
   'category': 'Dihtorteknologiija ja diehtoteknihkka',
   'dict': 'termwiki',
+  'collections': [
+    'Historjá- já ohtsâškodde',
+    'Ekonomia 02/2017'
+  ],
   'from': {
     'definition': 'smedefinition',
     'explanation': 'smeexpl',

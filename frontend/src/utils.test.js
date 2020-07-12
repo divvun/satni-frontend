@@ -955,6 +955,7 @@ describe('Massage termwiki data from backend', () => {
     const want = [
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1010,6 +1011,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1065,6 +1067,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1120,6 +1123,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1175,6 +1179,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1254,6 +1259,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1320,6 +1326,7 @@ describe('Massage termwiki data from backend', () => {
     const want = [
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1375,6 +1382,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1430,6 +1438,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1485,6 +1494,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1540,6 +1550,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1619,6 +1630,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1674,6 +1686,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1717,6 +1730,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1760,6 +1774,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Ekonomiija ja gávppašeapmi',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1827,6 +1842,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Ekonomiija ja gávppašeapmi',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1894,6 +1910,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Ekonomiija ja gávppašeapmi',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -1961,6 +1978,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Ekonomiija ja gávppašeapmi',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2028,6 +2046,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Ekonomiija ja gávppašeapmi',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2095,6 +2114,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Luonddudieđa ja matematihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2162,6 +2182,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Luonddudieđa ja matematihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2229,6 +2250,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Luonddudieđa ja matematihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2296,6 +2318,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Luonddudieđa ja matematihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2363,6 +2386,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Luonddudieđa ja matematihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2430,6 +2454,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Luonddudieđa ja matematihkka',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2497,6 +2522,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Medisiidna',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': 'vuorká - vuorkái - vuorkkáide',
@@ -2540,6 +2566,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Medisiidna',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': 'vuorká - vuorkái - vuorkkáide',
@@ -2595,6 +2622,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Medisiidna',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': 'vuorká - vuorkái - vuorkkáide',
@@ -2638,6 +2666,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Medisiidna',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': 'vuorká - vuorkái - vuorkkáide',
@@ -2681,6 +2710,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Servodatdieđa',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2760,6 +2790,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Servodatdieđa',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2839,6 +2870,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Servodatdieđa',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2906,6 +2938,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Teknihkka industriija duodji',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2949,6 +2982,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Teknihkka industriija duodji',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -2992,6 +3026,7 @@ describe('Massage termwiki data from backend', () => {
       },
       {
         'category': 'Teknihkka industriija duodji',
+        'collections': [],
         'dict': 'termwiki',
         'from': {
           'definition': null,
@@ -3043,6 +3078,14 @@ describe('Massage termwiki data from backend', () => {
       {
         'id': 'TXVsdGlMaW5ndWFsQ29uY2VwdFR5cGU6NWVkOTU2NmM3YmRmZjQ4NzRjNWI2MDBl',
         'name': 'Beaivválaš giella:Musikksannõs 12',
+        'collections': [
+          {
+            'name': 'Collection:Historjá- já ohtsâškodde'
+          },
+          {
+            'name': 'Collection:Ekonomia 02/2017'
+          }
+        ],
         'concepts': [
           {
             'definition': 'sointu jonka sävelet soitetaan nopeasti peräkkäin, murrettu sointu (Kielitoimiston sanakirja)',
@@ -3091,6 +3134,10 @@ describe('Massage termwiki data from backend', () => {
       {
         'category': 'Beaivválaš giella',
         'dict': 'termwiki',
+        'collections': [
+          'Collection:Historjá- já ohtsâškodde',
+          'Collection:Ekonomia 02/2017'
+        ],
         'from': {
           'definition': 'sointu jonka sävelet soitetaan nopeasti peräkkäin, murrettu sointu (Kielitoimiston sanakirja)',
           'explanation': null,
@@ -3134,6 +3181,10 @@ describe('Massage termwiki data from backend', () => {
       {
         'category': 'Beaivválaš giella',
         'dict': 'termwiki',
+        'collections': [
+          'Collection:Historjá- já ohtsâškodde',
+          'Collection:Ekonomia 02/2017'
+        ],
         'from': {
           'definition': null,
           'explanation': null,
