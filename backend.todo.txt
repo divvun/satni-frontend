@@ -1,0 +1,35 @@
+Lemmasøket:
+
+Resultat:
+Returner alle mlc
+Fjern alle false terms
+Behold de mlc der lemma er true
+Behold de mlc der det er minst to true
+Behold de mlc som har valid sami
+
+Form hver mlc om til
+
+{
+    lemma: lemma,
+    language: language,
+    languages: språkene fra mlc,
+    dict: dict fra mlc
+}
+
+Første trinn:
+Kjør alle mlc og lag dem til siste formatet
+
+Neste, filtrer mlc, så er vi i mål …
+
+Issues:
+* Viser smn->sme, men har ikke sme term …
+* Fiks visning av collections
+* Vis termwiki-kilde som artikkelnavn
+* Hoppe over kategori?*
+* Samiske bokstaver som js-widget
+* Pagination av oppslagsord
+* Sortering av oppslagsord
+* Søk i søkefelt: søkeord som start/midt/slutt
+
+* Dump schema
+* Sett react-relay
