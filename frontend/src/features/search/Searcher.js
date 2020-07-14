@@ -14,8 +14,14 @@ import { Query } from '@apollo/react-components';
 
 const GET_LEMMAS = gql`
   query AllLemmas($inputValue: String!) {
-    lemmaList (search: $inputValue) {
-      lemma
+    lemmaList (first:10, search: $inputValue) {
+      edges {
+        node {
+          lemma
+          pos
+          language
+        }
+      }
     }
   }
 `;
@@ -37,9 +43,7 @@ const SearchRenderer = ({
       if (error) return <p>Error {error.message}</p>;
       if (!data) return <p>Not found</p>;
 
-      const lemmas = [...new Set(data.lemmaList.map(item => item.lemma))];
-      const lemmaList = lemmas.map(item => { return {lemma: item}; });
-
+      const lemmaList = data.lemmaList.edges.map(edge => edge.node);
       return (
         <div>
           {lemmaList.map((item, index) => (
@@ -52,7 +56,7 @@ const SearchRenderer = ({
                 isSelected: selectedItem === item.lemma
               })}
           >
-              {item.lemma}
+              {item.lemma} {item.pos} {item.language}
             </Item>
         ))}
         </div>
