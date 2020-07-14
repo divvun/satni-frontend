@@ -2,9 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import Examples from './Examples'
-import LemmaGroup from './LemmaGroup';
-import Source from './Source'
+import Examples from './Examples';
+import Source from './Source';
 import Stem from './Stem';
 
 const useStyles = makeStyles(theme => ({
@@ -15,7 +14,7 @@ const useStyles = makeStyles(theme => ({
 
 const DictArticle = ({dictGroup}) => {
   const classes = useStyles();
-  const {dict, from, to} = dictGroup
+  const {dict, from, to} = dictGroup;
   return (
     <>
       {to.translationGroups.map((translationGroup, i) => {
