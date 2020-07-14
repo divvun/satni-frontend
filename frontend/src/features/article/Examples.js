@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 
 import Example from './Example';
 
@@ -15,7 +14,7 @@ const Examples = ({examples}) => {
   const classes = useStyles();
 
   return (
-    <Grid container xs={12}>
+    <Grid container item xs={12}>
       {examples.map((example, i) => (
         <Example key={i} example={example} />)
       )}
