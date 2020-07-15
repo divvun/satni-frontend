@@ -10,7 +10,7 @@ import {
   XIcon
 } from 'components';
 import gql from 'graphql-tag';
-import { Query } from '@apollo/react-components';
+import { useQuery } from '@apollo/react-hooks';
 
 const GET_LEMMAS = gql`
   query AllLemmas($inputValue: String!) {
@@ -31,39 +31,34 @@ const SearchRenderer = ({
   selectedItem,
   highlightedIndex,
   getItemProps
-}) => (
-  <Query
-    query={GET_LEMMAS}
-    variables={{
-      inputValue
-    }}
-  >
-    {({ loading, error, data }) => {
-      if (loading) return <p>Loading...</p>;
-      if (error) return <p>Error {error.message}</p>;
-      if (!data) return <p>Not found</p>;
+}) => {
+  const { loading, error, data } = useQuery(
+    GET_LEMMAS,
+    {variables: {inputValue}});
 
-      const lemmaList = data.lemmaList.edges.map(edge => edge.node);
-      return (
-        <div>
-          {lemmaList.map((item, index) => (
-            <Item
-              {...getItemProps({
-                key: index,
-                item,
-                index,
-                isActive: highlightedIndex === index,
-                isSelected: selectedItem === item.lemma
-              })}
-          >
-              {item.lemma} {item.pos} {item.language}
-            </Item>
-        ))}
-        </div>
-      );
-    }}
-  </Query>
-);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error {error.message}</p>;
+  if (!data) return <p>Not found</p>;
+
+  const lemmaList = data.lemmaList.edges.map(edge => edge.node);
+  return (
+    <div>
+      {lemmaList.map((item, index) => (
+        <Item
+          {...getItemProps({
+            key: index,
+            item,
+            index,
+            isActive: highlightedIndex === index,
+            isSelected: selectedItem === item.lemma
+          })}
+        >
+          {item.lemma} {item.pos} {item.language}
+        </Item>
+      ))}
+    </div>
+  );
+};
 
 const Searcher = ({
   onInputChange
