@@ -85,15 +85,22 @@ def make_m():
     for x, (title, concept) in enumerate(dumphandler.concepts):
         if concept.has_sanctioned_sami():
             m_collections = [
-                Collection(name=m_collection) for m_collection in concept.collections
+                Collection(name=m_collection)
+                for m_collection in concept.collections
             ]
-            m = MultiLingualConcept(name=f'{title}', concepts=make_c(concept),
-                                    collections=m_collections)
+            m = MultiLingualConcept(
+                name=f'{title}',
+                concepts=make_c(concept),
+                collections=m_collections)
             m.save()
 
 
 def make_c(concept):
-    return [make_concept(lang, concept) for lang in concept.languages()]
+    return [
+        make_concept(lang, concept) for lang in concept.languages()
+        if same_lang_sanctioned_expressions(
+            lang, concept.related_expressions)
+    ]
 
 
 # Dict import below here
