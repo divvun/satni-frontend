@@ -9,6 +9,13 @@ import {
   ArrowIcon,
   XIcon
 } from 'components';
+
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Popper from '@material-ui/core/Popper';
+import Paper from '@material-ui/core/Paper';
+import MenuItem from '@material-ui/core/MenuItem';
+
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 
@@ -25,6 +32,47 @@ const GET_LEMMAS = gql`
     }
   }
 `;
+
+function renderInput (inputProps) {
+  const { InputProps, classes, ref, ...other } = inputProps;
+
+  return (
+    <TextField
+      InputProps={{
+        inputRef: ref,
+        classes: {
+          root: classes.inputRoot,
+          input: classes.inputInput
+        },
+        ...InputProps
+      }}
+      {...other}
+      variant='outlined'
+      size='small'
+      autoFocus
+    />
+  );
+}
+
+function renderSuggestion (suggestionProps) {
+  const { suggestion, index, itemProps, highlightedIndex, selectedItem } = suggestionProps;
+  const isHighlighted = highlightedIndex === index;
+  const isSelected = (selectedItem || '').indexOf(suggestion.label) > -1;
+
+  return (
+    <MenuItem
+      {...itemProps}
+      key={suggestion.label}
+      selected={isHighlighted}
+      component='div'
+      style={{
+        fontWeight: isSelected ? 500 : 400
+      }}
+    >
+      {suggestion.label}
+    </MenuItem>
+  );
+}
 
 const SearchRenderer = ({
   inputValue,
@@ -44,7 +92,7 @@ const SearchRenderer = ({
   return (
     <div>
       {lemmaList.map((item, index) => (
-        <Item
+        <MenuItem
           {...getItemProps({
             key: index,
             item,
@@ -54,16 +102,48 @@ const SearchRenderer = ({
           })}
         >
           {item.lemma} {item.pos} {item.language}
-        </Item>
+        </MenuItem>
       ))}
     </div>
   );
 };
 
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+    height: 250
+  },
+  container: {
+    flexGrow: 1,
+    position: 'relative'
+  },
+  paper: {
+    position: 'absolute',
+    zIndex: 1,
+    marginTop: theme.spacing(1),
+    left: 0,
+    right: 0
+  },
+  chip: {
+    margin: theme.spacing(0.5, 0.25)
+  },
+  inputRoot: {
+    flexWrap: 'wrap'
+  },
+  inputInput: {
+    width: 'auto',
+    flexGrow: 1
+  },
+  divider: {
+    height: theme.spacing(2)
+  }
+}));
+
 const Searcher = ({
   onInputChange
 }) => {
   const [articlePath, setArticlePath] = useState('');
+  const classes = useStyles();
 
   const handleChange = (selectedItem) => {
     selectedItem
@@ -77,49 +157,38 @@ const Searcher = ({
       itemToString={item => (item ? item.lemma : '')}>
       {({
         getInputProps,
-        getToggleButtonProps,
         getItemProps,
-        isOpen,
-        toggleMenu,
-        clearSelection,
-        selectedItem,
+        getLabelProps,
+        getMenuProps,
+        highlightedIndex,
         inputValue,
-        highlightedIndex
+        isOpen,
+        selectedItem
       }) => {
+        const { onBlur, onFocus, ...inputProps } = getInputProps({
+          placeholder: 'Search for a word'
+        });
         return (
-          <div className={css({ margin: 'auto' })}>
-            <div
-              className={css({
-                paddingRight: '1.75em',
-                position: 'relative'
-              })}>
-              <Input
-                {...getInputProps({
-                  placeholder: 'Search for a word',
-                  isOpen,
-                  autoFocus: true
-                }
-              )}
-            />
-              {selectedItem
-              ? <ControllerButton
-                css={{ paddingTop: 4 }}
-                onClick={clearSelection}
-                aria-label='clear selection'
-                >
-                <XIcon />
-              </ControllerButton>
-              : <ControllerButton {...getToggleButtonProps()}>
-                <ArrowIcon isOpen={isOpen} />
-              </ControllerButton>}
-            </div>
-            {isOpen ?
-              <SearchRenderer {...{
-                inputValue,
-                selectedItem,
-                highlightedIndex,
-                getItemProps
-              }} /> :
+          <div>
+            {renderInput({
+              fullWidth: true,
+              classes,
+              InputLabelProps: getLabelProps({ shrink: true }),
+              InputProps: { onBlur, onFocus },
+              inputProps
+            })}
+
+            {isOpen ? (
+              <Paper
+                className={classes.paper}>
+                <SearchRenderer {...{
+                  inputValue,
+                  selectedItem,
+                  highlightedIndex,
+                  getItemProps
+                }} />
+              </Paper>
+            ) :
               null
             }
             {articlePath ?
