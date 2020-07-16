@@ -17,16 +17,24 @@ const client = new ApolloClient({
   resolvers,
   typeDefs
 });
+
+// cache.writeData({
+//   data: {
+//     wantedLangs: [
+//       'sma', 'sme', 'smj', 'smn', 'sms',
+//       'fin', 'nob', 'swe', 'nno',
+//       'eng', 'lat'
+//     ]
+//   }
+// });
+
 cache.writeData({
   data: {
     wantedLangs: [
-      'sma', 'sme', 'smj', 'smn', 'sms',
-      'fin', 'nob', 'swe', 'nno',
-      'eng', 'lat'
+      'sma', 'sme', 'nob'
     ]
   }
 });
-
 // Add this after Provider
 // <ErrorBoundary>
 // </ErrorBoundary>
