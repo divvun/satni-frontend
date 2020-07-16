@@ -19,6 +19,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 
+import { GET_WANTED_LANGS } from 'resolvers';
+
 const GET_LEMMAS = gql`
   query AllLemmas($inputValue: String!, $wantedLangs: [String]! ) {
     stemList (first:10, search: $inputValue, wanted: $wantedLangs) {
@@ -78,14 +80,15 @@ const SearchRenderer = ({
   inputValue,
   selectedItem,
   highlightedIndex,
-  getItemProps
+  getItemProps,
+  wantedLangs
 }) => {
   const { loading, error, data } = useQuery(
     GET_LEMMAS,
     {
       variables: {
         inputValue,
-        wantedLangs: ['nob', 'sme']
+        wantedLangs
       }
     });
 
@@ -156,6 +159,8 @@ const Searcher = ({
     : setArticlePath(`/`);
   };
 
+  const { data } = useQuery(GET_WANTED_LANGS);
+
   return (
     <Downshift
       onSelect={handleChange}
@@ -191,7 +196,7 @@ const Searcher = ({
                   selectedItem,
                   highlightedIndex,
                   getItemProps
-                }} />
+                }} wantedLangs={data.wantedLangs} />
               </Paper>
             ) :
               null
