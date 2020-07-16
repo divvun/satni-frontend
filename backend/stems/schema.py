@@ -11,6 +11,6 @@ class Query(graphene.ObjectType):
 
     def resolve_stem_list(self, info, search=None, **kwargs):
         if search:
-            return Stem.objects.filter(stem__istartswith=search)
+            return Stem.objects.filter(stem__istartswith=search).order_by('stem')
 
-        return Stem.objects.all()
+        return Stem.objects.all().order_by('stem')
