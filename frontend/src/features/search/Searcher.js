@@ -21,12 +21,12 @@ import { useQuery } from '@apollo/react-hooks';
 
 const GET_LEMMAS = gql`
   query AllLemmas($inputValue: String!) {
-    lemmaList (first:10, search: $inputValue) {
+    stemList (first:10, search: $inputValue) {
       edges {
         node {
-          lemma
-          pos
-          language
+          stem
+          srclangs
+          targetlangs
         }
       }
     }
@@ -57,19 +57,19 @@ function renderInput (inputProps) {
 function renderSuggestion (suggestionProps) {
   const { suggestion, index, itemProps, highlightedIndex, selectedItem } = suggestionProps;
   const isHighlighted = highlightedIndex === index;
-  const isSelected = (selectedItem || '').indexOf(suggestion.label) > -1;
+  const isSelected = (selectedItem || '').indexOf(suggestion.stem) > -1;
 
   return (
     <MenuItem
       {...itemProps}
-      key={suggestion.label}
+      key={suggestion.stem}
       selected={isHighlighted}
       component='div'
       style={{
         fontWeight: isSelected ? 500 : 400
       }}
     >
-      {suggestion.label}
+      {suggestion.stem}
     </MenuItem>
   );
 }
@@ -88,20 +88,20 @@ const SearchRenderer = ({
   if (error) return <p>Error {error.message}</p>;
   if (!data) return <p>Not found</p>;
 
-  const lemmaList = data.lemmaList.edges.map(edge => edge.node);
+  const stemList = data.stemList.edges.map(edge => edge.node);
   return (
     <div>
-      {lemmaList.map((item, index) => (
+      {stemList.map((item, index) => (
         <MenuItem
           {...getItemProps({
             key: index,
             item,
             index,
             isActive: highlightedIndex === index,
-            isSelected: selectedItem === item.lemma
+            isSelected: selectedItem === item.stem
           })}
         >
-          {item.lemma} {item.pos} {item.language}
+          {item.stem}
         </MenuItem>
       ))}
     </div>
@@ -147,14 +147,14 @@ const Searcher = ({
 
   const handleChange = (selectedItem) => {
     selectedItem
-    ? setArticlePath(`/article/${selectedItem.lemma}`)
+    ? setArticlePath(`/article/${selectedItem.stem}`)
     : setArticlePath(`/`);
   };
 
   return (
     <Downshift
       onSelect={handleChange}
-      itemToString={item => (item ? item.lemma : '')}>
+      itemToString={item => (item ? item.stem : '')}>
       {({
         getInputProps,
         getItemProps,

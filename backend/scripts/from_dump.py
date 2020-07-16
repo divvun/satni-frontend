@@ -7,10 +7,12 @@ from lxml import etree
 
 from dicts.models import DictEntry, ExampleGroup, Restriction, TranslationGroup
 from lemmas.models import Lemma
+from stems.models import Stem
 from terms.models import Collection, Concept, MultiLingualConcept, Term
 from termwikiimporter import bot
 
 LEMMAS = {}
+STEMS = {}
 langs = {
     'en': 'eng',
     'fi': 'fin',
@@ -95,12 +97,37 @@ def make_m():
             m.save()
 
 
+def extract_term_stems(concept, valid_langs):
+    for lang in valid_langs:
+        for expression in same_lang_sanctioned_expressions(
+                lang, concept.related_expressions):
+            if not STEMS.get(expression['expression']):
+                if expression['expression'] == 'arpa':
+                    print('term: made arpa')
+                STEMS[expression['expression']] = {}
+                STEMS[expression['expression']]['fromlangs'] = set()
+                STEMS[expression['expression']]['tolangs'] = set()
+
+            STEMS[expression['expression']]['fromlangs'].add(langs[lang])
+            for lang2 in valid_langs:
+                if lang2 != lang:
+                    STEMS[expression['expression']]['tolangs'].add(
+                        langs[lang2])
+            if expression['expression'] == 'arpa':
+                print(expression['expression'])
+                print(STEMS[expression['expression']]['fromlangs'])
+                print(STEMS[expression['expression']]['tolangs'])
+
+
 def make_c(concept):
-    return [
-        make_concept(lang, concept) for lang in concept.languages()
-        if same_lang_sanctioned_expressions(
-            lang, concept.related_expressions)
-    ]
+    valid_langs = {
+        lang
+        for lang in concept.languages()
+        if same_lang_sanctioned_expressions(lang, concept.related_expressions)
+    }
+
+    extract_term_stems(concept, valid_langs)
+    return [make_concept(lang, concept) for lang in valid_langs]
 
 
 # Dict import below here
@@ -180,6 +207,19 @@ def make_entries(dictxml, src, target):
             lookupLemma=make_dict_lemma(entry.find('.//l'), src),
             translationGroups=make_translation_groups(
                 entry.xpath('.//tg'), target))
+
+        if not STEMS.get(d.lookupLemma.lemma):
+            if d.lookupLemma.lemma == 'arpa':
+                print('dict: made arpa')
+            STEMS[d.lookupLemma.lemma] = {}
+            STEMS[d.lookupLemma.lemma]['fromlangs'] = set()
+            STEMS[d.lookupLemma.lemma]['tolangs'] = set()
+
+        if d.lookupLemma.lemma == 'arpa':
+            print(d.lookupLemma.lemma, src, target)
+        STEMS[d.lookupLemma.lemma]['fromlangs'].add(src)
+        STEMS[d.lookupLemma.lemma]['tolangs'].add(target)
+
         d.save()
 
 
@@ -190,7 +230,7 @@ def import_dict(pair):
         if not xml_file.endswith('meta.xml') and 'Der_' not in xml_file:
             # TODO: handle Der_ files
             try:
-                print(f'\t{xml_file}')
+                print(f'\t{os.path.basename(xml_file)}')
                 parser = etree.XMLParser(
                     remove_comments=True, dtd_validation=True)
                 dictxml = etree.parse(xml_file, parser=parser)
@@ -210,6 +250,28 @@ def make_dicts():
         import_dict(pair)
 
 
+def make_stems():
+    c = 0
+    c2 = 0
+    for stem in STEMS:
+        s = Stem(
+            stem=stem,
+            srclangs=list(STEMS[stem]['fromlangs']),
+            targetlangs=list(STEMS[stem]['tolangs']))
+        if stem == 'arpa':
+            print(s.stem, s.srclangs, s.targetlangs)
+        s.save()
+
+        c2 += 1
+    #     print(stem)
+    #     if len(STEMS[stem]['fromlangs']) > 1:
+    #         c += 1
+    #     print('\t', STEMS[stem]['fromlangs'])
+    #     print('\t', STEMS[stem]['tolangs'])
+    # print('more than one in tolangs:', c, c2)
+
+
 def run():
-    make_m()
     make_dicts()
+    make_m()
+    make_stems()
