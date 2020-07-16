@@ -20,8 +20,8 @@ import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 
 const GET_LEMMAS = gql`
-  query AllLemmas($inputValue: String!) {
-    stemList (first:10, search: $inputValue) {
+  query AllLemmas($inputValue: String!, $wantedLangs: [String]! ) {
+    stemList (first:10, search: $inputValue, wanted: $wantedLangs) {
       edges {
         node {
           stem
@@ -82,7 +82,12 @@ const SearchRenderer = ({
 }) => {
   const { loading, error, data } = useQuery(
     GET_LEMMAS,
-    {variables: {inputValue}});
+    {
+      variables: {
+        inputValue,
+        wantedLangs: ['nob', 'sme']
+      }
+    });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error {error.message}</p>;
