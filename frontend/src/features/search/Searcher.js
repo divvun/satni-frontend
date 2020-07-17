@@ -18,7 +18,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
-
 import { GET_WANTED_LANGS } from 'resolvers';
 
 const GET_LEMMAS = gql`
