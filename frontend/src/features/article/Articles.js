@@ -8,10 +8,12 @@ import { Query } from '@apollo/react-components';
 import { elemmas2ConceptPairs, dictBackend2Frontend } from 'utils';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
+import { GET_WANTED_LANGS } from 'resolvers';
+import { useQuery } from '@apollo/react-hooks';
 
 const GET_ARTICLES = gql`
-  query AllArticles($lemma: String!) {
-    dictEntryList (exact: $lemma) {
+  query AllArticles($lemma: String!, $wantedLangs: [String]!) {
+    dictEntryList (exact: $lemma, wanted: $wantedLangs) {
       id
       srcLang
       targetLang
@@ -75,12 +77,14 @@ const query2articlelist = (lemma, data) => {
 
 const Articles = () => {
   const { lemma } = useParams();
+  const { data } = useQuery(GET_WANTED_LANGS);
 
   return (
     <Query
       query={GET_ARTICLES}
       variables={{
-        lemma
+        lemma,
+        wantedLangs: data.wantedLangs
       }}
     >
       {({ loading, error, data }) => {
