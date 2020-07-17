@@ -12,7 +12,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Searcher from 'features/search/Searcher';
 import Articles from 'features/article/Articles';
-import LemmaDetails from '../components/LemmaDetails.js';
+import LemmaDetails from 'components/LemmaDetails.js';
+import LangChooser from 'features/wantedlangs/LangChooser';
 
 const styles = theme => ({
   '@global': {
@@ -94,6 +95,7 @@ const AsyncApp = ({classes, match}) => (
     <main className={classes.layout}>
       <Router>
         <div className={classes.heroContent}>
+          <LangChooser />
           <Searcher />
           <Switch>
             <Route path='/' exact component={Home} />
