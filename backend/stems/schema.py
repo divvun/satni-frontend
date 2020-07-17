@@ -14,7 +14,7 @@ class Query(graphene.ObjectType):
         wanted=graphene.List(graphene.String))
 
     def resolve_stem_list(self, info, **kwargs):
-        print('kwargs:', kwargs)
+        print('stem kwargs:', kwargs)
 
         if kwargs['wanted']:
             wanted_langs = kwargs['wanted']
