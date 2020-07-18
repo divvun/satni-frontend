@@ -22,14 +22,30 @@ Kjør alle mlc og lag dem til siste formatet
 Neste, filtrer mlc, så er vi i mål …
 
 Issues:
+{{{
 * Viser smn->sme, men har ikke sme term …
+* Dette skjer fordi importen har tatt vare på konseptet, selv om det ikke er
+gyldige termer.
+}}} Fikset 20200715
+{{{
+OppslagsstammeModel
+oppslagsstamme: string()
+sine egne språk: set()
+språkene det er oversatt til: set()
+* Lage en stem-app, søke etter det istedetfor lemma i søkefeltet
+}}} fikset 20200716
+{{{
+* Sortering av oppslagsord
+}}} fikset 20200716
+{{{
+Filtrering:
+Ved søk: slipp Stem-entries igjennom om både srclangs og targetlangs har en av de ønskede språkene. Helst på tjenersiden.
+Ved artikkelvisning: vis språkpar som har både src og target i blant de ønskede språkene.
+}}} Begge skjer på tjenersiden. Må repareres mer, men fungerer nogenlunde 20200718
+* Pagination av oppslagsord (hm)
+* Søk i søkefelt: søkeord som start/midt/slutt
+* Samiske bokstaver som js-widget
 * Fiks visning av collections
 * Vis termwiki-kilde som artikkelnavn
 * Hoppe over kategori?*
-* Samiske bokstaver som js-widget
-* Pagination av oppslagsord
-* Sortering av oppslagsord
-* Søk i søkefelt: søkeord som start/midt/slutt
-
-* Dump schema
-* Sett react-relay
+* gueliebarkije viser ikke språk i advanced-linken
