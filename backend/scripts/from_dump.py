@@ -8,7 +8,7 @@ from lxml import etree
 from dicts.models import DictEntry, ExampleGroup, Restriction, TranslationGroup
 from lemmas.models import Lemma
 from stems.models import Stem
-from terms.models import Collection, Concept, MultiLingualConcept, Term
+from terms.models import Concept, Term
 from termwikiimporter import bot
 
 LEMMAS = {}
@@ -54,23 +54,16 @@ def make_terms(lang, concept):
         yield term
 
 
-def make_concept(lang, concept):
-    def make_c(terms):
-        for concept_info in concept.data['concept_infos']:
-            if lang == concept_info['language']:
-                c = Concept(
-                    language=langs[lang],
-                    definition=concept_info.get('definition'),
-                    explanation=concept_info.get('explanation'),
-                    terms=terms)
-                return c
-        else:
-            c = Concept(language=langs[lang], terms=terms)
-            return c
+def get_definition(lang, concept):
+    for concept_info in concept.data['concept_infos']:
+        if lang == concept_info['language']:
+            return concept_info.get('definition')
 
-    c = make_c([term for term in make_terms(lang, concept)])
 
-    return c
+def get_explanation(lang, concept):
+    for concept_info in concept.data['concept_infos']:
+        if lang == concept_info['language']:
+            return concept_info.get('explanation')
 
 
 def same_lang_sanctioned_expressions(lang, expressions):
@@ -80,21 +73,34 @@ def same_lang_sanctioned_expressions(lang, expressions):
     ]
 
 
+def get_valid_langs(concept):
+    return {
+        lang
+        for lang in concept.languages()
+        if same_lang_sanctioned_expressions(lang, concept.related_expressions)
+    }
+
+
 def make_m():
     print('Importing TermWiki content')
     dumphandler = bot.DumpHandler()
-
+    pairs = {}
     for x, (title, concept) in enumerate(dumphandler.concepts):
+        # print(x, title)
         if concept.has_sanctioned_sami():
-            m_collections = [
-                Collection(name=m_collection)
-                for m_collection in concept.collections
-            ]
-            m = MultiLingualConcept(
-                name=f'{title}',
-                concepts=make_c(concept),
-                collections=m_collections)
-            m.save()
+            valid_langs = get_valid_langs(concept)
+            extract_term_stems(concept, valid_langs)
+            for lang in valid_langs:
+                c = Concept(
+                    name=f'{title}',
+                    definition=get_definition(lang, concept),
+                    explanation=get_explanation(lang, concept),
+                    terms=make_terms(lang, concept),
+                    collections=[
+                        collection for collection in concept.collections
+                    ],
+                )
+                c.save()
 
 
 def extract_term_stems(concept, valid_langs):
@@ -117,17 +123,6 @@ def extract_term_stems(concept, valid_langs):
                 print(expression['expression'])
                 print(STEMS[expression['expression']]['fromlangs'])
                 print(STEMS[expression['expression']]['tolangs'])
-
-
-def make_c(concept):
-    valid_langs = {
-        lang
-        for lang in concept.languages()
-        if same_lang_sanctioned_expressions(lang, concept.related_expressions)
-    }
-
-    extract_term_stems(concept, valid_langs)
-    return [make_concept(lang, concept) for lang in valid_langs]
 
 
 # Dict import below here

@@ -41,27 +41,19 @@ const GET_ARTICLES = gql`
         }
       }
     }
-    multilingualconceptList(exact: $lemma) {
-      id
-      name
-      collections {
-        name
-      }
-      concepts {
-        definition
-        explanation
-        language
-        terms {
-          note
-          sanctioned
-          source
-          status
-          expression {
-            id
-            lemma
-            pos
-            language
-          }
+    conceptList(exact: $lemma, wanted: $wantedLangs) {
+    	name
+      collections
+      definition
+      explanation
+      terms {
+        note
+        source
+        status
+        expression {
+          lemma
+          language
+          pos
         }
       }
     }
@@ -69,7 +61,7 @@ const GET_ARTICLES = gql`
 `;
 // return <div>{JSON.stringify(data.elemmas)}</div>;
 const query2articlelist = (lemma, data) => {
-  const termList = elemmas2ConceptPairs(lemma, data.multilingualconceptList);
+  const termList = elemmas2ConceptPairs(lemma, data.conceptList);
   const dictList = data.dictEntryList.map(dictBackend2Frontend);
 
   return dictList.concat(termList);

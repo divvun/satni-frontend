@@ -19,4 +19,4 @@ class Mutation(lemmas.schema.Mutations, graphene.ObjectType):
 schema = graphene.Schema(
     query=Query,
     mutation=Mutation,
-    types=[stems.types.StemType, terms.types.MultiLingualConceptType])
+    types=[stems.types.StemType, terms.types.ConceptType])

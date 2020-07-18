@@ -1,16 +1,37 @@
 import graphene
 from graphene_mongo.fields import MongoengineConnectionField
+from mongoengine.queryset.visitor import Q
 
 from lemmas.models import Lemma
 
-from .models import Concept, MultiLingualConcept, Term
-from .types import ConceptType, MultiLingualConceptType, TermType
+from .models import Concept
+from .types import ConceptType
 
 
 class Query(graphene.ObjectType):
-    multilingualconcept_list = graphene.List(
-        MultiLingualConceptType, exact=graphene.String())
+    concept_list = graphene.List(
+        ConceptType,
+        exact=graphene.String(),
+        wanted=graphene.List(graphene.String))
 
-    def resolve_multilingualconcept_list(self, info, exact=None, **kwargs):
-        return MultiLingualConcept.objects(
-            concepts__terms__expression__in=Lemma.objects(lemma=exact))
+    def resolve_concept_list(self, info, exact, wanted, **kwargs):
+        print('namelist', exact)
+        names = [
+            concept.name for concept in Concept.objects(
+                terms__expression__in=Lemma.objects(lemma=exact))
+        ]
+
+        if not names:
+            return []
+
+        name_queries = [Q(name=name) for name in names]
+        name_filter = name_queries.pop()
+        for item in name_queries:
+            name_filter |= item
+
+        named = Concept.objects(name_filter)
+
+        return [
+            name for name in named
+            if name.terms[0].expression.language in wanted
+        ]
