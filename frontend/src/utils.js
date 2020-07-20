@@ -138,7 +138,7 @@ export const backendTranslationGroup2frontendTranslationGroup = (translationGrou
 
 export const dictBackend2Frontend = (backendDictArticle) => {
   return {
-    dict: `${backendDictArticle.srcLang}${backendDictArticle.targetLang}`,
+    dict: backendDictArticle.dictName,
     from: {
       language: backendDictArticle.srcLang,
       lookupLemmas: backendDictArticle.lookupLemmas.edges.map(edge => edge.node)
