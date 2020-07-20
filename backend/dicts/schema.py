@@ -19,7 +19,7 @@ class Query(graphene.ObjectType):
             target_filter = Q(targetLang__in=kwargs['wanted'])
             source_filter = Q(srcLang__in=kwargs['wanted'])
             return DictEntry.objects(
-                Q(lookupLemma__in=Lemma.objects(lemma=exact)) &
+                Q(lookupLemmas__in=Lemma.objects(lemma=exact)) &
                 target_filter &
                 source_filter)
 

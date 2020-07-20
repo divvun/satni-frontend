@@ -27,5 +27,5 @@ class DictEntry(Document):
     ID = ObjectIdField()
     srcLang = StringField()
     targetLang = StringField()
-    lookupLemma = ReferenceField(Lemma)
+    lookupLemmas = ListField(ReferenceField(Lemma))
     translationGroups = ListField(EmbeddedDocumentField(TranslationGroup))

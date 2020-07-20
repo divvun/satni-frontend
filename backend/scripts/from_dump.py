@@ -154,7 +154,7 @@ def make_dict_lemma(element, lang):
     return LEMMAS[lemma_key]
 
 
-def make_translation_lemmas(translations, target):
+def make_lemmas(translations, target):
     return [
         make_dict_lemma(translation, target) for translation in translations
         if translation.text is not None
@@ -180,7 +180,7 @@ def make_examples(examples):
 
 def make_translation_group(translation_group, target):
     return TranslationGroup(
-        translationLemmas=make_translation_lemmas(
+        translationLemmas=make_lemmas(
             translation_group.xpath('./t'), target),
         restriction=make_restriction(translation_group.find('./re')),
         exampleGroups=make_examples(translation_group.xpath('./xg')))
@@ -199,21 +199,23 @@ def make_entries(dictxml, src, target):
         d = DictEntry(
             srcLang=src,
             targetLang=target,
-            lookupLemma=make_dict_lemma(entry.find('.//l'), src),
+            lookupLemmas=make_lemmas(
+                entry.xpath('.//l'), src),
             translationGroups=make_translation_groups(
                 entry.xpath('.//tg'), target))
 
-        if not STEMS.get(d.lookupLemma.lemma):
-            if d.lookupLemma.lemma == 'arpa':
-                print('dict: made arpa')
-            STEMS[d.lookupLemma.lemma] = {}
-            STEMS[d.lookupLemma.lemma]['fromlangs'] = set()
-            STEMS[d.lookupLemma.lemma]['tolangs'] = set()
+        for lemma in d.lookupLemmas:
+            if not STEMS.get(lemma):
+                if lemma == 'arpa':
+                    print('dict: made arpa')
+                STEMS[lemma] = {}
+                STEMS[lemma]['fromlangs'] = set()
+                STEMS[lemma]['tolangs'] = set()
 
-        if d.lookupLemma.lemma == 'arpa':
-            print(d.lookupLemma.lemma, src, target)
-        STEMS[d.lookupLemma.lemma]['fromlangs'].add(src)
-        STEMS[d.lookupLemma.lemma]['tolangs'].add(target)
+            if lemma == 'arpa':
+                print(lemma, src, target)
+            STEMS[lemma]['fromlangs'].add(src)
+            STEMS[lemma]['tolangs'].add(target)
 
         d.save()
 
