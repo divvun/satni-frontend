@@ -11,60 +11,57 @@ import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
 import { useQuery } from '@apollo/react-hooks';
 
-const GET_ARTICLES = gql`
-  query AllArticles($lemma: String!, $wantedLangs: [String]!) {
-    dictEntryList (exact: $lemma, wanted: $wantedLangs) {
-      id
-      srcLang
-      targetLang
-      lookupLemmas {
-        edges {
-          node {
-            lemma
-            language
-            pos
-          }
-        }
-      }
-      translationGroups {
-        translationLemmas {
-          edges {
-            node {
-              lemma
-              language
-              pos
-            }
-          }
-        }
-        restriction {
-          restriction
-          attributes
-        }
-        exampleGroups {
-          example
-          translation
-        }
+const dictQuery = `dictEntryList (exact: $lemma, wanted: $wantedLangs, wantedDicts: $wantedDicts) {
+  dictName
+  lookupLemmas {
+    edges {
+      node {
+        lemma
+        language
+        pos
       }
     }
-    conceptList(exact: $lemma, wanted: $wantedLangs) {
-    	name
-      collections
-      definition
-      explanation
-      terms {
-        note
-        source
-        status
-        expression {
+  }
+  translationGroups {
+    translationLemmas {
+      edges {
+        node {
           lemma
           language
           pos
         }
       }
     }
+    restriction {
+      restriction
+      attributes
+    }
+    exampleGroups {
+      example
+      translation
+    }
   }
+}
 `;
-// return <div>{JSON.stringify(data.elemmas)}</div>;
+
+const termQuery = `conceptList(exact: $lemma, wanted: $wantedLangs) {
+  name
+  collections
+  definition
+  explanation
+  terms {
+    note
+    source
+    status
+    expression {
+      lemma
+      language
+      pos
+    }
+  }
+}
+`;
+
 const query2articlelist = (lemma, data) => {
   const termList = elemmas2ConceptPairs(lemma, data.conceptList);
   const dictList = data.dictEntryList.map(dictBackend2Frontend);
@@ -74,14 +71,28 @@ const query2articlelist = (lemma, data) => {
 
 const Articles = () => {
   const { lemma } = useParams();
-  const [cookies] = useCookies(['wantedLangs']);
+  const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
+
+  const GET_ARTICLES = cookies.wantedDicts.includes('termwiki') ?
+    gql`
+      query AllArticles($lemma: String!, $wantedLangs: [String]!, $wantedDicts: [String]!) {
+        ${dictQuery}
+        ${termQuery}
+      }
+    ` :
+    gql`
+      query AllArticles($lemma: String!, $wantedLangs: [String]!, $wantedDicts: [String]!) {
+        ${dictQuery}
+      }
+    `;
 
   return (
     <Query
       query={GET_ARTICLES}
       variables={{
         lemma,
-        wantedLangs: cookies.wantedLangs
+        wantedLangs: cookies.wantedLangs,
+        wantedDicts: cookies.wantedDicts
       }}
     >
       {({ loading, error, data }) => {
@@ -89,7 +100,11 @@ const Articles = () => {
         if (error) return <p>Error {error.message}</p>;
         if (!data) return <p>Not found</p>;
 
-        return <PresentArticles articles={query2articlelist(lemma, data)} />;
+        if (cookies.wantedDicts.includes('termwiki')) {
+          return <PresentArticles articles={query2articlelist(lemma, data)} />;
+        } else {
+          return <PresentArticles articles={data.dictEntryList.map(dictBackend2Frontend)} />;
+        }
       }}
     </Query>
   );

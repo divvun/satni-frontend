@@ -20,8 +20,8 @@ import { useQuery } from '@apollo/react-hooks';
 import { useCookies } from 'react-cookie';
 
 const GET_LEMMAS = gql`
-  query AllLemmas($inputValue: String!, $wantedLangs: [String]! ) {
-    stemList (first:10, search: $inputValue, wanted: $wantedLangs) {
+  query AllLemmas($inputValue: String!, $wantedLangs: [String]!, $wantedDicts: [String]! ) {
+    stemList (first:10, search: $inputValue, wanted: $wantedLangs, wantedDicts: $wantedDicts) {
       edges {
         node {
           stem
@@ -79,14 +79,16 @@ const SearchRenderer = ({
   selectedItem,
   highlightedIndex,
   getItemProps,
-  wantedLangs
+  wantedLangs,
+  wantedDicts
 }) => {
   const { loading, error, data } = useQuery(
     GET_LEMMAS,
     {
       variables: {
         inputValue,
-        wantedLangs
+        wantedLangs,
+        wantedDicts
       }
     });
 
@@ -150,7 +152,7 @@ const Searcher = ({
 }) => {
   const [articlePath, setArticlePath] = useState('');
   const classes = useStyles();
-  const [cookies] = useCookies(['wantedLangs']);
+  const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
 
   const handleChange = (selectedItem) => {
     selectedItem
@@ -193,7 +195,10 @@ const Searcher = ({
                   selectedItem,
                   highlightedIndex,
                   getItemProps
-                }} wantedLangs={cookies.wantedLangs} />
+                }}
+                  wantedLangs={cookies.wantedLangs}
+                  wantedDicts={cookies.wantedDicts}
+              />
               </Paper>
             ) :
               null
