@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import {
   useParams
 } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 
 import gql from 'graphql-tag';
 import { Query } from '@apollo/react-components';
 import { elemmas2ConceptPairs, dictBackend2Frontend } from 'utils';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
-import { GET_WANTED_LANGS } from 'resolvers';
 import { useQuery } from '@apollo/react-hooks';
 
 const GET_ARTICLES = gql`
@@ -74,14 +74,14 @@ const query2articlelist = (lemma, data) => {
 
 const Articles = () => {
   const { lemma } = useParams();
-  const { data } = useQuery(GET_WANTED_LANGS);
+  const [cookies] = useCookies(['wantedLangs']);
 
   return (
     <Query
       query={GET_ARTICLES}
       variables={{
         lemma,
-        wantedLangs: data.wantedLangs
+        wantedLangs: cookies.wantedLangs
       }}
     >
       {({ loading, error, data }) => {

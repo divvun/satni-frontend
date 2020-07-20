@@ -15,10 +15,9 @@ import TextField from '@material-ui/core/TextField';
 import Popper from '@material-ui/core/Popper';
 import Paper from '@material-ui/core/Paper';
 import MenuItem from '@material-ui/core/MenuItem';
-
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
-import { GET_WANTED_LANGS } from 'resolvers';
+import { useCookies } from 'react-cookie';
 
 const GET_LEMMAS = gql`
   query AllLemmas($inputValue: String!, $wantedLangs: [String]! ) {
@@ -151,14 +150,13 @@ const Searcher = ({
 }) => {
   const [articlePath, setArticlePath] = useState('');
   const classes = useStyles();
+  const [cookies] = useCookies(['wantedLangs']);
 
   const handleChange = (selectedItem) => {
     selectedItem
     ? setArticlePath(`/article/${selectedItem.stem}`)
     : setArticlePath(`/`);
   };
-
-  const { data } = useQuery(GET_WANTED_LANGS);
 
   return (
     <Downshift
@@ -195,7 +193,7 @@ const Searcher = ({
                   selectedItem,
                   highlightedIndex,
                   getItemProps
-                }} wantedLangs={data.wantedLangs} />
+                }} wantedLangs={cookies.wantedLangs} />
               </Paper>
             ) :
               null
