@@ -1,8 +1,7 @@
+from lemmas.models import Lemma
 from mongoengine import Document, EmbeddedDocument
 from mongoengine.fields import (BooleanField, EmbeddedDocumentField, ListField,
                                 ObjectIdField, ReferenceField, StringField)
-
-from lemmas.models import Lemma
 
 
 class ExampleGroup(EmbeddedDocument):
@@ -16,15 +15,14 @@ class Restriction(EmbeddedDocument):
 
 
 class TranslationGroup(EmbeddedDocument):
-    ID = ObjectIdField()
     translationLemmas = ListField(ReferenceField(Lemma))
     restriction = EmbeddedDocumentField(Restriction)
     exampleGroups = ListField(EmbeddedDocumentField(ExampleGroup))
 
 
 class DictEntry(Document):
-    meta = {'collection': 'giellateknodicts'}
-    ID = ObjectIdField()
+    meta = {'collection': 'dicts'}
+    dictName = StringField()
     srcLang = StringField()
     targetLang = StringField()
     lookupLemmas = ListField(ReferenceField(Lemma))

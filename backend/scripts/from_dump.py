@@ -112,7 +112,9 @@ def extract_term_stems(concept, valid_langs):
                 STEMS[expression['expression']] = {}
                 STEMS[expression['expression']]['fromlangs'] = set()
                 STEMS[expression['expression']]['tolangs'] = set()
+                STEMS[expression['expression']]['dicts'] = set()
 
+            STEMS[expression['expression']]['dicts'].add('termwiki')
             STEMS[expression['expression']]['fromlangs'].add(langs[lang])
             for lang2 in valid_langs:
                 if lang2 != lang:
@@ -188,9 +190,10 @@ def make_translation_groups(translation_groups, target):
     ]
 
 
-def make_entries(dictxml, src, target):
+def make_entries(dictxml, dictname, src, target):
     for entry in dictxml.iter('e'):
         d = DictEntry(
+            dictName=f'{dictname}{src}{target}',
             srcLang=src,
             targetLang=target,
             lookupLemmas=make_lemmas(entry.xpath('.//l'), src),
@@ -202,7 +205,9 @@ def make_entries(dictxml, src, target):
                 STEMS[lookupLemma.lemma] = {}
                 STEMS[lookupLemma.lemma]['fromlangs'] = set()
                 STEMS[lookupLemma.lemma]['tolangs'] = set()
+                STEMS[lookupLemma.lemma]['dicts'] = set()
 
+            STEMS[lookupLemma.lemma]['dicts'].add(f'{dictname}{src}{target}')
             STEMS[lookupLemma.lemma]['fromlangs'].add(src)
             STEMS[lookupLemma.lemma]['tolangs'].add(target)
 
@@ -220,7 +225,8 @@ def import_dict(pair):
                 parser = etree.XMLParser(
                     remove_comments=True, dtd_validation=True)
                 dictxml = etree.parse(xml_file, parser=parser)
-                make_entries(dictxml, src=pair[:3], target=pair[3:])
+                make_entries(
+                    dictxml, dictname='gt', src=pair[:3], target=pair[3:])
             except etree.XMLSyntaxError as error:
                 print(
                     'Syntax error in {} '
@@ -244,7 +250,7 @@ def import_sammalahti():
         print(f'\t{os.path.basename(xml_file)}')
         parser = etree.XMLParser(remove_comments=True)
         dictxml = etree.parse(xml_file, parser=parser)
-        make_entries(dictxml, src='sme', target='fin')
+        make_entries(dictxml, dictname='pk', src='sme', target='fin')
     except etree.XMLSyntaxError as error:
         print(
             'Syntax error in {} '
@@ -260,7 +266,8 @@ def make_stems():
             s = Stem(
                 stem=stem,
                 srclangs=list(STEMS[stem]['fromlangs']),
-                targetlangs=list(STEMS[stem]['tolangs']))
+                targetlangs=list(STEMS[stem]['tolangs']),
+                dicts=list(STEMS[stem]['dicts']))
             s.save()
         except ValidationError as error:
             print(error)
