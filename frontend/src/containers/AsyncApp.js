@@ -14,6 +14,7 @@ import Searcher from 'features/search/Searcher';
 import Articles from 'features/article/Articles';
 import LemmaDetails from 'components/LemmaDetails.js';
 import LangChooser from 'features/wantedlangs/LangChooser';
+import DictChooser from 'features/wantedlangs/DictChooser';
 
 const styles = theme => ({
   '@global': {
@@ -96,6 +97,7 @@ const AsyncApp = ({classes, match}) => (
       <Router>
         <div className={classes.heroContent}>
           <LangChooser />
+          <DictChooser />
           <Searcher />
           <Switch>
             <Route path='/' exact component={Home} />

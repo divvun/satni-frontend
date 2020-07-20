@@ -7,88 +7,88 @@ import Typography from '@material-ui/core/Typography';
 import { langName } from 'langThings';
 
 const SourceLink = ({from, to, lemma, source}) => {
-  if (['nobsme', 'smenob', 'finsme', 'smefin'].includes(source)) {
-    return <Link
-      href={`https://sanit.oahpa.no/detail/${from}/${to}/${lemma}.html`}
-      target='_blank'
-      rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
-  } else if (['smanob', 'nobsma'].includes(source)) {
-    return <Link
-      href={`https://baakoeh.oahpa.no/detail/${from}/${to}/${lemma}.html`}
-      target='_blank'
-      rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
-  } else if (['smnfin', 'finsmn', 'smesmn', 'smnsme'].includes(source)) {
-    return <Link
-      href={`https://saanih.oahpa.no/detail/${from}/${to}/${lemma}.html`}
-      target='_blank'
-      rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
-  } else if (['smsfin', 'finsms'].includes(source)) {
-    return <Link
-      href={`https://saan.oahpa.no/detail/${from}/${to}/${lemma}.html`}
-      target='_blank'
-      rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
-  } else {
-    return 'Source';
-  }
+  // if (['gtnobsme', 'gtsmenob', 'gtfinsme', 'gtsmefin'].includes(source)) {
+  //   return <Link
+  //     href={`https://sanit.oahpa.no/detail/${from}/${to}/${lemma}.html`}
+  //     target='_blank'
+  //     rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
+  // } else if (['gtsmanob', 'gtnobsma'].includes(source)) {
+  //   return <Link
+  //     href={`https://baakoeh.oahpa.no/detail/${from}/${to}/${lemma}.html`}
+  //     target='_blank'
+  //     rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
+  // } else if (['gtsmnfin', 'gtfinsmn', 'gtsmesmn', 'gtsmnsme'].includes(source)) {
+  //   return <Link
+  //     href={`https://saanih.oahpa.no/detail/${from}/${to}/${lemma}.html`}
+  //     target='_blank'
+  //     rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
+  // } else if (['gtsmsfin', 'gtfinsms'].includes(source)) {
+  //   return <Link
+  //     href={`https://saan.oahpa.no/detail/${from}/${to}/${lemma}.html`}
+  //     target='_blank'
+  //     rel='noopener noreferrer'>{langName[names[source]['from']]} → {langName[names[source]['to']]} {names[source]['name']}</Link>;
+  // } else {
+  return 'Source';
+  // }
 };
 
 const names = {
-  smenob: {
+  gtsmenob: {
     name: 'Neahttadigisánit',
     from: 'sme',
     to: 'nob'
   },
-  smesmn: {
+  gtsmesmn: {
     name: 'Neahttadigisánit',
     from: 'sme',
     to: 'smn'
   },
-  nobsme: {
+  gtnobsme: {
     name: 'Neahttadigisánit',
     from: 'nob',
     to: 'sme'
   },
-  smefin: {
+  gtsmefin: {
     name: 'Neahttadigisánit',
     from: 'sme',
     to: 'fin'
   },
-  finsme: {
+  gtfinsme: {
     name: 'Neahttadigisánit',
     from: 'fin',
     to: 'sme'
   },
-  smsfin: {
+  gtsmsfin: {
     name: 'Neahttadigisánit',
     from: 'sms',
     to: 'fin'
   },
-  finsms: {
+  gtfinsms: {
     name: 'Neahttadigisánit',
     from: 'fin',
     to: 'sms'
   },
-  smanob: {
+  gtsmanob: {
     name: 'Nedtedigibaahkoeh',
     from: 'sma',
     to: 'nob'
   },
-  nobsma: {
+  gtnobsma: {
     name: 'Nedtedigibaahkoeh',
     from: 'nob',
     to: 'sma'
   },
-  smnfin: {
+  gtsmnfin: {
     name: 'Nettidigsäänih',
     from: 'smn',
     to: 'fin'
   },
-  smnsme: {
+  gtsmnsme: {
     name: 'Nettidigsäänih',
     from: 'smn',
     to: 'sme'
   },
-  finsmn: {
+  gtfinsmn: {
     name: 'Nettidigsäänih',
     from: 'fin',
     to: 'smn'
@@ -112,9 +112,7 @@ const Source = ({source, lemma}) => {
 
   return (
     <Grid item xs={12} className={classes.paper}>
-      <Typography>
-        Source: <SourceLink from={names[source]['from']} to={names[source]['to']} lemma={lemma} source={source} />
-      </Typography>
+      <Typography>source {source} lemma {lemma}</Typography>
     </Grid>
   );
 };

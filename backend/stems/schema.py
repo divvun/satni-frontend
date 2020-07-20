@@ -11,11 +11,13 @@ class Query(graphene.ObjectType):
     stem_list = MongoengineConnectionField(
         StemType,
         search=graphene.String(),
-        wanted=graphene.List(graphene.String))
+        wanted=graphene.List(graphene.String),
+        wanted_dicts=graphene.List(graphene.String))
 
     def resolve_stem_list(self, info, **kwargs):
         print('stem kwargs:', kwargs)
-
+        wanted_dicts = kwargs['wanted_dicts']
+        filter = Q(stem__istartswith=kwargs['search'])
         if kwargs['wanted']:
             wanted_langs = kwargs['wanted']
             target_queries = [
@@ -33,8 +35,17 @@ class Query(graphene.ObjectType):
             source_filter = sources_queries.pop()
             for item in sources_queries:
                 source_filter |= item
-            return Stem.objects(Q(stem__istartswith=kwargs['search']) &
-                                source_filter & target_filter).order_by('stem')
 
-        return Stem.objects(
-            stem__istartswith=kwargs['search']).order_by('stem')
+            filter &= (source_filter & target_filter)
+
+        if wanted_dicts:
+            dict_filters = [
+                Q(dicts=wanted_dict)
+                for wanted_dict in wanted_dicts
+                ]
+            dict_filter = dict_filters.pop()
+            for dict_filter in dict_filters:
+                dict_filter |= dict_filter
+            filter &= (dict_filter)
+
+        return Stem.objects(filter).order_by('stem')

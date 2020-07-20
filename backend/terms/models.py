@@ -14,6 +14,8 @@ class Term(EmbeddedDocument):
 
 
 class Concept(Document):
+    meta = {'collection': 'terms'}
+    dictName = StringField()
     name = StringField()
     language = StringField()
     definition = StringField(blank=True, null=True)
