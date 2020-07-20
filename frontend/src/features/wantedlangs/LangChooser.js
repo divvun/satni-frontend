@@ -2,26 +2,24 @@ import React from 'react';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import { useQuery } from '@apollo/react-hooks';
-import { GET_WANTED_LANGS } from 'resolvers';
-import { useApolloClient } from '@apollo/react-hooks';
+import { useCookies } from 'react-cookie';
 
 const LangChooser = () => {
-  const client = useApolloClient();
-  const { data } = useQuery(GET_WANTED_LANGS);
+  const [cookies, setCookie] = useCookies(['wantedLangs']);
   const availableLanguages = [
     'sma', 'sme', 'smj', 'smn', 'sms', 'fin', 'nob', 'swe', 'lat', 'eng', 'nno'
   ];
 
+  if (cookies.wantedLangs === undefined) {
+    setCookie('wantedLangs', availableLanguages);
+  }
+
   const handleChange = (event) => {
-    const newLangs = data.wantedLangs.includes(event.target.name) ?
-                      data.wantedLangs.filter(value => value !== event.target.name) :
-                      [...data.wantedLangs, event.target.name];
-    client.writeData({
-      data: {
-        wantedLangs: newLangs
-      }
-    });
+    const oldLangs = cookies.wantedLangs;
+    const newLangs = oldLangs.includes(event.target.name) ?
+                      oldLangs.filter(value => value !== event.target.name) :
+                      [...oldLangs, event.target.name];
+    setCookie('wantedLangs', newLangs);
   };
 
   return (
@@ -32,7 +30,7 @@ const LangChooser = () => {
           control={
             <Checkbox
               color='default'
-              checked={data.wantedLangs.includes(lang)}
+              checked={cookies.wantedLangs.includes(lang)}
               onChange={handleChange}
               name={lang}
            />
@@ -40,6 +38,7 @@ const LangChooser = () => {
           label={`${lang}label`}
         />
       ))}
+      <p>{JSON.stringify(cookies)}</p>
     </FormGroup>
   );
 };
