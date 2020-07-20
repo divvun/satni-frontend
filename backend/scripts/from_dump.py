@@ -4,6 +4,7 @@ import os
 import sys
 
 from lxml import etree
+from mongoengine.errors import ValidationError
 
 from dicts.models import DictEntry, ExampleGroup, Restriction, TranslationGroup
 from lemmas.models import Lemma
@@ -108,8 +109,6 @@ def extract_term_stems(concept, valid_langs):
         for expression in same_lang_sanctioned_expressions(
                 lang, concept.related_expressions):
             if not STEMS.get(expression['expression']):
-                if expression['expression'] == 'arpa':
-                    print('term: made arpa')
                 STEMS[expression['expression']] = {}
                 STEMS[expression['expression']]['fromlangs'] = set()
                 STEMS[expression['expression']]['tolangs'] = set()
@@ -119,10 +118,6 @@ def extract_term_stems(concept, valid_langs):
                 if lang2 != lang:
                     STEMS[expression['expression']]['tolangs'].add(
                         langs[lang2])
-            if expression['expression'] == 'arpa':
-                print(expression['expression'])
-                print(STEMS[expression['expression']]['fromlangs'])
-                print(STEMS[expression['expression']]['tolangs'])
 
 
 # Dict import below here
@@ -180,8 +175,7 @@ def make_examples(examples):
 
 def make_translation_group(translation_group, target):
     return TranslationGroup(
-        translationLemmas=make_lemmas(
-            translation_group.xpath('./t'), target),
+        translationLemmas=make_lemmas(translation_group.xpath('./t'), target),
         restriction=make_restriction(translation_group.find('./re')),
         exampleGroups=make_examples(translation_group.xpath('./xg')))
 
@@ -199,23 +193,18 @@ def make_entries(dictxml, src, target):
         d = DictEntry(
             srcLang=src,
             targetLang=target,
-            lookupLemmas=make_lemmas(
-                entry.xpath('.//l'), src),
+            lookupLemmas=make_lemmas(entry.xpath('.//l'), src),
             translationGroups=make_translation_groups(
                 entry.xpath('.//tg'), target))
 
-        for lemma in d.lookupLemmas:
-            if not STEMS.get(lemma):
-                if lemma == 'arpa':
-                    print('dict: made arpa')
-                STEMS[lemma] = {}
-                STEMS[lemma]['fromlangs'] = set()
-                STEMS[lemma]['tolangs'] = set()
+        for lookupLemma in d.lookupLemmas:
+            if not STEMS.get(lookupLemma.lemma):
+                STEMS[lookupLemma.lemma] = {}
+                STEMS[lookupLemma.lemma]['fromlangs'] = set()
+                STEMS[lookupLemma.lemma]['tolangs'] = set()
 
-            if lemma == 'arpa':
-                print(lemma, src, target)
-            STEMS[lemma]['fromlangs'].add(src)
-            STEMS[lemma]['tolangs'].add(target)
+            STEMS[lookupLemma.lemma]['fromlangs'].add(src)
+            STEMS[lookupLemma.lemma]['tolangs'].add(target)
 
         d.save()
 
@@ -247,17 +236,35 @@ def make_dicts():
         import_dict(pair)
 
 
+def import_sammalahti():
+    print(f'Pekka Sammallahtis sme-fin dictionary')
+    xml_file = os.path.join(
+        os.getenv('HOME'), 'repos/sammallahti/sammallahti.xml')
+    try:
+        print(f'\t{os.path.basename(xml_file)}')
+        parser = etree.XMLParser(remove_comments=True)
+        dictxml = etree.parse(xml_file, parser=parser)
+        make_entries(dictxml, src='sme', target='fin')
+    except etree.XMLSyntaxError as error:
+        print(
+            'Syntax error in {} '
+            'with the following error:\n{}\n'.format(xml_file, error),
+            file=sys.stderr)
+
+
 def make_stems():
     c = 0
     c2 = 0
     for stem in STEMS:
-        s = Stem(
-            stem=stem,
-            srclangs=list(STEMS[stem]['fromlangs']),
-            targetlangs=list(STEMS[stem]['tolangs']))
-        if stem == 'arpa':
-            print(s.stem, s.srclangs, s.targetlangs)
-        s.save()
+        try:
+            s = Stem(
+                stem=stem,
+                srclangs=list(STEMS[stem]['fromlangs']),
+                targetlangs=list(STEMS[stem]['tolangs']))
+            s.save()
+        except ValidationError as error:
+            print(error)
+            print(stem)
 
         c2 += 1
     #     print(stem)
@@ -271,4 +278,5 @@ def make_stems():
 def run():
     make_dicts()
     make_m()
+    import_sammalahti()
     make_stems()
