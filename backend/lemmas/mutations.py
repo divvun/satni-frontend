@@ -1,8 +1,9 @@
 import graphene
+
 from django.core.exceptions import ObjectDoesNotExist
 
-from .types import LemmaType
 from .models import Lemma
+from .types import LemmaType
 
 
 class LemmaInput(graphene.InputObjectType):
