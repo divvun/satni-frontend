@@ -2098,9 +2098,16 @@ describe('Massage Giellatekno dictionaries from backend', () => {
       'id': '5f08334a053d5ae2cf91d402',
       'srcLang': 'nob',
       'targetLang': 'sme',
-      'lookupLemma': {
-        'lemma': 'kanskje',
-        'pos': 'Adv'
+      'lookupLemmas': {
+        'edges': [
+          {
+            'node': {
+              'lemma': 'kanskje',
+              'pos': 'Adv',
+              'language': 'nob'
+            }
+          }
+        ]
       },
       'translationGroups': [
         {
@@ -2143,6 +2150,7 @@ describe('Massage Giellatekno dictionaries from backend', () => {
         'lookupLemmas': [
           {
             'lemma': 'kanskje',
+            'language': 'nob',
             'pos': 'Adv'
           }
         ]
