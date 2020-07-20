@@ -2095,7 +2095,7 @@ describe('Massage termwiki data from backend', () => {
 describe('Massage Giellatekno dictionaries from backend', () => {
   it('Turn backend dict article into frontend-compatible format', () => {
     const got = {
-      'id': '5f08334a053d5ae2cf91d402',
+      'dictName': 'gtnobsme',
       'srcLang': 'nob',
       'targetLang': 'sme',
       'lookupLemmas': {
@@ -2103,8 +2103,8 @@ describe('Massage Giellatekno dictionaries from backend', () => {
           {
             'node': {
               'lemma': 'kanskje',
-              'pos': 'Adv',
-              'language': 'nob'
+              'language': 'nob',
+              'pos': 'Adv'
             }
           }
         ]
@@ -2143,8 +2143,9 @@ describe('Massage Giellatekno dictionaries from backend', () => {
         }
       ]
     };
+
     const want = {
-      'dict': 'nobsme',
+      'dict': 'gtnobsme',
       'from': {
         'language': 'nob',
         'lookupLemmas': [
