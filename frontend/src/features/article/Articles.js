@@ -17,9 +17,14 @@ const GET_ARTICLES = gql`
       id
       srcLang
       targetLang
-      lookupLemma {
-        lemma
-  			pos
+      lookupLemmas {
+        edges {
+          node {
+            lemma
+            language
+            pos
+          }
+        }
       }
       translationGroups {
         translationLemmas {

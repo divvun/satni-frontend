@@ -141,7 +141,7 @@ export const dictBackend2Frontend = (backendDictArticle) => {
     dict: `${backendDictArticle.srcLang}${backendDictArticle.targetLang}`,
     from: {
       language: backendDictArticle.srcLang,
-      lookupLemmas: [backendDictArticle.lookupLemma]
+      lookupLemmas: backendDictArticle.lookupLemmas.edges.map(edge => edge.node)
     },
     to: {
       language: backendDictArticle.targetLang,
