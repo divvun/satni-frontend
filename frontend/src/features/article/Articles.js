@@ -11,61 +11,9 @@ import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
 import { useQuery } from '@apollo/react-hooks';
 
-const dictQuery = `dictEntryList (exact: $lemma, wanted: $wantedLangs, wantedDicts: $wantedDicts) {
-  dictName
-  lookupLemmas {
-    edges {
-      node {
-        lemma
-        language
-        pos
-      }
-    }
-  }
-  translationGroups {
-    translationLemmas {
-      edges {
-        node {
-          lemma
-          language
-          pos
-        }
-      }
-    }
-    restriction {
-      restriction
-      attributes
-    }
-    exampleGroups {
-      example
-      translation
-    }
-  }
-}
-`;
-
-const termQuery = `conceptList(exact: $lemma, wanted: $wantedLangs) {
-  name
-  collections
-  definition
-  explanation
-  terms {
-    note
-    source
-    status
-    expression {
-      lemma
-      language
-      pos
-    }
-  }
-}
-`;
-
 const query2articlelist = (lemma, data) => {
   const termList = elemmas2ConceptPairs(lemma, data.conceptList);
   const dictList = data.dictEntryList.map(dictBackend2Frontend);
-
   return dictList.concat(termList);
 };
 
@@ -76,13 +24,92 @@ const Articles = () => {
   const GET_ARTICLES = cookies.wantedDicts.includes('termwiki') ?
     gql`
       query AllArticles($lemma: String!, $wantedLangs: [String]!, $wantedDicts: [String]!) {
-        ${dictQuery}
-        ${termQuery}
+        dictEntryList (exact: $lemma, wanted: $wantedLangs, wantedDicts: $wantedDicts) {
+          dictName
+          srcLang
+          targetLang
+          lookupLemmas {
+            edges {
+              node {
+                lemma
+                language
+                pos
+              }
+            }
+          }
+          translationGroups {
+            translationLemmas {
+              edges {
+                node {
+                  lemma
+                  language
+                  pos
+                }
+              }
+            }
+            restriction {
+              restriction
+              attributes
+            }
+            exampleGroups {
+              example
+              translation
+            }
+          }
+        }
+        conceptList(exact: $lemma, wanted: $wantedLangs) {
+          name
+          collections
+          definition
+          explanation
+          terms {
+            note
+            source
+            status
+            expression {
+              lemma
+              language
+              pos
+            }
+          }
+        }
       }
     ` :
     gql`
       query AllArticles($lemma: String!, $wantedLangs: [String]!, $wantedDicts: [String]!) {
-        ${dictQuery}
+        dictEntryList (exact: $lemma, wanted: $wantedLangs, wantedDicts: $wantedDicts) {
+          dictName
+          srcLang
+          targetLang
+          lookupLemmas {
+            edges {
+              node {
+                lemma
+                language
+                pos
+              }
+            }
+          }
+          translationGroups {
+            translationLemmas {
+              edges {
+                node {
+                  lemma
+                  language
+                  pos
+                }
+              }
+            }
+            restriction {
+              restriction
+              attributes
+            }
+            exampleGroups {
+              example
+              translation
+            }
+          }
+        }
       }
     `;
 
