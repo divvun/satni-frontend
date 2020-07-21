@@ -1,25 +1,3 @@
-Lemmasøket:
-
-Resultat:
-Returner alle mlc
-Fjern alle false terms
-Behold de mlc der lemma er true
-Behold de mlc der det er minst to true
-Behold de mlc som har valid sami
-
-Form hver mlc om til
-
-{
-    lemma: lemma,
-    language: language,
-    languages: språkene fra mlc,
-    dict: dict fra mlc
-}
-
-Første trinn:
-Kjør alle mlc og lag dem til siste formatet
-
-Neste, filtrer mlc, så er vi i mål …
 
 Issues:
 {{{
@@ -42,10 +20,27 @@ Filtrering:
 Ved søk: slipp Stem-entries igjennom om både srclangs og targetlangs har en av de ønskede språkene. Helst på tjenersiden.
 Ved artikkelvisning: vis språkpar som har både src og target i blant de ønskede språkene.
 }}} Begge skjer på tjenersiden. Må repareres mer, men fungerer nogenlunde 20200718
-* Pagination av oppslagsord (hm)
-* Søk i søkefelt: søkeord som start/midt/slutt
+{{{
+* Import og visning av Sammallahti
+}}} Fikset 20200720
+{{{
+* Details-linken har ikke språk for source-lemma
+** gueliebarkije, vearjogirdin viser ikke språk i advanced-linken
+}}} Fikset 20200720. Var graphql-spørringen som manglet denne detaljen
+{{{
+* Språkvalg inn i infokaker
+}}} Fikset 20200720
+{{{
+* Filtrering etter ordbok
+* Sammallahtis ordbok er finsme. Må skille på hans og gt sine ordbøker i kildehenvisningen.
+}}} Fikset 20200721
+* Ordne søkefeltet
+* I18N
 * Samiske bokstaver som js-widget
+* Header á la NDS, med visningsspråkvalg
+
+* Søk i søkefelt: søkeord som start/midt/slutt
 * Fiks visning av collections
 * Vis termwiki-kilde som artikkelnavn
 * Hoppe over kategori?*
-* gueliebarkije viser ikke språk i advanced-linken
+* Pagination av oppslagsord (hm)
