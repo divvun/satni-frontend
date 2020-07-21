@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import Source from './Source';
 
-const source = 'smenob';
+const source = 'gtsmenob';
 
 storiesOf('Source', module)
   .add('default', () => <Source source={source} />);
