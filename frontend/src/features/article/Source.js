@@ -113,7 +113,11 @@ const Source = ({source, lemma}) => {
   return (
     <Grid item xs={12} className={classes.paper}>
       <Typography>
-      Source: <SourceLink from={names[source]['from']} to={names[source]['to']} lemma={lemma} source={source} />
+      Source: {
+        source !== 'pksmefin' ?
+          <SourceLink from={names[source]['from']} to={names[source]['to']} lemma={lemma} source={source} /> :
+          <span>Pekka Sammalahttis North Sami – Finnish dictionary</span>
+      }
       </Typography>
     </Grid>
   );
