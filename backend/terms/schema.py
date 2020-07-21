@@ -24,6 +24,11 @@ class Query(graphene.ObjectType):
         if not names:
             return []
 
+        # lat is omitted from this list, we always want it,
+        # unless it is explicitely omitted from the wanted list.
+        non_sami = ['eng', 'fin', 'nob', 'nno', 'swe']
+        lemma_langs = [l.language for l in Lemma.objects(lemma=exact)]
+
         name_queries = [Q(name=name) for name in names]
         name_filter = name_queries.pop()
         for item in name_queries:
