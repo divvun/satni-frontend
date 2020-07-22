@@ -22,3 +22,7 @@ yarn-error.log*
 
 __pycache__/
 venv/
+
+# lingui
+frontend/src/locales/_build/
+frontend/src/locales/**/*.js
