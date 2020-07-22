@@ -35,12 +35,16 @@ Ved artikkelvisning: vis språkpar som har både src og target i blant de ønske
 * Sammallahtis ordbok er finsme. Må skille på hans og gt sine ordbøker i kildehenvisningen.
 }}} Fikset 20200721
 * Ordne søkefeltet
-* I18N
+** menyen: plasser menyen vakkert …
+** ønske: når man laster, kjør sirkel i søkefeltet
+* I18N – bruk https://lingui.js.org/tutorials/setup-cra.html
 * Samiske bokstaver som js-widget
 * Header á la NDS, med visningsspråkvalg
-
+* Flytte språk- og ordboksvalg i headermenyen
 * Søk i søkefelt: søkeord som start/midt/slutt
 * Fiks visning av collections
 * Vis termwiki-kilde som artikkelnavn
 * Hoppe over kategori?*
 * Pagination av oppslagsord (hm)
+* vise re i Dict
+* Gjemme Phrase og MWE
