@@ -16,50 +16,50 @@ msgstr ""
 #: src/features/article/Articles.js:127
 #: src/features/search/Searcher.js:97
 msgid "<0>Error {0}</0>"
-msgstr ""
+msgstr "<0>Meattáhus {0}</0>"
 
 #: src/features/article/Articles.js:126
 #: src/features/search/Searcher.js:96
 msgid "<0>Loading...</0>"
-msgstr ""
+msgstr "<0>Viežžamin …</0>"
 
 #: src/features/article/Articles.js:128
 #: src/features/search/Searcher.js:98
 msgid "<0>Not found</0>"
-msgstr ""
+msgstr "<0>Ii gávdnon</0>"
 
 #: src/features/article/Source.js:121
 msgid "<0>Pekka Sammalahttis North Sami – Finnish dictionary</0>"
-msgstr ""
+msgstr "<0>Pekka Sammalahtti davvisámi – suoma sátnegirji</0>"
 
 #: src/features/korp/Korp.js:22
 msgid "An error occured {0}"
-msgstr ""
+msgstr "Meattáhus čuožžilii {0}"
 
 #: src/features/article/TermWikiArticle.js:14
 msgid "Category:"
-msgstr ""
+msgstr "Kategoriija:"
 
 #: src/features/korp/Korp.js:26
 msgid "Checking if {lemma} exists in Korp."
-msgstr ""
+msgstr "Iskamin jus {lemma} gávdno Korpas."
 
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
-msgstr ""
+msgstr "Definišuvnnat:"
 
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
-msgstr ""
+msgstr "Gáldu: {0}"
 
 #: src/features/article/TermWikiArticle.js:26
 msgid "Source:<0>TermWiki</0>"
-msgstr ""
+msgstr "Gáldu:<0>TermWiki</0>"
 
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"
-msgstr ""
+msgstr "Ii gávdno korpus {language} várás"
 
 #: src/features/korp/Korp.js:32
 msgid "{lemma} was not found in {language} Korp"
-msgstr ""
+msgstr "{lemma} ii gávdnon {language}-Korpas"
