@@ -16,50 +16,50 @@ msgstr ""
 #: src/features/article/Articles.js:127
 #: src/features/search/Searcher.js:97
 msgid "<0>Error {0}</0>"
-msgstr ""
+msgstr "<0>Feil {0}"
 
 #: src/features/article/Articles.js:126
 #: src/features/search/Searcher.js:96
 msgid "<0>Loading...</0>"
-msgstr ""
+msgstr "<0>Laster …</0>"
 
 #: src/features/article/Articles.js:128
 #: src/features/search/Searcher.js:98
 msgid "<0>Not found</0>"
-msgstr ""
+msgstr "<0>Ikke funnet</0>"
 
 #: src/features/article/Source.js:121
 msgid "<0>Pekka Sammalahttis North Sami – Finnish dictionary</0>"
-msgstr ""
+msgstr "<0>Pekka Sammalahttis nordsamisk – finsk ordbok</0>"
 
 #: src/features/korp/Korp.js:22
 msgid "An error occured {0}"
-msgstr ""
+msgstr "Det oppstod en feil {0}"
 
 #: src/features/article/TermWikiArticle.js:14
 msgid "Category:"
-msgstr ""
+msgstr "Kategori:"
 
 #: src/features/korp/Korp.js:26
 msgid "Checking if {lemma} exists in Korp."
-msgstr ""
+msgstr "Sjekker om {lemma} finnes i Korp."
 
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
-msgstr ""
+msgstr "Definisjoner>"
 
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
-msgstr ""
+msgstr "Kilde: {0}"
 
 #: src/features/article/TermWikiArticle.js:26
-msgid "Source:<0>TermWiki</0>"
+msgid "Kilde:<0>TermWiki</0>"
 msgstr ""
 
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"
-msgstr ""
+msgstr "Det er ikke noe korpus for {language}"
 
 #: src/features/korp/Korp.js:32
 msgid "{lemma} was not found in {language} Korp"
-msgstr ""
+msgstr "Fant ikke {lemma} i {language} Korp"
