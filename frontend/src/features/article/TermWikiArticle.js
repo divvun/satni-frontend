@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
+import { Trans } from '@lingui/macro';
 
 import Definitions from './Definitions';
 import LemmaGroups from './LemmaGroups';
@@ -10,7 +11,7 @@ import LemmaGroups from './LemmaGroups';
 const CategoryLink = ({category}) => {
   return <Grid item xs={12}>
     <Typography>
-      Category:
+      <Trans>Category:</Trans>
       <Link href={`https://satni.uit.no/termwiki/index.php?title=Kategoriija:${category}`}
         target='_blank' rel='noopener noreferrer'>
         {category}
@@ -22,12 +23,13 @@ const CategoryLink = ({category}) => {
 const SourceLink = ({termwikiref}) => (
   <Grid item xs={12}>
     <Typography>
-      Source:
+      <Trans>Source:
       <Link
         href={`https://satni.uit.no/termwiki/index.php?title=${termwikiref}`}
         target='_blank' rel='noopener noreferrer'>
         TermWiki
       </Link>
+      </Trans>
     </Typography>
   </Grid>
 );
