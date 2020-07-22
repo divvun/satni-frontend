@@ -3,7 +3,7 @@ import {
   useParams
 } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
-
+import { Trans } from '@lingui/macro';
 import gql from 'graphql-tag';
 import { Query } from '@apollo/react-components';
 import { elemmas2ConceptPairs, dictBackend2Frontend } from 'utils';
@@ -123,9 +123,9 @@ const Articles = () => {
       }}
     >
       {({ loading, error, data }) => {
-        if (loading) return <p>Loading...</p>;
-        if (error) return <p>Error {error.message}</p>;
-        if (!data) return <p>Not found</p>;
+        if (loading) return <Trans><p>Loading...</p></Trans>;
+        if (error) return <Trans><p>Error {error.message}</p></Trans>;
+        if (!data) return <Trans><p>Not found</p></Trans>;
 
         if (cookies.wantedDicts.includes('termwiki')) {
           return <PresentArticles articles={query2articlelist(lemma, data)} />;

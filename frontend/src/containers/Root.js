@@ -6,9 +6,10 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { useCookies } from 'react-cookie';
+import { I18nProvider } from '@lingui/react';
 
 import AsyncApp from './AsyncApp';
-import ErrorBoundary from '../components/ErrorBoundary';
+import ErrorBoundary from 'components/ErrorBoundary';
 
 const cache = new InMemoryCache();
 const client = new ApolloClient({
@@ -22,11 +23,13 @@ const client = new ApolloClient({
 const Root = ({ store }) => {
   return (
     <Provider store={store}>
-      <MuiThemeProvider>
-        <ApolloProvider client={client}>
-          <AsyncApp />
-        </ApolloProvider>
-      </MuiThemeProvider>
+      <I18nProvider language='en'>
+        <MuiThemeProvider>
+          <ApolloProvider client={client}>
+            <AsyncApp />
+          </ApolloProvider>
+        </MuiThemeProvider>
+      </I18nProvider>
     </Provider>
   );
 };
