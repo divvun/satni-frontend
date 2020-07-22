@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
+import { Trans } from '@lingui/macro';
 
 import { langName } from 'langThings';
 
@@ -113,11 +114,13 @@ const Source = ({source, lemma}) => {
   return (
     <Grid item xs={12} className={classes.paper}>
       <Typography>
-      Source: {
-        source !== 'pksmefin' ?
-          <SourceLink from={names[source]['from']} to={names[source]['to']} lemma={lemma} source={source} /> :
-          <span>Pekka Sammalahttis North Sami – Finnish dictionary</span>
-      }
+        <Trans>
+          Source: {
+            source !== 'pksmefin' ?
+              <SourceLink from={names[source]['from']} to={names[source]['to']} lemma={lemma} source={source} /> :
+              <Trans><span>Pekka Sammalahttis North Sami – Finnish dictionary</span></Trans>
+          }
+        </Trans>
       </Typography>
     </Grid>
   );

@@ -12,3 +12,54 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Plural-Forms: \n"
+
+#: src/features/article/Articles.js:127
+#: src/features/search/Searcher.js:97
+msgid "<0>Error {0}</0>"
+msgstr ""
+
+#: src/features/article/Articles.js:126
+#: src/features/search/Searcher.js:96
+msgid "<0>Loading...</0>"
+msgstr ""
+
+#: src/features/article/Articles.js:128
+#: src/features/search/Searcher.js:98
+msgid "<0>Not found</0>"
+msgstr ""
+
+#: src/features/article/Source.js:121
+msgid "<0>Pekka Sammalahttis North Sami – Finnish dictionary</0>"
+msgstr ""
+
+#: src/features/korp/Korp.js:22
+msgid "An error occured {0}"
+msgstr ""
+
+#: src/features/article/TermWikiArticle.js:14
+msgid "Category:"
+msgstr ""
+
+#: src/features/korp/Korp.js:26
+msgid "Checking if {lemma} exists in Korp."
+msgstr ""
+
+#: src/features/article/Definitions.js:20
+msgid "Definitions:"
+msgstr ""
+
+#: src/features/article/Source.js:117
+msgid "Source: {0}"
+msgstr ""
+
+#: src/features/article/TermWikiArticle.js:26
+msgid "Source:<0>TermWiki</0>"
+msgstr ""
+
+#: src/features/korp/Korp.js:44
+msgid "There is no corpus for {language}"
+msgstr ""
+
+#: src/features/korp/Korp.js:32
+msgid "{lemma} was not found in {language} Korp"
+msgstr ""

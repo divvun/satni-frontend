@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import Downshift from 'downshift';
+import { Trans } from '@lingui/macro';
 import { css } from 'react-emotion';
 import {
   ControllerButton,
@@ -92,9 +93,9 @@ const SearchRenderer = ({
       }
     });
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error {error.message}</p>;
-  if (!data) return <p>Not found</p>;
+  if (loading) return <Trans><p>Loading...</p></Trans>;
+  if (error) return <Trans><p>Error {error.message}</p></Trans>;
+  if (!data) return <Trans><p>Not found</p></Trans>;
 
   const stemList = data.stemList.edges.map(edge => edge.node);
   return (
