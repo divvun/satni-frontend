@@ -11,6 +11,9 @@ import { I18nProvider } from '@lingui/react';
 import AsyncApp from './AsyncApp';
 import ErrorBoundary from 'components/ErrorBoundary';
 
+import catalogSe from 'locales/se/messages.js';
+import catalogNb from 'locales/nb/messages.js';
+
 const cache = new InMemoryCache();
 const client = new ApolloClient({
   cache,
@@ -20,10 +23,15 @@ const client = new ApolloClient({
 // Add this after Provider
 // <ErrorBoundary>
 // </ErrorBoundary>
+
+const catalogs = {
+  nb: catalogNb,
+  se: catalogSe
+};
 const Root = ({ store }) => {
   return (
     <Provider store={store}>
-      <I18nProvider language='en'>
+      <I18nProvider language='se' catalogs={catalogs}>
         <MuiThemeProvider>
           <ApolloProvider client={client}>
             <AsyncApp />
