@@ -15,6 +15,7 @@ import Articles from 'features/article/Articles';
 import LemmaDetails from 'components/LemmaDetails.js';
 import LangChooser from 'features/wantedlangs/LangChooser';
 import DictChooser from 'features/wantedlangs/DictChooser';
+import InfiniteStems from 'features/infinitestems/InfiniteStems';
 
 const styles = theme => ({
   '@global': {
@@ -98,7 +99,7 @@ const AsyncApp = ({classes, match}) => (
         <div className={classes.heroContent}>
           <LangChooser />
           <DictChooser />
-          <Searcher />
+          <InfiniteStems/>
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/article/:lemma'>
