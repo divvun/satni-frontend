@@ -5,7 +5,7 @@ import { useCookies } from 'react-cookie';
 const GET_LEMMAS = gql`
   query AllLemmas($inputValue: String!, $wantedLangs: [String]!,
                   $wantedDicts: [String]!, $after: String ) {
-      stemList(first:50,
+      stemList(first:100,
                search: $inputValue,
                wanted: $wantedLangs,
                wantedDicts: $wantedDicts
