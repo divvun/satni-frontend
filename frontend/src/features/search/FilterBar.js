@@ -53,6 +53,7 @@ const FilterBar = ({searchHandler}) => {
         <SearchIcon />
       </div>
       <InputBase
+        autoFocus
         onChange={searchHandler}
         placeholder="Search…"
         classes={{
