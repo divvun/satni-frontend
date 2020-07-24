@@ -31,19 +31,7 @@ const GET_LEMMAS = gql`
 `;
 
 const InfiniteStems = () => {
-  const inputValue = 's'
-  const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
-  // const {stemList, loading, error, fetchMore} = useStems()
-    const {data, loading, fetchMore, error} = useQuery(
-      GET_LEMMAS, {
-      notifyOnNetworkStatusChange: true,
-      variables: {
-        inputValue,
-        wantedLangs: cookies.wantedLangs,
-        wantedDicts: cookies.wantedDicts,
-      }
-
-    });
+  const {data, loading, error, loadMore, hasNextPage} = useStems('s')
 
   if (loading) return <Trans><p>Loading...</p></Trans>;
   if (error) return <Trans><p>Error {error.message}</p></Trans>;
@@ -52,31 +40,12 @@ const InfiniteStems = () => {
     <>
       {data.stemList.edges.map(({node}, index) => <div key={index}>{node.stem}</div>)}
       <Button
-      variant="contained"
-      onClick={() =>
-  fetchMore({
-    variables: {
-      after: data.stemList.pageInfo.endCursor
-    },
-    updateQuery: (previousResult, { fetchMoreResult }) => {
-      const newEdges = fetchMoreResult.stemList.edges;
-      const pageInfo = fetchMoreResult.stemList.pageInfo;
-
-      return newEdges.length
-        ? {
-            // Put the new comments at the end of the list and update `pageInfo`
-            // so we have the new `endCursor` and `hasNextPage` values
-            stemList: {
-              __typename: previousResult.stemList.__typename,
-              edges: [...previousResult.stemList.edges, ...newEdges],
-              pageInfo
-            }
-          }
-        : previousResult;
-    }
-  })
-}>Default</Button>
-</>
+        variant="contained"
+        onClick={() => loadMore()}
+      >
+        Default
+      </Button>
+    </>
   )
 }
 
