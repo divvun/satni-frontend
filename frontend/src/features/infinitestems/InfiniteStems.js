@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
 
 const redirect = (stem) => <Redirect to={`/article/${stem.stem}`} push />
 
-const InfiniteStems = () => {
+const InfiniteStems = ({lemmaHandler}) => {
   const {stems, loading, error, loadMore, hasNextPage} = useStems('gu')
   const classes = useStyles();
 
@@ -62,7 +62,12 @@ const InfiniteStems = () => {
                   const {stem, srclangs} = stems[index]
                   content = `${srclangs[0]} ${stem}`;
                   return (
-                    <ListItem button key={index} style={style} component='a' href={`/article/${stem}`}>
+                    <ListItem
+                        button
+                        value={stem}
+                        key={index}
+                        style={style}
+                        onClick={() => lemmaHandler(stem)}>
                       <ListItemText primary={content}/>
                     </ListItem>
                   )
