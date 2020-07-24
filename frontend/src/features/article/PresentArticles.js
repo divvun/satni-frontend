@@ -14,7 +14,8 @@ import { langName } from 'langThings'
 
 const useStyles = makeStyles(theme => ({
   list: {
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
+    marginLeft: theme.spacing(2)
   },
   lang1: {
     marginRight: theme.spacing(2)
