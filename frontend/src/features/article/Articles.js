@@ -17,8 +17,7 @@ const query2articlelist = (lemma, data) => {
   return dictList.concat(termList);
 };
 
-const Articles = () => {
-  const { lemma } = useParams();
+const Articles = ({lemma}) => {
   const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
 
   const GET_ARTICLES = cookies.wantedDicts.includes('termwiki') ?
