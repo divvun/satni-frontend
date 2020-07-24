@@ -10,7 +10,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-import Searcher from 'features/search/Searcher';
+import FilterBar from 'features/search/FilterBar';
 import Articles from 'features/article/Articles';
 import LemmaDetails from 'components/LemmaDetails.js';
 import LangChooser from 'features/wantedlangs/LangChooser';
@@ -40,7 +40,6 @@ const styles = theme => ({
     }
   },
   heroContent: {
-    maxWidth: 600,
     margin: '0 auto',
     padding: `${theme.spacing(8)}px 0 ${theme.spacing(6)}px`
   },
@@ -88,9 +87,8 @@ const AsyncApp = ({classes, match}) => {
   const [currentLemma, setCurrentLemma] = useState('')
   const [searchExpression, setSearchExpression] = useState('')
 
-  function handleLemma(lemma) {
-    setCurrentLemma(lemma)
-  }
+  const handleLemma = lemma => setCurrentLemma(lemma)
+  const handleSearch = event => setSearchExpression(event.target.value)
 
   return (
     <React.Fragment>
@@ -109,8 +107,17 @@ const AsyncApp = ({classes, match}) => {
             <LangChooser />
             <DictChooser />
             </Grid>
+            <Grid item xs={6}>
+              <FilterBar searchHandler={handleSearch}/>
+            </Grid>
+            <Grid item xs={6}>
+              <p>Current search: {searchExpression}</p>
+            </Grid>
           <Grid item xs={4}>
-            <InfiniteStems lemmaHandler={handleLemma}/>
+            {searchExpression ?
+              <InfiniteStems searchExpression={searchExpression} lemmaHandler={handleLemma}/> :
+              <p>Waiting for input</p>
+            }
           </Grid>
           <Grid item xs={8}>
             {currentLemma ?
