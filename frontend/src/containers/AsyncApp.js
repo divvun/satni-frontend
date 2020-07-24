@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -81,11 +81,19 @@ const footers = [
 ];
 
 const Home = () => (
-  null
+  <p>Bures boahttin!</p>
 );
 
-const AsyncApp = ({classes, match}) => (
-  <React.Fragment>
+const AsyncApp = ({classes, match}) => {
+  const [currentLemma, setCurrentLemma] = useState('')
+  const [searchExpression, setSearchExpression] = useState('')
+
+  function handleLemma(lemma) {
+    setCurrentLemma(lemma)
+  }
+
+  return (
+    <React.Fragment>
     <CssBaseline />
     <AppBar position='static' color='default' className={classes.appBar}>
       <Toolbar>
@@ -95,20 +103,23 @@ const AsyncApp = ({classes, match}) => (
       </Toolbar>
     </AppBar>
     <main className={classes.layout}>
-      <Router>
         <div className={classes.heroContent}>
-          <LangChooser />
-          <DictChooser />
-          <InfiniteStems/>
-          <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path='/article/:lemma'>
-              <Articles />
-            </Route>
-            <Route path='/details' component={LemmaDetails} />
-          </Switch>
+          <Grid container>
+            <Grid item>
+            <LangChooser />
+            <DictChooser />
+            </Grid>
+          <Grid item xs={4}>
+            <InfiniteStems lemmaHandler={handleLemma}/>
+          </Grid>
+          <Grid item xs={8}>
+            {currentLemma ?
+              <Articles lemma={currentLemma}/> :
+              <Home/>
+            }
+            </Grid>
+            </Grid>
         </div>
-      </Router>
     </main>
     {/* Footer */}
     <footer className={classNames(classes.footer, classes.layout)}>
@@ -129,8 +140,8 @@ const AsyncApp = ({classes, match}) => (
     </footer>
     {/* End footer */}
 
-  </React.Fragment>
-    );
+  </React.Fragment>)
+};
 
 AsyncApp.propTypes = {
   classes: PropTypes.object.isRequired
