@@ -3,6 +3,7 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { useCookies } from 'react-cookie';
+import Typography from '@material-ui/core/Typography';
 
 const LangChooser = () => {
   const [cookies, setCookie] = useCookies(['wantedLangs']);
@@ -23,23 +24,27 @@ const LangChooser = () => {
   };
 
   return (
-    <FormGroup row>
-      {availableLanguages.map(lang => (
-        <FormControlLabel
-          key={lang}
-          control={
-            <Checkbox
-              color='default'
-              checked={cookies.wantedLangs.includes(lang)}
-              onChange={handleChange}
-              name={lang}
-           />
-          }
-          label={`${lang}label`}
-        />
-      ))}
-      <p>{JSON.stringify(cookies)}</p>
-    </FormGroup>
+    <>
+      <Typography>Dictionary languages</Typography>
+      <div>
+        <FormGroup row>
+          {availableLanguages.map(lang => (
+            <FormControlLabel
+              key={lang}
+              control={
+                <Checkbox
+                  color='default'
+                  checked={cookies.wantedLangs.includes(lang)}
+                  onChange={handleChange}
+                  name={lang}
+               />
+              }
+              label={`${lang}label`}
+            />
+          ))}
+        </FormGroup>
+      </div>
+    </>
   );
 };
 

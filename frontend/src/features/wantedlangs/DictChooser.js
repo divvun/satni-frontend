@@ -3,6 +3,7 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { useCookies } from 'react-cookie';
+import Typography from '@material-ui/core/Typography';
 
 const DictChooser = () => {
   const [cookies, setCookie] = useCookies(['wantedDicts']);
@@ -23,23 +24,27 @@ const DictChooser = () => {
   };
 
   return (
-    <FormGroup row>
-      {availableDicts.map(dict => (
-        <FormControlLabel
-          key={dict}
-          control={
-            <Checkbox
-              color='default'
-              checked={cookies.wantedDicts.includes(dict)}
-              onChange={handleChange}
-              name={dict}
-           />
-          }
-          label={`${dict}label`}
-        />
-      ))}
-      <p>{JSON.stringify(cookies)}</p>
-    </FormGroup>
+    <>
+      <Typography>Dictionaries</Typography>
+      <div>
+        <FormGroup row>
+          {availableDicts.map(dict => (
+            <FormControlLabel
+              key={dict}
+              control={
+                <Checkbox
+                  color='default'
+                  checked={cookies.wantedDicts.includes(dict)}
+                  onChange={handleChange}
+                  name={dict}
+               />
+              }
+              label={`${dict}label`}
+            />
+          ))}
+        </FormGroup>
+      </div>
+    </>
   );
 };
 
