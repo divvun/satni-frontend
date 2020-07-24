@@ -45,7 +45,7 @@ const styles = theme => ({
   },
   heroContent: {
     margin: '0 auto',
-    padding: `${theme.spacing(8)}px 0 ${theme.spacing(6)}px`
+    padding: `${theme.spacing(2)}px 0 ${theme.spacing(2)}px`
   },
   footer: {
     marginTop: theme.spacing(8),
