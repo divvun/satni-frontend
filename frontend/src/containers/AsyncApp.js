@@ -16,6 +16,10 @@ import LemmaDetails from 'components/LemmaDetails.js';
 import LangChooser from 'features/wantedlangs/LangChooser';
 import DictChooser from 'features/wantedlangs/DictChooser';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const styles = theme => ({
   '@global': {
@@ -86,9 +90,14 @@ const Home = () => (
 const AsyncApp = ({classes, match}) => {
   const [currentLemma, setCurrentLemma] = useState('')
   const [searchExpression, setSearchExpression] = useState('')
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
 
   const handleLemma = lemma => setCurrentLemma(lemma)
   const handleSearch = event => setSearchExpression(event.target.value)
+
+  const handleMenu = (event) => setAnchorEl(event.currentTarget);
+  const handleClose = () => setAnchorEl(null);
 
   return (
     <React.Fragment>
@@ -98,34 +107,54 @@ const AsyncApp = ({classes, match}) => {
         <Typography variant='h6' color='inherit' noWrap className={classes.toolbarTitle}>
           <a href='http://sátni.org'>sátni.org</a>
         </Typography>
+        <FilterBar searchHandler={handleSearch}/>
+        <div>
+          <IconButton
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleMenu}
+            color="inherit"
+          >
+            <MenuIcon/>
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorEl}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            open={open}
+            onClose={handleClose}
+          >
+            <MenuItem onClick={handleClose}><LangChooser/></MenuItem>
+            <MenuItem onClick={handleClose}><DictChooser/></MenuItem>
+          </Menu>
+        </div>
       </Toolbar>
     </AppBar>
     <main className={classes.layout}>
         <div className={classes.heroContent}>
           <Grid container>
-            <Grid item>
-            <LangChooser />
-            <DictChooser />
+            <Grid item xs={4}>
+              {searchExpression ?
+                <InfiniteStems searchExpression={searchExpression} lemmaHandler={handleLemma}/> :
+                <p>Waiting for input</p>
+              }
             </Grid>
-            <Grid item xs={6}>
-              <FilterBar searchHandler={handleSearch}/>
+            <Grid item xs={8}>
+              {currentLemma ?
+                <Articles lemma={currentLemma}/> :
+                <Home/>
+              }
             </Grid>
-            <Grid item xs={6}>
-              <p>Current search: {searchExpression}</p>
-            </Grid>
-          <Grid item xs={4}>
-            {searchExpression ?
-              <InfiniteStems searchExpression={searchExpression} lemmaHandler={handleLemma}/> :
-              <p>Waiting for input</p>
-            }
           </Grid>
-          <Grid item xs={8}>
-            {currentLemma ?
-              <Articles lemma={currentLemma}/> :
-              <Home/>
-            }
-            </Grid>
-            </Grid>
         </div>
     </main>
     {/* Footer */}
