@@ -102,7 +102,7 @@ const AsyncApp = ({classes, match}) => {
   return (
     <React.Fragment>
     <CssBaseline />
-    <AppBar position='static' color='default' className={classes.appBar}>
+    <AppBar position='static' className={classes.appBar}>
       <Toolbar>
         <Typography variant='h6' color='inherit' noWrap className={classes.toolbarTitle}>
           <a href='http://sátni.org'>sátni.org</a>
