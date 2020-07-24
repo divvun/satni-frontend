@@ -5,7 +5,7 @@ import { useCookies } from 'react-cookie';
 const GET_LEMMAS = gql`
   query AllLemmas($inputValue: String!, $wantedLangs: [String]!,
                   $wantedDicts: [String]!, $after: String ) {
-      stemList(first:10,
+      stemList(first:50,
                search: $inputValue,
                wanted: $wantedLangs,
                wantedDicts: $wantedDicts
@@ -39,9 +39,9 @@ function useStems(inputValue) {
     }
   });
 
-  if (loading) return {loading};
-  if (error) return {error}
-  
+  if (loading && !data) return {loading, stems: []};
+  if (error) return {error, stems: []}
+
   const loadMore = () => (
     fetchMore({
     variables: {
@@ -65,7 +65,7 @@ function useStems(inputValue) {
     }
     }))
       return {
-        data,
+        stems: data.stemList.edges.map(({node}) => node),
         error,
         hasNextPage: data.stemList.pageInfo.hasNextPage,
         loading,
