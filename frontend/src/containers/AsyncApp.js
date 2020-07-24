@@ -30,9 +30,6 @@ const styles = theme => ({
   appBar: {
     position: 'relative'
   },
-  toolbarTitle: {
-    flex: 1
-  },
   layout: {
     width: 'auto',
     marginLeft: theme.spacing(3),
@@ -104,8 +101,8 @@ const AsyncApp = ({classes, match}) => {
     <CssBaseline />
     <AppBar position='static' className={classes.appBar}>
       <Toolbar>
-        <Typography variant='h6' color='inherit' noWrap className={classes.toolbarTitle}>
-          <a href='http://sátni.org'>sátni.org</a>
+        <Typography variant='h6' noWrap className={classes.toolbarTitle}>
+          sátni.org
         </Typography>
         <FilterBar searchHandler={handleSearch}/>
         <div>
