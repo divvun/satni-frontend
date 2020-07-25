@@ -1939,7 +1939,7 @@
   dependencies:
     "@lingui/babel-plugin-transform-react" "2.9.1"
 
-"@lingui/react@^2.9.1":
+"@lingui/react@^2.8.3", "@lingui/react@^2.9.1":
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/@lingui/react/-/react-2.9.1.tgz#6dee029a4067939859b43f4f3dd068cb611256c0"
   integrity sha512-LUpsw7zDUfS/iJWrBfmaVKcxjyNUQkMjBRuLVEzLHp32A6pK2CGFlDouBsEl1zbJn8gFdcBwWhTsh/FcXZCmXg==
@@ -12526,6 +12526,15 @@ react@^16.12.0, react@^16.8.3:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
 
+react@^16.8.6:
+  version "16.13.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
+  integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
@@ -13747,6 +13756,14 @@ store2@^2.7.1:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.10.0.tgz#46b82bb91878daf1b0d56dec2f1d41e54d5103cf"
   integrity sha512-tWEpK0snS2RPUq1i3R6OahfJNjWCQYNxq0+by1amCSuw0mXtymJpzmZIeYpA1UAa+7B0grCpNYIbDcd7AgTbFg==
+
+storybook-addon-linguijs@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/storybook-addon-linguijs/-/storybook-addon-linguijs-1.0.10.tgz#bd4a939d6d09b046614c2cfcbf2ca3c2c520d779"
+  integrity sha512-/kyXQ4biqNeH2TNrEMd8kTtyxToFjjAJd1mhmE5+U3cfHbHNpokMyagsMYPpEAzgUMpzDp8cc5nHNO6T8seXEw==
+  dependencies:
+    "@lingui/react" "^2.8.3"
+    react "^16.8.6"
 
 storybook-chromatic@^2.2.2:
   version "2.2.2"
