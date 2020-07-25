@@ -28,7 +28,10 @@ const dictGroup = {
             'translation': 'Eadni ii dáidde jienastit Bargiidbellodaga dán jagi válggas.'
           }
         ],
-        'restriction': 'om julenissen',
+        'restriction': {
+          restriction: 'om julenissen',
+          attributes: {}
+        },
         'translations': [
           {
             'language': 'sme',
