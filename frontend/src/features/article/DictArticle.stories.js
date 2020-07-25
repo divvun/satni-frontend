@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import DictArticle from './DictArticle';
 
 const dictGroup = {
-  'dict': 'nobsme',
+  'dict': 'gtnobsme',
   'from': {
     'language': 'nob',
     'lookupLemmas': [
