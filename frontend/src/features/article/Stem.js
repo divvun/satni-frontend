@@ -11,16 +11,17 @@ const useStyles = makeStyles({
   }
 });
 
-const Stem = ({ stem }) => {
+const Stem = ({ stem, restriction }) => {
   const classes = useStyles();
   const {lemma, pos, language} = stem;
   return (
     <Typography>
       <Link component='a' href={`/details?lemma=${lemma}&lang=${language}&pos=${pos}`}>
-        <Typography component='span' className={classes.lemma}>
+      {pos && <Typography component='span' color='textSecondary' className={classes.pos}>({pos}) </Typography>}
+      <Typography component='span' className={classes.lemma}>
           {lemma}
         </Typography>
-        {pos && <Typography component='span' color='textSecondary' className={classes.pos}> ({pos})</Typography>}
+        {restriction && <Typography component='span' className={classes.pos}> ({restriction})</Typography>}
       </Link>
     </Typography>
   );
