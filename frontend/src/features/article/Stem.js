@@ -32,13 +32,11 @@ const Stem = ({ stem, restriction }) => {
   return (
     <>
       <Typography>
-        <Link component='a' href={`/details?lemma=${lemma}&lang=${language}&pos=${pos}`}>
         {pos && <Typography component='span' color='textSecondary' className={classes.pos}>({pos}) </Typography>}
         <Typography component='span' className={classes.lemma}>
             {lemma}
           </Typography>
           {restriction && <Typography component='span' className={classes.pos}> ({restriction.restriction})</Typography>}
-        </Link>
         <IconButton aria-label="Paradigm" component="span" onClick={handleClickParadigmDialog}>
           <InfoOutlined/>
         </IconButton>
