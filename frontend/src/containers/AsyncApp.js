@@ -45,9 +45,15 @@ const styles = theme => ({
     padding: `${theme.spacing(2)}px 0 ${theme.spacing(2)}px`
   },
   footer: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(2),
     borderTop: `1px solid ${theme.palette.divider}`,
-    padding: `${theme.spacing(6)}px 0`
+    padding: `${theme.spacing(2)}px 0`,
+    position: 'absolute',
+    bottom: 0,
+    width: '98% !important'
+  },
+  footerLinks: {
+    marginRight: theme.spacing(2),
   }
 });
 
@@ -163,7 +169,7 @@ const AsyncApp = ({classes, match}) => {
               {footer.title}
             </Typography>
             {footer.description.map(item => (
-              <Typography key={item.text} variant='subtitle1' color='textSecondary'>
+              <Typography key={item.text} component='span' variant='subtitle1' color='textSecondary' className={classes.footerLinks}>
                 <a href={item.address}>{item.text}</a>
               </Typography>
               ))}
