@@ -21,7 +21,7 @@ const Stem = ({ stem, restriction }) => {
       <Typography component='span' className={classes.lemma}>
           {lemma}
         </Typography>
-        {restriction && <Typography component='span' className={classes.pos}> ({restriction})</Typography>}
+        {restriction && <Typography component='span' className={classes.pos}> ({restriction.restriction})</Typography>}
       </Link>
     </Typography>
   );
