@@ -28,7 +28,7 @@ const DictArticle = ({dictGroup}) => {
               </Grid>
               <Grid item xs={6}>
                 {translationGroup.translations.map((stem, index) =>
-                  <Stem key={index} stem={stem} />)
+                  <Stem key={index} stem={stem} restriction={translationGroup.restriction}/>)
                 }
               </Grid>
             </Grid>
