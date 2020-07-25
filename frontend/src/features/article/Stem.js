@@ -9,10 +9,27 @@ import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined'
 import ParadigmDialog from 'features/paradigm/ParadigmDialog'
 
 const useStyles = makeStyles({
+  stemContainer: {
+    width: '100%',
+    borderStyle: 'dotted',
+    borderWidth: 1
+  },
+  stem: {
+    flexGrow: 1
+  },
   lemma: {
     fontWeight: 'bold'
   },
-  pos: {
+  rightGroup: {
+    float: 'right',
+    justify: 'space-evenly'
+  },
+  icons: {
+    margin: 0,
+    paddingTop: 0,
+    paddingBottom: 0,
+    paddingLeft: 5,
+    paddingRight: 5
   }
 });
 
@@ -30,27 +47,25 @@ const Stem = ({ stem, restriction }) => {
   }
 
   return (
-    <>
-      <Typography>
-        {pos && <Typography component='span' color='textSecondary' className={classes.pos}>({pos}) </Typography>}
-        <Typography component='span' className={classes.lemma}>
-            {lemma}
-          </Typography>
-          {restriction && <Typography component='span' className={classes.pos}> ({restriction.restriction})</Typography>}
-        <IconButton aria-label="Paradigm" component="span" onClick={handleClickParadigmDialog}>
+    <Typography className={classes.stemContainer}>
+      <Typography component='span' className={classes.lemma}>{lemma}</Typography>
+      {restriction && <Typography component='span'> ({restriction.restriction})</Typography>}
+      <span className={classes.rightGroup}>
+        {pos && <Typography component='span' color='textSecondary' className={classes.pos}>({pos})</Typography>}
+        <IconButton className={classes.icons} component='span' aria-label="Paradigm" onClick={handleClickParadigmDialog}>
           <InfoOutlined/>
         </IconButton>
-        <IconButton aria-label="Corpus" component="span">
+        <IconButton className={classes.icons} component='span' aria-label="Corpus">
           <ViewHeadlineOutlined/>
         </IconButton>
-      </Typography>
+      </span>
       <ParadigmDialog
         lemma={lemma}
         pos={pos}
         language={language}
         open={openParadigm}
         onClose={handleCloseParadigmDialog} />
-    </>
+    </Typography>
   );
 };
 
