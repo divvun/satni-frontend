@@ -21,8 +21,6 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const redirect = (stem) => <Redirect to={`/article/${stem.stem}`} push />
-
 const InfiniteStems = ({lemmaHandler, searchExpression}) => {
   const {stems, loading, error, loadMore, hasNextPage} = useStems(searchExpression)
   const classes = useStyles();
