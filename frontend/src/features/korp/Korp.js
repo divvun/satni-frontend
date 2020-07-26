@@ -11,8 +11,8 @@ const KorpLink = ({language, lemma}) => {
   const dispatch = useDispatch();
   const searchString = `Lookup ${lemma} in Korp`;
   const korpAddress = language !== 'sme'
-  ? `http://gtweb.uit.no/korp/?mode=${language}#?search=cqp|[lemma%3D"${lemma}"]`
-  : `http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D"${lemma}"]`;
+    ? `http://gtweb.uit.no/korp/?mode=${language}#?search=cqp|[lemma%3D"${lemma}"]`
+    : `http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D"${lemma}"]`;
 
   useEffect(() => {
     dispatch(isLemmaInKorp(language, lemma));
@@ -39,9 +39,9 @@ const Korp = ({language, lemma}) => {
   return (
     <div>
       {
-      korpLangs.has(language)
-      ? <KorpLink language={language} lemma={lemma} />
-      : <Typography component='span'><Trans>There is no corpus for {language}</Trans></Typography>}
+        korpLangs.has(language)
+          ? <KorpLink language={language} lemma={lemma} />
+          : <Typography component='span'><Trans>There is no corpus for {language}</Trans></Typography>}
     </div>
   );
 };

@@ -4,13 +4,13 @@ import {useQuery} from '@apollo/react-hooks';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import IconButton from '@material-ui/core/IconButton';
-import InfoOutlined from '@material-ui/icons/InfoOutlined'
-import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined'
+import InfoOutlined from '@material-ui/icons/InfoOutlined';
+import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import ParadigmDialog from 'features/paradigm/ParadigmDialog'
+import ParadigmDialog from 'features/paradigm/ParadigmDialog';
 
 const HAS_STEM = gql`
   query HasStem($stem: String!) {
@@ -18,7 +18,7 @@ const HAS_STEM = gql`
       stem
     }
   }
-`
+`;
 
 const useStyles = makeStyles({
   stemContainer: {
@@ -55,17 +55,17 @@ const Stem = ({ stem, restriction }) => {
         stem: lemma
       }
     }
-  )
+  );
 
   const handleClickParadigmDialog = () => {
-    setOpenParadigm(true)
-  }
+    setOpenParadigm(true);
+  };
 
   const handleCloseParadigmDialog = () => {
-    setOpenParadigm(false)
-  }
+    setOpenParadigm(false);
+  };
 
-  if (loading) return <CircularProgress className={classes.progress} size={20}/>
+  if (loading) return <CircularProgress className={classes.progress} size={20}/>;
 
   return (
     <Typography className={classes.stemContainer}>

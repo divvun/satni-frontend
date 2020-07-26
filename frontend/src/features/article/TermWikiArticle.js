@@ -24,11 +24,11 @@ const SourceLink = ({termwikiref}) => (
   <Grid item xs={12}>
     <Typography>
       <Trans>Source:
-      <Link
-        href={`https://satni.uit.no/termwiki/index.php?title=${termwikiref}`}
-        target='_blank' rel='noopener noreferrer'>
+        <Link
+          href={`https://satni.uit.no/termwiki/index.php?title=${termwikiref}`}
+          target='_blank' rel='noopener noreferrer'>
         TermWiki
-      </Link>
+        </Link>
       </Trans>
     </Typography>
   </Grid>

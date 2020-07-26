@@ -18,8 +18,8 @@ const DictChooser = () => {
   const handleChange = (event) => {
     const oldDicts = cookies.wantedDicts;
     const newDicts = oldDicts.includes(event.target.name) ?
-                      oldDicts.filter(value => value !== event.target.name) :
-                      [...oldDicts, event.target.name];
+      oldDicts.filter(value => value !== event.target.name) :
+      [...oldDicts, event.target.name];
     setCookie('wantedDicts', newDicts);
   };
 
@@ -37,7 +37,7 @@ const DictChooser = () => {
                   checked={cookies.wantedDicts.includes(dict)}
                   onChange={handleChange}
                   name={dict}
-               />
+                />
               }
               label={`${dict}label`}
             />
