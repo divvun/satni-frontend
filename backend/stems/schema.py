@@ -11,7 +11,15 @@ class Query(graphene.ObjectType):
         StemType,
         search=graphene.String(),
         wanted=graphene.List(graphene.String),
-        wanted_dicts=graphene.List(graphene.String))
+        wanted_dicts=graphene.List(graphene.String)
+    )
+    has_stem = graphene.List(
+        StemType,
+        exact=graphene.String()
+    )
+
+    def resolve_has_stem(self, info, exact, **kwargs):
+        return Stem.objects(stem=exact)
 
     def resolve_stem_list(self, info, **kwargs):
         print('stem kwargs:', kwargs)
