@@ -30,10 +30,9 @@ langs = {
 
 
 def make_lemma(lang, expression):
-    l = Lemma(
-        lemma=expression['expression'],
-        pos=expression['pos'],
-        language=langs[lang])
+    l = Lemma(lemma=expression['expression'],
+              pos=expression['pos'],
+              language=langs[lang])
     l.save()
 
     return l
@@ -46,12 +45,11 @@ def make_terms(lang, concept):
         if not LEMMAS.get(lemma_key):
             LEMMAS[lemma_key] = make_lemma(lang, expression)
 
-        term = Term(
-            status=expression.get('status'),
-            sanctioned=expression.get('sanctioned', False),
-            note=expression.get('note'),
-            source=expression.get('source'),
-            expression=LEMMAS.get(lemma_key))
+        term = Term(status=expression.get('status'),
+                    sanctioned=expression.get('sanctioned', False),
+                    note=expression.get('note'),
+                    source=expression.get('source'),
+                    expression=LEMMAS.get(lemma_key))
         yield term
 
 
@@ -134,10 +132,9 @@ def normalise_lemma(lemma: str) -> str:
 
 
 def l_or_t2stem(element, src):
-    l = Lemma(
-        lemma=normalise_lemma(element.text),
-        language=src,
-        pos=element.get('pos'))
+    l = Lemma(lemma=normalise_lemma(element.text),
+              language=src,
+              pos=element.get('pos'))
     l.save()
 
     return l
@@ -160,15 +157,13 @@ def make_lemmas(translations, target):
 
 def make_restriction(restriction_element):
     if restriction_element is not None:
-        return Restriction(
-            restriction=restriction_element.text,
-            attributes=str(restriction_element.attrib))
+        return Restriction(restriction=restriction_element.text,
+                           attributes=str(restriction_element.attrib))
 
 
 def make_example(example):
-    return ExampleGroup(
-        example=example.find('./x').text,
-        translation=example.find('./xt').text)
+    return ExampleGroup(example=example.find('./x').text,
+                        translation=example.find('./xt').text)
 
 
 def make_examples(examples):
@@ -192,13 +187,12 @@ def make_translation_groups(translation_groups, target):
 
 def make_entries(dictxml, dictname, src, target):
     for entry in dictxml.iter('e'):
-        d = DictEntry(
-            dictName=f'{dictname}{src}{target}',
-            srcLang=src,
-            targetLang=target,
-            lookupLemmas=make_lemmas(entry.xpath('.//l'), src),
-            translationGroups=make_translation_groups(
-                entry.xpath('.//tg'), target))
+        d = DictEntry(dictName=f'{dictname}{src}{target}',
+                      srcLang=src,
+                      targetLang=target,
+                      lookupLemmas=make_lemmas(entry.xpath('.//l'), src),
+                      translationGroups=make_translation_groups(
+                          entry.xpath('.//tg'), target))
 
         for lookupLemma in d.lookupLemmas:
             if not STEMS.get(lookupLemma.lemma):
@@ -222,16 +216,16 @@ def import_dict(pair):
             # TODO: handle Der_ files
             try:
                 print(f'\t{os.path.basename(xml_file)}')
-                parser = etree.XMLParser(
-                    remove_comments=True, dtd_validation=True)
+                parser = etree.XMLParser(remove_comments=True,
+                                         dtd_validation=True)
                 dictxml = etree.parse(xml_file, parser=parser)
-                make_entries(
-                    dictxml, dictname='gt', src=pair[:3], target=pair[3:])
+                # make_entries(
+                #     dictxml, dictname='gt', src=pair[:3], target=pair[3:])
             except etree.XMLSyntaxError as error:
-                print(
-                    'Syntax error in {} '
-                    'with the following error:\n{}\n'.format(xml_file, error),
-                    file=sys.stderr)
+                print('Syntax error in {} '
+                      'with the following error:\n{}\n'.format(
+                          xml_file, error),
+                      file=sys.stderr)
 
 
 def make_dicts():
@@ -244,18 +238,17 @@ def make_dicts():
 
 def import_sammalahti():
     print(f'Pekka Sammallahtis sme-fin dictionary')
-    xml_file = os.path.join(
-        os.getenv('HOME'), 'repos/sammallahti/sammallahti.xml')
+    xml_file = os.path.join(os.getenv('HOME'),
+                            'repos/sammallahti/sammallahti.xml')
     try:
         print(f'\t{os.path.basename(xml_file)}')
         parser = etree.XMLParser(remove_comments=True)
         dictxml = etree.parse(xml_file, parser=parser)
         make_entries(dictxml, dictname='pk', src='sme', target='fin')
     except etree.XMLSyntaxError as error:
-        print(
-            'Syntax error in {} '
-            'with the following error:\n{}\n'.format(xml_file, error),
-            file=sys.stderr)
+        print('Syntax error in {} '
+              'with the following error:\n{}\n'.format(xml_file, error),
+              file=sys.stderr)
 
 
 def make_stems():
@@ -263,11 +256,10 @@ def make_stems():
     c2 = 0
     for stem in STEMS:
         try:
-            s = Stem(
-                stem=stem,
-                srclangs=list(STEMS[stem]['fromlangs']),
-                targetlangs=list(STEMS[stem]['tolangs']),
-                dicts=list(STEMS[stem]['dicts']))
+            s = Stem(stem=stem,
+                     srclangs=list(STEMS[stem]['fromlangs']),
+                     targetlangs=list(STEMS[stem]['tolangs']),
+                     dicts=list(STEMS[stem]['dicts']))
             s.save()
         except ValidationError as error:
             print(error)
