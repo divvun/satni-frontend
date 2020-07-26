@@ -11,6 +11,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import { Redirect } from 'react-router-dom';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyles = makeStyles(theme => ({
   infiniteList: {
@@ -30,7 +31,7 @@ const InfiniteStems = ({lemmaHandler, searchExpression}) => {
   const loadMoreStems = loading ? () => {} : loadMore;
   const isStemLoaded = index => !hasNextPage || index < stems.length;
 
-  if (loading && stems.length === 0) return <p>Loading ...</p>
+  if (loading && stems.length === 0) return <CircularProgress size={16}/>
 
   return (
 
@@ -52,10 +53,9 @@ const InfiniteStems = ({lemmaHandler, searchExpression}) => {
               {({index, style}) => {
                 let content;
                 if (!isStemLoaded(index)) {
-                  content = 'Loading...';
                   return (
                     <ListItem button key={index} style={style}>
-                      <ListItemText primary={content}/>
+                      <CircularProgress size={16} />
                     </ListItem>
                   )
                 } else {
