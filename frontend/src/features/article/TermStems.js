@@ -9,7 +9,7 @@ const createLang = (lang, stems) => (
   stems.filter(stem => stem.lang === lang).map((stem, i) => (
     <TermStem key={i} stem={{...stem, key: i}} />
   )
-));
+  ));
 
 const createTable = (stems) => {
   const table = [];

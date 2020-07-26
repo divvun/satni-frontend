@@ -34,7 +34,7 @@ const DictArticle = ({dictGroup}) => {
             </Grid>
             {translationGroup.examples && <Examples examples={translationGroup.examples}/>}
           </React.Fragment>
-        )
+        );
       })}
       <Source className={classes.paper} source={dict} lemma={dictGroup.from.lookupLemmas[0].lemma} />
     </>

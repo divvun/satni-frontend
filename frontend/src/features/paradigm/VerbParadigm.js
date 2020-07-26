@@ -215,7 +215,7 @@ const LangTable = ({analyses, language}) => {
           }
           return null;
         })
-    }
+        }
       </TableBody>
     </Table>
   );
@@ -223,70 +223,70 @@ const LangTable = ({analyses, language}) => {
 
 const ExtraContent = ({listOfAnalyses, analyses}) => (
   <>
-  {listOfAnalyses.map((uff, index) => analyses[uff[1]] ? <div key={index}>({uff[0]}) {analyses[uff[1]].map(wordform => <span key={wordform}>{wordform}</span>)}</div> : null)}
+    {listOfAnalyses.map((uff, index) => analyses[uff[1]] ? <div key={index}>({uff[0]}) {analyses[uff[1]].map(wordform => <span key={wordform}>{wordform}</span>)}</div> : null)}
   </>
-)
+);
 
 const Content = ({analyses, language}) => {
   switch (language) {
-    case 'sma':
-      return <div>
-        <LangTable analyses={analyses} language={language} />
-        <ExtraContent
+  case 'sma':
+    return <div>
+      <LangTable analyses={analyses} language={language} />
+      <ExtraContent
         listOfAnalyses={[
           ['ij', 'V+ConNeg'],
           ['lea', 'V+PrfPrc'],
           ['lea', 'V+Ger']
         ]}
         analyses={analyses}/>
-      </div>;
-    case 'sme':
-      return <div>
-        <LangTable analyses={analyses} language={language} />
-        <ExtraContent
+    </div>;
+  case 'sme':
+    return <div>
+      <LangTable analyses={analyses} language={language} />
+      <ExtraContent
         listOfAnalyses={[
           ['otne in', 'V+Ind+Prs+ConNeg'],
           ['ikte in', 'V+Ind+Prt+ConNeg'],
           ['lean', 'V+PrfPrc']
         ]}
         analyses={analyses}/>
-      </div>;
-    case 'smj':
-      return <div>
-        <LangTable analyses={analyses} language={language} />
-        <ExtraContent
+    </div>;
+  case 'smj':
+    return <div>
+      <LangTable analyses={analyses} language={language} />
+      <ExtraContent
         listOfAnalyses={[
           ['uddni iv', 'V+Ind+ConNeg'],
           ['iektu ittjiv', 'V+Ind+ConNeg'],
           ['lav', 'V+PrfPrc']
         ]}
         analyses={analyses}/>
-      </div>;
-    case 'smn':
-      return <div>
-        <LangTable analyses={analyses} language={language} />
-        <ExtraContent
+    </div>;
+  case 'smn':
+    return <div>
+      <LangTable analyses={analyses} language={language} />
+      <ExtraContent
         listOfAnalyses={[
           ['onne jiem', 'V+Ind+Prs+ConNeg'],
           ['jieht jiem', 'V+Ind+Prt+ConNeg'],
           ['lam', 'V+PrfPrc']
         ]}
         analyses={analyses}/>
-      </div>
-    case 'sms':
-      return <div>
-        <LangTable analyses={analyses} language={language} />
-        <ExtraContent
+    </div>;
+  case 'sms':
+    return <div>
+      <LangTable analyses={analyses} language={language} />
+      <ExtraContent
         listOfAnalyses={[
-        ['täʹbbe jiõm', 'V+Ind+Prs+ConNeg'],
-        ['jåhtta jiõm', 'V+Ind+Prt+ConNeg']
-      ]}
-      analyses={analyses}/>
-      </div>;
-    case 'fin':
-      return <FinContent analyses={analyses} />;
-    default:
-      return null;
+          ['täʹbbe jiõm', 'V+Ind+Prs+ConNeg'],
+          ['jåhtta jiõm', 'V+Ind+Prt+ConNeg']
+        ]}
+        analyses={analyses}/>
+    </div>;
+  case 'fin':
+    return <FinContent analyses={analyses} />;
+  default:
+    return null;
   }
 };
 

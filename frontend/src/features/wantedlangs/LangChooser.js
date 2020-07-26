@@ -18,8 +18,8 @@ const LangChooser = () => {
   const handleChange = (event) => {
     const oldLangs = cookies.wantedLangs;
     const newLangs = oldLangs.includes(event.target.name) ?
-                      oldLangs.filter(value => value !== event.target.name) :
-                      [...oldLangs, event.target.name];
+      oldLangs.filter(value => value !== event.target.name) :
+      [...oldLangs, event.target.name];
     setCookie('wantedLangs', newLangs);
   };
 
@@ -37,7 +37,7 @@ const LangChooser = () => {
                   checked={cookies.wantedLangs.includes(lang)}
                   onChange={handleChange}
                   name={lang}
-               />
+                />
               }
               label={`${lang}label`}
             />

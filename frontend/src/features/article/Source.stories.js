@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Trans } from "@lingui/macro";
+import { Trans } from '@lingui/macro';
 
 import Source from './Source';
 

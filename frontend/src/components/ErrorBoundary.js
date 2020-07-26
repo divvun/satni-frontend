@@ -20,12 +20,12 @@ export default class ErrorBoundary extends Component {
 
   render () {
     if (this.state.error) {
-            // render fallback UI
+      // render fallback UI
       return (
         <a onClick={() => Sentry.showReportDialog()}>Report feedback</a>
       );
     } else {
-            // when there's not an error, render children untouched
+      // when there's not an error, render children untouched
       return this.props.children;
     }
   }

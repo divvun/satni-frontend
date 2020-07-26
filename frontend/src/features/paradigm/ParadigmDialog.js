@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Paradigm from './Paradigm'
+import Paradigm from './Paradigm';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,11 +22,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ParadigmDialog = (props) => {
-  const classes = useStyles()
-  const {lemma, pos, language, open, onClose} = props
+  const classes = useStyles();
+  const {lemma, pos, language, open, onClose} = props;
 
   const handleClose = () => {
-      onClose();
+    onClose();
   };
 
   return (
@@ -37,9 +37,9 @@ const ParadigmDialog = (props) => {
         </Typography>
         {onClose ? (
           <IconButton
-              aria-label="close"
-              onClick={onClose}
-              className={classes.closeButton}>
+            aria-label="close"
+            onClick={onClose}
+            className={classes.closeButton}>
             <CloseIcon />
           </IconButton>
         ) : null}
@@ -49,7 +49,7 @@ const ParadigmDialog = (props) => {
         language={language}
         pos={pos}/>
     </Dialog>
-  )
-}
+  );
+};
 
 export default ParadigmDialog;

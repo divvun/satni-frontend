@@ -269,15 +269,15 @@ const LangTable = ({analyses, language}) => {
 
 const Content = ({analyses, language}) => {
   switch (language) {
-    case 'sma':
-    case 'sme':
-    case 'smj':
-    case 'smn':
-    case 'sms':
-    case 'fin':
-      return <LangTable analyses={analyses} language={language} />;
-    default:
-      return null;
+  case 'sma':
+  case 'sme':
+  case 'smj':
+  case 'smn':
+  case 'sms':
+  case 'fin':
+    return <LangTable analyses={analyses} language={language} />;
+  default:
+    return null;
   }
 };
 

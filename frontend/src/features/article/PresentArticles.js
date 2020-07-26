@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { mapArticlesByLanguagePair } from 'utils';
 import DictArticle from './DictArticle';
 import TermWikiArticle from './TermWikiArticle';
-import { langName } from 'langThings'
+import { langName } from 'langThings';
 
 const useStyles = makeStyles(theme => ({
   list: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Articles = ({articles}) => {
-  const articlesMappedByLanguagePair = mapArticlesByLanguagePair(articles)
+  const articlesMappedByLanguagePair = mapArticlesByLanguagePair(articles);
   const classes = useStyles();
 
   return (
@@ -75,9 +75,9 @@ const Articles = ({articles}) => {
               })}
             </List>
           </Paper>
-        )
+        );
       })}
-      </>
+    </>
   );
 };
 

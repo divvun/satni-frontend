@@ -1819,9 +1819,9 @@ storiesOf('PresentArticles', module)
     articles={arpeggio} />)
   .add('TermWikiArticle vuorka', () => <PresentArticles
     articles={vuorka} />);
-  // .add('All types', () => <PresentArticles
-  //   articles={[
-  //     resultDictWithExamples[0],
-  //     resultDictWithoutExamples[0],
-  //     termGroup
-  //   ]} />);
+// .add('All types', () => <PresentArticles
+//   articles={[
+//     resultDictWithExamples[0],
+//     resultDictWithoutExamples[0],
+//     termGroup
+//   ]} />);
