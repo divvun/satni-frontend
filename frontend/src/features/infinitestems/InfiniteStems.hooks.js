@@ -31,28 +31,28 @@ function useStems(inputValue) {
 
   const {data, loading, fetchMore, error} = useQuery(
     GET_LEMMAS, {
-    notifyOnNetworkStatusChange: true,
-    variables: {
-      inputValue,
-      wantedLangs: cookies.wantedLangs,
-      wantedDicts: cookies.wantedDicts,
-    }
-  });
+      notifyOnNetworkStatusChange: true,
+      variables: {
+        inputValue,
+        wantedLangs: cookies.wantedLangs,
+        wantedDicts: cookies.wantedDicts,
+      }
+    });
 
   if (loading && !data) return {loading, stems: []};
-  if (error) return {error, stems: []}
+  if (error) return {error, stems: []};
 
   const loadMore = () => (
     fetchMore({
-    variables: {
-      after: data.stemList.pageInfo.endCursor
-    },
-    updateQuery: (previousResult, { fetchMoreResult }) => {
-      const newEdges = fetchMoreResult.stemList.edges;
-      const pageInfo = fetchMoreResult.stemList.pageInfo;
+      variables: {
+        after: data.stemList.pageInfo.endCursor
+      },
+      updateQuery: (previousResult, { fetchMoreResult }) => {
+        const newEdges = fetchMoreResult.stemList.edges;
+        const pageInfo = fetchMoreResult.stemList.pageInfo;
 
-      return newEdges.length
-        ? {
+        return newEdges.length
+          ? {
             // Put the new comments at the end of the list and update `pageInfo`
             // so we have the new `endCursor` and `hasNextPage` values
             stemList: {
@@ -61,16 +61,16 @@ function useStems(inputValue) {
               pageInfo
             }
           }
-        : previousResult;
-    }
-    }))
-      return {
-        stems: data.stemList.edges.map(({node}) => node),
-        error,
-        hasNextPage: data.stemList.pageInfo.hasNextPage,
-        loading,
-        loadMore,
-      };
-    }
+          : previousResult;
+      }
+    }));
+  return {
+    stems: data.stemList.edges.map(({node}) => node),
+    error,
+    hasNextPage: data.stemList.pageInfo.hasNextPage,
+    loading,
+    loadMore,
+  };
+}
 
 export default useStems;

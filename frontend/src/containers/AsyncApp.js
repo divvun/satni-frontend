@@ -91,58 +91,58 @@ const Home = () => (
 );
 
 const AsyncApp = ({classes, match}) => {
-  const [currentLemma, setCurrentLemma] = useState('')
-  const [searchExpression, setSearchExpression] = useState('')
+  const [currentLemma, setCurrentLemma] = useState('');
+  const [searchExpression, setSearchExpression] = useState('');
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
-  const handleLemma = lemma => setCurrentLemma(lemma)
-  const handleSearch = event => setSearchExpression(event.target.value)
+  const handleLemma = lemma => setCurrentLemma(lemma);
+  const handleSearch = event => setSearchExpression(event.target.value);
 
   const handleMenu = (event) => setAnchorEl(event.currentTarget);
   const handleClose = () => setAnchorEl(null);
 
   return (
     <React.Fragment>
-    <CssBaseline />
-    <AppBar position='static' className={classes.appBar}>
-      <Toolbar>
-        <Typography variant='h6' noWrap className={classes.toolbarTitle}>
+      <CssBaseline />
+      <AppBar position='static' className={classes.appBar}>
+        <Toolbar>
+          <Typography variant='h6' noWrap className={classes.toolbarTitle}>
           sátni.org
-        </Typography>
-        <FilterBar searchHandler={handleSearch}/>
-        <div>
-          <IconButton
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleMenu}
-            color="inherit"
-          >
-            <MenuIcon/>
-          </IconButton>
-          <Menu
-            id="menu-appbar"
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-            open={open}
-            onClose={handleClose}
-          >
-            <MenuItem onClick={handleClose}><LangChooser/></MenuItem>
-            <MenuItem onClick={handleClose}><DictChooser/></MenuItem>
-          </Menu>
-        </div>
-      </Toolbar>
-    </AppBar>
-    <main className={classes.layout}>
+          </Typography>
+          <FilterBar searchHandler={handleSearch}/>
+          <div>
+            <IconButton
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleMenu}
+              color="inherit"
+            >
+              <MenuIcon/>
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorEl}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={open}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleClose}><LangChooser/></MenuItem>
+              <MenuItem onClick={handleClose}><DictChooser/></MenuItem>
+            </Menu>
+          </div>
+        </Toolbar>
+      </AppBar>
+      <main className={classes.layout}>
         <div className={classes.heroContent}>
           <Grid container>
             <Grid item xs={4}>
@@ -159,27 +159,27 @@ const AsyncApp = ({classes, match}) => {
             </Grid>
           </Grid>
         </div>
-    </main>
-    {/* Footer */}
-    <footer className={classNames(classes.footer, classes.layout)}>
-      <Grid container spacing={0} justify='space-evenly'>
-        {footers.map(footer => (
-          <Grid item xs key={footer.title}>
-            <Typography variant='h6' color='textPrimary' gutterBottom>
-              {footer.title}
-            </Typography>
-            {footer.description.map(item => (
-              <Typography key={item.text} component='span' variant='subtitle1' color='textSecondary' className={classes.footerLinks}>
-                <a href={item.address}>{item.text}</a>
+      </main>
+      {/* Footer */}
+      <footer className={classNames(classes.footer, classes.layout)}>
+        <Grid container spacing={0} justify='space-evenly'>
+          {footers.map(footer => (
+            <Grid item xs key={footer.title}>
+              <Typography variant='h6' color='textPrimary' gutterBottom>
+                {footer.title}
               </Typography>
+              {footer.description.map(item => (
+                <Typography key={item.text} component='span' variant='subtitle1' color='textSecondary' className={classes.footerLinks}>
+                  <a href={item.address}>{item.text}</a>
+                </Typography>
               ))}
-          </Grid>
+            </Grid>
           ))}
-      </Grid>
-    </footer>
-    {/* End footer */}
+        </Grid>
+      </footer>
+      {/* End footer */}
 
-  </React.Fragment>)
+    </React.Fragment>);
 };
 
 AsyncApp.propTypes = {

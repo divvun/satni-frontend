@@ -37,20 +37,20 @@ const Paradigm = ({lemma, language, pos}) => {
   }
 
   switch (pos) {
-    case 'A':
-      return <AdjParadigm
-        paradigm={paradigms[stemToKey({lemma, pos, language})]}
-        language={language} />;
-    case 'N':
-      return <NounParadigm
-        paradigm={paradigms[stemToKey({lemma, pos, language})]}
-        language={language} />;
-    case 'V':
-      return <VerbParadigm
-        paradigm={paradigms[stemToKey({lemma, pos, language})]}
-        language={language} />;
-    default:
-      return <Typography>Failed to make paradigm for {lemma}, {language}, {pos}</Typography>;
+  case 'A':
+    return <AdjParadigm
+      paradigm={paradigms[stemToKey({lemma, pos, language})]}
+      language={language} />;
+  case 'N':
+    return <NounParadigm
+      paradigm={paradigms[stemToKey({lemma, pos, language})]}
+      language={language} />;
+  case 'V':
+    return <VerbParadigm
+      paradigm={paradigms[stemToKey({lemma, pos, language})]}
+      language={language} />;
+  default:
+    return <Typography>Failed to make paradigm for {lemma}, {language}, {pos}</Typography>;
   }
 };
 

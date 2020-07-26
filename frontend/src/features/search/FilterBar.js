@@ -63,6 +63,6 @@ const FilterBar = ({searchHandler}) => {
         inputProps={{ 'aria-label': 'search' }}
       />
     </div>
-  )
-}
-export default FilterBar
+  );
+};
+export default FilterBar;
