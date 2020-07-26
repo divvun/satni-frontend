@@ -16,7 +16,6 @@ class Mutation(lemmas.schema.Mutations, graphene.ObjectType):
     pass
 
 
-schema = graphene.Schema(
-    query=Query,
-    mutation=Mutation,
-    types=[stems.types.StemType, terms.types.ConceptType])
+schema = graphene.Schema(query=Query,
+                         mutation=Mutation,
+                         types=[stems.types.StemType, terms.types.ConceptType])

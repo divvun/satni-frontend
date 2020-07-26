@@ -1,5 +1,4 @@
 import graphene
-
 from graphene_mongo.fields import MongoengineConnectionField
 
 from .models import Lemma
@@ -9,8 +8,8 @@ from .types import LemmaType
 
 
 class Query(graphene.ObjectType):
-    lemma_list = MongoengineConnectionField(
-        LemmaType, search=graphene.String())
+    lemma_list = MongoengineConnectionField(LemmaType,
+                                            search=graphene.String())
 
     def resolve_lemma_list(self, info, search=None, **kwargs):
         if search:

@@ -9,11 +9,11 @@ from .types import DictEntryType
 
 
 class Query(graphene.ObjectType):
-    dict_entry_list = graphene.List(
-        DictEntryType,
-        exact=graphene.String(),
-        wanted=graphene.List(graphene.String),
-        wanted_dicts=graphene.List(graphene.String))
+    dict_entry_list = graphene.List(DictEntryType,
+                                    exact=graphene.String(),
+                                    wanted=graphene.List(graphene.String),
+                                    wanted_dicts=graphene.List(
+                                        graphene.String))
 
     def resolve_dict_entry_list(self,
                                 info,

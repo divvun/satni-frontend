@@ -1,5 +1,4 @@
 import graphene
-
 from django.core.exceptions import ObjectDoesNotExist
 
 from .models import Lemma

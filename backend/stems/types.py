@@ -1,5 +1,4 @@
 from graphene import relay
-
 from graphene_mongo import MongoengineObjectType
 
 from .models import Stem

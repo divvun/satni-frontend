@@ -1,7 +1,8 @@
-from lemmas.models import Lemma
 from mongoengine import Document, EmbeddedDocument
 from mongoengine.fields import (BooleanField, EmbeddedDocumentField, ListField,
                                 ObjectIdField, ReferenceField, StringField)
+
+from lemmas.models import Lemma
 
 
 class ExampleGroup(EmbeddedDocument):
