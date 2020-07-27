@@ -5,11 +5,10 @@ import {
 import { useCookies } from 'react-cookie';
 import { Trans } from '@lingui/macro';
 import gql from 'graphql-tag';
-import { Query } from '@apollo/react-components';
 import { elemmas2ConceptPairs, dictBackend2Frontend } from 'utils';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client';
 
 const query2articlelist = (lemma, data) => {
   const termList = elemmas2ConceptPairs(lemma, data.conceptList);
@@ -112,28 +111,24 @@ const Articles = ({lemma}) => {
       }
     `;
 
-  return (
-    <Query
-      query={GET_ARTICLES}
-      variables={{
+  const {data, loading, fetchMore, error} = useQuery(
+    GET_ARTICLES, {
+      variables: {
         lemma,
         wantedLangs: cookies.wantedLangs,
         wantedDicts: cookies.wantedDicts
-      }}
-    >
-      {({ loading, error, data }) => {
-        if (loading) return <Trans><p>Loading...</p></Trans>;
-        if (error) return <Trans><p>Error {error.message}</p></Trans>;
-        if (!data) return <Trans><p>Not found</p></Trans>;
-
-        if (cookies.wantedDicts.includes('termwiki')) {
-          return <PresentArticles articles={query2articlelist(lemma, data)} />;
-        } else {
-          return <PresentArticles articles={data.dictEntryList.map(dictBackend2Frontend)} />;
-        }
-      }}
-    </Query>
+      }
+    }
   );
+  if (loading) return <Trans><p>Loading...</p></Trans>;
+  if (error) return <Trans><p>Error {error.message}</p></Trans>;
+  if (!data) return <Trans><p>Not found</p></Trans>;
+
+  if (cookies.wantedDicts.includes('termwiki')) {
+    return <PresentArticles articles={query2articlelist(lemma, data)} />;
+  } else {
+    return <PresentArticles articles={data.dictEntryList.map(dictBackend2Frontend)} />;
+  }
 };
 
 export default Articles;

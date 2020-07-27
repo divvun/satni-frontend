@@ -1,5 +1,5 @@
-import {gql} from 'apollo-boost';
-import {useQuery} from '@apollo/react-hooks';
+import { gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { useCookies } from 'react-cookie';
 
 const GET_LEMMAS = gql`
@@ -26,7 +26,7 @@ const GET_LEMMAS = gql`
   }
 `;
 
-function useStems(inputValue) {
+function useStems (inputValue) {
   const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
 
   const {data, loading, fetchMore, error} = useQuery(
@@ -35,7 +35,7 @@ function useStems(inputValue) {
       variables: {
         inputValue,
         wantedLangs: cookies.wantedLangs,
-        wantedDicts: cookies.wantedDicts,
+        wantedDicts: cookies.wantedDicts
       }
     });
 
@@ -69,7 +69,7 @@ function useStems(inputValue) {
     error,
     hasNextPage: data.stemList.pageInfo.hasNextPage,
     loading,
-    loadMore,
+    loadMore
   };
 }
 
