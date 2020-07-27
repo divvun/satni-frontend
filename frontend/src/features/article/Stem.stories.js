@@ -9,6 +9,9 @@ const restriction = {
   attributes: {}
 };
 storiesOf('Stem', module)
+  .add('with space', () => <Stem
+    stem={{...stem, lemma: 'bar dni'}}
+    restriction={restriction} />)
   .add('withLink true', () => <Stem
     stem={stem}
     restriction={restriction}
