@@ -59,21 +59,35 @@ const Stem = ({ stem, restriction, withLink }) => {
         }
       </Typography>
       {restriction && <Typography component='span'> ({restriction.restriction})</Typography>}
-      <span className={classes.rightGroup}>
-        {pos && <Typography component='span' color='textSecondary' className={classes.pos}>({pos})</Typography>}
-        <IconButton className={classes.icons} component='span' aria-label='Paradigm' onClick={handleClickParadigmDialog}>
-          <InfoOutlined />
-        </IconButton>
-        <IconButton className={classes.icons} component='span' aria-label='Corpus'>
-          <ViewHeadlineOutlined />
-        </IconButton>
-      </span>
-      <ParadigmDialog
-        lemma={lemma}
-        pos={pos}
-        language={language}
-        open={openParadigm}
-        onClose={handleCloseParadigmDialog} />
+      {!lemma.includes(' ') && <>
+        <span className={classes.rightGroup}>
+          {pos && <Typography
+            component='span'
+            color='textSecondary'
+            className={classes.pos}>({pos})</Typography>}
+          <IconButton
+            className={classes.icons}
+            component='span'
+            aria-label='Paradigm'
+            onClick={handleClickParadigmDialog}>
+            <InfoOutlined />
+          </IconButton>
+          <IconButton
+            className={classes.icons}
+            component='span'
+            aria-label='Corpus'>
+            <ViewHeadlineOutlined />
+          </IconButton>
+        </span>
+        <ParadigmDialog
+          lemma={lemma}
+          pos={pos}
+          language={language}
+          open={openParadigm}
+          onClose={handleCloseParadigmDialog} />
+      </>
+      }
+
     </Typography>
   );
 };
