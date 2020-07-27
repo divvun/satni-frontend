@@ -17,4 +17,7 @@ const term = {
 };
 
 storiesOf('LemmaGroup', module)
-  .add('default', () => <LemmaGroup term={term} />);
+  .add('srcLanguage', () => <LemmaGroup
+    term={term} />)
+  .add('targetLanguage', () => <LemmaGroup
+    term={term} withLink/>);
