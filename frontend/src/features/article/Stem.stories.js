@@ -9,4 +9,10 @@ const restriction = {
   attributes: {}
 };
 storiesOf('Stem', module)
-  .add('default', () => <Stem stem={stem} restriction={restriction}/>);
+  .add('withLink true', () => <Stem
+    stem={stem}
+    restriction={restriction}
+    withLink />)
+  .add('withLink false', () => <Stem
+    stem={stem}
+    restriction={restriction} />);
