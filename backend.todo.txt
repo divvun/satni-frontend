@@ -1,4 +1,3 @@
-
 Issues:
 {{{
 * Viser smn->sme, men har ikke sme term …
@@ -34,17 +33,105 @@ Ved artikkelvisning: vis språkpar som har både src og target i blant de ønske
 * Filtrering etter ordbok
 * Sammallahtis ordbok er finsme. Må skille på hans og gt sine ordbøker i kildehenvisningen.
 }}} Fikset 20200721
-* Ordne søkefeltet
-** menyen: plasser menyen vakkert …
-** ønske: når man laster, kjør sirkel i søkefeltet
+{{{
 * I18N – bruk https://lingui.js.org/tutorials/setup-cra.html
-* Samiske bokstaver som js-widget
-* Header á la NDS, med visningsspråkvalg
+}}} Satt opp grunnleggende struktur 20200722
+{{{
+* Ordne søkefeltet
+}}} Forenklet den, satt den i AppBaren 20200725
+{{{
 * Flytte språk- og ordboksvalg i headermenyen
+}}} 20200725
+{{{
+* Pagination av oppslagsord (hm)
+}}} Evig liste 20200725
+{{{
+** Midtstill søkefeltet
+}}} Fikset 20200726
+{{{
+** Større søkefelt
+}}} Fikset 20200726
+
+For å nå samme funksjonalitet som dagens sátni:
+{{{
+* vise re i Dict
+}}} Fikset 20200726
+
+* Detaljer som popup-visning, evt. egen side (som nå)
+{{{
+** InfoOutlined-menu-icon bak lemma for å åpne paradigmet.
+** Paradigmet som dialog.
+}}} Fikset 20200726
+** ViewHeadlineOutLaunchOutlined/lined? for Korp-linken
+{{{
+* For termwiki, ingen fremmedspråk - fremmedspråk-visninger
+}}} fikset 20200727
+{{{
+** Mindre luft før og etter midtfeltet
+}}} Fikset 20200726
+
+Feedback-icon!
+
+Neste trinn:
+* Tolk bøyde ord
+* Med bare et funn, vis artikkel
+* Header á la NDS, med visningsspråkvalg
+* Ordne layout:
+** valgt ord i søkeordlisten i fet skrift
+** større fonter generelt
+{{{
+** Side uten rullefelt, la dem heller være i både søkeordslista og artikkelvisninga
+}}} Fikset 20200728
+{{{
+** Ordne visning av lemma. Lemma & re på venstre side, resten til høyre
+}}} Fikset 20200726
+{{{
+* Samiske bokstaver som js-widget
+** Keyboard-icon i søkefelt
+** SámiKeys-widget for input
+}}} Fikset 20200728
+** Koble sammen disse
+* Gjøre variabler oversettbare
+* Gjøre metaspråk valgbart
+
+* Gjør oversettelsen søkbar (en link)
+{{{
+** Ikke søkeordet
+** Dersom den er fra TermWiki
+}}} Fikset 20200727
+{{{
+** Om den er fra ordbok, dersom den finnes blant Stem
+}}} Fikset 20200728
+
+* mobilmodus
+** klapp søkeordslista sammen når man velger artikkelvisning
+** AppBar nederst
+** Footer-info som infomeny elns.
+
+* Forbedre språk- og ordboksvalg: egne oppsprettsvindu
+** Språk: alle, språkpar (davvi-dáro-dávvi, julev-dáro-julev, etc)
+   og nåværende valg (velg en og en)
+** Ordbøker
+* når man laster
+{{{
+** kjør sirkel i søkefeltet
+** kjør sirkel nederst i søkeordslista
+}}} fikset 20200727
+** skygger i artikkelfeltet
+* mulighet til å gå opp og ned med piltaster i søkeordsfelt
+
+* tilbakepil fra collection og kategori
 * Søk i søkefelt: søkeord som start/midt/slutt
 * Fiks visning av collections
 * Vis termwiki-kilde som artikkelnavn
 * Hoppe over kategori?*
-* Pagination av oppslagsord (hm)
-* vise re i Dict
+{{{
 * Gjemme Phrase og MWE
+* Ingen paradigme- eller korp-knapp ved Phrase og MWE
+}}} Fikset 20200727
+* drawer á la https://material-ui.com/getting-started/templates/dashboard/ settings og alt der
+** språk som dialog
+** ordbøker som dialog
+
+* rapporter om antall søkeord i søkefeltet
+* kvitte seg med de fæle rammene rundt stem
