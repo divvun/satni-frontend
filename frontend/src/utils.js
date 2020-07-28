@@ -25,15 +25,12 @@ export const mapArticlesByLanguagePair = (articles) => {
 };
 
 const cleanedConcepts = (language, concepts) => {
-  // Denne burde vel fungere …
   const nonSami = new Set(['nob', 'eng', 'fin', 'nno', 'swe']);
 
-  return nonSami.has(language) ? concepts.filter(concept => !nonSami.has(concept.language)) : concepts;
+  return nonSami.has(language) ? concepts.filter(concept => !nonSami.has(concept.terms[0].expression.language)) : concepts;
 };
 
 export const moveLangFirst = (language, concepts) => {
-  // Denne burde fungere, men må ordnes per navn, kanskje?
-  console.log(language, concepts.length);
   return concepts.reduce(
     (accumulator, currentValue) => {
       if (currentValue.terms[0].expression.language !== language) {
@@ -48,7 +45,6 @@ export const moveLangFirst = (language, concepts) => {
 };
 
 export const moveLemmaFirst = (lemma, language, terms) => {
-  // Denne fungerer på det nye formatet
   return terms.reduce(
     (accumulator, currentValue) => {
       if (currentValue.expression.language === language && currentValue.expression.lemma === lemma) {
@@ -64,66 +60,57 @@ export const moveLemmaFirst = (lemma, language, terms) => {
 };
 
 export const cleanFrom = (lemma, language, concept) => {
-  // Denne fungerer på det nye formatet
   return {
     ...concept,
+    language,
     terms: moveLemmaFirst(lemma, language, concept.terms)
   };
 };
 
 export const multiLingualConcept2ConceptPairs = (lemma, language, multilingualconcept) => {
   const concepts = moveLangFirst(language, multilingualconcept);
-  const from = cleanFrom(lemma, language, concepts.shift());
-  console.log(lemma, language, from.terms);
-  const termwikiref = from.name;
-  const category = from.name.split(':')[0];
-  const collections = from.collections;
-  delete from.collections;
-  delete from.name;
+  const {name, collections, ...rest} = concepts.shift();
+  const from = cleanFrom(lemma, language, rest);
+  const category = name.split(':')[0];
 
   return cleanedConcepts(language, concepts).map(concept => {
-    delete concept.collections;
-    delete concept.name;
-    from['language'] = language;
-    concept['language'] = concept.terms[0].expression.language;
+    const {name, collections, ...rest} = concept;
+    const language = rest.terms[0].expression.language;
 
     return {
-      'termwikiref': termwikiref,
-      'category': category,
-      'dict': 'termwiki',
-      'collections': collections,
-      'from': from,
-      'to': concept
+      termwikiref: name,
+      category,
+      dict: 'termwiki',
+      collections,
+      from: from,
+      to: {
+        ...rest,
+        language
+      }
     };
   });
 };
 
 export const multilingualconceptList2ConceptPairs = (lemma, language, conceptList) => {
   const names = conceptListNames(conceptList);
-  console.log(names, language);
+
   return names.map(name => multiLingualConcept2ConceptPairs(lemma, language, conceptList.filter(concept => concept.name === name))).flat();
 };
 
 export const languagesOfLemma = (lemma, conceptList) => {
-  const languages = new Set();
-  conceptList.forEach((concept) => {
-    concept.terms.forEach((term) => {
-      if (term.expression.lemma === lemma) {
-        console.log(lemma, term.expression.language);
-        languages.add(term.expression.language);
-      }
-    });
-  });
-  return Array.from(languages);
+  return Array.from(new Set(
+    conceptList.flatMap(concept => (
+      concept.terms.map(term => term)
+    )).filter(term => term.expression.lemma === lemma).map(
+      term => term.expression.language)));
 };
 
 export const conceptListNames = (conceptList) => {
-  // Denne erstattes med wantedLangs
-  return Array.from(new Set(conceptList.filter(concept => concept.name).map(concept => concept.name)));
+  return Array.from(new Set(conceptList.filter(concept => concept.name).map(
+    concept => concept.name)));
 };
 
 export const elemmas2ConceptPairs = (lemma, conceptList) => {
-  // Dette er det samme som wantedLangs
   const langs = languagesOfLemma(lemma, conceptList);
   return langs.map(language => multilingualconceptList2ConceptPairs(lemma, language, [...conceptList])).flat();
 };
