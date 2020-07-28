@@ -14,9 +14,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyles = makeStyles(theme => ({
   infiniteList: {
-    flexGrow: 1,
-    minHeight: 500,
-    maxWidth: 400
+    height: '80vh'
   }
 }));
 
