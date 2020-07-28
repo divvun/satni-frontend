@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 
 import Examples from './Examples';
 import Source from './Source';
+import DictTargetStem from './DictTargetStem';
 import Stem from './Stem';
 
 const useStyles = makeStyles(theme => ({
@@ -27,16 +28,30 @@ const DictArticle = ({dictGroup}) => {
                 }
               </Grid>
               <Grid item xs={6}>
-                {translationGroup.translations.map((stem, index) =>
-                  <Stem key={index} stem={stem} restriction={translationGroup.restriction}/>)
-                }
+                {translationGroup.translations.map((stem, index) => {
+                  if (stem.lemma.includes(' ')) {
+                    return <Stem
+                      stem={stem}
+                      restriction={translationGroup.restriction} />;
+                  } else {
+                    return <DictTargetStem
+                      key={index}
+                      stem={stem}
+                      restriction={translationGroup.restriction}/>;
+                  }
+                })}
               </Grid>
             </Grid>
-            {translationGroup.examples && <Examples examples={translationGroup.examples}/>}
+            {translationGroup.examples &&
+              <Examples examples={translationGroup.examples}/>
+            }
           </React.Fragment>
         );
       })}
-      <Source className={classes.paper} source={dict} lemma={dictGroup.from.lookupLemmas[0].lemma} />
+      <Source
+        className={classes.paper}
+        source={dict}
+        lemma={dictGroup.from.lookupLemmas[0].lemma} />
     </>
   );
 };
