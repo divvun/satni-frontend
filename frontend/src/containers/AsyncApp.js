@@ -53,7 +53,7 @@ const styles = theme => ({
     width: '98% !important'
   },
   footerLinks: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2)
   }
 });
 
@@ -110,34 +110,34 @@ const AsyncApp = ({classes, match}) => {
           <Typography variant='h6' noWrap className={classes.toolbarTitle}>
           sátni.org
           </Typography>
-          <FilterBar searchHandler={handleSearch}/>
+          <FilterBar searchHandler={handleSearch} />
           <div>
             <IconButton
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
+              aria-label='account of current user'
+              aria-controls='menu-appbar'
+              aria-haspopup='true'
               onClick={handleMenu}
-              color="inherit"
+              color='inherit'
             >
-              <MenuIcon/>
+              <MenuIcon />
             </IconButton>
             <Menu
-              id="menu-appbar"
+              id='menu-appbar'
               anchorEl={anchorEl}
               anchorOrigin={{
                 vertical: 'top',
-                horizontal: 'right',
+                horizontal: 'right'
               }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'right',
+                horizontal: 'right'
               }}
               open={open}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleClose}><LangChooser/></MenuItem>
-              <MenuItem onClick={handleClose}><DictChooser/></MenuItem>
+              <MenuItem onClick={handleClose}><LangChooser /></MenuItem>
+              <MenuItem onClick={handleClose}><DictChooser /></MenuItem>
             </Menu>
           </div>
         </Toolbar>
@@ -147,14 +147,18 @@ const AsyncApp = ({classes, match}) => {
           <Grid container>
             <Grid item xs={4}>
               {searchExpression ?
-                <InfiniteStems searchExpression={searchExpression} lemmaHandler={handleLemma}/> :
+                <InfiniteStems
+                  searchExpression={searchExpression}
+                  lemmaHandler={handleLemma} /> :
                 <p>Waiting for input</p>
               }
             </Grid>
             <Grid item xs={8}>
               {currentLemma ?
-                <Articles lemma={currentLemma}/> :
-                <Home/>
+                <Articles
+                  lemma={currentLemma}
+                  lemmaHandler={handleLemma} /> :
+                <Home />
               }
             </Grid>
           </Grid>

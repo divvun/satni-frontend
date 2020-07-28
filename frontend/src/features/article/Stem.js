@@ -35,7 +35,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Stem = ({ stem, restriction, withLink }) => {
+const Stem = ({ stem, restriction, withLink, lemmaHandler }) => {
   const classes = useStyles();
   const {lemma, pos, language} = stem;
   const [openParadigm, setOpenParadigm] = React.useState(false);
@@ -54,7 +54,12 @@ const Stem = ({ stem, restriction, withLink }) => {
         component='span'
         className={classes.lemma}>
         {(withLink) ?
-          <Link href='#'>{lemma}</Link> :
+          <Link
+            component="button"
+            onClick={() => lemmaHandler(lemma)}
+          >
+            {lemma}
+          </Link> :
           <>{lemma}</>
         }
       </Typography>
