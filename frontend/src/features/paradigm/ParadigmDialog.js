@@ -11,14 +11,14 @@ import Paradigm from './Paradigm';
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: 0,
-    padding: theme.spacing(2),
+    padding: theme.spacing(2)
   },
   closeButton: {
     position: 'absolute',
     right: theme.spacing(1),
     top: theme.spacing(1),
-    color: theme.palette.grey[500],
-  },
+    color: theme.palette.grey[500]
+  }
 }));
 
 const ParadigmDialog = (props) => {
@@ -30,14 +30,14 @@ const ParadigmDialog = (props) => {
   };
 
   return (
-    <Dialog onClose={handleClose} aria-labelledby="Paradigm" open={open}>
-      <DialogTitle id="simple-dialog-title">
-        <Typography variant="h6">
+    <Dialog onClose={handleClose} aria-labelledby='Paradigm' open={open}>
+      <DialogTitle id='simple-dialog-title'>
+        <Typography variant='h6'>
           Paradigm for {lemma} {pos} {language}
         </Typography>
         {onClose ? (
           <IconButton
-            aria-label="close"
+            aria-label='close'
             onClick={onClose}
             className={classes.closeButton}>
             <CloseIcon />
@@ -47,7 +47,7 @@ const ParadigmDialog = (props) => {
       <Paradigm
         lemma={lemma}
         language={language}
-        pos={pos}/>
+        pos={pos} />
     </Dialog>
   );
 };
