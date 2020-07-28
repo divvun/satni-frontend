@@ -18,6 +18,7 @@
     "fetch-mock": "^7.0.0-alpha.6",
     "graphql": "^15.3.0",
     "immutable": "^3.8.2",
+    "lodash": "^4.17.19",
     "material-ui": "^0.20.2",
     "node-fetch": "^2.2.0",
     "prop-types": "^15.6.2",
