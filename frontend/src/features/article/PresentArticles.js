@@ -13,6 +13,11 @@ import TermWikiArticle from './TermWikiArticle';
 import { langName } from 'langThings';
 
 const useStyles = makeStyles(theme => ({
+  articles: {
+    height: '80vh',
+    overflowY: 'auto',
+    paddingRight: theme.spacing(2)
+  },
   list: {
     marginBottom: theme.spacing(2),
     marginLeft: theme.spacing(2)
@@ -30,7 +35,7 @@ const Articles = ({articles, lemmaHandler}) => {
   const classes = useStyles();
 
   return (
-    <div style={{height: '80vh', overflowY: 'auto'}}>
+    <div className={classes.articles}>
       {Object.keys(articlesMappedByLanguagePair).map((langpair, index) => {
         return (
           <Paper key={index} className={classes.list}>
