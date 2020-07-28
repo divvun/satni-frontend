@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const DictArticle = ({dictGroup}) => {
+const DictArticle = ({dictGroup, lemmaHandler}) => {
   const classes = useStyles();
   const {dict, from, to} = dictGroup;
   return (
@@ -37,7 +37,8 @@ const DictArticle = ({dictGroup}) => {
                     return <DictTargetStem
                       key={index}
                       stem={stem}
-                      restriction={translationGroup.restriction}/>;
+                      restriction={translationGroup.restriction}
+                      lemmaHandler={lemmaHandler}/>;
                   }
                 })}
               </Grid>

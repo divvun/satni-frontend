@@ -16,7 +16,7 @@ const query2articlelist = (lemma, data) => {
   return dictList.concat(termList);
 };
 
-const Articles = ({lemma}) => {
+const Articles = ({lemma, lemmaHandler}) => {
   const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
 
   const GET_ARTICLES = cookies.wantedDicts.includes('termwiki') ?
@@ -125,9 +125,13 @@ const Articles = ({lemma}) => {
   if (!data) return <Trans><p>Not found</p></Trans>;
 
   if (cookies.wantedDicts.includes('termwiki')) {
-    return <PresentArticles articles={query2articlelist(lemma, data)} />;
+    return <PresentArticles
+      lemmaHandler={lemmaHandler}
+      articles={query2articlelist(lemma, data)} />;
   } else {
-    return <PresentArticles articles={data.dictEntryList.map(dictBackend2Frontend)} />;
+    return <PresentArticles
+      lemmaHandler={lemmaHandler}
+      articles={data.dictEntryList.map(dictBackend2Frontend)} />;
   }
 };
 

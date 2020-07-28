@@ -59,12 +59,15 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const TermWikiArticle = ({termGroup}) => {
+const TermWikiArticle = ({termGroup, lemmaHandler}) => {
   const classes = useStyles();
 
   return (
     <>
-      <LemmaGroups fromterms={termGroup.from.terms} toterms={termGroup.to.terms} />
+      <LemmaGroups
+        lemmaHandler={lemmaHandler}
+        fromterms={termGroup.from.terms}
+        toterms={termGroup.to.terms} />
       {(termGroup.from.definition || termGroup.to.definition) && <Definitions definitions={[termGroup.from.definition, termGroup.to.definition]}/>}
       <Grid container>
         <Grid item className={classes.paper}>
