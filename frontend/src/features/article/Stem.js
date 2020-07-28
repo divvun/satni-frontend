@@ -14,7 +14,8 @@ const useStyles = makeStyles({
   stemContainer: {
     width: '100%',
     borderStyle: 'dotted',
-    borderWidth: 1
+    borderWidth: 1,
+    borderColor: 'transparent'
   },
   stem: {
     flexGrow: 1
