@@ -30,7 +30,7 @@ const Articles = ({articles, lemmaHandler}) => {
   const classes = useStyles();
 
   return (
-    <>
+    <div style={{overflowY: 'auto'}}>
       {Object.keys(articlesMappedByLanguagePair).map((langpair, index) => {
         return (
           <Paper key={index} className={classes.list}>
@@ -81,7 +81,7 @@ const Articles = ({articles, lemmaHandler}) => {
           </Paper>
         );
       })}
-    </>
+    </div>
   );
 };
 
