@@ -1,48 +1,32 @@
 import React, { useState } from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
 import InputBase from '@material-ui/core/InputBase';
+import KeyboardIcon from '@material-ui/icons/Keyboard';
+import MenuIcon from '@material-ui/icons/Menu';
+import Paper from '@material-ui/core/Paper';
 import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
-  search: {
+  root: {
+    color: theme.palette.common.white,
+    marginLeft: theme.spacing(2),
     display: 'flex',
-    flex: 1,
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
+    alignItems: 'center',
+    flexGrow: 1,
     backgroundColor: fade(theme.palette.common.white, 0.15),
     '&:hover': {
       backgroundColor: fade(theme.palette.common.white, 0.25)
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: 'auto',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: 'auto'
     }
   },
-  searchIcon: {
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  inputRoot: {
+  input: {
     color: 'inherit',
-    flexGrow: 1
+    marginLeft: theme.spacing(1),
+    flex: 1
   },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: 'auto',
-    [theme.breakpoints.up('md')]: {
-      width: 'auto'
-    }
+  iconButton: {
+    color: 'inherit',
+    padding: theme.spacing(1)
   }
 }));
 
@@ -50,21 +34,21 @@ const FilterBar = ({searchHandler}) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.search}>
-      <div className={classes.searchIcon}>
-        <SearchIcon />
-      </div>
+    <Paper component='form' className={classes.root}>
+      <IconButton className={classes.iconButton} aria-label='sámi keys'>
+        <KeyboardIcon />
+      </IconButton>
       <InputBase
         autoFocus
         onChange={searchHandler}
         placeholder='Search…'
-        classes={{
-          root: classes.inputRoot,
-          input: classes.inputInput
-        }}
+        className={classes.input}
         inputProps={{ 'aria-label': 'search' }}
       />
-    </div>
+      <div className={classes.iconButton} aria-label='search'>
+        <SearchIcon />
+      </div>
+    </Paper>
   );
 };
 export default FilterBar;
