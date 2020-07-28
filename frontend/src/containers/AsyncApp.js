@@ -27,23 +27,21 @@ const styles = theme => ({
       backgroundColor: theme.palette.common.white
     }
   },
+  container: {
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column'
+  },
   appBar: {
-    position: 'relative'
+    position: 'relative',
+    flexDirection: 'column'
   },
-  layout: {
-    width: 'auto',
-    marginLeft: theme.spacing(3),
-    marginRight: theme.spacing(3),
-    [theme.breakpoints.up(900 + theme.spacing(3, 2))]: {
-      width: 900,
-      marginLeft: 'auto',
-      marginRight: 'auto'
-    }
-  },
-  heroContent: {
-    margin: '0 auto',
-    padding: `${theme.spacing(2)}px 0 ${theme.spacing(2)}px`
-  },
+  main: {
+    textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    flex: 1
   }
 });
 
@@ -65,7 +63,7 @@ const AsyncApp = ({classes, match}) => {
   const handleClose = () => setAnchorEl(null);
 
   return (
-    <React.Fragment>
+    <div className={classes.container}>
       <CssBaseline />
       <AppBar position='static' className={classes.appBar}>
         <Toolbar>
@@ -104,30 +102,28 @@ const AsyncApp = ({classes, match}) => {
           </div>
         </Toolbar>
       </AppBar>
-      <main className={classes.layout}>
-        <div className={classes.heroContent}>
-          <Grid container>
-            <Grid item xs={4}>
-              {searchExpression ?
-                <InfiniteStems
-                  searchExpression={searchExpression}
-                  lemmaHandler={handleLemma} /> :
-                <p>Waiting for input</p>
-              }
-            </Grid>
-            <Grid item xs={8}>
-              {currentLemma ?
-                <Articles
-                  lemma={currentLemma}
-                  lemmaHandler={handleLemma} /> :
-                <Home />
-              }
-            </Grid>
+      <main className={classes.main}>
+        <Grid container style={{height: '80vh'}}>
+          <Grid item xs={4}>
+            {searchExpression ?
+              <InfiniteStems
+                searchExpression={searchExpression}
+                lemmaHandler={handleLemma} /> :
+              <p>Waiting for input</p>
+            }
           </Grid>
-        </div>
-      </main>
+          <Grid item xs={8}>
+            {currentLemma ?
+              <Articles
+                lemma={currentLemma}
+                lemmaHandler={handleLemma} /> :
+              <Home />
+            }
+          </Grid>
         </Grid>
-    </React.Fragment>);
+      </main>
+    </div>
+  );
 };
 
 AsyncApp.propTypes = {
