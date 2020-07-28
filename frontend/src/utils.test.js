@@ -774,6 +774,7 @@ describe('Massage termwiki data from backend', () => {
     const lemma = 'vuorká';
     const language = 'sme';
     const want = {
+      'language': 'sme',
       'collections': [
         'Collection:SD-terms',
         'Collection:Dáhtábágo javllamáno 2013'
@@ -821,6 +822,7 @@ describe('Massage termwiki data from backend', () => {
         ],
         'dict': 'termwiki',
         'from': {
+          'language': 'sme',
           'definition': null,
           'explanation': null,
           'terms': [
@@ -848,6 +850,7 @@ describe('Massage termwiki data from backend', () => {
         },
         'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
         'to': {
+          'language': 'smj',
           'definition': null,
           'explanation': null,
           'terms': [
@@ -872,6 +875,7 @@ describe('Massage termwiki data from backend', () => {
         ],
         'dict': 'termwiki',
         'from': {
+          'language': 'sme',
           'definition': null,
           'explanation': null,
           'terms': [
@@ -899,6 +903,7 @@ describe('Massage termwiki data from backend', () => {
         },
         'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
         'to': {
+          'language': 'fin',
           'definition': null,
           'explanation': null,
           'terms': [
@@ -943,6 +948,7 @@ describe('Massage termwiki data from backend', () => {
         ],
         'dict': 'termwiki',
         'from': {
+          'language': 'sme',
           'definition': null,
           'explanation': null,
           'terms': [
@@ -970,6 +976,7 @@ describe('Massage termwiki data from backend', () => {
         },
         'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
         'to': {
+          'language': 'eng',
           'definition': null,
           'explanation': null,
           'terms': [
@@ -994,6 +1001,7 @@ describe('Massage termwiki data from backend', () => {
         ],
         'dict': 'termwiki',
         'from': {
+          'language': 'sme',
           'definition': null,
           'explanation': null,
           'terms': [
@@ -1021,6 +1029,7 @@ describe('Massage termwiki data from backend', () => {
         },
         'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
         'to': {
+          'language': 'nob',
           'definition': 'fil, i edb: en ordnet mengde av sammenhørende data',
           'explanation': null,
           'terms': [
@@ -1045,6 +1054,7 @@ describe('Massage termwiki data from backend', () => {
         ],
         'dict': 'termwiki',
         'from': {
+          'language': 'sme',
           'definition': null,
           'explanation': null,
           'terms': [
@@ -1072,6 +1082,7 @@ describe('Massage termwiki data from backend', () => {
         },
         'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
         'to': {
+          'language': 'swe',
           'definition': null,
           'explanation': null,
           'terms': [
@@ -1096,6 +1107,7 @@ describe('Massage termwiki data from backend', () => {
         ],
         'dict': 'termwiki',
         'from': {
+          'language': 'sme',
           'definition': null,
           'explanation': null,
           'terms': [
@@ -1123,6 +1135,7 @@ describe('Massage termwiki data from backend', () => {
         },
         'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
         'to': {
+          'language': 'sma',
           'definition': null,
           'explanation': null,
           'terms': [
@@ -1157,887 +1170,1258 @@ describe('Massage termwiki data from backend', () => {
     expect(conceptListNames(got)).toEqual(want);
   });
 
-  it('Turn a multilingualconceptList into into concepts that contain language pairs', () => {
+  it('Turn a multilingualconceptList into concepts that contain language pairs', () => {
     const got = conceptList;
     const lemma = 'vuorká';
     const language = 'sme';
 
-    const want =
-      [
-        {
-          'category': 'Dihtorteknologiija ja diehtoteknihkka',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:vuorká',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'nob',
-                  'lemma': 'arkiv',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
+    const want = [
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
         },
-        {
-          'category': 'Dihtorteknologiija ja diehtoteknihkka',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:vuorká',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'swe',
-                  'lemma': 'arkiv',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Ekonomiija ja gávppašeapmi',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'smj',
+          'terms': [
+            {
+              'expression': {
+                'language': 'smj',
+                'lemma': 'fijlla',
+                'pos': 'N'
               },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'arkiiva',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'fin',
-                  'lemma': 'arkisto',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Ekonomiija ja gávppašeapmi',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'arkiiva',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
-          'to': {
-            'definition': 'samling av brev og dokumenter; oppbevaringssted for brev og dokumenter',
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'nob',
-                  'lemma': 'arkiv',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Ekonomiija ja gávppašeapmi',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'arkiiva',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'swe',
-                  'lemma': 'arkiv',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Ekonomiija ja gávppašeapmi',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'arkiiva',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'smn',
-                  'lemma': 'arkkâdâh',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Ekonomiija ja gávppašeapmi',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'arkiiva',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sma',
-                  'lemma': 'våarhkoe',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Medisiidna',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': 'vuorká - vuorkái - vuorkkáide',
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Medisiidna:vuorká',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'fin',
-                  'lemma': 'varasto',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Medisiidna',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': 'vuorká - vuorkái - vuorkkáide',
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Medisiidna:vuorká',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'nob',
-                  'lemma': 'depot',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Medisiidna',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': 'vuorká - vuorkái - vuorkkáide',
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Medisiidna:vuorká',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'swe',
-                  'lemma': 'depå',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'swe',
-                  'lemma': 'förråd',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Medisiidna',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': 'vuorká - vuorkái - vuorkkáide',
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Medisiidna:vuorká',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'smn',
-                  'lemma': 'vuárkká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Servodatdieđa',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vurkkohat',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'rádju',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Servodatdieđa:vurkkohat',
-          'to': {
-            'definition': 'rom i bolig for oppbevaring og lagring av utstyr, mat, klær, etc.',
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'nob',
-                  'lemma': 'bod',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Servodatdieđa',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vurkkohat',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'rádju',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Servodatdieđa:vurkkohat',
-          'to': {
-            'definition': 'asunnon huone, jossa säilytetään ruokaa, vaatteita, välineitä jne.',
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'fin',
-                  'lemma': 'varasto',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'fin',
-                  'lemma': 'komero',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Servodatdieđa',
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vurkkohat',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'rádju',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Servodatdieđa:vurkkohat',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'swe',
-                  'lemma': 'boda',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              },
-              {
-                'expression': {
-                  'language': 'swe',
-                  'lemma': 'gömsle',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Teknihkka industriija duodji',
-          'collections': [
-            'Collection:SD-terms',
-            'Collection:teknisk ordliste sg 10-03'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Teknihkka industriija duodji:vuorká',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'nob',
-                  'lemma': 'oppbevaringsplass',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Teknihkka industriija duodji',
-          'collections': [
-            'Collection:SD-terms',
-            'Collection:teknisk ordliste sg 10-03'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Teknihkka industriija duodji:vuorká',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'swe',
-                  'lemma': 'förråd',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
-        },
-        {
-          'category': 'Teknihkka industriija duodji',
-          'collections': [
-            'Collection:SD-terms',
-            'Collection:teknisk ordliste sg 10-03'
-          ],
-          'dict': 'termwiki',
-          'from': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'sme',
-                  'lemma': 'vuorká',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          },
-          'termwikiref': 'Teknihkka industriija duodji:vuorká',
-          'to': {
-            'definition': null,
-            'explanation': null,
-            'terms': [
-              {
-                'expression': {
-                  'language': 'fin',
-                  'lemma': 'säilytyspaikka',
-                  'pos': 'N'
-                },
-                'note': null,
-                'source': null,
-                'status': null
-              }
-            ]
-          }
+              'note': 'jll jl',
+              'source': null,
+              'status': null
+            }
+          ]
         }
-      ];
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'fin',
+          'terms': [
+            {
+              'expression': {
+                'language': 'fin',
+                'lemma': 'viila',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'fin',
+                'lemma': 'kaista',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'fin',
+                'lemma': 'tiedosto',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'eng',
+          'terms': [
+            {
+              'expression': {
+                'language': 'eng',
+                'lemma': 'file',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': 'fil, i edb: en ordnet mengde av sammenhørende data',
+          'explanation': null,
+          'language': 'nob',
+          'terms': [
+            {
+              'expression': {
+                'language': 'nob',
+                'lemma': 'fil',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'swe',
+          'terms': [
+            {
+              'expression': {
+                'language': 'swe',
+                'lemma': 'fil',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'fiila',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sma',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sma',
+                'lemma': 'fijle',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'nob',
+          'terms': [
+            {
+              'expression': {
+                'language': 'nob',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Dihtorteknologiija ja diehtoteknihkka',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Dihtorteknologiija ja diehtoteknihkka:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'swe',
+          'terms': [
+            {
+              'expression': {
+                'language': 'swe',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'fin',
+          'terms': [
+            {
+              'expression': {
+                'language': 'fin',
+                'lemma': 'arkisto',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': 'samling av brev og dokumenter; oppbevaringssted for brev og dokumenter',
+          'explanation': null,
+          'language': 'nob',
+          'terms': [
+            {
+              'expression': {
+                'language': 'nob',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'swe',
+          'terms': [
+            {
+              'expression': {
+                'language': 'swe',
+                'lemma': 'arkiv',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'smn',
+          'terms': [
+            {
+              'expression': {
+                'language': 'smn',
+                'lemma': 'arkkâdâh',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Ekonomiija ja gávppašeapmi',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'arkiiva',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Ekonomiija ja gávppašeapmi:arkiiva',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sma',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sma',
+                'lemma': 'våarhkoe',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Medisiidna',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': 'vuorká - vuorkái - vuorkkáide',
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Medisiidna:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'fin',
+          'terms': [
+            {
+              'expression': {
+                'language': 'fin',
+                'lemma': 'varasto',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Medisiidna',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': 'vuorká - vuorkái - vuorkkáide',
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Medisiidna:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'nob',
+          'terms': [
+            {
+              'expression': {
+                'language': 'nob',
+                'lemma': 'depot',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Medisiidna',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': 'vuorká - vuorkái - vuorkkáide',
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Medisiidna:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'swe',
+          'terms': [
+            {
+              'expression': {
+                'language': 'swe',
+                'lemma': 'depå',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'swe',
+                'lemma': 'förråd',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Medisiidna',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': 'vuorká - vuorkái - vuorkkáide',
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Medisiidna:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'smn',
+          'terms': [
+            {
+              'expression': {
+                'language': 'smn',
+                'lemma': 'vuárkká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Servodatdieđa',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vurkkohat',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'rádju',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Servodatdieđa:vurkkohat',
+        'to': {
+          'definition': 'rom i bolig for oppbevaring og lagring av utstyr, mat, klær, etc.',
+          'explanation': null,
+          'language': 'nob',
+          'terms': [
+            {
+              'expression': {
+                'language': 'nob',
+                'lemma': 'bod',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Servodatdieđa',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vurkkohat',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'rádju',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Servodatdieđa:vurkkohat',
+        'to': {
+          'definition': 'asunnon huone, jossa säilytetään ruokaa, vaatteita, välineitä jne.',
+          'explanation': null,
+          'language': 'fin',
+          'terms': [
+            {
+              'expression': {
+                'language': 'fin',
+                'lemma': 'varasto',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'fin',
+                'lemma': 'komero',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Servodatdieđa',
+        'collections': [
+          'Collection:SD-terms'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vurkkohat',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'rádju',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Servodatdieđa:vurkkohat',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'swe',
+          'terms': [
+            {
+              'expression': {
+                'language': 'swe',
+                'lemma': 'boda',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            },
+            {
+              'expression': {
+                'language': 'swe',
+                'lemma': 'gömsle',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Teknihkka industriija duodji',
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:teknisk ordliste sg 10-03'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Teknihkka industriija duodji:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'nob',
+          'terms': [
+            {
+              'expression': {
+                'language': 'nob',
+                'lemma': 'oppbevaringsplass',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Teknihkka industriija duodji',
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:teknisk ordliste sg 10-03'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Teknihkka industriija duodji:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'swe',
+          'terms': [
+            {
+              'expression': {
+                'language': 'swe',
+                'lemma': 'förråd',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Teknihkka industriija duodji',
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:teknisk ordliste sg 10-03'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'definition': null,
+          'explanation': null,
+          'language': 'sme',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sme',
+                'lemma': 'vuorká',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Teknihkka industriija duodji:vuorká',
+        'to': {
+          'definition': null,
+          'explanation': null,
+          'language': 'fin',
+          'terms': [
+            {
+              'expression': {
+                'language': 'fin',
+                'lemma': 'säilytyspaikka',
+                'pos': 'N'
+              },
+              'note': null,
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      }
+    ];
 
     expect(multilingualconceptList2ConceptPairs(lemma, language, got)).toEqual(want);
   });
@@ -2087,7 +2471,96 @@ describe('Massage termwiki data from backend', () => {
     ];
 
     const lemma = 'arpeggio';
-    const want = [];
+    const want = [
+      {
+        'category': 'Beaivválaš giella',
+        'collections': [
+          'Collection:Musikksannõs'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'language': 'sme',
+          'definition': 'sointu jonka sävelet soitetaan nopeasti peräkkäin, murrettu sointu (Kielitoimiston sanakirja)',
+          'explanation': null,
+          'language': 'fin',
+          'terms': [
+            {
+              'expression': {
+                'language': 'fin',
+                'lemma': 'arpeggio',
+                'pos': 'N'
+              },
+              'note': '(murtosointu)',
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Beaivválaš giella:Musikksannõs 12',
+        'to': {
+          'language': 'sms',
+          'definition': null,
+          'explanation': null,
+          'language': 'sms',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sms',
+                'lemma': 'arpeggio',
+                'pos': 'N'
+              },
+              'note': '(=, -ooʹje ~ =, arpeggiost)',
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      },
+      {
+        'category': 'Beaivválaš giella',
+        'collections': [
+          'Collection:Musikksannõs'
+        ],
+        'dict': 'termwiki',
+        'from': {
+          'language': 'sme',
+          'definition': null,
+          'explanation': null,
+          'language': 'sms',
+          'terms': [
+            {
+              'expression': {
+                'language': 'sms',
+                'lemma': 'arpeggio',
+                'pos': 'N'
+              },
+              'note': '(=, -ooʹje ~ =, arpeggiost)',
+              'source': null,
+              'status': null
+            }
+          ]
+        },
+        'termwikiref': 'Beaivválaš giella:Musikksannõs 12',
+        'to': {
+          'definition': 'sointu jonka sävelet soitetaan nopeasti peräkkäin, murrettu sointu (Kielitoimiston sanakirja)',
+          'explanation': null,
+          'language': 'fin',
+          'terms': [
+            {
+              'expression': {
+                'language': 'fin',
+                'lemma': 'arpeggio',
+                'pos': 'N'
+              },
+              'note': '(murtosointu)',
+              'source': null,
+              'status': null
+            }
+          ]
+        }
+      }
+    ]
+;
     expect(elemmas2ConceptPairs(lemma, got)).toEqual(want);
   });
 });
