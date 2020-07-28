@@ -45,7 +45,6 @@ const styles = theme => ({
   }
 });
 
-
 const Home = () => (
   <p>Bures boahttin!</p>
 );
@@ -67,10 +66,6 @@ const AsyncApp = ({classes, match}) => {
       <CssBaseline />
       <AppBar position='static' className={classes.appBar}>
         <Toolbar>
-          <Typography variant='h6' noWrap className={classes.toolbarTitle}>
-          sátni.org
-          </Typography>
-          <FilterBar searchHandler={handleSearch} />
           <div>
             <IconButton
               aria-label='account of current user'
@@ -100,6 +95,10 @@ const AsyncApp = ({classes, match}) => {
               <MenuItem onClick={handleClose}><DictChooser /></MenuItem>
             </Menu>
           </div>
+          <Typography variant='h6' noWrap className={classes.toolbarTitle}>
+          sátni.org
+          </Typography>
+          <FilterBar searchHandler={handleSearch} />
         </Toolbar>
       </AppBar>
       <main className={classes.main}>
