@@ -44,47 +44,9 @@ const styles = theme => ({
     margin: '0 auto',
     padding: `${theme.spacing(2)}px 0 ${theme.spacing(2)}px`
   },
-  footer: {
-    marginTop: theme.spacing(2),
-    borderTop: `1px solid ${theme.palette.divider}`,
-    padding: `${theme.spacing(2)}px 0`,
-    position: 'absolute',
-    bottom: 0,
-    width: '98% !important'
-  },
-  footerLinks: {
-    marginRight: theme.spacing(2)
   }
 });
 
-const footers = [
-  {
-    title: 'Feedback',
-    description: [
-      {
-        text: 'Please report any errors to us',
-        address: 'mailto:feedback@divvun.no'
-      }
-    ]
-  },
-  {
-    title: 'Sámi dictionaries and terms delivered by',
-    description: [
-      {
-        text: 'Divvun',
-        address: 'http://divvun.no'
-      },
-      {
-        text: 'Giellagáldu',
-        address: 'https://giella.org'
-      },
-      {
-        text: 'Giellatekno',
-        address: 'http://giellatekno.uit.no'
-      }
-    ]
-  }
-];
 
 const Home = () => (
   <p>Bures boahttin!</p>
@@ -164,25 +126,7 @@ const AsyncApp = ({classes, match}) => {
           </Grid>
         </div>
       </main>
-      {/* Footer */}
-      <footer className={classNames(classes.footer, classes.layout)}>
-        <Grid container spacing={0} justify='space-evenly'>
-          {footers.map(footer => (
-            <Grid item xs key={footer.title}>
-              <Typography variant='h6' color='textPrimary' gutterBottom>
-                {footer.title}
-              </Typography>
-              {footer.description.map(item => (
-                <Typography key={item.text} component='span' variant='subtitle1' color='textSecondary' className={classes.footerLinks}>
-                  <a href={item.address}>{item.text}</a>
-                </Typography>
-              ))}
-            </Grid>
-          ))}
         </Grid>
-      </footer>
-      {/* End footer */}
-
     </React.Fragment>);
 };
 
