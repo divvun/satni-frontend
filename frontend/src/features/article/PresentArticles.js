@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Articles = ({articles}) => {
+const Articles = ({articles, lemmaHandler}) => {
   const articlesMappedByLanguagePair = mapArticlesByLanguagePair(articles);
   const classes = useStyles();
 
@@ -58,7 +58,9 @@ const Articles = ({articles}) => {
                   return (
                     <ListItem key={index}>
                       <Grid container>
-                        <TermWikiArticle termGroup={article} />
+                        <TermWikiArticle
+                          lemmaHandler={lemmaHandler}
+                          termGroup={article} />
                       </Grid>
                     </ListItem>
                   );
@@ -66,7 +68,9 @@ const Articles = ({articles}) => {
                   return (
                     <ListItem key={index}>
                       <Grid container>
-                        <DictArticle dictGroup={article} />
+                        <DictArticle
+                          dictGroup={article}
+                          lemmaHandler={lemmaHandler} />
                         <Divider />
                       </Grid>
                     </ListItem>
