@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import IconButton from '@material-ui/core/IconButton';
@@ -39,7 +39,7 @@ const useStyles = makeStyles({
 const Stem = ({ stem, restriction, withLink, lemmaHandler }) => {
   const classes = useStyles();
   const {lemma, pos, language} = stem;
-  const [openParadigm, setOpenParadigm] = React.useState(false);
+  const [openParadigm, setOpenParadigm] = useState(false);
 
   const handleClickParadigmDialog = () => {
     setOpenParadigm(true);
