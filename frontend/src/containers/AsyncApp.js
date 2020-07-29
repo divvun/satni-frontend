@@ -56,7 +56,7 @@ const AsyncApp = ({classes, match}) => {
   const open = Boolean(anchorEl);
 
   const handleLemma = lemma => setCurrentLemma(lemma);
-  const handleSearch = event => setSearchExpression(event.target.value);
+  const handleSearch = value => setSearchExpression(value);
 
   const handleMenu = (event) => setAnchorEl(event.currentTarget);
   const handleClose = () => setAnchorEl(null);

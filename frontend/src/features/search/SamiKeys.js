@@ -8,32 +8,22 @@ const useStyles = makeStyles({
   }
 });
 
-const SamiKeys = () => {
+const SamiKeys = ({keyHandler}) => {
   const classes = useStyles();
+  const chars = [
+    'á', 'â', 'å', 'æ', 'ä', 'č','đ', 'ǧ', 'ï', 'ǩ', 'ŋ', 'õ', 'ø', 'ö',
+    'š', 'ŧ', 'ž', 'ʒ', 'ǯ', 'ʹ'];
 
   return (
     <>
-      <Button variant='outlined' className={classes.root}>á</Button>
-      <Button variant='outlined' className={classes.root}>š</Button>
-      <Button variant='outlined' className={classes.root}>ŧ</Button>
-      <Button variant='outlined' className={classes.root}>ŋ</Button>
-      <Button variant='outlined' className={classes.root}>đ</Button>
-      <Button variant='outlined' className={classes.root}>ž</Button>
-      <Button variant='outlined' className={classes.root}>ŋ</Button>
-      <Button variant='outlined' className={classes.root}>ï</Button>
-      <Button variant='outlined' className={classes.root}>ŋ</Button>
-      <Button variant='outlined' className={classes.root}>â</Button>
-      <Button variant='outlined' className={classes.root}>ʒ</Button>
-      <Button variant='outlined' className={classes.root}>ǯ</Button>
-      <Button variant='outlined' className={classes.root}>ǧ</Button>
-      <Button variant='outlined' className={classes.root}>ǩ</Button>
-      <Button variant='outlined' className={classes.root}>ʹ</Button>
-      <Button variant='outlined' className={classes.root}>õ</Button>
-      <Button variant='outlined' className={classes.root}>å</Button>
-      <Button variant='outlined' className={classes.root}>æ</Button>
-      <Button variant='outlined' className={classes.root}>ä</Button>
-      <Button variant='outlined' className={classes.root}>ø</Button>
-      <Button variant='outlined' className={classes.root}>ö</Button>
+      {chars.map(char => <Button
+        key={char}
+        onClick={() => keyHandler(char)}
+        variant='outlined'
+        className={classes.root}
+      >
+        {char}
+      </Button>)}
     </>
   );
 };
