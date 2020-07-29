@@ -16,7 +16,7 @@ export const HAS_STEM = gql`
 const DictTargetStem = ({ stem, restriction, lemmaHandler }) => {
   const {lemma} = stem;
 
-  const {data, loading, error} = useQuery(
+  const {data, loading} = useQuery(
     HAS_STEM, {
       variables: {
         stem: lemma

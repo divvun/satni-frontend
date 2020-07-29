@@ -4,8 +4,6 @@ import Link from '@material-ui/core/Link';
 import IconButton from '@material-ui/core/IconButton';
 import InfoOutlined from '@material-ui/icons/InfoOutlined';
 import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import ParadigmDialog from 'features/paradigm/ParadigmDialog';

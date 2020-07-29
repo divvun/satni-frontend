@@ -3,7 +3,6 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import InputBase from '@material-ui/core/InputBase';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
-import MenuIcon from '@material-ui/icons/Menu';
 import Paper from '@material-ui/core/Paper';
 import SearchIcon from '@material-ui/icons/Search';
 import Popover from '@material-ui/core/Popover';
