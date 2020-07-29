@@ -31,6 +31,7 @@ const DictArticle = ({dictGroup, lemmaHandler}) => {
                 {translationGroup.translations.map((stem, index) => {
                   if (stem.lemma.includes(' ')) {
                     return <Stem
+                      key={index}
                       stem={stem}
                       restriction={translationGroup.restriction} />;
                   } else {
