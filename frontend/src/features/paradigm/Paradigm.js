@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Set } from 'immutable';
 import Typography from '@material-ui/core/Typography';
-
 import { stemToKey } from 'utils';
 import { fetchParadigms } from 'features/paradigm/paradigmsSlice';
 import NounParadigm from './NounParadigm';
 import VerbParadigm from './VerbParadigm';
 import AdjParadigm from './AdjParadigm';
 
-const langs = Set.of('fin', 'sma', 'sme', 'smj', 'smn', 'sms');
-const poses = Set.of('N', 'V', 'A');
+const langs = new Set(['fin', 'sma', 'sme', 'smj', 'smn', 'sms']);
+const poses = new Set(['N', 'V', 'A']);
 
 const Paradigm = ({lemma, language, pos}) => {
   const paradigms = useSelector(state => state['paradigms']);
