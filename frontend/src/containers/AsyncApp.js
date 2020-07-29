@@ -41,7 +41,8 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    flex: 1
+    flex: 1,
+    height: '80vh'
   }
 });
 
@@ -102,7 +103,7 @@ const AsyncApp = ({classes, match}) => {
         </Toolbar>
       </AppBar>
       <main className={classes.main}>
-        <Grid container style={{height: '80vh'}}>
+        <Grid container>
           <Grid item xs={4}>
             {searchExpression ?
               <InfiniteStems
