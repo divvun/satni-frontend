@@ -22,6 +22,7 @@ yarn-error.log*
 
 __pycache__/
 venv/
+db.sqlite3
 
 # lingui
 frontend/src/locales/_build/
