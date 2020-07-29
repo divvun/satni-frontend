@@ -219,8 +219,10 @@ def import_dict(pair):
                 parser = etree.XMLParser(remove_comments=True,
                                          dtd_validation=True)
                 dictxml = etree.parse(xml_file, parser=parser)
-                # make_entries(
-                #     dictxml, dictname='gt', src=pair[:3], target=pair[3:])
+                make_entries(dictxml,
+                             dictname='gt',
+                             src=pair[:3],
+                             target=pair[3:])
             except etree.XMLSyntaxError as error:
                 print('Syntax error in {} '
                       'with the following error:\n{}\n'.format(
