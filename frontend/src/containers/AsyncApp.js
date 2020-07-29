@@ -1,33 +1,30 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
+import FeedbackIcon from '@material-ui/icons/Feedback';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import InboxIcon from '@material-ui/icons/Inbox';
+import LanguageIcon from '@material-ui/icons/Language';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 import Toolbar from '@material-ui/core/Toolbar';
+import TranslateIcon from '@material-ui/icons/Translate';
 import Typography from '@material-ui/core/Typography';
 
 import Articles from 'features/article/Articles';
 import DictChooserDialog from 'features/wantedlangs/DictChooserDialog';
 import FilterBar from 'features/search/FilterBar';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
-import LemmaDetails from 'components/LemmaDetails.js';
 import LangChooserDialog from 'features/wantedlangs/LangChooserDialog';
 
 const drawerWidth = 240;
@@ -82,14 +79,9 @@ const Home = () => (
 const AsyncApp = ({classes, match}) => {
   const [currentLemma, setCurrentLemma] = useState('');
   const [searchExpression, setSearchExpression] = useState('');
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const keysOpen = Boolean(anchorEl);
 
   const handleLemma = lemma => setCurrentLemma(lemma);
   const handleSearch = value => setSearchExpression(value);
-
-  const handleMenu = (event) => setAnchorEl(event.currentTarget);
-  const handleClose = () => setAnchorEl(null);
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -123,8 +115,8 @@ const AsyncApp = ({classes, match}) => {
           onClick={handleClickLangChooserDialog}
           button
         >
-          <ListItemIcon><MailIcon /></ListItemIcon>
-          <ListItemText primary='LangChooser' />
+          <ListItemIcon><LanguageIcon /></ListItemIcon>
+          <ListItemText primary='Dictionary languages' />
           <LangChooserDialog
             open={openLangChooser}
             onClose={handleCloseLangChooserDialog} />
@@ -134,11 +126,25 @@ const AsyncApp = ({classes, match}) => {
           onClick={handleClickDictChooserDialog}
           button
         >
-          <ListItemIcon><MailIcon /></ListItemIcon>
-          <ListItemText primary='DictChooser' />
+          <ListItemIcon><MenuBookIcon /></ListItemIcon>
+          <ListItemText primary='Dictionaries' />
           <DictChooserDialog
             open={openDictChooser}
             onClose={handleCloseDictChooserDialog} />
+        </ListItem>
+        <ListItem
+          key='Feedback'
+          button
+        >
+          <ListItemIcon><FeedbackIcon /></ListItemIcon>
+          <ListItemText primary='Feedback' />
+        </ListItem>
+        <ListItem
+          key='Translate'
+          button
+        >
+          <ListItemIcon><TranslateIcon /></ListItemIcon>
+          <ListItemText primary='Page language' />
         </ListItem>
       </List>
     </div>
