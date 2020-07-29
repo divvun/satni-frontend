@@ -6,6 +6,9 @@ import KeyboardIcon from '@material-ui/icons/Keyboard';
 import MenuIcon from '@material-ui/icons/Menu';
 import Paper from '@material-ui/core/Paper';
 import SearchIcon from '@material-ui/icons/Search';
+import Popover from '@material-ui/core/Popover';
+
+import SamiKeys from './SamiKeys';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,14 +36,46 @@ const useStyles = makeStyles((theme) => ({
 const FilterBar = ({searchHandler}) => {
   const classes = useStyles();
 
+  const [value, setValue] = useState('');
+  const handleChange = (event) => {
+    const newValue = event.target.value;
+    setValue(newValue);
+    searchHandler(newValue);
+  };
+
+  const handleKeyInput = input => {
+    const newValue = `${value}${input}`;
+    setValue(newValue);
+    searchHandler(newValue);
+  };
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? 'sami-keys' : undefined;
+
   return (
     <Paper component='form' className={classes.root}>
-      <IconButton className={classes.iconButton} aria-label='sámi keys'>
+      <IconButton
+        className={classes.iconButton}
+        aria-label='sámi keys'
+        aria-describedby={id}
+        onClick={handleClick}
+      >
         <KeyboardIcon />
       </IconButton>
       <InputBase
         autoFocus
-        onChange={searchHandler}
+        value={value}
+        onChange={(handleChange)}
         placeholder='Search…'
         className={classes.input}
         inputProps={{ 'aria-label': 'search' }}
@@ -48,7 +83,24 @@ const FilterBar = ({searchHandler}) => {
       <div className={classes.iconButton} aria-label='search'>
         <SearchIcon />
       </div>
+      <Popover
+        id={id}
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center'
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'center'
+        }}
+      >
+        <SamiKeys keyHandler={handleKeyInput} />
+      </Popover>
     </Paper>
   );
 };
+
 export default FilterBar;
