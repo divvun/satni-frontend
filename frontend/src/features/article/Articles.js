@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react';
-import {
-  useParams
-} from 'react-router-dom';
+import React from 'react';
 import { useCookies } from 'react-cookie';
 import { Trans } from '@lingui/macro';
 import gql from 'graphql-tag';
@@ -111,7 +108,7 @@ const Articles = ({lemma, lemmaHandler}) => {
       }
     `;
 
-  const {data, loading, fetchMore, error} = useQuery(
+  const {data, loading, error} = useQuery(
     GET_ARTICLES, {
       variables: {
         lemma,

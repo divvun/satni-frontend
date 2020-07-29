@@ -1,15 +1,11 @@
 import React from 'react';
 import useStems from './InfiniteStems.hooks';
-import { useCookies } from 'react-cookie';
-import { gql, useQuery } from '@apollo/client';
-import { Trans } from '@lingui/macro';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import InfiniteLoader from 'react-window-infinite-loader';
 import { FixedSizeList as List } from 'react-window';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
-import { Redirect } from 'react-router-dom';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyles = makeStyles(theme => ({
@@ -19,7 +15,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const InfiniteStems = ({lemmaHandler, searchExpression}) => {
-  const {stems, loading, error, loadMore, hasNextPage} = useStems(searchExpression);
+  const {stems, loading, loadMore, hasNextPage} = useStems(searchExpression);
   const classes = useStyles();
 
   const stemsCount = hasNextPage ? stems.length + 1 : stems.length;
