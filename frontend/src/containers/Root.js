@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import { useCookies } from 'react-cookie';
 import { I18nProvider } from '@lingui/react';
 
 import AsyncApp from './AsyncApp';
