@@ -51,72 +51,83 @@ Ved artikkelvisning: vis språkpar som har både src og target i blant de ønske
 {{{
 ** Større søkefelt
 }}} Fikset 20200726
-
-For å nå samme funksjonalitet som dagens sátni:
 {{{
 * vise re i Dict
 }}} Fikset 20200726
-
-* Detaljer som popup-visning, evt. egen side (som nå)
-{{{
-** InfoOutlined-menu-icon bak lemma for å åpne paradigmet.
-** Paradigmet som dialog.
-}}} Fikset 20200726
-** ViewHeadlineOutLaunchOutlined/lined? for Korp-linken
-{{{
-* For termwiki, ingen fremmedspråk - fremmedspråk-visninger
-}}} fikset 20200727
 {{{
 ** Mindre luft før og etter midtfeltet
 }}} Fikset 20200726
-
-Feedback-icon!
-
-Neste trinn:
-* Tolk bøyde ord
-* Med bare et funn, vis artikkel
-* Header á la NDS, med visningsspråkvalg
-* Ordne layout:
-** valgt ord i søkeordlisten i fet skrift
-** større fonter generelt
-{{{
-** Side uten rullefelt, la dem heller være i både søkeordslista og artikkelvisninga
-}}} Fikset 20200728
 {{{
 ** Ordne visning av lemma. Lemma & re på venstre side, resten til høyre
 }}} Fikset 20200726
 {{{
-* Samiske bokstaver som js-widget
-** Keyboard-icon i søkefelt
-** SámiKeys-widget for input
-}}} Fikset 20200728
-** Koble sammen disse
-* Gjøre variabler oversettbare
-* Gjøre metaspråk valgbart
-
-* Gjør oversettelsen søkbar (en link)
+* For termwiki, ingen fremmedspråk - fremmedspråk-visninger
+}}} fikset 20200727
 {{{
+* når man laster
+** kjør sirkel i søkefeltet
+** kjør sirkel nederst i søkeordslista
+}}} fikset 20200727
+{{{
+* Gjør oversettelsen søkbar (en link)
 ** Ikke søkeordet
 ** Dersom den er fra TermWiki
 }}} Fikset 20200727
 {{{
+* Gjemme Phrase og MWE
+* Ingen paradigme- eller korp-knapp ved Phrase og MWE
+}}} Fikset 20200727
+{{{
+* kvitte seg med de fæle rammene rundt stem
+}}} fikset 20200728
+{{{
 ** Om den er fra ordbok, dersom den finnes blant Stem
 }}} Fikset 20200728
+{{{
+** Side uten rullefelt, la dem heller være i både søkeordslista og artikkelvisninga
+}}} Fikset 20200728
+{{{
+* Samiske bokstaver som js-widget
+** Keyboard-icon i søkefelt
+** SámiKeys-widget for input
+** Koble sammen disse
+}}} Fikset 20200729
+
+{{{
+** InfoOutlined-menu-icon bak lemma for å åpne paradigmet.
+** Paradigmet som dialog.
+}}} Fikset 20200726
+{{{
+* drawer á la https://material-ui.com/getting-started/templates/dashboard/ settings og alt der
+** språk som dialog
+** ordbøker som dialog
+}}} Fikset 20200729
+
+* Detaljer som popup-visning, evt. egen side (som nå)
+** ViewHeadlineOutLaunchOutlined/lined? for Korp-linken
+
+* Feedback-icon! i hver artikkel
+
+Neste trinn:
+* Tolk bøyde ord
+* Header á la NDS, med visningsspråkvalg
+* Ordne layout:
+** valgt ord i søkeordlisten i fet skrift
+** større fonter generelt
 
 * mobilmodus
 ** klapp søkeordslista sammen når man velger artikkelvisning
 ** AppBar nederst
 ** Footer-info som infomeny elns.
 
+* Gjøre variabler oversettbare
+* Gjøre metaspråk valgbart
+
 * Forbedre språk- og ordboksvalg: egne oppsprettsvindu
 ** Språk: alle, språkpar (davvi-dáro-dávvi, julev-dáro-julev, etc)
    og nåværende valg (velg en og en)
 ** Ordbøker
 * når man laster
-{{{
-** kjør sirkel i søkefeltet
-** kjør sirkel nederst i søkeordslista
-}}} fikset 20200727
 ** skygger i artikkelfeltet
 * mulighet til å gå opp og ned med piltaster i søkeordsfelt
 
@@ -125,13 +136,17 @@ Neste trinn:
 * Fiks visning av collections
 * Vis termwiki-kilde som artikkelnavn
 * Hoppe over kategori?*
-{{{
-* Gjemme Phrase og MWE
-* Ingen paradigme- eller korp-knapp ved Phrase og MWE
-}}} Fikset 20200727
-* drawer á la https://material-ui.com/getting-started/templates/dashboard/ settings og alt der
-** språk som dialog
-** ordbøker som dialog
 
 * rapporter om antall søkeord i søkefeltet
-* kvitte seg med de fæle rammene rundt stem
+* sette inn footer-innholdet på startsida
+* sette et home-ikon for å gå til startsida
+* startsida skal ha følgende info
+** footeren
+** bøyde ord
+** paradigme-ikon
+** korp-ikon
+* bruke debounce og throttle (https://medium.com/better-programming/lodash-create-react-apps-built-in-library-for-debounce-and-throttle-with-hooks-3418087f44d8)
+
+* Med bare et funn, vis artikkel. Prøvde med å sette den i InfiniteList, men den ødelegger for linken i artikkelvisninga.
+
+* check code according to https://itnext.io/write-clean-er-components-jsx-1e70491baded
