@@ -77,6 +77,10 @@ msgstr ""
 msgid "N"
 msgstr ""
 
+#: src/features/article/LemmaGroup.js:13
+msgid "Note:"
+msgstr ""
+
 #: src/translateble_variables.js:8
 msgid "Pron"
 msgstr ""
@@ -85,12 +89,20 @@ msgstr ""
 msgid "Search…"
 msgstr ""
 
+#: src/features/article/LemmaGroup.js:15
+msgid "Source:"
+msgstr ""
+
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
 msgstr ""
 
 #: src/features/article/TermWikiArticle.js:26
 msgid "Source:<0>TermWiki</0>"
+msgstr ""
+
+#: src/features/article/LemmaGroup.js:14
+msgid "Status:"
 msgstr ""
 
 #: src/features/korp/Korp.js:44
