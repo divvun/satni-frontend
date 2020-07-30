@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Trans } from '@lingui/macro';
 import Box from '@material-ui/core/Box';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
@@ -28,7 +29,7 @@ const DictChooserDialog = (props) => {
     <Dialog onClose={handleClose} aria-labelledby='DictChooser' open={open}>
       <Box className={classes.root}>
         <DialogTitle id='simple-dialog-title'>
-          <Typography variant='h6'>DictChooser</Typography>
+          <Trans>Choose dictionaries</Trans>
         </DialogTitle>
         <DictChooser />
       </Box>

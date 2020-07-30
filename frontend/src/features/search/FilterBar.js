@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
+import { I18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 import IconButton from '@material-ui/core/IconButton';
 import InputBase from '@material-ui/core/InputBase';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
 import Paper from '@material-ui/core/Paper';
-import SearchIcon from '@material-ui/icons/Search';
 import Popover from '@material-ui/core/Popover';
+import SearchIcon from '@material-ui/icons/Search';
 
 import SamiKeys from './SamiKeys';
 
@@ -31,6 +33,26 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1)
   }
 }));
+
+const InputWithTranslation = (props) => {
+  const classes = useStyles();
+  const {value, onChange} = props;
+
+  return (
+    <I18n>
+      {({i18n}) => (
+        <InputBase
+          autoFocus
+          value={value}
+          onChange={(onChange)}
+          placeholder={i18n._(t`Search…`)}
+          className={classes.input}
+          inputProps={{ 'aria-label': 'search' }}
+        />
+      )}
+    </I18n>
+  );
+};
 
 const FilterBar = ({searchHandler}) => {
   const classes = useStyles();
@@ -71,13 +93,9 @@ const FilterBar = ({searchHandler}) => {
       >
         <KeyboardIcon />
       </IconButton>
-      <InputBase
-        autoFocus
+      <InputWithTranslation
         value={value}
         onChange={(handleChange)}
-        placeholder='Search…'
-        className={classes.input}
-        inputProps={{ 'aria-label': 'search' }}
       />
       <div className={classes.iconButton} aria-label='search'>
         <SearchIcon />
