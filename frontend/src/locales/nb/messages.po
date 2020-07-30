@@ -61,15 +61,27 @@ msgstr "Velg ordbøker"
 msgid "Choose languages"
 msgstr "Velg språk"
 
+#: src/containers/Welcome.js:56
+msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
+msgstr "Klikk på <0/> for å se hvordan ordet bøyes. Klikk på <1/> for å se eksempler på hvordan ordet brukes."
+
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
 msgstr "Definisjoner:"
 
-#: src/containers/AsyncApp.js:131
+#: src/containers/AsyncApp.js:126
 msgid "Dictionaries"
 msgstr "Ordbøker"
 
-#: src/containers/AsyncApp.js:120
+#: src/containers/Welcome.js:48
+msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
+msgstr "I dette panelet dukker det opp ordboksartikler når du trykker på et ord blant søkeresultatene til venstre."
+
+#: src/containers/Welcome.js:64
+msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
+msgstr "Inne i artiklene kan du skjule uønskede språk og ordbøker. For å aktivere dem på nytt, trykk på <0/> eller <1/>."
+
+#: src/containers/AsyncApp.js:115
 msgid "Languages"
 msgstr "Språk"
 
@@ -85,9 +97,9 @@ msgstr "Notat:"
 msgid "Pron"
 msgstr "pronomen"
 
-#: src/features/search/FilterBar.js:48
-msgid "Search…"
-msgstr "Søk …"
+#: src/containers/Welcome.js:81
+msgid "Search results will appear here."
+msgstr "Søkeresultater dukker opp her."
 
 #: src/features/article/LemmaGroup.js:15
 msgid "Source:"
@@ -105,6 +117,10 @@ msgstr "Kilde: <0>TermWiki</0>"
 msgid "Status:"
 msgstr "Status:"
 
+#: src/containers/Welcome.js:89
+msgid "The input field accepts sami, nordic, english and latin search words."
+msgstr "Søkefeltet forstår samiske, nordiske, engelske og latinske søkeord."
+
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"
 msgstr "Det er ikke noe korpus for {language}"
@@ -113,9 +129,21 @@ msgstr "Det er ikke noe korpus for {language}"
 msgid "V"
 msgstr "verb"
 
-#: src/containers/AsyncApp.js:77
+#: src/containers/Welcome.js:40
 msgid "Welcome!"
 msgstr "Velkommen!"
+
+#: src/containers/Welcome.js:105
+msgid "When you click a word here, dictionary articles appear to the right."
+msgstr "Når du klikker på et ord her, dukker ordboksartikler opp til høyre."
+
+#: src/features/search/FilterBar.js:48
+msgid "Write at least one letter here"
+msgstr "Skriv minst en bokstav her"
+
+#: src/containers/Welcome.js:97
+msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
+msgstr "Du kan bla blant søkeordene her, nye hentes til alle treff har blitt funnet."
 
 #: src/translateble_variables.js:11
 msgid "en"
