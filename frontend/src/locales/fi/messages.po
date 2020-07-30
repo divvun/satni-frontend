@@ -53,8 +53,24 @@ msgstr ""
 msgid "Checking if {lemma} exists in Korp."
 msgstr ""
 
+#: src/features/wantedlangs/DictChooserDialog.js:32
+msgid "Choose dictionaries"
+msgstr ""
+
+#: src/features/wantedlangs/LangChooserDialog.js:40
+msgid "Choose languages"
+msgstr ""
+
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
+msgstr ""
+
+#: src/containers/AsyncApp.js:131
+msgid "Dictionaries"
+msgstr ""
+
+#: src/containers/AsyncApp.js:120
+msgid "Languages"
 msgstr ""
 
 #: src/translateble_variables.js:8
@@ -63,6 +79,10 @@ msgstr ""
 
 #: src/translateble_variables.js:8
 msgid "Pron"
+msgstr ""
+
+#: src/features/search/FilterBar.js:48
+msgid "Search…"
 msgstr ""
 
 #: src/features/article/Source.js:117
@@ -79,6 +99,10 @@ msgstr ""
 
 #: src/translateble_variables.js:8
 msgid "V"
+msgstr ""
+
+#: src/containers/AsyncApp.js:77
+msgid "Welcome!"
 msgstr ""
 
 #: src/translateble_variables.js:11

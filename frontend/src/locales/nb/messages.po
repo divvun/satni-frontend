@@ -53,9 +53,25 @@ msgstr "Kategori:"
 msgid "Checking if {lemma} exists in Korp."
 msgstr "Sjekker om {lemma} finnes i Korp."
 
+#: src/features/wantedlangs/DictChooserDialog.js:32
+msgid "Choose dictionaries"
+msgstr "Velg ordbøker"
+
+#: src/features/wantedlangs/LangChooserDialog.js:40
+msgid "Choose languages"
+msgstr "Velg språk"
+
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
 msgstr "Definisjoner:"
+
+#: src/containers/AsyncApp.js:131
+msgid "Dictionaries"
+msgstr "Ordbøker"
+
+#: src/containers/AsyncApp.js:120
+msgid "Languages"
+msgstr "Språk"
 
 #: src/translateble_variables.js:8
 msgid "N"
@@ -64,6 +80,10 @@ msgstr "substantiv"
 #: src/translateble_variables.js:8
 msgid "Pron"
 msgstr "pronomen"
+
+#: src/features/search/FilterBar.js:48
+msgid "Search…"
+msgstr "Søk …"
 
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
@@ -80,6 +100,10 @@ msgstr "Det er ikke noe korpus for {language}"
 #: src/translateble_variables.js:8
 msgid "V"
 msgstr "verb"
+
+#: src/containers/AsyncApp.js:77
+msgid "Welcome!"
+msgstr "Velkommen!"
 
 #: src/translateble_variables.js:11
 msgid "en"
