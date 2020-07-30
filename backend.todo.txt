@@ -102,6 +102,21 @@ Ved artikkelvisning: vis språkpar som har både src og target i blant de ønske
 ** språk som dialog
 ** ordbøker som dialog
 }}} Fikset 20200729
+{{{
+* Forbedre språk- og ordboksvalg: egne oppsprettsvindu
+** Språk: alle, språkpar (davvi-dáro-dávvi, julev-dáro-julev, etc)
+   og nåværende valg (velg en og en)
+** Ordbøker
+}}} Fikset 20200730
+{{{
+* Gjøre variabler oversettbare
+}}} Fikset 20200730
+{{{
+* startsida skal ha følgende info
+** bøyde ord
+** paradigme-ikon
+** korp-ikon
+}}} Fikset 20200730
 
 * Detaljer som popup-visning, evt. egen side (som nå)
 ** ViewHeadlineOutLaunchOutlined/lined? for Korp-linken
@@ -120,13 +135,7 @@ Neste trinn:
 ** AppBar nederst
 ** Footer-info som infomeny elns.
 
-* Gjøre variabler oversettbare
 * Gjøre metaspråk valgbart
-
-* Forbedre språk- og ordboksvalg: egne oppsprettsvindu
-** Språk: alle, språkpar (davvi-dáro-dávvi, julev-dáro-julev, etc)
-   og nåværende valg (velg en og en)
-** Ordbøker
 * når man laster
 ** skygger i artikkelfeltet
 * mulighet til å gå opp og ned med piltaster i søkeordsfelt
@@ -140,13 +149,15 @@ Neste trinn:
 * rapporter om antall søkeord i søkefeltet
 * sette inn footer-innholdet på startsida
 * sette et home-ikon for å gå til startsida
-* startsida skal ha følgende info
-** footeren
-** bøyde ord
-** paradigme-ikon
-** korp-ikon
 * bruke debounce og throttle (https://medium.com/better-programming/lodash-create-react-apps-built-in-library-for-debounce-and-throttle-with-hooks-3418087f44d8)
 
 * Med bare et funn, vis artikkel. Prøvde med å sette den i InfiniteList, men den ødelegger for linken i artikkelvisninga.
 
 * check code according to https://itnext.io/write-clean-er-components-jsx-1e70491baded
+
+* Gjemme språk fra artikler
+* Gjemme ordbøker fra artikler
+* Når det ikke er treff, dvs. stems.length === 0 i InfiniteList
+** Sjekk om det er noen treff for uaktive språk, vis dem
+** Ingen treff, punktum, fortell om det
+* Hvis treff som popup, linker fremover og bakover i lista.
