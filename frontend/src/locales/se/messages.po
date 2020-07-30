@@ -53,9 +53,25 @@ msgstr "Kategoriija:"
 msgid "Checking if {lemma} exists in Korp."
 msgstr "Iskamin jus {lemma} gávdno Korpas."
 
+#: src/features/wantedlangs/DictChooserDialog.js:32
+msgid "Choose dictionaries"
+msgstr "Vállje sátnegirjjiid"
+
+#: src/features/wantedlangs/LangChooserDialog.js:40
+msgid "Choose languages"
+msgstr "Vállje gielaid"
+
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
 msgstr "Definišuvnnat:"
+
+#: src/containers/AsyncApp.js:131
+msgid "Dictionaries"
+msgstr "Sátnegirjjit"
+
+#: src/containers/AsyncApp.js:120
+msgid "Languages"
+msgstr "Gielat"
 
 #: src/translateble_variables.js:8
 msgid "N"
@@ -64,6 +80,10 @@ msgstr "substantiiva"
 #: src/translateble_variables.js:8
 msgid "Pron"
 msgstr "pronomen"
+
+#: src/features/search/FilterBar.js:48
+msgid "Search…"
+msgstr "Oza …"
 
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
@@ -80,6 +100,10 @@ msgstr "Ii gávdno korpus {language} várás"
 #: src/translateble_variables.js:8
 msgid "V"
 msgstr "vearba"
+
+#: src/containers/AsyncApp.js:77
+msgid "Welcome!"
+msgstr "Bures boahttin!"
 
 #: src/translateble_variables.js:11
 msgid "en"
