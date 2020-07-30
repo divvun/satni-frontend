@@ -13,23 +13,32 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/features/article/Articles.js:127
-#: src/features/search/Searcher.js:97
+#: src/features/article/Source.stories.js:10
+msgid "<0/>"
+msgstr ""
+
+#: src/features/article/Articles.js:121
 msgid "<0>Error {0}</0>"
 msgstr ""
 
-#: src/features/article/Articles.js:126
-#: src/features/search/Searcher.js:96
+#: src/features/article/Articles.js:120
 msgid "<0>Loading...</0>"
 msgstr ""
 
-#: src/features/article/Articles.js:128
-#: src/features/search/Searcher.js:98
+#: src/features/article/Articles.js:122
 msgid "<0>Not found</0>"
 msgstr ""
 
 #: src/features/article/Source.js:121
 msgid "<0>Pekka Sammalahttis North Sami – Finnish dictionary</0>"
+msgstr ""
+
+#: src/translateble_variables.js:8
+msgid "A"
+msgstr ""
+
+#: src/translateble_variables.js:8
+msgid "Adv"
 msgstr ""
 
 #: src/features/korp/Korp.js:22
@@ -48,6 +57,14 @@ msgstr ""
 msgid "Definitions:"
 msgstr ""
 
+#: src/translateble_variables.js:8
+msgid "N"
+msgstr ""
+
+#: src/translateble_variables.js:8
+msgid "Pron"
+msgstr ""
+
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
 msgstr ""
@@ -58,6 +75,118 @@ msgstr ""
 
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"
+msgstr ""
+
+#: src/translateble_variables.js:8
+msgid "V"
+msgstr ""
+
+#: src/translateble_variables.js:11
+msgid "en"
+msgstr ""
+
+#: src/translateble_variables.js:11
+msgid "eng"
+msgstr ""
+
+#: src/translateble_variables.js:11
+msgid "fi"
+msgstr ""
+
+#: src/translateble_variables.js:11
+msgid "fin"
+msgstr ""
+
+#: src/translateble_variables.js:5
+msgid "gtfinsme"
+msgstr ""
+
+#: src/translateble_variables.js:4
+msgid "gtnobsma"
+msgstr ""
+
+#: src/translateble_variables.js:4
+msgid "gtnobsme"
+msgstr ""
+
+#: src/translateble_variables.js:4
+msgid "gtsmanob"
+msgstr ""
+
+#: src/translateble_variables.js:4
+msgid "gtsmefin"
+msgstr ""
+
+#: src/translateble_variables.js:4
+msgid "gtsmenob"
+msgstr ""
+
+#: src/translateble_variables.js:5
+msgid "gtsmesmn"
+msgstr ""
+
+#: src/translateble_variables.js:5
+msgid "gtsmnsme"
+msgstr ""
+
+#: src/translateble_variables.js:12
+msgid "lat"
+msgstr ""
+
+#: src/translateble_variables.js:11
+msgid "nb"
+msgstr ""
+
+#: src/translateble_variables.js:11
+msgid "nn"
+msgstr ""
+
+#: src/translateble_variables.js:11
+msgid "nno"
+msgstr ""
+
+#: src/translateble_variables.js:11
+msgid "nob"
+msgstr ""
+
+#: src/translateble_variables.js:5
+msgid "pksmefin"
+msgstr ""
+
+#: src/translateble_variables.js:11
+msgid "se"
+msgstr ""
+
+#: src/translateble_variables.js:12
+msgid "sma"
+msgstr ""
+
+#: src/translateble_variables.js:12
+msgid "sme"
+msgstr ""
+
+#: src/translateble_variables.js:12
+msgid "smj"
+msgstr ""
+
+#: src/translateble_variables.js:12
+msgid "smn"
+msgstr ""
+
+#: src/translateble_variables.js:12
+msgid "sms"
+msgstr ""
+
+#: src/translateble_variables.js:11
+msgid "sv"
+msgstr ""
+
+#: src/translateble_variables.js:12
+msgid "swe"
+msgstr ""
+
+#: src/translateble_variables.js:4
+msgid "termwiki"
 msgstr ""
 
 #: src/features/korp/Korp.js:32
