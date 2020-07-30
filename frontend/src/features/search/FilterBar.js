@@ -45,7 +45,7 @@ const InputWithTranslation = (props) => {
           autoFocus
           value={value}
           onChange={(onChange)}
-          placeholder={i18n._(t`Search…`)}
+          placeholder={i18n._(t`Write at least one letter here`)}
           className={classes.input}
           inputProps={{ 'aria-label': 'search' }}
         />
