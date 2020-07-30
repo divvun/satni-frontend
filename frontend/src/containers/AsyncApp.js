@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-
+import { Trans } from '@lingui/macro';
 import { withStyles } from '@material-ui/core/styles';
+
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
@@ -17,6 +17,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
+import PropTypes from 'prop-types';
 import Toolbar from '@material-ui/core/Toolbar';
 import TranslateIcon from '@material-ui/icons/Translate';
 import Typography from '@material-ui/core/Typography';
@@ -73,7 +74,7 @@ const styles = theme => ({
 });
 
 const Home = () => (
-  <p>Bures boahttin!</p>
+  <p><Trans>Welcome!</Trans></p>
 );
 
 const AsyncApp = ({classes, match}) => {
@@ -116,7 +117,7 @@ const AsyncApp = ({classes, match}) => {
           button
         >
           <ListItemIcon><LanguageIcon /></ListItemIcon>
-          <ListItemText primary='Dictionary languages' />
+          <ListItemText primary={<Trans>Languages</Trans>} />
           <LangChooserDialog
             open={openLangChooser}
             onClose={handleCloseLangChooserDialog} />
@@ -127,7 +128,7 @@ const AsyncApp = ({classes, match}) => {
           button
         >
           <ListItemIcon><MenuBookIcon /></ListItemIcon>
-          <ListItemText primary='Dictionaries' />
+          <ListItemText primary={<Trans>Dictionaries</Trans>} />
           <DictChooserDialog
             open={openDictChooser}
             onClose={handleCloseDictChooserDialog} />
@@ -140,7 +141,7 @@ const AsyncApp = ({classes, match}) => {
           <ListItemText primary='Feedback' />
         </ListItem>
         <ListItem
-          key='Translate'
+          key='Page language'
           button
         >
           <ListItemIcon><TranslateIcon /></ListItemIcon>
