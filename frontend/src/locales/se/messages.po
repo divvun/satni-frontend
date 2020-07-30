@@ -77,6 +77,10 @@ msgstr "Gielat"
 msgid "N"
 msgstr "substantiiva"
 
+#: src/features/article/LemmaGroup.js:13
+msgid "Note:"
+msgstr "Notáhta:"
+
 #: src/translateble_variables.js:8
 msgid "Pron"
 msgstr "pronomen"
@@ -85,6 +89,10 @@ msgstr "pronomen"
 msgid "Search…"
 msgstr "Oza …"
 
+#: src/features/article/LemmaGroup.js:15
+msgid "Source:"
+msgstr "Gáldu:"
+
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
 msgstr "Gáldu: {0}"
@@ -92,6 +100,10 @@ msgstr "Gáldu: {0}"
 #: src/features/article/TermWikiArticle.js:26
 msgid "Source:<0>TermWiki</0>"
 msgstr "Gáldu:<0>TermWiki</0>"
+
+#: src/features/article/LemmaGroup.js:14
+msgid "Status:"
+msgstr "Stáhtus:"
 
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"

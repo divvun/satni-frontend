@@ -77,6 +77,10 @@ msgstr "Languages"
 msgid "N"
 msgstr "noun"
 
+#: src/features/article/LemmaGroup.js:13
+msgid "Note:"
+msgstr "Note:"
+
 #: src/translateble_variables.js:8
 msgid "Pron"
 msgstr "pronoun"
@@ -85,6 +89,10 @@ msgstr "pronoun"
 msgid "Search…"
 msgstr "Search…"
 
+#: src/features/article/LemmaGroup.js:15
+msgid "Source:"
+msgstr "Source:"
+
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
 msgstr "Source: {0}"
@@ -92,6 +100,10 @@ msgstr "Source: {0}"
 #: src/features/article/TermWikiArticle.js:26
 msgid "Source:<0>TermWiki</0>"
 msgstr "Source:<0>TermWiki</0>"
+
+#: src/features/article/LemmaGroup.js:14
+msgid "Status:"
+msgstr "Status:"
 
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"
