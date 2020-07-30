@@ -1,17 +1,21 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import { Trans } from '@lingui/macro';
+import Box from '@material-ui/core/Box';
+import CloseIcon from '@material-ui/icons/Close';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
 import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 import LangChooser from './LangChooser';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: 0,
-    padding: theme.spacing(2)
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(3),
+    marginRight: theme.spacing(8),
+    marginLeft: theme.spacing(8)
   },
   closeButton: {
     position: 'absolute',
@@ -31,20 +35,12 @@ const LangChooserDialog = (props) => {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby='LangChooser' open={open}>
-      <DialogTitle id='simple-dialog-title'>
-        <Typography variant='h6'>
-          LangChooser
-        </Typography>
-        {onClose ? (
-          <IconButton
-            aria-label='close'
-            onClick={onClose}
-            className={classes.closeButton}>
-            <CloseIcon />
-          </IconButton>
-        ) : null}
-      </DialogTitle>
-      <LangChooser />
+      <Box className={classes.root}>
+        <DialogTitle id='simple-dialog-title'>
+          <Trans>Choose languages</Trans>
+        </DialogTitle>
+        <LangChooser />
+      </Box>
     </Dialog>
   );
 };
