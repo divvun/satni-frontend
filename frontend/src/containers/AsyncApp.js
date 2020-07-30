@@ -22,6 +22,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import TranslateIcon from '@material-ui/icons/Translate';
 import Typography from '@material-ui/core/Typography';
 
+import {SearchWelcome, DictWelcome} from 'containers/Welcome';
 import Articles from 'features/article/Articles';
 import DictChooserDialog from 'features/wantedlangs/DictChooserDialog';
 import FilterBar from 'features/search/FilterBar';
@@ -60,10 +61,8 @@ const styles = theme => ({
     flexDirection: 'column'
   },
   main: {
-    textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
     flex: 1,
     height: '80vh',
     [theme.breakpoints.up('sm')]: {
@@ -72,10 +71,6 @@ const styles = theme => ({
     }
   }
 });
-
-const Home = () => (
-  <p><Trans>Welcome!</Trans></p>
-);
 
 const AsyncApp = ({classes, match}) => {
   const [currentLemma, setCurrentLemma] = useState('');
@@ -141,11 +136,11 @@ const AsyncApp = ({classes, match}) => {
           <ListItemText primary='Feedback' />
         </ListItem>
         <ListItem
-          key='Page language'
+          key='Site language'
           button
         >
           <ListItemIcon><TranslateIcon /></ListItemIcon>
-          <ListItemText primary='Page language' />
+          <ListItemText primary='Site language' />
         </ListItem>
       </List>
     </div>
@@ -208,8 +203,9 @@ const AsyncApp = ({classes, match}) => {
             {searchExpression ?
               <InfiniteStems
                 searchExpression={searchExpression}
-                lemmaHandler={handleLemma} /> :
-              <p>Waiting for input</p>
+                lemmaHandler={handleLemma}
+              /> :
+              <SearchWelcome />
             }
           </Grid>
           <Grid item xs={8}>
@@ -217,7 +213,7 @@ const AsyncApp = ({classes, match}) => {
               <Articles
                 lemma={currentLemma}
                 lemmaHandler={handleLemma} /> :
-              <Home />
+              <DictWelcome />
             }
           </Grid>
         </Grid>
