@@ -61,15 +61,27 @@ msgstr "Choose dictionaries"
 msgid "Choose languages"
 msgstr "Choose languages"
 
+#: src/containers/Welcome.js:56
+msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
+msgstr "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
+
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
 msgstr "Definitions:"
 
-#: src/containers/AsyncApp.js:131
+#: src/containers/AsyncApp.js:126
 msgid "Dictionaries"
 msgstr "Dictionaries"
 
-#: src/containers/AsyncApp.js:120
+#: src/containers/Welcome.js:48
+msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
+msgstr "Dictionary articles will appear in this pane when you press a word in the search results to the left."
+
+#: src/containers/Welcome.js:64
+msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
+msgstr "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
+
+#: src/containers/AsyncApp.js:115
 msgid "Languages"
 msgstr "Languages"
 
@@ -85,9 +97,13 @@ msgstr "Note:"
 msgid "Pron"
 msgstr "pronoun"
 
+#: src/containers/Welcome.js:81
+msgid "Search results will appear here."
+msgstr "Search results will appear here."
+
 #: src/features/search/FilterBar.js:48
-msgid "Search…"
-msgstr "Search…"
+#~ msgid "Search…"
+#~ msgstr "Search…"
 
 #: src/features/article/LemmaGroup.js:15
 msgid "Source:"
@@ -105,6 +121,10 @@ msgstr "Source:<0>TermWiki</0>"
 msgid "Status:"
 msgstr "Status:"
 
+#: src/containers/Welcome.js:89
+msgid "The input field accepts sami, nordic, english and latin search words."
+msgstr "The input field accepts sami, nordic, english and latin search words."
+
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"
 msgstr "There is no corpus for {language}"
@@ -113,9 +133,21 @@ msgstr "There is no corpus for {language}"
 msgid "V"
 msgstr "verb"
 
-#: src/containers/AsyncApp.js:77
+#: src/containers/Welcome.js:40
 msgid "Welcome!"
 msgstr "Welcome!"
+
+#: src/containers/Welcome.js:105
+msgid "When you click a word here, dictionary articles appear to the right."
+msgstr "When you click a word here, dictionary articles appear to the right."
+
+#: src/features/search/FilterBar.js:48
+msgid "Write at least one letter here"
+msgstr "Write at least one letter here"
+
+#: src/containers/Welcome.js:97
+msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
+msgstr "You can browse the search words here, new ones will be fetched until all matches have been found."
 
 #: src/translateble_variables.js:11
 msgid "en"

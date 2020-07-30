@@ -61,15 +61,27 @@ msgstr ""
 msgid "Choose languages"
 msgstr ""
 
+#: src/containers/Welcome.js:56
+msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
+msgstr ""
+
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
 msgstr ""
 
-#: src/containers/AsyncApp.js:131
+#: src/containers/AsyncApp.js:126
 msgid "Dictionaries"
 msgstr ""
 
-#: src/containers/AsyncApp.js:120
+#: src/containers/Welcome.js:48
+msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
+msgstr ""
+
+#: src/containers/Welcome.js:64
+msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
+msgstr ""
+
+#: src/containers/AsyncApp.js:115
 msgid "Languages"
 msgstr ""
 
@@ -85,8 +97,8 @@ msgstr ""
 msgid "Pron"
 msgstr ""
 
-#: src/features/search/FilterBar.js:48
-msgid "Search…"
+#: src/containers/Welcome.js:81
+msgid "Search results will appear here."
 msgstr ""
 
 #: src/features/article/LemmaGroup.js:15
@@ -105,6 +117,10 @@ msgstr ""
 msgid "Status:"
 msgstr ""
 
+#: src/containers/Welcome.js:89
+msgid "The input field accepts sami, nordic, english and latin search words."
+msgstr ""
+
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"
 msgstr ""
@@ -113,8 +129,20 @@ msgstr ""
 msgid "V"
 msgstr ""
 
-#: src/containers/AsyncApp.js:77
+#: src/containers/Welcome.js:40
 msgid "Welcome!"
+msgstr ""
+
+#: src/containers/Welcome.js:105
+msgid "When you click a word here, dictionary articles appear to the right."
+msgstr ""
+
+#: src/features/search/FilterBar.js:48
+msgid "Write at least one letter here"
+msgstr ""
+
+#: src/containers/Welcome.js:97
+msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr ""
 
 #: src/translateble_variables.js:11

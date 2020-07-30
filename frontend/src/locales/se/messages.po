@@ -61,15 +61,27 @@ msgstr "Vállje sátnegirjjiid"
 msgid "Choose languages"
 msgstr "Vállje gielaid"
 
+#: src/containers/Welcome.js:56
+msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
+msgstr "Go coahkkalat <0/>, de oainnát mo sátni sodjá. Go coahkkalat <1/>, de oainnát mo sátni lea átnon."
+
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
 msgstr "Definišuvnnat:"
 
-#: src/containers/AsyncApp.js:131
+#: src/containers/AsyncApp.js:126
 msgid "Dictionaries"
 msgstr "Sátnegirjjit"
 
-#: src/containers/AsyncApp.js:120
+#: src/containers/Welcome.js:48
+msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
+msgstr "Sátnegirjeartihkkalat ihtet dán panelas go coahkkalat sáni ohcanbohtosiin dás gurutbealde."
+
+#: src/containers/Welcome.js:64
+msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
+msgstr "Artihkkaliin sáhtát čiehkat gielaid dahje sátnegirjjiid maid it hálid oaidnit. Sáhtát daid čájehit fas jus čoahkkalat <0/> dahje <1/>."
+
+#: src/containers/AsyncApp.js:115
 msgid "Languages"
 msgstr "Gielat"
 
@@ -85,10 +97,11 @@ msgstr "Notáhta:"
 msgid "Pron"
 msgstr "pronomen"
 
-#: src/features/search/FilterBar.js:48
-msgid "Search…"
-msgstr "Oza …"
+#: src/containers/Welcome.js:81
+msgid "Search results will appear here."
+msgstr "Ohcanbohtosat ihtet dás."
 
+#: src/features/search/FilterBar.js:48
 #: src/features/article/LemmaGroup.js:15
 msgid "Source:"
 msgstr "Gáldu:"
@@ -105,6 +118,10 @@ msgstr "Gáldu:<0>TermWiki</0>"
 msgid "Status:"
 msgstr "Stáhtus:"
 
+#: src/containers/Welcome.js:89
+msgid "The input field accepts sami, nordic, english and latin search words."
+msgstr "Oza sámi, davviriikkalaš, eŋgelas dahje latiinna sániid ohcangiettis."
+
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"
 msgstr "Ii gávdno korpus {language} várás"
@@ -113,9 +130,21 @@ msgstr "Ii gávdno korpus {language} várás"
 msgid "V"
 msgstr "vearba"
 
-#: src/containers/AsyncApp.js:77
+#: src/containers/Welcome.js:40
 msgid "Welcome!"
 msgstr "Bures boahttin!"
+
+#: src/containers/Welcome.js:105
+msgid "When you click a word here, dictionary articles appear to the right."
+msgstr "Go coahkkalat sáni dás, sátnegirjeartihkkalat ihtet olgešbealde."
+
+#: src/features/search/FilterBar.js:48
+msgid "Write at least one letter here"
+msgstr "Čális unnimus ovtta bustáva deike"
+
+#: src/containers/Welcome.js:97
+msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
+msgstr "Sáhtát bláđet ohcanbohtosiid gaskkas dás, ođđa bohtosat ihtet dassáigo visot deaivamat leat gávdnon."
 
 #: src/translateble_variables.js:11
 msgid "en"
