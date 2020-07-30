@@ -13,24 +13,33 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/features/article/Articles.js:127
-#: src/features/search/Searcher.js:97
+#: src/features/article/Source.stories.js:10
+msgid "<0/>"
+msgstr "<0/>"
+
+#: src/features/article/Articles.js:121
 msgid "<0>Error {0}</0>"
 msgstr "<0>Meattáhus {0}</0>"
 
-#: src/features/article/Articles.js:126
-#: src/features/search/Searcher.js:96
+#: src/features/article/Articles.js:120
 msgid "<0>Loading...</0>"
 msgstr "<0>Viežžamin …</0>"
 
-#: src/features/article/Articles.js:128
-#: src/features/search/Searcher.js:98
+#: src/features/article/Articles.js:122
 msgid "<0>Not found</0>"
 msgstr "<0>Ii gávdnon</0>"
 
 #: src/features/article/Source.js:121
 msgid "<0>Pekka Sammalahttis North Sami – Finnish dictionary</0>"
 msgstr "<0>Pekka Sammalahtti davvisámi – suoma sátnegirji</0>"
+
+#: src/translateble_variables.js:8
+msgid "A"
+msgstr "adjektiiva"
+
+#: src/translateble_variables.js:8
+msgid "Adv"
+msgstr "advearba"
 
 #: src/features/korp/Korp.js:22
 msgid "An error occured {0}"
@@ -48,6 +57,14 @@ msgstr "Iskamin jus {lemma} gávdno Korpas."
 msgid "Definitions:"
 msgstr "Definišuvnnat:"
 
+#: src/translateble_variables.js:8
+msgid "N"
+msgstr "substantiiva"
+
+#: src/translateble_variables.js:8
+msgid "Pron"
+msgstr "pronomen"
+
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
 msgstr "Gáldu: {0}"
@@ -59,6 +76,118 @@ msgstr "Gáldu:<0>TermWiki</0>"
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"
 msgstr "Ii gávdno korpus {language} várás"
+
+#: src/translateble_variables.js:8
+msgid "V"
+msgstr "vearba"
+
+#: src/translateble_variables.js:11
+msgid "en"
+msgstr "Eŋgelasgiella"
+
+#: src/translateble_variables.js:11
+msgid "eng"
+msgstr "Eŋgelasgiella"
+
+#: src/translateble_variables.js:11
+msgid "fi"
+msgstr "Suomagiella"
+
+#: src/translateble_variables.js:11
+msgid "fin"
+msgstr "Suomagiella"
+
+#: src/translateble_variables.js:5
+msgid "gtfinsme"
+msgstr "Giellatekno suoma – davvisámi sátnegirji"
+
+#: src/translateble_variables.js:4
+msgid "gtnobsma"
+msgstr "Giellatekno girjedáro – lullisámi sátnegirji"
+
+#: src/translateble_variables.js:4
+msgid "gtnobsme"
+msgstr "Giellatekno girjedáro – davvisámi sátnegirji"
+
+#: src/translateble_variables.js:4
+msgid "gtsmanob"
+msgstr "Giellatekno lullisámi – girjedáro sátnogirji"
+
+#: src/translateble_variables.js:4
+msgid "gtsmefin"
+msgstr "Giellatekno davvisámi – suoma sátnegirji"
+
+#: src/translateble_variables.js:4
+msgid "gtsmenob"
+msgstr "Giellatekno davvisámi – girjedáro sátnegirji"
+
+#: src/translateble_variables.js:5
+msgid "gtsmesmn"
+msgstr "Giellatekno davvisámi – anársámi sátnegirji"
+
+#: src/translateble_variables.js:5
+msgid "gtsmnsme"
+msgstr "Giellatekno anársámi – davvisámi sátnegirji"
+
+#: src/translateble_variables.js:12
+msgid "lat"
+msgstr "Latiinnagiella"
+
+#: src/translateble_variables.js:11
+msgid "nb"
+msgstr "Girjedárogiella"
+
+#: src/translateble_variables.js:11
+msgid "nn"
+msgstr "Ođđadárogiella"
+
+#: src/translateble_variables.js:11
+msgid "nno"
+msgstr "Ođđadárogiella"
+
+#: src/translateble_variables.js:11
+msgid "nob"
+msgstr "Girjedárogiella"
+
+#: src/translateble_variables.js:5
+msgid "pksmefin"
+msgstr "Pekka Sammalahtti davvisámi – suoma sátnegirji"
+
+#: src/translateble_variables.js:11
+msgid "se"
+msgstr "Davvisámegiella"
+
+#: src/translateble_variables.js:12
+msgid "sma"
+msgstr "Lullisámegiella"
+
+#: src/translateble_variables.js:12
+msgid "sme"
+msgstr "Davvisámegiella"
+
+#: src/translateble_variables.js:12
+msgid "smj"
+msgstr "Julevsámegiella"
+
+#: src/translateble_variables.js:12
+msgid "smn"
+msgstr "Anársámegiella"
+
+#: src/translateble_variables.js:12
+msgid "sms"
+msgstr "Nuorttalašgiella"
+
+#: src/translateble_variables.js:11
+msgid "sv"
+msgstr "Ruoŧagiella"
+
+#: src/translateble_variables.js:12
+msgid "swe"
+msgstr "Ruoŧagiella"
+
+#: src/translateble_variables.js:4
+msgid "termwiki"
+msgstr "Giellagáldu máŋggagielat tearpmat"
 
 #: src/features/korp/Korp.js:32
 msgid "{lemma} was not found in {language} Korp"

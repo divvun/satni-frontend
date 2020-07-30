@@ -13,24 +13,33 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/features/article/Articles.js:127
-#: src/features/search/Searcher.js:97
+#: src/features/article/Source.stories.js:10
+msgid "<0/>"
+msgstr "<0/>"
+
+#: src/features/article/Articles.js:121
 msgid "<0>Error {0}</0>"
 msgstr "<0>Error {0}</0>"
 
-#: src/features/article/Articles.js:126
-#: src/features/search/Searcher.js:96
+#: src/features/article/Articles.js:120
 msgid "<0>Loading...</0>"
 msgstr "<0>Loading...</0>"
 
-#: src/features/article/Articles.js:128
-#: src/features/search/Searcher.js:98
+#: src/features/article/Articles.js:122
 msgid "<0>Not found</0>"
 msgstr "<0>Not found</0>"
 
 #: src/features/article/Source.js:121
 msgid "<0>Pekka Sammalahttis North Sami – Finnish dictionary</0>"
 msgstr "<0>Pekka Sammalahttis North Sami – Finnish dictionary</0>"
+
+#: src/translateble_variables.js:8
+msgid "A"
+msgstr "adjective"
+
+#: src/translateble_variables.js:8
+msgid "Adv"
+msgstr "adverb"
 
 #: src/features/korp/Korp.js:22
 msgid "An error occured {0}"
@@ -48,6 +57,14 @@ msgstr "Checking if {lemma} exists in Korp."
 msgid "Definitions:"
 msgstr "Definitions:"
 
+#: src/translateble_variables.js:8
+msgid "N"
+msgstr "noun"
+
+#: src/translateble_variables.js:8
+msgid "Pron"
+msgstr "pronoun"
+
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
 msgstr "Source: {0}"
@@ -59,6 +76,118 @@ msgstr "Source:<0>TermWiki</0>"
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"
 msgstr "There is no corpus for {language}"
+
+#: src/translateble_variables.js:8
+msgid "V"
+msgstr "verb"
+
+#: src/translateble_variables.js:11
+msgid "en"
+msgstr "English"
+
+#: src/translateble_variables.js:11
+msgid "eng"
+msgstr "English"
+
+#: src/translateble_variables.js:11
+msgid "fi"
+msgstr "Finnish"
+
+#: src/translateble_variables.js:11
+msgid "fin"
+msgstr "Finnish"
+
+#: src/translateble_variables.js:5
+msgid "gtfinsme"
+msgstr "Giellatekno's Finnish – North Sami dictionary"
+
+#: src/translateble_variables.js:4
+msgid "gtnobsma"
+msgstr "Giellatekno's Bokmål – South Sami dictionary"
+
+#: src/translateble_variables.js:4
+msgid "gtnobsme"
+msgstr "Giellatekno's Bokmål – North Sami dictionary"
+
+#: src/translateble_variables.js:4
+msgid "gtsmanob"
+msgstr "Giellatekno's South Sami – Bokmål dictionary"
+
+#: src/translateble_variables.js:4
+msgid "gtsmefin"
+msgstr "Giellatekno's North Sami – Finnish dictionary"
+
+#: src/translateble_variables.js:4
+msgid "gtsmenob"
+msgstr "Giellatekno's North Sami – Bokmål dictionary"
+
+#: src/translateble_variables.js:5
+msgid "gtsmesmn"
+msgstr "Giellatekno's North Sami – Inari Sami dictionary"
+
+#: src/translateble_variables.js:5
+msgid "gtsmnsme"
+msgstr "Giellatekno's Inari Sami – North Sami dictionary"
+
+#: src/translateble_variables.js:12
+msgid "lat"
+msgstr "Latin"
+
+#: src/translateble_variables.js:11
+msgid "nb"
+msgstr "Norwegian Bokmål"
+
+#: src/translateble_variables.js:11
+msgid "nn"
+msgstr "Norwegian Nynorsk"
+
+#: src/translateble_variables.js:11
+msgid "nno"
+msgstr "Norwegian Nynorsk"
+
+#: src/translateble_variables.js:11
+msgid "nob"
+msgstr "Norwegian Bokmål"
+
+#: src/translateble_variables.js:5
+msgid "pksmefin"
+msgstr "Pekka Sammalahti's North Sami – Finnish dictionary"
+
+#: src/translateble_variables.js:11
+msgid "se"
+msgstr "North Sami"
+
+#: src/translateble_variables.js:12
+msgid "sma"
+msgstr "South Sami"
+
+#: src/translateble_variables.js:12
+msgid "sme"
+msgstr "North Sami"
+
+#: src/translateble_variables.js:12
+msgid "smj"
+msgstr "Lule Sami"
+
+#: src/translateble_variables.js:12
+msgid "smn"
+msgstr "Inari Sami"
+
+#: src/translateble_variables.js:12
+msgid "sms"
+msgstr "Skolt Sami"
+
+#: src/translateble_variables.js:11
+msgid "sv"
+msgstr "Swedish"
+
+#: src/translateble_variables.js:12
+msgid "swe"
+msgstr "Swedish"
+
+#: src/translateble_variables.js:4
+msgid "termwiki"
+msgstr "Giellagáldu's multilingual terms"
 
 #: src/features/korp/Korp.js:32
 msgid "{lemma} was not found in {language} Korp"

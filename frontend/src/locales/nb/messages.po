@@ -13,24 +13,33 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/features/article/Articles.js:127
-#: src/features/search/Searcher.js:97
+#: src/features/article/Source.stories.js:10
+msgid "<0/>"
+msgstr "<0/>"
+
+#: src/features/article/Articles.js:121
 msgid "<0>Error {0}</0>"
 msgstr "<0>Feil {0}"
 
-#: src/features/article/Articles.js:126
-#: src/features/search/Searcher.js:96
+#: src/features/article/Articles.js:120
 msgid "<0>Loading...</0>"
 msgstr "<0>Laster …</0>"
 
-#: src/features/article/Articles.js:128
-#: src/features/search/Searcher.js:98
+#: src/features/article/Articles.js:122
 msgid "<0>Not found</0>"
 msgstr "<0>Ikke funnet</0>"
 
 #: src/features/article/Source.js:121
 msgid "<0>Pekka Sammalahttis North Sami – Finnish dictionary</0>"
 msgstr "<0>Pekka Sammalahttis nordsamisk – finsk ordbok</0>"
+
+#: src/translateble_variables.js:8
+msgid "A"
+msgstr "adjektiv"
+
+#: src/translateble_variables.js:8
+msgid "Adv"
+msgstr "adverb"
 
 #: src/features/korp/Korp.js:22
 msgid "An error occured {0}"
@@ -46,19 +55,139 @@ msgstr "Sjekker om {lemma} finnes i Korp."
 
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
-msgstr "Definisjoner>"
+msgstr "Definisjoner:"
+
+#: src/translateble_variables.js:8
+msgid "N"
+msgstr "substantiv"
+
+#: src/translateble_variables.js:8
+msgid "Pron"
+msgstr "pronomen"
 
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
 msgstr "Kilde: {0}"
 
 #: src/features/article/TermWikiArticle.js:26
-msgid "Kilde:<0>TermWiki</0>"
-msgstr ""
+msgid "Source:<0>TermWiki</0>"
+msgstr "Kilde: <0>TermWiki</0>"
 
 #: src/features/korp/Korp.js:44
 msgid "There is no corpus for {language}"
 msgstr "Det er ikke noe korpus for {language}"
+
+#: src/translateble_variables.js:8
+msgid "V"
+msgstr "verb"
+
+#: src/translateble_variables.js:11
+msgid "en"
+msgstr "Engelsk"
+
+#: src/translateble_variables.js:11
+msgid "eng"
+msgstr "Engelsk"
+
+#: src/translateble_variables.js:11
+msgid "fi"
+msgstr "Finsk"
+
+#: src/translateble_variables.js:11
+msgid "fin"
+msgstr "Finsk"
+
+#: src/translateble_variables.js:5
+msgid "gtfinsme"
+msgstr "Giellateknos finsk – nordsamisk ordbok"
+
+#: src/translateble_variables.js:4
+msgid "gtnobsma"
+msgstr "Giellateknos bokmål – sørsamisk ordbok"
+
+#: src/translateble_variables.js:4
+msgid "gtnobsme"
+msgstr "Giellateknos bokmål – nordsamisk ordbok"
+
+#: src/translateble_variables.js:4
+msgid "gtsmanob"
+msgstr "Giellateknos sørsamisk – bokmål ordbok"
+
+#: src/translateble_variables.js:4
+msgid "gtsmefin"
+msgstr "Giellateknos nordsamisk – finsk ordbok"
+
+#: src/translateble_variables.js:4
+msgid "gtsmenob"
+msgstr "Giellateknos nordsamisk – bokmål ordbok"
+
+#: src/translateble_variables.js:5
+msgid "gtsmesmn"
+msgstr "Giellateknos nordsamisk – inarisamisk ordbok"
+
+#: src/translateble_variables.js:5
+msgid "gtsmnsme"
+msgstr "Giellateknos inarisamisk – nordsamisk ordbok"
+
+#: src/translateble_variables.js:12
+msgid "lat"
+msgstr "Latinsk"
+
+#: src/translateble_variables.js:11
+msgid "nb"
+msgstr "Bokmål"
+
+#: src/translateble_variables.js:11
+msgid "nn"
+msgstr "Nynorsk"
+
+#: src/translateble_variables.js:11
+msgid "nno"
+msgstr "Nynorsk"
+
+#: src/translateble_variables.js:11
+msgid "nob"
+msgstr "Bokmål"
+
+#: src/translateble_variables.js:5
+msgid "pksmefin"
+msgstr "Pekka Sammalahtis nordsamisk – finsk ordbok"
+
+#: src/translateble_variables.js:11
+msgid "se"
+msgstr "Nordsamisk"
+
+#: src/translateble_variables.js:12
+msgid "sma"
+msgstr "Sørsamisk"
+
+#: src/translateble_variables.js:12
+msgid "sme"
+msgstr "Nordsamisk"
+
+#: src/translateble_variables.js:12
+msgid "smj"
+msgstr "Lulesamisk"
+
+#: src/translateble_variables.js:12
+msgid "smn"
+msgstr "Inarisamisk"
+
+#: src/translateble_variables.js:12
+msgid "sms"
+msgstr "Skoltesamisk"
+
+#: src/translateble_variables.js:11
+msgid "sv"
+msgstr "Svensk"
+
+#: src/translateble_variables.js:12
+msgid "swe"
+msgstr "Svensk"
+
+#: src/translateble_variables.js:4
+msgid "termwiki"
+msgstr "Giellagáldus flerspråklige termer"
 
 #: src/features/korp/Korp.js:32
 msgid "{lemma} was not found in {language} Korp"
