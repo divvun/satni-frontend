@@ -53,9 +53,25 @@ msgstr "Category:"
 msgid "Checking if {lemma} exists in Korp."
 msgstr "Checking if {lemma} exists in Korp."
 
+#: src/features/wantedlangs/DictChooserDialog.js:32
+msgid "Choose dictionaries"
+msgstr "Choose dictionaries"
+
+#: src/features/wantedlangs/LangChooserDialog.js:40
+msgid "Choose languages"
+msgstr "Choose languages"
+
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
 msgstr "Definitions:"
+
+#: src/containers/AsyncApp.js:131
+msgid "Dictionaries"
+msgstr "Dictionaries"
+
+#: src/containers/AsyncApp.js:120
+msgid "Languages"
+msgstr "Languages"
 
 #: src/translateble_variables.js:8
 msgid "N"
@@ -64,6 +80,10 @@ msgstr "noun"
 #: src/translateble_variables.js:8
 msgid "Pron"
 msgstr "pronoun"
+
+#: src/features/search/FilterBar.js:48
+msgid "Search…"
+msgstr "Search…"
 
 #: src/features/article/Source.js:117
 msgid "Source: {0}"
@@ -80,6 +100,10 @@ msgstr "There is no corpus for {language}"
 #: src/translateble_variables.js:8
 msgid "V"
 msgstr "verb"
+
+#: src/containers/AsyncApp.js:77
+msgid "Welcome!"
+msgstr "Welcome!"
 
 #: src/translateble_variables.js:11
 msgid "en"
