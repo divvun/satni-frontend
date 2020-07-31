@@ -12,19 +12,25 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+import environ
 import mongoengine
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+# reading .env file
+environ.Env.read_env()
+# False if not in os.environ
+DEBUG = env('DEBUG')
+
+# Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
+SECRET_KEY = env('SECRET_KEY')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'drsn5bzwhz73@##lv5g%69@5wg=lp%vunl*rzk^$)1qtcwduqy'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -126,20 +132,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# MONGO DB connection\
-_MONGODB_USER = ""
-_MONGODB_PASSWD = ""
-_MONGODB_HOST = "localhost"
-_MONGODB_NAME = "satnibackend"
-_MONGODB_PORT = 27017
-_MONGODB_DATABASE_HOST = "mongodb://%s:%s@%s/%s" % (
-    _MONGODB_USER,
-    _MONGODB_PASSWD,
-    _MONGODB_HOST,
-    _MONGODB_NAME,
-)
-
-mongoengine.connect(_MONGODB_NAME, host=_MONGODB_HOST, port=_MONGODB_PORT)
+mongoengine.connect(
+    env('_MONGODB_NAME'), host=env('_MONGODB_HOST'), port=int(env('_MONGODB_PORT')))
 
 GRAPHENE = {
     'SCHEMA': 'backend.schema.schema',
