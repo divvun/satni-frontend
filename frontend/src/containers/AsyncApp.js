@@ -77,6 +77,7 @@ const styles = theme => ({
 });
 
 const LanguageSelector = ({ language, onChangeLangage }) => {
+  // console.log('select', 80, languge);
   const handleChange = (event) => {
     event.preventDefault();
     onChangeLangage(event.target.value);
@@ -101,6 +102,7 @@ const LanguageSelector = ({ language, onChangeLangage }) => {
 };
 
 const AsyncApp = ({classes, match, language, onLanguageChange}) => {
+  console.log('async', 105, language);
   const [currentLemma, setCurrentLemma] = useState('');
   const [searchExpression, setSearchExpression] = useState('');
 
