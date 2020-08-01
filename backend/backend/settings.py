@@ -64,10 +64,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'backend.urls'
 
+REACT_APP_DIR = os.path.join(BASE_DIR, '../frontend')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(REACT_APP_DIR, 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,8 +131,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(REACT_APP_DIR, 'build', 'static'),
+]
 
 mongoengine.connect(
     env('_MONGODB_NAME'), host=env('_MONGODB_HOST'), port=int(env('_MONGODB_PORT')))
