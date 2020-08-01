@@ -34,16 +34,16 @@ const Root = ({ store }) => {
         const newCatalogs = { ...catalogs, [language]: newCatalog };
         console.log('ahand', 34, language);
         setCatalogs(newCatalogs);
-      }
+      };
 
-      fetchCatalog()
+      fetchCatalog();
     },
     [language]
-  )
+  );
 
   const handleLanguageChange = (language) => {
     setLanguage(language);
-  }
+  };
 
   return (
     <Provider store={store}>
