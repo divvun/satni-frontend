@@ -7,17 +7,21 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import FeedbackIcon from '@material-ui/icons/Feedback';
+import FormControl from '@material-ui/core/FormControl';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
+import InputLabel from '@material-ui/core/InputLabel';
 import LanguageIcon from '@material-ui/icons/Language';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import PropTypes from 'prop-types';
+import Select from '@material-ui/core/Select';
 import Toolbar from '@material-ui/core/Toolbar';
 import TranslateIcon from '@material-ui/icons/Translate';
 import Typography from '@material-ui/core/Typography';
@@ -72,7 +76,31 @@ const styles = theme => ({
   }
 });
 
-const AsyncApp = ({classes, match}) => {
+const LanguageSelector = ({ language, onChangeLangage }) => {
+  const handleChange = (event) => {
+    event.preventDefault();
+    onChangeLangage(event.target.value);
+  };
+
+  return (
+    <FormControl variant='filled'>
+      <InputLabel id='page-language-label'>Page language</InputLabel>
+      <Select
+        labelId='page-language-label'
+        id='page-language'
+        value={language}
+        onChange={handleChange}
+        label='Page language'
+      >
+        <MenuItem value='en'>English</MenuItem>
+        <MenuItem value='se'>Davvisámegiella</MenuItem>
+        <MenuItem value='nb'>Bokmål</MenuItem>
+      </Select>
+    </FormControl>
+  );
+};
+
+const AsyncApp = ({classes, match, language, onLanguageChange}) => {
   const [currentLemma, setCurrentLemma] = useState('');
   const [searchExpression, setSearchExpression] = useState('');
 
@@ -142,7 +170,10 @@ const AsyncApp = ({classes, match}) => {
           button
         >
           <ListItemIcon><TranslateIcon /></ListItemIcon>
-          <ListItemText primary='Site language' />
+          <LanguageSelector
+            language={language}
+            onChangeLangage={onLanguageChange}
+          />
         </ListItem>
       </List>
     </div>
