@@ -131,6 +131,8 @@ const AsyncApp = ({classes, match}) => {
         <ListItem
           key='Feedback'
           button
+          component='a'
+          href='mailto:feedback@divvun.no'
         >
           <ListItemIcon><FeedbackIcon /></ListItemIcon>
           <ListItemText primary='Feedback' />
