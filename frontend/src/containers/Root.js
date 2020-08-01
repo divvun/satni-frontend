@@ -11,7 +11,7 @@ import ErrorBoundary from 'components/ErrorBoundary';
 const cache = new InMemoryCache();
 const client = new ApolloClient({
   cache,
-  uri: 'http://127.0.0.1:8000/graphql/'
+  uri: '/graphql/'
 });
 
 // Add this after Provider
@@ -34,16 +34,16 @@ const Root = ({ store }) => {
         const newCatalogs = { ...catalogs, [language]: newCatalog };
         console.log('ahand', 34, language);
         setCatalogs(newCatalogs);
-      };
+      }
 
-      fetchCatalog();
+      fetchCatalog()
     },
     [language]
-  );
+  )
 
   const handleLanguageChange = (language) => {
     setLanguage(language);
-  };
+  }
 
   return (
     <Provider store={store}>
