@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -7,9 +7,6 @@ import { I18nProvider } from '@lingui/react';
 
 import AsyncApp from './AsyncApp';
 import ErrorBoundary from 'components/ErrorBoundary';
-
-import catalogSe from 'locales/se/messages.js';
-import catalogNb from 'locales/nb/messages.js';
 
 const cache = new InMemoryCache();
 const client = new ApolloClient({
@@ -21,17 +18,33 @@ const client = new ApolloClient({
 // <ErrorBoundary>
 // </ErrorBoundary>
 
-const catalogs = {
-  nb: catalogNb,
-  se: catalogSe
-};
+async function loadMessages(language) {
+  console.log(language);
+  return await import(`@lingui/loader!locales/${language}/messages.po`);
+}
+
 const Root = ({ store }) => {
+  const [catalogs, setCatalogs] = useState({});
+  const [language, setLanguage] = useState('se');
+  
+  async function handleLanguageChange(language) {
+    const newCatalog = await loadMessages(language);
+    const newCatalogs = { ...catalogs, [language]: newCatalog };
+    setCatalogs(newCatalogs);
+    setLanguage(language);
+  }
+
   return (
     <Provider store={store}>
-      <I18nProvider language='se' catalogs={catalogs}>
+      <I18nProvider
+        language={language}
+        catalogs={catalogs}>
         <MuiThemeProvider>
-          <ApolloProvider client={client}>
-            <AsyncApp />
+          <ApolloProvider
+            client={client}>
+            <AsyncApp
+              language={language}
+              onLanguageChange={handleLanguageChange}/>
           </ApolloProvider>
         </MuiThemeProvider>
       </I18nProvider>
