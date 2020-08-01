@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -19,20 +19,31 @@ const client = new ApolloClient({
 // </ErrorBoundary>
 
 async function loadMessages(language) {
-  console.log(language);
+  console.log('root', 22, language);
   return await import(`@lingui/loader!locales/${language}/messages.po`);
 }
 
 const Root = ({ store }) => {
   const [catalogs, setCatalogs] = useState({});
   const [language, setLanguage] = useState('se');
-  
-  async function handleLanguageChange(language) {
-    const newCatalog = await loadMessages(language);
-    const newCatalogs = { ...catalogs, [language]: newCatalog };
-    setCatalogs(newCatalogs);
+
+  useEffect(
+    () => {
+      const fetchCatalog = async() => {
+        const newCatalog = await loadMessages(language);
+        const newCatalogs = { ...catalogs, [language]: newCatalog };
+        console.log('ahand', 34, language);
+        setCatalogs(newCatalogs);
+      };
+
+      fetchCatalog();
+    },
+    [language]
+  );
+
+  const handleLanguageChange = (language) => {
     setLanguage(language);
-  }
+  };
 
   return (
     <Provider store={store}>
