@@ -32,7 +32,7 @@ SECRET_KEY = env('SECRET_KEY')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 
@@ -143,6 +143,4 @@ GRAPHENE = {
     'SCHEMA': 'backend.schema.schema',
 }
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:8000'
-]
+CORS_ORIGIN_ALLOW_ALL = True
