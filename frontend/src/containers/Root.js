@@ -11,7 +11,7 @@ import ErrorBoundary from 'components/ErrorBoundary';
 const cache = new InMemoryCache();
 const client = new ApolloClient({
   cache,
-  uri: '/graphql/'
+  uri: 'https://satni.uit.no/newsatni/'
 });
 
 // Add this after Provider
