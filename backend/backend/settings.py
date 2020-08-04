@@ -18,9 +18,7 @@ import mongoengine
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-env = environ.Env(
-    DEBUG=(bool, False)
-)
+env = environ.Env(DEBUG=(bool, False))
 # reading .env file
 environ.Env.read_env()
 # False if not in os.environ
@@ -136,8 +134,9 @@ STATICFILES_DIRS = [
     os.path.join(REACT_APP_DIR, 'build', 'static'),
 ]
 
-mongoengine.connect(
-    env('_MONGODB_NAME'), host=env('_MONGODB_HOST'), port=int(env('_MONGODB_PORT')))
+mongoengine.connect(env('_MONGODB_NAME'),
+                    host=env('_MONGODB_HOST'),
+                    port=int(env('_MONGODB_PORT')))
 
 GRAPHENE = {
     'SCHEMA': 'backend.schema.schema',
