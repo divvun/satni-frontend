@@ -29,20 +29,17 @@ const Root = ({ store }) => {
 
   useEffect(
     () => {
-      const fetchCatalog = async() => {
-        const newCatalog = await loadMessages(language);
-        const newCatalogs = { ...catalogs, [language]: newCatalog };
-        console.log('ahand', 34, language);
-        setCatalogs(newCatalogs);
-      };
+      const fetchCatalog = () => handleLanguageChange(language);
 
       fetchCatalog();
     },
     [language]
   );
 
-  const handleLanguageChange = (language) => {
+  const handleLanguageChange = async(language) => {
+    const newCatalog = await loadMessages(language);
     setLanguage(language);
+    setCatalogs(catalogs => ({ ...catalogs, [language]: newCatalog }));
   };
 
   return (
