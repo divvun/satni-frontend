@@ -79,7 +79,7 @@ msgstr "Sátnegirjeartihkkalat ihtet dán panelas go coahkkalat sáni ohcanbohto
 
 #: src/containers/Welcome.js:64
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
-msgstr "Artihkkaliin sáhtát čiehkat gielaid dahje sátnegirjjiid maid it hálid oaidnit. Sáhtát daid čájehit fas jus čoahkkalat <0/> dahje <1/>."
+msgstr "Artihkkaliin sáhtát čiehkat gielaid dahje sátnegirjjiid maid it háliit oaidnit. Sáhtát daid čájehit fas jus čoahkkalat <0/> dahje <1/>."
 
 #: src/containers/AsyncApp.js:115
 msgid "Languages"
