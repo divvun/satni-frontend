@@ -9,6 +9,7 @@ import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
 
 import ParadigmDialog from 'features/paradigm/ParadigmDialog';
 
+const langsWithParadigm = new Set(['sma', 'sme', 'smj', 'smn', 'sms', 'fin']);
 const useStyles = makeStyles({
   stemContainer: {
     width: '100%',
@@ -70,13 +71,14 @@ const Stem = ({ stem, restriction, withLink, lemmaHandler }) => {
             component='span'
             color='textSecondary'
             className={classes.pos}>(<Trans id={pos}/>)</Typography>}
-          <IconButton
+          {langsWithParadigm.has(language) && <IconButton
             className={classes.icons}
             component='span'
             aria-label='Paradigm'
             onClick={handleClickParadigmDialog}>
             <InfoOutlined />
           </IconButton>
+          }
           <IconButton
             className={classes.icons}
             component='span'
