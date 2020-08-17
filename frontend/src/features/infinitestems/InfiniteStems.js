@@ -3,19 +3,24 @@ import useStems from './InfiniteStems.hooks';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import InfiniteLoader from 'react-window-infinite-loader';
 import { FixedSizeList as List } from 'react-window';
+import { Trans } from '@lingui/macro';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   infiniteList: {
     height: '80vh'
+  },
+  status: {
+    textAlign: 'center'
   }
 }));
 
 const InfiniteStems = ({lemmaHandler, searchExpression}) => {
-  const {stems, loading, loadMore, hasNextPage} = useStems(searchExpression);
+  const {stems, loading, loadMore, hasNextPage, totalCount} = useStems(searchExpression);
   const classes = useStyles();
 
   const stemsCount = hasNextPage ? stems.length + 1 : stems.length;
@@ -27,6 +32,16 @@ const InfiniteStems = ({lemmaHandler, searchExpression}) => {
   return (
 
     <div className={classes.infiniteList}>
+      <Typography className={classes.status}>
+        {totalCount ?
+          <Trans>
+            {stems.length} of totally {totalCount} starting with <b>{searchExpression}</b>
+          </Trans> :
+          <Trans>
+            No results for <b>{searchExpression}</b>
+          </Trans>
+        }
+      </Typography>
       <AutoSizer>
         {({height, width}) => (
           <InfiniteLoader
