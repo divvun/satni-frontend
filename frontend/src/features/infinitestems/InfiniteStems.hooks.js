@@ -11,6 +11,7 @@ const GET_LEMMAS = gql`
                wantedDicts: $wantedDicts
                after: $after
              ) {
+      totalCount
       edges {
         node {
           stem
@@ -57,6 +58,7 @@ function useStems (inputValue) {
             // so we have the new `endCursor` and `hasNextPage` values
             stemList: {
               __typename: previousResult.stemList.__typename,
+              totalCount: previousResult.stemList.totalCount,
               edges: [...previousResult.stemList.edges, ...newEdges],
               pageInfo
             }
@@ -65,6 +67,7 @@ function useStems (inputValue) {
       }
     }));
   return {
+    totalCount: data.stemList.totalCount,
     stems: data.stemList.edges.map(({node}) => node),
     error,
     hasNextPage: data.stemList.pageInfo.hasNextPage,
