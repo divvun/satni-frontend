@@ -30,8 +30,8 @@ msgid "<0>Not found</0>"
 msgstr "<0>Ii gávdnon</0>"
 
 #: src/features/article/Source.js:121
-msgid "<0>Pekka Sammalahttis North Sami – Finnish dictionary</0>"
-msgstr "<0>Pekka Sammalahtti davvisámi – suoma sátnegirji</0>"
+msgid "<0>Pekka Sammallahtis North Sami – Finnish dictionary</0>"
+msgstr "<0>Pekka Sammallahti davvisámi – suoma sátnegirji</0>"
 
 #: src/translateble_variables.js:8
 msgid "A"
@@ -51,7 +51,7 @@ msgstr "Kategoriija:"
 
 #: src/features/korp/Korp.js:26
 msgid "Checking if {lemma} exists in Korp."
-msgstr "Iskamin jus {lemma} gávdno Korpas."
+msgstr "Iskamin gávdno go {lemma} Korpas."
 
 #: src/features/wantedlangs/DictChooserDialog.js:32
 msgid "Choose dictionaries"
@@ -219,7 +219,7 @@ msgstr "Girjedárogiella"
 
 #: src/translateble_variables.js:5
 msgid "pksmefin"
-msgstr "Pekka Sammalahtti davvisámi – suoma sátnegirji"
+msgstr "Pekka Sammallahti davvisámi – suoma sátnegirji"
 
 #: src/translateble_variables.js:11
 msgid "se"
