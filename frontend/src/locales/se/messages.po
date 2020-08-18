@@ -91,7 +91,7 @@ msgstr "substantiiva"
 
 #: src/features/infinitestems/InfiniteStems.js:40
 msgid "No results for <0>{searchExpression}</0>"
-msgstr ""
+msgstr "<0>{searchExpression}</0> ii gávdno sátnegirjjiin"
 
 #: src/features/article/LemmaGroup.js:13
 msgid "Note:"
@@ -259,7 +259,7 @@ msgstr "Giellagáldu máŋggagielat tearpmat"
 
 #: src/features/infinitestems/InfiniteStems.js:37
 msgid "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
-msgstr ""
+msgstr "{0} {totalCount}:s main álgo lea <0>{searchExpression}</0>"
 
 #: src/features/korp/Korp.js:32
 msgid "{lemma} was not found in {language} Korp"
