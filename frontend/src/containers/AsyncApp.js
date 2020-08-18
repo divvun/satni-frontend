@@ -95,6 +95,7 @@ const LanguageSelector = ({ language, onChangeLangage }) => {
       >
         <MenuItem value='en'>English</MenuItem>
         <MenuItem value='se'>Davvisámegiella</MenuItem>
+        <MenuItem value='smj'>Julevsámegiella</MenuItem>
         <MenuItem value='nb'>Bokmål</MenuItem>
       </Select>
     </FormControl>
