@@ -69,7 +69,7 @@ msgstr ""
 msgid "Definitions:"
 msgstr ""
 
-#: src/containers/AsyncApp.js:126
+#: src/containers/AsyncApp.js:159
 msgid "Dictionaries"
 msgstr ""
 
@@ -81,12 +81,16 @@ msgstr ""
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr ""
 
-#: src/containers/AsyncApp.js:115
+#: src/containers/AsyncApp.js:148
 msgid "Languages"
 msgstr ""
 
 #: src/translateble_variables.js:8
 msgid "N"
+msgstr ""
+
+#: src/features/infinitestems/InfiniteStems.js:40
+msgid "No results for <0>{searchExpression}</0>"
 msgstr ""
 
 #: src/features/article/LemmaGroup.js:13
@@ -251,6 +255,10 @@ msgstr ""
 
 #: src/translateble_variables.js:4
 msgid "termwiki"
+msgstr ""
+
+#: src/features/infinitestems/InfiniteStems.js:37
+msgid "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
 msgstr ""
 
 #: src/features/korp/Korp.js:32
