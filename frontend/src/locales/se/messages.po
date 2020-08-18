@@ -41,15 +41,15 @@ msgstr "adjektiiva"
 msgid "Adv"
 msgstr "advearba"
 
-#: src/features/korp/Korp.js:22
-msgid "An error occured {0}"
-msgstr "Meattáhus čuožžilii {0}"
+#: src/features/korp/Korp.js:24
+msgid "An error occured: {0}"
+msgstr "Juoga manai boastut: {0}"
 
 #: src/features/article/TermWikiArticle.js:14
 msgid "Category:"
 msgstr "Kategoriija:"
 
-#: src/features/korp/Korp.js:26
+#: src/features/korp/Korp.js:30
 msgid "Checking if {lemma} exists in Korp."
 msgstr "Iskamin gávdno go {lemma} Korpas."
 
@@ -63,7 +63,7 @@ msgstr "Vállje gielaid"
 
 #: src/containers/Welcome.js:56
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
-msgstr "Go coahkkalat <0/>, de oainnát mo sátni sodjá. Go coahkkalat <1/>, de oainnát mo sátni lea átnon."
+msgstr "Go coahkkalat <0/>, de oainnát mo sátni sodjá. Go coahkkalat <1/>, de oainnát mo sátni lea atnon."
 
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
@@ -75,11 +75,11 @@ msgstr "Sátnegirjjit"
 
 #: src/containers/Welcome.js:48
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
-msgstr "Sátnegirjeartihkkalat ihtet dán panelas go coahkkalat sáni ohcanbohtosiin dás gurutbealde."
+msgstr "Sátnegirjeartihkkalat ihtet dán panelii go coahkkalat sáni ohcanbohtosiin dás gurutbealde."
 
 #: src/containers/Welcome.js:64
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
-msgstr "Artihkkaliin sáhtát čiehkat gielaid dahje sátnegirjjiid maid it háliit oaidnit. Sáhtát daid čájehit fas jus čoahkkalat <0/> dahje <1/>."
+msgstr "Artihkkaliin sáhtát čiehkat gielaid dahje sátnegirjjiid maid it háliit oaidnit. Sáhtát daid čájehit fas jus coahkkalat <0/> dahje <1/>."
 
 #: src/containers/AsyncApp.js:148
 msgid "Languages"
@@ -103,7 +103,7 @@ msgstr "pronomen"
 
 #: src/containers/Welcome.js:81
 msgid "Search results will appear here."
-msgstr "Ohcanbohtosat ihtet dás."
+msgstr "Ohcanbohtosat ihtet dása."
 
 #: src/features/article/LemmaGroup.js:15
 msgid "Source:"
@@ -125,9 +125,9 @@ msgstr "Stáhtus:"
 msgid "The input field accepts sami, nordic, english and latin search words."
 msgstr "Oza sámi, davviriikkalaš, eŋgelas dahje latiinna sániid ohcangiettis."
 
-#: src/features/korp/Korp.js:44
-msgid "There is no corpus for {language}"
-msgstr "Ii gávdno korpus {language} várás"
+#: src/features/korp/Korp.js:53
+msgid "There is no corpus for {language_genitive}"
+msgstr "Ii gávdno korpus {language_genitive} várás"
 
 #: src/translateble_variables.js:8
 msgid "V"
@@ -135,11 +135,11 @@ msgstr "vearba"
 
 #: src/containers/Welcome.js:40
 msgid "Welcome!"
-msgstr "Bures boahttin!"
+msgstr "Bures boahtin!"
 
 #: src/containers/Welcome.js:105
 msgid "When you click a word here, dictionary articles appear to the right."
-msgstr "Go coahkkalat sáni dás, sátnegirjeartihkkalat ihtet olgešbealde."
+msgstr "Go coahkkalat sáni dás, sátnegirjeartihkkalat ihtet olgešbeallái."
 
 #: src/features/search/FilterBar.js:48
 msgid "Write at least one letter here"
@@ -153,17 +153,33 @@ msgstr "Sáhtát bláđet ohcanbohtosiid gaskkas dás, ođđa bohtosat ihtet das
 msgid "en"
 msgstr "Eŋgelasgiella"
 
+#: src/translateble_variables.js:16
+msgid "en_genitive"
+msgstr "eŋgelasgiella"
+
 #: src/translateble_variables.js:11
 msgid "eng"
 msgstr "Eŋgelasgiella"
+
+#: src/translateble_variables.js:16
+msgid "eng_genitive"
+msgstr "eŋgelasgiela"
 
 #: src/translateble_variables.js:11
 msgid "fi"
 msgstr "Suomagiella"
 
+#: src/translateble_variables.js:16
+msgid "fi_genitive"
+msgstr "suomagiela"
+
 #: src/translateble_variables.js:11
 msgid "fin"
 msgstr "Suomagiella"
+
+#: src/translateble_variables.js:16
+msgid "fin_genitive"
+msgstr "suomagiela"
 
 #: src/translateble_variables.js:5
 msgid "gtfinsme"
@@ -171,15 +187,15 @@ msgstr "Giellatekno suoma – davvisámi sátnegirji"
 
 #: src/translateble_variables.js:4
 msgid "gtnobsma"
-msgstr "Giellatekno girjedáro – lullisámi sátnegirji"
+msgstr "Giellatekno girjedáru – lullisámi sátnegirji"
 
 #: src/translateble_variables.js:4
 msgid "gtnobsme"
-msgstr "Giellatekno girjedáro – davvisámi sátnegirji"
+msgstr "Giellatekno girjedáru – davvisámi sátnegirji"
 
 #: src/translateble_variables.js:4
 msgid "gtsmanob"
-msgstr "Giellatekno lullisámi – girjedáro sátnogirji"
+msgstr "Giellatekno lullisámi – girjedáru sátnegirji"
 
 #: src/translateble_variables.js:4
 msgid "gtsmefin"
@@ -187,7 +203,7 @@ msgstr "Giellatekno davvisámi – suoma sátnegirji"
 
 #: src/translateble_variables.js:4
 msgid "gtsmenob"
-msgstr "Giellatekno davvisámi – girjedáro sátnegirji"
+msgstr "Giellatekno davvisámi – girjedáru sátnegirji"
 
 #: src/translateble_variables.js:5
 msgid "gtsmesmn"
@@ -201,21 +217,41 @@ msgstr "Giellatekno anársámi – davvisámi sátnegirji"
 msgid "lat"
 msgstr "Latiinnagiella"
 
+#: src/translateble_variables.js:20
+msgid "lat_genitive"
+msgstr "latiinnagiela"
+
 #: src/translateble_variables.js:11
 msgid "nb"
 msgstr "Girjedárogiella"
+
+#: src/translateble_variables.js:17
+msgid "nb_genitive"
+msgstr "girjedárogiela"
 
 #: src/translateble_variables.js:11
 msgid "nn"
 msgstr "Ođđadárogiella"
 
+#: src/translateble_variables.js:17
+msgid "nn_genitive"
+msgstr "ođđadárogiela"
+
 #: src/translateble_variables.js:11
 msgid "nno"
 msgstr "Ođđadárogiella"
 
+#: src/translateble_variables.js:17
+msgid "nno_genitive"
+msgstr "ođđadárogiela"
+
 #: src/translateble_variables.js:11
 msgid "nob"
 msgstr "Girjedárogiella"
+
+#: src/translateble_variables.js:17
+msgid "nob_genitive"
+msgstr "girjedárogiela"
 
 #: src/translateble_variables.js:5
 msgid "pksmefin"
@@ -225,33 +261,65 @@ msgstr "Pekka Sammallahti davvisámi – suoma sátnegirji"
 msgid "se"
 msgstr "Davvisámegiella"
 
+#: src/translateble_variables.js:18
+msgid "se_genitive"
+msgstr "davvisámegiela"
+
 #: src/translateble_variables.js:12
 msgid "sma"
 msgstr "Lullisámegiella"
+
+#: src/translateble_variables.js:18
+msgid "sma_genitive"
+msgstr "lullisámegiela"
 
 #: src/translateble_variables.js:12
 msgid "sme"
 msgstr "Davvisámegiella"
 
+#: src/translateble_variables.js:18
+msgid "sme_genitive"
+msgstr "davvisámegiela"
+
 #: src/translateble_variables.js:12
 msgid "smj"
 msgstr "Julevsámegiella"
+
+#: src/translateble_variables.js:19
+msgid "smj_genitive"
+msgstr "julevsámegiela"
 
 #: src/translateble_variables.js:12
 msgid "smn"
 msgstr "Anársámegiella"
 
+#: src/translateble_variables.js:19
+msgid "smn_genitive"
+msgstr "anársámegiela"
+
 #: src/translateble_variables.js:12
 msgid "sms"
-msgstr "Nuorttalašgiella"
+msgstr "Nuortalašgiella"
+
+#: src/translateble_variables.js:19
+msgid "sms_genitive"
+msgstr "nuortalašgiela"
 
 #: src/translateble_variables.js:11
 msgid "sv"
 msgstr "Ruoŧagiella"
 
+#: src/translateble_variables.js:18
+msgid "sv_genitive"
+msgstr "ruoŧagiela"
+
 #: src/translateble_variables.js:12
 msgid "swe"
 msgstr "Ruoŧagiella"
+
+#: src/translateble_variables.js:19
+msgid "swe_genitive"
+msgstr "ruoŧagiela"
 
 #: src/translateble_variables.js:4
 msgid "termwiki"
@@ -261,6 +329,6 @@ msgstr "Giellagáldu máŋggagielat tearpmat"
 msgid "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
 msgstr "{0} {totalCount}:s main álgo lea <0>{searchExpression}</0>"
 
-#: src/features/korp/Korp.js:32
-msgid "{lemma} was not found in {language} Korp"
-msgstr "{lemma} ii gávdnon {language}-Korpas"
+#: src/features/korp/Korp.js:40
+msgid "{lemma} was not found in {language_genitive} Korp"
+msgstr "{lemma} ii gávdnon {language_genitive}-Korpas"

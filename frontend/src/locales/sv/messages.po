@@ -41,15 +41,15 @@ msgstr ""
 msgid "Adv"
 msgstr ""
 
-#: src/features/korp/Korp.js:22
-msgid "An error occured {0}"
+#: src/features/korp/Korp.js:24
+msgid "An error occured: {0}"
 msgstr ""
 
 #: src/features/article/TermWikiArticle.js:14
 msgid "Category:"
 msgstr ""
 
-#: src/features/korp/Korp.js:26
+#: src/features/korp/Korp.js:30
 msgid "Checking if {lemma} exists in Korp."
 msgstr ""
 
@@ -125,8 +125,8 @@ msgstr ""
 msgid "The input field accepts sami, nordic, english and latin search words."
 msgstr ""
 
-#: src/features/korp/Korp.js:44
-msgid "There is no corpus for {language}"
+#: src/features/korp/Korp.js:53
+msgid "There is no corpus for {language_genitive}"
 msgstr ""
 
 #: src/translateble_variables.js:8
@@ -153,16 +153,32 @@ msgstr ""
 msgid "en"
 msgstr ""
 
+#: src/translateble_variables.js:16
+msgid "en_genitive"
+msgstr ""
+
 #: src/translateble_variables.js:11
 msgid "eng"
+msgstr ""
+
+#: src/translateble_variables.js:16
+msgid "eng_genitive"
 msgstr ""
 
 #: src/translateble_variables.js:11
 msgid "fi"
 msgstr ""
 
+#: src/translateble_variables.js:16
+msgid "fi_genitive"
+msgstr ""
+
 #: src/translateble_variables.js:11
 msgid "fin"
+msgstr ""
+
+#: src/translateble_variables.js:16
+msgid "fin_genitive"
 msgstr ""
 
 #: src/translateble_variables.js:5
@@ -201,20 +217,40 @@ msgstr ""
 msgid "lat"
 msgstr ""
 
+#: src/translateble_variables.js:20
+msgid "lat_genitive"
+msgstr ""
+
 #: src/translateble_variables.js:11
 msgid "nb"
+msgstr ""
+
+#: src/translateble_variables.js:17
+msgid "nb_genitive"
 msgstr ""
 
 #: src/translateble_variables.js:11
 msgid "nn"
 msgstr ""
 
+#: src/translateble_variables.js:17
+msgid "nn_genitive"
+msgstr ""
+
 #: src/translateble_variables.js:11
 msgid "nno"
 msgstr ""
 
+#: src/translateble_variables.js:17
+msgid "nno_genitive"
+msgstr ""
+
 #: src/translateble_variables.js:11
 msgid "nob"
+msgstr ""
+
+#: src/translateble_variables.js:17
+msgid "nob_genitive"
 msgstr ""
 
 #: src/translateble_variables.js:5
@@ -225,32 +261,64 @@ msgstr ""
 msgid "se"
 msgstr ""
 
+#: src/translateble_variables.js:18
+msgid "se_genitive"
+msgstr ""
+
 #: src/translateble_variables.js:12
 msgid "sma"
+msgstr ""
+
+#: src/translateble_variables.js:18
+msgid "sma_genitive"
 msgstr ""
 
 #: src/translateble_variables.js:12
 msgid "sme"
 msgstr ""
 
+#: src/translateble_variables.js:18
+msgid "sme_genitive"
+msgstr ""
+
 #: src/translateble_variables.js:12
 msgid "smj"
+msgstr ""
+
+#: src/translateble_variables.js:19
+msgid "smj_genitive"
 msgstr ""
 
 #: src/translateble_variables.js:12
 msgid "smn"
 msgstr ""
 
+#: src/translateble_variables.js:19
+msgid "smn_genitive"
+msgstr ""
+
 #: src/translateble_variables.js:12
 msgid "sms"
+msgstr ""
+
+#: src/translateble_variables.js:19
+msgid "sms_genitive"
 msgstr ""
 
 #: src/translateble_variables.js:11
 msgid "sv"
 msgstr ""
 
+#: src/translateble_variables.js:18
+msgid "sv_genitive"
+msgstr ""
+
 #: src/translateble_variables.js:12
 msgid "swe"
+msgstr ""
+
+#: src/translateble_variables.js:19
+msgid "swe_genitive"
 msgstr ""
 
 #: src/translateble_variables.js:4
@@ -261,6 +329,6 @@ msgstr ""
 msgid "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
 msgstr ""
 
-#: src/features/korp/Korp.js:32
-msgid "{lemma} was not found in {language} Korp"
+#: src/features/korp/Korp.js:40
+msgid "{lemma} was not found in {language_genitive} Korp"
 msgstr ""
