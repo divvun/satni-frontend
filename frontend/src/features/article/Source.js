@@ -118,7 +118,7 @@ const Source = ({source, lemma}) => {
           Source: {
             source !== 'pksmefin' ?
               <SourceLink from={names[source]['from']} to={names[source]['to']} lemma={lemma} source={source} /> :
-              <Trans><span>Pekka Sammalahttis North Sami – Finnish dictionary</span></Trans>
+              <Trans><span>Pekka Sammallahtis North Sami – Finnish dictionary</span></Trans>
           }
         </Trans>
       </Typography>
