@@ -66,7 +66,7 @@ const InfiniteStems = ({lemmaHandler, searchExpression}) => {
                     );
                   } else {
                     const {stem, srclangs} = stems[index];
-                    content = `${srclangs[0]} ${stem}`;
+                    content = `${stem}`;
                     return (
                       <ListItem
                         button
