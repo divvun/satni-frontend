@@ -254,7 +254,7 @@ msgid "nob_genitive"
 msgstr "norwegian bokmål"
 
 #: src/translateble_variables.js:5
-msgid "pksmefin"
+msgid "sammallahtismefin"
 msgstr "Pekka Sammalahti's North Sami – Finnish dictionary"
 
 #: src/translateble_variables.js:11

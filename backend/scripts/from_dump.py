@@ -246,7 +246,7 @@ def import_sammalahti():
         print(f'\t{os.path.basename(xml_file)}')
         parser = etree.XMLParser(remove_comments=True)
         dictxml = etree.parse(xml_file, parser=parser)
-        make_entries(dictxml, dictname='pk', src='sme', target='fin')
+        make_entries(dictxml, dictname='sammallahti', src='sme', target='fin')
     except etree.XMLSyntaxError as error:
         print('Syntax error in {} '
               'with the following error:\n{}\n'.format(xml_file, error),

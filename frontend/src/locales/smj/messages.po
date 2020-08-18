@@ -254,7 +254,7 @@ msgid "nob_genitive"
 msgstr "girjjedárogiela"
 
 #: src/translateble_variables.js:5
-msgid "pksmefin"
+msgid "sammallahtismefin"
 msgstr "Pekka Sammallahti nuorttasáme - suoma báhkogirjje"
 
 #: src/translateble_variables.js:11
