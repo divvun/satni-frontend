@@ -2,7 +2,7 @@ import { t } from '@lingui/macro';
 
 const dicts = [
   t`termwiki`, t`gtsmenob`, t`gtnobsme`, t`gtnobsma`, t`gtsmanob`, t`gtsmefin`,
-  t`gtfinsme`, t`gtsmesmn`, t`gtsmnsme`, t`pksmefin`
+  t`gtfinsme`, t`gtsmesmn`, t`gtsmnsme`, t`sammallahtismefin`
 ];
 
 const partOfSpeech = [ t`N`, t`V`, t`A`, t`Adv`, t`Pron`];

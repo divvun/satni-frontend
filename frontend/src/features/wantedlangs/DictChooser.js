@@ -8,7 +8,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 const DictChooser = () => {
   const [cookies, setCookie] = useCookies(['wantedDicts']);
   const availableDicts = [
-    'termwiki', 'gtsmenob', 'gtnobsme', 'gtnobsma', 'gtsmanob', 'gtsmefin', 'gtfinsme', 'gtsmesmn', 'gtsmnsme', 'pksmefin'
+    'termwiki', 'gtsmenob', 'gtnobsme', 'gtnobsma', 'gtsmanob', 'gtsmefin', 'gtfinsme', 'gtsmesmn', 'gtsmnsme', 'sammallahtismefin'
   ];
 
   if (cookies.wantedDicts === undefined) {
