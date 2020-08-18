@@ -41,15 +41,15 @@ msgstr "adjective"
 msgid "Adv"
 msgstr "adverb"
 
-#: src/features/korp/Korp.js:22
-msgid "An error occured {0}"
-msgstr "An error occured {0}"
+#: src/features/korp/Korp.js:24
+msgid "An error occured: {0}"
+msgstr "An error occured: {0}"
 
 #: src/features/article/TermWikiArticle.js:14
 msgid "Category:"
 msgstr "Category:"
 
-#: src/features/korp/Korp.js:26
+#: src/features/korp/Korp.js:30
 msgid "Checking if {lemma} exists in Korp."
 msgstr "Checking if {lemma} exists in Korp."
 
@@ -105,10 +105,6 @@ msgstr "pronoun"
 msgid "Search results will appear here."
 msgstr "Search results will appear here."
 
-#: src/features/search/FilterBar.js:48
-#~ msgid "Search…"
-#~ msgstr "Search…"
-
 #: src/features/article/LemmaGroup.js:15
 msgid "Source:"
 msgstr "Source:"
@@ -129,9 +125,9 @@ msgstr "Status:"
 msgid "The input field accepts sami, nordic, english and latin search words."
 msgstr "The input field accepts sami, nordic, english and latin search words."
 
-#: src/features/korp/Korp.js:44
-msgid "There is no corpus for {language}"
-msgstr "There is no corpus for {language}"
+#: src/features/korp/Korp.js:53
+msgid "There is no corpus for {language_genitive}"
+msgstr "There is no corpus for {language_genitive}"
 
 #: src/translateble_variables.js:8
 msgid "V"
@@ -157,17 +153,33 @@ msgstr "You can browse the search words here, new ones will be fetched until all
 msgid "en"
 msgstr "English"
 
+#: src/translateble_variables.js:16
+msgid "en_genitive"
+msgstr "english"
+
 #: src/translateble_variables.js:11
 msgid "eng"
 msgstr "English"
+
+#: src/translateble_variables.js:16
+msgid "eng_genitive"
+msgstr "english"
 
 #: src/translateble_variables.js:11
 msgid "fi"
 msgstr "Finnish"
 
+#: src/translateble_variables.js:16
+msgid "fi_genitive"
+msgstr "finnish"
+
 #: src/translateble_variables.js:11
 msgid "fin"
 msgstr "Finnish"
+
+#: src/translateble_variables.js:16
+msgid "fin_genitive"
+msgstr "finnish"
 
 #: src/translateble_variables.js:5
 msgid "gtfinsme"
@@ -205,21 +217,41 @@ msgstr "Giellatekno's Inari Sami – North Sami dictionary"
 msgid "lat"
 msgstr "Latin"
 
+#: src/translateble_variables.js:20
+msgid "lat_genitive"
+msgstr "latin"
+
 #: src/translateble_variables.js:11
 msgid "nb"
 msgstr "Norwegian Bokmål"
+
+#: src/translateble_variables.js:17
+msgid "nb_genitive"
+msgstr "norwegian bokmål"
 
 #: src/translateble_variables.js:11
 msgid "nn"
 msgstr "Norwegian Nynorsk"
 
+#: src/translateble_variables.js:17
+msgid "nn_genitive"
+msgstr "norwegian nynorsk"
+
 #: src/translateble_variables.js:11
 msgid "nno"
 msgstr "Norwegian Nynorsk"
 
+#: src/translateble_variables.js:17
+msgid "nno_genitive"
+msgstr "norwegian nynorsk"
+
 #: src/translateble_variables.js:11
 msgid "nob"
 msgstr "Norwegian Bokmål"
+
+#: src/translateble_variables.js:17
+msgid "nob_genitive"
+msgstr "norwegian bokmål"
 
 #: src/translateble_variables.js:5
 msgid "pksmefin"
@@ -229,33 +261,65 @@ msgstr "Pekka Sammalahti's North Sami – Finnish dictionary"
 msgid "se"
 msgstr "North Sami"
 
+#: src/translateble_variables.js:18
+msgid "se_genitive"
+msgstr "north sami"
+
 #: src/translateble_variables.js:12
 msgid "sma"
 msgstr "South Sami"
+
+#: src/translateble_variables.js:18
+msgid "sma_genitive"
+msgstr "south sami"
 
 #: src/translateble_variables.js:12
 msgid "sme"
 msgstr "North Sami"
 
+#: src/translateble_variables.js:18
+msgid "sme_genitive"
+msgstr "north sami"
+
 #: src/translateble_variables.js:12
 msgid "smj"
 msgstr "Lule Sami"
+
+#: src/translateble_variables.js:19
+msgid "smj_genitive"
+msgstr "lule sami"
 
 #: src/translateble_variables.js:12
 msgid "smn"
 msgstr "Inari Sami"
 
+#: src/translateble_variables.js:19
+msgid "smn_genitive"
+msgstr "inari sami"
+
 #: src/translateble_variables.js:12
 msgid "sms"
 msgstr "Skolt Sami"
+
+#: src/translateble_variables.js:19
+msgid "sms_genitive"
+msgstr "skolt sami"
 
 #: src/translateble_variables.js:11
 msgid "sv"
 msgstr "Swedish"
 
+#: src/translateble_variables.js:18
+msgid "sv_genitive"
+msgstr "swedish"
+
 #: src/translateble_variables.js:12
 msgid "swe"
 msgstr "Swedish"
+
+#: src/translateble_variables.js:19
+msgid "swe_genitive"
+msgstr "swedish"
 
 #: src/translateble_variables.js:4
 msgid "termwiki"
@@ -265,6 +329,6 @@ msgstr "Giellagáldu's multilingual terms"
 msgid "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
 msgstr "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
 
-#: src/features/korp/Korp.js:32
-msgid "{lemma} was not found in {language} Korp"
-msgstr "{lemma} was not found in {language} Korp"
+#: src/features/korp/Korp.js:40
+msgid "{lemma} was not found in {language_genitive} Korp"
+msgstr "{lemma} was not found in {language_genitive} Korp"
