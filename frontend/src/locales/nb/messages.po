@@ -30,8 +30,8 @@ msgid "<0>Not found</0>"
 msgstr "<0>Ikke funnet</0>"
 
 #: src/features/article/Source.js:121
-msgid "<0>Pekka Sammalahttis North Sami – Finnish dictionary</0>"
-msgstr "<0>Pekka Sammalahttis nordsamisk – finsk ordbok</0>"
+msgid "<0>Pekka Sammallahtis North Sami – Finnish dictionary</0>"
+msgstr "<0>Pekka Sammallahtis nordsamisk – finsk ordbok</0>"
 
 #: src/translateble_variables.js:8
 msgid "A"
