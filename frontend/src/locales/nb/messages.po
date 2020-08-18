@@ -19,7 +19,7 @@ msgstr "<0/>"
 
 #: src/features/article/Articles.js:121
 msgid "<0>Error {0}</0>"
-msgstr "<0>Feil {0}"
+msgstr "<0>Feil {0}</0>"
 
 #: src/features/article/Articles.js:120
 msgid "<0>Loading...</0>"
@@ -41,15 +41,15 @@ msgstr "adjektiv"
 msgid "Adv"
 msgstr "adverb"
 
-#: src/features/korp/Korp.js:22
-msgid "An error occured {0}"
-msgstr "Det oppstod en feil {0}"
+#: src/features/korp/Korp.js:24
+msgid "An error occured: {0}"
+msgstr "Det oppstod en feil: {0}"
 
 #: src/features/article/TermWikiArticle.js:14
 msgid "Category:"
 msgstr "Kategori:"
 
-#: src/features/korp/Korp.js:26
+#: src/features/korp/Korp.js:30
 msgid "Checking if {lemma} exists in Korp."
 msgstr "Sjekker om {lemma} finnes i Korp."
 
@@ -125,9 +125,9 @@ msgstr "Status:"
 msgid "The input field accepts sami, nordic, english and latin search words."
 msgstr "Søkefeltet forstår samiske, nordiske, engelske og latinske søkeord."
 
-#: src/features/korp/Korp.js:44
-msgid "There is no corpus for {language}"
-msgstr "Det er ikke noe korpus for {language}"
+#: src/features/korp/Korp.js:53
+msgid "There is no corpus for {language_genitive}"
+msgstr "Det er ikke noe korpus for {language_genitive}"
 
 #: src/translateble_variables.js:8
 msgid "V"
@@ -153,17 +153,33 @@ msgstr "Du kan bla blant søkeordene her, nye hentes til alle treff har blitt fu
 msgid "en"
 msgstr "Engelsk"
 
+#: src/translateble_variables.js:16
+msgid "en_genitive"
+msgstr "engelsk"
+
 #: src/translateble_variables.js:11
 msgid "eng"
 msgstr "Engelsk"
+
+#: src/translateble_variables.js:16
+msgid "eng_genitive"
+msgstr "engelsk"
 
 #: src/translateble_variables.js:11
 msgid "fi"
 msgstr "Finsk"
 
+#: src/translateble_variables.js:16
+msgid "fi_genitive"
+msgstr "finsk"
+
 #: src/translateble_variables.js:11
 msgid "fin"
 msgstr "Finsk"
+
+#: src/translateble_variables.js:16
+msgid "fin_genitive"
+msgstr "finsk"
 
 #: src/translateble_variables.js:5
 msgid "gtfinsme"
@@ -201,21 +217,41 @@ msgstr "Giellateknos inarisamisk – nordsamisk ordbok"
 msgid "lat"
 msgstr "Latinsk"
 
+#: src/translateble_variables.js:20
+msgid "lat_genitive"
+msgstr "latinsk"
+
 #: src/translateble_variables.js:11
 msgid "nb"
 msgstr "Bokmål"
+
+#: src/translateble_variables.js:17
+msgid "nb_genitive"
+msgstr "bokmål"
 
 #: src/translateble_variables.js:11
 msgid "nn"
 msgstr "Nynorsk"
 
+#: src/translateble_variables.js:17
+msgid "nn_genitive"
+msgstr "nynorsk"
+
 #: src/translateble_variables.js:11
 msgid "nno"
 msgstr "Nynorsk"
 
+#: src/translateble_variables.js:17
+msgid "nno_genitive"
+msgstr "nynorsk"
+
 #: src/translateble_variables.js:11
 msgid "nob"
 msgstr "Bokmål"
+
+#: src/translateble_variables.js:17
+msgid "nob_genitive"
+msgstr "bokmål"
 
 #: src/translateble_variables.js:5
 msgid "pksmefin"
@@ -225,33 +261,65 @@ msgstr "Pekka Sammalahtis nordsamisk – finsk ordbok"
 msgid "se"
 msgstr "Nordsamisk"
 
+#: src/translateble_variables.js:18
+msgid "se_genitive"
+msgstr "nordsamisk"
+
 #: src/translateble_variables.js:12
 msgid "sma"
 msgstr "Sørsamisk"
+
+#: src/translateble_variables.js:18
+msgid "sma_genitive"
+msgstr "sørsamisk"
 
 #: src/translateble_variables.js:12
 msgid "sme"
 msgstr "Nordsamisk"
 
+#: src/translateble_variables.js:18
+msgid "sme_genitive"
+msgstr "nordsamisk"
+
 #: src/translateble_variables.js:12
 msgid "smj"
 msgstr "Lulesamisk"
+
+#: src/translateble_variables.js:19
+msgid "smj_genitive"
+msgstr "lulesamisk"
 
 #: src/translateble_variables.js:12
 msgid "smn"
 msgstr "Inarisamisk"
 
+#: src/translateble_variables.js:19
+msgid "smn_genitive"
+msgstr "inarisamisk"
+
 #: src/translateble_variables.js:12
 msgid "sms"
 msgstr "Skoltesamisk"
+
+#: src/translateble_variables.js:19
+msgid "sms_genitive"
+msgstr "skoltesamisk"
 
 #: src/translateble_variables.js:11
 msgid "sv"
 msgstr "Svensk"
 
+#: src/translateble_variables.js:18
+msgid "sv_genitive"
+msgstr "svensk"
+
 #: src/translateble_variables.js:12
 msgid "swe"
 msgstr "Svensk"
+
+#: src/translateble_variables.js:19
+msgid "swe_genitive"
+msgstr "svensk"
 
 #: src/translateble_variables.js:4
 msgid "termwiki"
@@ -261,6 +329,6 @@ msgstr "Giellagáldus flerspråklige termer"
 msgid "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
 msgstr "{0} av totalt {totalCount} som begynner med <0>{searchExpression}</0>"
 
-#: src/features/korp/Korp.js:32
-msgid "{lemma} was not found in {language} Korp"
-msgstr "Fant ikke {lemma} i {language} Korp"
+#: src/features/korp/Korp.js:40
+msgid "{lemma} was not found in {language_genitive} Korp"
+msgstr "Fant ikke {lemma} i {language_genitive} Korp"
