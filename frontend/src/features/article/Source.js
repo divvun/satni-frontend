@@ -116,7 +116,7 @@ const Source = ({source, lemma}) => {
       <Typography>
         <Trans>
           Source: {
-            source !== 'pksmefin' ?
+            source !== 'sammallahtismefin' ?
               <SourceLink from={names[source]['from']} to={names[source]['to']} lemma={lemma} source={source} /> :
               <Trans><span>Pekka Sammallahtis North Sami – Finnish dictionary</span></Trans>
           }
