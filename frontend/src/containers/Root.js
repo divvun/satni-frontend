@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { I18nProvider } from '@lingui/react';
 import { Provider } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import { I18nProvider } from '@lingui/react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import AsyncApp from './AsyncApp';
 import ErrorBoundary from 'components/ErrorBoundary';
