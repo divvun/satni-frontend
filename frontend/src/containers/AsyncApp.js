@@ -2,33 +2,28 @@ import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
 import { withStyles } from '@material-ui/core/styles';
 
-import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import FeedbackIcon from '@material-ui/icons/Feedback';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
 import LanguageIcon from '@material-ui/icons/Language';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import MenuIcon from '@material-ui/icons/Menu';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import PropTypes from 'prop-types';
-import Toolbar from '@material-ui/core/Toolbar';
 import TranslateIcon from '@material-ui/icons/Translate';
-import Typography from '@material-ui/core/Typography';
 
 import {SearchWelcome, DictWelcome} from 'containers/Welcome';
 import Articles from 'features/article/Articles';
 import DictChooserDialog from 'features/wantedlangs/DictChooserDialog';
-import FilterBar from 'features/search/FilterBar';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
 import LangChooserDialog from 'features/wantedlangs/LangChooserDialog';
 import MetaLanguageSelector from './MetaLanguageSelector';
+import SatniAppBar from './SatniAppBar';
 
 const drawerWidth = 240;
 
@@ -36,14 +31,6 @@ const styles = theme => ({
   '@global': {
     body: {
       backgroundColor: theme.palette.common.white
-    }
-  },
-  appBar: {
-    position: 'relative',
-    flexDirection: 'column',
-    [theme.breakpoints.up('sm')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth
     }
   },
   drawer: {
@@ -156,23 +143,10 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
   return (
     <div className={classes.container}>
       <CssBaseline />
-      <AppBar position='static' className={classes.appBar}>
-        <Toolbar>
-          <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='start'
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant='h6' noWrap className={classes.toolbarTitle}>
-          sátni.org
-          </Typography>
-          <FilterBar searchHandler={handleSearch} />
-        </Toolbar>
-      </AppBar>
+      <SatniAppBar
+        handleSearch={handleSearch}
+        handleDrawerToggle={handleDrawerToggle}
+        drawerWidth={drawerWidth} />
       <nav className={classes.drawer} aria-label='mailbox folders'>
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation='css'>
