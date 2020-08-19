@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { I18nProvider } from '@lingui/react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import AsyncApp from './AsyncApp';
 import ErrorBoundary from 'components/ErrorBoundary';
@@ -50,9 +51,11 @@ const Root = ({ store }) => {
         <MuiThemeProvider>
           <ApolloProvider
             client={client}>
-            <AsyncApp
-              language={language}
-              onLanguageChange={handleLanguageChange}/>
+            <Router>
+              <AsyncApp
+                language={language}
+                onLanguageChange={handleLanguageChange}/>
+            </Router>
           </ApolloProvider>
         </MuiThemeProvider>
       </I18nProvider>

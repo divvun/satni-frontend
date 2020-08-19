@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -35,6 +36,8 @@ const styles = theme => ({
     },
     marginTop: theme.spacing(1)
   },
+  status: {
+    textAlign: 'center'
   }
 });
 
@@ -50,6 +53,7 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+  const location = useLocation();
 
   return (
     <div className={classes.container}>
@@ -67,6 +71,12 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
       />
       <main className={classes.main}>
         <Grid container>
+          <Grid
+            item
+            xs={12}
+          >
+            <div className={classes.status}>at {location.pathname}</div>
+          </Grid>
           <Grid item xs={4}>
             {searchExpression ?
               <InfiniteStems
