@@ -1,29 +1,15 @@
 import React, { useState } from 'react';
-import { Trans } from '@lingui/macro';
 import { withStyles } from '@material-ui/core/styles';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Divider from '@material-ui/core/Divider';
-import Drawer from '@material-ui/core/Drawer';
-import FeedbackIcon from '@material-ui/icons/Feedback';
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import LanguageIcon from '@material-ui/icons/Language';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MenuBookIcon from '@material-ui/icons/MenuBook';
 import PropTypes from 'prop-types';
-import TranslateIcon from '@material-ui/icons/Translate';
 
 import {SearchWelcome, DictWelcome} from 'containers/Welcome';
 import Articles from 'features/article/Articles';
-import DictChooserDialog from 'features/wantedlangs/DictChooserDialog';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
-import LangChooserDialog from 'features/wantedlangs/LangChooserDialog';
-import MetaLanguageSelector from './MetaLanguageSelector';
 import SatniAppBar from './SatniAppBar';
+import SatniDrawer from './SatniDrawer';
 
 const drawerWidth = 240;
 
@@ -32,16 +18,6 @@ const styles = theme => ({
     body: {
       backgroundColor: theme.palette.common.white
     }
-  },
-  drawer: {
-    [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
-      flexShrink: 0
-    }
-  },
-  toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth
   },
   container: {
     minHeight: '100vh',
@@ -61,7 +37,6 @@ const styles = theme => ({
 });
 
 const AsyncApp = ({classes, match, language, onLanguageChange}) => {
-  console.log('async', 105, language);
   const [currentLemma, setCurrentLemma] = useState('');
   const [searchExpression, setSearchExpression] = useState('');
 
@@ -74,72 +49,6 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
     setMobileOpen(!mobileOpen);
   };
 
-  const [openLangChooser, setOpenLangChooser] = useState(false);
-  const handleClickLangChooserDialog = () => {
-    setOpenLangChooser(true);
-  };
-  const handleCloseLangChooserDialog = () => {
-    setOpenLangChooser(false);
-  };
-
-  const [openDictChooser, setOpenDictChooser] = useState(false);
-  const handleClickDictChooserDialog = () => {
-    setOpenDictChooser(true);
-  };
-  const handleCloseDictChooserDialog = () => {
-    setOpenDictChooser(false);
-  };
-
-  const drawer = (
-    <div>
-      <div className={classes.toolbar} />
-      <Divider />
-      <List>
-        <ListItem
-          key='LangChooser'
-          onClick={handleClickLangChooserDialog}
-          button
-        >
-          <ListItemIcon><LanguageIcon /></ListItemIcon>
-          <ListItemText primary={<Trans>Languages</Trans>} />
-          <LangChooserDialog
-            open={openLangChooser}
-            onClose={handleCloseLangChooserDialog} />
-        </ListItem>
-        <ListItem
-          key='DictChooser'
-          onClick={handleClickDictChooserDialog}
-          button
-        >
-          <ListItemIcon><MenuBookIcon /></ListItemIcon>
-          <ListItemText primary={<Trans>Dictionaries</Trans>} />
-          <DictChooserDialog
-            open={openDictChooser}
-            onClose={handleCloseDictChooserDialog} />
-        </ListItem>
-        <ListItem
-          key='Feedback'
-          button
-          component='a'
-          href='mailto:feedback@divvun.no'
-        >
-          <ListItemIcon><FeedbackIcon /></ListItemIcon>
-          <ListItemText primary='Feedback' />
-        </ListItem>
-        <ListItem
-          key='Site language'
-          button
-        >
-          <ListItemIcon><TranslateIcon /></ListItemIcon>
-          <MetaLanguageSelector
-            language={language}
-            onChangeLangage={onLanguageChange}
-          />
-        </ListItem>
-      </List>
-    </div>
-  );
-
   return (
     <div className={classes.container}>
       <CssBaseline />
@@ -147,37 +56,13 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
         handleSearch={handleSearch}
         handleDrawerToggle={handleDrawerToggle}
         drawerWidth={drawerWidth} />
-      <nav className={classes.drawer} aria-label='mailbox folders'>
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Hidden smUp implementation='css'>
-          <Drawer
-            // container={container}
-            variant='temporary'
-            anchor={'left'}
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper
-            }}
-            ModalProps={{
-              keepMounted: true // Better open performance on mobile.
-            }}
-          >
-            {drawer}
-          </Drawer>
-        </Hidden>
-        <Hidden xsDown implementation='css'>
-          <Drawer
-            classes={{
-              paper: classes.drawerPaper
-            }}
-            variant='permanent'
-            open
-          >
-            {drawer}
-          </Drawer>
-        </Hidden>
-      </nav>
+      <SatniDrawer
+        drawerWidth={drawerWidth}
+        language={language}
+        handleDrawerToggle={handleDrawerToggle}
+        mobileOpen={mobileOpen}
+        onLanguageChange={onLanguageChange}
+      />
       <main className={classes.main}>
         <Grid container>
           <Grid item xs={4}>
