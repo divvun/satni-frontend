@@ -7,21 +7,17 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import FeedbackIcon from '@material-ui/icons/Feedback';
-import FormControl from '@material-ui/core/FormControl';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import InputLabel from '@material-ui/core/InputLabel';
 import LanguageIcon from '@material-ui/icons/Language';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import PropTypes from 'prop-types';
-import Select from '@material-ui/core/Select';
 import Toolbar from '@material-ui/core/Toolbar';
 import TranslateIcon from '@material-ui/icons/Translate';
 import Typography from '@material-ui/core/Typography';
@@ -32,6 +28,7 @@ import DictChooserDialog from 'features/wantedlangs/DictChooserDialog';
 import FilterBar from 'features/search/FilterBar';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
 import LangChooserDialog from 'features/wantedlangs/LangChooserDialog';
+import MetaLanguageSelector from './MetaLanguageSelector';
 
 const drawerWidth = 240;
 
@@ -75,32 +72,6 @@ const styles = theme => ({
     }
   }
 });
-
-const LanguageSelector = ({ language, onChangeLangage }) => {
-  // console.log('select', 80, languge);
-  const handleChange = (event) => {
-    event.preventDefault();
-    onChangeLangage(event.target.value);
-  };
-
-  return (
-    <FormControl variant='filled'>
-      <InputLabel id='page-language-label'>Page language</InputLabel>
-      <Select
-        labelId='page-language-label'
-        id='page-language'
-        value={language}
-        onChange={handleChange}
-        label='Page language'
-      >
-        <MenuItem value='en'>English</MenuItem>
-        <MenuItem value='se'>Davvisámegiella</MenuItem>
-        <MenuItem value='smj'>Julevsámegiella</MenuItem>
-        <MenuItem value='nb'>Bokmål</MenuItem>
-      </Select>
-    </FormControl>
-  );
-};
 
 const AsyncApp = ({classes, match, language, onLanguageChange}) => {
   console.log('async', 105, language);
@@ -173,7 +144,7 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
           button
         >
           <ListItemIcon><TranslateIcon /></ListItemIcon>
-          <LanguageSelector
+          <MetaLanguageSelector
             language={language}
             onChangeLangage={onLanguageChange}
           />
