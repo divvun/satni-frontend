@@ -93,7 +93,9 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
             item
             xs={12}
           >
-            <StatusBar wantedDicts={wantedDicts} />
+            <StatusBar
+              wantedDicts={wantedDicts}
+              wantedLangs={cookies.wantedLangs} />
           </Grid>
           <Grid item xs={4}>
             {searchExpression ?
