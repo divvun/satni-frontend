@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Source = ({source, lemma}) => {
+const Source = ({source}) => {
   const classes = useStyles();
 
   return (
