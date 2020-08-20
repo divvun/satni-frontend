@@ -13,25 +13,29 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/containers/StatusBar.js:18
+msgid "(<0>Show all</0>)"
+msgstr ""
+
 #: src/features/article/Source.stories.js:10
 msgid "<0/>"
 msgstr "<0/>"
 
-#: src/features/article/Articles.js:121
+#: src/features/article/Articles.js:119
 msgid "<0>Error {0}</0>"
 msgstr "<0>Virhe {0}</0>"
 
-#: src/features/article/Articles.js:120
+#: src/features/article/Articles.js:118
 msgid "<0>Loading...</0>"
 msgstr "<0>Ladataan...</0>"
 
-#: src/features/article/Articles.js:122
+#: src/features/article/Articles.js:120
 msgid "<0>Not found</0>"
 msgstr "<0>Ei löytynyt</0>"
 
 #: src/features/article/Source.js:121
-msgid "<0>Pekka Sammallahtis North Sami – Finnish dictionary</0>"
-msgstr "<0>Pekka Sammallahden Pohjoissaame – Finnish -sanakirja</0>"
+#~ msgid "<0>Pekka Sammallahtis North Sami – Finnish dictionary</0>"
+#~ msgstr "<0>Pekka Sammallahden Pohjoissaame – Finnish -sanakirja</0>"
 
 #: src/translateble_variables.js:8
 msgid "A"
@@ -41,13 +45,21 @@ msgstr "adjektiivi"
 msgid "Adv"
 msgstr "adverbi"
 
+#: src/containers/StatusBar.js:32
+msgid "All {0} langauges."
+msgstr ""
+
+#: src/containers/StatusBar.js:23
+msgid "All {0} sources"
+msgstr ""
+
 #: src/features/korp/Korp.js:24
 msgid "An error occured: {0}"
 msgstr "Virhe tapahtui: {0}"
 
 #: src/features/article/TermWikiArticle.js:14
-msgid "Category:"
-msgstr "Kategoria:"
+#~ msgid "Category:"
+#~ msgstr "Kategoria:"
 
 #: src/features/korp/Korp.js:30
 msgid "Checking if {lemma} exists in Korp."
@@ -63,29 +75,25 @@ msgstr "Valitse kieliä"
 
 #: src/containers/Welcome.js:56
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
-msgstr "Valitse <0/> nähdäksesi taivutusparadigman. "
-"Valitse <1/> nähdäksesi käyttöesimerkkejä."
+msgstr "Valitse <0/> nähdäksesi taivutusparadigman. Valitse <1/> nähdäksesi käyttöesimerkkejä."
 
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
 msgstr "Määritelmät:"
 
-#: src/containers/AsyncApp.js:159
+#: src/containers/SatniDrawer.js:81
 msgid "Dictionaries"
 msgstr "Sanakirjat"
 
 #: src/containers/Welcome.js:48
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
-msgstr "Sanakirja-artikkelit ilmestyvät tähän paneeliin kun sana on valittu "
-"vasemmalla olevista hakutuloksista."
+msgstr "Sanakirja-artikkelit ilmestyvät tähän paneeliin kun sana on valittu vasemmalla olevista hakutuloksista."
 
 #: src/containers/Welcome.js:64
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
-msgstr ""
-"Artikkelien sisältä voi poistaa ei-haluttuja kieliä tai sanakirjoja."
-"Ne voi uudelleenaktivoida painamalla nappeja <0/> tai <1/> ."
+msgstr "Artikkelien sisältä voi poistaa ei-haluttuja kieliä tai sanakirjoja.Ne voi uudelleenaktivoida painamalla nappeja <0/> tai <1/> ."
 
-#: src/containers/AsyncApp.js:148
+#: src/containers/SatniDrawer.js:70
 msgid "Languages"
 msgstr "Kielet"
 
@@ -93,7 +101,7 @@ msgstr "Kielet"
 msgid "N"
 msgstr "substantiivi"
 
-#: src/features/infinitestems/InfiniteStems.js:40
+#: src/features/infinitestems/InfiniteStems.js:43
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "Ei tuloksia haulla <0>{searchExpression}</0>"
 
@@ -105,21 +113,26 @@ msgstr "Huom:"
 msgid "Pron"
 msgstr "pronomini"
 
+#: src/containers/StatusBar.js:18
+msgid "Results only from"
+msgstr ""
+
 #: src/containers/Welcome.js:81
 msgid "Search results will appear here."
 msgstr "Hakutulokset tulevat tähän."
 
 #: src/features/article/LemmaGroup.js:15
+#: src/features/article/Source.js:26
 msgid "Source:"
 msgstr "Lähde:"
 
 #: src/features/article/Source.js:117
-msgid "Source: {0}"
-msgstr "Lähde: {0}"
+#~ msgid "Source: {0}"
+#~ msgstr "Lähde: {0}"
 
 #: src/features/article/TermWikiArticle.js:26
-msgid "Source:<0>TermWiki</0>"
-msgstr "Lähde:<0>TermWiki</0>"
+#~ msgid "Source:<0>TermWiki</0>"
+#~ msgstr "Lähde:<0>TermWiki</0>"
 
 #: src/features/article/LemmaGroup.js:14
 msgid "Status:"
@@ -127,8 +140,7 @@ msgstr "Status:"
 
 #: src/containers/Welcome.js:89
 msgid "The input field accepts sami, nordic, english and latin search words."
-msgstr "Syötekenttä tukee saamenkielisiä, pohjoismaisten kieten, englannin- ja "
-"latinankielisiä hakusanoja."
+msgstr "Syötekenttä tukee saamenkielisiä, pohjoismaisten kieten, englannin- ja latinankielisiä hakusanoja."
 
 #: src/features/korp/Korp.js:53
 msgid "There is no corpus for {language_genitive}"
@@ -152,8 +164,7 @@ msgstr "Kirjoita vähintään yksi kirjain tähän"
 
 #: src/containers/Welcome.js:97
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
-msgstr ""
-"Hakusanoja voi selata tässä, uusia tuloksia haetaan kunnes kaikki on löydetty."
+msgstr "Hakusanoja voi selata tässä, uusia tuloksia haetaan kunnes kaikki on löydetty."
 
 #: src/translateble_variables.js:11
 msgid "en"
@@ -331,9 +342,17 @@ msgstr "ruotsin"
 msgid "termwiki"
 msgstr "Giellagáldun monikielinen termisanasto"
 
-#: src/features/infinitestems/InfiniteStems.js:37
+#: src/features/infinitestems/InfiniteStems.js:40
 msgid "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
 msgstr "{0} / {totalCount} alkaen hausta <0>{searchExpression}</0>"
+
+#: src/containers/StatusBar.js:35
+msgid "{0}/{1} languages."
+msgstr ""
+
+#: src/containers/StatusBar.js:26
+msgid "{0}/{1} sources."
+msgstr ""
 
 #: src/features/korp/Korp.js:40
 msgid "{lemma} was not found in {language_genitive} Korp"
