@@ -7,16 +7,11 @@ import FormGroup from '@material-ui/core/FormGroup';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
+import { availableLanguages } from 'utils';
+
 const LangChooser = () => {
   const [cookies, setCookie] = useCookies(['wantedLangs']);
-  const availableLanguages = [
-    'sma', 'sme', 'smj', 'smn', 'sms', 'fin', 'nob', 'swe', 'lat', 'eng', 'nno'
-  ];
   const samiLanguages = new Set(['sma', 'sme', 'smj', 'smn', 'sms']);
-
-  if (cookies.wantedLangs === undefined) {
-    setCookie('wantedLangs', availableLanguages);
-  }
 
   const handleChange = (event) => {
     const oldLangs = cookies.wantedLangs;
