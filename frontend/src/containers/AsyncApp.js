@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
+import { Trans } from '@lingui/macro';
+import { useCookies } from 'react-cookie';
 import { useLocation } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
 
-import {SearchWelcome, DictWelcome} from 'containers/Welcome';
+import { availableDicts, hasAvailableDict, pathname2Dict } from 'utils';
+import { SearchWelcome, DictWelcome} from 'containers/Welcome';
 import Articles from 'features/article/Articles';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
 import SatniAppBar from './SatniAppBar';
@@ -53,7 +58,12 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const location = useLocation();
+  const pathname = useLocation().pathname;
+
+  const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
+  const wantedDicts = hasAvailableDict(pathname) ?
+    pathname2Dict(pathname) :
+    cookies.wantedDicts;
 
   return (
     <div className={classes.container}>
@@ -75,13 +85,24 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
             item
             xs={12}
           >
-            <div className={classes.status}>at {location.pathname}</div>
+            <div className={classes.status}>
+              {wantedDicts.length === 1 ?
+                <Typography>
+                  <Trans>Showing results only from</Trans> <Trans id={wantedDicts[0]} /> <Trans>(<Link to='/'>Show all</Link>)</Trans>
+                </Typography> :
+                <Typography>
+                  <Trans>Showing results from {wantedDicts.length} of {availableDicts.length} dictionaries</Trans>
+                </Typography>
+              }
+            </div>
           </Grid>
           <Grid item xs={4}>
             {searchExpression ?
               <InfiniteStems
                 searchExpression={searchExpression}
                 lemmaHandler={handleLemma}
+                wantedDicts={wantedDicts}
+                wantedLangs={cookies.wantedLangs}
               /> :
               <SearchWelcome />
             }
@@ -90,7 +111,10 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
             {currentLemma ?
               <Articles
                 lemma={currentLemma}
-                lemmaHandler={handleLemma} /> :
+                lemmaHandler={handleLemma}
+                wantedDicts={wantedDicts}
+                wantedLangs={cookies.wantedLangs}
+              /> :
               <DictWelcome />
             }
           </Grid>
