@@ -13,25 +13,29 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/containers/StatusBar.js:18
+msgid "(<0>Show all</0>)"
+msgstr ""
+
 #: src/features/article/Source.stories.js:10
 msgid "<0/>"
 msgstr ""
 
-#: src/features/article/Articles.js:121
+#: src/features/article/Articles.js:119
 msgid "<0>Error {0}</0>"
 msgstr ""
 
-#: src/features/article/Articles.js:120
+#: src/features/article/Articles.js:118
 msgid "<0>Loading...</0>"
 msgstr ""
 
-#: src/features/article/Articles.js:122
+#: src/features/article/Articles.js:120
 msgid "<0>Not found</0>"
 msgstr ""
 
 #: src/features/article/Source.js:121
-msgid "<0>Pekka Sammallahtis North Sami – Finnish dictionary</0>"
-msgstr ""
+#~ msgid "<0>Pekka Sammallahtis North Sami – Finnish dictionary</0>"
+#~ msgstr ""
 
 #: src/translateble_variables.js:8
 msgid "A"
@@ -41,13 +45,21 @@ msgstr ""
 msgid "Adv"
 msgstr ""
 
+#: src/containers/StatusBar.js:32
+msgid "All {0} langauges."
+msgstr ""
+
+#: src/containers/StatusBar.js:23
+msgid "All {0} sources"
+msgstr ""
+
 #: src/features/korp/Korp.js:24
 msgid "An error occured: {0}"
 msgstr ""
 
 #: src/features/article/TermWikiArticle.js:14
-msgid "Category:"
-msgstr ""
+#~ msgid "Category:"
+#~ msgstr ""
 
 #: src/features/korp/Korp.js:30
 msgid "Checking if {lemma} exists in Korp."
@@ -69,7 +81,7 @@ msgstr ""
 msgid "Definitions:"
 msgstr ""
 
-#: src/containers/AsyncApp.js:159
+#: src/containers/SatniDrawer.js:81
 msgid "Dictionaries"
 msgstr ""
 
@@ -81,7 +93,7 @@ msgstr ""
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr ""
 
-#: src/containers/AsyncApp.js:148
+#: src/containers/SatniDrawer.js:70
 msgid "Languages"
 msgstr ""
 
@@ -89,7 +101,7 @@ msgstr ""
 msgid "N"
 msgstr ""
 
-#: src/features/infinitestems/InfiniteStems.js:40
+#: src/features/infinitestems/InfiniteStems.js:43
 msgid "No results for <0>{searchExpression}</0>"
 msgstr ""
 
@@ -101,21 +113,26 @@ msgstr ""
 msgid "Pron"
 msgstr ""
 
+#: src/containers/StatusBar.js:18
+msgid "Results only from"
+msgstr ""
+
 #: src/containers/Welcome.js:81
 msgid "Search results will appear here."
 msgstr ""
 
 #: src/features/article/LemmaGroup.js:15
+#: src/features/article/Source.js:26
 msgid "Source:"
 msgstr ""
 
 #: src/features/article/Source.js:117
-msgid "Source: {0}"
-msgstr ""
+#~ msgid "Source: {0}"
+#~ msgstr ""
 
 #: src/features/article/TermWikiArticle.js:26
-msgid "Source:<0>TermWiki</0>"
-msgstr ""
+#~ msgid "Source:<0>TermWiki</0>"
+#~ msgstr ""
 
 #: src/features/article/LemmaGroup.js:14
 msgid "Status:"
@@ -325,8 +342,16 @@ msgstr ""
 msgid "termwiki"
 msgstr ""
 
-#: src/features/infinitestems/InfiniteStems.js:37
+#: src/features/infinitestems/InfiniteStems.js:40
 msgid "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
+msgstr ""
+
+#: src/containers/StatusBar.js:35
+msgid "{0}/{1} languages."
+msgstr ""
+
+#: src/containers/StatusBar.js:26
+msgid "{0}/{1} sources."
 msgstr ""
 
 #: src/features/korp/Korp.js:40
