@@ -29,7 +29,7 @@ const dictStatus = (wantedDicts) => {
 const langStatus = (wantedDicts, wantedLangs) => {
   if (wantedDicts.length > 1 || wantedDicts.includes('termwiki')) {
     if (wantedLangs.length === availableLanguages.length) {
-      return <Trans>All {availableLanguages.length} langauges.</Trans>;
+      return <Trans>All {availableLanguages.length} languages.</Trans>;
     }
 
     return <Trans>{wantedLangs.length}/{availableLanguages.length} languages.</Trans>;

@@ -46,7 +46,7 @@ msgid "Adv"
 msgstr ""
 
 #: src/containers/StatusBar.js:32
-msgid "All {0} langauges."
+msgid "All {0} languages."
 msgstr ""
 
 #: src/containers/StatusBar.js:23
