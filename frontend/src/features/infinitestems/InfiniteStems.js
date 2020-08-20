@@ -38,7 +38,7 @@ const InfiniteStems = (props) => {
       <Typography className={classes.status}>
         {totalCount ?
           <Trans>
-            {stems.length} of totally {totalCount} starting with <b>{searchExpression}</b>
+            {stems.length}/{totalCount} starting with <b>{searchExpression}</b>
           </Trans> :
           <Trans>
             No results for <b>{searchExpression}</b>

@@ -26,7 +26,7 @@ const dictionaryInfo = {
   sammallahtismefin: {
     info: [
       t`Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993.`,
-      t`The dictionary contains more than 50.000 entries, and the Sammallahti adds entries regularly.`
+      t`The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly.`
     ]
   },
   termwiki: {
