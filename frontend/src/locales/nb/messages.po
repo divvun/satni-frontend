@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/containers/StatusBar.js:18
 msgid "(<0>Show all</0>)"
-msgstr ""
+msgstr "(<0>Vis alle</0>)"
 
 #: src/features/article/Source.stories.js:10
 msgid "<0/>"
@@ -47,11 +47,11 @@ msgstr "adverb"
 
 #: src/containers/StatusBar.js:32
 msgid "All {0} langauges."
-msgstr ""
+msgstr "Alle de {0} språkene."
 
 #: src/containers/StatusBar.js:23
 msgid "All {0} sources"
-msgstr ""
+msgstr "Alle de {0} kildene."
 
 #: src/features/korp/Korp.js:24
 msgid "An error occured: {0}"
@@ -115,7 +115,7 @@ msgstr "pronomen"
 
 #: src/containers/StatusBar.js:18
 msgid "Results only from"
-msgstr ""
+msgstr "Viser resultater bare fra"
 
 #: src/containers/Welcome.js:81
 msgid "Search results will appear here."
@@ -348,11 +348,11 @@ msgstr "{0} av totalt {totalCount} som begynner med <0>{searchExpression}</0>"
 
 #: src/containers/StatusBar.js:35
 msgid "{0}/{1} languages."
-msgstr ""
+msgstr "{0}/{1} gielas."
 
 #: src/containers/StatusBar.js:26
 msgid "{0}/{1} sources."
-msgstr ""
+msgstr "{0}/{1} gielas."
 
 #: src/features/korp/Korp.js:40
 msgid "{lemma} was not found in {language_genitive} Korp"
