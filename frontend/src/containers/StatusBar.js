@@ -8,7 +8,8 @@ import { availableDicts, availableLanguages } from 'utils';
 
 const useStyles = makeStyles(theme => ({
   status: {
-    textAlign: 'center'
+    textAlign: 'center',
+    margin: theme.spacing(1)
   }
 }));
 
