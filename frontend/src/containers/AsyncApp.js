@@ -8,7 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 
 import { hasAvailableDict, pathname2Dict } from 'utils';
-import { SearchWelcome, DictWelcome} from 'containers/Welcome';
+import { DictWelcome, SearchWelcome, WelcomeHeader } from 'containers/Welcome';
 import Articles from 'features/article/Articles';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
 import SatniAppBar from './SatniAppBar';
@@ -81,9 +81,12 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
             item
             xs={12}
           >
-            <StatusBar
-              wantedDicts={wantedDicts}
-              wantedLangs={cookies.wantedLangs} />
+            {(currentLemma || searchExpression) ?
+              <StatusBar
+                wantedDicts={wantedDicts}
+                wantedLangs={cookies.wantedLangs} /> :
+              <WelcomeHeader />
+            }
           </Grid>
           <Grid item xs={4}>
             {searchExpression ?

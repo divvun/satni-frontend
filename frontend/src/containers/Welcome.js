@@ -16,7 +16,7 @@ import LangChooser from 'features/wantedlangs/LangChooser';
 
 const useStyles = makeStyles(theme => ({
   welcome: {
-    margin: theme.spacing(4)
+    margin: theme.spacing(2)
   },
   heading: {
     textAlign: 'center',
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export const DictWelcome = () => {
+export const WelcomeHeader = () => {
   const classes = useStyles();
 
   return (
@@ -40,7 +40,7 @@ export const DictWelcome = () => {
         className={classes.heading}
       >
         <Trans>
-          Welcome!
+        Welcome!
         </Trans>
       </Typography>
       <Typography
@@ -48,34 +48,9 @@ export const DictWelcome = () => {
         className={classes.list}
       >
         <Trans>
-          Here you will find <a href='https://giella.org'>Giellagáldu's</a> term collection, Pekka Sammallahti's North Sami – Finnish dictionary and <a href='http://giellatekno.uit.no'>Giellatekno's</a> sami dictionaries, all set up by <a href='http://divvun.no'>Divvun</a>.
+        Do searches in <a href='https://giella.org'>Giellagáldu's</a> term collection, Pekka Sammallahti's North Sami – Finnish dictionary and <a href='http://giellatekno.uit.no'>Giellatekno's</a> sami dictionaries, all set up by <a href='http://divvun.no'>Divvun</a>.
         </Trans>
       </Typography>
-      <Typography
-        component='p'
-        className={classes.list}
-      >
-        <Trans>
-          Dictionary articles will appear in this pane when you press a word in the search results to the left.
-        </Trans>
-      </Typography>
-      <Typography
-        component='p'
-        className={classes.list}
-      >
-        <Trans>
-          Click <InfoOutlined className={classes.icons} /> to see the inflection paradigm of words. Click <ViewHeadlineOutlined className={classes.icons} /> to see examples of how the word is used.
-        </Trans>
-      </Typography>
-      <Typography
-        component='p'
-        className={classes.list}
-      >
-        <Trans>
-          Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <LanguageIcon className={classes.icons} /> or <MenuBookIcon className={classes.icons} /> .
-        </Trans>
-      </Typography>
-      <DictionaryInfo />
     </div>
   );
 };
@@ -121,3 +96,38 @@ export const SearchWelcome = () => {
     </div>
   );
 };
+
+export const DictWelcome = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.welcome}>
+      <Typography
+        component='p'
+        className={classes.list}
+      >
+        <Trans>
+          Dictionary articles will appear in this pane when you press a word in the search results to the left.
+        </Trans>
+      </Typography>
+      <Typography
+        component='p'
+        className={classes.list}
+      >
+        <Trans>
+          Click <InfoOutlined className={classes.icons} /> to see the inflection paradigm of words. Click <ViewHeadlineOutlined className={classes.icons} /> to see examples of how the word is used.
+        </Trans>
+      </Typography>
+      <Typography
+        component='p'
+        className={classes.list}
+      >
+        <Trans>
+          Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <LanguageIcon className={classes.icons} /> or <MenuBookIcon className={classes.icons} /> .
+        </Trans>
+      </Typography>
+      <DictionaryInfo />
+    </div>
+  );
+};
+
