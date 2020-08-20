@@ -46,8 +46,8 @@ msgid "Adv"
 msgstr "adverb"
 
 #: src/containers/StatusBar.js:32
-msgid "All {0} langauges."
-msgstr "All {0} langauges."
+msgid "All {0} languages."
+msgstr "All {0} languages."
 
 #: src/containers/StatusBar.js:23
 msgid "All {0} sources"
