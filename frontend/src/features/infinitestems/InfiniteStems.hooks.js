@@ -1,6 +1,5 @@
 import { gql } from '@apollo/client';
 import { useQuery } from '@apollo/client';
-import { useCookies } from 'react-cookie';
 
 const GET_LEMMAS = gql`
   query AllLemmas($inputValue: String!, $wantedLangs: [String]!,
@@ -27,16 +26,14 @@ const GET_LEMMAS = gql`
   }
 `;
 
-function useStems (inputValue) {
-  const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
-
+function useStems (inputValue, wantedDicts, wantedLangs) {
   const {data, loading, fetchMore, error} = useQuery(
     GET_LEMMAS, {
       notifyOnNetworkStatusChange: true,
       variables: {
         inputValue,
-        wantedLangs: cookies.wantedLangs,
-        wantedDicts: cookies.wantedDicts
+        wantedLangs,
+        wantedDicts
       }
     });
 

@@ -141,3 +141,19 @@ export const availableDicts = [
   'termwiki', 'gtsmenob', 'gtnobsme', 'gtnobsma', 'gtsmanob', 'gtsmefin', 'gtfinsme', 'gtsmesmn', 'gtsmnsme', 'sammallahtismefin'
 ];
 
+export const hasAvailableDict = pathname => availableDicts.some(
+  availableDict => pathname.startsWith(`/${availableDict}`));
+
+export const pathname2Dict = pathname => {
+  const indices = pathname.split('').reduce(
+    (accumulator, currentValue, index) => {
+      if (currentValue === '/') {
+        accumulator.push(index);
+      }
+      return accumulator;
+    },
+    []
+  );
+
+  return [pathname.slice(indices[0] + 1, indices[1])];
+};

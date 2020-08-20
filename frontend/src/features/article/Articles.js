@@ -1,5 +1,4 @@
 import React from 'react';
-import { useCookies } from 'react-cookie';
 import { Trans } from '@lingui/macro';
 import gql from 'graphql-tag';
 import { elemmas2ConceptPairs, dictBackend2Frontend } from 'utils';
@@ -13,10 +12,9 @@ const query2articlelist = (lemma, data) => {
   return dictList.concat(termList);
 };
 
-const Articles = ({lemma, lemmaHandler}) => {
-  const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
-
-  const GET_ARTICLES = cookies.wantedDicts.includes('termwiki') ?
+const Articles = (props) => {
+  const {lemma, lemmaHandler, wantedDicts, wantedLangs} = props;
+  const GET_ARTICLES = wantedDicts.includes('termwiki') ?
     gql`
       query AllArticles($lemma: String!, $wantedLangs: [String]!, $wantedDicts: [String]!) {
         dictEntryList (exact: $lemma, wanted: $wantedLangs, wantedDicts: $wantedDicts) {
@@ -112,8 +110,8 @@ const Articles = ({lemma, lemmaHandler}) => {
     GET_ARTICLES, {
       variables: {
         lemma,
-        wantedLangs: cookies.wantedLangs,
-        wantedDicts: cookies.wantedDicts
+        wantedLangs,
+        wantedDicts
       }
     }
   );
@@ -121,7 +119,7 @@ const Articles = ({lemma, lemmaHandler}) => {
   if (error) return <Trans><p>Error {error.message}</p></Trans>;
   if (!data) return <Trans><p>Not found</p></Trans>;
 
-  if (cookies.wantedDicts.includes('termwiki')) {
+  if (wantedDicts.includes('termwiki')) {
     return <PresentArticles
       lemmaHandler={lemmaHandler}
       articles={query2articlelist(lemma, data)} />;

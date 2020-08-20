@@ -1,12 +1,13 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { FixedSizeList as List } from 'react-window';
+import { Trans } from '@lingui/macro';
+
 import useStems from './InfiniteStems.hooks';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import InfiniteLoader from 'react-window-infinite-loader';
-import { FixedSizeList as List } from 'react-window';
-import { Trans } from '@lingui/macro';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
 
@@ -19,8 +20,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const InfiniteStems = ({lemmaHandler, searchExpression}) => {
-  const {stems, loading, loadMore, hasNextPage, totalCount} = useStems(searchExpression);
+const InfiniteStems = (props) => {
+  const {searchExpression, lemmaHandler, wantedDicts, wantedLangs} = props;
+  const {stems, loading, loadMore, hasNextPage, totalCount} = useStems(
+    searchExpression, wantedDicts, wantedLangs);
   const classes = useStyles();
 
   const stemsCount = hasNextPage ? stems.length + 1 : stems.length;
