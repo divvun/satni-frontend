@@ -1,7 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { useLocation } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 
+import { hasAvailableDict } from 'utils';
 import Examples from './Examples';
 import Source from './Source';
 import DictTargetStem from './DictTargetStem';
@@ -16,6 +18,8 @@ const useStyles = makeStyles(theme => ({
 const DictArticle = ({dictGroup, lemmaHandler}) => {
   const classes = useStyles();
   const {dict, from, to} = dictGroup;
+  const pathname = useLocation().pathname;
+  
   return (
     <>
       {to.translationGroups.map((translationGroup, i) => {
@@ -50,10 +54,11 @@ const DictArticle = ({dictGroup, lemmaHandler}) => {
           </React.Fragment>
         );
       })}
-      <Source
+      {!hasAvailableDict(pathname) && <Source
         className={classes.paper}
         source={dict}
         lemma={dictGroup.from.lookupLemmas[0].lemma} />
+      }
     </>
   );
 };
