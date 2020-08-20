@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
-import { Trans } from '@lingui/macro';
 import { useCookies } from 'react-cookie';
 import { useLocation } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/Typography';
 
-import { availableDicts, hasAvailableDict, pathname2Dict } from 'utils';
+import { hasAvailableDict, pathname2Dict } from 'utils';
 import { SearchWelcome, DictWelcome} from 'containers/Welcome';
 import Articles from 'features/article/Articles';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
 import SatniAppBar from './SatniAppBar';
 import SatniDrawer from './SatniDrawer';
+import StatusBar from './StatusBar';
 
 const drawerWidth = 240;
 
@@ -40,9 +38,6 @@ const styles = theme => ({
       marginLeft: drawerWidth
     },
     marginTop: theme.spacing(1)
-  },
-  status: {
-    textAlign: 'center'
   }
 });
 
@@ -85,16 +80,7 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
             item
             xs={12}
           >
-            <div className={classes.status}>
-              {wantedDicts.length === 1 ?
-                <Typography>
-                  <Trans>Showing results only from</Trans> <Trans id={wantedDicts[0]} /> <Trans>(<Link to='/'>Show all</Link>)</Trans>
-                </Typography> :
-                <Typography>
-                  <Trans>Showing results from {wantedDicts.length} of {availableDicts.length} dictionaries</Trans>
-                </Typography>
-              }
-            </div>
+            <StatusBar wantedDicts={wantedDicts} />
           </Grid>
           <Grid item xs={4}>
             {searchExpression ?
