@@ -27,7 +27,8 @@ export const mapArticlesByLanguagePair = (articles) => {
 const cleanedConcepts = (language, concepts) => {
   const nonSami = new Set(['nob', 'eng', 'fin', 'nno', 'swe']);
 
-  return nonSami.has(language) ? concepts.filter(concept => !nonSami.has(concept.terms[0].expression.language)) : concepts;
+  return nonSami.has(language) ? concepts.filter(
+    concept => !nonSami.has(concept.terms[0].expression.language)) : concepts;
 };
 
 export const moveLangFirst = (language, concepts) => {
@@ -47,7 +48,8 @@ export const moveLangFirst = (language, concepts) => {
 export const moveLemmaFirst = (lemma, language, terms) => {
   return terms.reduce(
     (accumulator, currentValue) => {
-      if (currentValue.expression.language === language && currentValue.expression.lemma === lemma) {
+      if (currentValue.expression.language === language &&
+        currentValue.expression.lemma === lemma) {
         accumulator.unshift(currentValue);
       } else {
         accumulator.push(currentValue);
@@ -94,7 +96,9 @@ export const multiLingualConcept2ConceptPairs = (lemma, language, multilingualco
 export const multilingualconceptList2ConceptPairs = (lemma, language, conceptList) => {
   const names = conceptListNames(conceptList);
 
-  return names.map(name => multiLingualConcept2ConceptPairs(lemma, language, conceptList.filter(concept => concept.name === name))).flat();
+  return names.map(name => multiLingualConcept2ConceptPairs(
+    lemma, language, conceptList.filter(
+      concept => concept.name === name))).flat();
 };
 
 export const languagesOfLemma = (lemma, conceptList) => {
@@ -112,13 +116,15 @@ export const conceptListNames = (conceptList) => {
 
 export const elemmas2ConceptPairs = (lemma, conceptList) => {
   const langs = languagesOfLemma(lemma, conceptList);
-  return langs.map(language => multilingualconceptList2ConceptPairs(lemma, language, [...conceptList])).flat();
+  return langs.map(language => multilingualconceptList2ConceptPairs(
+    lemma, language, [...conceptList])).flat();
 };
 
 export const backendTranslationGroup2frontendTranslationGroup = (translationGroup) => {
   return {
     restriction: translationGroup.restriction,
-    translations: translationGroup.translationLemmas.edges.map(edge => edge.node),
+    translations: translationGroup.translationLemmas.edges.map(
+      edge => edge.node),
     examples: translationGroup.exampleGroups.map(exampleGroup => exampleGroup)
   };
 };
@@ -132,13 +138,15 @@ export const dictBackend2Frontend = (backendDictArticle) => {
     },
     to: {
       language: backendDictArticle.targetLang,
-      translationGroups: backendDictArticle.translationGroups.map(backendTranslationGroup2frontendTranslationGroup)
+      translationGroups: backendDictArticle.translationGroups.map(
+        backendTranslationGroup2frontendTranslationGroup)
     }
   };
 };
 
 export const availableDicts = [
-  'termwiki', 'gtsmenob', 'gtnobsme', 'gtnobsma', 'gtsmanob', 'gtsmefin', 'gtfinsme', 'gtsmesmn', 'gtsmnsme', 'sammallahtismefin'
+  'termwiki', 'gtsmenob', 'gtnobsme', 'gtnobsma', 'gtsmanob', 'gtsmefin',
+  'gtfinsme', 'gtsmesmn', 'gtsmnsme', 'sammallahtismefin'
 ];
 
 export const hasAvailableDict = pathname => availableDicts.some(
