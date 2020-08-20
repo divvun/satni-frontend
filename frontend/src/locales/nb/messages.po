@@ -47,11 +47,11 @@ msgstr "adverb"
 
 #: src/containers/StatusBar.js:32
 msgid "All {0} languages."
-msgstr "Alle de {0} språkene."
+msgstr "Alle {0} språk."
 
 #: src/containers/StatusBar.js:23
 msgid "All {0} sources"
-msgstr "Alle de {0} kildene."
+msgstr "Alle {0} kilder."
 
 #: src/features/korp/Korp.js:24
 msgid "An error occured: {0}"
