@@ -7,7 +7,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 
-import { hasAvailableDict, pathname2Dict } from 'utils';
+import { availableDicts, hasAvailableDict, pathname2Dict } from 'utils';
 import { SearchWelcome, DictWelcome} from 'containers/Welcome';
 import Articles from 'features/article/Articles';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
@@ -55,7 +55,12 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
   };
   const pathname = useLocation().pathname;
 
-  const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
+  const [cookies, setCookie] = useCookies(['wantedLangs', 'wantedDicts']);
+
+  if (cookies.wantedDicts === undefined) {
+    setCookie('wantedDicts', availableDicts);
+  }
+
   const wantedDicts = hasAvailableDict(pathname) ?
     pathname2Dict(pathname) :
     cookies.wantedDicts;
