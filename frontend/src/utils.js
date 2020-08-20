@@ -165,3 +165,7 @@ export const pathname2Dict = pathname => {
 
   return [pathname.slice(indices[0] + 1, indices[1])];
 };
+
+export const availableLanguages = [
+  'sma', 'sme', 'smj', 'smn', 'sms', 'fin', 'nob', 'swe', 'lat', 'eng', 'nno'
+];
