@@ -5,7 +5,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: en\n"
+"Language: fi\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2020-08-19 17:59+0200\n"
@@ -59,7 +59,7 @@ msgstr "Valitse sanakirjoja"
 
 #: src/features/wantedlangs/LangChooserDialog.js:40
 msgid "Choose languages"
-msgstr "Choose kieliä"
+msgstr "Valitse kieliä"
 
 #: src/containers/Welcome.js:56
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
@@ -140,7 +140,7 @@ msgstr "verbi"
 
 #: src/containers/Welcome.js:40
 msgid "Welcome!"
-msgstr "Welcome!"
+msgstr "Tervetuloa!"
 
 #: src/containers/Welcome.js:105
 msgid "When you click a word here, dictionary articles appear to the right."
