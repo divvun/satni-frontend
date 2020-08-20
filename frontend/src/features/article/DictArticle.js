@@ -56,8 +56,7 @@ const DictArticle = ({dictGroup, lemmaHandler}) => {
       })}
       {!hasAvailableDict(pathname) && <Source
         className={classes.paper}
-        source={dict}
-        lemma={dictGroup.from.lookupLemmas[0].lemma} />
+        source={dict} />
       }
     </>
   );
