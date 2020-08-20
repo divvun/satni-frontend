@@ -3,9 +3,11 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { I18nProvider } from '@lingui/react';
 import { Provider } from 'react-redux';
+import { useCookies } from 'react-cookie';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import PropTypes from 'prop-types';
 
+import { availableDicts, availableLanguages } from 'utils';
 import AsyncApp from './AsyncApp';
 import ErrorBoundary from 'components/ErrorBoundary';
 
@@ -36,6 +38,16 @@ const Root = ({ store }) => {
     },
     [language]
   );
+
+  const [cookies, setCookie] = useCookies(['wantedLangs', 'wantedDicts']);
+  if (cookies.wantedDicts === undefined) {
+    setCookie('wantedDicts', availableDicts);
+  }
+
+  if (cookies.wantedLangs === undefined) {
+    setCookie('wantedLangs', availableLanguages);
+  }
+
 
   const handleLanguageChange = async(language) => {
     const newCatalog = await loadMessages(language);
