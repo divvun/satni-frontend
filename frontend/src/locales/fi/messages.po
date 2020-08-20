@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/containers/StatusBar.js:18
+#: src/containers/StatusBar.js:19
 msgid "(<0>Show all</0>)"
 msgstr ""
 
@@ -33,10 +33,6 @@ msgstr "<0>Ladataan...</0>"
 msgid "<0>Not found</0>"
 msgstr "<0>Ei löytynyt</0>"
 
-#: src/features/article/Source.js:121
-#~ msgid "<0>Pekka Sammallahtis North Sami – Finnish dictionary</0>"
-#~ msgstr "<0>Pekka Sammallahden Pohjoissaame – Finnish -sanakirja</0>"
-
 #: src/translateble_variables.js:8
 msgid "A"
 msgstr "adjektiivi"
@@ -45,11 +41,11 @@ msgstr "adjektiivi"
 msgid "Adv"
 msgstr "adverbi"
 
-#: src/containers/StatusBar.js:32
+#: src/containers/StatusBar.js:33
 msgid "All {0} languages."
 msgstr ""
 
-#: src/containers/StatusBar.js:23
+#: src/containers/StatusBar.js:24
 msgid "All {0} sources"
 msgstr ""
 
@@ -57,9 +53,10 @@ msgstr ""
 msgid "An error occured: {0}"
 msgstr "Virhe tapahtui: {0}"
 
-#: src/features/article/TermWikiArticle.js:14
-#~ msgid "Category:"
-#~ msgstr "Kategoria:"
+#: src/containers/DictionaryInfo.js:41
+#: src/containers/DictionaryInfo.js:47
+msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
+msgstr ""
 
 #: src/features/korp/Korp.js:30
 msgid "Checking if {lemma} exists in Korp."
@@ -73,7 +70,7 @@ msgstr "Valitse sanakirjoja"
 msgid "Choose languages"
 msgstr "Valitse kieliä"
 
-#: src/containers/Welcome.js:56
+#: src/containers/Welcome.js:117
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr "Valitse <0/> nähdäksesi taivutusparadigman. Valitse <1/> nähdäksesi käyttöesimerkkejä."
 
@@ -85,11 +82,23 @@ msgstr "Määritelmät:"
 msgid "Dictionaries"
 msgstr "Sanakirjat"
 
-#: src/containers/Welcome.js:48
+#: src/containers/Welcome.js:109
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr "Sanakirja-artikkelit ilmestyvät tähän paneeliin kun sana on valittu vasemmalla olevista hakutuloksista."
 
-#: src/containers/Welcome.js:64
+#: src/containers/Welcome.js:50
+msgid "Do searches in <0>Giellagáldu's</0> term collection, Pekka Sammallahti's North Sami – Finnish dictionary and <1>Giellatekno's</1> sami dictionaries, all set up by <2>Divvun</2>."
+msgstr ""
+
+#: src/containers/DictionaryInfo.js:28
+msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
+msgstr ""
+
+#: src/containers/DictionaryInfo.js:34
+msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
+msgstr ""
+
+#: src/containers/Welcome.js:125
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr "Artikkelien sisältä voi poistaa ei-haluttuja kieliä tai sanakirjoja.Ne voi uudelleenaktivoida painamalla nappeja <0/> tai <1/> ."
 
@@ -105,6 +114,10 @@ msgstr "substantiivi"
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "Ei tuloksia haulla <0>{searchExpression}</0>"
 
+#: src/containers/DictionaryInfo.js:46
+msgid "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but frequent Norwegian words have been added. It contains about 26,000 Norwegian entries."
+msgstr ""
+
 #: src/features/article/LemmaGroup.js:13
 msgid "Note:"
 msgstr "Huom:"
@@ -113,11 +126,11 @@ msgstr "Huom:"
 msgid "Pron"
 msgstr "pronomini"
 
-#: src/containers/StatusBar.js:18
+#: src/containers/StatusBar.js:19
 msgid "Results only from"
 msgstr ""
 
-#: src/containers/Welcome.js:81
+#: src/containers/Welcome.js:67
 msgid "Search results will appear here."
 msgstr "Hakutulokset tulevat tähän."
 
@@ -126,35 +139,63 @@ msgstr "Hakutulokset tulevat tähän."
 msgid "Source:"
 msgstr "Lähde:"
 
-#: src/features/article/Source.js:117
-#~ msgid "Source: {0}"
-#~ msgstr "Lähde: {0}"
-
-#: src/features/article/TermWikiArticle.js:26
-#~ msgid "Source:<0>TermWiki</0>"
-#~ msgstr "Lähde:<0>TermWiki</0>"
-
 #: src/features/article/LemmaGroup.js:14
 msgid "Status:"
 msgstr "Status:"
 
-#: src/containers/Welcome.js:89
-msgid "The input field accepts sami, nordic, english and latin search words."
-msgstr "Syötekenttä tukee saamenkielisiä, pohjoismaisten kieten, englannin- ja latinankielisiä hakusanoja."
+#: src/containers/DictionaryInfo.js:63
+#: src/containers/DictionaryInfo.js:69
+msgid "The dictionary contains about 11,000 entries."
+msgstr ""
+
+#: src/containers/DictionaryInfo.js:29
+msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
+msgstr ""
+
+#: src/containers/Welcome.js:75
+msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
+msgstr "Syötekenttä tukee saamenkielisiä, pohjoismaisten kieten, englannin- ja latinankielisiä hakusanoja. "
+"If you do not have Sami letters on your device, press <0/> to write them in the input field."
+
+#: src/containers/DictionaryInfo.js:35
+msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
+msgstr ""
 
 #: src/features/korp/Korp.js:53
 msgid "There is no corpus for {language_genitive}"
 msgstr "Ei {language_genitive} korpuksia"
 
+#: src/containers/DictionaryInfo.js:40
+msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
+msgstr ""
+
+#: src/containers/DictionaryInfo.js:52
+#: src/containers/DictionaryInfo.js:57
+msgid "This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern Sámi Oahpa."
+msgstr ""
+
+#: src/containers/DictionaryInfo.js:74
+#: src/containers/DictionaryInfo.js:79
+msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
+msgstr ""
+
+#: src/containers/DictionaryInfo.js:68
+msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been added."
+msgstr ""
+
+#: src/containers/DictionaryInfo.js:62
+msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
+msgstr ""
+
 #: src/translateble_variables.js:8
 msgid "V"
 msgstr "verbi"
 
-#: src/containers/Welcome.js:40
+#: src/containers/Welcome.js:42
 msgid "Welcome!"
 msgstr "Tervetuloa!"
 
-#: src/containers/Welcome.js:105
+#: src/containers/Welcome.js:92
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Kun sana valitaan täällä, sanakirja-artikkeli aukeaa oikealle."
 
@@ -162,7 +203,7 @@ msgstr "Kun sana valitaan täällä, sanakirja-artikkeli aukeaa oikealle."
 msgid "Write at least one letter here"
 msgstr "Kirjoita vähintään yksi kirjain tähän"
 
-#: src/containers/Welcome.js:97
+#: src/containers/Welcome.js:84
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr "Hakusanoja voi selata tässä, uusia tuloksia haetaan kunnes kaikki on löydetty."
 
@@ -342,17 +383,17 @@ msgstr "ruotsin"
 msgid "termwiki"
 msgstr "Giellagáldun monikielinen termisanasto"
 
-#: src/features/infinitestems/InfiniteStems.js:40
-msgid "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
-msgstr "{0} / {totalCount} alkaen hausta <0>{searchExpression}</0>"
-
-#: src/containers/StatusBar.js:35
+#: src/containers/StatusBar.js:36
 msgid "{0}/{1} languages."
 msgstr ""
 
-#: src/containers/StatusBar.js:26
+#: src/containers/StatusBar.js:27
 msgid "{0}/{1} sources."
 msgstr ""
+
+#: src/features/infinitestems/InfiniteStems.js:40
+msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
+msgstr "{0}/{totalCount} alkaen hausta <0>{searchExpression}</0>"
 
 #: src/features/korp/Korp.js:40
 msgid "{lemma} was not found in {language_genitive} Korp"
