@@ -10,10 +10,6 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
 
-import DictChooser from 'features/wantedlangs/DictChooser';
-import DictionaryInfo from './DictionaryInfo';
-import LangChooser from 'features/wantedlangs/LangChooser';
-
 const useStyles = makeStyles(theme => ({
   welcome: {
     margin: theme.spacing(2)
@@ -126,7 +122,6 @@ export const DictWelcome = () => {
           Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <LanguageIcon className={classes.icons} /> or <MenuBookIcon className={classes.icons} /> .
         </Trans>
       </Typography>
-      <DictionaryInfo />
     </div>
   );
 };
