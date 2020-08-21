@@ -1,20 +1,13 @@
 import React from 'react';
-import { Trans } from '@lingui/macro';
 import { useCookies } from 'react-cookie';
-import Checkbox from '@material-ui/core/Checkbox';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 
-import { availableDicts } from 'utils';
+import DictionaryInfo from 'containers/DictionaryInfo';
 
 const DictChooser = () => {
   const [cookies, setCookie] = useCookies(['wantedDicts']);
 
-  if (cookies.wantedDicts === undefined) {
-    setCookie('wantedDicts', availableDicts);
-  }
-
   const handleChange = (event) => {
+    event.stopPropagation();
     const oldDicts = cookies.wantedDicts;
     const newDicts = oldDicts.includes(event.target.name) ?
       oldDicts.filter(value => value !== event.target.name) :
@@ -22,24 +15,10 @@ const DictChooser = () => {
     setCookie('wantedDicts', newDicts);
   };
 
-  return (
-    <FormGroup column>
-      {availableDicts.map(dict => (
-        <FormControlLabel
-          key={dict}
-          control={
-            <Checkbox
-              color='default'
-              checked={cookies.wantedDicts.includes(dict)}
-              onChange={handleChange}
-              name={dict}
-            />
-          }
-          label={<Trans id={dict} />}
-        />
-      ))}
-    </FormGroup>
-  );
+  return <DictionaryInfo
+    handleChange={handleChange}
+    wantedDicts={cookies.wantedDicts}
+  />;
 };
 
 export default DictChooser;

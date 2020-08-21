@@ -5,7 +5,9 @@ import { Trans, t } from '@lingui/macro';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
+import Checkbox from '@material-ui/core/Checkbox';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
@@ -18,9 +20,6 @@ const useStyles = makeStyles(theme => ({
     width: '50%'
   }
 }));
-
-// t`Davvisámegiela-suoma digitála sátnegirjji giehtačállosa lea čállán emeritusprofessor Pekka Sammallahti iežas 1989 ja 1993 prentejuvvon sátnegirjjiid vuođul.`,
-// t`Digitála sátnegirji sisdoallá badjel 50.000 ohcansáni ja čálli lasiha sániid ain dađistaga.`
 
 const dictionaryInfo = {
   sammallahtismefin: {
@@ -37,14 +36,14 @@ const dictionaryInfo = {
   },
   gtsmenob: {
     info: [
-      t`This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries.`, 
-      t`Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation.` 
+      t`This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries.`,
+      t`Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation.`
     ]
   },
   gtnobsme: {
     info: [
-      t`Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but frequent Norwegian words have been added. It contains about 26,000 Norwegian entries.`, 
-      t`Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation.` 
+      t`Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but frequent Norwegian words have been added. It contains about 26,000 Norwegian entries.`,
+      t`Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation.`
     ]
   },
   gtnobsma: {
@@ -83,31 +82,42 @@ const dictionaryInfo = {
 
 
 const DictionaryInfo = (props) => {
+  const { handleChange, wantedDicts } = props;
   const classes = useStyles();
 
   return (
     <>
-      {Object.keys(dictionaryInfo).map(key => (
+      {Object.keys(dictionaryInfo).map(dict => (
         <Accordion
-          key={key}
+          key={dict}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon/> }
-            aria-controls='`${key}-content`'
-            id='`${key}-header`'
+            aria-controls={`${dict}-content`}
+            id={`${dict}-header`}
           >
-            <Typography className={classes.accordionHeading}>
-              <Trans id={key}/>
-            </Typography>
+            <FormControlLabel
+              aria-label={<Trans id={dict}/>}
+              onClick={(event) => event.stopPropagation()}
+              onFocus={(event) => event.stopPropagation()}
+              control={
+                <Checkbox
+                  checked={wantedDicts.includes(dict)}
+                  onChange={handleChange}
+                  name={dict}
+                />
+              }
+              label={<Trans id={dict}/>}
+            />
           </AccordionSummary>
           <AccordionDetails>
-            {dictionaryInfo[key].info.map((infoText, index) => <Typography key={index} className={classes.infoText}>
+            {dictionaryInfo[dict].info.map((infoText, index) => <Typography key={index} className={classes.infoText}>
               <Trans id={infoText}/>
             </Typography>)}
           </AccordionDetails>
         </Accordion>
       ))}
-    
+
     </>
   );
 };
