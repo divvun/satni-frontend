@@ -7,7 +7,6 @@ import KeyboardIcon from '@material-ui/icons/Keyboard';
 import LanguageIcon from '@material-ui/icons/Language';
 import Link from '@material-ui/core/Link';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
 
