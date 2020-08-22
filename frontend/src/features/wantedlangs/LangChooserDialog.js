@@ -1,11 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
+import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import CloseIcon from '@material-ui/icons/Close';
-import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContent from '@material-ui/core/DialogContent';
 import Dialog from '@material-ui/core/Dialog';
 import IconButton from '@material-ui/core/IconButton';
+import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import LangChooser from './LangChooser';
@@ -17,11 +19,12 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(8),
     marginLeft: theme.spacing(8)
   },
-  closeButton: {
-    position: 'absolute',
-    right: theme.spacing(1),
-    top: theme.spacing(1),
-    color: theme.palette.grey[500]
+  appBar: {
+    position: 'relative'
+  },
+  title: {
+    marginLeft: theme.spacing(2),
+    flex: 1
   }
 }));
 
@@ -35,11 +38,20 @@ const LangChooserDialog = (props) => {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby='LangChooser' open={open}>
+      <AppBar className={classes.appBar}>
+        <Toolbar>
+          <IconButton edge='start' color='inherit' onClick={handleClose} aria-label='close'>
+            <CloseIcon />
+          </IconButton>
+          <Typography variant='h6' className={classes.title}>
+            <Trans>Choose languages</Trans>
+          </Typography>
+        </Toolbar>
+      </AppBar>
       <Box className={classes.root}>
-        <DialogTitle id='simple-dialog-title'>
-          <Trans>Choose languages</Trans>
-        </DialogTitle>
-        <LangChooser />
+        <DialogContent>
+          <LangChooser />
+        </DialogContent>
       </Box>
     </Dialog>
   );

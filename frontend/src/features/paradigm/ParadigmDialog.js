@@ -1,23 +1,30 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import DialogTitle from '@material-ui/core/DialogTitle';
+import { makeStyles } from '@material-ui/core/styles';
+import { Trans } from '@lingui/macro';
+import AppBar from '@material-ui/core/AppBar';
+import Box from '@material-ui/core/Box';
+import CloseIcon from '@material-ui/icons/Close';
+import DialogContent from '@material-ui/core/DialogContent';
 import Dialog from '@material-ui/core/Dialog';
 import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import { makeStyles } from '@material-ui/core/styles';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 import Paradigm from './Paradigm';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: 0,
-    padding: theme.spacing(2)
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(3),
+    marginRight: theme.spacing(8),
+    marginLeft: theme.spacing(8)
   },
-  closeButton: {
-    position: 'absolute',
-    right: theme.spacing(1),
-    top: theme.spacing(1),
-    color: theme.palette.grey[500]
+  appBar: {
+    position: 'relative'
+  },
+  title: {
+    marginLeft: theme.spacing(2),
+    flex: 1
   }
 }));
 
@@ -31,23 +38,24 @@ const ParadigmDialog = (props) => {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby='Paradigm' open={open}>
-      <DialogTitle id='simple-dialog-title'>
-        <Typography variant='h6'>
-          Paradigm for {lemma} {pos} {language}
-        </Typography>
-        {onClose ? (
-          <IconButton
-            aria-label='close'
-            onClick={onClose}
-            className={classes.closeButton}>
+      <AppBar className={classes.appBar}>
+        <Toolbar>
+          <IconButton edge='start' color='inherit' onClick={handleClose} aria-label='close'>
             <CloseIcon />
           </IconButton>
-        ) : null}
-      </DialogTitle>
-      <Paradigm
-        lemma={lemma}
-        language={language}
-        pos={pos} />
+          <Typography variant='h6' className={classes.title}>
+            <Trans>Paradigm for {lemma} {pos} {language}</Trans>
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Box className={classes.root}>
+        <DialogContent>
+          <Paradigm
+            lemma={lemma}
+            language={language}
+            pos={pos} />
+        </DialogContent>
+      </Box>
     </Dialog>
   );
 };
