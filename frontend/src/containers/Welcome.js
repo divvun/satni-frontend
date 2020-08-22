@@ -5,6 +5,7 @@ import { Trans } from '@lingui/macro';
 import InfoOutlined from '@material-ui/icons/InfoOutlined';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
 import LanguageIcon from '@material-ui/icons/Language';
+import Link from '@material-ui/core/Link';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
@@ -44,7 +45,7 @@ export const WelcomeHeader = () => {
         className={classes.list}
       >
         <Trans>
-        Do searches in <a href='https://giella.org'>Giellagáldu's</a> term collection, Pekka Sammallahti's North Sami – Finnish dictionary and <a href='http://giellatekno.uit.no'>Giellatekno's</a> sami dictionaries, all set up by <a href='http://divvun.no'>Divvun</a>.
+        Do searches in <Link target='_blank' rel='noopener noreferrer' href='https://giella.org'>Giellagáldu's</Link> term collection, <Link href='/sammallahtismefin'>Pekka Sammallahti's North Sami – Finnish dictionary</Link> and <Link target='_blank' rel='noopener noreferrer' href='http://giellatekno.uit.no'>Giellatekno's</Link> <Link target='_blank' rel='noopener noreferrer' href='http://sanit.oahpa.no'>sami dictionaries</Link>, all set up by <Link target='_blank' rel='noopener noreferrer' href='http://divvun.no'>Divvun</Link>.
         </Trans>
       </Typography>
     </div>
@@ -125,4 +126,3 @@ export const DictWelcome = () => {
     </div>
   );
 };
-
