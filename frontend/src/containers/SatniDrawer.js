@@ -68,9 +68,6 @@ const SatniDrawer = (props) => {
         >
           <ListItemIcon><LanguageIcon /></ListItemIcon>
           <ListItemText primary={<Trans>Languages</Trans>} />
-          <LangChooserDialog
-            open={openLangChooser}
-            onClose={handleCloseLangChooserDialog} />
         </ListItem>
         <ListItem
           key='DictChooser'
@@ -79,9 +76,6 @@ const SatniDrawer = (props) => {
         >
           <ListItemIcon><MenuBookIcon /></ListItemIcon>
           <ListItemText primary={<Trans>Dictionaries</Trans>} />
-          <DictChooserDialog
-            open={openDictChooser}
-            onClose={handleCloseDictChooserDialog} />
         </ListItem>
         <ListItem
           key='Feedback'
@@ -103,6 +97,12 @@ const SatniDrawer = (props) => {
           />
         </ListItem>
       </List>
+      <LangChooserDialog
+        open={openLangChooser}
+        onClose={handleCloseLangChooserDialog} />
+      <DictChooserDialog
+        open={openDictChooser}
+        onClose={handleCloseDictChooserDialog} />
     </div>
   );
 
