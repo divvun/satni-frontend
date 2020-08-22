@@ -158,9 +158,9 @@ msgid ""
 " frequent Norwegian words have been added. It contains about 26,000 Norwegian"
 " entries."
 msgstr ""
-"Dáru → davvisámi lea vuođđuduvvon Davvisámi → dáru sátnegirjái, muhto das"
-" leat dušše 600 báikenama, muhto leat lasihan dábálaš dáru sániid."
-" Sátnegirjjis leat oktiibuot 26,000 dáru ohcansáni."
+"Dáru → davvisámi lea vuođđuduvvon Davvisámi → dáru sátnegirjái, "
+"muhto leat lasihan dábálaš dáru sániid. "
+"Sátnegirjjis leat oktiibuot 26,000 ohcansáni."
 
 #: src/features/article/LemmaGroup.js:13
 msgid "Note:"
