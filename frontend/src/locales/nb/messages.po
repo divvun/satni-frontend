@@ -55,90 +55,55 @@ msgstr "Alle {0} kilder."
 msgid "An error occured: {0}"
 msgstr "Det oppstod en feil: {0}"
 
-#: src/containers/DictionaryInfo.js:41
-#: src/containers/DictionaryInfo.js:47
-msgid ""
-"Approximately half of the content of the dictionary is taken by searching for"
-" parallels in a parallel corpus of administrative text. This work was"
-" financed by the Ministry of Local Government and Modernisation."
-msgstr ""
-"Omtrent halvparten av innholdet i ordbøkene er hentet fra et parallelkorpus"
-" av administrative tekster, finansiert av Kommunal- og"
-" administrasjonsdepartementet."
+#: src/containers/DictionaryInfo.js:40
+#: src/containers/DictionaryInfo.js:46
+msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
+msgstr "Omtrent halvparten av innholdet i ordbøkene er hentet fra et parallelkorpus av administrative tekster, finansiert av Kommunal- og administrasjonsdepartementet."
 
 #: src/features/korp/Korp.js:30
 msgid "Checking if {lemma} exists in Korp."
 msgstr "Sjekker om {lemma} finnes i Korp."
 
-#: src/features/wantedlangs/DictChooserDialog.js:32
+#: src/features/wantedlangs/DictChooserDialog.js:47
+#: src/features/wantedlangs/DictChooserDialog.orig.js:50
 msgid "Choose dictionaries"
 msgstr "Velg ordbøker"
 
-#: src/features/wantedlangs/LangChooserDialog.js:40
+#: src/features/wantedlangs/LangChooserDialog.js:47
 msgid "Choose languages"
 msgstr "Velg språk"
 
-#: src/containers/Welcome.js:117
-msgid ""
-"Click <0/> to see the inflection paradigm of words. Click <1/> to see"
-" examples of how the word is used."
-msgstr ""
-"Klikk på <0/> for å se hvordan ordet bøyes. Klikk på <1/> for å se eksempler"
-" på hvordan ordet brukes."
+#: src/containers/Welcome.js:113
+msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
+msgstr "Klikk på <0/> for å se hvordan ordet bøyes. Klikk på <1/> for å se eksempler på hvordan ordet brukes."
 
 #: src/features/article/Definitions.js:20
 msgid "Definitions:"
 msgstr "Definisjoner:"
 
-#: src/containers/SatniDrawer.js:81
+#: src/containers/SatniDrawer.js:78
 msgid "Dictionaries"
 msgstr "Ordbøker"
 
-#: src/containers/Welcome.js:109
-msgid ""
-"Dictionary articles will appear in this pane when you press a word in the"
-" search results to the left."
-msgstr ""
-"I dette panelet dukker det opp ordboksartikler når du trykker på et ord blant"
-" søkeresultatene til venstre."
+#: src/containers/Welcome.js:105
+msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
+msgstr "I dette panelet dukker det opp ordboksartikler når du trykker på et ord blant søkeresultatene til venstre."
 
-#: src/containers/Welcome.js:50
-msgid ""
-"Do searches in <0>Giellagáldu's</0> term collection, Pekka Sammallahti's"
-" North Sami – Finnish dictionary and <1>Giellatekno's</1> sami dictionaries,"
-" all set up by <2>Divvun</2>."
-msgstr ""
-"Gjør søk i <0>Giellagáldus</0> termsamling, Pekka Sammalahtis nordsamisk –"
-" finsk ordbok eller i <1>Giellateknos</1> samiske ordbøker, alt satt opp av <"
-"2>Divvun</2>."
+#: src/containers/Welcome.js:46
+msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
+msgstr "Gjør søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamisk – finsk ordbok<1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>, alt satt opp av <4>Divvun</4>."
 
-#: src/containers/DictionaryInfo.js:28
-msgid ""
-"Emeritusprofessor Pekka Sammallahti has based this dictionary on his own"
-" printed dictionaries published in 1989 and 1993."
-msgstr ""
-"Professor emeritus Pekka Sammallahti har basert denne ordboken på sine egne"
-" trykte ordbøker som ble publisert i 1989 og 1993."
+#: src/containers/DictionaryInfo.js:27
+msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
+msgstr "Professor emeritus Pekka Sammallahti har basert denne ordboken på sine egne trykte ordbøker som ble publisert i 1989 og 1993."
 
-#: src/containers/DictionaryInfo.js:34
-msgid ""
-"Giellagáldu's main task is to standardise new terminology and written"
-" language for the Sami languages. The standardised terms from their <a"
-" href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site,"
-" to be easily accessible to the Sami community."
-msgstr ""
-"Giellagáldus hovedoppgave er normering av ny terminologi og skriftspråk for"
-" de samiske språkene. De standardiserte termene fra termbasen deres hentes"
-" daglig til dette nettstedet, slik at de er enkelt tilgjengelig for det"
-" samiske samfunnet."
+#: src/containers/DictionaryInfo.js:33
+msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
+msgstr "Giellagáldus hovedoppgave er normering av ny terminologi og skriftspråk for de samiske språkene. De standardiserte termene fra termbasen deres hentes daglig til dette nettstedet, slik at de er enkelt tilgjengelig for det samiske samfunnet."
 
-#: src/containers/Welcome.js:125
-msgid ""
-"Inside the articles you can hide unwanted languages and dictionaries. To"
-" reactivate them, press <0/> or <1/> ."
-msgstr ""
-"Inne i artiklene kan du skjule uønskede språk og ordbøker. For å aktivere dem"
-" på nytt, trykk på <0/> eller <1/>."
+#: src/containers/Welcome.js:121
+msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
+msgstr "Inne i artiklene kan du skjule uønskede språk og ordbøker. For å aktivere dem på nytt, trykk på <0/> eller <1/>."
 
 #: src/containers/SatniDrawer.js:70
 msgid "Languages"
@@ -148,23 +113,21 @@ msgstr "Språk"
 msgid "N"
 msgstr "substantiv"
 
-#: src/features/infinitestems/InfiniteStems.js:43
+#: src/features/infinitestems/InfiniteStems.js:46
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "Ingen resultater for <0>{searchExpression}</0>"
 
-#: src/containers/DictionaryInfo.js:46
-msgid ""
-"Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but"
-" frequent Norwegian words have been added. It contains about 26,000 Norwegian"
-" entries."
-msgstr ""
-"Norsk → Nordsamisk bygger på Nordsamisk → Norsk ordbok, men vanlige norske"
-" ord har i tillegg blitt lagt til. Den inneholder rundt 26.000 norske"
-" oppslagsord. "
+#: src/containers/DictionaryInfo.js:45
+msgid "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but frequent Norwegian words have been added. It contains about 26,000 Norwegian entries."
+msgstr "Norsk → Nordsamisk bygger på Nordsamisk → Norsk ordbok, men vanlige norske ord har i tillegg blitt lagt til. Den inneholder rundt 26.000 norske oppslagsord. "
 
 #: src/features/article/LemmaGroup.js:13
 msgid "Note:"
 msgstr "Notat:"
+
+#: src/features/paradigm/ParadigmDialog.js:47
+msgid "Paradigm for {lemma} {pos} {language}"
+msgstr ""
 
 #: src/translateble_variables.js:8
 msgid "Pron"
@@ -174,7 +137,7 @@ msgstr "pronomen"
 msgid "Results only from"
 msgstr "Viser resultater bare fra"
 
-#: src/containers/Welcome.js:67
+#: src/containers/Welcome.js:63
 msgid "Search results will appear here."
 msgstr "Søkeresultater dukker opp her."
 
@@ -187,96 +150,58 @@ msgstr "Kilde:"
 msgid "Status:"
 msgstr "Status:"
 
-#: src/containers/DictionaryInfo.js:63
-#: src/containers/DictionaryInfo.js:69
+#: src/containers/DictionaryInfo.js:62
+#: src/containers/DictionaryInfo.js:68
 msgid "The dictionary contains about 11,000 entries."
 msgstr "Ordboken har omtrent 11 000 oppslagsord."
 
-#: src/containers/DictionaryInfo.js:29
-msgid ""
-"The dictionary contains more than 50.000 entries, and Sammallahti adds"
-" entries regularly."
-msgstr ""
-"Ordboken har mer enn 50 000 oppslagsord, og Sammallahti legger jevnlig inn"
-" nytt innhold."
+#: src/containers/DictionaryInfo.js:28
+msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
+msgstr "Ordboken har mer enn 50 000 oppslagsord, og Sammallahti legger jevnlig inn nytt innhold."
 
-#: src/containers/Welcome.js:75
-msgid ""
-"The input field accepts sami, nordic, english and latin search words. If you"
-" do not have Sami letters on your device, press <0/> to write them in the"
-" input field."
-msgstr ""
-"Søkefeltet forstår samiske, nordiske, engelske og latinske søkeord. "
-"Om du ikke har samiske bokstaver på maskinen din , trykk <0/> for å kunne"
-" skrive dem i søkefeltet."
+#: src/containers/Welcome.js:71
+msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
+msgstr "Søkefeltet forstår samiske, nordiske, engelske og latinske søkeord. Om du ikke har samiske bokstaver på maskinen din , trykk <0/> for å kunne skrive dem i søkefeltet."
 
-#: src/containers/DictionaryInfo.js:35
-msgid ""
-"The termbase consists of over 50,000 term articles, and is updated on a"
-" regular basis."
+#: src/containers/DictionaryInfo.js:34
+msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr "Termbase har over 50 000 termartikler og oppdateres jevnlig."
 
 #: src/features/korp/Korp.js:53
 msgid "There is no corpus for {language_genitive}"
 msgstr "Det er ikke noe korpus for {language_genitive}"
 
-#: src/containers/DictionaryInfo.js:40
-msgid ""
-"This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322"
-" words), but now it contains 30,000 entries, plus 6000 place name entries."
-msgstr ""
-"Denne ordboken bygger på Nils Jernsletten's ordbok Álgosátnegirji (4322 ord),"
-" men nå inneholder ordboka 31.000 oppslagsord, pluss 6000 stedsnavn."
+#: src/containers/DictionaryInfo.js:39
+msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
+msgstr "Denne ordboken bygger på Nils Jernsletten's ordbok Álgosátnegirji (4322 ord), men nå inneholder ordboka 31.000 oppslagsord, pluss 6000 stedsnavn."
 
-#: src/containers/DictionaryInfo.js:52
-#: src/containers/DictionaryInfo.js:57
-msgid ""
-"This dictionary builds on material prepared by Albert Jåma and Tove Brustad"
-" in the Hemnes Saami Organization, but has in addition gained words from"
-" Giellatekno and Aajege's work with the Southern Sámi Oahpa."
-msgstr ""
-"Denne ordboken bygger på material av Albert Jåma og Tove Brustad i Hemnes"
-" sameforening, men har i tillegg ord fra Giellateknos og Aajeges arbeid med"
-" sørsamisk Oahpa."
+#: src/containers/DictionaryInfo.js:51
+#: src/containers/DictionaryInfo.js:56
+msgid "This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern Sámi Oahpa."
+msgstr "Denne ordboken bygger på material av Albert Jåma og Tove Brustad i Hemnes sameforening, men har i tillegg ord fra Giellateknos og Aajeges arbeid med sørsamisk Oahpa."
 
-#: src/containers/DictionaryInfo.js:74
-#: src/containers/DictionaryInfo.js:79
-msgid ""
-"This dictionary builds on the Valtonen and Olthuis"
-" Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
-msgstr ""
-"Denne ordboken bygger på Valtonen og Olthuis' Inarinsaame-suomi-inarinsaame"
-" ordbok (30 000 ord)."
+#: src/containers/DictionaryInfo.js:73
+#: src/containers/DictionaryInfo.js:78
+msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
+msgstr "Denne ordboken bygger på Valtonen og Olthuis' Inarinsaame-suomi-inarinsaame ordbok (30 000 ord)."
 
-#: src/containers/DictionaryInfo.js:68
-msgid ""
-"This dictionary is based on lexical material from the Institute for the"
-" Languages of Finland, and from Giellatekno's work with the North Saami"
-" Oahpa. In addition frequent Finnish words have been added."
-msgstr ""
-"Denne ordboken er basert på leksikalsk materiale fra Intitutionen för de"
-" inhemska språken i Finland, og fra Giellateknos arbeid med nordsamisk Oahpa."
-" I tillegg er det lagt til vanlige finske ord."
+#: src/containers/DictionaryInfo.js:67
+msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been added."
+msgstr "Denne ordboken er basert på leksikalsk materiale fra Intitutionen för de inhemska språken i Finland, og fra Giellateknos arbeid med nordsamisk Oahpa. I tillegg er det lagt til vanlige finske ord."
 
-#: src/containers/DictionaryInfo.js:62
-msgid ""
-"This dictionary is based on lexical material from the Institute for the"
-" Languages of Finland, and from Giellatekno's work with the North Saami"
-" Oahpa. In addition, we have included frequent words from North Saami."
-msgstr ""
-"Denne ordboken er basert på leksikalsk materiale fra Intitutionen för de"
-" inhemska språken i Finland, og fra Giellateknos arbeid med nordsamisk Oahpa."
-" I tillegg er det lagt til vanlige nordsamiske ord."
+#: src/containers/DictionaryInfo.js:61
+msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
+msgstr "Denne ordboken er basert på leksikalsk materiale fra Intitutionen för de inhemska språken i Finland, og fra Giellateknos arbeid med nordsamisk Oahpa. I tillegg er det lagt til vanlige nordsamiske ord."
 
 #: src/translateble_variables.js:8
 msgid "V"
 msgstr "verb"
 
-#: src/containers/Welcome.js:42
+#: src/containers/Welcome.js:38
 msgid "Welcome!"
 msgstr "Velkommen!"
 
-#: src/containers/Welcome.js:92
+#: src/containers/Welcome.js:88
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Når du klikker på et ord her, dukker ordboksartikler opp til høyre."
 
@@ -284,12 +209,9 @@ msgstr "Når du klikker på et ord her, dukker ordboksartikler opp til høyre."
 msgid "Write at least one letter here"
 msgstr "Skriv minst en bokstav her"
 
-#: src/containers/Welcome.js:84
-msgid ""
-"You can browse the search words here, new ones will be fetched until all"
-" matches have been found."
-msgstr ""
-"Du kan bla blant søkeordene her, nye hentes til alle treff har blitt funnet."
+#: src/containers/Welcome.js:80
+msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
+msgstr "Du kan bla blant søkeordene her, nye hentes til alle treff har blitt funnet."
 
 #: src/translateble_variables.js:11
 msgid "en"
@@ -475,7 +397,7 @@ msgstr "{0}/{1} språk."
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} kilder."
 
-#: src/features/infinitestems/InfiniteStems.js:40
+#: src/features/infinitestems/InfiniteStems.js:43
 msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
 msgstr "{0}/{totalCount} som begynner med <0>{searchExpression}</0>"
 
