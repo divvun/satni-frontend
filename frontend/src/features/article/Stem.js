@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
 import IconButton from '@material-ui/core/IconButton';
-import InfoOutlined from '@material-ui/icons/InfoOutlined';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
 
+import ParadigmButton from 'features/paradigm/ParadigmButton';
 import ParadigmDialog from 'features/paradigm/ParadigmDialog';
 
-const langsWithParadigm = new Set(['sma', 'sme', 'smj', 'smn', 'sms', 'fin']);
 const useStyles = makeStyles({
   stemContainer: {
     width: '100%',
@@ -71,14 +70,13 @@ const Stem = ({ stem, restriction, withLink, lemmaHandler }) => {
             component='span'
             color='textSecondary'
             className={classes.pos}>(<Trans id={pos}/>)</Typography>}
-          {langsWithParadigm.has(language) && <IconButton
-            className={classes.icons}
-            component='span'
-            aria-label='Paradigm'
-            onClick={handleClickParadigmDialog}>
-            <InfoOutlined />
-          </IconButton>
-          }
+          <ParadigmButton
+            lemma={lemma}
+            pos={pos}
+            language={language}
+            onClick={handleClickParadigmDialog}
+            classes={classes}
+          />
           <IconButton
             className={classes.icons}
             component='span'
