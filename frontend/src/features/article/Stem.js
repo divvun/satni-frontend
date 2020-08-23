@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
-import Link from '@material-ui/core/Link';
+import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 
 import KorpButton from 'features/korp/KorpButton';
@@ -53,10 +53,7 @@ const Stem = ({ stem, restriction, withLink, lemmaHandler }) => {
         component='span'
         className={classes.lemma}>
         {(withLink) ?
-          <Link
-            component="button"
-            onClick={() => lemmaHandler(lemma)}
-          >
+          <Link to={`/${lemma}`}>
             {lemma}
           </Link> :
           <>{lemma}</>

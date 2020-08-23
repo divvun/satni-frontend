@@ -19,20 +19,20 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const TermWikiArticle = ({termGroup, lemmaHandler}) => {
+const TermWikiArticle = ({termGroup, lemma}) => {
   const classes = useStyles();
   const pathname = useLocation().pathname;
 
   return (
     <>
       <LemmaGroups
-        lemmaHandler={lemmaHandler}
         fromterms={termGroup.from.terms}
         toterms={termGroup.to.terms} />
       {(termGroup.from.definition || termGroup.to.definition) && <Definitions definitions={[termGroup.from.definition, termGroup.to.definition]}/>}
       {!hasAvailableDict(pathname) && <Source
         className={classes.paper}
-        source='termwiki'/>
+        source='termwiki'
+        lemma={lemma}/>
       }
     </>
   );

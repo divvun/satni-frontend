@@ -169,3 +169,31 @@ export const pathname2Dict = pathname => {
 export const availableLanguages = [
   'sma', 'sme', 'smj', 'smn', 'sms', 'fin', 'nob', 'swe', 'lat', 'eng', 'nno'
 ];
+
+export const locationParser = pathname => {
+  const parts = pathname.split('/');
+  console.log(parts);
+
+  if (parts.length === 3) {
+    return {
+      currentDict: parts[1],
+      currentLemma: parts[2]
+    };
+  }
+
+  if (parts.length === 2) {
+    if (availableDicts.includes(parts[1])) {
+      return {
+        currentDict: parts[1],
+        currentLemma: ''
+      };
+    } else {
+      return {
+        currentDict: '',
+        currentLemma: parts[1]
+      };
+    }
+  }
+
+  return { currentDict: '', currentLemma: '' };
+};

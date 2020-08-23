@@ -15,11 +15,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const DictArticle = ({dictGroup, lemmaHandler}) => {
+const DictArticle = ({dictGroup, lemma}) => {
   const classes = useStyles();
   const {dict, from, to} = dictGroup;
   const pathname = useLocation().pathname;
-  
+
   return (
     <>
       {to.translationGroups.map((translationGroup, i) => {
@@ -43,7 +43,7 @@ const DictArticle = ({dictGroup, lemmaHandler}) => {
                       key={index}
                       stem={stem}
                       restriction={translationGroup.restriction}
-                      lemmaHandler={lemmaHandler}/>;
+                    />;
                   }
                 })}
               </Grid>
@@ -56,7 +56,8 @@ const DictArticle = ({dictGroup, lemmaHandler}) => {
       })}
       {!hasAvailableDict(pathname) && <Source
         className={classes.paper}
-        source={dict} />
+        source={dict}
+        lemma={lemma} />
       }
     </>
   );
