@@ -7,7 +7,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 
-import { hasAvailableDict, pathname2Dict } from 'utils';
+import { locationParser } from 'utils';
 import { DictWelcome, SearchWelcome, WelcomeHeader } from 'containers/Welcome';
 import Articles from 'features/article/Articles';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
@@ -42,10 +42,9 @@ const styles = theme => ({
 });
 
 const AsyncApp = ({classes, match, language, onLanguageChange}) => {
-  const [currentLemma, setCurrentLemma] = useState('');
   const [searchExpression, setSearchExpression] = useState('');
+  const {currentLemma, currentDict} = locationParser(useLocation().pathname);
 
-  const handleLemma = lemma => setCurrentLemma(lemma);
   const handleSearch = value => setSearchExpression(value);
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -53,13 +52,14 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const pathname = useLocation().pathname;
 
   const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
 
-  const wantedDicts = hasAvailableDict(pathname) ?
-    pathname2Dict(pathname) :
+  const wantedDicts = currentDict ?
+    [currentDict] :
     cookies.wantedDicts;
+
+  console.log(wantedDicts);
 
   return (
     <div className={classes.container}>
@@ -74,6 +74,7 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
         handleDrawerToggle={handleDrawerToggle}
         mobileOpen={mobileOpen}
         onLanguageChange={onLanguageChange}
+        handleSearch={handleSearch}
       />
       <main className={classes.main}>
         <Grid container>
@@ -84,7 +85,8 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
             {(currentLemma || searchExpression) ?
               <StatusBar
                 wantedDicts={wantedDicts}
-                wantedLangs={cookies.wantedLangs} /> :
+                wantedLangs={cookies.wantedLangs}
+                currentLemma={currentLemma} /> :
               <WelcomeHeader />
             }
           </Grid>
@@ -92,9 +94,9 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
             {searchExpression ?
               <InfiniteStems
                 searchExpression={searchExpression}
-                lemmaHandler={handleLemma}
                 wantedDicts={wantedDicts}
                 wantedLangs={cookies.wantedLangs}
+                currentDict={currentDict}
               /> :
               <SearchWelcome />
             }
@@ -103,7 +105,6 @@ const AsyncApp = ({classes, match, language, onLanguageChange}) => {
             {currentLemma ?
               <Articles
                 lemma={currentLemma}
-                lemmaHandler={handleLemma}
                 wantedDicts={wantedDicts}
                 wantedLangs={cookies.wantedLangs}
               /> :

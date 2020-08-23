@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { useLocation } from 'react-router-dom';
 
 import { Trans } from '@lingui/macro';
 import InfoOutlined from '@material-ui/icons/InfoOutlined';
@@ -9,6 +10,8 @@ import Link from '@material-ui/core/Link';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import Typography from '@material-ui/core/Typography';
 import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
+
+import { locationParser } from 'utils';
 
 const useStyles = makeStyles(theme => ({
   welcome: {
@@ -28,7 +31,7 @@ const useStyles = makeStyles(theme => ({
 
 export const WelcomeHeader = () => {
   const classes = useStyles();
-
+  const {currentLemma, currentDict} = locationParser(useLocation().pathname);
   return (
     <div className={classes.welcome}>
       <Typography
@@ -43,9 +46,12 @@ export const WelcomeHeader = () => {
         component='p'
         className={classes.list}
       >
-        <Trans>
-        Do searches in <Link target='_blank' rel='noopener noreferrer' href='https://giella.org'>Giellagáldu's</Link> term collection, <Link href='/sammallahtismefin'>Pekka Sammallahti's North Sami – Finnish dictionary</Link> and <Link target='_blank' rel='noopener noreferrer' href='http://giellatekno.uit.no'>Giellatekno's</Link> <Link target='_blank' rel='noopener noreferrer' href='http://sanit.oahpa.no'>sami dictionaries</Link>, all set up by <Link target='_blank' rel='noopener noreferrer' href='http://divvun.no'>Divvun</Link>.
-        </Trans>
+        {(currentDict && !currentLemma) ?
+          <><Trans id={currentDict}/> <Trans>is now the active dictionary</Trans></> :
+          <Trans>
+          Do searches in <Link target='_blank' rel='noopener noreferrer' href='https://giella.org'>Giellagáldu's</Link> term collection, <Link href='/sammallahtismefin'>Pekka Sammallahti's North Sami – Finnish dictionary</Link> and <Link target='_blank' rel='noopener noreferrer' href='http://giellatekno.uit.no'>Giellatekno's</Link> <Link target='_blank' rel='noopener noreferrer' href='http://sanit.oahpa.no'>sami dictionaries</Link>, all set up by <Link target='_blank' rel='noopener noreferrer' href='http://divvun.no'>Divvun</Link>.
+          </Trans>
+        }
       </Typography>
     </div>
   );

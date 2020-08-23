@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { Link } from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import FeedbackIcon from '@material-ui/icons/Feedback';
 import Hidden from '@material-ui/core/Hidden';
+import HomeIcon from '@material-ui/icons/Home';
 import LanguageIcon from '@material-ui/icons/Language';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -24,8 +25,10 @@ const SatniDrawer = (props) => {
     handleDrawerToggle,
     language,
     mobileOpen,
-    onLanguageChange
+    onLanguageChange,
+    handleSearch
   } = props;
+
   const useStyles = makeStyles(theme => ({
     drawer: {
       [theme.breakpoints.up('sm')]: {
@@ -61,6 +64,16 @@ const SatniDrawer = (props) => {
       <div className={classes.toolbar} />
       <Divider />
       <List>
+        <ListItem
+          key='Home'
+          button
+          onClick={() => {
+            handleSearch('');
+          }}
+        >
+          <ListItemIcon><HomeIcon /></ListItemIcon>
+          <ListItemText primary=<Link to='/'><Trans>Home</Trans></Link> />
+        </ListItem>
         <ListItem
           key='LangChooser'
           onClick={handleClickLangChooserDialog}

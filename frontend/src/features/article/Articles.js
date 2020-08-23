@@ -13,7 +13,7 @@ const query2articlelist = (lemma, data) => {
 };
 
 const Articles = (props) => {
-  const {lemma, lemmaHandler, wantedDicts, wantedLangs} = props;
+  const {lemma, wantedDicts, wantedLangs} = props;
   const GET_ARTICLES = wantedDicts.includes('termwiki') ?
     gql`
       query AllArticles($lemma: String!, $wantedLangs: [String]!, $wantedDicts: [String]!) {
@@ -121,11 +121,11 @@ const Articles = (props) => {
 
   if (wantedDicts.includes('termwiki')) {
     return <PresentArticles
-      lemmaHandler={lemmaHandler}
+      lemma={lemma}
       articles={query2articlelist(lemma, data)} />;
   } else {
     return <PresentArticles
-      lemmaHandler={lemmaHandler}
+      lemma={lemma}
       articles={data.dictEntryList.map(dictBackend2Frontend)} />;
   }
 };
