@@ -17,13 +17,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Source = ({source}) => {
+const Source = ({source, lemma}) => {
   const classes = useStyles();
 
   return (
     <Grid item xs={12} className={classes.paper}>
       <Typography>
-        <Trans>Source:</Trans> <Link to={source}><Trans id={source} /></Link>
+        <Trans>Source:</Trans> <Link to={`${source}/${lemma}`}><Trans id={source} /></Link>
       </Typography>
     </Grid>
   );

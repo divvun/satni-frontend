@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { FixedSizeList as List } from 'react-window';
+import { Link, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import useStems from './InfiniteStems.hooks';
@@ -10,6 +11,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
+
+import { locationParser } from 'utils';
 
 const useStyles = makeStyles(theme => ({
   infiniteList: {
@@ -24,7 +27,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const InfiniteStems = (props) => {
-  const {searchExpression, lemmaHandler, wantedDicts, wantedLangs} = props;
+  const {searchExpression, wantedDicts, wantedLangs} = props;
   const {stems, loading, loadMore, hasNextPage, totalCount} = useStems(
     searchExpression, wantedDicts, wantedLangs);
   const classes = useStyles();
@@ -34,6 +37,7 @@ const InfiniteStems = (props) => {
   const loadMoreStems = loading ? () => {} : loadMore;
   const isStemLoaded = index => !hasNextPage || index < stems.length;
 
+  const {currentLemma, currentDict} = locationParser(useLocation().pathname);
   if (loading && stems.length === 0) return <CircularProgress size={16} />;
 
   return (
@@ -72,19 +76,16 @@ const InfiniteStems = (props) => {
                   }
 
                   const {stem} = stems[index];
-                  const stemNode = index === clickedItem ? <Typography component='span' className={classes.clicked}>{stem}</Typography> : <Typography component='span'>{stem}</Typography>;
+                  const stemNode = stem === clickedItem ? <Typography component='span' className={classes.clicked}>{stem}</Typography> : <Typography component='span'>{stem}</Typography>;
+
+                  const path = (currentDict && !currentLemma) ? `${currentDict}/${stem}` : stem;
                   return (
                     <ListItem
-                      button
-                      value={stem}
                       key={index}
                       style={style}
-                      onClick={() => {
-                        setClickedItem(index);
-                        return lemmaHandler(stem);
-                      }}
+                      onClick={() => setClickedItem(stem)}
                     >
-                      <ListItemText primary={stemNode} />
+                      <ListItemText primary=<Link to={path}>{stemNode}</Link> />
                     </ListItem>
                   );
                 }}
