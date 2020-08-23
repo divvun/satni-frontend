@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
-import IconButton from '@material-ui/core/IconButton';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
-import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
 
+import KorpButton from 'features/korp/KorpButton';
 import ParadigmButton from 'features/paradigm/ParadigmButton';
 import ParadigmDialog from 'features/paradigm/ParadigmDialog';
 
@@ -77,12 +76,11 @@ const Stem = ({ stem, restriction, withLink, lemmaHandler }) => {
             onClick={handleClickParadigmDialog}
             classes={classes}
           />
-          <IconButton
-            className={classes.icons}
-            component='span'
-            aria-label='Corpus'>
-            <ViewHeadlineOutlined />
-          </IconButton>
+          <KorpButton
+            lemma={lemma}
+            language={language}
+            classes={classes}
+          />
         </span>
         <ParadigmDialog
           lemma={lemma}
