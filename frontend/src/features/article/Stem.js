@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     flexGrow: 1
   },
   lemma: {
-    fontWeight: 'bold'
+    fontWeight: 'normal'
   },
   rightGroup: {
     float: 'right',
