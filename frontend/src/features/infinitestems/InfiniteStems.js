@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { FixedSizeList as List } from 'react-window';
 import { Trans } from '@lingui/macro';
@@ -17,6 +17,9 @@ const useStyles = makeStyles(theme => ({
   },
   status: {
     textAlign: 'center'
+  },
+  clicked: {
+    fontWeight: 'bold'
   }
 }));
 
@@ -25,6 +28,7 @@ const InfiniteStems = (props) => {
   const {stems, loading, loadMore, hasNextPage, totalCount} = useStems(
     searchExpression, wantedDicts, wantedLangs);
   const classes = useStyles();
+  const [clickedItem, setClickedItem] = useState(-1);
 
   const stemsCount = hasNextPage ? stems.length + 1 : stems.length;
   const loadMoreStems = loading ? () => {} : loadMore;
@@ -33,7 +37,6 @@ const InfiniteStems = (props) => {
   if (loading && stems.length === 0) return <CircularProgress size={16} />;
 
   return (
-
     <div className={classes.infiniteList}>
       <Typography className={classes.status}>
         {totalCount ?
@@ -60,27 +63,30 @@ const InfiniteStems = (props) => {
                 ref={ref}
                 width={width}>
                 {({index, style}) => {
-                  let content;
                   if (!isStemLoaded(index)) {
                     return (
                       <ListItem button key={index} style={style}>
                         <CircularProgress size={16} />
                       </ListItem>
                     );
-                  } else {
-                    const {stem, srclangs} = stems[index];
-                    content = `${stem}`;
-                    return (
-                      <ListItem
-                        button
-                        value={stem}
-                        key={index}
-                        style={style}
-                        onClick={() => lemmaHandler(stem)}>
-                        <ListItemText primary={content} />
-                      </ListItem>
-                    );
                   }
+
+                  const {stem} = stems[index];
+                  const stemNode = index === clickedItem ? <Typography component='span' className={classes.clicked}>{stem}</Typography> : <Typography component='span'>{stem}</Typography>;
+                  return (
+                    <ListItem
+                      button
+                      value={stem}
+                      key={index}
+                      style={style}
+                      onClick={() => {
+                        setClickedItem(index);
+                        return lemmaHandler(stem);
+                      }}
+                    >
+                      <ListItemText primary={stemNode} />
+                    </ListItem>
+                  );
                 }}
               </List>
             )}
