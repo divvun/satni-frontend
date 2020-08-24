@@ -72,7 +72,7 @@ const SatniDrawer = (props) => {
           }}
         >
           <ListItemIcon><HomeIcon /></ListItemIcon>
-          <ListItemText primary=<Link to='/'><Trans>Home</Trans></Link> />
+          <ListItemText primary=<Link to='/'><Trans>Start</Trans></Link> />
         </ListItem>
         <ListItem
           key='LangChooser'
