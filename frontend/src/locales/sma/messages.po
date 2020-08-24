@@ -33,10 +33,6 @@ msgstr ""
 msgid "<0>Not found</0>"
 msgstr ""
 
-#: src/features/article/Source.js:121
-#~ msgid "<0>Pekka Sammallahtis North Sami – Finnish dictionary</0>"
-#~ msgstr ""
-
 #: src/translateble_variables.js:8
 msgid "A"
 msgstr ""
@@ -45,33 +41,12 @@ msgstr ""
 msgid "Adv"
 msgstr ""
 
-#: src/containers/StatusBar.js:33
-msgid "All {0} languages."
-msgstr ""
-
-#: src/containers/StatusBar.js:24
-msgid "All {0} sources"
-msgstr ""
-
-#: src/features/korp/Korp.js:24
-msgid "An error occured: {0}"
-msgstr ""
-
 #: src/containers/DictionaryInfo.js:40
 #: src/containers/DictionaryInfo.js:46
 msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
 msgstr ""
 
-#: src/features/article/TermWikiArticle.js:14
-#~ msgid "Category:"
-#~ msgstr ""
-
-#: src/features/korp/Korp.js:30
-msgid "Checking if {lemma} exists in Korp."
-msgstr ""
-
 #: src/features/wantedlangs/DictChooserDialog.js:47
-#: src/features/wantedlangs/DictChooserDialog.orig.js:50
 msgid "Choose dictionaries"
 msgstr ""
 
@@ -79,7 +54,7 @@ msgstr ""
 msgid "Choose languages"
 msgstr ""
 
-#: src/containers/Welcome.js:113
+#: src/containers/Welcome.js:123
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr ""
 
@@ -87,21 +62,17 @@ msgstr ""
 msgid "Definitions:"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:78
+#: src/containers/SatniDrawer.js:91
 msgid "Dictionaries"
 msgstr ""
 
-#: src/containers/Welcome.js:105
+#: src/containers/Welcome.js:115
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr ""
 
-#: src/containers/Welcome.js:46
+#: src/containers/Welcome.js:55
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
 msgstr ""
-
-#: src/containers/Welcome.js:50
-#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, Pekka Sammallahti's North Sami – Finnish dictionary and <1>Giellatekno's</1> sami dictionaries, all set up by <2>Divvun</2>."
-#~ msgstr ""
 
 #: src/containers/DictionaryInfo.js:27
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
@@ -111,11 +82,11 @@ msgstr ""
 msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
 msgstr ""
 
-#: src/containers/Welcome.js:121
+#: src/containers/Welcome.js:131
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr ""
 
-#: src/containers/SatniDrawer.js:70
+#: src/containers/SatniDrawer.js:83
 msgid "Languages"
 msgstr ""
 
@@ -123,7 +94,7 @@ msgstr ""
 msgid "N"
 msgstr ""
 
-#: src/features/infinitestems/InfiniteStems.js:46
+#: src/features/infinitestems/InfiniteStems.js:50
 msgid "No results for <0>{searchExpression}</0>"
 msgstr ""
 
@@ -136,7 +107,7 @@ msgid "Note:"
 msgstr ""
 
 #: src/features/paradigm/ParadigmDialog.js:47
-msgid "Paradigm for {lemma} {pos} {language}"
+msgid "Paradigm"
 msgstr ""
 
 #: src/translateble_variables.js:8
@@ -147,7 +118,7 @@ msgstr ""
 msgid "Results only from"
 msgstr ""
 
-#: src/containers/Welcome.js:63
+#: src/containers/Welcome.js:73
 msgid "Search results will appear here."
 msgstr ""
 
@@ -156,13 +127,9 @@ msgstr ""
 msgid "Source:"
 msgstr ""
 
-#: src/features/article/Source.js:117
-#~ msgid "Source: {0}"
-#~ msgstr ""
-
-#: src/features/article/TermWikiArticle.js:26
-#~ msgid "Source:<0>TermWiki</0>"
-#~ msgstr ""
+#: src/containers/SatniDrawer.js:75
+msgid "Start"
+msgstr ""
 
 #: src/features/article/LemmaGroup.js:14
 msgid "Status:"
@@ -177,20 +144,12 @@ msgstr ""
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
 msgstr ""
 
-#: src/containers/Welcome.js:89
-#~ msgid "The input field accepts sami, nordic, english and latin search words."
-#~ msgstr ""
-
-#: src/containers/Welcome.js:71
+#: src/containers/Welcome.js:81
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 msgstr ""
 
 #: src/containers/DictionaryInfo.js:34
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
-msgstr ""
-
-#: src/features/korp/Korp.js:53
-msgid "There is no corpus for {language_genitive}"
 msgstr ""
 
 #: src/containers/DictionaryInfo.js:39
@@ -219,11 +178,11 @@ msgstr ""
 msgid "V"
 msgstr ""
 
-#: src/containers/Welcome.js:38
+#: src/containers/Welcome.js:44
 msgid "Welcome!"
 msgstr ""
 
-#: src/containers/Welcome.js:88
+#: src/containers/Welcome.js:98
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr ""
 
@@ -231,7 +190,7 @@ msgstr ""
 msgid "Write at least one letter here"
 msgstr ""
 
-#: src/containers/Welcome.js:80
+#: src/containers/Welcome.js:90
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr ""
 
@@ -411,22 +370,14 @@ msgstr ""
 msgid "termwiki"
 msgstr ""
 
-#: src/features/infinitestems/InfiniteStems.js:40
-#~ msgid "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
-#~ msgstr ""
-
-#: src/containers/StatusBar.js:36
+#: src/containers/StatusBar.js:28
 msgid "{0}/{1} languages."
 msgstr ""
 
-#: src/containers/StatusBar.js:27
+#: src/containers/StatusBar.js:23
 msgid "{0}/{1} sources."
 msgstr ""
 
-#: src/features/infinitestems/InfiniteStems.js:43
+#: src/features/infinitestems/InfiniteStems.js:47
 msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr ""
-
-#: src/features/korp/Korp.js:40
-msgid "{lemma} was not found in {language_genitive} Korp"
 msgstr ""

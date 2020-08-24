@@ -39,39 +39,22 @@ msgstr "<0>Ij gávnnu</0>"
 
 #: src/translateble_variables.js:8
 msgid "A"
-msgstr "adjektijvva"
+msgstr "adj."
 
 #: src/translateble_variables.js:8
 msgid "Adv"
-msgstr "adværbba"
-
-#: src/containers/StatusBar.js:33
-msgid "All {0} languages."
-msgstr ""
-
-#: src/containers/StatusBar.js:24
-msgid "All {0} sources"
-msgstr ""
+msgstr "adv."
 
 #: src/features/korp/Korp.js:24
-msgid "An error occured: {0}"
-msgstr "Juoga manáj boasstot: {0}"
+#~ msgid "An error occured: {0}"
+#~ msgstr "Juoga manáj boasstot: {0}"
 
 #: src/containers/DictionaryInfo.js:40
 #: src/containers/DictionaryInfo.js:46
 msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
 msgstr ""
 
-#: src/features/article/TermWikiArticle.js:14
-#~ msgid "Category:"
-#~ msgstr "Kategorijja"
-
-#: src/features/korp/Korp.js:30
-msgid "Checking if {lemma} exists in Korp."
-msgstr "Guoradallamin jus {lemma} gávnnu Korpan"
-
 #: src/features/wantedlangs/DictChooserDialog.js:47
-#: src/features/wantedlangs/DictChooserDialog.orig.js:50
 msgid "Choose dictionaries"
 msgstr "Vállji báhkogirjijt"
 
@@ -79,7 +62,7 @@ msgstr "Vállji báhkogirjijt"
 msgid "Choose languages"
 msgstr "Vállji gielajt"
 
-#: src/containers/Welcome.js:113
+#: src/containers/Welcome.js:123
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr "Gå diebttjista <0/> de vuojná gåktu báhko såjåduvvá. Gå diebttjista <1/> de vuojná gåk báhko l anon tevstajn."
 
@@ -87,21 +70,17 @@ msgstr "Gå diebttjista <0/> de vuojná gåktu báhko såjåduvvá. Gå diebttji
 msgid "Definitions:"
 msgstr "Definisjåvnå:"
 
-#: src/containers/SatniDrawer.js:78
+#: src/containers/SatniDrawer.js:91
 msgid "Dictionaries"
 msgstr "Báhkogirje"
 
-#: src/containers/Welcome.js:105
+#: src/containers/Welcome.js:115
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr "Báhkogirjjeartihkkala ihti dási gå diebttjista bágov åhtsåmbåhtusijn gårobielen"
 
-#: src/containers/Welcome.js:46
+#: src/containers/Welcome.js:55
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
 msgstr ""
-
-#: src/containers/Welcome.js:50
-#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, Pekka Sammallahti's North Sami – Finnish dictionary and <1>Giellatekno's</1> sami dictionaries, all set up by <2>Divvun</2>."
-#~ msgstr ""
 
 #: src/containers/DictionaryInfo.js:27
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
@@ -111,19 +90,19 @@ msgstr ""
 msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
 msgstr ""
 
-#: src/containers/Welcome.js:121
+#: src/containers/Welcome.js:131
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr "Artihkkalin máhtá tjiehkat gielajt jali báhkogirjijt majt i sidá vuojnnet. Jus vas sidá dajt vuojnnet de diebttjista <0/> jali <1/> ."
 
-#: src/containers/SatniDrawer.js:70
+#: src/containers/SatniDrawer.js:83
 msgid "Languages"
 msgstr "Giela"
 
 #: src/translateble_variables.js:8
 msgid "N"
-msgstr "substantijva"
+msgstr "subst."
 
-#: src/features/infinitestems/InfiniteStems.js:46
+#: src/features/infinitestems/InfiniteStems.js:50
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "<0>{searchExpression}</0> ij gávnnu báhkogirjijn"
 
@@ -136,18 +115,18 @@ msgid "Note:"
 msgstr "Notáhta:"
 
 #: src/features/paradigm/ParadigmDialog.js:47
-msgid "Paradigm for {lemma} {pos} {language}"
+msgid "Paradigm"
 msgstr ""
 
 #: src/translateble_variables.js:8
 msgid "Pron"
-msgstr "pronåvmmå"
+msgstr "pron."
 
 #: src/containers/StatusBar.js:19
 msgid "Results only from"
 msgstr ""
 
-#: src/containers/Welcome.js:63
+#: src/containers/Welcome.js:73
 msgid "Search results will appear here."
 msgstr "Åhtsåmbåhtusa ihti dási"
 
@@ -156,13 +135,9 @@ msgstr "Åhtsåmbåhtusa ihti dási"
 msgid "Source:"
 msgstr "Gálldo"
 
-#: src/features/article/Source.js:117
-#~ msgid "Source: {0}"
-#~ msgstr "Gálldo: {0}"
-
-#: src/features/article/TermWikiArticle.js:26
-#~ msgid "Source:<0>TermWiki</0>"
-#~ msgstr "Gálldo:<0>TermWiki</0>"
+#: src/containers/SatniDrawer.js:75
+msgid "Start"
+msgstr ""
 
 #: src/features/article/LemmaGroup.js:14
 msgid "Status:"
@@ -177,21 +152,13 @@ msgstr ""
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
 msgstr ""
 
-#: src/containers/Welcome.js:89
-#~ msgid "The input field accepts sami, nordic, english and latin search words."
-#~ msgstr "Máhtá åhtsåt sáme, nuorttarijkalasj, ieŋŋils jali latijna bágojt."
-
-#: src/containers/Welcome.js:71
+#: src/containers/Welcome.js:81
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
-msgstr ""
+msgstr "Máhtá åhtsåt sáme, nuorttarijkalasj, ieŋŋils jali latijna bágojt. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 
 #: src/containers/DictionaryInfo.js:34
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr ""
-
-#: src/features/korp/Korp.js:53
-msgid "There is no corpus for {language_genitive}"
-msgstr "{language_genitive} korpus ij gávnnu"
 
 #: src/containers/DictionaryInfo.js:39
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
@@ -219,11 +186,11 @@ msgstr ""
 msgid "V"
 msgstr "værbba"
 
-#: src/containers/Welcome.js:38
+#: src/containers/Welcome.js:44
 msgid "Welcome!"
 msgstr "Buorisboahtem!"
 
-#: src/containers/Welcome.js:88
+#: src/containers/Welcome.js:98
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Gå diebttjista bágov dánna, de báhkogirjjeartihkal ihtá oalgesbælláj"
 
@@ -231,7 +198,7 @@ msgstr "Gå diebttjista bágov dánna, de báhkogirjjeartihkal ihtá oalgesbæll
 msgid "Write at least one letter here"
 msgstr "Tjállela binnemusát avtav bokstávav diek"
 
-#: src/containers/Welcome.js:80
+#: src/containers/Welcome.js:90
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr "Dánna besa sláddit åhtsåmbåhtusij gaskan, ådå båhtusa ihti nav guhkev gå gávnná ådå båhtusijt"
 
@@ -411,22 +378,14 @@ msgstr "svierigadárogiela"
 msgid "termwiki"
 msgstr "Giellagáldu moattegielak terma"
 
-#: src/features/infinitestems/InfiniteStems.js:40
-#~ msgid "{0} of totally {totalCount} starting with <0>{searchExpression}</0>"
-#~ msgstr "{0} {totalCount}:s ma álggi <0>{searchExpression}</0>"
-
-#: src/containers/StatusBar.js:36
+#: src/containers/StatusBar.js:28
 msgid "{0}/{1} languages."
 msgstr ""
 
-#: src/containers/StatusBar.js:27
+#: src/containers/StatusBar.js:23
 msgid "{0}/{1} sources."
 msgstr ""
 
-#: src/features/infinitestems/InfiniteStems.js:43
+#: src/features/infinitestems/InfiniteStems.js:47
 msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr ""
-
-#: src/features/korp/Korp.js:40
-msgid "{lemma} was not found in {language_genitive} Korp"
-msgstr "{lemma} ij gávnnu {language_genitive} Korpan"
+msgstr "{0}/{totalCount}:s ma álggi <0>{searchExpression}</0>"
