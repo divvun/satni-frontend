@@ -7,6 +7,8 @@ import { fetchParadigms } from 'features/paradigm/paradigmsSlice';
 import { stemToKey } from 'utils';
 
 const ParadigmButton = ({lemma, language, pos, onClick, classes}) => {
+  const paradigmLangs = new Set(['sme', 'sma', 'smn', 'sms', 'smj', 'fin']);
+  const paradigmPos = new Set(['N', 'V', 'Adj']);
   const paradigms = useSelector(state => state['paradigms']);
   const dispatch = useDispatch();
 
@@ -14,7 +16,11 @@ const ParadigmButton = ({lemma, language, pos, onClick, classes}) => {
     dispatch(fetchParadigms({lemma, pos, language}));
   }, [dispatch, lemma, pos, language]);
 
-  if (paradigms && paradigms[stemToKey({lemma, pos, language})]) {
+  if (
+    paradigmLangs.has(language) &&
+    paradigmPos.has(pos) &&
+    paradigms &&
+    paradigms[stemToKey({lemma, pos, language})]) {
     return <IconButton
       className={classes.icons}
       component='span'
