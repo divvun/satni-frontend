@@ -20,7 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 env = environ.Env(DEBUG=(bool, False))
 # reading .env file
-environ.Env.read_env()
+# Now ENV_PATH=other-env ./manage.py runserver uses other-env while
+# ./manage.py runserver uses .env.
+environ.Env.read_env(env.str('ENV_PATH', '.env'))
 # False if not in os.environ
 DEBUG = env('DEBUG')
 
