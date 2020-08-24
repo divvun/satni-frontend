@@ -46,7 +46,7 @@ msgstr "adv."
 #: src/containers/DictionaryInfo.js:40
 #: src/containers/DictionaryInfo.js:46
 msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
-msgstr "Sullii bealli sátnebárain leat vižžojuvvon dáru-sámi báldalas teavsttain, ja dát bargu Gielda- ja guovlodepartemeanta ruhtadii."
+msgstr "Sullii bealli sátnebárain leat vižžojuvvon dáru-sámi bálddalas teavsttain, ja dán barggu lea Gielda- ja guovlodepartemeanta ruhtadan."
 
 #: src/features/wantedlangs/DictChooserDialog.js:47
 msgid "Choose dictionaries"
@@ -70,11 +70,11 @@ msgstr "Sátnegirjjit"
 
 #: src/containers/Welcome.js:115
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
-msgstr "Sátnegirjeartihkkalat ihtet dása go coahkkalat sáni ohcanbohtosiin dás gurutbealde."
+msgstr "Sátnegirjeartihkkalat ihtet dása go coahkkalat sáni ohcanbohtosiin dás gurut bealde."
 
 #: src/containers/Welcome.js:55
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
-msgstr "Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi – suoma sátnegirjjis</1> ja <2>Giellatekno</2> <3>sámi sátnegirjjiin</3>. Visot dát <4>Divvun</4> lea heivehan."
+msgstr "Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi – suoma sátnegirjjis</1> ja <2>Giellatekno</2> <3>sámi sátnegirjjiin</3>. Visot dán lea <4>Divvun</4> heivehan."
 
 #: src/containers/DictionaryInfo.js:27
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
@@ -82,7 +82,7 @@ msgstr "Emeritusprofessor Pekka Sammallahti lea čállán dán sátnegirjji iež
 
 #: src/containers/DictionaryInfo.js:33
 msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
-msgstr "Giellagáldu váldobargu lea ođđa terminologiija ja čállingiela normeren. Normerejuvvon tearpmat sin <a href=\"satni.uit.no/termwiki\">tearbmavuođus<a> vižžo beaivválaččat dán neahttabáikái, vai lea álkit ozahahtti sáme servodahkii."
+msgstr "Giellagáldu váldobargu lea ođđa terminologiija ja čállingiela normeren. Normerejuvvon tearpmat vižžojit beaivválaččat dán neahttabáikái sin <a href=\"satni.uit.no/termwiki\">tearbmavuođus<a>, vai lea álkit ozahahtti sámi servodahkii."
 
 #: src/containers/Welcome.js:131
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
@@ -148,7 +148,7 @@ msgstr "Sátnegirjjis lea eanet go 50 000 ohcansáni, ja Sammallahti jeavddalač
 
 #: src/containers/Welcome.js:81
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
-msgstr "Oza sámi, davviriikkalaš, eŋgelas dahje latiinna sániid ohcangiettis. Jus eai leat sámi bustávat du mašiinnas, coahkkal <0/> de ihtet boalut main leat sámi bustávat."
+msgstr "Oza sámi, davviriikkalaš, eŋgelas dahje latiinna sániid ohcangiettis. Jus du mašiinnas eai leat sámi bustávat, coahkkal <0/> vai boalut main leat sámi bustávat ihtet."
 
 #: src/containers/DictionaryInfo.js:34
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
@@ -170,11 +170,11 @@ msgstr "Dán sátnegirjji vuođđu lea Valtonena ja Olthuisa  Inarinsaame-suomi-
 
 #: src/containers/DictionaryInfo.js:67
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been added."
-msgstr "Dán sátnegirjji vuođđu lea sátnelisttut «Forskingscentralen för de inhemska språken i Helsingfors»-ásahusas ja Giellatekno barggus davvisámi Oahpain. Dasa lassin dábálaš suoma sánit leat lasihuvvon."
+msgstr "Dán sátnegirjji vuođđun leat sátnelisttut «Forskingscentralen för de inhemska språken i Helsingfors»-ásahusas ja Giellatekno bargu davvisámi Oahpain. Dasa lassin dasa leat lasihuvvon dábálaš suoma sánit."
 
 #: src/containers/DictionaryInfo.js:61
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
-msgstr "Dán sátnegirjji vuođđu lea sátnelisttut «Forskingscentralen för de inhemska språken i Helsingfors»-ásahusas ja Giellatekno barggus davvisámi Oahpain. Dasa lassin dábálaš davvisámi sánit leat lasihuvvon."
+msgstr "Dán sátnegirjji vuođđun leat sátnelisttut «Forskingscentralen för de inhemska språken i Helsingfors»-ásahusas ja Giellatekno bargu davvisámi Oahpain. Dasa lassin dasa leat lasihuvvon dábálaš davvisámi sánit."
 
 #: src/translateble_variables.js:8
 msgid "V"
@@ -182,15 +182,15 @@ msgstr "vearba"
 
 #: src/containers/Welcome.js:44
 msgid "Welcome!"
-msgstr "Buresboahtin!"
+msgstr "Bures boahtin!"
 
 #: src/containers/Welcome.js:98
 msgid "When you click a word here, dictionary articles appear to the right."
-msgstr "Go coahkkalat sáni dás, sátnegirjeartihkkalat ihtet olgešbeallái."
+msgstr "Go coahkkalat sáni dás, de sátnegirjeartihkkalat ihtet olgeš beallái."
 
 #: src/features/search/FilterBar.js:48
 msgid "Write at least one letter here"
-msgstr "Čális unnimus ovtta bustáva deike"
+msgstr "Čális unnimustá ovtta bustáva dása"
 
 #: src/containers/Welcome.js:90
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
@@ -382,4 +382,4 @@ msgstr "{0}/{1} gáldus."
 
 #: src/features/infinitestems/InfiniteStems.js:47
 msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr "{0}/{totalCount}:s main álgo lea <0>{searchExpression}</0>"
+msgstr "{0}/{totalCount}:s main álgu lea <0>{searchExpression}</0>"
