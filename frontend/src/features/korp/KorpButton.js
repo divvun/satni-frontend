@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import IconButton from '@material-ui/core/IconButton';
-import Link from '@material-ui/core/Link';
 import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
 
 import { isLemmaInKorp } from 'features/korp/korpSlice';
@@ -25,14 +24,15 @@ const KorpButton = ({language, lemma, classes}) => {
       component='span'
       aria-label='Corpus'
       color='primary'
+      onClick={() => {
+        const a = document.createElement('a');
+        a.href = korpAddress;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.click();
+      }}
     >
-      <Link
-        href={korpAddress}
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <ViewHeadlineOutlined />
-      </Link>
+      <ViewHeadlineOutlined />
     </IconButton>;
   }
 
