@@ -44,7 +44,7 @@ const ParadigmDialog = (props) => {
             <CloseIcon />
           </IconButton>
           <Typography variant='h6' className={classes.title}>
-            <Trans>Paradigm for {lemma} {pos} {language}</Trans>
+            <Trans>Paradigm</Trans>
           </Typography>
         </Toolbar>
       </AppBar>
