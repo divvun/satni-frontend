@@ -26,5 +26,5 @@ venv/
 db.sqlite3
 
 # lingui
-frontend/src/locales/_build/
-frontend/src/locales/**/*.js
+src/locales/_build/
+src/locales/**/*.js
