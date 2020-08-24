@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { I18nProvider } from '@lingui/react';
 import { Provider } from 'react-redux';
 import { useCookies } from 'react-cookie';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import PropTypes from 'prop-types';
 
 import { availableDicts, availableLanguages } from 'utils';
