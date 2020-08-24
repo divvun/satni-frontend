@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const dictionaryInfo = {
+export const dictionaryInfo = {
   sammallahtismefin: {
     info: [
       t`Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993.`,

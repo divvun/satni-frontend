@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { useLocation } from 'react-router-dom';
+import { dictionaryInfo } from './DictionaryInfo';
 
 import { Trans } from '@lingui/macro';
 import InfoOutlined from '@material-ui/icons/InfoOutlined';
@@ -35,19 +36,22 @@ export const WelcomeHeader = () => {
   return (
     <div className={classes.welcome}>
       <Typography
-        variant='h4'
+        variant='h5'
         className={classes.heading}
       >
-        <Trans>
-        Welcome!
-        </Trans>
+        {(currentDict && !currentLemma) ?
+          <Trans id={currentDict}/> :
+          <Trans>Welcome!</Trans>
+        }
       </Typography>
       <Typography
         component='p'
         className={classes.list}
       >
         {(currentDict && !currentLemma) ?
-          <><Trans id={currentDict}/> <Trans>is now the active dictionary</Trans></> :
+          <>{dictionaryInfo[currentDict].info.map((infoText, index) => <Typography key={index} className={classes.infoText}>
+            <Trans id={infoText}/>
+          </Typography>)}</> :
           <Trans>
           Do searches in <Link target='_blank' rel='noopener noreferrer' href='https://giella.org'>Giellagáldu's</Link> term collection, <Link href='/sammallahtismefin'>Pekka Sammallahti's North Sami – Finnish dictionary</Link> and <Link target='_blank' rel='noopener noreferrer' href='http://giellatekno.uit.no'>Giellatekno's</Link> <Link target='_blank' rel='noopener noreferrer' href='http://sanit.oahpa.no'>sami dictionaries</Link>, all set up by <Link target='_blank' rel='noopener noreferrer' href='http://divvun.no'>Divvun</Link>.
           </Trans>
