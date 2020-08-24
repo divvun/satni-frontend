@@ -1,5 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Trans } from '@lingui/macro';
+
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
@@ -10,7 +12,6 @@ import Typography from '@material-ui/core/Typography';
 import { mapArticlesByLanguagePair } from 'utils';
 import DictArticle from './DictArticle';
 import TermWikiArticle from './TermWikiArticle';
-import { langName } from 'langThings';
 
 const useStyles = makeStyles(theme => ({
   articles: {
@@ -47,14 +48,14 @@ const Articles = ({articles, lemma}) => {
                       variant='h5'
                       component='h3'
                       align='right'
-                      className={classes.lang1}>{langName[langpair.slice(0, 3)]}</Typography>
+                      className={classes.lang1}><Trans id={langpair.slice(0, 3)} /></Typography>
                   </Grid>
                   <Grid item><Typography variant='h5' component='h3'>⟹</Typography></Grid>
                   <Grid item xs={5}>
                     <Typography variant='h5'
                       component='h3'
                       align='left'
-                      className={classes.lang2}>{langName[langpair.slice(3)]}</Typography>
+                      className={classes.lang2}><Trans id={langpair.slice(3)} /></Typography>
                   </Grid>
                 </Grid>
               </ListItem>
