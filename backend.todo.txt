@@ -117,15 +117,31 @@ Ved artikkelvisning: vis språkpar som har både src og target i blant de ønske
 ** paradigme-ikon
 ** korp-ikon
 }}} Fikset 20200730
-
+{{{
+http://satni.org/sammallahtismefin/addilit
+Hvorfor to addilit?
+}}} Fikset 20200824. re var inne i t, dette ble endret slik at re og t er søsken
+{{{
 * Detaljer som popup-visning, evt. egen side (som nå)
 ** ViewHeadlineOutLaunchOutlined/lined? for Korp-linken
+}}} Fikset pr. 20200824. Paradigme dukker opp som dialog via en paradigme-knapp, korp har og egen knapp. Disse er aktiv når det finnes resultat, ellers er de dekativert.
+{{{
+* Header á la NDS, med visningsspråkvalg
+}}} Fikset pr 20200824. Det er en egen drawer til venstre med slike innstillinger
+{{{
+* Gjøre metaspråk valgbart
+}}} fikset pr 20200824. Eget valg i drawer til venstre
+{{{
+* rapporter om antall søkeord i søkefeltet
+}}} Fikset pr. 20200824
+{{{
+* sette et home-ikon for å gå til startsida
+}}} Fikset pr 20200824
 
 * Feedback-icon! i hver artikkel
 
 Neste trinn:
 * Tolk bøyde ord
-* Header á la NDS, med visningsspråkvalg
 * Ordne layout:
 ** valgt ord i søkeordlisten i fet skrift
 ** større fonter generelt
@@ -135,7 +151,6 @@ Neste trinn:
 ** AppBar nederst
 ** Footer-info som infomeny elns.
 
-* Gjøre metaspråk valgbart
 * når man laster
 ** skygger i artikkelfeltet
 * mulighet til å gå opp og ned med piltaster i søkeordsfelt
@@ -146,9 +161,7 @@ Neste trinn:
 * Vis termwiki-kilde som artikkelnavn
 * Hoppe over kategori?*
 
-* rapporter om antall søkeord i søkefeltet
 * sette inn footer-innholdet på startsida
-* sette et home-ikon for å gå til startsida
 * bruke debounce og throttle (https://medium.com/better-programming/lodash-create-react-apps-built-in-library-for-debounce-and-throttle-with-hooks-3418087f44d8)
 
 * Med bare et funn, vis artikkel. Prøvde med å sette den i InfiniteList, men den ødelegger for linken i artikkelvisninga.
