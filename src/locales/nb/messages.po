@@ -94,7 +94,7 @@ msgid ""
 "dictionaries</3>, all set up by <4>Divvun</4>."
 msgstr ""
 "Gjør søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamisk – "
-"finsk ordbok<1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>, alt satt "
+"finsk ordbok</1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>, alt satt "
 "opp av <4>Divvun</4>."
 
 #: src/containers/DictionaryInfo.js:27
