@@ -26,6 +26,7 @@ const MetaLanguageSelector = ({ language, onChangeLangage }) => {
         <MenuItem value='sma'>Åarjelsaemiengïele</MenuItem>
         <MenuItem value='fi'>Suomen kieli</MenuItem>
         <MenuItem value='nb'>Bokmål</MenuItem>
+        <MenuItem value='nn'>Nynorsk</MenuItem>
       </Select>
     </FormControl>
   );
