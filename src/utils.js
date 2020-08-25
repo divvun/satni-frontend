@@ -146,7 +146,8 @@ export const dictBackend2Frontend = (backendDictArticle) => {
 
 export const availableDicts = [
   'termwiki', 'gtsmenob', 'gtnobsme', 'gtnobsma', 'gtsmanob', 'gtsmefin',
-  'gtfinsme', 'gtsmesmn', 'gtsmnsme', 'sammallahtismefin'
+  'gtfinsme', 'gtfinsmn', 'gtsmnfin', 'gtsmesmn', 'gtsmnsme',
+  'sammallahtismefin'
 ];
 
 export const hasAvailableDict = pathname => availableDicts.some(
