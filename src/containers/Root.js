@@ -4,7 +4,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { I18nProvider } from '@lingui/react';
 import { Provider } from 'react-redux';
 import { useCookies } from 'react-cookie';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { 
+  createMuiTheme, 
+  ThemeProvider as MuiThemeProvider 
+} from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
 import { availableDicts, availableLanguages } from 'utils';
@@ -60,7 +63,7 @@ const Root = ({ store }) => {
       <I18nProvider
         language={language}
         catalogs={catalogs}>
-        <MuiThemeProvider>
+        <MuiThemeProvider theme={createMuiTheme()}>
           <ApolloProvider
             client={client}>
             <Router>
