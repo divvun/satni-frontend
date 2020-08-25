@@ -77,6 +77,16 @@ export const dictionaryInfo = {
     info: [
       t`This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words).`
     ]
+  },
+  gtfinsmn: {
+    info: [
+      t`This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words).`
+    ]
+  },
+  gtsmnfin: {
+    info: [
+      t`This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words).`
+    ]
   }
 };
 
