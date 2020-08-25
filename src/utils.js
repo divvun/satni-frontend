@@ -197,3 +197,16 @@ export const locationParser = pathname => {
 
   return { currentDict: '', currentLemma: '' };
 };
+
+export const filterProp = analyses => {
+  const content = Object.keys(analyses['analyses']).reduce(
+    (accumulator, currentValue) => {
+      accumulator[currentValue.replace('+Prop', '')] = analyses['analyses'][currentValue];
+
+      return accumulator;
+    },
+    {}
+  );
+
+  return {'analyses': content};
+};

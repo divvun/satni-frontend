@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Typography from '@material-ui/core/Typography';
-import { stemToKey } from 'utils';
+import { filterProp, stemToKey } from 'utils';
 import { fetchParadigms } from 'features/paradigm/paradigmsSlice';
 import NounParadigm from './NounParadigm';
 import VerbParadigm from './VerbParadigm';
@@ -41,7 +41,7 @@ const Paradigm = ({lemma, language, pos}) => {
       language={language} />;
   case 'N':
     return <NounParadigm
-      paradigm={paradigms[stemToKey({lemma, pos, language})]}
+      paradigm={filterProp(paradigms[stemToKey({lemma, pos, language})])}
       language={language} />;
   case 'V':
     return <VerbParadigm
