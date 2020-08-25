@@ -33,15 +33,11 @@ msgstr "<0>Viedtjamin …</0>"
 msgid "<0>Not found</0>"
 msgstr "<0>Ij gávnnu</0>"
 
-#: src/features/article/Source.js:121
-#~ msgid "<0>Pekka Sammallahtis North Sami – Finnish dictionary</0>"
-#~ msgstr "<0>Pekka Sammallahti nuorttasáme-suoma báhkogirjje</0>"
-
-#: src/translateble_variables.js:8
+#: src/translateble_variables.js:9
 msgid "A"
 msgstr "adj."
 
-#: src/translateble_variables.js:8
+#: src/translateble_variables.js:9
 msgid "Adv"
 msgstr "adv."
 
@@ -98,7 +94,7 @@ msgstr "Artihkkalin máhtá tjiehkat gielajt jali báhkogirjijt majt i sidá vuo
 msgid "Languages"
 msgstr "Giela"
 
-#: src/translateble_variables.js:8
+#: src/translateble_variables.js:9
 msgid "N"
 msgstr "subst."
 
@@ -118,7 +114,7 @@ msgstr "Notáhta:"
 msgid "Paradigm"
 msgstr ""
 
-#: src/translateble_variables.js:8
+#: src/translateble_variables.js:9
 msgid "Pron"
 msgstr "pron."
 
@@ -171,6 +167,8 @@ msgstr ""
 
 #: src/containers/DictionaryInfo.js:73
 #: src/containers/DictionaryInfo.js:78
+#: src/containers/DictionaryInfo.js:83
+#: src/containers/DictionaryInfo.js:88
 msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
 msgstr ""
 
@@ -182,7 +180,7 @@ msgstr ""
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr ""
 
-#: src/translateble_variables.js:8
+#: src/translateble_variables.js:9
 msgid "V"
 msgstr "værbba"
 
@@ -202,41 +200,45 @@ msgstr "Tjállela binnemusát avtav bokstávav diek"
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr "Dánna besa sláddit åhtsåmbåhtusij gaskan, ådå båhtusa ihti nav guhkev gå gávnná ådå båhtusijt"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "en"
 msgstr "Ieŋŋilsgiella"
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:17
 msgid "en_genitive"
 msgstr "ieŋŋilsgiela"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "eng"
 msgstr "Ieŋŋilsgiella"
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:17
 msgid "eng_genitive"
 msgstr "ieŋŋilsgiela"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "fi"
 msgstr "Suomagiella"
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:17
 msgid "fi_genitive"
 msgstr "suomagiela"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "fin"
 msgstr "Suomagiella"
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:17
 msgid "fin_genitive"
 msgstr "suomagiela"
 
 #: src/translateble_variables.js:5
 msgid "gtfinsme"
 msgstr "Giellatekno suoma – nuorttasáme báhkogirjje"
+
+#: src/translateble_variables.js:5
+msgid "gtfinsmn"
+msgstr "Giellatekno suoma – anársáme báhkogirjje"
 
 #: src/translateble_variables.js:4
 msgid "gtnobsma"
@@ -248,129 +250,133 @@ msgstr "Giellatekno girjjedáro – nuorttasáme báhkogirjje"
 
 #: src/translateble_variables.js:4
 msgid "gtsmanob"
-msgstr "Giellatekno oarjjelsáme - girjjedáro báhkogirjje"
+msgstr "Giellatekno oarjjelsáme – girjjedáro báhkogirjje"
 
 #: src/translateble_variables.js:4
 msgid "gtsmefin"
-msgstr "Giellatekno nuorttasáme - suoma báhkogirjje"
+msgstr "Giellatekno nuorttasáme – suoma báhkogirjje"
 
 #: src/translateble_variables.js:4
 msgid "gtsmenob"
-msgstr "Giellatekno nuorttasáme - girjjedáro báhkogirjje"
+msgstr "Giellatekno nuorttasáme – girjjedáro báhkogirjje"
 
 #: src/translateble_variables.js:5
 msgid "gtsmesmn"
-msgstr "Giellatekno nuorttasáme - anársáme báhkogirjje"
+msgstr "Giellatekno nuorttasáme – anársáme báhkogirjje"
+
+#: src/translateble_variables.js:5
+msgid "gtsmnfin"
+msgstr "Giellatekno anársáme – suoma báhkogirjje"
 
 #: src/translateble_variables.js:5
 msgid "gtsmnsme"
-msgstr "Giellatekno anársáme - nuorttasáme báhkogirjje"
+msgstr "Giellatekno anársáme – nuorttasáme báhkogirjje"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "lat"
 msgstr "Latijnagiella"
 
-#: src/translateble_variables.js:20
+#: src/translateble_variables.js:21
 msgid "lat_genitive"
 msgstr "latijnagiela"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "nb"
 msgstr "Girjjedárogiella"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:18
 msgid "nb_genitive"
 msgstr "girjjedárogiela"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "nn"
 msgstr "Ådådárogiella"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:18
 msgid "nn_genitive"
 msgstr "ådådárogiela"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "nno"
 msgstr "Ådådárogiella"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:18
 msgid "nno_genitive"
 msgstr "ådådárogiela"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "nob"
 msgstr "Girjjedárogiella"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:18
 msgid "nob_genitive"
 msgstr "girjjedárogiela"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:6
 msgid "sammallahtismefin"
-msgstr "Pekka Sammallahti nuorttasáme - suoma báhkogirjje"
+msgstr "Pekka Sammallahti nuorttasáme – suoma báhkogirjje"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "se"
 msgstr "Nuorttasámegiella"
 
-#: src/translateble_variables.js:18
+#: src/translateble_variables.js:19
 msgid "se_genitive"
 msgstr "nuorttasámegiela"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "sma"
 msgstr "Oarjjelsámegiella"
 
-#: src/translateble_variables.js:18
+#: src/translateble_variables.js:19
 msgid "sma_genitive"
 msgstr "oarjjelsámegiela"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "sme"
 msgstr "Nuorttasámegiella"
 
-#: src/translateble_variables.js:18
+#: src/translateble_variables.js:19
 msgid "sme_genitive"
 msgstr "nuorttasámegiela"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "smj"
 msgstr "Julevsámegiella"
 
-#: src/translateble_variables.js:19
+#: src/translateble_variables.js:20
 msgid "smj_genitive"
 msgstr "julevsámegiela"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "smn"
 msgstr "Anársámegiella"
 
-#: src/translateble_variables.js:19
+#: src/translateble_variables.js:20
 msgid "smn_genitive"
 msgstr "anársámegiela"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "sms"
 msgstr "Gålldåsámegiella"
 
-#: src/translateble_variables.js:19
+#: src/translateble_variables.js:20
 msgid "sms_genitive"
 msgstr "gålldåsámegiela"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "sv"
 msgstr "Svierigadárogiella"
 
-#: src/translateble_variables.js:18
+#: src/translateble_variables.js:19
 msgid "sv_genitive"
 msgstr "svierigadárogiela"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "swe"
 msgstr "Svierigadárogiella"
 
-#: src/translateble_variables.js:19
+#: src/translateble_variables.js:20
 msgid "swe_genitive"
 msgstr "svierigadárogiela"
 
