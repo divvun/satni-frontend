@@ -5,7 +5,8 @@ import {
   multiLingualConcept2ConceptPairs,
   multilingualconceptList2ConceptPairs,
   elemmas2ConceptPairs,
-  dictBackend2Frontend
+  dictBackend2Frontend,
+  filterProp
 } from './utils';
 
 const conceptList = [
@@ -2662,5 +2663,27 @@ describe('Massage Giellatekno dictionaries from backend', () => {
     };
 
     expect(dictBackend2Frontend(got)).toEqual(want);
+  });
+});
+
+describe('Massage input from paradigm generator', () => {
+  it('Remove +Prop from keys', () => {
+    const got = {
+      analyses: {
+        'N+Prop+Sg+Nom': ['Kárášjohka'],
+        'N+Prop+Sg+Gen': ['Kárášjoga'],
+        'N+Sg+Gen': ['Kárášjoga']
+      }
+    };
+
+    const want = {
+      analyses: {
+        'N+Sg+Nom': ['Kárášjohka'],
+        'N+Sg+Gen': ['Kárášjoga'],
+        'N+Sg+Gen': ['Kárášjoga']
+      }
+    };
+
+    expect(filterProp(got)).toEqual(want);
   });
 });
