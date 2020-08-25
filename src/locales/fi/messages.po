@@ -33,11 +33,11 @@ msgstr "<0>Ladataan...</0>"
 msgid "<0>Not found</0>"
 msgstr "<0>Ei löytynyt</0>"
 
-#: src/translateble_variables.js:8
+#: src/translateble_variables.js:9
 msgid "A"
 msgstr "adj."
 
-#: src/translateble_variables.js:8
+#: src/translateble_variables.js:9
 msgid "Adv"
 msgstr "adv."
 
@@ -90,7 +90,7 @@ msgstr "Artikkelien sisältä voi poistaa ei-haluttuja kieliä tai sanakirjoja.N
 msgid "Languages"
 msgstr "Kielet"
 
-#: src/translateble_variables.js:8
+#: src/translateble_variables.js:9
 msgid "N"
 msgstr "subst."
 
@@ -110,7 +110,7 @@ msgstr "Huom:"
 msgid "Paradigm"
 msgstr ""
 
-#: src/translateble_variables.js:8
+#: src/translateble_variables.js:9
 msgid "Pron"
 msgstr "pron."
 
@@ -163,6 +163,8 @@ msgstr ""
 
 #: src/containers/DictionaryInfo.js:73
 #: src/containers/DictionaryInfo.js:78
+#: src/containers/DictionaryInfo.js:83
+#: src/containers/DictionaryInfo.js:88
 msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
 msgstr ""
 
@@ -174,7 +176,7 @@ msgstr ""
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr ""
 
-#: src/translateble_variables.js:8
+#: src/translateble_variables.js:9
 msgid "V"
 msgstr "verbi"
 
@@ -194,41 +196,45 @@ msgstr "Kirjoita vähintään yksi kirjain tähän"
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr "Hakusanoja voi selata tässä, uusia tuloksia haetaan kunnes kaikki on löydetty."
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "en"
 msgstr "englanti"
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:17
 msgid "en_genitive"
 msgstr "englannin"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "eng"
 msgstr "englanti"
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:17
 msgid "eng_genitive"
 msgstr "englannin"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "fi"
 msgstr "suomi"
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:17
 msgid "fi_genitive"
 msgstr "suomen"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "fin"
 msgstr "suomi"
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:17
 msgid "fin_genitive"
 msgstr "suomen"
 
 #: src/translateble_variables.js:5
 msgid "gtfinsme"
 msgstr "Giellateknon suomi–pohjoissaame-sanakirja"
+
+#: src/translateble_variables.js:5
+msgid "gtfinsmn"
+msgstr "Giellateknon suomi–inarinsaame-sanakirja"
 
 #: src/translateble_variables.js:4
 msgid "gtnobsma"
@@ -255,114 +261,118 @@ msgid "gtsmesmn"
 msgstr "Giellateknon pohjoissaame–inarinsaame-sanakirja"
 
 #: src/translateble_variables.js:5
+msgid "gtsmnfin"
+msgstr "Giellateknon inarinsaame–suomi-sanakirja"
+
+#: src/translateble_variables.js:5
 msgid "gtsmnsme"
 msgstr "Giellateknon inarinsaame–pohjoissaame-sanakirja"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "lat"
 msgstr "latina"
 
-#: src/translateble_variables.js:20
+#: src/translateble_variables.js:21
 msgid "lat_genitive"
 msgstr "latinan"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "nb"
 msgstr "norjan bokmål"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:18
 msgid "nb_genitive"
 msgstr "norjan bokmålin"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "nn"
 msgstr "norjan nynorsk"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:18
 msgid "nn_genitive"
 msgstr "norjan nynorskin"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "nno"
 msgstr "norjan nynorsk"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:18
 msgid "nno_genitive"
 msgstr "norjan nynorskin"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "nob"
 msgstr "norjan bokmål"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:18
 msgid "nob_genitive"
 msgstr "norjan bokmålin"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:6
 msgid "sammallahtismefin"
 msgstr "Pekka Sammalahden pohjoissaame–suomi-sanakirja"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "se"
 msgstr "pohjoissaame"
 
-#: src/translateble_variables.js:18
+#: src/translateble_variables.js:19
 msgid "se_genitive"
 msgstr "pohjoissaamen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "sma"
 msgstr "eteläsaame"
 
-#: src/translateble_variables.js:18
+#: src/translateble_variables.js:19
 msgid "sma_genitive"
 msgstr "eteläsaamen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "sme"
 msgstr "pohjoissaame"
 
-#: src/translateble_variables.js:18
+#: src/translateble_variables.js:19
 msgid "sme_genitive"
 msgstr "pohjoissaamen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "smj"
 msgstr "luulajansaame"
 
-#: src/translateble_variables.js:19
+#: src/translateble_variables.js:20
 msgid "smj_genitive"
 msgstr "luulajansaamen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "smn"
 msgstr "inarinsaame"
 
-#: src/translateble_variables.js:19
+#: src/translateble_variables.js:20
 msgid "smn_genitive"
 msgstr "inarinsaamen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "sms"
 msgstr "koltansaame"
 
-#: src/translateble_variables.js:19
+#: src/translateble_variables.js:20
 msgid "sms_genitive"
 msgstr "koltansaamen"
 
-#: src/translateble_variables.js:11
+#: src/translateble_variables.js:12
 msgid "sv"
 msgstr "ruotsi"
 
-#: src/translateble_variables.js:18
+#: src/translateble_variables.js:19
 msgid "sv_genitive"
 msgstr "ruotsin"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:13
 msgid "swe"
 msgstr "ruotsi"
 
-#: src/translateble_variables.js:19
+#: src/translateble_variables.js:20
 msgid "swe_genitive"
 msgstr "ruotsin"
 
