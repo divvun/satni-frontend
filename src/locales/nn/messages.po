@@ -9,7 +9,7 @@ msgstr ""
 "Language: nn\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-08-25 13:51+0200\n"
+"PO-Revision-Date: 2020-08-25 16:44+0200\n"
 "Last-Translator: Sjur <sjurnm@mac.com>\n"
 "Language-Team: NorwegianNynorsk <>\n"
 "Plural-Forms: \n"
@@ -35,11 +35,11 @@ msgstr "<0>Lastar...</0>"
 msgid "<0>Not found</0>"
 msgstr "<0>Ikkje funne</0>"
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:8
 msgid "A"
 msgstr "adj."
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:8
 msgid "Adv"
 msgstr "adv."
 
@@ -93,8 +93,8 @@ msgid ""
 "dictionaries</3>, all set up by <4>Divvun</4>."
 msgstr ""
 "Gjer søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamisk – "
-"finsk ordbok<1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>, alt sett "
-"opp av <4>Divvun</4>."
+"finsk ordbok</1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>, alt "
+"sett opp av <4>Divvun</4>."
 
 #: src/containers/DictionaryInfo.js:27
 msgid ""
@@ -128,7 +128,7 @@ msgstr ""
 msgid "Languages"
 msgstr "Språk"
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:8
 msgid "N"
 msgstr "subst."
 
@@ -154,7 +154,7 @@ msgstr "Notat:"
 msgid "Paradigm"
 msgstr "Bøyingsmønster"
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:8
 msgid "Pron"
 msgstr "pron."
 
@@ -229,9 +229,9 @@ msgstr ""
 
 #: src/containers/DictionaryInfo.js:73
 #: src/containers/DictionaryInfo.js:78
-#: src/containers/DictionaryInfo.js:83
-#: src/containers/DictionaryInfo.js:88
-msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
+msgid ""
+"This dictionary builds on the Valtonen and Olthuis "
+"Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
 msgstr ""
 "Denne ordboka byggjer på Valtonen og Olthuis si "
 "Inarinsaame-suomi-inarinsaame-ordbok (30 000 ord)."
@@ -256,7 +256,7 @@ msgstr ""
 "inhemska språken i Finland, og frå Giellatekno sitt arbeid med nordsamisk "
 "Oahpa. I tillegg er det lagt til vanlege nordsamiske ord."
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:8
 msgid "V"
 msgstr "verb"
 
@@ -279,35 +279,35 @@ msgid ""
 msgstr ""
 "Du kan bla blant søkjeorda her, nye vert henta til alle treff har vorte funne."
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:11
 msgid "en"
 msgstr "Engelsk"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:16
 msgid "en_genitive"
 msgstr "engelsk"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:11
 msgid "eng"
 msgstr "Engelsk"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:16
 msgid "eng_genitive"
 msgstr "engelsk"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:11
 msgid "fi"
 msgstr "Finsk"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:16
 msgid "fi_genitive"
 msgstr "finsk"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:11
 msgid "fin"
 msgstr "Finsk"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:16
 msgid "fin_genitive"
 msgstr "finsk"
 
@@ -315,163 +315,155 @@ msgstr "finsk"
 msgid "gtfinsme"
 msgstr "Giellatekno si finsk–nordsamiske ordbok"
 
-#: src/translateble_variables.js:5
-msgid "gtfinsmn"
-msgstr ""
-
 #: src/translateble_variables.js:4
 msgid "gtnobsma"
-msgstr ""
+msgstr "Giellatekno si bokmål–sørsamisk-ordbok"
 
 #: src/translateble_variables.js:4
 msgid "gtnobsme"
-msgstr ""
+msgstr "Giellatekno si bokmål–nordsamisk-ordbok"
 
 #: src/translateble_variables.js:4
 msgid "gtsmanob"
-msgstr ""
+msgstr "Giellatekno si sørsamisk–bokmål–ordbok"
 
 #: src/translateble_variables.js:4
 msgid "gtsmefin"
-msgstr ""
+msgstr "Giellatekno si nordsamisk–finske ordbok"
 
 #: src/translateble_variables.js:4
 msgid "gtsmenob"
-msgstr ""
+msgstr "Giellatekno si nordsamisk–bokmål–ordbok"
 
 #: src/translateble_variables.js:5
 msgid "gtsmesmn"
-msgstr ""
-
-#: src/translateble_variables.js:5
-msgid "gtsmnfin"
-msgstr ""
+msgstr "Giellatekno si nordsamisk–enaresamiske ordbok"
 
 #: src/translateble_variables.js:5
 msgid "gtsmnsme"
-msgstr ""
+msgstr "Giellatekno si enaresamisk–nordsamiske ordbok"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:12
 msgid "lat"
-msgstr ""
-
-#: src/translateble_variables.js:21
-msgid "lat_genitive"
-msgstr ""
-
-#: src/translateble_variables.js:12
-msgid "nb"
-msgstr ""
-
-#: src/translateble_variables.js:18
-msgid "nb_genitive"
-msgstr ""
-
-#: src/translateble_variables.js:12
-msgid "nn"
-msgstr ""
-
-#: src/translateble_variables.js:18
-msgid "nn_genitive"
-msgstr ""
-
-#: src/translateble_variables.js:12
-msgid "nno"
-msgstr ""
-
-#: src/translateble_variables.js:18
-msgid "nno_genitive"
-msgstr ""
-
-#: src/translateble_variables.js:12
-msgid "nob"
-msgstr ""
-
-#: src/translateble_variables.js:18
-msgid "nob_genitive"
-msgstr ""
-
-#: src/translateble_variables.js:6
-msgid "sammallahtismefin"
-msgstr ""
-
-#: src/translateble_variables.js:12
-msgid "se"
-msgstr ""
-
-#: src/translateble_variables.js:19
-msgid "se_genitive"
-msgstr ""
-
-#: src/translateble_variables.js:13
-msgid "sma"
-msgstr ""
-
-#: src/translateble_variables.js:19
-msgid "sma_genitive"
-msgstr ""
-
-#: src/translateble_variables.js:13
-msgid "sme"
-msgstr ""
-
-#: src/translateble_variables.js:19
-msgid "sme_genitive"
-msgstr ""
-
-#: src/translateble_variables.js:13
-msgid "smj"
-msgstr ""
+msgstr "Latin"
 
 #: src/translateble_variables.js:20
-msgid "smj_genitive"
-msgstr ""
+msgid "lat_genitive"
+msgstr "latin"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:11
+msgid "nb"
+msgstr "Bokmål"
+
+#: src/translateble_variables.js:17
+msgid "nb_genitive"
+msgstr "bokmål"
+
+#: src/translateble_variables.js:11
+msgid "nn"
+msgstr "Nynorsk"
+
+#: src/translateble_variables.js:17
+msgid "nn_genitive"
+msgstr "nynorsk"
+
+#: src/translateble_variables.js:11
+msgid "nno"
+msgstr "Nynorsk"
+
+#: src/translateble_variables.js:17
+msgid "nno_genitive"
+msgstr "nynorsk"
+
+#: src/translateble_variables.js:11
+msgid "nob"
+msgstr "Bokmål"
+
+#: src/translateble_variables.js:17
+msgid "nob_genitive"
+msgstr "bokmål"
+
+#: src/translateble_variables.js:5
+msgid "sammallahtismefin"
+msgstr "Pekka Sammalahti si nordsamisk–finske ordbok"
+
+#: src/translateble_variables.js:11
+msgid "se"
+msgstr "Nordsamisk"
+
+#: src/translateble_variables.js:18
+msgid "se_genitive"
+msgstr "nordsamisk"
+
+#: src/translateble_variables.js:12
+msgid "sma"
+msgstr "Sørsamisk"
+
+#: src/translateble_variables.js:18
+msgid "sma_genitive"
+msgstr "sørsamisk "
+
+#: src/translateble_variables.js:12
+msgid "sme"
+msgstr "Nordsamisk"
+
+#: src/translateble_variables.js:18
+msgid "sme_genitive"
+msgstr "nordsamisk"
+
+#: src/translateble_variables.js:12
+msgid "smj"
+msgstr "Lulesamisk"
+
+#: src/translateble_variables.js:19
+msgid "smj_genitive"
+msgstr "lulesamisk"
+
+#: src/translateble_variables.js:12
 msgid "smn"
 msgstr "Enaresamisk"
 
-#: src/translateble_variables.js:20
+#: src/translateble_variables.js:19
 msgid "smn_genitive"
 msgstr "enaresamisk"
 
-#: src/translateble_variables.js:13
-msgid "sms"
-msgstr ""
-
-#: src/translateble_variables.js:20
-msgid "sms_genitive"
-msgstr ""
-
 #: src/translateble_variables.js:12
-msgid "sv"
-msgstr ""
+msgid "sms"
+msgstr "Skoltesamisk"
 
 #: src/translateble_variables.js:19
+msgid "sms_genitive"
+msgstr "skoltesamisk"
+
+#: src/translateble_variables.js:11
+msgid "sv"
+msgstr "Svensk"
+
+#: src/translateble_variables.js:18
 msgid "sv_genitive"
-msgstr ""
+msgstr "svensk"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:12
 msgid "swe"
-msgstr ""
+msgstr "Svensk"
 
-#: src/translateble_variables.js:20
+#: src/translateble_variables.js:19
 msgid "swe_genitive"
-msgstr ""
+msgstr "svensk"
 
 #: src/translateble_variables.js:4
 msgid "termwiki"
-msgstr ""
+msgstr "Giellagáldu sine fleirspråklege termar"
 
 #: src/containers/StatusBar.js:28
 msgid "{0}/{1} languages."
-msgstr ""
+msgstr "{0}/{1} språk."
 
 #: src/containers/StatusBar.js:23
 msgid "{0}/{1} sources."
-msgstr ""
+msgstr "{0}/{1} kjelder."
 
 #: src/features/infinitestems/InfiniteStems.js:47
 msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr ""
+msgstr "{0}/{totalCount} som byrjar med <0>{searchExpression}</0>"
 
