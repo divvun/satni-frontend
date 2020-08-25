@@ -74,7 +74,7 @@ msgstr "I dette panelet dukker det opp ordboksartikler når du trykker på et or
 
 #: src/containers/Welcome.js:55
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
-msgstr "Gjør søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamisk – finsk ordbok<1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>, alt satt opp av <4>Divvun</4>."
+msgstr "Gjør søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamisk – finsk ordbok</1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>, alt satt opp av <4>Divvun</4>."
 
 #: src/containers/DictionaryInfo.js:27
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
