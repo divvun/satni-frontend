@@ -137,6 +137,10 @@ Hvorfor to addilit?
 {{{
 * sette et home-ikon for å gå til startsida
 }}} Fikset pr 20200824
+{{{
+* få vekk aktiv knapp for paradigme for adv
+eks: earenomážit
+}}} Fikset 20200825
 
 * Feedback-icon! i hver artikkel
 
@@ -174,3 +178,23 @@ Neste trinn:
 ** Sjekk om det er noen treff for uaktive språk, vis dem
 ** Ingen treff, punktum, fortell om det
 * Hvis treff som popup, linker fremover og bakover i lista.
+
+
+Forberedelser til i morgen
+* Flytt frontend ned til root igjen DONE
+* Push endringer til github DONE
+* tag og release DONE
+* importer nye ordbøker med ny .env-fil DONE
+* start om tjener, med ny .env-fil DONE
+
+* helst få skuffen til å klappe sammen (uten at den bli dobbel, som nå)
+
+* Demonstrasjon
+
+* Hjemmeside
+* Sammallahti
+* Finne ord, vis korp og paradigme
+
+jeagg -> jeaggesáhpal, jeaggi (subst)
+oast -> oastinhaddi (subst)
+čápp -> čáppat, čáppis
