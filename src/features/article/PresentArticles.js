@@ -37,7 +37,9 @@ const Articles = ({articles, lemma}) => {
           <Paper key={index} className={classes.list}>
             <List>
               <ListItem>
-                <PairHeader langpair={langpair} />
+                <PairHeader
+                  langpair={langpair}
+                />
               </ListItem>
               {articlesMappedByLanguagePair[langpair].map((article, index) => {
                 if (article.dict === 'termwiki') {
