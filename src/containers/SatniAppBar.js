@@ -14,7 +14,7 @@ const SatniAppBar = (props) => {
     appBar: {
       position: 'relative',
       flexDirection: 'column',
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         width: `calc(100% - ${drawerWidth}px)`,
         marginLeft: drawerWidth
       }
