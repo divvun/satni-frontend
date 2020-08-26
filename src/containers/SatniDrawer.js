@@ -26,7 +26,8 @@ const SatniDrawer = (props) => {
     language,
     mobileOpen,
     onLanguageChange,
-    handleSearch
+    handleSearch,
+    container
   } = props;
 
   const useStyles = makeStyles(theme => ({
@@ -124,7 +125,7 @@ const SatniDrawer = (props) => {
       {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
       <Hidden smUp implementation='css'>
         <Drawer
-          // container={container}
+          container={container}
           variant='temporary'
           anchor={'left'}
           open={mobileOpen}
