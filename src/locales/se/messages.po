@@ -23,15 +23,15 @@ msgstr "(<0>Čájet visot</0>)"
 msgid "<0/>"
 msgstr "<0/>"
 
-#: src/features/article/Articles.js:119
+#: src/features/article/Articles.js:133
 msgid "<0>Error {0}</0>"
 msgstr "<0>Meattáhus {0}</0>"
 
-#: src/features/article/Articles.js:118
+#: src/features/article/Articles.js:132
 msgid "<0>Loading...</0>"
 msgstr "<0>Viežžamin …</0>"
 
-#: src/features/article/Articles.js:120
+#: src/features/article/Articles.js:134
 msgid "<0>Not found</0>"
 msgstr "<0>Ii gávdnon</0>"
 
@@ -64,7 +64,7 @@ msgstr "Go coahkkalat <0/>, de oainnát mo sátni sodjá. Go coahkkalat <1/>, de
 msgid "Definitions:"
 msgstr "Definišuvnnat:"
 
-#: src/containers/SatniDrawer.js:91
+#: src/containers/SatniDrawer.js:92
 msgid "Dictionaries"
 msgstr "Sátnegirjjit"
 
@@ -88,13 +88,17 @@ msgstr "Giellagáldu váldobargu lea ođđa terminologiija ja čállingiela norm
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr "Artihkkaliin sáhtát čiehkat gielaid dahje sátnegirjjiid maid it háliit oaidnit. Sáhtát daid čájehit fas jus coahkkalat <0/> dahje <1/>."
 
-#: src/containers/SatniDrawer.js:83
+#: src/containers/SatniDrawer.js:84
 msgid "Languages"
 msgstr "Gielat"
 
 #: src/translateble_variables.js:9
 msgid "N"
 msgstr "subst."
+
+#: src/features/article/Articles.js:141
+msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
+msgstr "Eai lean bohtosat <0>{lemma}</0> várás. Iskka <1/> dahje <2/> gurutfálus jus gielat dahje sátnegirjjit maid háliidat leat aktiiva."
 
 #: src/features/infinitestems/InfiniteStems.js:50
 msgid "No results for <0>{searchExpression}</0>"
@@ -125,11 +129,11 @@ msgid "Search results will appear here."
 msgstr "Ohcanbohtosat ihtet dása."
 
 #: src/features/article/LemmaGroup.js:15
-#: src/features/article/Source.js:26
+#: src/features/article/Source.js:37
 msgid "Source:"
 msgstr "Gáldu:"
 
-#: src/containers/SatniDrawer.js:75
+#: src/containers/SatniDrawer.js:76
 msgid "Start"
 msgstr "Álgu"
 

@@ -21,15 +21,15 @@ msgstr ""
 msgid "<0/>"
 msgstr "<0/>"
 
-#: src/features/article/Articles.js:119
+#: src/features/article/Articles.js:133
 msgid "<0>Error {0}</0>"
 msgstr "<0>Vihke {0}</0>"
 
-#: src/features/article/Articles.js:118
+#: src/features/article/Articles.js:132
 msgid "<0>Loading...</0>"
 msgstr "<0>Viedtjamin …</0>"
 
-#: src/features/article/Articles.js:120
+#: src/features/article/Articles.js:134
 msgid "<0>Not found</0>"
 msgstr "<0>Ij gávnnu</0>"
 
@@ -66,7 +66,7 @@ msgstr "Gå diebttjista <0/> de vuojná gåktu báhko såjåduvvá. Gå diebttji
 msgid "Definitions:"
 msgstr "Definisjåvnå:"
 
-#: src/containers/SatniDrawer.js:91
+#: src/containers/SatniDrawer.js:92
 msgid "Dictionaries"
 msgstr "Báhkogirje"
 
@@ -90,13 +90,17 @@ msgstr ""
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr "Artihkkalin máhtá tjiehkat gielajt jali báhkogirjijt majt i sidá vuojnnet. Jus vas sidá dajt vuojnnet de diebttjista <0/> jali <1/> ."
 
-#: src/containers/SatniDrawer.js:83
+#: src/containers/SatniDrawer.js:84
 msgid "Languages"
 msgstr "Giela"
 
 #: src/translateble_variables.js:9
 msgid "N"
 msgstr "subst."
+
+#: src/features/article/Articles.js:141
+msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
+msgstr ""
 
 #: src/features/infinitestems/InfiniteStems.js:50
 msgid "No results for <0>{searchExpression}</0>"
@@ -127,11 +131,11 @@ msgid "Search results will appear here."
 msgstr "Åhtsåmbåhtusa ihti dási"
 
 #: src/features/article/LemmaGroup.js:15
-#: src/features/article/Source.js:26
+#: src/features/article/Source.js:37
 msgid "Source:"
 msgstr "Gálldo"
 
-#: src/containers/SatniDrawer.js:75
+#: src/containers/SatniDrawer.js:76
 msgid "Start"
 msgstr ""
 

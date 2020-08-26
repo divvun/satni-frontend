@@ -21,15 +21,15 @@ msgstr ""
 msgid "<0/>"
 msgstr ""
 
-#: src/features/article/Articles.js:119
+#: src/features/article/Articles.js:133
 msgid "<0>Error {0}</0>"
 msgstr ""
 
-#: src/features/article/Articles.js:118
+#: src/features/article/Articles.js:132
 msgid "<0>Loading...</0>"
 msgstr ""
 
-#: src/features/article/Articles.js:120
+#: src/features/article/Articles.js:134
 msgid "<0>Not found</0>"
 msgstr ""
 
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Definitions:"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:91
+#: src/containers/SatniDrawer.js:92
 msgid "Dictionaries"
 msgstr ""
 
@@ -86,12 +86,16 @@ msgstr ""
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr ""
 
-#: src/containers/SatniDrawer.js:83
+#: src/containers/SatniDrawer.js:84
 msgid "Languages"
 msgstr ""
 
 #: src/translateble_variables.js:9
 msgid "N"
+msgstr ""
+
+#: src/features/article/Articles.js:141
+msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
 msgstr ""
 
 #: src/features/infinitestems/InfiniteStems.js:50
@@ -123,11 +127,11 @@ msgid "Search results will appear here."
 msgstr ""
 
 #: src/features/article/LemmaGroup.js:15
-#: src/features/article/Source.js:26
+#: src/features/article/Source.js:37
 msgid "Source:"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:75
+#: src/containers/SatniDrawer.js:76
 msgid "Start"
 msgstr ""
 
