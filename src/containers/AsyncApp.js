@@ -33,7 +33,7 @@ const styles = theme => ({
     flexDirection: 'column',
     flex: 1,
     height: '80vh',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth
     },
