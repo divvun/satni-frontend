@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 
 import { mapArticlesByLanguagePair } from 'utils';
 import DictArticle from './DictArticle';
+import PairHeader from './PairHeader';
 import TermWikiArticle from './TermWikiArticle';
 
 const useStyles = makeStyles(theme => ({
@@ -21,12 +22,6 @@ const useStyles = makeStyles(theme => ({
   },
   list: {
     marginBottom: theme.spacing(2),
-    marginLeft: theme.spacing(2)
-  },
-  lang1: {
-    marginRight: theme.spacing(2)
-  },
-  lang2: {
     marginLeft: theme.spacing(2)
   }
 }));
@@ -42,22 +37,7 @@ const Articles = ({articles, lemma}) => {
           <Paper key={index} className={classes.list}>
             <List>
               <ListItem>
-                <Grid container>
-                  <Grid item xs={5}>
-                    <Typography
-                      variant='h5'
-                      component='h3'
-                      align='right'
-                      className={classes.lang1}><Trans id={langpair.slice(0, 3)} /></Typography>
-                  </Grid>
-                  <Grid item><Typography variant='h5' component='h3'>⟹</Typography></Grid>
-                  <Grid item xs={5}>
-                    <Typography variant='h5'
-                      component='h3'
-                      align='left'
-                      className={classes.lang2}><Trans id={langpair.slice(3)} /></Typography>
-                  </Grid>
-                </Grid>
+                <PairHeader langpair={langpair} />
               </ListItem>
               {articlesMappedByLanguagePair[langpair].map((article, index) => {
                 if (article.dict === 'termwiki') {
