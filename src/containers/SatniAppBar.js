@@ -18,6 +18,12 @@ const SatniAppBar = (props) => {
         width: `calc(100% - ${drawerWidth}px)`,
         marginLeft: drawerWidth
       }
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+      [theme.breakpoints.up('sm')]: {
+        display: 'none'
+      }
     }
   }));
   const classes = useStyles();
@@ -30,6 +36,7 @@ const SatniAppBar = (props) => {
           aria-label='open drawer'
           edge='start'
           onClick={handleDrawerToggle}
+          className={classes.menuButton}
         >
           <MenuIcon />
         </IconButton>
