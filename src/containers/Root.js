@@ -20,10 +20,6 @@ const client = new ApolloClient({
   uri: 'https://satni.uit.no/newsatni/'
 });
 
-// Add this after Provider
-// <ErrorBoundary>
-// </ErrorBoundary>
-
 async function loadMessages(language) {
   console.log('root', 22, language);
   return await import(`@lingui/loader!locales/${language}/messages.po`);
@@ -60,20 +56,22 @@ const Root = ({ store }) => {
 
   return (
     <Provider store={store}>
-      <I18nProvider
-        language={language}
-        catalogs={catalogs}>
-        <MuiThemeProvider theme={createMuiTheme()}>
-          <ApolloProvider
-            client={client}>
-            <Router>
-              <AsyncApp
-                language={language}
-                onLanguageChange={handleLanguageChange}/>
-            </Router>
-          </ApolloProvider>
-        </MuiThemeProvider>
-      </I18nProvider>
+      <ErrorBoundary>
+        <I18nProvider
+          language={language}
+          catalogs={catalogs}>
+          <MuiThemeProvider theme={createMuiTheme()}>
+            <ApolloProvider
+              client={client}>
+              <Router>
+                <AsyncApp
+                  language={language}
+                  onLanguageChange={handleLanguageChange}/>
+              </Router>
+            </ApolloProvider>
+          </MuiThemeProvider>
+        </I18nProvider>
+      </ErrorBoundary>
     </Provider>
   );
 };
