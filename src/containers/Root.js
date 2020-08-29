@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { gql, useQuery } from '@apollo/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { I18nProvider } from '@lingui/react';
 import { Provider } from 'react-redux';
 import { useCookies } from 'react-cookie';
-import { 
-  createMuiTheme, 
-  ThemeProvider as MuiThemeProvider 
+import {
+  createMuiTheme,
+  ThemeProvider as MuiThemeProvider
 } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
@@ -14,30 +14,56 @@ import { availableDicts, availableLanguages } from 'utils';
 import AsyncApp from './AsyncApp';
 import ErrorBoundary from 'components/ErrorBoundary';
 
-const cache = new InMemoryCache();
-const client = new ApolloClient({
-  cache,
-  uri: 'https://satni.uit.no/newsatni/'
-});
-
 async function loadMessages(language) {
   console.log('root', 22, language);
   return await import(`@lingui/loader!locales/${language}/messages.po`);
 }
 
-const Root = ({ store }) => {
+export const GET_INTERFACE_LANGUAGE = gql`
+  query GetInterfaceLanguage {
+    interfaceLanguage @client
+  }
+`;
+
+const InterfaceLanguage = () => {
+  const {data, error, loading} = useQuery(GET_INTERFACE_LANGUAGE);
+  if (loading) return <div>Loading language …</div>;
+  if (error) return <div>Error: {JSON.stringify(error)}</div>;
+  return <GivenInterface language={data.interfaceLanguage}/>;
+};
+
+const GivenInterface = ({language}) => {
   const [catalogs, setCatalogs] = useState({});
-  const [language, setLanguage] = useState('se');
+
+  const handleLanguageChange = async(language) => {
+    const newCatalog = await loadMessages(language);
+    setCatalogs(catalogs => ({ ...catalogs, [language]: newCatalog }));
+  };
 
   useEffect(
     () => {
       const fetchCatalog = () => handleLanguageChange(language);
-
       fetchCatalog();
     },
     [language]
   );
 
+  useEffect(
+    () => {
+      localStorage.setItem('interfaceLanguage', language);
+    },
+    [language]
+  );
+
+  return <I18nProvider
+    language={language}
+    catalogs={catalogs}
+  >
+    <AsyncApp/>
+  </I18nProvider>;
+
+};
+const Root = ({ store }) => {
   const [cookies, setCookie] = useCookies(['wantedLangs', 'wantedDicts']);
   if (cookies.wantedDicts === undefined) {
     setCookie('wantedDicts', availableDicts);
@@ -47,30 +73,14 @@ const Root = ({ store }) => {
     setCookie('wantedLangs', availableLanguages);
   }
 
-
-  const handleLanguageChange = async(language) => {
-    const newCatalog = await loadMessages(language);
-    setLanguage(language);
-    setCatalogs(catalogs => ({ ...catalogs, [language]: newCatalog }));
-  };
-
   return (
     <Provider store={store}>
       <ErrorBoundary>
-        <I18nProvider
-          language={language}
-          catalogs={catalogs}>
-          <MuiThemeProvider theme={createMuiTheme()}>
-            <ApolloProvider
-              client={client}>
-              <Router>
-                <AsyncApp
-                  language={language}
-                  onLanguageChange={handleLanguageChange}/>
-              </Router>
-            </ApolloProvider>
-          </MuiThemeProvider>
-        </I18nProvider>
+        <MuiThemeProvider theme={createMuiTheme()}>
+          <Router>
+            <InterfaceLanguage/>
+          </Router>
+        </MuiThemeProvider>
       </ErrorBoundary>
     </Provider>
   );

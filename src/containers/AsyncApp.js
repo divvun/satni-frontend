@@ -47,7 +47,7 @@ const styles = theme => ({
   }
 });
 
-const AsyncApp = ({classes, language, onLanguageChange}) => {
+const AsyncApp = ({classes}) => {
   const [searchExpression, setSearchExpression] = useState('');
   const location = useLocation();
   const {currentLemma, currentDict} = locationParser(location.pathname);
@@ -78,10 +78,8 @@ const AsyncApp = ({classes, language, onLanguageChange}) => {
         drawerWidth={drawerWidth} />
       <SatniDrawer
         drawerWidth={drawerWidth}
-        language={language}
         handleDrawerToggle={handleDrawerToggle}
         mobileOpen={mobileOpen}
-        onLanguageChange={onLanguageChange}
         handleSearch={handleSearch}
       />
       <main className={classes.main}>
