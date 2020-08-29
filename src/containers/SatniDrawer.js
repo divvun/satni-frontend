@@ -23,9 +23,7 @@ const SatniDrawer = (props) => {
   const {
     drawerWidth,
     handleDrawerToggle,
-    language,
     mobileOpen,
-    onLanguageChange,
     handleSearch,
     container
   } = props;
@@ -105,10 +103,7 @@ const SatniDrawer = (props) => {
           button
         >
           <ListItemIcon><TranslateIcon /></ListItemIcon>
-          <MetaLanguageSelector
-            language={language}
-            onChangeLangage={onLanguageChange}
-          />
+          <MetaLanguageSelector />
         </ListItem>
       </List>
       <LangChooserDialog

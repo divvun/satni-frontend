@@ -4,10 +4,12 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 
-const MetaLanguageSelector = ({ language, onChangeLangage }) => {
+import { interfaceLanguageVar } from 'apolloCache';
+
+const MetaLanguageSelector = () => {
   const handleChange = (event) => {
     event.preventDefault();
-    onChangeLangage(event.target.value);
+    interfaceLanguageVar(event.target.value);
   };
 
   return (
@@ -16,7 +18,7 @@ const MetaLanguageSelector = ({ language, onChangeLangage }) => {
       <Select
         labelId='page-language-label'
         id='page-language'
-        value={language}
+        value={interfaceLanguageVar()}
         onChange={handleChange}
         label='Page language'
       >
