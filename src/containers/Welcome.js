@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { useLocation } from 'react-router-dom';
-import { dictionaryInfo } from './DictionaryInfo';
+import { dictionaryInfo } from 'features/wantedlangs/DictChooser';
 
 import { Trans } from '@lingui/macro';
 import InfoOutlined from '@material-ui/icons/InfoOutlined';
