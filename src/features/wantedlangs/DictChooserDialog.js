@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
+import { useCookies } from 'react-cookie';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import CloseIcon from '@material-ui/icons/Close';
@@ -28,11 +29,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const DictChooserDialog = (props) => {
+const DictChooserDialog = ({open, onClose}) => {
   const classes = useStyles();
-  const {open, onClose} = props;
+  const [cookies, setCookie] = useCookies(['wantedDicts']);
+  const [dicts, setDicts] = useState(cookies.wantedDicts);
 
   const handleClose = () => {
+    setCookie('wantedDicts', dicts);
     onClose();
   };
 
@@ -50,7 +53,10 @@ const DictChooserDialog = (props) => {
       </AppBar>
       <Box className={classes.root}>
         <DialogContent>
-          <DictChooser />
+          <DictChooser
+            dicts={dicts}
+            setDicts={setDicts}
+          />
         </DialogContent>
       </Box>
     </Dialog>
