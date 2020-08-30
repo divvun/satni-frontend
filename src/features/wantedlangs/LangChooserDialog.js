@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
-import { useCookies } from 'react-cookie';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import CloseIcon from '@material-ui/icons/Close';
@@ -12,6 +11,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import LangChooser from './LangChooser';
+import { wantedLangsVar } from 'apolloCache';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,13 +30,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const LangChooserDialog = (props) => {
-  const [cookies, setCookie] = useCookies(['wantedLangs']);
   const classes = useStyles();
   const {open, onClose} = props;
-  const [langs, setLangs] = useState(cookies.wantedLangs);
+  const [langs, setLangs] = useState(wantedLangsVar());
 
   const handleClose = () => {
-    setCookie('wantedLangs', langs);
+    wantedLangsVar(langs);
     onClose();
   };
 

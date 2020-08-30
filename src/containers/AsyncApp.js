@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useCookies } from 'react-cookie';
+import React, { useEffect, useState } from 'react';
+import { gql, useQuery } from '@apollo/client';
 import {
   Redirect,
   Route,
@@ -22,6 +22,13 @@ import SatniDrawer from './SatniDrawer';
 import StatusBar from './StatusBar';
 
 const drawerWidth = 240;
+
+export const GET_LANGS_AND_DICTS = gql`
+  query GetLangsAndDicts {
+    wantedDicts @client
+    wantedLangs @client
+  }
+`;
 
 const styles = theme => ({
   '@global': {
@@ -48,6 +55,7 @@ const styles = theme => ({
 });
 
 const AsyncApp = ({classes}) => {
+  const {data, error, loading} = useQuery(GET_LANGS_AND_DICTS);
   const [searchExpression, setSearchExpression] = useState('');
   const location = useLocation();
   const {currentLemma, currentDict} = locationParser(location.pathname);
@@ -61,13 +69,26 @@ const AsyncApp = ({classes}) => {
     setMobileOpen(!mobileOpen);
   };
 
-  const [cookies] = useCookies(['wantedLangs', 'wantedDicts']);
+  useEffect(
+    () => {
+      localStorage.setItem('wantedDicts', JSON.stringify(data.wantedDicts));
+    },
+    [data.wantedDicts]
+  );
+
+  useEffect(
+    () => {
+      localStorage.setItem('wantedLangs', JSON.stringify(data.wantedLangs));
+    },
+    [data.wantedLangs]
+  );
 
   const wantedDicts = currentDict ?
     [currentDict] :
-    cookies.wantedDicts;
+    data.wantedDicts;
 
-  console.log(wantedDicts);
+  if (loading) return <div>Loading dicts and languages</div>;
+  if (error) return <div>Error loading dicts and languages</div>;
 
   return (
     <div className={classes.container}>
@@ -99,7 +120,7 @@ const AsyncApp = ({classes}) => {
                 {(currentLemma || searchExpression) ?
                   <StatusBar
                     wantedDicts={wantedDicts}
-                    wantedLangs={cookies.wantedLangs}
+                    wantedLangs={data.wantedLangs}
                     currentLemma={currentLemma} /> :
                   <WelcomeHeader />
                 }
@@ -109,7 +130,7 @@ const AsyncApp = ({classes}) => {
                   <InfiniteStems
                     searchExpression={searchExpression}
                     wantedDicts={wantedDicts}
-                    wantedLangs={cookies.wantedLangs}
+                    wantedLangs={data.wantedLangs}
                     currentDict={currentDict}
                   /> :
                   <SearchWelcome />
@@ -120,7 +141,7 @@ const AsyncApp = ({classes}) => {
                   <Articles
                     lemma={currentLemma}
                     wantedDicts={wantedDicts}
-                    wantedLangs={cookies.wantedLangs}
+                    wantedLangs={data.wantedLangs}
                   /> :
                   <DictWelcome />
                 }
