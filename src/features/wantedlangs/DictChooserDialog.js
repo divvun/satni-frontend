@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
-import { useCookies } from 'react-cookie';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import CloseIcon from '@material-ui/icons/Close';
@@ -12,6 +11,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import DictChooser from './DictChooser';
+import { wantedDictsVar } from 'apolloCache';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,11 +31,10 @@ const useStyles = makeStyles((theme) => ({
 
 const DictChooserDialog = ({open, onClose}) => {
   const classes = useStyles();
-  const [cookies, setCookie] = useCookies(['wantedDicts']);
-  const [dicts, setDicts] = useState(cookies.wantedDicts);
+  const [dicts, setDicts] = useState(wantedDictsVar());
 
   const handleClose = () => {
-    setCookie('wantedDicts', dicts);
+    wantedDictsVar(dicts);
     onClose();
   };
 

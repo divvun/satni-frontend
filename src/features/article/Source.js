@@ -2,12 +2,13 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
-import { useCookies } from 'react-cookie';
 
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+
+import { wantedDictsVar } from 'apolloCache';
 
 const useStyles = makeStyles(theme => ({
   check: {
@@ -18,15 +19,11 @@ const useStyles = makeStyles(theme => ({
 
 const Source = ({source, lemma}) => {
   const classes = useStyles();
-  const [cookies, setCookie] = useCookies(['wantedDicts']);
+  const wantedDicts = wantedDictsVar();
 
   const handleChange = (event) => {
     event.stopPropagation();
-    const oldDicts = cookies.wantedDicts;
-    const newDicts = oldDicts.includes(event.target.name) ?
-      oldDicts.filter(value => value !== event.target.name) :
-      [...oldDicts, event.target.name];
-    setCookie('wantedDicts', newDicts);
+    wantedDictsVar(wantedDicts.filter(value => value !== event.target.name));
   };
 
   return (

@@ -3,19 +3,16 @@ import { gql, useQuery } from '@apollo/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { I18nProvider } from '@lingui/react';
 import { Provider } from 'react-redux';
-import { useCookies } from 'react-cookie';
 import {
   createMuiTheme,
   ThemeProvider as MuiThemeProvider
 } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
-import { availableDicts, availableLanguages } from 'utils';
 import AsyncApp from './AsyncApp';
 import ErrorBoundary from 'components/ErrorBoundary';
 
 async function loadMessages(language) {
-  console.log('root', 22, language);
   return await import(`@lingui/loader!locales/${language}/messages.po`);
 }
 
@@ -64,15 +61,6 @@ const GivenInterface = ({language}) => {
 
 };
 const Root = ({ store }) => {
-  const [cookies, setCookie] = useCookies(['wantedLangs', 'wantedDicts']);
-  if (cookies.wantedDicts === undefined) {
-    setCookie('wantedDicts', availableDicts);
-  }
-
-  if (cookies.wantedLangs === undefined) {
-    setCookie('wantedLangs', availableLanguages);
-  }
-
   return (
     <Provider store={store}>
       <ErrorBoundary>
