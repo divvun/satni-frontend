@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
+import { useCookies } from 'react-cookie';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import CloseIcon from '@material-ui/icons/Close';
@@ -29,10 +30,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const LangChooserDialog = (props) => {
+  const [cookies, setCookie] = useCookies(['wantedLangs']);
   const classes = useStyles();
   const {open, onClose} = props;
+  const [langs, setLangs] = useState(cookies.wantedLangs);
 
   const handleClose = () => {
+    setCookie('wantedLangs', langs);
     onClose();
   };
 
@@ -50,7 +54,10 @@ const LangChooserDialog = (props) => {
       </AppBar>
       <Box className={classes.root}>
         <DialogContent>
-          <LangChooser />
+          <LangChooser
+            langs={langs}
+            setLangs={setLangs}
+          />
         </DialogContent>
       </Box>
     </Dialog>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { useCookies } from 'react-cookie';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -8,16 +7,14 @@ import Grid from '@material-ui/core/Grid';
 
 import { availableLanguages } from 'utils';
 
-const LangChooser = () => {
-  const [cookies, setCookie] = useCookies(['wantedLangs']);
+const LangChooser = ({langs, setLangs}) => {
   const samiLanguages = new Set(['sma', 'sme', 'smj', 'smn', 'sms']);
 
   const handleChange = (event) => {
-    const oldLangs = cookies.wantedLangs;
-    const newLangs = oldLangs.includes(event.target.name) ?
-      oldLangs.filter(value => value !== event.target.name) :
-      [...oldLangs, event.target.name];
-    setCookie('wantedLangs', newLangs);
+    const newLangs = langs.includes(event.target.name) ?
+      langs.filter(value => value !== event.target.name) :
+      [...langs, event.target.name];
+    setLangs(newLangs);
   };
 
   return (
@@ -33,7 +30,7 @@ const LangChooser = () => {
                 control={
                   <Checkbox
                     color='default'
-                    checked={cookies.wantedLangs.includes(lang)}
+                    checked={langs.includes(lang)}
                     onChange={handleChange}
                     name={lang}
                   />
@@ -54,7 +51,7 @@ const LangChooser = () => {
                 control={
                   <Checkbox
                     color='default'
-                    checked={cookies.wantedLangs.includes(lang)}
+                    checked={langs.includes(lang)}
                     onChange={handleChange}
                     name={lang}
                   />
