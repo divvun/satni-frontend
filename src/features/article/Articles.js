@@ -133,7 +133,17 @@ const Articles = (props) => {
   if (error) return <Trans><p>Error {error.message}</p></Trans>;
   if (!data) return <Trans><p>Not found</p></Trans>;
 
-  if (!data.dictEntryList.length && !data.conceptList.length) {
+  if (
+    (
+      wantedDicts.includes('termwiki') &&
+      !data.dictEntryList.length &&
+      !data.conceptList.length
+    ) ||
+    (
+      !wantedDicts.includes('termwiki') &&
+      !data.dictEntryList.length
+    )
+  ) {
     return <Typography
       component='p'
       className={classes.list}
