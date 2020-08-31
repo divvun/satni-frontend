@@ -154,7 +154,7 @@ msgstr "Báhkogirjen li ienep gå 50.000 åhtsåmbágo, ja Sammallahti juovnnát
 
 #: src/containers/Welcome.js:81
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
-msgstr "Máhtá åhtsåt sáme, nuorttarijkalasj, ieŋŋils jali latijna bágojt. If you do not have Sami letters on your device, press <0/> to write them in the input field."
+msgstr "Máhtá åhtsåt sáme, nuorttarijkalasj, ieŋŋils jali latijna bágojt. Jus dujna ælla sáme bokstáva, diebttjista <0/> váj boalo majn li sáme bokstáva ihtit."
 
 #: src/containers/DictionaryInfo.js:34
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
