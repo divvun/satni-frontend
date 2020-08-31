@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/containers/StatusBar.js:19
 msgid "(<0>Show all</0>)"
-msgstr ""
+msgstr "Vuoseda divna"
 
 #: src/features/article/Source.stories.js:10
 msgid "<0/>"
@@ -48,7 +48,7 @@ msgstr "adv."
 #: src/containers/DictionaryInfo.js:40
 #: src/containers/DictionaryInfo.js:46
 msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
-msgstr ""
+msgstr "Birrusij bielle báhkopárajs li viettjaduvvam dáro-sáme buohtalasj tevstajs, ja dav bargov la Suohkan- ja háldadimdepatemænnta ruhtadam"
 
 #: src/features/wantedlangs/DictChooserDialog.js:47
 msgid "Choose dictionaries"
@@ -76,15 +76,15 @@ msgstr "Báhkogirjjeartihkkala ihti dási gå diebttjista bágov åhtsåmbåhtus
 
 #: src/containers/Welcome.js:55
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
-msgstr ""
+msgstr "Åtså <0>Giellagáldo</0> tærmmatjoahkkáldagán, <1>Pekka Sammallahti davvesáme – suoma báhkogirjen</1> ja <2>Giellatekno</2> <3>sáme báhkogirjijn</3>. <4>Divvun</4> la dájt hiebadam."
 
 #: src/containers/DictionaryInfo.js:27
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
-msgstr ""
+msgstr "Emeritusprofæssor Pekka Sammallahti la tjállám dáv báhkogirjev ietjas 1989 ja 1993 prienntiduvvam báhkogirjij vuodon."
 
 #: src/containers/DictionaryInfo.js:33
 msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
-msgstr ""
+msgstr "Giellagáldo oajvvebarggo la ådå teminologijja ja tjállemgielav normierit. Normieriduvvam terma viettjaduvvi bæjválattjat Giellagáldo <a href=\"satni.uit.no/termwiki\">tærmmavuorkás<a>, váj galggá álkke sáme sebrudahkaj dajt gávnnat."
 
 #: src/containers/Welcome.js:131
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
@@ -100,7 +100,7 @@ msgstr "subst."
 
 #: src/features/article/Articles.js:141
 msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
-msgstr ""
+msgstr "Ælla båhtusa <0>{lemma}</0> åhtsåmbágos. Guoradalá <1/> jali <2/> jus giela jali báhkogirje gånnå sidá åhtåt li válljiduvvam."
 
 #: src/features/infinitestems/InfiniteStems.js:50
 msgid "No results for <0>{searchExpression}</0>"
@@ -108,7 +108,7 @@ msgstr "<0>{searchExpression}</0> ij gávnnu báhkogirjijn"
 
 #: src/containers/DictionaryInfo.js:45
 msgid "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but frequent Norwegian words have been added. It contains about 26,000 Norwegian entries."
-msgstr ""
+msgstr "Dáro → nuorttasáme báhkogirjje l vuododuvvam Nuorttasáme → dáro báhkogirjjáj, duodden lip lasedam dábálasj dárobágojt. Báhkogirjen li tjoahkkáj 26,000 åhtsåbágo"
 
 #: src/features/article/LemmaGroup.js:13
 msgid "Note:"
@@ -116,7 +116,7 @@ msgstr "Notáhta:"
 
 #: src/features/paradigm/ParadigmDialog.js:47
 msgid "Paradigm"
-msgstr ""
+msgstr "Såjådimminstar"
 
 #: src/translateble_variables.js:9
 msgid "Pron"
@@ -124,7 +124,7 @@ msgstr "pron."
 
 #: src/containers/StatusBar.js:19
 msgid "Results only from"
-msgstr ""
+msgstr "Båhtusa dåssju"
 
 #: src/containers/Welcome.js:73
 msgid "Search results will appear here."
@@ -137,7 +137,7 @@ msgstr "Gálldo"
 
 #: src/containers/SatniDrawer.js:76
 msgid "Start"
-msgstr ""
+msgstr "Álggo"
 
 #: src/features/article/LemmaGroup.js:14
 msgid "Status:"
@@ -146,11 +146,11 @@ msgstr "Stáhtus:"
 #: src/containers/DictionaryInfo.js:62
 #: src/containers/DictionaryInfo.js:68
 msgid "The dictionary contains about 11,000 entries."
-msgstr ""
+msgstr "Báhkogirjen li birrusij 11,000 åhtsåmbágo"
 
 #: src/containers/DictionaryInfo.js:28
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
-msgstr ""
+msgstr "Báhkogirjen li ienep gå 50.000 åhtsåmbágo, ja Sammallahti juovnnát laset ådå materiálav"
 
 #: src/containers/Welcome.js:81
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
@@ -158,23 +158,23 @@ msgstr "Máhtá åhtsåt sáme, nuorttarijkalasj, ieŋŋils jali latijna bágojt
 
 #: src/containers/DictionaryInfo.js:34
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
-msgstr ""
+msgstr "Tærmmavuorkán li badjel 50,000 artihkkala, and ådåsmáhteduvvá juovnnát"
 
 #: src/containers/DictionaryInfo.js:39
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
-msgstr ""
+msgstr "Vuodon dán báhkogirjjáj la Nils Jernslettena báhkogirjje Álgosátnegirji (4322 bágoj), valla dálla li tjoahkkáj 30,000 åhtsåmbágo, ja duodden 6000 bájkkenammartihkkala."
 
 #: src/containers/DictionaryInfo.js:51
 #: src/containers/DictionaryInfo.js:56
 msgid "This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern Sámi Oahpa."
-msgstr ""
+msgstr "Vuodon dán báhkogirjjáj la Hemnesa sámesiebre Albert Jåma ja Tove Brustada barggo. Duodden dasi la Giellatekno ja Aajege lasedam bágojt oarjjelsáme Åhpa åvddånahttemis."
 
 #: src/containers/DictionaryInfo.js:73
 #: src/containers/DictionaryInfo.js:78
 #: src/containers/DictionaryInfo.js:83
 #: src/containers/DictionaryInfo.js:88
 msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
-msgstr ""
+msgstr "Vuodon dán báhkogirjjáj la Valtonena ja Olthuisa Anársáme-suoma-anársáme báhkogirjje (30,000 bágoj)"
 
 #: src/containers/DictionaryInfo.js:67
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been added."
@@ -182,7 +182,7 @@ msgstr ""
 
 #: src/containers/DictionaryInfo.js:61
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
-msgstr ""
+msgstr "Vuodon dán báhkogirjjáj li báhkolista «Forskingscentralen för de inhemska språken i Helsingfors»-ásadusás ja Giellatekno bargos nuorttasáme Åhpajn. Duodden lip lasedam dábálasj bágojt nuorttasámegielas"
 
 #: src/translateble_variables.js:9
 msgid "V"
@@ -390,11 +390,11 @@ msgstr "Giellagáldu moattegielak terma"
 
 #: src/containers/StatusBar.js:28
 msgid "{0}/{1} languages."
-msgstr ""
+msgstr "{0}/{1} giela."
 
 #: src/containers/StatusBar.js:23
 msgid "{0}/{1} sources."
-msgstr ""
+msgstr "{0}/{1} gáldo"
 
 #: src/features/infinitestems/InfiniteStems.js:47
 msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
