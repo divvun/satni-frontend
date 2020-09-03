@@ -10,6 +10,7 @@ import InfiniteLoader from 'react-window-infinite-loader';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Truncate from 'react-truncate';
 import Typography from '@material-ui/core/Typography';
 
 import { locationParser } from 'utils';
@@ -76,9 +77,27 @@ const InfiniteStems = (props) => {
                   }
 
                   const {stem} = stems[index];
-                  const stemNode = stem === clickedItem ? <Typography component='span' className={classes.clicked}>{stem}</Typography> : <Typography component='span'>{stem}</Typography>;
+                  const truncStem = <Truncate
+                    width={width - 50}
+                  >
+                    {stem}
+                  </Truncate>;
+                  const stemNode = stem === clickedItem ?
+                    <Typography
+                      component='span'
+                      className={classes.clicked}
+                    >
+                      {truncStem}
+                    </Typography> :
+                    <Typography
+                      component='span'
+                    >
+                      {truncStem}
+                    </Typography>;
 
-                  const path = (currentDict && !currentLemma) ? `${currentDict}/${stem}` : stem;
+                  const path = (currentDict && !currentLemma) ?
+                    `${currentDict}/${stem}` :
+                    stem;
                   return (
                     <ListItem
                       key={index}
