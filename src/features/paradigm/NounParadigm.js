@@ -115,7 +115,7 @@ const TableRows = {
     },
     {
       name: 'Abe',
-      values: ['N+Sg+Abe', 'N+Pl+Abe']
+      values: ['N+Abe']
     },
     {
       name: 'Ess',
