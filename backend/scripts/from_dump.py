@@ -155,11 +155,16 @@ def make_lemmas(translations, target):
     ]
 
 
-def make_restriction(restriction_element):
+def make_restriction(translation_group):
+    restriction_element = translation_group.find('./re')
     if restriction_element is not None:
         return Restriction(restriction=restriction_element.text,
                            attributes=str(restriction_element.attrib))
 
+    t_element = translation_group.find('./t[@reg]')
+    if t_element is not None and t_element.get('reg').lower() != 'x':
+        return Restriction(restriction=t_element.get('reg'),
+                           attributes='')
 
 def make_example(example):
     return ExampleGroup(example=example.find('./x').text,
@@ -173,7 +178,7 @@ def make_examples(examples):
 def make_translation_group(translation_group, target):
     return TranslationGroup(
         translationLemmas=make_lemmas(translation_group.xpath('./t'), target),
-        restriction=make_restriction(translation_group.find('./re')),
+        restriction=make_restriction(translation_group),
         exampleGroups=make_examples(translation_group.xpath('./xg')))
 
 
