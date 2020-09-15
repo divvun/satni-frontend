@@ -165,7 +165,7 @@ msgstr "Dát sátnegirji lea ráhkaduvvon Nils Jernslettena Álgosátnegirji vuo
 #: src/containers/DictionaryInfo.js:51
 #: src/containers/DictionaryInfo.js:56
 msgid "This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern Sámi Oahpa."
-msgstr "Dán sátnegirjji vuođđu lea Hemnes sámesearvvi Albert Jåma ja Tove Brustad bargu. Dasa lassin Giellatekno ja Aajege leat lasihan sániid lullisámi Oahpa ovdánettiin."
+msgstr "Dán sátnegirjji vuođđu lea Hemnes sámesearvvi Albert Jåma ja Tove Brustad bargu. Dasa lassin Giellatekno ja Aajege leat lasihan sániid lullisámi Oahpa ovdánahtidettiin."
 
 #: src/containers/DictionaryInfo.js:73
 #: src/containers/DictionaryInfo.js:78
