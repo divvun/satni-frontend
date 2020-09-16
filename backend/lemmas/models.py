@@ -8,6 +8,8 @@ class Lemma(Document):
     lemma = StringField()
     pos = StringField()
     language = StringField()
+    dialect = StringField()
+    country = StringField()  # two chars, iso something
 
     def __str__(self):
         return "%s %s %s" % (self.lemma, self.pos, self.language)

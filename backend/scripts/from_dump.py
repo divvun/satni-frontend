@@ -32,7 +32,9 @@ langs = {
 def make_lemma(lang, expression):
     l = Lemma(lemma=expression['expression'],
               pos=expression['pos'],
-              language=langs[lang])
+              language=langs[lang],
+              dialect=None,
+              country=None)
     l.save()
 
     return l
@@ -134,7 +136,9 @@ def normalise_lemma(lemma: str) -> str:
 def l_or_t2stem(element, src):
     l = Lemma(lemma=normalise_lemma(element.text),
               language=src,
-              pos=element.get('pos'))
+              pos=element.get('pos'),
+              dialect=element.get('dialect'),
+              country=element.get('country'))
     l.save()
 
     return l
