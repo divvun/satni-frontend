@@ -20,4 +20,4 @@ storiesOf('LemmaGroup', module)
   .add('srcLanguage', () => <LemmaGroup
     term={term} />)
   .add('targetLanguage', () => <LemmaGroup
-    term={term} withLink/>);
+    term={term} withLink />);
