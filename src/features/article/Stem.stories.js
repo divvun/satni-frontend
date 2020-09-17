@@ -3,7 +3,15 @@ import { storiesOf } from '@storybook/react';
 
 import Stem from './Stem';
 
-const stem = { lemma: 'bárdni', language: 'sme', pos: 'N' };
+const stem = {
+  id: '68360',
+  lemma: 'bárdni',
+  language: 'sme',
+  pos: 'N',
+  dialect: 'north',
+  country: 'SE'
+};
+
 const restriction = {
   restriction: 'om julenissen',
   attributes: {}
