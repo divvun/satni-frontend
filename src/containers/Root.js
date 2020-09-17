@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { gql, useQuery } from '@apollo/client';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { I18nProvider } from '@lingui/react';
-import { Provider } from 'react-redux';
 import {
   createMuiTheme,
   ThemeProvider as MuiThemeProvider
@@ -10,6 +8,7 @@ import {
 import PropTypes from 'prop-types';
 
 import AsyncApp from './AsyncApp';
+import ProviderWrapper from './ProviderWrapper';
 import ErrorBoundary from 'components/ErrorBoundary';
 
 async function loadMessages(language) {
@@ -60,17 +59,19 @@ const GivenInterface = ({language}) => {
   </I18nProvider>;
 
 };
-const Root = ({ store }) => {
+
+const Root = ({ store, client }) => {
   return (
-    <Provider store={store}>
+    <ProviderWrapper
+      store={store}
+      client={client}
+    >
       <ErrorBoundary>
         <MuiThemeProvider theme={createMuiTheme()}>
-          <Router>
-            <InterfaceLanguage/>
-          </Router>
+          <InterfaceLanguage/>
         </MuiThemeProvider>
       </ErrorBoundary>
-    </Provider>
+    </ProviderWrapper>
   );
 };
 

@@ -13,7 +13,7 @@ export const HAS_STEM = gql`
   }
 `;
 
-const DictTargetStem = ({ stem, restriction, lemmaHandler }) => {
+const DictTargetStem = ({ stem, restriction }) => {
   const {lemma} = stem;
 
   const {data, loading} = useQuery(
@@ -29,7 +29,6 @@ const DictTargetStem = ({ stem, restriction, lemmaHandler }) => {
   return <Stem
     stem={stem}
     restriction={restriction}
-    lemmaHandler={lemmaHandler}
     withLink={(data && data.hasStem.length)} />;
 };
 
