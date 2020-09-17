@@ -2578,7 +2578,9 @@ describe('Massage Giellatekno dictionaries from backend', () => {
             'node': {
               'lemma': 'kanskje',
               'language': 'nob',
-              'pos': 'Adv'
+              'pos': 'Adv',
+              'dialect': 'north',
+              'country': 'SE'
             }
           }
         ]
@@ -2591,14 +2593,18 @@ describe('Massage Giellatekno dictionaries from backend', () => {
                 'node': {
                   'lemma': 'soaitit',
                   'language': 'sme',
-                  'pos': 'V'
+                  'pos': 'V',
+                  'dialect': 'north',
+                  'country': 'SE'
                 }
               },
               {
                 'node': {
                   'lemma': 'várra',
                   'language': 'sme',
-                  'pos': 'Adv'
+                  'pos': 'Adv',
+                  'dialect': 'north',
+                  'country': 'SE'
                 }
               }
             ]
@@ -2626,7 +2632,9 @@ describe('Massage Giellatekno dictionaries from backend', () => {
           {
             'lemma': 'kanskje',
             'language': 'nob',
-            'pos': 'Adv'
+            'pos': 'Adv',
+            'dialect': 'north',
+            'country': 'SE'
           }
         ]
       },
@@ -2649,12 +2657,16 @@ describe('Massage Giellatekno dictionaries from backend', () => {
               {
                 'language': 'sme',
                 'lemma': 'soaitit',
-                'pos': 'V'
+                'pos': 'V',
+                'dialect': 'north',
+                'country': 'SE'
               },
               {
                 'language': 'sme',
                 'lemma': 'várra',
-                'pos': 'Adv'
+                'pos': 'Adv',
+                'dialect': 'north',
+                'country': 'SE'
               }
             ]
           }
