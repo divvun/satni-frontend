@@ -41,6 +41,8 @@ const Articles = (props) => {
                 lemma
                 language
                 pos
+                dialect
+                country
               }
             }
           }
@@ -51,6 +53,7 @@ const Articles = (props) => {
                   lemma
                   language
                   pos
+                  dialect
                 }
               }
             }
@@ -77,6 +80,8 @@ const Articles = (props) => {
               lemma
               language
               pos
+              dialect
+              country
             }
           }
         }
@@ -94,6 +99,8 @@ const Articles = (props) => {
                 lemma
                 language
                 pos
+                dialect
+                country
               }
             }
           }
@@ -104,6 +111,8 @@ const Articles = (props) => {
                   lemma
                   language
                   pos
+                  dialect
+                  country
                 }
               }
             }
