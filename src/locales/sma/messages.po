@@ -96,7 +96,7 @@ msgstr "subst."
 
 #: src/features/article/Articles.js:141
 msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
-msgstr ""
+msgstr "Ij naan båatoeh <0>{lemma}</0> ohtsemebaakose. Goerehth <1/> jallh <2/> jis gïelh jallh baakoegærjah mam sïjhth, veeljesovveme." 
 
 #: src/features/infinitestems/InfiniteStems.js:50
 msgid "No results for <0>{searchExpression}</0>"
@@ -112,7 +112,7 @@ msgstr "Notaate:"
 
 #: src/features/paradigm/ParadigmDialog.js:47
 msgid "Paradigm"
-msgstr ""
+msgstr "Sojjehtimmiemaalle"
 
 #: src/translateble_variables.js:9
 msgid "Pron"
@@ -120,7 +120,7 @@ msgstr "pron."
 
 #: src/containers/StatusBar.js:19
 msgid "Results only from"
-msgstr ""
+msgstr "Båatoeh ajve"
 
 #: src/containers/Welcome.js:73
 msgid "Search results will appear here."
@@ -133,7 +133,7 @@ msgstr "Gaaltije"
 
 #: src/containers/SatniDrawer.js:76
 msgid "Start"
-msgstr ""
+msgstr "Aalkoe"
 
 #: src/features/article/LemmaGroup.js:14
 msgid "Status:"
@@ -158,7 +158,7 @@ msgstr "Teermebasesne leah jeeneb goh 50 000 artihkelh, jïh orresten "
 
 #: src/containers/DictionaryInfo.js:39
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
-msgstr "Daate baakoegærja lea Nils Jernslettenen Álgosátnegirji mietie (4322 madthbaakoen), men daelie baakoegærjesne 30,000 ohtsemebaakeoh, jŋh lissine desnie 6000 sijjiehnommh."
+msgstr "Daate baakoegærja lea Nils Jernslettenen Álgosátnegirji mietie (4322 madthbaakoen), men daelie baakoegærjesne 30,000 ohtsemebaakeoh, jïh lissine desnie 6000 sijjiehnommh."
 
 #: src/containers/DictionaryInfo.js:51
 #: src/containers/DictionaryInfo.js:56
