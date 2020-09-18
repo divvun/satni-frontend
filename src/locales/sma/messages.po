@@ -146,7 +146,7 @@ msgstr "Baakoegærjesne medtie 11 000 ohtsemebaakoeh."
 
 #: src/containers/DictionaryInfo.js:28
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
-msgstr "Baakoegærjesne lea jeaneb goh 50 000 ohtsemebaakoeh, jïh Sammallahti XXXXlissehte orre materiaalem."
+msgstr "Baakoegærjesne lea jeaneb goh 50 000 ohtsemebaakoeh, jïh Sammallahti daamhtetje lissehte orre materiaalem."
 
 #: src/containers/Welcome.js:81
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
@@ -154,31 +154,31 @@ msgstr "Maahtah baakoem ohtsedh saemien, noerhtelaanti, englaanten jallh latineg
 
 #: src/containers/DictionaryInfo.js:34
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
-msgstr "Teermebasesne leah jeeneb goh 50 000 artihkelh, jïh orresten "
+msgstr "Teermebasesne leah jeeneb goh 50 000 artihkelh, jïh orresten daamhtetje."
 
 #: src/containers/DictionaryInfo.js:39
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
-msgstr "Daate baakoegærja lea Nils Jernslettenen Álgosátnegirji mietie (4322 madthbaakoen), men daelie baakoegærjesne 30,000 ohtsemebaakeoh, jïh lissine desnie 6000 sijjiehnommh."
+msgstr "Dan baakoegærjan våarome lea Nils Jernslettenen Álgosátnegirji mietie (4322 madthbaakoen), men daelie baakoegærjesne 30,000 ohtsemebaakeoh, jïh lissine desnie 6000 sijjiehnommh."
 
 #: src/containers/DictionaryInfo.js:51
 #: src/containers/DictionaryInfo.js:56
 msgid "This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern Sámi Oahpa."
-msgstr ""
+msgstr "Dan baakoegærjan våarome lea barkoe maam Albert Jåma jïh Tove Brustad lægan dorjeme Hemnes saemiensiebresne. Giellatekno jïh Aajege aaj lissiehtamme åarjelsaemien baakoeh gosse barkeme Oahpa,  mij åarjelsaemiengïelese.  "
 
 #: src/containers/DictionaryInfo.js:73
 #: src/containers/DictionaryInfo.js:78
 #: src/containers/DictionaryInfo.js:83
 #: src/containers/DictionaryInfo.js:88
 msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
-msgstr ""
+msgstr "Dan baakoegærjan våarome lea Valtonen jïh Olthuis Inarinsaame-suomi-inarinsaame baakoegærja (30000 baakoeh)."
 
 #: src/containers/DictionaryInfo.js:67
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been added."
-msgstr ""
+msgstr "Dan baakoegærjan våarome lea baakoelæstoeh maam «Forskingscentralen för de inhemska språken i Helsingfors» tjaaleme jïh baakojste maam Giellatekno tjaaleme gosse barkeme Oahpa mij noerhtesaemien. Lissine sïejhme soemen baakoeh lissiehtamme."
 
 #: src/containers/DictionaryInfo.js:61
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
-msgstr ""
+msgstr ""Dan baakoegærjan våarome lea baakoelæstoeh maam «Forskingscentralen för de inhemska språken i Helsingfors» tjaaleme jïh baakojste maam Giellatekno tjaaleme gosse barkeme Oahpa mij noerhtesaemien. Mijjieh aaj lissiehtamme sïejhme noerhtesaemien baakoeh."
 
 #: src/translateble_variables.js:9
 msgid "V"
@@ -198,7 +198,7 @@ msgstr "Tjaelel unnemes aktem bokstaavem dagka"
 
 #: src/containers/Welcome.js:90
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
-msgstr ""
+msgstr "Dagkoe datne maahtah plæredh ohtsemebåatoejsne, orre båatoeh båetieh goske gaajhkh gaavneme."
 
 #: src/translateble_variables.js:12
 msgid "en"
