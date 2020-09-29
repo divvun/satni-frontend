@@ -12,7 +12,7 @@ import Stem from './Stem';
 const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing(1)
-  }
+  },
 }));
 
 const DictArticle = ({dictGroup, lemma}) => {
@@ -26,12 +26,7 @@ const DictArticle = ({dictGroup, lemma}) => {
         return (
           <React.Fragment key={i}>
             <Grid container spacing={1}>
-              <Grid item xs={6}>
-                {from.lookupLemmas.map((stem, index) =>
-                  <Stem key={index} stem={stem} />)
-                }
-              </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={12}>
                 {translationGroup.translations.map((stem, index) => {
                   if (stem.lemma.includes(' ')) {
                     return <Stem
@@ -47,10 +42,14 @@ const DictArticle = ({dictGroup, lemma}) => {
                   }
                 })}
               </Grid>
+              {translationGroup.examples &&
+                <Grid
+                  item
+                  xs={12}>
+                  <Examples examples={translationGroup.examples}/>
+                </Grid>
+              }
             </Grid>
-            {translationGroup.examples &&
-              <Examples examples={translationGroup.examples}/>
-            }
           </React.Fragment>
         );
       })}
