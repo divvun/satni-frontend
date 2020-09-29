@@ -1,26 +1,36 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import classNames from 'classnames';
+import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
+  divisor: {
+    marginBottom: theme.spacing(1),
+    borderLeftColor: '#eee'
+  },
+  padding: {
+    paddingLeft: theme.spacing(1)
+  },
   second: {
     fontStyle: 'italic'
   }
-});
+}));
 
 const Example = ({example}) => {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={1}>
-      <Grid item xs={6}>
-        <Typography>{example.example}</Typography>
-      </Grid>
-      <Grid item xs={6}>
-        <Typography className={classes.second}>{example.translation}</Typography>
-      </Grid>
-    </Grid>
+    <Box
+      borderLeft={5}
+      className={classes.divisor}>
+      <Typography className={classes.padding}>{example.example}</Typography>
+      <Typography
+        className={classNames(classes.second, classes.padding)}>
+        {example.translation}
+      </Typography>
+    </Box>
   );
 };
 
