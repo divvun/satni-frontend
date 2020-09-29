@@ -1,12 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Trans } from '@lingui/macro';
+import classNames from 'classnames';
+import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { Trans } from '@lingui/macro';
 
 const useStyles = makeStyles(theme => ({
-  title: {
-    fontSize: 12
+  divisor: {
+    marginBottom: theme.spacing(1),
+    borderLeftColor: '#eee'
+  },
+  padding: {
+    paddingLeft: theme.spacing(1)
   }
 }));
 
@@ -14,18 +20,18 @@ const Definitions = ({definitions}) => {
   const classes = useStyles();
 
   return (
-    <Grid container>
-      <Grid item xs={12}>
-        <Typography className={classes.title} color='textSecondary'>
-          <Trans>Definitions:</Trans>
-        </Typography>
-      </Grid>
-      {definitions.map((definition, i) => (
-        <Grid item xs={6} key={i}>
-          <Typography>{definition}</Typography>
-        </Grid>)
-      )}
-    </Grid>
+    <Box
+      borderLeft={5}
+      className={classes.divisor}>
+      <Typography
+        className={classes.padding}>
+        <Trans>Definition</Trans>:
+      </Typography>
+      <Typography
+        className={classes.padding}>
+        {definitions}
+      </Typography>
+    </Box>
   );
 };
 
