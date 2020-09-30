@@ -7,7 +7,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Paper from '@material-ui/core/Paper';
 
-import { mapArticlesByLanguagePair } from 'utils';
+import { multilingualconceptListsByNames, dictBackend2Frontend } from 'utils';
 import DictArticle from './DictArticle';
 import PairHeader from './PairHeader';
 import TermWikiArticle from './TermWikiArticle';
@@ -24,49 +24,19 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Articles = ({articles, lemma}) => {
-  const articlesMappedByLanguagePair = mapArticlesByLanguagePair(articles);
-  const classes = useStyles();
+// {Object.keys(articlesMappedByLanguagePair).map((langpair, index) => {
 
+const Articles = ({data, lemma}) => {
+  const classes = useStyles();
+  const { dictList, conceptList } = data;
+  const termsByNames = multilingualconceptListsByNames(conceptList);
   return (
     <div className={classes.articles}>
-      {Object.keys(articlesMappedByLanguagePair).map((langpair, index) => {
-        return (
-          <Paper key={index} className={classes.list}>
-            <List>
-              <ListItem>
-                <PairHeader
-                  langpair={langpair}
-                />
-              </ListItem>
-              {articlesMappedByLanguagePair[langpair].map((article, index) => {
-                if (article.dict === 'termwiki') {
-                  return (
-                    <ListItem key={index}>
-                      <Grid container>
-                        <TermWikiArticle
-                          lemma={lemma}
-                          termGroup={article} />
-                      </Grid>
-                    </ListItem>
-                  );
-                } else {
-                  return (
-                    <ListItem key={index}>
-                      <Grid container>
-                        <DictArticle
-                          dictGroup={article}
-                          lemma={lemma} />
-                        <Divider />
-                      </Grid>
-                    </ListItem>
-                  );
-                }
-              })}
-            </List>
-          </Paper>
-        );
-      })}
+      {Object.keys(termsByNames).map((name, index) => (
+        <TermWikiArticle
+          category={name}
+          concepts={termsByNames[name]} />
+      ))}
     </div>
   );
 };
