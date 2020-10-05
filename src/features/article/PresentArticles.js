@@ -28,12 +28,16 @@ const useStyles = makeStyles(theme => ({
 
 const Articles = ({data, lemma}) => {
   const classes = useStyles();
-  const { dictList, conceptList } = data;
+  const { dictEntryList, conceptList } = data;
   const termsByNames = multilingualconceptListsByNames(conceptList);
   return (
     <div className={classes.articles}>
-      {Object.keys(termsByNames).map((name, index) => (
+      {dictEntryList && dictEntryList.map((dictEntry, index) => (
+        <DictArticle dictGroup={dictBackend2Frontend(dictEntry)} />
+      ))}
+      {conceptList && Object.keys(termsByNames).map((name, index) => (
         <TermWikiArticle
+          key={index}
           category={name}
           concepts={termsByNames[name]} />
       ))}

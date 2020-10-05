@@ -8,14 +8,14 @@ import LanguageIcon from '@material-ui/icons/Language';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import Typography from '@material-ui/core/Typography';
 
-import { elemmas2ConceptPairs, dictBackend2Frontend } from 'utils';
+import { multilingualconceptListsByNames, dictBackend2Frontend } from 'utils';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
 
 const query2articlelist = (lemma, data) => {
-  const termList = elemmas2ConceptPairs(lemma, data.conceptList);
+  const termsByNames = multilingualconceptListsByNames(lemma, data.conceptList);
   const dictList = data.dictEntryList.map(dictBackend2Frontend);
-  return dictList.concat(termList);
+  return dictList.concat(termsByNames);
 };
 
 const useStyles = makeStyles(theme => ({
@@ -166,11 +166,7 @@ const Articles = (props) => {
   if (wantedDicts.includes('termwiki')) {
     return <PresentArticles
       lemma={lemma}
-      articles={query2articlelist(lemma, data)} />;
-  } else {
-    return <PresentArticles
-      lemma={lemma}
-      articles={data.dictEntryList.map(dictBackend2Frontend)} />;
+      data={data} />;
   }
 };
 

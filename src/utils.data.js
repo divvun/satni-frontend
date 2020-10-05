@@ -691,3 +691,232 @@ export const conceptList = [
     ]
   }
 ];
+
+export const dictEntryList = [
+  {
+    'dictName': 'gtsmenob',
+    'srcLang': 'sme',
+    'targetLang': 'nob',
+    'lookupLemmas': {
+      'edges': [
+        {
+          'node': {
+            'lemma': 'vuorká',
+            'language': 'sme',
+            'pos': 'N',
+            'dialect': null,
+            'country': null
+          }
+        }
+      ]
+    },
+    'translationGroups': [
+      {
+        'translationLemmas': {
+          'edges': [
+            {
+              'node': {
+                'lemma': 'arkiv',
+                'language': 'nob',
+                'pos': 'N',
+                'dialect': null,
+                'country': null
+              }
+            }
+          ]
+        },
+        'restriction': null,
+        'exampleGroups': []
+      },
+      {
+        'translationLemmas': {
+          'edges': [
+            {
+              'node': {
+                'lemma': 'depot',
+                'language': 'nob',
+                'pos': 'N',
+                'dialect': null,
+                'country': null
+              }
+            },
+            {
+              'node': {
+                'lemma': 'oppbevaringsplass',
+                'language': 'nob',
+                'pos': 'N',
+                'dialect': null,
+                'country': null
+              }
+            }
+          ]
+        },
+        'restriction': null,
+        'exampleGroups': []
+      },
+      {
+        'translationLemmas': {
+          'edges': [
+            {
+              'node': {
+                'lemma': 'oppbevaring',
+                'language': 'nob',
+                'pos': 'N',
+                'dialect': null,
+                'country': null
+              }
+            }
+          ]
+        },
+        'restriction': null,
+        'exampleGroups': []
+      }
+    ]
+  },
+  {
+    'dictName': 'gtsmefin',
+    'srcLang': 'sme',
+    'targetLang': 'fin',
+    'lookupLemmas': {
+      'edges': [
+        {
+          'node': {
+            'lemma': 'vuorká',
+            'language': 'sme',
+            'pos': 'N',
+            'dialect': null,
+            'country': null
+          }
+        }
+      ]
+    },
+    'translationGroups': [
+      {
+        'translationLemmas': {
+          'edges': [
+            {
+              'node': {
+                'lemma': 'arkisto',
+                'language': 'fin',
+                'pos': 'N',
+                'dialect': null,
+                'country': null
+              }
+            }
+          ]
+        },
+        'restriction': null,
+        'exampleGroups': []
+      },
+      {
+        'translationLemmas': {
+          'edges': [
+            {
+              'node': {
+                'lemma': 'säilö',
+                'language': 'fin',
+                'pos': 'N',
+                'dialect': null,
+                'country': null
+              }
+            }
+          ]
+        },
+        'restriction': null,
+        'exampleGroups': []
+      }
+    ]
+  },
+  {
+    'dictName': 'gtsmesmn',
+    'srcLang': 'sme',
+    'targetLang': 'smn',
+    'lookupLemmas': {
+      'edges': [
+        {
+          'node': {
+            'lemma': 'vuorká',
+            'language': 'sme',
+            'pos': 'N',
+            'dialect': null,
+            'country': null
+          }
+        }
+      ]
+    },
+    'translationGroups': [
+      {
+        'translationLemmas': {
+          'edges': [
+            {
+              'node': {
+                'lemma': 'vuárkká',
+                'language': 'smn',
+                'pos': 'N',
+                'dialect': null,
+                'country': null
+              }
+            }
+          ]
+        },
+        'restriction': null,
+        'exampleGroups': []
+      }
+    ]
+  },
+  {
+    'dictName': 'sammallahtismefin',
+    'srcLang': 'sme',
+    'targetLang': 'fin',
+    'lookupLemmas': {
+      'edges': [
+        {
+          'node': {
+            'lemma': 'vuorká',
+            'language': 'sme',
+            'pos': 'N',
+            'dialect': null,
+            'country': null
+          }
+        },
+        {
+          'node': {
+            'lemma': 'fuorká',
+            'language': 'sme',
+            'pos': 'N',
+            'dialect': null,
+            'country': null
+          }
+        }
+      ]
+    },
+    'translationGroups': [
+      {
+        'translationLemmas': {
+          'edges': [
+            {
+              'node': {
+                'lemma': 'säilö',
+                'language': 'fin',
+                'pos': 'N',
+                'dialect': null,
+                'country': null
+              }
+            },
+            {
+              'node': {
+                'lemma': 'tiedosto',
+                'language': 'fin',
+                'pos': 'N',
+                'dialect': null,
+                'country': null
+              }
+            }
+          ]
+        },
+        'restriction': null,
+        'exampleGroups': []
+      }
+    ]
+  }
+];
