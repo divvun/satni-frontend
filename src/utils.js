@@ -10,20 +10,6 @@ export const handleErrors = (response) => {
   return response;
 };
 
-const mapByLanguagePair = (accumulator, currentValue) => {
-  const key = `${currentValue.from.language}${currentValue.to.language}`;
-  if (accumulator[key]) {
-    accumulator[key] = [...accumulator[key], currentValue];
-  } else {
-    accumulator[key] = [currentValue];
-  }
-  return accumulator;
-};
-
-export const mapArticlesByLanguagePair = (articles) => {
-  return articles.reduce(mapByLanguagePair, {});
-};
-
 const cleanedConcepts = (language, concepts) => {
   const nonSami = new Set(['nob', 'eng', 'fin', 'nno', 'swe']);
 
@@ -33,11 +19,11 @@ const cleanedConcepts = (language, concepts) => {
 
 export const moveLangFirst = (language, concepts) => {
   return concepts.reduce(
-    (accumulator, currentValue) => {
-      if (currentValue.terms[0].expression.language !== language) {
-        accumulator.push(currentValue);
+    (accumulator, concept) => {
+      if (concept.terms[0].expression.language !== language) {
+        accumulator.push(concept);
       } else {
-        accumulator.unshift(currentValue);
+        accumulator.unshift(concept);
       }
       return accumulator;
     },
@@ -47,12 +33,12 @@ export const moveLangFirst = (language, concepts) => {
 
 export const moveLemmaFirst = (lemma, language, terms) => {
   return terms.reduce(
-    (accumulator, currentValue) => {
-      if (currentValue.expression.language === language &&
-        currentValue.expression.lemma === lemma) {
-        accumulator.unshift(currentValue);
+    (accumulator, term) => {
+      if (term.expression.language === language &&
+        term.expression.lemma === lemma) {
+        accumulator.unshift(term);
       } else {
-        accumulator.push(currentValue);
+        accumulator.push(term);
       }
 
       return accumulator;
@@ -93,12 +79,26 @@ export const multiLingualConcept2ConceptPairs = (lemma, language, multilingualco
   });
 };
 
-export const multilingualconceptList2ConceptPairs = (lemma, language, conceptList) => {
-  const names = conceptListNames(conceptList);
+/**
+ * Order concept list to sublists ordered by the concept names
+ * @param  {String} lemma       The lemma we want
+ * @param  {String} language    The ISO-639-3 language code of the lemma
+ * @param  {Array}  conceptList List of concepts
+ * @return {Dict}               Concepts ordered by names
+ */
+export const multilingualconceptListsByNames = (conceptList) => {
+  return conceptList.reduce(
+    (accumulator, concept) => {
+      const { name, ...rest } = concept;
+      if (!(name in accumulator)) {
+        accumulator[name] = [];
+      }
+      accumulator[name].push(rest);
 
-  return names.map(name => multiLingualConcept2ConceptPairs(
-    lemma, language, conceptList.filter(
-      concept => concept.name === name))).flat();
+      return accumulator;
+    },
+    {}
+  );
 };
 
 export const languagesOfLemma = (lemma, conceptList) => {
@@ -107,17 +107,6 @@ export const languagesOfLemma = (lemma, conceptList) => {
       concept.terms.map(term => term)
     )).filter(term => term.expression.lemma === lemma).map(
       term => term.expression.language)));
-};
-
-export const conceptListNames = (conceptList) => {
-  return Array.from(new Set(conceptList.filter(concept => concept.name).map(
-    concept => concept.name)));
-};
-
-export const elemmas2ConceptPairs = (lemma, conceptList) => {
-  const langs = languagesOfLemma(lemma, conceptList);
-  return langs.map(language => multilingualconceptList2ConceptPairs(
-    lemma, language, [...conceptList])).flat();
 };
 
 export const backendTranslationGroup2frontendTranslationGroup = (translationGroup) => {
@@ -155,8 +144,8 @@ export const hasAvailableDict = pathname => availableDicts.some(
 
 export const pathname2Dict = pathname => {
   const indices = pathname.split('').reduce(
-    (accumulator, currentValue, index) => {
-      if (currentValue === '/') {
+    (accumulator, pathPart, index) => {
+      if (pathPart === '/') {
         accumulator.push(index);
       }
       return accumulator;
@@ -201,8 +190,8 @@ export const locationParser = pathname => {
 
 export const filterProp = analyses => {
   const content = Object.keys(analyses['analyses']).reduce(
-    (accumulator, currentValue) => {
-      accumulator[currentValue.replace('+Prop', '')] = analyses['analyses'][currentValue];
+    (accumulator, key) => {
+      accumulator[key.replace('+Prop', '')] = analyses['analyses'][key];
 
       return accumulator;
     },

@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import PresentArticles from './PresentArticles';
-import { conceptList } from 'utils.data';
+import { conceptList, dictEntryList } from 'utils.data';
 
 const arpeggio = [
   {
@@ -102,7 +102,7 @@ storiesOf('PresentArticles', module)
 // articles={arpeggio} />)
   .add('TermWikiArticle vuorka', () => <PresentArticles
     lemma='vuorká'
-    data={{conceptList}} />);
+    data={{conceptList, dictEntryList}} />);
 // .add('All types', () => <PresentArticles
 //   articles={[
 //     resultDictWithExamples[0],
