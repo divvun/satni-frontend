@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import LemmaGroups from './LemmaGroups';
 
-const from = [
+const terms = [
   {
     'expression': {
       'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhZA==',
@@ -27,9 +27,7 @@ const from = [
     'sanctioned': true,
     'source': 'fiilasource',
     'status': 'fiilastatus'
-  }
-];
-const to = [
+  },
   {
     'expression': {
       'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhOQ==',
@@ -45,4 +43,7 @@ const to = [
 ];
 
 storiesOf('LemmaGroups', module)
-  .add('default', () => <LemmaGroups fromterms={from} toterms={to} />);
+  .add('default', () => <LemmaGroups
+    lemma='vuorká'
+    terms={terms}
+  />);
