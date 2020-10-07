@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 //   lemma='whatever' />
 // }
 
-const TermWikiArticle = ({ category, concepts }) => {
+const TermWikiArticle = ({ category, concepts, lemma }) => {
   const classes = useStyles();
   const pathname = useLocation().pathname;
   return <Paper
@@ -55,7 +55,10 @@ const TermWikiArticle = ({ category, concepts }) => {
             <TableRow key={index}>
               <TableCell padding='none'>
                 <PairHeader language={terms[0].expression.language} />
-                <LemmaGroups terms={terms} />
+                <LemmaGroups
+                  lemma={lemma}
+                  terms={terms}
+                />
                 {definition && <Definitions definitions={definition} />}
               </TableCell>
             </TableRow>
