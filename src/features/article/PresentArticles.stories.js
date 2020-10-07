@@ -100,7 +100,7 @@ storiesOf('PresentArticles', module)
   //   articles={[resultDictWithoutExamples[0]]} />)
   // .add('TermWikiArticle arpeggio', () => <PresentArticles
 // articles={arpeggio} />)
-  .add('TermWikiArticle vuorka', () => <PresentArticles
+  .add('vuorka dicts and terms', () => <PresentArticles
     lemma='vuorká'
     data={{conceptList, dictEntryList}} />);
 // .add('All types', () => <PresentArticles
