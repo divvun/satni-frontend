@@ -41,7 +41,7 @@ const Articles = ({data, lemma}) => {
       {conceptList && Object.keys(termsByNames).map((name, index) => (
         <TermWikiArticle
           key={index}
-          category={name}
+          category={name.split(':')[0]}
           concepts={termsByNames[name]}
           lemma={lemma}
         />
