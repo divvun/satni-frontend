@@ -38,7 +38,7 @@ const TermWikiArticle = ({ category, concepts, lemma }) => {
           <TableCell
             variant='head'
             padding='none'
-          >{category}</TableCell>
+          ><Trans>Category</Trans>: {category}</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
