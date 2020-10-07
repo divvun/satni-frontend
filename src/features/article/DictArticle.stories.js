@@ -50,4 +50,7 @@ const dictGroup = {
 };
 
 storiesOf('DictArticle', module)
-  .add('default', () => <DictArticle dictGroup={dictGroup} />);
+  .add('default', () => <DictArticle
+    dictGroup={dictGroup}
+    lemma='kanskje'
+  />);
