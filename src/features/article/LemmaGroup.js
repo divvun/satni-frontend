@@ -4,11 +4,11 @@ import Typography from '@material-ui/core/Typography';
 
 import Stem from './Stem';
 
-const LemmaGroup = ({term, withLink}) => (
+const LemmaGroup = ({lemma, term}) => (
   <li>
     <Stem
       stem={term.expression}
-      withLink={withLink} />
+      withLink={(term.expression.lemma !== lemma)} />
     {term.note && <Typography><Trans>Note:</Trans> {term.note}</Typography>}
     {term.status && <Typography><Trans>Status:</Trans> {term.status}</Typography>}
     {term.source && <Typography><Trans>Source:</Trans> {term.source}</Typography>}
