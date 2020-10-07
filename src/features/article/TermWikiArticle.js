@@ -18,11 +18,9 @@ import PairHeader from './PairHeader';
 import Source from './Source';
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
   paper: {
-    padding: theme.spacing(1)
+    padding: theme.spacing(2),
+    marginBottom: theme.spacing(1)
   },
   title: {
     fontSize: 14
