@@ -29,28 +29,21 @@ const PairHeader = ({ language }) => {
   };
 
   return (
-    <Grid container>
-      <Grid
-        item
-        xs={12}
-      >
-        <FormControlLabel
-          className={classes.lang1}
-          label={<Typography
-            variant='subtitle2'
-          ><Trans id={language} /></Typography>}
-          control={
-            <Checkbox
-              checked
-              className={classes.check}
-              color='default'
-              name={language}
-              onChange={handleChange}
-            />
-          }
+    <FormControlLabel
+      className={classes.lang1}
+      label={<Typography
+        variant='subtitle2'
+      ><Trans id={language} /></Typography>}
+      control={
+        <Checkbox
+          checked
+          className={classes.check}
+          color='default'
+          name={language}
+          onChange={handleChange}
         />
-      </Grid>
-    </Grid>
+      }
+    />
   );
 };
 
