@@ -12,10 +12,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
 import { hasAvailableDict } from 'utils';
-import Definitions from './Definitions';
-import LemmaGroups from './LemmaGroups';
-import PairHeader from './PairHeader';
 import Source from './Source';
+import TermCore from './TermCore';
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -27,12 +25,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-// {!hasAvailableDict(pathname) && <Source
-//   className={classes.paper}
-//   source='termwiki'
-//   lemma='whatever' />
-// }
-
 const TermWikiArticle = ({ category, concepts, lemma }) => {
   const classes = useStyles();
   const pathname = useLocation().pathname;
@@ -40,25 +32,35 @@ const TermWikiArticle = ({ category, concepts, lemma }) => {
     className={classes.paper}
     elevation={1}
   >
-    <Table
-      size='tiny'>
+    <Table>
       <TableHead>
         <TableRow>
-          <TableCell variant='head'>{category}</TableCell>
+          <TableCell
+            variant='head'
+            padding='none'
+          >{category}</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
+        {!hasAvailableDict(pathname) &&
+        <TableRow>
+          <TableCell padding='none'>
+            <Source
+              className={classes.paper}
+              source='termwiki'
+              lemma='whatever' />
+          </TableCell>
+        </TableRow>
+        }
         {concepts.map((concept, index) => {
           const { terms, definition } = concept;
           return (
             <TableRow key={index}>
               <TableCell padding='none'>
-                <PairHeader language={terms[0].expression.language} />
-                <LemmaGroups
+                <TermCore
+                  concept={concept}
                   lemma={lemma}
-                  terms={terms}
                 />
-                {definition && <Definitions definitions={definition} />}
               </TableCell>
             </TableRow>
           );
