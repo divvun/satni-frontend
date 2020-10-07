@@ -27,23 +27,21 @@ const Source = ({source, lemma}) => {
   };
 
   return (
-    <Grid item xs={12} className={classes.paper}>
-      <FormControlLabel
-        label={<Typography variant='body2'
-        >
-          <Trans>Source:</Trans> <Link to={`${source}/${lemma}`}><Trans id={source} /></Link>
-        </Typography>}
-        control={
-          <Checkbox
-            checked
-            className={classes.check}
-            color='default'
-            name={source}
-            onChange={handleChange}
-          />
-        }
-      />
-    </Grid>
+    <FormControlLabel
+      label={<Typography variant='body2'
+      >
+        <Trans>Source:</Trans> <Link to={`${source}/${lemma}`}><Trans id={source} /></Link>
+      </Typography>}
+      control={
+        <Checkbox
+          checked
+          className={classes.check}
+          color='default'
+          name={source}
+          onChange={handleChange}
+        />
+      }
+    />
   );
 };
 
