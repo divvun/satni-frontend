@@ -48,7 +48,7 @@ const TermWikiArticle = ({ category, concepts, lemma }) => {
             <Source
               className={classes.paper}
               source='termwiki'
-              lemma='whatever' />
+              lemma={lemma} />
           </TableCell>
         </TableRow>
         }
