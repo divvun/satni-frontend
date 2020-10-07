@@ -37,7 +37,10 @@ const useStyles = makeStyles(theme => ({
 const TermWikiArticle = ({ category, concepts }) => {
   const classes = useStyles();
   const pathname = useLocation().pathname;
-  return <TableContainer component='Paper'>
+  return <Paper
+    className={classes.paper}
+    elevation={1}
+  >
     <Table
       size='tiny'>
       <TableHead>
@@ -60,7 +63,7 @@ const TermWikiArticle = ({ category, concepts }) => {
         })}
       </TableBody>
     </Table>
-  </TableContainer>
+  </Paper>
   ;
 };
 
