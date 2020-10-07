@@ -5,7 +5,6 @@ import LemmaGroup from './LemmaGroup';
 
 const term = {
   'expression': {
-    'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhZA==',
     'language': 'sme',
     'lemma': 'vuorká',
     'pos': 'N'
@@ -17,7 +16,11 @@ const term = {
 };
 
 storiesOf('LemmaGroup', module)
-  .add('srcLanguage', () => <LemmaGroup
-    term={term} />)
-  .add('targetLanguage', () => <LemmaGroup
-    term={term} withLink />);
+  .add('no link', () => <LemmaGroup
+    lemma='vuorká'
+    term={term}
+  />)
+  .add('with link', () => <LemmaGroup
+    lemma='aka'
+    term={term}
+  />);
