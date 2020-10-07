@@ -33,13 +33,18 @@ const Articles = ({data, lemma}) => {
   return (
     <div className={classes.articles}>
       {dictEntryList && dictEntryList.map((dictEntry, index) => (
-        <DictArticle dictGroup={dictBackend2Frontend(dictEntry)} />
+        <DictArticle
+          dictGroup={dictBackend2Frontend(dictEntry)}
+          lemma={lemma}
+        />
       ))}
       {conceptList && Object.keys(termsByNames).map((name, index) => (
         <TermWikiArticle
           key={index}
           category={name}
-          concepts={termsByNames[name]} />
+          concepts={termsByNames[name]}
+          lemma={lemma}
+        />
       ))}
     </div>
   );
