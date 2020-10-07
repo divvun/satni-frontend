@@ -10,15 +10,7 @@ import Typography from '@material-ui/core/Typography';
 
 import { wantedDictsVar } from 'apolloCache';
 
-const useStyles = makeStyles(theme => ({
-  check: {
-    margin: 0,
-    paddingRight: 0
-  }
-}));
-
 const Source = ({source, lemma}) => {
-  const classes = useStyles();
   const wantedDicts = wantedDictsVar();
 
   const handleChange = (event) => {
@@ -35,7 +27,6 @@ const Source = ({source, lemma}) => {
       control={
         <Checkbox
           checked
-          className={classes.check}
           color='default'
           name={source}
           onChange={handleChange}
