@@ -33,7 +33,7 @@ export const GET_LANGS_AND_DICTS = gql`
 const styles = theme => ({
   '@global': {
     body: {
-      backgroundColor: theme.palette.common.white
+      backgroundColor: theme.palette.common.grey
     }
   },
   container: {
