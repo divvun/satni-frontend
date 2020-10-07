@@ -27,7 +27,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-// <PairHeader language={terms[0].expression.language} />
 // {!hasAvailableDict(pathname) && <Source
 //   className={classes.paper}
 //   source='termwiki'
