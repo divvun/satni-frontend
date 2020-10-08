@@ -54,6 +54,7 @@ const Articles = (props) => {
                   language
                   pos
                   dialect
+                  country
                 }
               }
             }
