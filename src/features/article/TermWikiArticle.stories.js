@@ -179,6 +179,6 @@ const concepts = [
 storiesOf('TermWikiArticle', module)
   .add('default', () => <TermWikiArticle
     category='Dihtorteknologiija ja diehtoteknihkka'
-    concepts={concepts}
+    multiLingualConcept={concepts}
     lemma='vuorká'
   />);
