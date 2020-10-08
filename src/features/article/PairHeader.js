@@ -4,7 +4,6 @@ import { Trans } from '@lingui/macro';
 
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import { wantedLangsVar } from 'apolloCache';
@@ -13,10 +12,6 @@ const useStyles = makeStyles(theme => ({
   lang1: {
     marginRight: theme.spacing(1)
   },
-  check: {
-    // margin: 0
-    // padding: 0
-  }
 }));
 
 const PairHeader = ({ language }) => {
