@@ -15,7 +15,7 @@ const Definitions = ({definitions}) => {
 
   return (
     <Box className={classes.divisor}>
-      <Typography>
+      <Typography color='textSecondary'>
         <Trans>Definition</Trans>:
       </Typography>
       <Typography>
