@@ -8,11 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   divisor: {
-    marginBottom: theme.spacing(1),
-    borderLeftColor: '#eee'
-  },
-  padding: {
-    paddingLeft: theme.spacing(1)
+    margin: theme.spacing(1)
   }
 }));
 
@@ -20,15 +16,11 @@ const Definitions = ({definitions}) => {
   const classes = useStyles();
 
   return (
-    <Box
-      borderLeft={5}
-      className={classes.divisor}>
-      <Typography
-        className={classes.padding}>
+    <Box className={classes.divisor}>
+      <Typography>
         <Trans>Definition</Trans>:
       </Typography>
-      <Typography
-        className={classes.padding}>
+      <Typography>
         {definitions}
       </Typography>
     </Box>

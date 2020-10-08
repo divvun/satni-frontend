@@ -1,18 +1,27 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
+
 import LemmaGroup from './LemmaGroup';
 
-const LemmaGroups = ({ lemma, terms }) => (
-  <Grid container spacing={1}>
-    <Grid item xs={12}>
-      <ul>
-        {terms.map((term, index) => <LemmaGroup
-          key={index}
-          lemma={lemma}
-          term={term} />)}
-      </ul>
-    </Grid>
-  </Grid>
-);
+const useStyles = makeStyles(theme => ({
+  divisor: {
+    margin: theme.spacing(1)
+  }
+}));
+
+const LemmaGroups = ({ lemma, terms }) => {
+  const classes = useStyles();
+
+  return (
+    <Box className={classes.divisor}>
+      {terms.map((term, index) => <LemmaGroup
+        key={index}
+        lemma={lemma}
+        term={term} />)}
+    </Box>
+  );
+};
 
 export default LemmaGroups;
