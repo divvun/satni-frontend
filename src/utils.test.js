@@ -1,11 +1,12 @@
 import {
-  moveLangFirst,
   cleanFrom,
   conceptListNames,
-  multiLingualConcept2ConceptPairs,
   dictBackend2Frontend,
   filterProp,
-  multilingualconceptListsByNames
+  languagesOfLemma,
+  moveLangFirst,
+  multilingualconceptListsByNames,
+  orderedMultilingualConcept
 } from './utils';
 import { conceptList, dictEntryList } from 'utils.data';
 
@@ -691,72 +692,202 @@ describe('Massage termwiki data from backend', () => {
     expect(multilingualconceptListsByNames(conceptList)).toEqual(want);
   });
 
-  it('Move the found lang to the start of concepts', () => {
-    const got = [
-      {
-        'terms': [
-          {
-            'expression': {
-              'language': 'smj'
-            }
-          }
-        ]
-      },
-      {
-        'terms': [
-          {
-            'expression': {
-              'language': 'sma'
-            }
-          }
-        ]
-      },
-      {
-        'terms': [
-          {
-            'expression': {
-              'language': 'nob'
-            }
-          }
-        ]
-      }
-    ];
+  it('Find which languages the lemma has in a single term concept', () => {
+    const want = ['sme'];
 
+    expect(languagesOfLemma(
+      'vuorká',
+      multilingualconceptListsByNames(
+        conceptList
+      )['Dihtorteknologiija ja diehtoteknihkka:fiila']
+    )).toEqual(want);
+  });
+
+  it('Move the found lang to the start of concepts', () => {
     const want = [
       {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': null,
+        'explanation': null,
         'terms': [
           {
             'expression': {
-              'language': 'sma'
-            }
+              'language': 'sme',
+              'lemma': 'fiila',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          },
+          {
+            'expression': {
+              'language': 'sme',
+              'lemma': 'vuorká',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
           }
         ]
       },
       {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': null,
+        'explanation': null,
         'terms': [
           {
             'expression': {
-              'language': 'smj'
-            }
+              'language': 'smj',
+              'lemma': 'fijlla',
+              'pos': 'N'
+            },
+            'note': 'jll jl',
+            'source': null,
+            'status': null
           }
         ]
       },
       {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': null,
+        'explanation': null,
         'terms': [
           {
             'expression': {
-              'language': 'nob'
-            }
+              'language': 'fin',
+              'lemma': 'viila',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          },
+          {
+            'expression': {
+              'language': 'fin',
+              'lemma': 'kaista',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          },
+          {
+            'expression': {
+              'language': 'fin',
+              'lemma': 'tiedosto',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          }
+        ]
+      },
+      {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': null,
+        'explanation': null,
+        'terms': [
+          {
+            'expression': {
+              'language': 'eng',
+              'lemma': 'file',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          }
+        ]
+      },
+      {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': 'fil, i edb: en ordnet mengde av sammenhørende data',
+        'explanation': null,
+        'terms': [
+          {
+            'expression': {
+              'language': 'nob',
+              'lemma': 'fil',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          }
+        ]
+      },
+      {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': null,
+        'explanation': null,
+        'terms': [
+          {
+            'expression': {
+              'language': 'swe',
+              'lemma': 'fil',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          }
+        ]
+      },
+      {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': null,
+        'explanation': null,
+        'terms': [
+          {
+            'expression': {
+              'language': 'sma',
+              'lemma': 'fijle',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
           }
         ]
       }
     ];
 
-    expect(moveLangFirst('sma', got)).toEqual(want);
+    expect(moveLangFirst('sme',
+      multilingualconceptListsByNames(
+        conceptList
+      )['Dihtorteknologiija ja diehtoteknihkka:fiila'])).toEqual(want);
   });
 
   it('Move the found lemma first in a given concept', () => {
-    const got = conceptList[5];
+    const got = moveLangFirst('sme',
+      multilingualconceptListsByNames(
+        conceptList
+      )['Dihtorteknologiija ja diehtoteknihkka:fiila'])[0];
     const lemma = 'vuorká';
     const language = 'sme';
     const want = {
@@ -767,7 +898,6 @@ describe('Massage termwiki data from backend', () => {
       ],
       'definition': null,
       'explanation': null,
-      'name': 'Dihtorteknologiija ja diehtoteknihkka:fiila',
       'terms': [
         {
           'note': null,
@@ -791,144 +921,189 @@ describe('Massage termwiki data from backend', () => {
         }
       ]
     };
+
     expect(cleanFrom(lemma, language, got)).toEqual(want);
   });
 
-  it('Turn elemmas into into concepts that contain language pairs', () => {
-    const got = [
+  it('Order the multilingual concept by lemma and language', () => {
+    const got = multilingualconceptListsByNames(
+      conceptList
+    )['Dihtorteknologiija ja diehtoteknihkka:fiila'];
+    const want = [
       {
-        'name': 'Beaivválaš giella:Musikksannõs 12',
         'collections': [
-          'Collection:Musikksannõs'
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
         ],
-        'definition': 'sointu jonka sävelet soitetaan nopeasti peräkkäin, murrettu sointu (Kielitoimiston sanakirja)',
+        'definition': null,
         'explanation': null,
+        'language': 'sme',
         'terms': [
           {
-            'note': '(murtosointu)',
-            'source': null,
-            'status': null,
             'expression': {
-              'lemma': 'arpeggio',
-              'language': 'fin',
+              'language': 'sme',
+              'lemma': 'vuorká',
               'pos': 'N'
-            }
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          },
+          {
+            'expression': {
+              'language': 'sme',
+              'lemma': 'fiila',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
           }
         ]
       },
       {
-        'name': 'Beaivválaš giella:Musikksannõs 12',
         'collections': [
-          'Collection:Musikksannõs'
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
         ],
         'definition': null,
         'explanation': null,
         'terms': [
           {
-            'note': '(=, -ooʹje ~ =, arpeggiost)',
-            'source': null,
-            'status': null,
             'expression': {
-              'lemma': 'arpeggio',
-              'language': 'sms',
+              'language': 'smj',
+              'lemma': 'fijlla',
               'pos': 'N'
-            }
+            },
+            'note': 'jll jl',
+            'source': null,
+            'status': null
+          }
+        ]
+      },
+      {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': null,
+        'explanation': null,
+        'terms': [
+          {
+            'expression': {
+              'language': 'fin',
+              'lemma': 'viila',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          },
+          {
+            'expression': {
+              'language': 'fin',
+              'lemma': 'kaista',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          },
+          {
+            'expression': {
+              'language': 'fin',
+              'lemma': 'tiedosto',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          }
+        ]
+      },
+      {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': null,
+        'explanation': null,
+        'terms': [
+          {
+            'expression': {
+              'language': 'eng',
+              'lemma': 'file',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          }
+        ]
+      },
+      {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': 'fil, i edb: en ordnet mengde av sammenhørende data',
+        'explanation': null,
+        'terms': [
+          {
+            'expression': {
+              'language': 'nob',
+              'lemma': 'fil',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          }
+        ]
+      },
+      {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': null,
+        'explanation': null,
+        'terms': [
+          {
+            'expression': {
+              'language': 'swe',
+              'lemma': 'fil',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
+          }
+        ]
+      },
+      {
+        'collections': [
+          'Collection:SD-terms',
+          'Collection:Dáhtábágo javllamáno 2013'
+        ],
+        'definition': null,
+        'explanation': null,
+        'terms': [
+          {
+            'expression': {
+              'language': 'sma',
+              'lemma': 'fijle',
+              'pos': 'N'
+            },
+            'note': null,
+            'source': null,
+            'status': null
           }
         ]
       }
     ];
 
-    const lemma = 'arpeggio';
-    const want = [
-      {
-        'category': 'Beaivválaš giella',
-        'collections': [
-          'Collection:Musikksannõs'
-        ],
-        'dict': 'termwiki',
-        'from': {
-          'language': 'sme',
-          'definition': 'sointu jonka sävelet soitetaan nopeasti peräkkäin, murrettu sointu (Kielitoimiston sanakirja)',
-          'explanation': null,
-          'language': 'fin',
-          'terms': [
-            {
-              'expression': {
-                'language': 'fin',
-                'lemma': 'arpeggio',
-                'pos': 'N'
-              },
-              'note': '(murtosointu)',
-              'source': null,
-              'status': null
-            }
-          ]
-        },
-        'termwikiref': 'Beaivválaš giella:Musikksannõs 12',
-        'to': {
-          'language': 'sms',
-          'definition': null,
-          'explanation': null,
-          'language': 'sms',
-          'terms': [
-            {
-              'expression': {
-                'language': 'sms',
-                'lemma': 'arpeggio',
-                'pos': 'N'
-              },
-              'note': '(=, -ooʹje ~ =, arpeggiost)',
-              'source': null,
-              'status': null
-            }
-          ]
-        }
-      },
-      {
-        'category': 'Beaivválaš giella',
-        'collections': [
-          'Collection:Musikksannõs'
-        ],
-        'dict': 'termwiki',
-        'from': {
-          'language': 'sme',
-          'definition': null,
-          'explanation': null,
-          'language': 'sms',
-          'terms': [
-            {
-              'expression': {
-                'language': 'sms',
-                'lemma': 'arpeggio',
-                'pos': 'N'
-              },
-              'note': '(=, -ooʹje ~ =, arpeggiost)',
-              'source': null,
-              'status': null
-            }
-          ]
-        },
-        'termwikiref': 'Beaivválaš giella:Musikksannõs 12',
-        'to': {
-          'definition': 'sointu jonka sävelet soitetaan nopeasti peräkkäin, murrettu sointu (Kielitoimiston sanakirja)',
-          'explanation': null,
-          'language': 'fin',
-          'terms': [
-            {
-              'expression': {
-                'language': 'fin',
-                'lemma': 'arpeggio',
-                'pos': 'N'
-              },
-              'note': '(murtosointu)',
-              'source': null,
-              'status': null
-            }
-          ]
-        }
-      }
-    ]
-;
+    expect(orderedMultilingualConcept('vuorká', got)).toEqual(want);
   });
 });
 

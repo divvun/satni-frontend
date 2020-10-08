@@ -55,28 +55,17 @@ export const cleanFrom = (lemma, language, concept) => {
   };
 };
 
-export const multiLingualConcept2ConceptPairs = (lemma, language, multilingualconcept) => {
-  const concepts = moveLangFirst(language, multilingualconcept);
-  const {name, collections, ...rest} = concepts.shift();
-  const from = cleanFrom(lemma, language, rest);
-  const category = name.split(':')[0];
+/**
+ * Order the lemma to the front of the multilingual concept
+ * @param   {String}  lemma               The lemma we want
+ * @param   {Array}   multilingualConcept An unordered multilingual concept
+ * @return  {Array}                       An ordered multilingual concept
+ */
+export const orderedMultilingualConcept = (lemma, multilingualConcept) => {
+  const languages = languagesOfLemma(lemma, multilingualConcept);
+  const [ first, ...rest ] = moveLangFirst(languages[0], multilingualConcept);
 
-  return cleanedConcepts(language, concepts).map(concept => {
-    const {name, collections, ...rest} = concept;
-    const language = rest.terms[0].expression.language;
-
-    return {
-      termwikiref: name,
-      category,
-      dict: 'termwiki',
-      collections,
-      from: from,
-      to: {
-        ...rest,
-        language
-      }
-    };
-  });
+  return [cleanFrom(lemma, languages[0], first), ...rest];
 };
 
 /**
@@ -84,7 +73,8 @@ export const multiLingualConcept2ConceptPairs = (lemma, language, multilingualco
  * @param  {String} lemma       The lemma we want
  * @param  {String} language    The ISO-639-3 language code of the lemma
  * @param  {Array}  conceptList List of concepts
- * @return {Dict}               Concepts ordered by names
+ * @return {Dict}               Concept lists ordered by names => multilingual
+ *                              concepts
  */
 export const multilingualconceptListsByNames = (conceptList) => {
   return conceptList.reduce(
@@ -101,6 +91,12 @@ export const multilingualconceptListsByNames = (conceptList) => {
   );
 };
 
+/**
+ * Given a multilingual concept and lemma find which languages the lemma has
+ * @param   {string}  lemma       The lemma we want
+ * @param   {Array}   conceptList A multilingual concept
+ * @return  {Array}               List of languages
+ */
 export const languagesOfLemma = (lemma, conceptList) => {
   return Array.from(new Set(
     conceptList.flatMap(concept => (
