@@ -24,9 +24,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const TermWikiArticle = ({ category, concepts, lemma }) => {
+const TermWikiArticle = ({ category, multiLingualConcept, lemma }) => {
   const classes = useStyles();
   const pathname = useLocation().pathname;
+
   return <Paper
     className={classes.paper}
     elevation={1}
@@ -51,7 +52,7 @@ const TermWikiArticle = ({ category, concepts, lemma }) => {
           </TableCell>
         </TableRow>
         }
-        {concepts.map((concept, index) => {
+        {multiLingualConcept.map((concept, index) => {
           return (
             <TableRow key={index}>
               <TableCell padding='none'>

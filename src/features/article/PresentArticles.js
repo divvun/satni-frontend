@@ -1,7 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { multilingualconceptListsByNames, dictBackend2Frontend } from 'utils';
+import {
+  dictBackend2Frontend,
+  multilingualconceptListsByNames,
+  orderedMultilingualConcept
+} from 'utils';
 import DictArticle from './DictArticle';
 import TermWikiArticle from './TermWikiArticle';
 
@@ -36,7 +40,7 @@ const Articles = ({data, lemma}) => {
         <TermWikiArticle
           key={index}
           category={name.split(':')[0]}
-          concepts={termsByNames[name]}
+          multiLingualConcept={orderedMultilingualConcept(lemma, termsByNames[name])}
           lemma={lemma}
         />
       ))}
