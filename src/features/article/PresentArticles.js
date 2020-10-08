@@ -36,6 +36,7 @@ const Articles = ({data, lemma}) => {
         <DictArticle
           dictGroup={dictBackend2Frontend(dictEntry)}
           lemma={lemma}
+          key={index}
         />
       ))}
       {conceptList && Object.keys(termsByNames).map((name, index) => (

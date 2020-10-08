@@ -49,8 +49,8 @@ const DictArticle = ({dictGroup, lemma}) => {
         >
           {from.lookupLemmas.map((lookupLemma, i) => (
             (lookupLemma.lemma === lemma) ?
-              <Stem stem={lookupLemma} /> :
-              <DictTargetStem stem={lookupLemma} />
+              <Stem key={i} stem={lookupLemma} /> :
+              <DictTargetStem key={i} stem={lookupLemma} />
           ))}
         </Grid>
         <Grid
