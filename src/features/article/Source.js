@@ -1,11 +1,9 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import { wantedDictsVar } from 'apolloCache';

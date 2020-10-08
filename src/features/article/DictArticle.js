@@ -8,7 +8,6 @@ import Paper from '@material-ui/core/Paper';
 import { hasAvailableDict } from 'utils';
 import DictTargetStem from './DictTargetStem';
 import Examples from './Examples';
-import PairHeader from './PairHeader';
 import Source from './Source';
 import Stem from './Stem';
 
