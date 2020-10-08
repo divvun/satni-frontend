@@ -90,8 +90,8 @@ const Stem = ({ stem, restriction, withLink, lemmaHandler }) => {
         }
       </Typography>
       {(dialect || country) && <Typography>
-        {dialect && <Typography component='span'>Dialect: {dialect} </Typography>}
-        {country && <Typography component='span'>Country: {country}</Typography>}
+        {dialect && <Typography component='span'><Trans>Dialect</Trans>: <Trans id={dialect}/> </Typography>}
+        {country && <Typography component='span'><Trans>Country</Trans>: <Trans id={country}/></Typography>}
       </Typography>}
     </>
   );
