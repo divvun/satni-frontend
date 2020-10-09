@@ -13,11 +13,8 @@ const useStyles = makeStyles(theme => ({
   articles: {
     height: '80vh',
     overflowY: 'auto',
-    paddingRight: theme.spacing(2)
-  },
-  list: {
-    marginBottom: theme.spacing(2),
-    marginLeft: theme.spacing(2)
+    paddingRight: theme.spacing(2),
+    paddingLeft: theme.spacing(2)
   }
 }));
 
