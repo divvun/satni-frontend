@@ -23,7 +23,8 @@ const useStyles = makeStyles(theme => ({
 const Articles = ({data, lemma}) => {
   const classes = useStyles();
   const { dictEntryList, conceptList } = data;
-  const termsByNames = multilingualconceptListsByNames(conceptList);
+  const termsByNames = conceptList ?
+    multilingualconceptListsByNames(conceptList) : {};
   return (
     <div className={classes.articles}>
       {dictEntryList && dictEntryList.map((dictEntry, index) => (
