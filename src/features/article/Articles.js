@@ -158,11 +158,9 @@ const Articles = (props) => {
     </Typography>;
   }
 
-  if (wantedDicts.includes('termwiki')) {
-    return <PresentArticles
-      lemma={lemma}
-      data={data} />;
-  }
+  return <PresentArticles
+    lemma={lemma}
+    data={data} />;
 };
 
 export default Articles;
