@@ -12,12 +12,6 @@ import { multilingualconceptListsByNames, dictBackend2Frontend } from 'utils';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
 
-const query2articlelist = (lemma, data) => {
-  const termsByNames = multilingualconceptListsByNames(lemma, data.conceptList);
-  const dictList = data.dictEntryList.map(dictBackend2Frontend);
-  return dictList.concat(termsByNames);
-};
-
 const useStyles = makeStyles(theme => ({
   icons: {
     fontSize: 'inherit'
