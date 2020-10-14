@@ -21,15 +21,15 @@ msgstr "(<0>Näytä kaikki</0>)"
 msgid "<0/>"
 msgstr "<0/>"
 
-#: src/features/article/Articles.js:143
+#: src/features/article/Articles.js:136
 msgid "<0>Error {0}</0>"
 msgstr "<0>Virhe {0}</0>"
 
-#: src/features/article/Articles.js:142
+#: src/features/article/Articles.js:135
 msgid "<0>Loading...</0>"
 msgstr "<0>Ladataan...</0>"
 
-#: src/features/article/Articles.js:144
+#: src/features/article/Articles.js:137
 msgid "<0>Not found</0>"
 msgstr "<0>Ei löytynyt</0>"
 
@@ -162,6 +162,16 @@ msgstr ""
 msgid "Guolástus"
 msgstr ""
 
+#: src/features/article/Source.js:28
+#: src/features/article/Source.js:29
+msgid "Hide this dictionary"
+msgstr ""
+
+#: src/features/article/PairHeader.js:35
+#: src/features/article/PairHeader.js:36
+msgid "Hide this language"
+msgstr ""
+
 #: src/translateble_variables.js:48
 msgid "Huksenteknihkka"
 msgstr ""
@@ -199,7 +209,7 @@ msgstr "subst."
 msgid "NO"
 msgstr "Norja"
 
-#: src/features/article/Articles.js:161
+#: src/features/article/Articles.js:154
 msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
 msgstr ""
 
@@ -247,8 +257,18 @@ msgstr "Hakutulokset tulevat tähän."
 msgid "Servodatdieđa"
 msgstr ""
 
+#: src/features/paradigm/ParadigmButton.js:27
+#: src/features/paradigm/ParadigmButton.js:28
+msgid "Show paradigm for this word"
+msgstr ""
+
+#: src/features/korp/KorpButton.js:25
+#: src/features/korp/KorpButton.js:26
+msgid "Show this word in our corpus"
+msgstr ""
+
 #: src/features/article/LemmaGroup.js:16
-#: src/features/article/Source.js:23
+#: src/features/article/Source.js:24
 msgid "Source:"
 msgstr "Lähde:"
 
@@ -284,6 +304,11 @@ msgstr "Syötekenttä tukee saamenkielisiä, pohjoismaisten kieten, englannin- j
 #: src/features/wantedlangs/DictChooser.js:34
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr "Termipankissa on yli 50 000 termiartikkelia ja sitä päivitetään säännöllisesti."
+
+#: src/features/paradigm/ParadigmButton.js:43
+#: src/features/paradigm/ParadigmButton.js:44
+msgid "There is no paradigm for this word"
+msgstr ""
 
 #: src/features/wantedlangs/DictChooser.js:39
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
@@ -322,6 +347,11 @@ msgstr ""
 "Lisäksi useita yleisiä suomalaisia sanoja on lisätty."
 
 
+#: src/features/korp/KorpButton.js:47
+#: src/features/korp/KorpButton.js:48
+msgid "This word is not found in our corpus"
+msgstr ""
+
 #: src/translateble_variables.js:9
 msgid "V"
 msgstr "verbi"
@@ -334,7 +364,7 @@ msgstr "Tervetuloa!"
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Kun sana valitaan täällä, sanakirja-artikkeli aukeaa oikealle."
 
-#: src/features/search/FilterBar.js:48
+#: src/features/search/FilterBar.js:51
 msgid "Write at least one letter here"
 msgstr "Kirjoita vähintään yksi kirjain tähän"
 
