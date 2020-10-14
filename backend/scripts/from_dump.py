@@ -14,7 +14,7 @@ from termwikiimporter import bot
 
 LEMMAS = {}
 STEMS = {}
-langs = {
+LANGS = {
     'en': 'eng',
     'fi': 'fin',
     'nb': 'nob',
@@ -32,7 +32,7 @@ langs = {
 def make_lemma(lang, expression):
     lemma = Lemma(lemma=expression['expression'],
                   pos=expression['pos'],
-                  language=langs[lang],
+                  language=LANGS[lang],
                   dialect=None,
                   country=None)
     lemma.save()
@@ -43,7 +43,7 @@ def make_lemma(lang, expression):
 def make_terms(lang, concept):
     for expression in same_lang_sanctioned_expressions(
             lang, concept.related_expressions):
-        lemma_key = (expression['expression'], expression['pos'], langs[lang])
+        lemma_key = (expression['expression'], expression['pos'], LANGS[lang])
         if not LEMMAS.get(lemma_key):
             LEMMAS[lemma_key] = make_lemma(lang, expression)
 
@@ -115,11 +115,11 @@ def extract_term_stems(concept, valid_langs):
                 STEMS[expression['expression']]['dicts'] = set()
 
             STEMS[expression['expression']]['dicts'].add('termwiki')
-            STEMS[expression['expression']]['fromlangs'].add(langs[lang])
+            STEMS[expression['expression']]['fromlangs'].add(LANGS[lang])
             for lang2 in valid_langs:
                 if lang2 != lang:
                     STEMS[expression['expression']]['tolangs'].add(
-                        langs[lang2])
+                        LANGS[lang2])
 
 
 # Dict import below here
