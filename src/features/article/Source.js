@@ -4,6 +4,7 @@ import { Trans } from '@lingui/macro';
 
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 
 import { wantedDictsVar } from 'apolloCache';
@@ -23,12 +24,17 @@ const Source = ({source, lemma}) => {
         <Trans>Source:</Trans> <Link to={`${source}/${lemma}`}><Trans id={source} /></Link>
       </Typography>}
       control={
-        <Checkbox
-          checked
-          color='default'
-          name={source}
-          onChange={handleChange}
-        />
+        <Tooltip
+          title=<Trans>Hide this dictionary</Trans>
+          aria-label=<Trans>Hide this dictionary</Trans>
+        >
+          <Checkbox
+            checked
+            color='default'
+            name={source}
+            onChange={handleChange}
+          />
+        </Tooltip>
       }
     />
   );

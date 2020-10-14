@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import { Trans } from '@lingui/macro';
 import { useDispatch, useSelector } from 'react-redux';
 import IconButton from '@material-ui/core/IconButton';
 import InfoOutlined from '@material-ui/icons/InfoOutlined';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import { fetchParadigms } from 'features/paradigm/paradigmsSlice';
 import { stemToKey } from 'utils';
@@ -21,28 +23,39 @@ const ParadigmButton = ({lemma, language, pos, onClick, classes}) => {
     paradigmPos.has(pos) &&
     paradigms &&
     paradigms[stemToKey({lemma, pos, language})]) {
-    return <IconButton
-      className={classes.icons}
-      component='span'
-      aria-label='Paradigm'
-      onClick={onClick}
-      color='primary'
+    return <Tooltip
+      title=<Trans>Show paradigm for this word</Trans>
+      aria-label=<Trans>Show paradigm for this word</Trans>
     >
-      <InfoOutlined />
-    </IconButton>;
+      <IconButton
+        className={classes.icons}
+        component='span'
+        aria-label='Paradigm'
+        onClick={onClick}
+        color='primary'
+      >
+        <InfoOutlined />
+      </IconButton>
+    </Tooltip>;
   }
 
-  return <IconButton
-    disabled
-    className={classes.icons}
-    component='span'
-    aria-label='Paradigm'
-    onClick={onClick}
-    color='primary'
+  return <Tooltip
+    title=<Trans>There is no paradigm for this word</Trans>
+    aria-label=<Trans>There is no paradigm for this word</Trans>
   >
-    <InfoOutlined />
-  </IconButton>
-  ;
+    <span>
+      <IconButton
+        disabled
+        className={classes.icons}
+        component='span'
+        aria-label='Paradigm'
+        onClick={onClick}
+        color='primary'
+      >
+        <InfoOutlined />
+      </IconButton>
+    </span>
+  </Tooltip>;
 };
 
 export default ParadigmButton;
