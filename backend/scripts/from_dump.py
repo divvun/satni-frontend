@@ -4,10 +4,10 @@ import os
 import sys
 
 from lxml import etree
-from mongoengine.errors import ValidationError
 
 from dicts.models import DictEntry, ExampleGroup, Restriction, TranslationGroup
 from lemmas.models import Lemma
+from mongoengine.errors import ValidationError
 from stems.models import Stem
 from terms.models import Concept, Term
 from termwikiimporter import bot
