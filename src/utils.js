@@ -10,13 +10,6 @@ export const handleErrors = (response) => {
   return response;
 };
 
-const cleanedConcepts = (language, concepts) => {
-  const nonSami = new Set(['nob', 'eng', 'fin', 'nno', 'swe']);
-
-  return nonSami.has(language) ? concepts.filter(
-    concept => !nonSami.has(concept.terms[0].expression.language)) : concepts;
-};
-
 export const moveLangFirst = (language, concepts) => {
   return concepts.reduce(
     (accumulator, concept) => {
