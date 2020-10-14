@@ -30,14 +30,14 @@ langs = {
 
 
 def make_lemma(lang, expression):
-    l = Lemma(lemma=expression['expression'],
-              pos=expression['pos'],
-              language=langs[lang],
-              dialect=None,
-              country=None)
-    l.save()
+    lemma = Lemma(lemma=expression['expression'],
+                  pos=expression['pos'],
+                  language=langs[lang],
+                  dialect=None,
+                  country=None)
+    lemma.save()
 
-    return l
+    return lemma
 
 
 def make_terms(lang, concept):
