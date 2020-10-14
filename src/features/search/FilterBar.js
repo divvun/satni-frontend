@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import { I18n } from '@lingui/react';
-import { t } from '@lingui/macro';
 import { useHistory, useLocation } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
-import InputBase from '@material-ui/core/InputBase';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
 import Paper from '@material-ui/core/Paper';
 import Popover from '@material-ui/core/Popover';
@@ -13,8 +10,9 @@ import SearchIcon from '@material-ui/icons/Search';
 
 import { locationParser } from 'utils';
 import SamiKeys from './SamiKeys';
+import InputWithTranslation from './InputWithTranslation';
 
-const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.common.white,
     marginLeft: theme.spacing(2),
@@ -26,43 +24,11 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: fade(theme.palette.common.white, 0.25)
     }
   },
-  input: {
-    color: 'inherit',
-    marginLeft: theme.spacing(1),
-    flex: 1
-  },
   iconButton: {
     color: 'inherit',
     padding: theme.spacing(1)
   }
 }));
-
-const InputWithTranslation = (props) => {
-  const classes = useStyles();
-  const {value, onChange, onKeyUp} = props;
-
-  return (
-    <I18n>
-      {({i18n}) => (
-        <InputBase
-          autoFocus
-          value={value}
-          onChange={(onChange)}
-          onKeyUp={(onKeyUp)}
-          placeholder={i18n._(t`Write at least one letter here`)}
-          className={classes.input}
-          inputProps={{ 'aria-label': 'search' }}
-        />
-      )}
-    </I18n>
-  );
-};
-
-InputWithTranslation.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  onKeyUp: PropTypes.func.isRequired
-};
 
 function FilterBar({ searchHandler }) {
   const classes = useStyles();
