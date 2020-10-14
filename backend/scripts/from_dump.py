@@ -167,8 +167,8 @@ def make_restriction(translation_group):
 
     t_element = translation_group.find('./t[@reg]')
     if t_element is not None and t_element.get('reg').lower() != 'x':
-        return Restriction(restriction=t_element.get('reg'),
-                           attributes='')
+        return Restriction(restriction=t_element.get('reg'), attributes='')
+
 
 def make_example(example):
     return ExampleGroup(example=example.find('./x').text,
