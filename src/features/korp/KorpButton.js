@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import { Trans } from '@lingui/macro';
 import { useDispatch, useSelector } from 'react-redux';
 
 import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
 
 import { isLemmaInKorp } from 'features/korp/korpSlice';
@@ -19,31 +21,43 @@ const KorpButton = ({language, lemma, classes}) => {
   }, [dispatch, language, lemma]);
 
   if (korpLangs.has(language) && korp && korp['lemmaExists']) {
-    return <IconButton
-      className={classes.icons}
-      component='span'
-      aria-label='Corpus'
-      color='primary'
-      onClick={() => {
-        const a = document.createElement('a');
-        a.href = korpAddress;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.click();
-      }}
+    return <Tooltip
+      title=<Trans>Show this word in our corpus</Trans>
+      aria-label=<Trans>Show this word in our corpus</Trans>
     >
-      <ViewHeadlineOutlined />
-    </IconButton>;
+      <IconButton
+        className={classes.icons}
+        component='span'
+        aria-label='Corpus'
+        color='primary'
+        onClick={() => {
+          const a = document.createElement('a');
+          a.href = korpAddress;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.click();
+        }}
+      >
+        <ViewHeadlineOutlined />
+      </IconButton>
+    </Tooltip>;
   }
 
-  return <IconButton
-    disabled
-    className={classes.icons}
-    component='span'
-    aria-label='Corpus'
+  return <Tooltip
+    title=<Trans>This word is not found in our corpus</Trans>
+    aria-label=<Trans>This word is not found in our corpus</Trans>
   >
-    <ViewHeadlineOutlined />
-  </IconButton>;
+    <span>
+      <IconButton
+        disabled
+        className={classes.icons}
+        component='span'
+        aria-label='Corpus'
+      >
+        <ViewHeadlineOutlined />
+      </IconButton>
+    </span>
+  </Tooltip>;
 };
 
 export default KorpButton;

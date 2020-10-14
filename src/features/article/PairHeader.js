@@ -4,6 +4,7 @@ import { Trans } from '@lingui/macro';
 
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 
 import { wantedLangsVar } from 'apolloCache';
@@ -11,7 +12,7 @@ import { wantedLangsVar } from 'apolloCache';
 const useStyles = makeStyles(theme => ({
   lang1: {
     marginRight: theme.spacing(1)
-  },
+  }
 }));
 
 const PairHeader = ({ language }) => {
@@ -30,13 +31,18 @@ const PairHeader = ({ language }) => {
         variant='subtitle2'
       ><Trans id={language} /></Typography>}
       control={
-        <Checkbox
-          checked
-          className={classes.check}
-          color='default'
-          name={language}
-          onChange={handleChange}
-        />
+        <Tooltip
+          title=<Trans>Hide this language</Trans>
+          aria-label=<Trans>Hide this language</Trans>
+        >
+          <Checkbox
+            checked
+            className={classes.check}
+            color='default'
+            name={language}
+            onChange={handleChange}
+          />
+        </Tooltip>
       }
     />
   );
