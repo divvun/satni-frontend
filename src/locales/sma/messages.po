@@ -9,9 +9,9 @@ msgstr ""
 "Language: sma\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-14 17:57+0200\n"
+"PO-Revision-Date: 2020-10-14 19:57+0200\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
-"Language-Team: Northern Sami <i18n-sme@lister.ping.uio.no>\n"
+"Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
 "MIME-Version: 1.0\n"
 
@@ -23,15 +23,15 @@ msgstr "(<0>Vuesedh gaajhkh</0>)"
 msgid "<0/>"
 msgstr "<0/>"
 
-#: src/features/article/Articles.js:143
+#: src/features/article/Articles.js:136
 msgid "<0>Error {0}</0>"
 msgstr "<0>Båajhtede {0}</0>"
 
-#: src/features/article/Articles.js:142
+#: src/features/article/Articles.js:135
 msgid "<0>Loading...</0>"
 msgstr "<0>Vïedtjeminie …</0>"
 
-#: src/features/article/Articles.js:144
+#: src/features/article/Articles.js:137
 msgid "<0>Not found</0>"
 msgstr "<0>Idtji gååvnesh</0>"
 
@@ -181,6 +181,16 @@ msgstr "Gaskesadtemeteknigke"
 msgid "Guolástus"
 msgstr "Gøølemdahke"
 
+#: src/features/article/Source.js:28
+#: src/features/article/Source.js:29
+msgid "Hide this dictionary"
+msgstr ""
+
+#: src/features/article/PairHeader.js:35
+#: src/features/article/PairHeader.js:36
+msgid "Hide this language"
+msgstr ""
+
 #: src/translateble_variables.js:48
 msgid "Huksenteknihkka"
 msgstr "Bigkemeteknigke"
@@ -221,7 +231,7 @@ msgstr "subst."
 msgid "NO"
 msgstr "Nöörje"
 
-#: src/features/article/Articles.js:161
+#: src/features/article/Articles.js:154
 msgid ""
 "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if"
 " the wanted languages or dictionaries are selected."
@@ -279,8 +289,18 @@ msgstr "Maam ohtseme jijhtieh dagkoe."
 msgid "Servodatdieđa"
 msgstr "Sïebredahkendotkeme"
 
+#: src/features/paradigm/ParadigmButton.js:27
+#: src/features/paradigm/ParadigmButton.js:28
+msgid "Show paradigm for this word"
+msgstr ""
+
+#: src/features/korp/KorpButton.js:25
+#: src/features/korp/KorpButton.js:26
+msgid "Show this word in our corpus"
+msgstr ""
+
 #: src/features/article/LemmaGroup.js:16
-#: src/features/article/Source.js:23
+#: src/features/article/Source.js:24
 msgid "Source:"
 msgstr "Gaaltije"
 
@@ -329,6 +349,11 @@ msgid ""
 " regular basis."
 msgstr ""
 "Teermebasesne leah jeeneb goh 50 000 artihkelh, jïh orresten daamhtetje."
+
+#: src/features/paradigm/ParadigmButton.js:43
+#: src/features/paradigm/ParadigmButton.js:44
+msgid "There is no paradigm for this word"
+msgstr ""
 
 #: src/features/wantedlangs/DictChooser.js:39
 msgid ""
@@ -383,6 +408,11 @@ msgstr ""
 " tjaaleme gosse barkeme Oahpa mij noerhtesaemien. Mijjieh aaj lissiehtamme"
 " sïejhme noerhtesaemien baakoeh."
 
+#: src/features/korp/KorpButton.js:47
+#: src/features/korp/KorpButton.js:48
+msgid "This word is not found in our corpus"
+msgstr ""
+
 #: src/translateble_variables.js:9
 msgid "V"
 msgstr "verbe"
@@ -396,7 +426,7 @@ msgid "When you click a word here, dictionary articles appear to the right."
 msgstr ""
 "Gosse baakoem dagkoe diedtel, baakoegærjaartihkelh jijhtieh garrabealan."
 
-#: src/features/search/FilterBar.js:48
+#: src/features/search/FilterBar.js:51
 msgid "Write at least one letter here"
 msgstr "Tjaelel unnemes aktem bokstaavem dagka"
 
@@ -408,7 +438,6 @@ msgstr ""
 "Dagkoe datne maahtah plæredh ohtsemebåatoejsne, orre båatoeh båetieh goske"
 " gaajhkh gaavneme."
 
-# Om dialekt
 #: src/translateble_variables.js:21
 msgid "east"
 msgstr "luvlie"

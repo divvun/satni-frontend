@@ -6,13 +6,13 @@ msgstr ""
 "Mime-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 20.08.2\n"
 "Language: nb\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-09 17:48+0200\n"
+"PO-Revision-Date: 2020-10-14 19:57+0200\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
-"Language-Team: Northern Sami <i18n-sme@lister.ping.uio.no>\n"
+"Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
 "MIME-Version: 1.0\n"
 
@@ -24,15 +24,15 @@ msgstr "(<0>Vis alle</0>)"
 msgid "<0/>"
 msgstr "<0/>"
 
-#: src/features/article/Articles.js:143
+#: src/features/article/Articles.js:136
 msgid "<0>Error {0}</0>"
 msgstr "<0>Feil {0}</0>"
 
-#: src/features/article/Articles.js:142
+#: src/features/article/Articles.js:135
 msgid "<0>Loading...</0>"
 msgstr "<0>Laster …</0>"
 
-#: src/features/article/Articles.js:144
+#: src/features/article/Articles.js:137
 msgid "<0>Not found</0>"
 msgstr "<0>Ikke funnet</0>"
 
@@ -181,6 +181,16 @@ msgstr "Kommunikasjonsteknikk"
 msgid "Guolástus"
 msgstr "Fiskeri"
 
+#: src/features/article/Source.js:28
+#: src/features/article/Source.js:29
+msgid "Hide this dictionary"
+msgstr "Gjem denne ordboka"
+
+#: src/features/article/PairHeader.js:35
+#: src/features/article/PairHeader.js:36
+msgid "Hide this language"
+msgstr "Gjem dette språket"
+
 #: src/translateble_variables.js:48
 msgid "Huksenteknihkka"
 msgstr "Begyningsteknikk"
@@ -221,7 +231,7 @@ msgstr "subst."
 msgid "NO"
 msgstr "Norge"
 
-#: src/features/article/Articles.js:161
+#: src/features/article/Articles.js:154
 msgid ""
 "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if"
 " the wanted languages or dictionaries are selected."
@@ -279,8 +289,18 @@ msgstr "Søkeresultater dukker opp her."
 msgid "Servodatdieđa"
 msgstr "Samfunnsvitenskap"
 
+#: src/features/paradigm/ParadigmButton.js:27
+#: src/features/paradigm/ParadigmButton.js:28
+msgid "Show paradigm for this word"
+msgstr "Vis bøyingsmønsteret for dette ordet"
+
+#: src/features/korp/KorpButton.js:25
+#: src/features/korp/KorpButton.js:26
+msgid "Show this word in our corpus"
+msgstr "Vis dette ordet i tekstsamlingen vår"
+
 #: src/features/article/LemmaGroup.js:16
-#: src/features/article/Source.js:23
+#: src/features/article/Source.js:24
 msgid "Source:"
 msgstr "Kilde:"
 
@@ -328,6 +348,11 @@ msgid ""
 "The termbase consists of over 50,000 term articles, and is updated on a"
 " regular basis."
 msgstr "Termbase har over 50 000 termartikler og oppdateres jevnlig."
+
+#: src/features/paradigm/ParadigmButton.js:43
+#: src/features/paradigm/ParadigmButton.js:44
+msgid "There is no paradigm for this word"
+msgstr "Dette ordet har ikke bøyingsmønster"
 
 #: src/features/wantedlangs/DictChooser.js:39
 msgid ""
@@ -379,6 +404,11 @@ msgstr ""
 " inhemska språken i Finland, og fra Giellateknos arbeid med nordsamisk Oahpa."
 " I tillegg er det lagt til vanlige nordsamiske ord."
 
+#: src/features/korp/KorpButton.js:47
+#: src/features/korp/KorpButton.js:48
+msgid "This word is not found in our corpus"
+msgstr "Dette ordet finnes ikke i tekstsamlingen vår"
+
 #: src/translateble_variables.js:9
 msgid "V"
 msgstr "verb"
@@ -391,7 +421,7 @@ msgstr "Velkommen!"
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Når du klikker på et ord her, dukker ordboksartikler opp til høyre."
 
-#: src/features/search/FilterBar.js:48
+#: src/features/search/FilterBar.js:51
 msgid "Write at least one letter here"
 msgstr "Skriv minst en bokstav her"
 
