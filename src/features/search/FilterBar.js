@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
+import { useHistory, useLocation } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
 import InputBase from '@material-ui/core/InputBase';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
@@ -9,6 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import Popover from '@material-ui/core/Popover';
 import SearchIcon from '@material-ui/icons/Search';
 
+import { locationParser } from 'utils';
 import SamiKeys from './SamiKeys';
 
 const useStyles = makeStyles((theme) => ({
@@ -36,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 
 const InputWithTranslation = (props) => {
   const classes = useStyles();
-  const {value, onChange} = props;
+  const {value, onChange, onKeyUp} = props;
 
   return (
     <I18n>
@@ -45,6 +47,7 @@ const InputWithTranslation = (props) => {
           autoFocus
           value={value}
           onChange={(onChange)}
+          onKeyUp={(onKeyUp)}
           placeholder={i18n._(t`Write at least one letter here`)}
           className={classes.input}
           inputProps={{ 'aria-label': 'search' }}
@@ -56,8 +59,11 @@ const InputWithTranslation = (props) => {
 
 const FilterBar = ({searchHandler}) => {
   const classes = useStyles();
-
+  const history = useHistory();
+  const location = useLocation();
+  const currentPath = locationParser(location.pathname);
   const [value, setValue] = useState('');
+
   const handleChange = (event) => {
     const newValue = event.target.value;
     setValue(newValue);
@@ -68,6 +74,13 @@ const FilterBar = ({searchHandler}) => {
     const newValue = `${value}${input}`;
     setValue(newValue);
     searchHandler(newValue);
+  };
+
+  const keyPress = event => {
+    if (event.key === 'Enter') {
+      const path = currentPath.currentDict ? `/${currentPath.currentDict}/${value}` : `/${value}`;
+      history.push(path);
+    }
   };
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -84,7 +97,7 @@ const FilterBar = ({searchHandler}) => {
   const id = open ? 'sami-keys' : undefined;
 
   return (
-    <Paper component='form' className={classes.root}>
+    <Paper component='div' className={classes.root}>
       <IconButton
         className={classes.iconButton}
         aria-label='sámi keys'
@@ -96,6 +109,7 @@ const FilterBar = ({searchHandler}) => {
       <InputWithTranslation
         value={value}
         onChange={(handleChange)}
+        onKeyUp={(keyPress)}
       />
       <div className={classes.iconButton} aria-label='search'>
         <SearchIcon />
