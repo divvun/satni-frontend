@@ -8,14 +8,14 @@ msgstr ""
 "Language: fi\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-08-19 17:59+0200\n"
+"PO-Revision-Date: 2020-10-14 19:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Plural-Forms: \n"
 
 #: src/containers/StatusBar.js:19
 msgid "(<0>Show all</0>)"
-msgstr ""
+msgstr "(<0>Näytä kaikki</0>)"
 
 #: src/features/article/Source.stories.js:10
 msgid "<0/>"
@@ -45,6 +45,9 @@ msgstr "adv."
 #: src/features/wantedlangs/DictChooser.js:46
 msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
 msgstr ""
+"Suunnilleen puolet sanakirjan sisällöstä on otettu etsimällä vastineita "
+"hallitustekstin rinnakkaiskorpuksesta. Tämän työn on rahoittanut "
+"paikallishallinnon ja modernisoinnin ministeriö."
 
 #: src/translateble_variables.js:36
 msgid "Beaivválaš giella"
@@ -56,7 +59,7 @@ msgstr ""
 
 #: src/features/article/TermWikiArticle.js:41
 msgid "Category"
-msgstr ""
+msgstr "Kategoria"
 
 #: src/features/wantedlangs/DictChooserDialog.js:49
 msgid "Choose dictionaries"
@@ -72,11 +75,11 @@ msgstr "Valitse <0/> nähdäksesi taivutusparadigman. Valitse <1/> nähdäksesi 
 
 #: src/features/article/Stem.js:94
 msgid "Country"
-msgstr ""
+msgstr "Maa"
 
 #: src/features/article/Definitions.js:19
 msgid "Definition"
-msgstr ""
+msgstr "Määritelmä"
 
 #: src/features/article/Definitions.js:20
 #~ msgid "Definitions:"
@@ -84,7 +87,7 @@ msgstr ""
 
 #: src/features/article/Stem.js:93
 msgid "Dialect"
-msgstr ""
+msgstr "Murre"
 
 #: src/containers/SatniDrawer.js:90
 msgid "Dictionaries"
@@ -101,6 +104,9 @@ msgstr ""
 #: src/containers/Welcome.js:55
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
 msgstr ""
+"Tee hakuja <0>Giellagáldun</0> termikokoelmasta, <1>Pekka Sammallahden</1>"
+" Pohjoissaame–suomi-sanakirjasta</1> ja <2>Giellateknon</2> "
+"<3>saamensanakirjoista</3>, jotka <4>Divvun</4> on tuonut käytettäviksi."
 
 #: src/translateble_variables.js:39
 msgid "Dáidda ja girjjálašvuohta"
@@ -112,7 +118,7 @@ msgstr ""
 
 #: src/translateble_variables.js:41
 msgid "Education"
-msgstr ""
+msgstr "Koulutus"
 
 #: src/translateble_variables.js:42
 msgid "Ekologiija ja biras"
@@ -125,10 +131,12 @@ msgstr ""
 #: src/features/wantedlangs/DictChooser.js:27
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
 msgstr ""
+"Emeritusprofessori Pekka Sammallahti on pohjannut tämän sanakirjan itse "
+"tekemiinsä vuosien 1989 ja 1993 painettuihin sanakirjoihin."
 
 #: src/translateble_variables.js:17
 msgid "FI"
-msgstr ""
+msgstr "Suomi"
 
 #: src/translateble_variables.js:44
 msgid "Geografiija"
@@ -141,6 +149,10 @@ msgstr ""
 #: src/features/wantedlangs/DictChooser.js:33
 msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
 msgstr ""
+"Giellagáldun päätehtävä on standardoida uutta termistöä saamen kielten "
+"kirjakielille. Standardoidut termit heidän "
+"<a href=\"satni.uit.no/termwiki\">termitietokannastaan</a> tuodaan päivittäin"
+" tälle sivustolle helppokäyttöisyyttä varten."
 
 #: src/translateble_variables.js:46
 msgid "Gulahallanteknihkka"
@@ -156,7 +168,8 @@ msgstr ""
 
 #: src/containers/Welcome.js:131
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
-msgstr "Artikkelien sisältä voi poistaa ei-haluttuja kieliä tai sanakirjoja.Ne voi uudelleenaktivoida painamalla nappeja <0/> tai <1/> ."
+msgstr "Artikkelien sisältä voi poistaa ei-haluttuja kieliä tai sanakirjoja. "
+"Ne voi uudelleenaktivoida painamalla nappeja <0/> tai <1/> ."
 
 #: src/translateble_variables.js:49
 msgid "Juridihkka"
@@ -184,7 +197,7 @@ msgstr "subst."
 
 #: src/translateble_variables.js:17
 msgid "NO"
-msgstr ""
+msgstr "Norja"
 
 #: src/features/article/Articles.js:161
 msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
@@ -208,7 +221,7 @@ msgstr ""
 
 #: src/features/paradigm/ParadigmDialog.js:47
 msgid "Paradigm"
-msgstr ""
+msgstr "Paradigma"
 
 #: src/translateble_variables.js:9
 msgid "Pron"
@@ -216,15 +229,15 @@ msgstr "pron."
 
 #: src/translateble_variables.js:54
 msgid "Religion"
-msgstr ""
+msgstr "Uskonto"
 
 #: src/containers/StatusBar.js:19
 msgid "Results only from"
-msgstr ""
+msgstr "Tuloksia vain kohteesta"
 
 #: src/translateble_variables.js:17
 msgid "SE"
-msgstr ""
+msgstr "Ruotsi"
 
 #: src/containers/Welcome.js:73
 msgid "Search results will appear here."
@@ -241,7 +254,7 @@ msgstr "Lähde:"
 
 #: src/containers/SatniDrawer.js:74
 msgid "Start"
-msgstr ""
+msgstr "Aloita"
 
 #: src/features/article/LemmaGroup.js:15
 msgid "Status:"
@@ -258,11 +271,11 @@ msgstr ""
 #: src/features/wantedlangs/DictChooser.js:62
 #: src/features/wantedlangs/DictChooser.js:68
 msgid "The dictionary contains about 11,000 entries."
-msgstr ""
+msgstr "Sanakirjassa on noin 11 000 sanaa."
 
 #: src/features/wantedlangs/DictChooser.js:28
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
-msgstr ""
+msgstr "Sanakirjassa on ylu 50 000 sanaa ja Sammallahti lisää niitä päivittäin."
 
 #: src/containers/Welcome.js:81
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
@@ -270,31 +283,44 @@ msgstr "Syötekenttä tukee saamenkielisiä, pohjoismaisten kieten, englannin- j
 
 #: src/features/wantedlangs/DictChooser.js:34
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
-msgstr ""
+msgstr "Termipankissa on yli 50 000 termiartikkelia ja sitä päivitetään säännöllisesti."
 
 #: src/features/wantedlangs/DictChooser.js:39
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
 msgstr ""
+"Sanakirja perustuu Nils Jernslettenin sanakirjaan Álgosátnegirji (4322 sanaa),"
+" kuitenkin, se sisältää nykyään yli 30 000 sanaa ja 6000 paikannimeä."
 
 #: src/features/wantedlangs/DictChooser.js:51
 #: src/features/wantedlangs/DictChooser.js:56
 msgid "This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern Sámi Oahpa."
 msgstr ""
+"Tämä sanakirja peustuu Albert Jåman ja Tove Brustadin aineistoon Hemnesin "
+"saamelaisjärjestöltä, mutta siinä on lisäksi sanoja Giellateknon ja Aajegen "
+"eteläsaamen Oahpa-työssä lisättyjä sanoja."
 
 #: src/features/wantedlangs/DictChooser.js:73
 #: src/features/wantedlangs/DictChooser.js:78
 #: src/features/wantedlangs/DictChooser.js:83
 #: src/features/wantedlangs/DictChooser.js:88
 msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
-msgstr ""
+msgstr "Tämä sanasto perustuu Valtosen ja Olthuisin "
+"Inarinsaame–suomi–inarinsaame-sanakirjalle (30000 sanaa)."
 
 #: src/features/wantedlangs/DictChooser.js:67
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been added."
 msgstr ""
+"Tämä sanakirja perustuu Kotimaisten kielten keskuksen sana-aineistoon ja "
+"siihen on lisätty Giellateknon Oahpa-kehityksessä tarvittuja sanoja. "
+"Lisäksi useita yleisiä suomalaisia sanoja on lisätty."
 
 #: src/features/wantedlangs/DictChooser.js:61
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr ""
+"Tämä sanakirja perustuu Kotimaisten kielten keskuksen sana-aineistoon ja "
+"siihen on lisätty Giellateknon Oahpa-kehityksessä tarvittuja sanoja. "
+"Lisäksi useita yleisiä suomalaisia sanoja on lisätty."
+
 
 #: src/translateble_variables.js:9
 msgid "V"
@@ -318,7 +344,7 @@ msgstr "Hakusanoja voi selata tässä, uusia tuloksia haetaan kunnes kaikki on l
 
 #: src/translateble_variables.js:21
 msgid "east"
-msgstr ""
+msgstr "itä"
 
 #: src/translateble_variables.js:12
 msgid "en"
@@ -490,7 +516,7 @@ msgstr "koltansaamen"
 
 #: src/translateble_variables.js:24
 msgid "south"
-msgstr ""
+msgstr "etelä"
 
 #: src/translateble_variables.js:12
 msgid "sv"
@@ -514,15 +540,15 @@ msgstr "Giellagáldun monikielinen termisanasto"
 
 #: src/translateble_variables.js:22
 msgid "west"
-msgstr ""
+msgstr "länsi"
 
 #: src/containers/StatusBar.js:28
 msgid "{0}/{1} languages."
-msgstr ""
+msgstr "{0}/{1} kieltä."
 
 #: src/containers/StatusBar.js:23
 msgid "{0}/{1} sources."
-msgstr ""
+msgstr "{0}/{1} lähdettä."
 
 #: src/features/infinitestems/InfiniteStems.js:48
 msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
