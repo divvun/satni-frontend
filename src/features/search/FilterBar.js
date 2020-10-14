@@ -8,6 +8,7 @@ import InputBase from '@material-ui/core/InputBase';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
 import Paper from '@material-ui/core/Paper';
 import Popover from '@material-ui/core/Popover';
+import PropTypes from 'prop-types';
 import SearchIcon from '@material-ui/icons/Search';
 
 import { locationParser } from 'utils';
@@ -57,7 +58,13 @@ const InputWithTranslation = (props) => {
   );
 };
 
-const FilterBar = ({searchHandler}) => {
+InputWithTranslation.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onKeyUp: PropTypes.func.isRequired
+};
+
+function FilterBar({ searchHandler }) {
   const classes = useStyles();
   const history = useHistory();
   const location = useLocation();
@@ -109,8 +116,7 @@ const FilterBar = ({searchHandler}) => {
       <InputWithTranslation
         value={value}
         onChange={(handleChange)}
-        onKeyUp={(keyPress)}
-      />
+        onKeyUp={(keyPress)} />
       <div className={classes.iconButton} aria-label='search'>
         <SearchIcon />
       </div>
@@ -132,6 +138,10 @@ const FilterBar = ({searchHandler}) => {
       </Popover>
     </Paper>
   );
+}
+
+FilterBar.propTypes = {
+  searchHandler: PropTypes.func.isRequired
 };
 
 export default FilterBar;
