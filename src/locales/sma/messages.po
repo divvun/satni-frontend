@@ -1,17 +1,19 @@
+# Børre Gaup <borre.gaup@uit.no>, 2020.
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2020-07-22 21:16+0200\n"
 "Mime-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: @lingui/cli\n"
+"X-Generator: Lokalize 20.08.2\n"
 "Language: sma\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"PO-Revision-Date: 2020-10-14 17:57+0200\n"
+"Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
+"Language-Team: Northern Sami <i18n-sme@lister.ping.uio.no>\n"
 "Plural-Forms: \n"
+"MIME-Version: 1.0\n"
 
 #: src/containers/StatusBar.js:19
 msgid "(<0>Show all</0>)"
@@ -43,8 +45,14 @@ msgstr "adv."
 
 #: src/features/wantedlangs/DictChooser.js:40
 #: src/features/wantedlangs/DictChooser.js:46
-msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
-msgstr "Mahte bielie baakoepaarine vïedtjesovveme daaroe-saemien baaltelaake teekstiste, jïh dam barkoem Tjïelte- jïh regionaaledepartemeente beetnehvierhtiejgujmie dåårjeme."
+msgid ""
+"Approximately half of the content of the dictionary is taken by searching for"
+" parallels in a parallel corpus of administrative text. This work was"
+" financed by the Ministry of Local Government and Modernisation."
+msgstr ""
+"Mahte bielie baakoepaarine vïedtjesovveme daaroe-saemien baaltelaake"
+" teekstiste, jïh dam barkoem Tjïelte- jïh regionaaledepartemeente"
+" beetnehvierhtiejgujmie dåårjeme."
 
 #: src/translateble_variables.js:36
 msgid "Beaivválaš giella"
@@ -52,11 +60,11 @@ msgstr ""
 
 #: src/translateble_variables.js:37
 msgid "Boazodoallu"
-msgstr ""
+msgstr "Båatsoe"
 
 #: src/features/article/TermWikiArticle.js:41
 msgid "Category"
-msgstr ""
+msgstr "Kategorije"
 
 #: src/features/wantedlangs/DictChooserDialog.js:49
 msgid "Choose dictionaries"
@@ -67,100 +75,127 @@ msgid "Choose languages"
 msgstr "Veeljh gïelh"
 
 #: src/containers/Welcome.js:123
-msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
-msgstr "Gosse diedtelh <0/>, dle vuajnah guktie baakoem sojjehtidh. Gosse diedtelh <1/>, dle vuajnah guktie baakoe provhkesovveme."
+msgid ""
+"Click <0/> to see the inflection paradigm of words. Click <1/> to see"
+" examples of how the word is used."
+msgstr ""
+"Gosse diedtelh <0/>, dle vuajnah guktie baakoem sojjehtidh. Gosse diedtelh <"
+"1/>, dle vuajnah guktie baakoe provhkesovveme."
 
 #: src/features/article/Stem.js:94
 msgid "Country"
-msgstr ""
+msgstr "Rïjhke"
 
 #: src/features/article/Definitions.js:19
 msgid "Definition"
-msgstr ""
-
-#: src/features/article/Definitions.js:20
-#~ msgid "Definitions:"
-#~ msgstr "Definisjovne:"
+msgstr "Definisjovne"
 
 #: src/features/article/Stem.js:93
 msgid "Dialect"
-msgstr ""
+msgstr "Smaarege"
 
 #: src/containers/SatniDrawer.js:90
 msgid "Dictionaries"
 msgstr "Baakoegærjah"
 
 #: src/containers/Welcome.js:115
-msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
-msgstr "Baakoegærjaartihkelh jijhtieh dagkoe gosse diedtelh baakoem ohtseme baakojste garrabealesne."
+msgid ""
+"Dictionary articles will appear in this pane when you press a word in the"
+" search results to the left."
+msgstr ""
+"Baakoegærjaartihkelh jijhtieh dagkoe gosse diedtelh baakoem ohtseme baakojste"
+" garrabealesne."
 
 #: src/translateble_variables.js:38
 msgid "Dihtorteknologiija ja diehtoteknihkka"
-msgstr ""
+msgstr "Daatateknologije jïh daatateknigke"
 
 #: src/containers/Welcome.js:55
-msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
-msgstr "Ohtsh <0>Gïelegaaltijen</0>teermetjåagkestahke, <1>Pekka Sammallahti noerhtesaemien - soemen baakoegærjesne</1> jïh <2>Gïeletekno</2> <3>saemien baakoegærjine</3> seammasïenten. Gaajhkh dejtie <4>Divvun</4> lea sjïehtedamme."
+msgid ""
+"Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's"
+" North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami"
+" dictionaries</3>, all set up by <4>Divvun</4>."
+msgstr ""
+"Ohtsh <0>Gïelegaaltijen</0>teermetjåagkestahke, <1>Pekka Sammallahti"
+" noerhtesaemien - soemen baakoegærjesne</1> jïh <2>Gïeletekno</2> <3>saemien"
+" baakoegærjine</3> seammasïenten. Gaajhkh dejtie <4>Divvun</4> lea"
+" sjïehtedamme."
 
 #: src/translateble_variables.js:39
 msgid "Dáidda ja girjjálašvuohta"
-msgstr ""
+msgstr "Tjiehpiesvuekieh jïh tjaaleldahkh"
 
 #: src/translateble_variables.js:40
 msgid "Eanandoallu"
-msgstr ""
+msgstr "Laanteburrie"
 
 #: src/translateble_variables.js:41
 msgid "Education"
-msgstr ""
+msgstr "Pedagogihke"
 
 #: src/translateble_variables.js:42
 msgid "Ekologiija ja biras"
-msgstr ""
+msgstr "Økologije jïh voenge"
 
 #: src/translateble_variables.js:43
 msgid "Ekonomiija ja gávppašeapmi"
-msgstr ""
+msgstr "Økonomije jïh åesiestimmie"
 
 #: src/features/wantedlangs/DictChooser.js:27
-msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
-msgstr "Emeritusprofessore Pekka Sammallahti tjaaleme dam baakoegærjam jïjtse 1989 jïh 1993 preenteme baakoegærjaj mïetie."
+msgid ""
+"Emeritusprofessor Pekka Sammallahti has based this dictionary on his own"
+" printed dictionaries published in 1989 and 1993."
+msgstr ""
+"Emeritusprofessore Pekka Sammallahti tjaaleme dam baakoegærjam jïjtse 1989"
+" jïh 1993 preenteme baakoegærjaj mïetie."
 
 #: src/translateble_variables.js:17
 msgid "FI"
-msgstr ""
+msgstr "Soeme"
 
 #: src/translateble_variables.js:44
 msgid "Geografiija"
-msgstr ""
+msgstr "Geografije"
 
 #: src/translateble_variables.js:45
 msgid "Gielladieđa"
-msgstr ""
+msgstr "Gïelendotkeme"
 
 #: src/features/wantedlangs/DictChooser.js:33
-msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
-msgstr "Gïelegaaltijen åejviebarkoe lea orre terminologijem jïh tjaelemegïelem normeredh.Normeresovveme teermh dej <a href=\"satni.uit.no/termwiki\">teermebaseste<a> vïedtjesovva fïerhten biejjien dan nedtesæjrose, juktie aelhkebe jaksoes saemien sïebredahkese."
+msgid ""
+"Giellagáldu's main task is to standardise new terminology and written"
+" language for the Sami languages. The standardised terms from their <a"
+" href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site,"
+" to be easily accessible to the Sami community."
+msgstr ""
+"Gïelegaaltijen åejviebarkoe lea orre terminologijem jïh tjaelemegïelem"
+" normeredh.Normeresovveme teermh dej <a href=\"satni.uit.no/termwiki\""
+">teermebaseste<a> vïedtjesovva fïerhten biejjien dan nedtesæjrose, juktie"
+" aelhkebe jaksoes saemien sïebredahkese."
 
 #: src/translateble_variables.js:46
 msgid "Gulahallanteknihkka"
-msgstr ""
+msgstr "Gaskesadtemeteknigke"
 
 #: src/translateble_variables.js:47
 msgid "Guolástus"
-msgstr ""
+msgstr "Gøølemdahke"
 
 #: src/translateble_variables.js:48
 msgid "Huksenteknihkka"
-msgstr ""
+msgstr "Bigkemeteknigke"
 
 #: src/containers/Welcome.js:131
-msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
-msgstr "Artihkelinie maahtah vöörhkedh gïelh jallh baakoegærjah maam ij sïjhth vuejnedh. Dejtie maahtah vihth vuesiehtidh jis diedtelh <0/> jallh <1/>."
+msgid ""
+"Inside the articles you can hide unwanted languages and dictionaries. To"
+" reactivate them, press <0/> or <1/> ."
+msgstr ""
+"Artihkelinie maahtah vöörhkedh gïelh jallh baakoegærjah maam ij sïjhth"
+" vuejnedh. Dejtie maahtah vihth vuesiehtidh jis diedtelh <0/> jallh <1/>."
 
 #: src/translateble_variables.js:49
 msgid "Juridihkka"
-msgstr ""
+msgstr "Jussh"
 
 #: src/containers/SatniDrawer.js:82
 msgid "Languages"
@@ -168,15 +203,15 @@ msgstr "Gïelh"
 
 #: src/translateble_variables.js:50
 msgid "Luonddudieđa ja matematihkka"
-msgstr ""
+msgstr "Eatnemedotkeme jih maatematigke"
 
 #: src/translateble_variables.js:51
 msgid "Medisiidna"
-msgstr ""
+msgstr "Medisijne"
 
 #: src/translateble_variables.js:52
 msgid "Mášenteknihkka"
-msgstr ""
+msgstr "Maasjinateknigke"
 
 #: src/translateble_variables.js:9
 msgid "N"
@@ -184,19 +219,29 @@ msgstr "subst."
 
 #: src/translateble_variables.js:17
 msgid "NO"
-msgstr ""
+msgstr "Nöörje"
 
 #: src/features/article/Articles.js:161
-msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
-msgstr "Ij naan båatoeh <0>{lemma}</0> ohtsemebaakose. Goerehth <1/> jallh <2/> jis gïelh jallh baakoegærjah mam sïjhth, veeljesovveme."
+msgid ""
+"No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if"
+" the wanted languages or dictionaries are selected."
+msgstr ""
+"Ij naan båatoeh <0>{lemma}</0> ohtsemebaakose. Goerehth <1/> jallh <2/> jis"
+" gïelh jallh baakoegærjah mam sïjhth, veeljesovveme."
 
 #: src/features/infinitestems/InfiniteStems.js:51
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "<0>{searchExpression}</0> ij baakoegærjine gååvnesh"
 
 #: src/features/wantedlangs/DictChooser.js:45
-msgid "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but frequent Norwegian words have been added. It contains about 26,000 Norwegian entries."
-msgstr "Daaroen → noerhtesaemien lea baseresovveme Noerhtesaemien → daaroen baakoegærjese, men lissiehtamme sïejhme daaroen baakoeh. Baakoegærjesne 26,000 ohtsemebaakoeh."
+msgid ""
+"Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but"
+" frequent Norwegian words have been added. It contains about 26,000 Norwegian"
+" entries."
+msgstr ""
+"Daaroen → noerhtesaemien lea baseresovveme Noerhtesaemien → daaroen"
+" baakoegærjese, men lissiehtamme sïejhme daaroen baakoeh. Baakoegærjesne"
+" 26,000 ohtsemebaakoeh."
 
 #: src/features/article/LemmaGroup.js:14
 msgid "Note:"
@@ -204,7 +249,7 @@ msgstr "Notaate:"
 
 #: src/translateble_variables.js:53
 msgid "Ođđa sánit"
-msgstr ""
+msgstr "Orre baakoeh"
 
 #: src/features/paradigm/ParadigmDialog.js:47
 msgid "Paradigm"
@@ -216,7 +261,7 @@ msgstr "pron."
 
 #: src/translateble_variables.js:54
 msgid "Religion"
-msgstr ""
+msgstr "Religijovne"
 
 #: src/containers/StatusBar.js:19
 msgid "Results only from"
@@ -224,7 +269,7 @@ msgstr "Båatoeh ajve"
 
 #: src/translateble_variables.js:17
 msgid "SE"
-msgstr ""
+msgstr "Sveerje"
 
 #: src/containers/Welcome.js:73
 msgid "Search results will appear here."
@@ -232,7 +277,7 @@ msgstr "Maam ohtseme jijhtieh dagkoe."
 
 #: src/translateble_variables.js:55
 msgid "Servodatdieđa"
-msgstr ""
+msgstr "Sïebredahkendotkeme"
 
 #: src/features/article/LemmaGroup.js:16
 #: src/features/article/Source.js:23
@@ -249,11 +294,11 @@ msgstr "Staatuse:"
 
 #: src/translateble_variables.js:56
 msgid "Stáda almmolaš hálddašeapmi"
-msgstr ""
+msgstr "Byjjes reereme"
 
 #: src/translateble_variables.js:57
 msgid "Teknihkka industriija duodji"
-msgstr ""
+msgstr "Teknigke, industrije jïh vætnoeh"
 
 #: src/features/wantedlangs/DictChooser.js:62
 #: src/features/wantedlangs/DictChooser.js:68
@@ -261,40 +306,82 @@ msgid "The dictionary contains about 11,000 entries."
 msgstr "Baakoegærjesne medtie 11 000 ohtsemebaakoeh."
 
 #: src/features/wantedlangs/DictChooser.js:28
-msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
-msgstr "Baakoegærjesne lea jeaneb goh 50 000 ohtsemebaakoeh, jïh Sammallahti daamhtetje lissehte orre materiaalem."
+msgid ""
+"The dictionary contains more than 50.000 entries, and Sammallahti adds"
+" entries regularly."
+msgstr ""
+"Baakoegærjesne lea jeaneb goh 50 000 ohtsemebaakoeh, jïh Sammallahti"
+" daamhtetje lissehte orre materiaalem."
 
 #: src/containers/Welcome.js:81
-msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
-msgstr "Maahtah baakoem ohtsedh saemien, noerhtelaanti, englaanten jallh latinegïelen. Jis dov faatoes saemien bokstavh dov masjijnesne, diedtelh <0/> juktie båaloeh jijhtieh mej leah saemien bokstavh."
+msgid ""
+"The input field accepts sami, nordic, english and latin search words. If you"
+" do not have Sami letters on your device, press <0/> to write them in the"
+" input field."
+msgstr ""
+"Maahtah baakoem ohtsedh saemien, noerhtelaanti, englaanten jallh"
+" latinegïelen. Jis dov faatoes saemien bokstavh dov masjijnesne, diedtelh <0/"
+"> juktie båaloeh jijhtieh mej leah saemien bokstavh."
 
 #: src/features/wantedlangs/DictChooser.js:34
-msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
-msgstr "Teermebasesne leah jeeneb goh 50 000 artihkelh, jïh orresten daamhtetje."
+msgid ""
+"The termbase consists of over 50,000 term articles, and is updated on a"
+" regular basis."
+msgstr ""
+"Teermebasesne leah jeeneb goh 50 000 artihkelh, jïh orresten daamhtetje."
 
 #: src/features/wantedlangs/DictChooser.js:39
-msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
-msgstr "Dan baakoegærjan våarome lea Nils Jernslettenen Álgosátnegirji mietie (4322 madthbaakoen), men daelie baakoegærjesne 30,000 ohtsemebaakeoh, jïh lissine desnie 6000 sijjiehnommh."
+msgid ""
+"This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322"
+" words), but now it contains 30,000 entries, plus 6000 place name entries."
+msgstr ""
+"Dan baakoegærjan våarome lea Nils Jernslettenen Álgosátnegirji mietie (4322"
+" madthbaakoen), men daelie baakoegærjesne 30,000 ohtsemebaakeoh, jïh lissine"
+" desnie 6000 sijjiehnommh."
 
 #: src/features/wantedlangs/DictChooser.js:51
 #: src/features/wantedlangs/DictChooser.js:56
-msgid "This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern Sámi Oahpa."
-msgstr "Dan baakoegærjan våarome lea barkoe maam Albert Jåma jïh Tove Brustad lægan dorjeme Hemnes saemiensiebresne. Giellatekno jïh Aajege aaj lissiehtamme åarjelsaemien baakoeh gosse barkeme Oahpa,  mij åarjelsaemiengïelese.  "
+msgid ""
+"This dictionary builds on material prepared by Albert Jåma and Tove Brustad"
+" in the Hemnes Saami Organization, but has in addition gained words from"
+" Giellatekno and Aajege's work with the Southern Sámi Oahpa."
+msgstr ""
+"Dan baakoegærjan våarome lea barkoe maam Albert Jåma jïh Tove Brustad lægan"
+" dorjeme Hemnes saemiensiebresne. Giellatekno jïh Aajege aaj lissiehtamme"
+" åarjelsaemien baakoeh gosse barkeme Oahpa,  mij åarjelsaemiengïelese.  "
 
 #: src/features/wantedlangs/DictChooser.js:73
 #: src/features/wantedlangs/DictChooser.js:78
 #: src/features/wantedlangs/DictChooser.js:83
 #: src/features/wantedlangs/DictChooser.js:88
-msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
-msgstr "Dan baakoegærjan våarome lea Valtonen jïh Olthuis Inarinsaame-suomi-inarinsaame baakoegærja (30000 baakoeh)."
+msgid ""
+"This dictionary builds on the Valtonen and Olthuis"
+" Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
+msgstr ""
+"Dan baakoegærjan våarome lea Valtonen jïh Olthuis"
+" Inarinsaame-suomi-inarinsaame baakoegærja (30000 baakoeh)."
 
 #: src/features/wantedlangs/DictChooser.js:67
-msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been added."
-msgstr "Dan baakoegærjan våarome lea baakoelæstoeh maam «Forskingscentralen för de inhemska språken i Helsingfors» tjaaleme jïh baakojste maam Giellatekno tjaaleme gosse barkeme Oahpa mij noerhtesaemien. Lissine sïejhme soemen baakoeh lissiehtamme."
+msgid ""
+"This dictionary is based on lexical material from the Institute for the"
+" Languages of Finland, and from Giellatekno's work with the North Saami"
+" Oahpa. In addition frequent Finnish words have been added."
+msgstr ""
+"Dan baakoegærjan våarome lea baakoelæstoeh maam «Forskingscentralen för de"
+" inhemska språken i Helsingfors» tjaaleme jïh baakojste maam Giellatekno"
+" tjaaleme gosse barkeme Oahpa mij noerhtesaemien. Lissine sïejhme soemen"
+" baakoeh lissiehtamme."
 
 #: src/features/wantedlangs/DictChooser.js:61
-msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
-msgstr "\"Dan baakoegærjan våarome lea baakoelæstoeh maam «Forskingscentralen för de inhemska språken i Helsingfors» tjaaleme jïh baakojste maam Giellatekno tjaaleme gosse barkeme Oahpa mij noerhtesaemien. Mijjieh aaj lissiehtamme sïejhme noerhtesaemien baakoeh."
+msgid ""
+"This dictionary is based on lexical material from the Institute for the"
+" Languages of Finland, and from Giellatekno's work with the North Saami"
+" Oahpa. In addition, we have included frequent words from North Saami."
+msgstr ""
+"\"Dan baakoegærjan våarome lea baakoelæstoeh maam «Forskingscentralen för de"
+" inhemska språken i Helsingfors» tjaaleme jïh baakojste maam Giellatekno"
+" tjaaleme gosse barkeme Oahpa mij noerhtesaemien. Mijjieh aaj lissiehtamme"
+" sïejhme noerhtesaemien baakoeh."
 
 #: src/translateble_variables.js:9
 msgid "V"
@@ -306,19 +393,25 @@ msgstr "Bueriebåeteme!"
 
 #: src/containers/Welcome.js:98
 msgid "When you click a word here, dictionary articles appear to the right."
-msgstr "Gosse baakoem dagkoe diedtel, baakoegærjaartihkelh jijhtieh garrabealan."
+msgstr ""
+"Gosse baakoem dagkoe diedtel, baakoegærjaartihkelh jijhtieh garrabealan."
 
 #: src/features/search/FilterBar.js:48
 msgid "Write at least one letter here"
 msgstr "Tjaelel unnemes aktem bokstaavem dagka"
 
 #: src/containers/Welcome.js:90
-msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
-msgstr "Dagkoe datne maahtah plæredh ohtsemebåatoejsne, orre båatoeh båetieh goske gaajhkh gaavneme."
+msgid ""
+"You can browse the search words here, new ones will be fetched until all"
+" matches have been found."
+msgstr ""
+"Dagkoe datne maahtah plæredh ohtsemebåatoejsne, orre båatoeh båetieh goske"
+" gaajhkh gaavneme."
 
+# Om dialekt
 #: src/translateble_variables.js:21
 msgid "east"
-msgstr ""
+msgstr "luvlie"
 
 #: src/translateble_variables.js:12
 msgid "en"
@@ -434,7 +527,7 @@ msgstr "daaroen"
 
 #: src/translateble_variables.js:23
 msgid "north"
-msgstr ""
+msgstr "noerhte"
 
 #: src/translateble_variables.js:6
 msgid "sammallahtismefin"
@@ -490,7 +583,7 @@ msgstr "luvliesaemien"
 
 #: src/translateble_variables.js:24
 msgid "south"
-msgstr ""
+msgstr "åarjel"
 
 #: src/translateble_variables.js:12
 msgid "sv"
@@ -514,7 +607,7 @@ msgstr "Gïelegaaltijen gelliegïeledh teermh"
 
 #: src/translateble_variables.js:22
 msgid "west"
-msgstr ""
+msgstr "jillie"
 
 #: src/containers/StatusBar.js:28
 msgid "{0}/{1} languages."
@@ -530,12 +623,16 @@ msgstr "{0}/{totalCount} mej aalkoe lea <0>{searchExpression}</0>"
 
 #: src/translateble_variables.js:58
 msgid "Álšateknihkka"
-msgstr ""
+msgstr "Energiteknigke"
 
 #: src/translateble_variables.js:59
 msgid "Ásttoáigi ja faláštallan"
-msgstr ""
+msgstr "Eejehtse jih gaarsje"
 
 #: src/translateble_variables.js:60
 msgid "Ávnnasindustriija"
-msgstr ""
+msgstr "Raaveskhindustrije"
+
+#: src/features/article/Definitions.js:20
+#~ msgid "Definitions:"
+#~ msgstr "Definisjovne:"
