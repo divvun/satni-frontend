@@ -196,25 +196,27 @@ def make_translation_groups(translation_groups, target):
 
 def make_entries(dictxml, dictname, src, target):
     for entry in dictxml.iter('e'):
-        d = DictEntry(dictName=f'{dictname}{src}{target}',
-                      srcLang=src,
-                      targetLang=target,
-                      lookupLemmas=make_lemmas(entry.xpath('.//l'), src),
-                      translationGroups=make_translation_groups(
-                          entry.xpath('.//tg'), target))
+        if entry.get('src') != 'gg':
+            d = DictEntry(dictName=f'{dictname}{src}{target}',
+                          srcLang=src,
+                          targetLang=target,
+                          lookupLemmas=make_lemmas(entry.xpath('.//l'), src),
+                          translationGroups=make_translation_groups(
+                              entry.xpath('.//tg'), target))
 
-        for lookupLemma in d.lookupLemmas:
-            if not STEMS.get(lookupLemma.lemma):
-                STEMS[lookupLemma.lemma] = {}
-                STEMS[lookupLemma.lemma]['fromlangs'] = set()
-                STEMS[lookupLemma.lemma]['tolangs'] = set()
-                STEMS[lookupLemma.lemma]['dicts'] = set()
+            for lookupLemma in d.lookupLemmas:
+                if not STEMS.get(lookupLemma.lemma):
+                    STEMS[lookupLemma.lemma] = {}
+                    STEMS[lookupLemma.lemma]['fromlangs'] = set()
+                    STEMS[lookupLemma.lemma]['tolangs'] = set()
+                    STEMS[lookupLemma.lemma]['dicts'] = set()
 
-            STEMS[lookupLemma.lemma]['dicts'].add(f'{dictname}{src}{target}')
-            STEMS[lookupLemma.lemma]['fromlangs'].add(src)
-            STEMS[lookupLemma.lemma]['tolangs'].add(target)
+                STEMS[lookupLemma.lemma]['dicts'].add(
+                    f'{dictname}{src}{target}')
+                STEMS[lookupLemma.lemma]['fromlangs'].add(src)
+                STEMS[lookupLemma.lemma]['tolangs'].add(target)
 
-        d.save()
+            d.save()
 
 
 def import_dict(pair):
