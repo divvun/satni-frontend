@@ -33,8 +33,8 @@ const PairHeader = ({ language }) => {
       ><Trans id={language} /></Typography>}
       control={
         <Tooltip
-          title=<Trans>Hide this language</Trans>
-          aria-label=<Trans>Hide this language</Trans>
+          title={<Trans>Hide this language</Trans>}
+          aria-label={<Trans>Hide this language</Trans>}
         >
           <Checkbox
             checked

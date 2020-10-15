@@ -20,14 +20,13 @@ const Source = ({source, lemma}) => {
 
   return (
     <FormControlLabel
-      label={<Typography variant='body2'
-      >
+      label={<Typography variant='body2'>
         <Trans>Source:</Trans> <Link to={`${source}/${lemma}`}><Trans id={source} /></Link>
       </Typography>}
       control={
         <Tooltip
-          title=<Trans>Hide this dictionary</Trans>
-          aria-label=<Trans>Hide this dictionary</Trans>
+          title={<Trans>Hide this dictionary</Trans>}
+          aria-label={<Trans>Hide this dictionary</Trans>}
         >
           <Checkbox
             checked
