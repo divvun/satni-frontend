@@ -104,7 +104,7 @@ const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
                       style={style}
                       onClick={() => setClickedItem(stem)}
                     >
-                      <ListItemText primary=<Link to={path}>{stemNode}</Link> />
+                      <ListItemText primary={<Link to={path}>{stemNode}</Link>} />
                     </ListItem>
                   );
                 }}

@@ -23,8 +23,8 @@ const KorpButton = ({language, lemma, classes}) => {
 
   if (korpLangs.has(language) && korp && korp['lemmaExists']) {
     return <Tooltip
-      title=<Trans>Show this word in our corpus</Trans>
-      aria-label=<Trans>Show this word in our corpus</Trans>
+      title={<Trans>Show this word in our corpus</Trans>}
+      aria-label={<Trans>Show this word in our corpus</Trans>}
     >
       <IconButton
         className={classes.icons}
@@ -45,8 +45,8 @@ const KorpButton = ({language, lemma, classes}) => {
   }
 
   return <Tooltip
-    title=<Trans>This word is not found in our corpus</Trans>
-    aria-label=<Trans>This word is not found in our corpus</Trans>
+    title={<Trans>This word is not found in our corpus</Trans>}
+    aria-label={<Trans>This word is not found in our corpus</Trans>}
   >
     <span>
       <IconButton

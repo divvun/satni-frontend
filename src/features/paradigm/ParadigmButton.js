@@ -25,8 +25,8 @@ const ParadigmButton = ({lemma, language, pos, onClick, classes}) => {
     paradigms &&
     paradigms[stemToKey({lemma, pos, language})]) {
     return <Tooltip
-      title=<Trans>Show paradigm for this word</Trans>
-      aria-label=<Trans>Show paradigm for this word</Trans>
+      title={<Trans>Show paradigm for this word</Trans>}
+      aria-label={<Trans>Show paradigm for this word</Trans>}
     >
       <IconButton
         className={classes.icons}
@@ -41,8 +41,8 @@ const ParadigmButton = ({lemma, language, pos, onClick, classes}) => {
   }
 
   return <Tooltip
-    title=<Trans>There is no paradigm for this word</Trans>
-    aria-label=<Trans>There is no paradigm for this word</Trans>
+    title={<Trans>There is no paradigm for this word</Trans>}
+    aria-label={<Trans>There is no paradigm for this word</Trans>}
   >
     <span>
       <IconButton
