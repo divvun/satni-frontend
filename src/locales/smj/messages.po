@@ -90,7 +90,7 @@ msgstr "Definisjåvnnå"
 
 #: src/features/article/Stem.js:93
 msgid "Dialect"
-msgstr "Hållamvuohke"
+msgstr "Giellasuorgge"
 
 #: src/containers/SatniDrawer.js:90
 msgid "Dictionaries"
@@ -102,7 +102,7 @@ msgstr "Báhkogirjjeartihkkala ihti dási gå diebttjista bágov åhtsåmbåhtus
 
 #: src/translateble_variables.js:38
 msgid "Dihtorteknologiija ja diehtoteknihkka"
-msgstr "Dáhtáteknologija ja dáhtáteknihkka"
+msgstr "Dáhtáteknologijja ja dáhtáteknihkka"
 
 #: src/containers/Welcome.js:55
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
@@ -118,15 +118,15 @@ msgstr "Ednamæládus"
 
 #: src/translateble_variables.js:41
 msgid "Education"
-msgstr "Pedagogihkav"
+msgstr "Pedagogihkka"
 
 #: src/translateble_variables.js:42
 msgid "Ekologiija ja biras"
-msgstr "Ekologija ja birás"
+msgstr "Økologijja ja birás"
 
 #: src/translateble_variables.js:43
 msgid "Ekonomiija ja gávppašeapmi"
-msgstr "Ekonomijá ja oasestibme"
+msgstr "Økonomijja ja oasestibme"
 
 #: src/features/wantedlangs/DictChooser.js:27
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
@@ -159,12 +159,12 @@ msgstr "Guolástus"
 #: src/features/article/Source.js:28
 #: src/features/article/Source.js:29
 msgid "Hide this dictionary"
-msgstr ""
+msgstr "Tjiega dáv báhkogirjev"
 
 #: src/features/article/PairHeader.js:35
 #: src/features/article/PairHeader.js:36
 msgid "Hide this language"
-msgstr ""
+msgstr "Tjiega dáv gielav"
 
 #: src/translateble_variables.js:48
 msgid "Huksenteknihkka"
@@ -172,7 +172,7 @@ msgstr "Biggimteknihkka"
 
 #: src/containers/Welcome.js:131
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
-msgstr "Artihkkalin máhtá tjiehkat gielajt jali báhkogirjijt majt i sidá vuojnnet. Jus vas sidá dajt vuojnnet de diebttjista <0/> jali <1/> ."
+msgstr "Artihkkalijn máhtá tjiehkat gielajt jali báhkogirjijt majt i sidá vuojnnet. Jus vas sidá dajt vuojnnet de diebttjista <0/> jali <1/> ."
 
 #: src/translateble_variables.js:49
 msgid "Juridihkka"
@@ -253,12 +253,12 @@ msgstr "Sebrudakdiehtaga"
 #: src/features/paradigm/ParadigmButton.js:27
 #: src/features/paradigm/ParadigmButton.js:28
 msgid "Show paradigm for this word"
-msgstr ""
+msgstr "Vuoseda dán bágo såjådimev"
 
 #: src/features/korp/KorpButton.js:25
 #: src/features/korp/KorpButton.js:26
 msgid "Show this word in our corpus"
-msgstr ""
+msgstr "Vuoseda dáv bágo tækstatjoakkáldagán"
 
 #: src/features/article/LemmaGroup.js:16
 #: src/features/article/Source.js:24
@@ -271,7 +271,7 @@ msgstr "Álggo"
 
 #: src/features/article/LemmaGroup.js:15
 msgid "Status:"
-msgstr "Stáhtus:"
+msgstr "Status:"
 
 #: src/translateble_variables.js:56
 msgid "Stáda almmolaš hálddašeapmi"
@@ -279,7 +279,7 @@ msgstr "Almulasj háldadus"
 
 #: src/translateble_variables.js:57
 msgid "Teknihkka industriija duodji"
-msgstr "Teknihkka, industrija ja duodje"
+msgstr "Teknihkka, industrijja ja duodje"
 
 #: src/features/wantedlangs/DictChooser.js:62
 #: src/features/wantedlangs/DictChooser.js:68
@@ -301,7 +301,7 @@ msgstr "Tærmmavuorkán li badjel 50,000 artihkkala, and ådåsmáhteduvvá juov
 #: src/features/paradigm/ParadigmButton.js:43
 #: src/features/paradigm/ParadigmButton.js:44
 msgid "There is no paradigm for this word"
-msgstr ""
+msgstr "Dán báhkuj ij la dagádum såjådibme"
 
 #: src/features/wantedlangs/DictChooser.js:39
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
@@ -321,7 +321,7 @@ msgstr "Vuodon dán báhkogirjjáj la Valtonena ja Olthuisa Anársáme-suoma-an�
 
 #: src/features/wantedlangs/DictChooser.js:67
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been added."
-msgstr ""
+msgstr "Vuodon dán báhkogirjjáj li báhkolista «Forskingscentralen för de inhemska språken i Helsingfors»-ásadusás ja Giellatekno bargos nuorttasáme Åhpajn. Duodden lip lasedam dábálasj bágojt suomagielas"
 
 #: src/features/wantedlangs/DictChooser.js:61
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
@@ -330,7 +330,7 @@ msgstr "Vuodon dán báhkogirjjáj li báhkolista «Forskingscentralen för de i
 #: src/features/korp/KorpButton.js:47
 #: src/features/korp/KorpButton.js:48
 msgid "This word is not found in our corpus"
-msgstr ""
+msgstr "Dát báhko ij lim tækstatjoakkáldagán"
 
 #: src/translateble_variables.js:9
 msgid "V"
