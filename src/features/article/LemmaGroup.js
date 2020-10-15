@@ -1,6 +1,7 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import Box from '@material-ui/core/Box';
+import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 
 import Stem from './Stem';
@@ -16,6 +17,11 @@ const LemmaGroup = ({lemma, term}) => {
       {term.source && <Typography><Trans>Source:</Trans> {term.source}</Typography>}
     </Box>
   );
+};
+
+LemmaGroup.propTypes = {
+  lemma: PropTypes.string.isRequired,
+  term: PropTypes.object.isRequired
 };
 
 export default LemmaGroup;

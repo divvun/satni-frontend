@@ -6,6 +6,7 @@ import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import LanguageIcon from '@material-ui/icons/Language';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
+import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 
 import PresentArticles from './PresentArticles';
@@ -17,8 +18,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Articles = (props) => {
-  const {lemma, wantedDicts, wantedLangs} = props;
+const Articles = ({ lemma, wantedDicts, wantedLangs }) => {
   const classes = useStyles();
 
   const GET_ARTICLES = wantedDicts.includes('termwiki') ?
@@ -160,6 +160,12 @@ const Articles = (props) => {
   return <PresentArticles
     lemma={lemma}
     data={data} />;
+};
+
+Articles.propTypes = {
+  lemma: PropTypes.string.isRequired,
+  wantedDicts: PropTypes.array.isRequired,
+  wantedLangs: PropTypes.array.isRequired
 };
 
 export default Articles;

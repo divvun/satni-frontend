@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 import Box from '@material-ui/core/Box';
+import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
@@ -31,6 +32,10 @@ const Example = ({example}) => {
       </Typography>
     </Box>
   );
+};
+
+Example.propTypes = {
+  example: PropTypes.object.isRequired
 };
 
 export default Example;

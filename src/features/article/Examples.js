@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Example from './Example';
 
@@ -9,5 +10,9 @@ const Examples = ({examples}) => (
     )}
   </>
 );
+
+Examples.propTypes = {
+  examples: PropTypes.object.isRequired
+};
 
 export default Examples;

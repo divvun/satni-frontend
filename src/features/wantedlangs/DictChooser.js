@@ -8,6 +8,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Checkbox from '@material-ui/core/Checkbox';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
@@ -137,6 +138,11 @@ const DictChooser = ({dicts, setDicts}) => {
 
     </>
   );
+};
+
+DictChooser.propTypes = {
+  dicts: PropTypes.array.isRequired,
+  setDicts: PropTypes.func.isRequired
 };
 
 export default DictChooser;

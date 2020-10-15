@@ -3,6 +3,7 @@ import { Trans } from '@lingui/macro';
 import { useDispatch, useSelector } from 'react-redux';
 import IconButton from '@material-ui/core/IconButton';
 import InfoOutlined from '@material-ui/icons/InfoOutlined';
+import PropTypes from 'prop-types';
 import Tooltip from '@material-ui/core/Tooltip';
 
 import { fetchParadigms } from 'features/paradigm/paradigmsSlice';
@@ -56,6 +57,14 @@ const ParadigmButton = ({lemma, language, pos, onClick, classes}) => {
       </IconButton>
     </span>
   </Tooltip>;
+};
+
+ParadigmButton.propTypes = {
+  lemma: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
+  pos: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default ParadigmButton;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -11,6 +12,12 @@ const MyTableRow = ({analyses, pron, values}) => (
     {values.map((value, index1) => <TableCell key={index1}>{analyses[value].map((analysis, index) => <div key={`${analysis}_${index}`}>{analysis}</div>)}</TableCell>)}
   </TableRow>
 );
+
+MyTableRow.propTypes = {
+  analyses: PropTypes.object.isRequired,
+  pron: PropTypes.string.isRequired,
+  values: PropTypes.array.isRequired
+};
 
 const TableRows = {
   sme: [
@@ -196,8 +203,12 @@ const TableRows = {
   ]
 };
 
-const FinContent = ({analyses}) => {
+const FinContent = () => {
   return (<div>sma</div>);
+};
+
+FinContent.propTypes = {
+  analyses: PropTypes.object.isRequired,
 };
 
 const LangTable = ({analyses, language}) => {
@@ -221,11 +232,21 @@ const LangTable = ({analyses, language}) => {
   );
 };
 
+LangTable.propTypes = {
+  analyses: PropTypes.object.isRequired,
+  language: PropTypes.string.isRequired
+};
+
 const ExtraContent = ({listOfAnalyses, analyses}) => (
   <>
     {listOfAnalyses.map((uff, index) => analyses[uff[1]] ? <div key={index}>({uff[0]}) {analyses[uff[1]].map(wordform => <span key={wordform}>{wordform}</span>)}</div> : null)}
   </>
 );
+
+ExtraContent.propTypes = {
+  analyses: PropTypes.object.isRequired,
+  listOfAnalyses: PropTypes.array.isRequired
+};
 
 const Content = ({analyses, language}) => {
   switch (language) {
@@ -290,12 +311,22 @@ const Content = ({analyses, language}) => {
   }
 };
 
+Content.propTypes = {
+  analyses: PropTypes.object.isRequired,
+  language: PropTypes.string.isRequired
+};
+
 const VerbParadigm = ({paradigm, language}) => {
   if (paradigm) {
     return <Content analyses={paradigm['analyses']} language={language} />;
   } else {
     return <div>Paradigm undefined {language}</div>;
   }
+};
+
+VerbParadigm.propTypes = {
+  paradigm: PropTypes.object.isRequired,
+  language: PropTypes.string.isRequired
 };
 
 export default VerbParadigm;

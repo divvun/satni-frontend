@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
+import PropTypes from 'prop-types';
 
 import LemmaGroup from './LemmaGroup';
 
@@ -21,6 +22,11 @@ const LemmaGroups = ({ lemma, terms }) => {
         term={term} />)}
     </Box>
   );
+};
+
+LemmaGroups.propTypes = {
+  lemma: PropTypes.string.isRequired,
+  terms: PropTypes.array.isRequired
 };
 
 export default LemmaGroups;

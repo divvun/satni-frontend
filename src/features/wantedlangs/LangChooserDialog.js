@@ -7,6 +7,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import DialogContent from '@material-ui/core/DialogContent';
 import Dialog from '@material-ui/core/Dialog';
 import IconButton from '@material-ui/core/IconButton';
+import PropTypes from 'prop-types';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
@@ -29,9 +30,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const LangChooserDialog = (props) => {
+const LangChooserDialog = ({open, onClose}) => {
   const classes = useStyles();
-  const {open, onClose} = props;
   const [langs, setLangs] = useState(wantedLangsVar());
 
   const handleClose = () => {
@@ -61,6 +61,11 @@ const LangChooserDialog = (props) => {
       </Box>
     </Dialog>
   );
+};
+
+LangChooserDialog.propTypes = {
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired
 };
 
 export default LangChooserDialog;

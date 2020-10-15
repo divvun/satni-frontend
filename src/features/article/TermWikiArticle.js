@@ -4,6 +4,7 @@ import { Trans } from '@lingui/macro';
 import { useLocation } from 'react-router-dom';
 
 import Paper from '@material-ui/core/Paper';
+import PropTypes from 'prop-types';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -68,6 +69,12 @@ const TermWikiArticle = ({ category, multiLingualConcept, lemma }) => {
     </Table>
   </Paper>
   ;
+};
+
+TermWikiArticle.propTypes = {
+  category: PropTypes.string.isRequired,
+  multiLingualConcept: PropTypes.array.isRequired,
+  lemma: PropTypes.string.isRequired
 };
 
 export default TermWikiArticle;

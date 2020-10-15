@@ -7,6 +7,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import DialogContent from '@material-ui/core/DialogContent';
 import Dialog from '@material-ui/core/Dialog';
 import IconButton from '@material-ui/core/IconButton';
+import PropTypes from 'prop-types';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
@@ -28,9 +29,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const ParadigmDialog = (props) => {
+const ParadigmDialog = ({ lemma, pos, language, open, onClose }) => {
   const classes = useStyles();
-  const {lemma, pos, language, open, onClose} = props;
 
   const handleClose = () => {
     onClose();
@@ -58,6 +58,14 @@ const ParadigmDialog = (props) => {
       </Box>
     </Dialog>
   );
+};
+
+ParadigmDialog.propTypes = {
+  lemma: PropTypes.string.isRequired,
+  pos: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default ParadigmDialog;

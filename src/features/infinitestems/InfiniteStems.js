@@ -10,6 +10,7 @@ import InfiniteLoader from 'react-window-infinite-loader';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import PropTypes from 'prop-types';
 import Truncate from 'react-truncate';
 import Typography from '@material-ui/core/Typography';
 
@@ -27,8 +28,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const InfiniteStems = (props) => {
-  const {searchExpression, wantedDicts, wantedLangs} = props;
+const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
   const {stems, loading, loadMore, hasNextPage, totalCount} = useStems(
     searchExpression, wantedDicts, wantedLangs);
   const classes = useStyles();
@@ -115,6 +115,12 @@ const InfiniteStems = (props) => {
       </AutoSizer>
     </div>
   );
+};
+
+InfiniteStems.propTypes  = {
+  searchExpression: PropTypes.string.isRequired,
+  wantedDicts: PropTypes.array.isRequired,
+  wantedLangs: PropTypes.array.isRequired
 };
 
 export default InfiniteStems;

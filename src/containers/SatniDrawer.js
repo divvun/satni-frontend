@@ -13,21 +13,19 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
+import PropTypes from 'prop-types';
 import TranslateIcon from '@material-ui/icons/Translate';
 
 import DictChooserDialog from 'features/wantedlangs/DictChooserDialog';
 import LangChooserDialog from 'features/wantedlangs/LangChooserDialog';
 import MetaLanguageSelector from './MetaLanguageSelector';
 
-const SatniDrawer = (props) => {
-  const {
-    drawerWidth,
-    handleDrawerToggle,
-    mobileOpen,
-    handleSearch,
-    container
-  } = props;
-
+const SatniDrawer = ({
+  drawerWidth,
+  handleDrawerToggle,
+  mobileOpen,
+  handleSearch
+}) => {
   const useStyles = makeStyles(theme => ({
     drawer: {
       [theme.breakpoints.up('sm')]: {
@@ -148,6 +146,14 @@ const SatniDrawer = (props) => {
       </Hidden>
     </nav>
   );
+};
+
+SatniDrawer.propTypes = {
+  drawerWidth: PropTypes.number.isRequired,
+  handleDrawerToggle: PropTypes.func.isRequired,
+  mobileOpen: PropTypes.bool.isRequired,
+  handleSearch: PropTypes.func.isRequired,
+  container: PropTypes.element.isRequired
 };
 
 export default SatniDrawer;

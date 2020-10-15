@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -18,6 +19,13 @@ const MyTableRow = ({analyses, name, values}) => (
           })}
   </TableRow>
 );
+
+MyTableRow.propTypes = {
+  analyses: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  values: PropTypes.array.isRequired
+};
+
 
 const TableRows = {
   sma: [
@@ -267,6 +275,11 @@ const LangTable = ({analyses, language}) => {
   );
 };
 
+LangTable.propTypes = {
+  analyses: PropTypes.object.isRequired,
+  language: PropTypes.string.isRequired
+};
+
 const Content = ({analyses, language}) => {
   switch (language) {
   case 'sma':
@@ -279,6 +292,11 @@ const Content = ({analyses, language}) => {
   default:
     return null;
   }
+};
+
+Content.propTypes = {
+  analyses: PropTypes.object.isRequired,
+  language: PropTypes.string.isRequired
 };
 
 const NounParadigm = ({paradigm, language}) => {
@@ -294,6 +312,11 @@ const NounParadigm = ({paradigm, language}) => {
   } else {
     return <div>Paradigm undefined {language}</div>;
   }
+};
+
+NounParadigm.propTypes = {
+  paradigm: PropTypes.object.isRequired,
+  language: PropTypes.string.isRequired
 };
 
 export default NounParadigm;
