@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import PropTypes from 'prop-types';
 
 import { hasAvailableDict } from 'utils';
 import DictTargetStem from './DictTargetStem';
@@ -79,6 +80,11 @@ const DictArticle = ({dictGroup, lemma}) => {
       </Grid>
     </Paper>
   );
+};
+
+DictArticle.propTypes = {
+  lemma: PropTypes.string.isRequired,
+  dictGroup: PropTypes.object.isRequired
 };
 
 export default DictArticle;

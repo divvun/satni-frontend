@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 
 import { availableDicts, availableLanguages } from 'utils';
@@ -31,8 +32,7 @@ const langStatus = (wantedDicts, wantedLangs) => {
   return null;
 };
 
-const StatusBar = (props) => {
-  const {wantedDicts, wantedLangs, currentLemma} = props;
+const StatusBar = ({ wantedDicts, wantedLangs, currentLemma }) => {
   const classes = useStyles();
 
   return (
@@ -40,6 +40,12 @@ const StatusBar = (props) => {
       {langStatus(wantedDicts, wantedLangs)} {dictStatus(wantedDicts, currentLemma)}
     </Typography>
   );
+};
+
+StatusBar.propTypes = {
+  wantedLangs: PropTypes.array.isRequired,
+  wantedDicts: PropTypes.array.isRequired,
+  currentLemma: PropTypes.string.isRequired
 };
 
 export default StatusBar;

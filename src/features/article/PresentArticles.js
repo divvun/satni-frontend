@@ -7,6 +7,7 @@ import {
   orderedMultilingualConcept
 } from 'utils';
 import DictArticle from './DictArticle';
+import PropTypes from 'prop-types';
 import TermWikiArticle from './TermWikiArticle';
 
 const useStyles = makeStyles(theme => ({
@@ -17,8 +18,6 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: theme.spacing(2)
   }
 }));
-
-// {Object.keys(articlesMappedByLanguagePair).map((langpair, index) => {
 
 const Articles = ({data, lemma}) => {
   const classes = useStyles();
@@ -44,6 +43,11 @@ const Articles = ({data, lemma}) => {
       ))}
     </div>
   );
+};
+
+Articles.propTypes = {
+  data: PropTypes.object.isRequired,
+  lemma: PropTypes.string.isRequired
 };
 
 export default Articles;

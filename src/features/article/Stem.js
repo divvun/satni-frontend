@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 
 import KorpButton from 'features/korp/KorpButton';
@@ -34,7 +35,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Stem = ({ stem, restriction, withLink, lemmaHandler }) => {
+const Stem = ({ stem, restriction, withLink }) => {
   const classes = useStyles();
   const {lemma, pos, language, dialect, country} = stem;
   const [openParadigm, setOpenParadigm] = useState(false);
@@ -95,6 +96,12 @@ const Stem = ({ stem, restriction, withLink, lemmaHandler }) => {
       </Typography>}
     </>
   );
+};
+
+Stem.propTypes = {
+  stem: PropTypes.object.isRequired,
+  restriction: PropTypes.object,
+  withLink: PropTypes.bool
 };
 
 export default Stem;

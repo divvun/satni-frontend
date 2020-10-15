@@ -4,6 +4,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
 
 import { availableLanguages } from 'utils';
 
@@ -63,6 +64,11 @@ const LangChooser = ({langs, setLangs}) => {
       </Grid>
     </Grid>
   );
+};
+
+LangChooser.propTypes = {
+  langs: PropTypes.array.isRequired,
+  setLangs: PropTypes.func.isRequired
 };
 
 export default LangChooser;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
 
 import Definitions from './Definitions';
 import LemmaGroups from './LemmaGroups';
@@ -33,6 +34,11 @@ const TermCore = ({ concept, lemma }) => {
       </Grid>
     </Grid>
   );
+};
+
+TermCore.propTypes = {
+  concept: PropTypes.object.isRequired,
+  lemma: PropTypes.string.isRequired
 };
 
 export default TermCore;

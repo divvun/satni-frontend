@@ -3,13 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import PropTypes from 'prop-types';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import FilterBar from 'features/search/FilterBar';
 
-const SatniAppBar = (props) => {
-  const { handleSearch, handleDrawerToggle, drawerWidth } = props;
+const SatniAppBar = ({ handleSearch, handleDrawerToggle, drawerWidth }) => {
   const useStyles = makeStyles(theme => ({
     appBar: {
       position: 'relative',
@@ -47,6 +47,12 @@ const SatniAppBar = (props) => {
       </Toolbar>
     </AppBar>
   );
+};
+
+SatniAppBar.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
+  handleDrawerToggle: PropTypes.func.isRequired,
+  drawerWidth: PropTypes.number.isRequired
 };
 
 export default SatniAppBar;
