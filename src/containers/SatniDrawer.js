@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Trans, t } from '@lingui/macro';
+import { Trans } from '@lingui/macro';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
@@ -21,20 +21,58 @@ import LangChooserDialog from 'features/wantedlangs/LangChooserDialog';
 import MetaLanguageSelector from './MetaLanguageSelector';
 import { ListSubheader } from '@material-ui/core';
 
-const footers = [
-  {
-    text: 'Divvun',
-    address: 'http://divvun.no'
-  },
-  {
-    text: t`Giellagáldu`,
-    address: 'https://giella.org'
-  },
-  {
-    text: 'Giellatekno',
-    address: 'http://giellatekno.uit.no'
-  }
-];
+const Footer = () => (
+  <List
+    subheader={
+      <ListSubheader><Trans>Delivered by</Trans></ListSubheader>
+    }
+  >
+    <ListItem>
+      <ListItemText
+        inset
+        primary={<a
+          href='http://divvun.no'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Divvun
+        </a>}
+      />
+    </ListItem>
+    <ListItem>
+      <ListItemText
+        inset
+        primary={<Trans>
+          <a
+            href='http://divvun.no'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+          Giellagáldu
+          </a>
+        </Trans>}
+      />
+    </ListItem>
+    <ListItem>
+      <ListItemText
+        inset
+        primary={<a
+          href='http://giellatekno.uit.no'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Giellatekno
+        </a>}
+      />
+    </ListItem>
+    <ListItem>
+      <ListItemText
+        inset
+        primary='Pekka Sammallahti'
+      />
+    </ListItem>
+  </List>
+);
 
 const SatniDrawer = ({
   drawerWidth,
@@ -120,34 +158,7 @@ const SatniDrawer = ({
           <MetaLanguageSelector />
         </ListItem>
         <ListItem>
-          <List
-            subheader={
-              <ListSubheader><Trans>Delivered by</Trans></ListSubheader>
-            }
-          >
-            {footers.map((footer, index) => (
-              <ListItem
-                key={index}
-              >
-                <ListItemText
-                  inset
-                  primary={<a
-                    href={footer.address}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    {footer.text}
-                  </a>}
-                />
-              </ListItem>
-            ))}
-            <ListItem>
-              <ListItemText
-                inset
-                primary='Pekka Sammallahti'
-              />
-            </ListItem>
-          </List>
+          <Footer/>
         </ListItem>
       </List>
       <LangChooserDialog
