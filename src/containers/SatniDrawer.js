@@ -19,6 +19,22 @@ import TranslateIcon from '@material-ui/icons/Translate';
 import DictChooserDialog from 'features/wantedlangs/DictChooserDialog';
 import LangChooserDialog from 'features/wantedlangs/LangChooserDialog';
 import MetaLanguageSelector from './MetaLanguageSelector';
+import { ListSubheader } from '@material-ui/core';
+
+const footers = [
+  {
+    text: 'Divvun',
+    address: 'http://divvun.no'
+  },
+  {
+    text: 'Giellagáldu',
+    address: 'https://giella.org'
+  },
+  {
+    text: 'Giellatekno',
+    address: 'http://giellatekno.uit.no'
+  }
+];
 
 const SatniDrawer = ({
   drawerWidth,
@@ -102,6 +118,32 @@ const SatniDrawer = ({
         >
           <ListItemIcon><TranslateIcon /></ListItemIcon>
           <MetaLanguageSelector />
+        </ListItem>
+        <ListItem>
+          <ListSubheader><Trans>Delivered by</Trans></ListSubheader>
+        </ListItem>
+        {footers.map((footer, index) => (
+          <ListItem
+            inset
+            key={index}
+          >
+            <ListItemText
+              inset
+              primary={<a
+                href={footer.address}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                {footer.text}
+              </a>}
+            />
+          </ListItem>
+        ))}
+        <ListItem>
+          <ListItemText
+            inset
+            primary='Pekka Sammallahti'
+          />
         </ListItem>
       </List>
       <LangChooserDialog
