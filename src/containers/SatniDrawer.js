@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Trans } from '@lingui/macro';
+import { Trans, t } from '@lingui/macro';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
@@ -27,7 +27,7 @@ const footers = [
     address: 'http://divvun.no'
   },
   {
-    text: 'Giellagáldu',
+    text: t`Giellagáldu`,
     address: 'https://giella.org'
   },
   {
