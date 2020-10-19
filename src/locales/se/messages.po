@@ -9,13 +9,13 @@ msgstr ""
 "Language: se\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-14 19:57+0200\n"
+"PO-Revision-Date: 2020-10-20 00:23+0200\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
 "Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
 "MIME-Version: 1.0\n"
 
-#: src/containers/StatusBar.js:19
+#: src/containers/StatusBar.js:20
 msgid "(<0>Show all</0>)"
 msgstr "(<0>Čájet visot</0>)"
 
@@ -26,6 +26,10 @@ msgstr "<0/>"
 #: src/features/article/Articles.js:136
 msgid "<0>Error {0}</0>"
 msgstr "<0>Meattáhus {0}</0>"
+
+#: src/containers/SatniDrawer.js:45
+msgid "<0>Giellagáldu</0>"
+msgstr "<0>Giellagáldu</0>"
 
 #: src/features/article/Articles.js:135
 msgid "<0>Loading...</0>"
@@ -43,8 +47,8 @@ msgstr "adj."
 msgid "Adv"
 msgstr "adv."
 
-#: src/features/wantedlangs/DictChooser.js:40
-#: src/features/wantedlangs/DictChooser.js:46
+#: src/features/wantedlangs/DictChooser.js:41
+#: src/features/wantedlangs/DictChooser.js:47
 msgid ""
 "Approximately half of the content of the dictionary is taken by searching for"
 " parallels in a parallel corpus of administrative text. This work was"
@@ -61,11 +65,11 @@ msgstr "Beaivválaš giella"
 msgid "Boazodoallu"
 msgstr "Boazodoallu"
 
-#: src/features/article/TermWikiArticle.js:41
+#: src/features/article/TermWikiArticle.js:42
 msgid "Category"
 msgstr "Kategoriija"
 
-#: src/features/wantedlangs/DictChooserDialog.js:49
+#: src/features/wantedlangs/DictChooserDialog.js:50
 msgid "Choose dictionaries"
 msgstr "Vállje sátnegirjjiid"
 
@@ -81,19 +85,23 @@ msgstr ""
 "Go coahkkalat <0/>, de oainnát mo sátni sodjá. Go coahkkalat <1/>, de oainnát"
 " mo sátni lea atnon."
 
-#: src/features/article/Stem.js:94
+#: src/features/article/Stem.js:95
 msgid "Country"
 msgstr "Riika"
 
-#: src/features/article/Definitions.js:19
+#: src/features/article/Definitions.js:20
 msgid "Definition"
 msgstr "Definišuvdna"
 
-#: src/features/article/Stem.js:93
+#: src/containers/SatniDrawer.js:27
+msgid "Delivered by"
+msgstr "Ráhkadeaddjit"
+
+#: src/features/article/Stem.js:94
 msgid "Dialect"
 msgstr "Suopman"
 
-#: src/containers/SatniDrawer.js:90
+#: src/containers/SatniDrawer.js:141
 msgid "Dictionaries"
 msgstr "Sátnegirjjit"
 
@@ -139,7 +147,7 @@ msgstr "Ekologiija ja biras"
 msgid "Ekonomiija ja gávppašeapmi"
 msgstr "Ekonomiija ja gávppašeapmi"
 
-#: src/features/wantedlangs/DictChooser.js:27
+#: src/features/wantedlangs/DictChooser.js:28
 msgid ""
 "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own"
 " printed dictionaries published in 1989 and 1993."
@@ -159,7 +167,7 @@ msgstr "Geografiija"
 msgid "Gielladieđa"
 msgstr "Gielladieđa"
 
-#: src/features/wantedlangs/DictChooser.js:33
+#: src/features/wantedlangs/DictChooser.js:34
 msgid ""
 "Giellagáldu's main task is to standardise new terminology and written"
 " language for the Sami languages. The standardised terms from their <a"
@@ -184,8 +192,8 @@ msgstr "Guolástus"
 msgid "Hide this dictionary"
 msgstr "Čiehkat dán sátnegirjji"
 
-#: src/features/article/PairHeader.js:35
 #: src/features/article/PairHeader.js:36
+#: src/features/article/PairHeader.js:37
 msgid "Hide this language"
 msgstr "Čiehkat dán giela"
 
@@ -205,9 +213,14 @@ msgstr ""
 msgid "Juridihkka"
 msgstr "Juridihkka"
 
-#: src/containers/SatniDrawer.js:82
+#: src/containers/SatniDrawer.js:133
 msgid "Languages"
 msgstr "Gielat"
+
+#: src/features/search/FilterBar.js:98
+#: src/features/search/FilterBar.js:99
+msgid "Lookup the search word"
+msgstr "Čájet ohcansáni bohtosa"
 
 #: src/translateble_variables.js:50
 msgid "Luonddudieđa ja matematihkka"
@@ -241,7 +254,7 @@ msgstr ""
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "<0>{searchExpression}</0> ii gávdno sátnegirjjiin"
 
-#: src/features/wantedlangs/DictChooser.js:45
+#: src/features/wantedlangs/DictChooser.js:46
 msgid ""
 "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but"
 " frequent Norwegian words have been added. It contains about 26,000 Norwegian"
@@ -250,7 +263,7 @@ msgstr ""
 "Dáru → davvisámi lea vuođđuduvvon Davvisámi → dáru sátnegirjái, muhto leat"
 " lasihan dábálaš dáru sániid. Sátnegirjjis leat oktiibuot 26,000 ohcansáni."
 
-#: src/features/article/LemmaGroup.js:14
+#: src/features/article/LemmaGroup.js:15
 msgid "Note:"
 msgstr "Notáhta:"
 
@@ -270,13 +283,17 @@ msgstr "pron."
 msgid "Religion"
 msgstr "Religiovdna"
 
-#: src/containers/StatusBar.js:19
+#: src/containers/StatusBar.js:20
 msgid "Results only from"
 msgstr "Bohtosat dušše"
 
 #: src/translateble_variables.js:17
 msgid "SE"
 msgstr "Ruoŧŧa"
+
+#: src/features/search/FilterBar.js:103
+msgid "Search"
+msgstr "Oza"
 
 #: src/containers/Welcome.js:73
 msgid "Search results will appear here."
@@ -286,26 +303,26 @@ msgstr "Ohcanbohtosat ihtet dása."
 msgid "Servodatdieđa"
 msgstr "Servodatdieđa"
 
-#: src/features/paradigm/ParadigmButton.js:27
 #: src/features/paradigm/ParadigmButton.js:28
+#: src/features/paradigm/ParadigmButton.js:29
 msgid "Show paradigm for this word"
 msgstr "Čájet dán sáni sojahanminstara"
 
-#: src/features/korp/KorpButton.js:25
 #: src/features/korp/KorpButton.js:26
+#: src/features/korp/KorpButton.js:27
 msgid "Show this word in our corpus"
 msgstr "Čájet dán sáni min teakstačoakkáldagas"
 
-#: src/features/article/LemmaGroup.js:16
+#: src/features/article/LemmaGroup.js:17
 #: src/features/article/Source.js:24
 msgid "Source:"
 msgstr "Gáldu:"
 
-#: src/containers/SatniDrawer.js:74
+#: src/containers/SatniDrawer.js:125
 msgid "Start"
 msgstr "Álgu"
 
-#: src/features/article/LemmaGroup.js:15
+#: src/features/article/LemmaGroup.js:16
 msgid "Status:"
 msgstr "Stáhtus:"
 
@@ -313,16 +330,21 @@ msgstr "Stáhtus:"
 msgid "Stáda almmolaš hálddašeapmi"
 msgstr "Almmolaš hálddašeapmi"
 
+#: src/features/search/FilterBar.js:81
+#: src/features/search/FilterBar.js:82
+msgid "Sámi letters"
+msgstr "Sámi bustávat"
+
 #: src/translateble_variables.js:57
 msgid "Teknihkka industriija duodji"
 msgstr "Teknihkka, industriija, duodji"
 
-#: src/features/wantedlangs/DictChooser.js:62
-#: src/features/wantedlangs/DictChooser.js:68
+#: src/features/wantedlangs/DictChooser.js:63
+#: src/features/wantedlangs/DictChooser.js:69
 msgid "The dictionary contains about 11,000 entries."
 msgstr "Sátnegirjjis lea sullii 11 000 ohcansáni."
 
-#: src/features/wantedlangs/DictChooser.js:28
+#: src/features/wantedlangs/DictChooser.js:29
 msgid ""
 "The dictionary contains more than 50.000 entries, and Sammallahti adds"
 " entries regularly."
@@ -340,19 +362,19 @@ msgstr ""
 " mašiinnas eai leat sámi bustávat, coahkkal <0/> vai boalut main leat sámi"
 " bustávat ihtet."
 
-#: src/features/wantedlangs/DictChooser.js:34
+#: src/features/wantedlangs/DictChooser.js:35
 msgid ""
 "The termbase consists of over 50,000 term articles, and is updated on a"
 " regular basis."
 msgstr ""
 "Tearbmavuođus lea badjel 50 000 artihkkala, ja ođasmahtto jeavddalaččat."
 
-#: src/features/paradigm/ParadigmButton.js:43
 #: src/features/paradigm/ParadigmButton.js:44
+#: src/features/paradigm/ParadigmButton.js:45
 msgid "There is no paradigm for this word"
 msgstr "Dán sánis ii leat sojahanminsttar"
 
-#: src/features/wantedlangs/DictChooser.js:39
+#: src/features/wantedlangs/DictChooser.js:40
 msgid ""
 "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322"
 " words), but now it contains 30,000 entries, plus 6000 place name entries."
@@ -361,8 +383,8 @@ msgstr ""
 " vuođđosáni), muhto dál sátnegirji sisttisdoallá 30,000 ohcansáni, ja dasa"
 " lassin 6000 báikenama."
 
-#: src/features/wantedlangs/DictChooser.js:51
-#: src/features/wantedlangs/DictChooser.js:56
+#: src/features/wantedlangs/DictChooser.js:52
+#: src/features/wantedlangs/DictChooser.js:57
 msgid ""
 "This dictionary builds on material prepared by Albert Jåma and Tove Brustad"
 " in the Hemnes Saami Organization, but has in addition gained words from"
@@ -372,10 +394,10 @@ msgstr ""
 " bargu. Dasa lassin Giellatekno ja Aajege leat lasihan sániid lullisámi Oahpa"
 " ovdánahtidettiin."
 
-#: src/features/wantedlangs/DictChooser.js:73
-#: src/features/wantedlangs/DictChooser.js:78
-#: src/features/wantedlangs/DictChooser.js:83
-#: src/features/wantedlangs/DictChooser.js:88
+#: src/features/wantedlangs/DictChooser.js:74
+#: src/features/wantedlangs/DictChooser.js:79
+#: src/features/wantedlangs/DictChooser.js:84
+#: src/features/wantedlangs/DictChooser.js:89
 msgid ""
 "This dictionary builds on the Valtonen and Olthuis"
 " Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
@@ -383,7 +405,7 @@ msgstr ""
 "Dán sátnegirjji vuođđu lea Valtonena ja Olthuisa "
 " Inarinsaame-suomi-inarinsaame sátnegirji (30 000 ohcansáni)."
 
-#: src/features/wantedlangs/DictChooser.js:67
+#: src/features/wantedlangs/DictChooser.js:68
 msgid ""
 "This dictionary is based on lexical material from the Institute for the"
 " Languages of Finland, and from Giellatekno's work with the North Saami"
@@ -393,7 +415,7 @@ msgstr ""
 " språken i Helsingfors»-ásahusas ja Giellatekno bargu davvisámi Oahpain. Dasa"
 " lassin dasa leat lasihuvvon dábálaš suoma sánit."
 
-#: src/features/wantedlangs/DictChooser.js:61
+#: src/features/wantedlangs/DictChooser.js:62
 msgid ""
 "This dictionary is based on lexical material from the Institute for the"
 " Languages of Finland, and from Giellatekno's work with the North Saami"
@@ -403,8 +425,8 @@ msgstr ""
 " språken i Helsingfors»-ásahusas ja Giellatekno bargu davvisámi Oahpain. Dasa"
 " lassin dasa leat lasihuvvon dábálaš davvisámi sánit."
 
-#: src/features/korp/KorpButton.js:47
 #: src/features/korp/KorpButton.js:48
+#: src/features/korp/KorpButton.js:49
 msgid "This word is not found in our corpus"
 msgstr "Dát sátni ii gávdno min teakstačoakkáldagas"
 
@@ -420,7 +442,7 @@ msgstr "Bures boahtin!"
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Go coahkkalat sáni dás, de sátnegirjeartihkkalat ihtet olgeš beallái."
 
-#: src/features/search/FilterBar.js:51
+#: src/features/search/InputWithTranslation.js:28
 msgid "Write at least one letter here"
 msgstr "Čális unnimustá ovtta bustáva dása"
 
@@ -624,6 +646,10 @@ msgstr "Ruoŧagiella"
 msgid "swe_genitive"
 msgstr "ruoŧagiela"
 
+#: src/features/search/FilterBar.js:86
+msgid "sámi keys"
+msgstr "Sámi bustávat"
+
 #: src/translateble_variables.js:4
 msgid "termwiki"
 msgstr "Giellagáldu máŋggagielat tearpmat"
@@ -632,11 +658,11 @@ msgstr "Giellagáldu máŋggagielat tearpmat"
 msgid "west"
 msgstr "oarji"
 
-#: src/containers/StatusBar.js:28
+#: src/containers/StatusBar.js:29
 msgid "{0}/{1} languages."
 msgstr "{0}/{1} gielas."
 
-#: src/containers/StatusBar.js:23
+#: src/containers/StatusBar.js:24
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} gáldus."
 
@@ -655,3 +681,7 @@ msgstr "Astoáigi ja faláštallan "
 #: src/translateble_variables.js:60
 msgid "Ávnnasindustriija"
 msgstr "Ávnnasindustriija"
+
+#: src/containers/SatniDrawer.js:30
+#~ msgid "Giellagáldu"
+#~ msgstr "Giellagáldu"
