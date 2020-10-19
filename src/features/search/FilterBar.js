@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
+import { Trans } from '@lingui/macro';
 import { useHistory, useLocation } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
@@ -7,6 +8,7 @@ import Paper from '@material-ui/core/Paper';
 import Popover from '@material-ui/core/Popover';
 import PropTypes from 'prop-types';
 import SearchIcon from '@material-ui/icons/Search';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import { locationParser } from 'utils';
 import SamiKeys from './SamiKeys';
@@ -71,14 +73,19 @@ function FilterBar({ searchHandler }) {
 
   return (
     <Paper component='div' className={classes.root}>
-      <IconButton
-        className={classes.iconButton}
-        aria-label='sámi keys'
-        aria-describedby={id}
-        onClick={handleClick}
+      <Tooltip
+        title={<Trans>Sámi letters</Trans>}
+        aria-label={<Trans>Sámi letters</Trans>}
       >
-        <KeyboardIcon />
-      </IconButton>
+        <IconButton
+          className={classes.iconButton}
+          aria-label={<Trans>sámi keys</Trans>}
+          aria-describedby={id}
+          onClick={handleClick}
+        >
+          <KeyboardIcon />
+        </IconButton>
+      </Tooltip>
       <InputWithTranslation
         value={value}
         onChange={(handleChange)}
