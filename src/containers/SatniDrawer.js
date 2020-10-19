@@ -120,30 +120,34 @@ const SatniDrawer = ({
           <MetaLanguageSelector />
         </ListItem>
         <ListItem>
-          <ListSubheader><Trans>Delivered by</Trans></ListSubheader>
-        </ListItem>
-        {footers.map((footer, index) => (
-          <ListItem
-            inset
-            key={index}
+          <List
+            subheader={
+              <ListSubheader><Trans>Delivered by</Trans></ListSubheader>
+            }
           >
-            <ListItemText
-              inset
-              primary={<a
-                href={footer.address}
-                target='_blank'
-                rel='noopener noreferrer'
+            {footers.map((footer, index) => (
+              <ListItem
+                key={index}
               >
-                {footer.text}
-              </a>}
-            />
-          </ListItem>
-        ))}
-        <ListItem>
-          <ListItemText
-            inset
-            primary='Pekka Sammallahti'
-          />
+                <ListItemText
+                  inset
+                  primary={<a
+                    href={footer.address}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    {footer.text}
+                  </a>}
+                />
+              </ListItem>
+            ))}
+            <ListItem>
+              <ListItemText
+                inset
+                primary='Pekka Sammallahti'
+              />
+            </ListItem>
+          </List>
         </ListItem>
       </List>
       <LangChooserDialog
@@ -195,7 +199,7 @@ SatniDrawer.propTypes = {
   handleDrawerToggle: PropTypes.func.isRequired,
   mobileOpen: PropTypes.bool.isRequired,
   handleSearch: PropTypes.func.isRequired,
-  container: PropTypes.element.isRequired
+  container: PropTypes.element
 };
 
 export default SatniDrawer;

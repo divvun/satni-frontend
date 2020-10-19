@@ -35,7 +35,7 @@ const DictTargetStem = ({ stem, restriction }) => {
 
 DictTargetStem.propTypes = {
   stem: PropTypes.object.isRequired,
-  restriction: PropTypes.object.isRequired
+  restriction: PropTypes.object
 };
 
 export default DictTargetStem;

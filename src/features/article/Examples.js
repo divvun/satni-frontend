@@ -12,7 +12,7 @@ const Examples = ({examples}) => (
 );
 
 Examples.propTypes = {
-  examples: PropTypes.object.isRequired
+  examples: PropTypes.array.isRequired
 };
 
 export default Examples;
