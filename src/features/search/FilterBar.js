@@ -51,10 +51,14 @@ function FilterBar({ searchHandler }) {
     searchHandler(newValue);
   };
 
+  const lookup = () => {
+    const path = currentPath.currentDict ? `/${currentPath.currentDict}/${value}` : `/${value}`;
+    history.push(path);
+  };
+
   const keyPress = event => {
     if (event.key === 'Enter') {
-      const path = currentPath.currentDict ? `/${currentPath.currentDict}/${value}` : `/${value}`;
-      history.push(path);
+      lookup();
     }
   };
 
@@ -90,9 +94,18 @@ function FilterBar({ searchHandler }) {
         value={value}
         onChange={(handleChange)}
         onKeyUp={(keyPress)} />
-      <div className={classes.iconButton} aria-label='search'>
-        <SearchIcon />
-      </div>
+      <Tooltip
+        title={<Trans>Lookup the search word</Trans>}
+        aria-label={<Trans>Lookup the search word</Trans>}
+      >
+        <IconButton
+          className={classes.iconButton}
+          aria-label={<Trans>Search</Trans>}
+          onClick={lookup}
+        >
+          <SearchIcon />
+        </IconButton>
+      </Tooltip>
       <Popover
         id={id}
         open={open}
