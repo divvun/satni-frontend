@@ -101,7 +101,7 @@ const Stem = ({ stem, restriction, withLink }) => {
 Stem.propTypes = {
   stem: PropTypes.object.isRequired,
   restriction: PropTypes.object,
-  withLink: PropTypes.bool
+  withLink: PropTypes.number
 };
 
 export default Stem;
