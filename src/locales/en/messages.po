@@ -9,13 +9,13 @@ msgstr ""
 "Language: en\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-14 19:57+0200\n"
+"PO-Revision-Date: 2020-10-20 00:22+0200\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
 "Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
 "MIME-Version: 1.0\n"
 
-#: src/containers/StatusBar.js:19
+#: src/containers/StatusBar.js:20
 msgid "(<0>Show all</0>)"
 msgstr "(<0>Show all</0>)"
 
@@ -26,6 +26,10 @@ msgstr "<0/>"
 #: src/features/article/Articles.js:136
 msgid "<0>Error {0}</0>"
 msgstr "<0>Error {0}</0>"
+
+#: src/containers/SatniDrawer.js:45
+msgid "<0>Giellagáldu</0>"
+msgstr "<0>Giellagáldu</0>"
 
 #: src/features/article/Articles.js:135
 msgid "<0>Loading...</0>"
@@ -43,8 +47,8 @@ msgstr "adj."
 msgid "Adv"
 msgstr "adv."
 
-#: src/features/wantedlangs/DictChooser.js:40
-#: src/features/wantedlangs/DictChooser.js:46
+#: src/features/wantedlangs/DictChooser.js:41
+#: src/features/wantedlangs/DictChooser.js:47
 msgid ""
 "Approximately half of the content of the dictionary is taken by searching for"
 " parallels in a parallel corpus of administrative text. This work was"
@@ -62,11 +66,11 @@ msgstr "Beaivválaš giella"
 msgid "Boazodoallu"
 msgstr "Reindeer herding"
 
-#: src/features/article/TermWikiArticle.js:41
+#: src/features/article/TermWikiArticle.js:42
 msgid "Category"
 msgstr "Category"
 
-#: src/features/wantedlangs/DictChooserDialog.js:49
+#: src/features/wantedlangs/DictChooserDialog.js:50
 msgid "Choose dictionaries"
 msgstr "Choose dictionaries"
 
@@ -82,19 +86,23 @@ msgstr ""
 "Click <0/> to see the inflection paradigm of words. Click <1/> to see"
 " examples of how the word is used."
 
-#: src/features/article/Stem.js:94
+#: src/features/article/Stem.js:95
 msgid "Country"
 msgstr "Country"
 
-#: src/features/article/Definitions.js:19
+#: src/features/article/Definitions.js:20
 msgid "Definition"
 msgstr "Definition"
 
-#: src/features/article/Stem.js:93
+#: src/containers/SatniDrawer.js:27
+msgid "Delivered by"
+msgstr "Delivered by"
+
+#: src/features/article/Stem.js:94
 msgid "Dialect"
 msgstr "Dialect"
 
-#: src/containers/SatniDrawer.js:90
+#: src/containers/SatniDrawer.js:141
 msgid "Dictionaries"
 msgstr "Dictionaries"
 
@@ -140,7 +148,7 @@ msgstr "Ecology and environment"
 msgid "Ekonomiija ja gávppašeapmi"
 msgstr "Economy and trade"
 
-#: src/features/wantedlangs/DictChooser.js:27
+#: src/features/wantedlangs/DictChooser.js:28
 msgid ""
 "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own"
 " printed dictionaries published in 1989 and 1993."
@@ -160,7 +168,7 @@ msgstr "Geography"
 msgid "Gielladieđa"
 msgstr "Linguistics"
 
-#: src/features/wantedlangs/DictChooser.js:33
+#: src/features/wantedlangs/DictChooser.js:34
 msgid ""
 "Giellagáldu's main task is to standardise new terminology and written"
 " language for the Sami languages. The standardised terms from their <a"
@@ -185,8 +193,8 @@ msgstr "Fishery"
 msgid "Hide this dictionary"
 msgstr "Hide this dictionary"
 
-#: src/features/article/PairHeader.js:35
 #: src/features/article/PairHeader.js:36
+#: src/features/article/PairHeader.js:37
 msgid "Hide this language"
 msgstr "Hide this language"
 
@@ -206,9 +214,14 @@ msgstr ""
 msgid "Juridihkka"
 msgstr "Law"
 
-#: src/containers/SatniDrawer.js:82
+#: src/containers/SatniDrawer.js:133
 msgid "Languages"
 msgstr "Languages"
+
+#: src/features/search/FilterBar.js:98
+#: src/features/search/FilterBar.js:99
+msgid "Lookup the search word"
+msgstr "Lookup the search word"
 
 #: src/translateble_variables.js:50
 msgid "Luonddudieđa ja matematihkka"
@@ -242,7 +255,7 @@ msgstr ""
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "No results for <0>{searchExpression}</0>"
 
-#: src/features/wantedlangs/DictChooser.js:45
+#: src/features/wantedlangs/DictChooser.js:46
 msgid ""
 "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but"
 " frequent Norwegian words have been added. It contains about 26,000 Norwegian"
@@ -252,7 +265,7 @@ msgstr ""
 " frequent Norwegian words have been added. It contains about 26,000 Norwegian"
 " entries."
 
-#: src/features/article/LemmaGroup.js:14
+#: src/features/article/LemmaGroup.js:15
 msgid "Note:"
 msgstr "Note:"
 
@@ -272,13 +285,17 @@ msgstr "pron."
 msgid "Religion"
 msgstr "Religion"
 
-#: src/containers/StatusBar.js:19
+#: src/containers/StatusBar.js:20
 msgid "Results only from"
 msgstr "Results only from"
 
 #: src/translateble_variables.js:17
 msgid "SE"
 msgstr "Sweden"
+
+#: src/features/search/FilterBar.js:103
+msgid "Search"
+msgstr "Search"
 
 #: src/containers/Welcome.js:73
 msgid "Search results will appear here."
@@ -288,26 +305,26 @@ msgstr "Search results will appear here."
 msgid "Servodatdieđa"
 msgstr "Social sciences"
 
-#: src/features/paradigm/ParadigmButton.js:27
 #: src/features/paradigm/ParadigmButton.js:28
+#: src/features/paradigm/ParadigmButton.js:29
 msgid "Show paradigm for this word"
 msgstr "Show paradigm for this word"
 
-#: src/features/korp/KorpButton.js:25
 #: src/features/korp/KorpButton.js:26
+#: src/features/korp/KorpButton.js:27
 msgid "Show this word in our corpus"
 msgstr "Show this word in our corpus"
 
-#: src/features/article/LemmaGroup.js:16
+#: src/features/article/LemmaGroup.js:17
 #: src/features/article/Source.js:24
 msgid "Source:"
 msgstr "Source:"
 
-#: src/containers/SatniDrawer.js:74
+#: src/containers/SatniDrawer.js:125
 msgid "Start"
 msgstr "Start"
 
-#: src/features/article/LemmaGroup.js:15
+#: src/features/article/LemmaGroup.js:16
 msgid "Status:"
 msgstr "Status:"
 
@@ -315,16 +332,21 @@ msgstr "Status:"
 msgid "Stáda almmolaš hálddašeapmi"
 msgstr "Public administration"
 
+#: src/features/search/FilterBar.js:81
+#: src/features/search/FilterBar.js:82
+msgid "Sámi letters"
+msgstr "Sámi letters"
+
 #: src/translateble_variables.js:57
 msgid "Teknihkka industriija duodji"
 msgstr "Technology, industry and duodji"
 
-#: src/features/wantedlangs/DictChooser.js:62
-#: src/features/wantedlangs/DictChooser.js:68
+#: src/features/wantedlangs/DictChooser.js:63
+#: src/features/wantedlangs/DictChooser.js:69
 msgid "The dictionary contains about 11,000 entries."
 msgstr "The dictionary contains about 11,000 entries."
 
-#: src/features/wantedlangs/DictChooser.js:28
+#: src/features/wantedlangs/DictChooser.js:29
 msgid ""
 "The dictionary contains more than 50.000 entries, and Sammallahti adds"
 " entries regularly."
@@ -342,7 +364,7 @@ msgstr ""
 " do not have Sami letters on your device, press <0/> to write them in the"
 " input field."
 
-#: src/features/wantedlangs/DictChooser.js:34
+#: src/features/wantedlangs/DictChooser.js:35
 msgid ""
 "The termbase consists of over 50,000 term articles, and is updated on a"
 " regular basis."
@@ -350,12 +372,12 @@ msgstr ""
 "The termbase consists of over 50,000 term articles, and is updated on a"
 " regular basis."
 
-#: src/features/paradigm/ParadigmButton.js:43
 #: src/features/paradigm/ParadigmButton.js:44
+#: src/features/paradigm/ParadigmButton.js:45
 msgid "There is no paradigm for this word"
 msgstr "There is no paradigm for this word"
 
-#: src/features/wantedlangs/DictChooser.js:39
+#: src/features/wantedlangs/DictChooser.js:40
 msgid ""
 "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322"
 " words), but now it contains 30,000 entries, plus 6000 place name entries."
@@ -363,8 +385,8 @@ msgstr ""
 "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322"
 " words), but now it contains 30,000 entries, plus 6000 place name entries."
 
-#: src/features/wantedlangs/DictChooser.js:51
-#: src/features/wantedlangs/DictChooser.js:56
+#: src/features/wantedlangs/DictChooser.js:52
+#: src/features/wantedlangs/DictChooser.js:57
 msgid ""
 "This dictionary builds on material prepared by Albert Jåma and Tove Brustad"
 " in the Hemnes Saami Organization, but has in addition gained words from"
@@ -374,10 +396,10 @@ msgstr ""
 " in the Hemnes Saami Organization, but has in addition gained words from"
 " Giellatekno and Aajege's work with the Southern Sámi Oahpa."
 
-#: src/features/wantedlangs/DictChooser.js:73
-#: src/features/wantedlangs/DictChooser.js:78
-#: src/features/wantedlangs/DictChooser.js:83
-#: src/features/wantedlangs/DictChooser.js:88
+#: src/features/wantedlangs/DictChooser.js:74
+#: src/features/wantedlangs/DictChooser.js:79
+#: src/features/wantedlangs/DictChooser.js:84
+#: src/features/wantedlangs/DictChooser.js:89
 msgid ""
 "This dictionary builds on the Valtonen and Olthuis"
 " Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
@@ -385,7 +407,7 @@ msgstr ""
 "This dictionary builds on the Valtonen and Olthuis"
 " Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
 
-#: src/features/wantedlangs/DictChooser.js:67
+#: src/features/wantedlangs/DictChooser.js:68
 msgid ""
 "This dictionary is based on lexical material from the Institute for the"
 " Languages of Finland, and from Giellatekno's work with the North Saami"
@@ -395,7 +417,7 @@ msgstr ""
 " Languages of Finland, and from Giellatekno's work with the North Saami"
 " Oahpa. In addition frequent Finnish words have been added."
 
-#: src/features/wantedlangs/DictChooser.js:61
+#: src/features/wantedlangs/DictChooser.js:62
 msgid ""
 "This dictionary is based on lexical material from the Institute for the"
 " Languages of Finland, and from Giellatekno's work with the North Saami"
@@ -405,8 +427,8 @@ msgstr ""
 " Languages of Finland, and from Giellatekno's work with the North Saami"
 " Oahpa. In addition, we have included frequent words from North Saami."
 
-#: src/features/korp/KorpButton.js:47
 #: src/features/korp/KorpButton.js:48
+#: src/features/korp/KorpButton.js:49
 msgid "This word is not found in our corpus"
 msgstr "This word is not found in our corpus"
 
@@ -422,7 +444,7 @@ msgstr "Welcome!"
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "When you click a word here, dictionary articles appear to the right."
 
-#: src/features/search/FilterBar.js:51
+#: src/features/search/InputWithTranslation.js:28
 msgid "Write at least one letter here"
 msgstr "Write at least one letter here"
 
@@ -626,6 +648,10 @@ msgstr "Swedish"
 msgid "swe_genitive"
 msgstr "swedish"
 
+#: src/features/search/FilterBar.js:86
+msgid "sámi keys"
+msgstr "sámi keys"
+
 #: src/translateble_variables.js:4
 msgid "termwiki"
 msgstr "Giellagáldu's multilingual terms"
@@ -634,11 +660,11 @@ msgstr "Giellagáldu's multilingual terms"
 msgid "west"
 msgstr "west"
 
-#: src/containers/StatusBar.js:28
+#: src/containers/StatusBar.js:29
 msgid "{0}/{1} languages."
 msgstr "{0}/{1} languages."
 
-#: src/containers/StatusBar.js:23
+#: src/containers/StatusBar.js:24
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} sources."
 
@@ -661,3 +687,7 @@ msgstr "Raw materials industry"
 #: src/features/article/Definitions.js:20
 #~ msgid "Definitions:"
 #~ msgstr "Definitions:"
+
+#: src/containers/SatniDrawer.js:30
+#~ msgid "Giellagáldu"
+#~ msgstr "Giellagáldu"
