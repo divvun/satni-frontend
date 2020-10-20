@@ -53,7 +53,7 @@ export const WelcomeHeader = () => {
             <Trans id={infoText}/>
           </Typography>)}</> :
           <Trans>
-          Do searches in <Link target='_blank' rel='noopener noreferrer' href='https://giella.org'>Giellagáldu's</Link> term collection, <Link href='/sammallahtismefin'>Pekka Sammallahti's North Sami – Finnish dictionary</Link> and <Link target='_blank' rel='noopener noreferrer' href='http://giellatekno.uit.no'>Giellatekno's</Link> <Link target='_blank' rel='noopener noreferrer' href='http://sanit.oahpa.no'>sami dictionaries</Link>, all set up by <Link target='_blank' rel='noopener noreferrer' href='http://divvun.no'>Divvun</Link>.
+          Do searches in <Link target='_blank' rel='noopener noreferrer' href='https://giella.org'>Giellagáldu&apos;s</Link> term collection, <Link href='/sammallahtismefin'>Pekka Sammallahti&apos;s North Sami – Finnish dictionary</Link> and <Link target='_blank' rel='noopener noreferrer' href='http://giellatekno.uit.no'>Giellatekno&apos;s</Link> <Link target='_blank' rel='noopener noreferrer' href='http://sanit.oahpa.no'>sami dictionaries</Link>.
           </Trans>
         }
       </Typography>

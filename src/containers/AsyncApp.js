@@ -15,7 +15,7 @@ import qs from 'qs';
 
 import { locationParser } from 'utils';
 import Articles from 'features/article/Articles';
-import { DictWelcome, SearchWelcome, WelcomeHeader } from 'containers/Welcome';
+import { WelcomeHeader } from 'containers/Welcome';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
 import SatniAppBar from './SatniAppBar';
 import SatniDrawer from './SatniDrawer';
@@ -126,24 +126,22 @@ const AsyncApp = ({classes}) => {
                 }
               </Grid>
               <Grid item xs={4}>
-                {searchExpression ?
+                {searchExpression &&
                   <InfiniteStems
                     searchExpression={searchExpression}
                     wantedDicts={wantedDicts}
                     wantedLangs={data.wantedLangs}
                     currentDict={currentDict}
-                  /> :
-                  <SearchWelcome />
+                  />
                 }
               </Grid>
               <Grid item xs={8}>
-                {currentLemma ?
+                {currentLemma &&
                   <Articles
                     lemma={currentLemma}
                     wantedDicts={wantedDicts}
                     wantedLangs={data.wantedLangs}
-                  /> :
-                  <DictWelcome />
+                  />
                 }
               </Grid>
             </Grid>

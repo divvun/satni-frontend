@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Trans } from '@lingui/macro';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
+import { Trans } from '@lingui/macro';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import FeedbackIcon from '@material-ui/icons/Feedback';
