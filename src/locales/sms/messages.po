@@ -94,7 +94,7 @@ msgstr ""
 msgid "Dialect"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:141
+#: src/containers/SatniDrawer.js:142
 msgid "Dictionaries"
 msgstr ""
 
@@ -107,7 +107,11 @@ msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr ""
 
 #: src/containers/Welcome.js:55
-msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
+#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
+#~ msgstr ""
+
+#: src/containers/Welcome.js:55
+msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
 msgstr ""
 
 #: src/translateble_variables.js:39
@@ -162,6 +166,12 @@ msgstr ""
 msgid "Guolástus"
 msgstr ""
 
+#: src/containers/HelpDialog.js:47
+#: src/containers/SatniAppBar.js:68
+#: src/containers/SatniAppBar.js:69
+msgid "Help"
+msgstr ""
+
 #: src/features/article/Source.js:28
 #: src/features/article/Source.js:29
 msgid "Hide this dictionary"
@@ -184,7 +194,7 @@ msgstr ""
 msgid "Juridihkka"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:133
+#: src/containers/SatniDrawer.js:134
 msgid "Languages"
 msgstr ""
 
@@ -265,6 +275,11 @@ msgstr ""
 msgid "Servodatdieđa"
 msgstr ""
 
+#: src/containers/SatniAppBar.js:50
+#: src/containers/SatniAppBar.js:51
+msgid "Settings"
+msgstr ""
+
 #: src/features/paradigm/ParadigmButton.js:28
 #: src/features/paradigm/ParadigmButton.js:29
 msgid "Show paradigm for this word"
@@ -280,7 +295,7 @@ msgstr ""
 msgid "Source:"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:125
+#: src/containers/SatniDrawer.js:126
 msgid "Start"
 msgstr ""
 

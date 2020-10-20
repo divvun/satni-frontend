@@ -9,7 +9,7 @@ msgstr ""
 "Language: se\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-20 00:23+0200\n"
+"PO-Revision-Date: 2020-10-20 10:24+0200\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
 "Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
@@ -101,7 +101,7 @@ msgstr "Ráhkadeaddjit"
 msgid "Dialect"
 msgstr "Suopman"
 
-#: src/containers/SatniDrawer.js:141
+#: src/containers/SatniDrawer.js:142
 msgid "Dictionaries"
 msgstr "Sátnegirjjit"
 
@@ -121,11 +121,10 @@ msgstr "Dihtorteknologiija ja diehtoteknihkka"
 msgid ""
 "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's"
 " North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami"
-" dictionaries</3>, all set up by <4>Divvun</4>."
+" dictionaries</3>."
 msgstr ""
 "Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi –"
 " suoma sátnegirjjis</1> ja <2>Giellatekno</2> <3>sámi sátnegirjjiin</3>."
-" Visot dán lea <4>Divvun</4> heivehan."
 
 #: src/translateble_variables.js:39
 msgid "Dáidda ja girjjálašvuohta"
@@ -187,6 +186,12 @@ msgstr "Gulahallanteknihkka"
 msgid "Guolástus"
 msgstr "Guolástus"
 
+#: src/containers/HelpDialog.js:47
+#: src/containers/SatniAppBar.js:68
+#: src/containers/SatniAppBar.js:69
+msgid "Help"
+msgstr "Veahkki"
+
 #: src/features/article/Source.js:28
 #: src/features/article/Source.js:29
 msgid "Hide this dictionary"
@@ -213,7 +218,7 @@ msgstr ""
 msgid "Juridihkka"
 msgstr "Juridihkka"
 
-#: src/containers/SatniDrawer.js:133
+#: src/containers/SatniDrawer.js:134
 msgid "Languages"
 msgstr "Gielat"
 
@@ -303,6 +308,11 @@ msgstr "Ohcanbohtosat ihtet dása."
 msgid "Servodatdieđa"
 msgstr "Servodatdieđa"
 
+#: src/containers/SatniAppBar.js:50
+#: src/containers/SatniAppBar.js:51
+msgid "Settings"
+msgstr "Heivehusat"
+
 #: src/features/paradigm/ParadigmButton.js:28
 #: src/features/paradigm/ParadigmButton.js:29
 msgid "Show paradigm for this word"
@@ -318,7 +328,7 @@ msgstr "Čájet dán sáni min teakstačoakkáldagas"
 msgid "Source:"
 msgstr "Gáldu:"
 
-#: src/containers/SatniDrawer.js:125
+#: src/containers/SatniDrawer.js:126
 msgid "Start"
 msgstr "Álgu"
 
@@ -681,7 +691,3 @@ msgstr "Astoáigi ja faláštallan "
 #: src/translateble_variables.js:60
 msgid "Ávnnasindustriija"
 msgstr "Ávnnasindustriija"
-
-#: src/containers/SatniDrawer.js:30
-#~ msgid "Giellagáldu"
-#~ msgstr "Giellagáldu"

@@ -10,7 +10,7 @@ msgstr ""
 "Language: nb\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-20 00:23+0200\n"
+"PO-Revision-Date: 2020-10-20 10:23+0200\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
 "Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
@@ -30,7 +30,7 @@ msgstr "<0>Feil {0}</0>"
 
 #: src/containers/SatniDrawer.js:45
 msgid "<0>Giellagáldu</0>"
-msgstr ""
+msgstr "<0>Giellagáldu</0>"
 
 #: src/features/article/Articles.js:135
 msgid "<0>Loading...</0>"
@@ -103,7 +103,7 @@ msgstr "Laget av"
 msgid "Dialect"
 msgstr "Dialekt"
 
-#: src/containers/SatniDrawer.js:141
+#: src/containers/SatniDrawer.js:142
 msgid "Dictionaries"
 msgstr "Ordbøker"
 
@@ -123,11 +123,10 @@ msgstr "Datateknologi og datateknikk"
 msgid ""
 "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's"
 " North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami"
-" dictionaries</3>, all set up by <4>Divvun</4>."
+" dictionaries</3>."
 msgstr ""
 "Gjør søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamisk –"
-" finsk ordbok</1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>, alt"
-" satt opp av <4>Divvun</4>."
+" finsk ordbok</1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>."
 
 #: src/translateble_variables.js:39
 msgid "Dáidda ja girjjálašvuohta"
@@ -189,6 +188,12 @@ msgstr "Kommunikasjonsteknikk"
 msgid "Guolástus"
 msgstr "Fiskeri"
 
+#: src/containers/HelpDialog.js:47
+#: src/containers/SatniAppBar.js:68
+#: src/containers/SatniAppBar.js:69
+msgid "Help"
+msgstr "Hjelp"
+
 #: src/features/article/Source.js:28
 #: src/features/article/Source.js:29
 msgid "Hide this dictionary"
@@ -215,7 +220,7 @@ msgstr ""
 msgid "Juridihkka"
 msgstr "Jus"
 
-#: src/containers/SatniDrawer.js:133
+#: src/containers/SatniDrawer.js:134
 msgid "Languages"
 msgstr "Språk"
 
@@ -306,6 +311,11 @@ msgstr "Søkeresultater dukker opp her."
 msgid "Servodatdieđa"
 msgstr "Samfunnsvitenskap"
 
+#: src/containers/SatniAppBar.js:50
+#: src/containers/SatniAppBar.js:51
+msgid "Settings"
+msgstr "Innstillinger"
+
 #: src/features/paradigm/ParadigmButton.js:28
 #: src/features/paradigm/ParadigmButton.js:29
 msgid "Show paradigm for this word"
@@ -321,7 +331,7 @@ msgstr "Vis dette ordet i tekstsamlingen vår"
 msgid "Source:"
 msgstr "Kilde:"
 
-#: src/containers/SatniDrawer.js:125
+#: src/containers/SatniDrawer.js:126
 msgid "Start"
 msgstr "Start"
 
@@ -681,11 +691,3 @@ msgstr "Fritid og sport"
 #: src/translateble_variables.js:60
 msgid "Ávnnasindustriija"
 msgstr "Råstoffindustri"
-
-#: src/features/article/Definitions.js:20
-#~ msgid "Definitions:"
-#~ msgstr "Definisjoner:"
-
-#: src/containers/SatniDrawer.js:30
-#~ msgid "Giellagáldu"
-#~ msgstr "Giellagáldu"

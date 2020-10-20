@@ -82,11 +82,7 @@ msgstr ""
 
 #: src/features/article/Definitions.js:20
 msgid "Definition"
-msgstr ""
-
-#: src/features/article/Definitions.js:20
-#~ msgid "Definitions:"
-#~ msgstr "Definisjonar: "
+msgstr "Definisjon"
 
 #: src/containers/SatniDrawer.js:27
 msgid "Delivered by"
@@ -96,7 +92,7 @@ msgstr ""
 msgid "Dialect"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:141
+#: src/containers/SatniDrawer.js:142
 msgid "Dictionaries"
 msgstr "Ordbøker:"
 
@@ -109,8 +105,8 @@ msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr ""
 
 #: src/containers/Welcome.js:55
-msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
-msgstr "Gjer søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamisk – finsk ordbok</1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>, alt sett opp av <4>Divvun</4>."
+msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
+msgstr "Gjer søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamisk – finsk ordbok</1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>."
 
 #: src/translateble_variables.js:39
 msgid "Dáidda ja girjjálašvuohta"
@@ -148,10 +144,6 @@ msgstr ""
 msgid "Gielladieđa"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:30
-#~ msgid "Giellagáldu"
-#~ msgstr ""
-
 #: src/features/wantedlangs/DictChooser.js:34
 msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
 msgstr "Giellagáldu si hovudoppgåve er normering av ny terminologi og skriftspråk for dei samiske språka. Dei standardiserte termane frå termbasen deira vert dagleg henta til denne nettstaden, slik at dei er lett tilgjengelege for det samiske samfunnet."
@@ -162,6 +154,12 @@ msgstr ""
 
 #: src/translateble_variables.js:47
 msgid "Guolástus"
+msgstr ""
+
+#: src/containers/HelpDialog.js:47
+#: src/containers/SatniAppBar.js:68
+#: src/containers/SatniAppBar.js:69
+msgid "Help"
 msgstr ""
 
 #: src/features/article/Source.js:28
@@ -186,7 +184,7 @@ msgstr "Inne i artiklane kan du gøyma uønska språk og ordbøker. For å aktiv
 msgid "Juridihkka"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:133
+#: src/containers/SatniDrawer.js:134
 msgid "Languages"
 msgstr "Språk"
 
@@ -267,6 +265,11 @@ msgstr "Søkeresultat dukkar opp her."
 msgid "Servodatdieđa"
 msgstr ""
 
+#: src/containers/SatniAppBar.js:50
+#: src/containers/SatniAppBar.js:51
+msgid "Settings"
+msgstr ""
+
 #: src/features/paradigm/ParadigmButton.js:28
 #: src/features/paradigm/ParadigmButton.js:29
 msgid "Show paradigm for this word"
@@ -282,7 +285,7 @@ msgstr ""
 msgid "Source:"
 msgstr "Kjelde:"
 
-#: src/containers/SatniDrawer.js:125
+#: src/containers/SatniDrawer.js:126
 msgid "Start"
 msgstr "Start"
 

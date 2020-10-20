@@ -9,7 +9,7 @@ msgstr ""
 "Language: smj\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-20 00:24+0200\n"
+"PO-Revision-Date: 2020-10-20 10:25+0200\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
 "Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Dialect"
 msgstr "Giellasuorgge"
 
-#: src/containers/SatniDrawer.js:141
+#: src/containers/SatniDrawer.js:142
 msgid "Dictionaries"
 msgstr "Báhkogirje"
 
@@ -121,11 +121,10 @@ msgstr "Dáhtáteknologijja ja dáhtáteknihkka"
 msgid ""
 "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's"
 " North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami"
-" dictionaries</3>, all set up by <4>Divvun</4>."
+" dictionaries</3>."
 msgstr ""
 "Åtså <0>Giellagáldo</0> tærmmatjoahkkáldagán, <1>Pekka Sammallahti davvesáme"
-" – suoma báhkogirjen</1> ja <2>Giellatekno</2> <3>sáme báhkogirjijn</3>. <4"
-">Divvun</4> la dájt hiebadam."
+" – suoma báhkogirjen</1> ja <2>Giellatekno</2> <3>sáme báhkogirjijn</3>."
 
 #: src/translateble_variables.js:39
 msgid "Dáidda ja girjjálašvuohta"
@@ -187,6 +186,12 @@ msgstr "Guládallamteknihkka"
 msgid "Guolástus"
 msgstr "Guolástus"
 
+#: src/containers/HelpDialog.js:47
+#: src/containers/SatniAppBar.js:68
+#: src/containers/SatniAppBar.js:69
+msgid "Help"
+msgstr ""
+
 #: src/features/article/Source.js:28
 #: src/features/article/Source.js:29
 msgid "Hide this dictionary"
@@ -213,7 +218,7 @@ msgstr ""
 msgid "Juridihkka"
 msgstr "Juridihkka"
 
-#: src/containers/SatniDrawer.js:133
+#: src/containers/SatniDrawer.js:134
 msgid "Languages"
 msgstr "Giela"
 
@@ -304,6 +309,11 @@ msgstr "Åhtsåmbåhtusa ihti dási"
 msgid "Servodatdieđa"
 msgstr "Sebrudakdiehtaga"
 
+#: src/containers/SatniAppBar.js:50
+#: src/containers/SatniAppBar.js:51
+msgid "Settings"
+msgstr ""
+
 #: src/features/paradigm/ParadigmButton.js:28
 #: src/features/paradigm/ParadigmButton.js:29
 msgid "Show paradigm for this word"
@@ -319,7 +329,7 @@ msgstr "Vuoseda dáv bágo tækstatjoakkáldagán"
 msgid "Source:"
 msgstr "Gálldo"
 
-#: src/containers/SatniDrawer.js:125
+#: src/containers/SatniDrawer.js:126
 msgid "Start"
 msgstr "Álggo"
 
@@ -680,15 +690,3 @@ msgstr "Asstoájgge ja faláštallan"
 #: src/translateble_variables.js:60
 msgid "Ávnnasindustriija"
 msgstr "Ábnasindustrija"
-
-#: src/features/korp/Korp.js:24
-#~ msgid "An error occured: {0}"
-#~ msgstr "Juoga manáj boasstot: {0}"
-
-#: src/features/article/Definitions.js:20
-#~ msgid "Definitions:"
-#~ msgstr "Definisjåvnå:"
-
-#: src/containers/SatniDrawer.js:30
-#~ msgid "Giellagáldu"
-#~ msgstr "Giellagálldo"
