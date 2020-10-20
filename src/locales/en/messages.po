@@ -9,7 +9,7 @@ msgstr ""
 "Language: en\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-20 00:22+0200\n"
+"PO-Revision-Date: 2020-10-20 10:24+0200\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
 "Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
@@ -102,7 +102,7 @@ msgstr "Delivered by"
 msgid "Dialect"
 msgstr "Dialect"
 
-#: src/containers/SatniDrawer.js:141
+#: src/containers/SatniDrawer.js:142
 msgid "Dictionaries"
 msgstr "Dictionaries"
 
@@ -122,11 +122,11 @@ msgstr "Dihtorteknologiija ja diehtoteknihkka"
 msgid ""
 "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's"
 " North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami"
-" dictionaries</3>, all set up by <4>Divvun</4>."
+" dictionaries</3>."
 msgstr ""
 "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's"
 " North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami"
-" dictionaries</3>, all set up by <4>Divvun</4>."
+" dictionaries</3>."
 
 #: src/translateble_variables.js:39
 msgid "Dáidda ja girjjálašvuohta"
@@ -188,6 +188,12 @@ msgstr "Gulahallanteknihkka"
 msgid "Guolástus"
 msgstr "Fishery"
 
+#: src/containers/HelpDialog.js:47
+#: src/containers/SatniAppBar.js:68
+#: src/containers/SatniAppBar.js:69
+msgid "Help"
+msgstr "Help"
+
 #: src/features/article/Source.js:28
 #: src/features/article/Source.js:29
 msgid "Hide this dictionary"
@@ -214,7 +220,7 @@ msgstr ""
 msgid "Juridihkka"
 msgstr "Law"
 
-#: src/containers/SatniDrawer.js:133
+#: src/containers/SatniDrawer.js:134
 msgid "Languages"
 msgstr "Languages"
 
@@ -305,6 +311,11 @@ msgstr "Search results will appear here."
 msgid "Servodatdieđa"
 msgstr "Social sciences"
 
+#: src/containers/SatniAppBar.js:50
+#: src/containers/SatniAppBar.js:51
+msgid "Settings"
+msgstr "Settings"
+
 #: src/features/paradigm/ParadigmButton.js:28
 #: src/features/paradigm/ParadigmButton.js:29
 msgid "Show paradigm for this word"
@@ -320,7 +331,7 @@ msgstr "Show this word in our corpus"
 msgid "Source:"
 msgstr "Source:"
 
-#: src/containers/SatniDrawer.js:125
+#: src/containers/SatniDrawer.js:126
 msgid "Start"
 msgstr "Start"
 
@@ -687,6 +698,10 @@ msgstr "Raw materials industry"
 #: src/features/article/Definitions.js:20
 #~ msgid "Definitions:"
 #~ msgstr "Definitions:"
+
+#: src/containers/Welcome.js:55
+#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
+#~ msgstr "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
 
 #: src/containers/SatniDrawer.js:30
 #~ msgid "Giellagáldu"

@@ -9,7 +9,7 @@ msgstr ""
 "Language: sma\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-20 00:24+0200\n"
+"PO-Revision-Date: 2020-10-20 10:25+0200\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
 "Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Dialect"
 msgstr "Smaarege"
 
-#: src/containers/SatniDrawer.js:141
+#: src/containers/SatniDrawer.js:142
 msgid "Dictionaries"
 msgstr "Baakoegærjah"
 
@@ -122,12 +122,11 @@ msgstr "Daatateknologije jïh daatateknigke"
 msgid ""
 "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's"
 " North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami"
-" dictionaries</3>, all set up by <4>Divvun</4>."
+" dictionaries</3>."
 msgstr ""
 "Ohtsh <0>Gïelegaaltijen</0>teermetjåagkestahke, <1>Pekka Sammallahti"
 " noerhtesaemien - soemen baakoegærjesne</1> jïh <2>Gïeletekno</2> <3>saemien"
-" baakoegærjine</3> seammasïenten. Gaajhkh dejtie <4>Divvun</4> lea"
-" sjïehtedamme."
+" baakoegærjine</3> seammasïenten. "
 
 #: src/translateble_variables.js:39
 msgid "Dáidda ja girjjálašvuohta"
@@ -189,6 +188,12 @@ msgstr "Gaskesadtemeteknigke"
 msgid "Guolástus"
 msgstr "Gøølemdahke"
 
+#: src/containers/HelpDialog.js:47
+#: src/containers/SatniAppBar.js:68
+#: src/containers/SatniAppBar.js:69
+msgid "Help"
+msgstr ""
+
 #: src/features/article/Source.js:28
 #: src/features/article/Source.js:29
 msgid "Hide this dictionary"
@@ -215,7 +220,7 @@ msgstr ""
 msgid "Juridihkka"
 msgstr "Jussh"
 
-#: src/containers/SatniDrawer.js:133
+#: src/containers/SatniDrawer.js:134
 msgid "Languages"
 msgstr "Gïelh"
 
@@ -306,6 +311,11 @@ msgstr "Maam ohtseme jijhtieh dagkoe."
 msgid "Servodatdieđa"
 msgstr "Sïebredahkendotkeme"
 
+#: src/containers/SatniAppBar.js:50
+#: src/containers/SatniAppBar.js:51
+msgid "Settings"
+msgstr ""
+
 #: src/features/paradigm/ParadigmButton.js:28
 #: src/features/paradigm/ParadigmButton.js:29
 msgid "Show paradigm for this word"
@@ -321,7 +331,7 @@ msgstr ""
 msgid "Source:"
 msgstr "Gaaltije"
 
-#: src/containers/SatniDrawer.js:125
+#: src/containers/SatniDrawer.js:126
 msgid "Start"
 msgstr "Aalkoe"
 
@@ -687,11 +697,3 @@ msgstr "Eejehtse jih gaarsje"
 #: src/translateble_variables.js:60
 msgid "Ávnnasindustriija"
 msgstr "Raaveskhindustrije"
-
-#: src/features/article/Definitions.js:20
-#~ msgid "Definitions:"
-#~ msgstr "Definisjovne:"
-
-#: src/containers/SatniDrawer.js:30
-#~ msgid "Giellagáldu"
-#~ msgstr "Gïelegaaltije"
