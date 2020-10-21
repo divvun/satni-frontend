@@ -134,14 +134,14 @@ def normalise_lemma(lemma: str) -> str:
 
 
 def l_or_t2stem(element, src):
-    l = Lemma(lemma=normalise_lemma(element.text),
+    lemma = Lemma(lemma=normalise_lemma(element.text),
               language=src,
               pos=element.get('pos'),
               dialect=element.get('dialect'),
               country=element.get('country'))
-    l.save()
+    lemma.save()
 
-    return l
+    return lemma
 
 
 def make_dict_lemma(element, lang):
