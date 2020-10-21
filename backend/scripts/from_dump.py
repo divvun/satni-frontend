@@ -29,6 +29,12 @@ LANGS = {
 }
 
 
+def sammallahti_replacer(line):
+    """Replace special characters found in Sammallahti's dictionary."""
+    return line.translate(
+        str.maketrans('Èéíïēīĵĺōūḥḷṃṇṿạẹọụÿ', 'Eeiieijlouhlmrvaeouy'))
+
+
 def make_lemma(lang, expression):
     lemma = Lemma(lemma=expression['expression'],
                   pos=expression['pos'],
@@ -205,16 +211,17 @@ def make_entries(dictxml, dictname, src, target):
                               entry.xpath('.//tg'), target))
 
             for lookupLemma in d.lookupLemmas:
-                if not STEMS.get(lookupLemma.lemma):
-                    STEMS[lookupLemma.lemma] = {}
-                    STEMS[lookupLemma.lemma]['fromlangs'] = set()
-                    STEMS[lookupLemma.lemma]['tolangs'] = set()
-                    STEMS[lookupLemma.lemma]['dicts'] = set()
+                lemma = sammallahti_replacer(lookupLemma.lemma)
+                if not STEMS.get(lemma):
+                    STEMS[lemma] = {}
+                    STEMS[lemma]['fromlangs'] = set()
+                    STEMS[lemma]['tolangs'] = set()
+                    STEMS[lemma]['dicts'] = set()
 
-                STEMS[lookupLemma.lemma]['dicts'].add(
+                STEMS[lemma]['dicts'].add(
                     f'{dictname}{src}{target}')
-                STEMS[lookupLemma.lemma]['fromlangs'].add(src)
-                STEMS[lookupLemma.lemma]['tolangs'].add(target)
+                STEMS[lemma]['fromlangs'].add(src)
+                STEMS[lemma]['tolangs'].add(target)
 
             d.save()
 
