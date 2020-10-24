@@ -6,6 +6,7 @@ import Stem from './Stem';
 const stem = {
   id: '68360',
   lemma: 'bárdni',
+  presentationLemma: 'bárdni',
   language: 'sme',
   pos: 'N',
   dialect: 'north',
@@ -27,4 +28,11 @@ storiesOf('Stem', module)
     withLink />)
   .add('withLink false', () => <Stem
     stem={stem}
-    restriction={restriction} />);
+    restriction={restriction} />)
+  .add('other presentation lemma', () => <Stem
+    stem={{...stem, presentationLemma: 'burdni'}}
+    restriction={restriction} />)
+  .add('other presentation lemma, link', () => <Stem
+    stem={{...stem, presentationLemma: 'burdni'}}
+    restriction={restriction}
+    withLink />);

@@ -14,6 +14,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'fijlla',
+          'presentationLemma': 'fijlla',
           'language': 'smj',
           'pos': 'N'
         }
@@ -35,6 +36,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'viila',
+          'presentationLemma': 'viila',
           'language': 'fin',
           'pos': 'N'
         }
@@ -45,6 +47,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'kaista',
+          'presentationLemma': 'kaista',
           'language': 'fin',
           'pos': 'N'
         }
@@ -55,6 +58,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'tiedosto',
+          'presentationLemma': 'tiedosto',
           'language': 'fin',
           'pos': 'N'
         }
@@ -76,6 +80,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'file',
+          'presentationLemma': 'file',
           'language': 'eng',
           'pos': 'N'
         }
@@ -97,6 +102,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'fil',
+          'presentationLemma': 'fil',
           'language': 'nob',
           'pos': 'N'
         }
@@ -118,6 +124,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'fil',
+          'presentationLemma': 'fil',
           'language': 'swe',
           'pos': 'N'
         }
@@ -139,6 +146,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'fiila',
+          'presentationLemma': 'fiila',
           'language': 'sme',
           'pos': 'N'
         }
@@ -149,6 +157,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'vuorká',
+          'presentationLemma': 'vuorká',
           'language': 'sme',
           'pos': 'N'
         }
@@ -170,6 +179,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'fijle',
+          'presentationLemma': 'fijle',
           'language': 'sma',
           'pos': 'N'
         }
@@ -190,6 +200,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'arkiv',
+          'presentationLemma': 'arkiv',
           'language': 'nob',
           'pos': 'N'
         }
@@ -210,6 +221,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'arkiv',
+          'presentationLemma': 'arkiv',
           'language': 'swe',
           'pos': 'N'
         }
@@ -230,6 +242,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'vuorká',
+          'presentationLemma': 'vuorká',
           'language': 'sme',
           'pos': 'N'
         }
@@ -250,6 +263,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'arkisto',
+          'presentationLemma': 'arkisto',
           'language': 'fin',
           'pos': 'N'
         }
@@ -270,6 +284,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'arkiv',
+          'presentationLemma': 'arkiv',
           'language': 'nob',
           'pos': 'N'
         }
@@ -290,6 +305,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'arkiv',
+          'presentationLemma': 'arkiv',
           'language': 'swe',
           'pos': 'N'
         }
@@ -310,6 +326,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'arkiiva',
+          'presentationLemma': 'arkiiva',
           'language': 'sme',
           'pos': 'N'
         }
@@ -320,6 +337,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'vuorká',
+          'presentationLemma': 'vuorká',
           'language': 'sme',
           'pos': 'N'
         }
@@ -330,6 +348,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'vuorká',
+          'presentationLemma': 'vuorká',
           'language': 'sme',
           'pos': 'N'
         }
@@ -350,6 +369,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'arkkâdâh',
+          'presentationLemma': 'arkkâdâh',
           'language': 'smn',
           'pos': 'N'
         }
@@ -370,6 +390,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'våarhkoe',
+          'presentationLemma': 'våarhkoe',
           'language': 'sma',
           'pos': 'N'
         }
@@ -390,6 +411,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'varasto',
+          'presentationLemma': 'varasto',
           'language': 'fin',
           'pos': 'N'
         }
@@ -410,6 +432,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'depot',
+          'presentationLemma': 'depot',
           'language': 'nob',
           'pos': 'N'
         }
@@ -430,6 +453,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'depå',
+          'presentationLemma': 'depå',
           'language': 'swe',
           'pos': 'N'
         }
@@ -440,6 +464,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'förråd',
+          'presentationLemma': 'förråd',
           'language': 'swe',
           'pos': 'N'
         }
@@ -460,6 +485,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'vuorká',
+          'presentationLemma': 'vuorká',
           'language': 'sme',
           'pos': 'N'
         }
@@ -480,6 +506,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'vuárkká',
+          'presentationLemma': 'vuárkká',
           'language': 'smn',
           'pos': 'N'
         }
@@ -500,6 +527,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'bod',
+          'presentationLemma': 'bod',
           'language': 'nob',
           'pos': 'N'
         }
@@ -520,6 +548,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'vurkkohat',
+          'presentationLemma': 'vurkkohat',
           'language': 'sme',
           'pos': 'N'
         }
@@ -530,6 +559,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'vuorká',
+          'presentationLemma': 'vuorká',
           'language': 'sme',
           'pos': 'N'
         }
@@ -540,6 +570,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'rádju',
+          'presentationLemma': 'rádju',
           'language': 'sme',
           'pos': 'N'
         }
@@ -560,6 +591,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'varasto',
+          'presentationLemma': 'varasto',
           'language': 'fin',
           'pos': 'N'
         }
@@ -570,6 +602,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'komero',
+          'presentationLemma': 'komero',
           'language': 'fin',
           'pos': 'N'
         }
@@ -590,6 +623,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'boda',
+          'presentationLemma': 'boda',
           'language': 'swe',
           'pos': 'N'
         }
@@ -600,6 +634,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'gömsle',
+          'presentationLemma': 'gömsle',
           'language': 'swe',
           'pos': 'N'
         }
@@ -621,6 +656,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'oppbevaringsplass',
+          'presentationLemma': 'oppbevaringsplass',
           'language': 'nob',
           'pos': 'N'
         }
@@ -642,6 +678,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'vuorká',
+          'presentationLemma': 'vuorká',
           'language': 'sme',
           'pos': 'N'
         }
@@ -663,6 +700,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'förråd',
+          'presentationLemma': 'förråd',
           'language': 'swe',
           'pos': 'N'
         }
@@ -684,6 +722,7 @@ export const conceptList = [
         'status': null,
         'expression': {
           'lemma': 'säilytyspaikka',
+          'presentationLemma': 'säilytyspaikka',
           'language': 'fin',
           'pos': 'N'
         }
@@ -702,6 +741,7 @@ export const dictEntryList = [
         {
           'node': {
             'lemma': 'vuorká',
+            'presentationLemma': 'vuorká',
             'language': 'sme',
             'pos': 'N',
             'dialect': null,
@@ -717,6 +757,7 @@ export const dictEntryList = [
             {
               'node': {
                 'lemma': 'arkiv',
+                'presentationLemma': 'arkiv',
                 'language': 'nob',
                 'pos': 'N',
                 'dialect': null,
@@ -734,6 +775,7 @@ export const dictEntryList = [
             {
               'node': {
                 'lemma': 'depot',
+                'presentationLemma': 'depot',
                 'language': 'nob',
                 'pos': 'N',
                 'dialect': null,
@@ -743,6 +785,7 @@ export const dictEntryList = [
             {
               'node': {
                 'lemma': 'oppbevaringsplass',
+                'presentationLemma': 'oppbevaringsplass',
                 'language': 'nob',
                 'pos': 'N',
                 'dialect': null,
@@ -760,6 +803,7 @@ export const dictEntryList = [
             {
               'node': {
                 'lemma': 'oppbevaring',
+                'presentationLemma': 'oppbevaring',
                 'language': 'nob',
                 'pos': 'N',
                 'dialect': null,
@@ -782,6 +826,7 @@ export const dictEntryList = [
         {
           'node': {
             'lemma': 'vuorká',
+            'presentationLemma': 'vuorká',
             'language': 'sme',
             'pos': 'N',
             'dialect': null,
@@ -797,6 +842,7 @@ export const dictEntryList = [
             {
               'node': {
                 'lemma': 'arkisto',
+                'presentationLemma': 'arkisto',
                 'language': 'fin',
                 'pos': 'N',
                 'dialect': null,
@@ -814,6 +860,7 @@ export const dictEntryList = [
             {
               'node': {
                 'lemma': 'säilö',
+                'presentationLemma': 'säilö',
                 'language': 'fin',
                 'pos': 'N',
                 'dialect': null,
@@ -836,6 +883,7 @@ export const dictEntryList = [
         {
           'node': {
             'lemma': 'vuorká',
+            'presentationLemma': 'vuorká',
             'language': 'sme',
             'pos': 'N',
             'dialect': null,
@@ -851,6 +899,7 @@ export const dictEntryList = [
             {
               'node': {
                 'lemma': 'vuárkká',
+                'presentationLemma': 'vuárkká',
                 'language': 'smn',
                 'pos': 'N',
                 'dialect': null,
@@ -873,6 +922,7 @@ export const dictEntryList = [
         {
           'node': {
             'lemma': 'vuorká',
+            'presentationLemma': 'vuorká',
             'language': 'sme',
             'pos': 'N',
             'dialect': null,
@@ -882,6 +932,7 @@ export const dictEntryList = [
         {
           'node': {
             'lemma': 'fuorká',
+            'presentationLemma': 'fuorká',
             'language': 'sme',
             'pos': 'N',
             'dialect': null,
@@ -897,6 +948,7 @@ export const dictEntryList = [
             {
               'node': {
                 'lemma': 'säilö',
+                'presentationLemma': 'säilö',
                 'language': 'fin',
                 'pos': 'N',
                 'dialect': null,
@@ -906,6 +958,7 @@ export const dictEntryList = [
             {
               'node': {
                 'lemma': 'tiedosto',
+                'presentationLemma': 'tiedosto',
                 'language': 'fin',
                 'pos': 'N',
                 'dialect': null,

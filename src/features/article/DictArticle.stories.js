@@ -10,6 +10,7 @@ const dictGroup = {
     'lookupLemmas': [
       {
         'lemma': 'kanskje',
+        'presentationLemma': 'kanskje',
         'pos': 'Adv'
       }
     ]
@@ -36,11 +37,13 @@ const dictGroup = {
           {
             'language': 'sme',
             'lemma': 'soaitit',
+            'presentationLemma': 'soaitit',
             'pos': 'V'
           },
           {
             'language': 'sme',
             'lemma': 'várra',
+            'presentationLemma': 'várra',
             'pos': 'Adv'
           }
         ]

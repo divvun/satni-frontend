@@ -32,6 +32,7 @@ const Articles = ({ lemma, wantedDicts, wantedLangs }) => {
             edges {
               node {
                 lemma
+                presentationLemma
                 language
                 pos
                 dialect
@@ -44,6 +45,7 @@ const Articles = ({ lemma, wantedDicts, wantedLangs }) => {
               edges {
                 node {
                   lemma
+                  presentationLemma
                   language
                   pos
                   dialect
@@ -72,6 +74,7 @@ const Articles = ({ lemma, wantedDicts, wantedLangs }) => {
             status
             expression {
               lemma
+              presentationLemma
               language
               pos
               dialect
@@ -91,6 +94,7 @@ const Articles = ({ lemma, wantedDicts, wantedLangs }) => {
             edges {
               node {
                 lemma
+                presentationLemma
                 language
                 pos
                 dialect
@@ -103,6 +107,7 @@ const Articles = ({ lemma, wantedDicts, wantedLangs }) => {
               edges {
                 node {
                   lemma
+                  presentationLemma
                   language
                   pos
                   dialect

@@ -1,6 +1,5 @@
 import {
   cleanFrom,
-  conceptListNames,
   dictBackend2Frontend,
   filterProp,
   languagesOfLemma,
@@ -26,6 +25,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'smj',
                 'lemma': 'fijlla',
+                'presentationLemma': 'fijlla',
                 'pos': 'N'
               },
               'note': 'jll jl',
@@ -46,6 +46,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'fin',
                 'lemma': 'viila',
+                'presentationLemma': 'viila',
                 'pos': 'N'
               },
               'note': null,
@@ -56,6 +57,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'fin',
                 'lemma': 'kaista',
+                'presentationLemma': 'kaista',
                 'pos': 'N'
               },
               'note': null,
@@ -66,6 +68,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'fin',
                 'lemma': 'tiedosto',
+                'presentationLemma': 'tiedosto',
                 'pos': 'N'
               },
               'note': null,
@@ -86,6 +89,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'eng',
                 'lemma': 'file',
+                'presentationLemma': 'file',
                 'pos': 'N'
               },
               'note': null,
@@ -106,6 +110,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'nob',
                 'lemma': 'fil',
+                'presentationLemma': 'fil',
                 'pos': 'N'
               },
               'note': null,
@@ -126,6 +131,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'swe',
                 'lemma': 'fil',
+                'presentationLemma': 'fil',
                 'pos': 'N'
               },
               'note': null,
@@ -146,6 +152,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sme',
                 'lemma': 'fiila',
+                'presentationLemma': 'fiila',
                 'pos': 'N'
               },
               'note': null,
@@ -156,6 +163,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sme',
                 'lemma': 'vuorká',
+                'presentationLemma': 'vuorká',
                 'pos': 'N'
               },
               'note': null,
@@ -176,6 +184,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sma',
                 'lemma': 'fijle',
+                'presentationLemma': 'fijle',
                 'pos': 'N'
               },
               'note': null,
@@ -197,6 +206,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'nob',
                 'lemma': 'arkiv',
+                'presentationLemma': 'arkiv',
                 'pos': 'N'
               },
               'note': null,
@@ -216,6 +226,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'swe',
                 'lemma': 'arkiv',
+                'presentationLemma': 'arkiv',
                 'pos': 'N'
               },
               'note': null,
@@ -235,6 +246,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sme',
                 'lemma': 'vuorká',
+                'presentationLemma': 'vuorká',
                 'pos': 'N'
               },
               'note': null,
@@ -256,6 +268,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'fin',
                 'lemma': 'arkisto',
+                'presentationLemma': 'arkisto',
                 'pos': 'N'
               },
               'note': null,
@@ -275,6 +288,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'nob',
                 'lemma': 'arkiv',
+                'presentationLemma': 'arkiv',
                 'pos': 'N'
               },
               'note': null,
@@ -294,6 +308,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'swe',
                 'lemma': 'arkiv',
+                'presentationLemma': 'arkiv',
                 'pos': 'N'
               },
               'note': null,
@@ -313,6 +328,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sme',
                 'lemma': 'arkiiva',
+                'presentationLemma': 'arkiiva',
                 'pos': 'N'
               },
               'note': null,
@@ -323,6 +339,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sme',
                 'lemma': 'vuorká',
+                'presentationLemma': 'vuorká',
                 'pos': 'N'
               },
               'note': null,
@@ -333,6 +350,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sme',
                 'lemma': 'vuorká',
+                'presentationLemma': 'vuorká',
                 'pos': 'N'
               },
               'note': null,
@@ -352,6 +370,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'smn',
                 'lemma': 'arkkâdâh',
+                'presentationLemma': 'arkkâdâh',
                 'pos': 'N'
               },
               'note': null,
@@ -371,6 +390,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sma',
                 'lemma': 'våarhkoe',
+                'presentationLemma': 'våarhkoe',
                 'pos': 'N'
               },
               'note': null,
@@ -392,6 +412,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'fin',
                 'lemma': 'varasto',
+                'presentationLemma': 'varasto',
                 'pos': 'N'
               },
               'note': null,
@@ -411,6 +432,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'nob',
                 'lemma': 'depot',
+                'presentationLemma': 'depot',
                 'pos': 'N'
               },
               'note': null,
@@ -430,6 +452,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'swe',
                 'lemma': 'depå',
+                'presentationLemma': 'depå',
                 'pos': 'N'
               },
               'note': null,
@@ -440,6 +463,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'swe',
                 'lemma': 'förråd',
+                'presentationLemma': 'förråd',
                 'pos': 'N'
               },
               'note': null,
@@ -459,6 +483,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sme',
                 'lemma': 'vuorká',
+                'presentationLemma': 'vuorká',
                 'pos': 'N'
               },
               'note': null,
@@ -478,6 +503,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'smn',
                 'lemma': 'vuárkká',
+                'presentationLemma': 'vuárkká',
                 'pos': 'N'
               },
               'note': null,
@@ -499,6 +525,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'nob',
                 'lemma': 'bod',
+                'presentationLemma': 'bod',
                 'pos': 'N'
               },
               'note': null,
@@ -518,6 +545,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sme',
                 'lemma': 'vurkkohat',
+                'presentationLemma': 'vurkkohat',
                 'pos': 'N'
               },
               'note': null,
@@ -528,6 +556,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sme',
                 'lemma': 'vuorká',
+                'presentationLemma': 'vuorká',
                 'pos': 'N'
               },
               'note': null,
@@ -538,6 +567,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sme',
                 'lemma': 'rádju',
+                'presentationLemma': 'rádju',
                 'pos': 'N'
               },
               'note': null,
@@ -557,6 +587,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'fin',
                 'lemma': 'varasto',
+                'presentationLemma': 'varasto',
                 'pos': 'N'
               },
               'note': null,
@@ -567,6 +598,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'fin',
                 'lemma': 'komero',
+                'presentationLemma': 'komero',
                 'pos': 'N'
               },
               'note': null,
@@ -586,6 +618,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'swe',
                 'lemma': 'boda',
+                'presentationLemma': 'boda',
                 'pos': 'N'
               },
               'note': null,
@@ -596,6 +629,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'swe',
                 'lemma': 'gömsle',
+                'presentationLemma': 'gömsle',
                 'pos': 'N'
               },
               'note': null,
@@ -618,6 +652,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'nob',
                 'lemma': 'oppbevaringsplass',
+                'presentationLemma': 'oppbevaringsplass',
                 'pos': 'N'
               },
               'note': null,
@@ -638,6 +673,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'sme',
                 'lemma': 'vuorká',
+                'presentationLemma': 'vuorká',
                 'pos': 'N'
               },
               'note': null,
@@ -658,6 +694,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'swe',
                 'lemma': 'förråd',
+                'presentationLemma': 'förråd',
                 'pos': 'N'
               },
               'note': null,
@@ -678,6 +715,7 @@ describe('Massage termwiki data from backend', () => {
               'expression': {
                 'language': 'fin',
                 'lemma': 'säilytyspaikka',
+                'presentationLemma': 'säilytyspaikka',
                 'pos': 'N'
               },
               'note': null,
@@ -717,6 +755,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'sme',
               'lemma': 'fiila',
+              'presentationLemma': 'fiila',
               'pos': 'N'
             },
             'note': null,
@@ -727,6 +766,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'sme',
               'lemma': 'vuorká',
+              'presentationLemma': 'vuorká',
               'pos': 'N'
             },
             'note': null,
@@ -747,6 +787,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'smj',
               'lemma': 'fijlla',
+              'presentationLemma': 'fijlla',
               'pos': 'N'
             },
             'note': 'jll jl',
@@ -767,6 +808,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'fin',
               'lemma': 'viila',
+              'presentationLemma': 'viila',
               'pos': 'N'
             },
             'note': null,
@@ -777,6 +819,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'fin',
               'lemma': 'kaista',
+              'presentationLemma': 'kaista',
               'pos': 'N'
             },
             'note': null,
@@ -787,6 +830,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'fin',
               'lemma': 'tiedosto',
+              'presentationLemma': 'tiedosto',
               'pos': 'N'
             },
             'note': null,
@@ -807,6 +851,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'eng',
               'lemma': 'file',
+              'presentationLemma': 'file',
               'pos': 'N'
             },
             'note': null,
@@ -827,6 +872,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'nob',
               'lemma': 'fil',
+              'presentationLemma': 'fil',
               'pos': 'N'
             },
             'note': null,
@@ -847,6 +893,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'swe',
               'lemma': 'fil',
+              'presentationLemma': 'fil',
               'pos': 'N'
             },
             'note': null,
@@ -867,6 +914,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'sma',
               'lemma': 'fijle',
+              'presentationLemma': 'fijle',
               'pos': 'N'
             },
             'note': null,
@@ -905,6 +953,7 @@ describe('Massage termwiki data from backend', () => {
           'status': null,
           'expression': {
             'lemma': 'vuorká',
+            'presentationLemma': 'vuorká',
             'pos': 'N',
             'language': 'sme'
           }
@@ -915,6 +964,7 @@ describe('Massage termwiki data from backend', () => {
           'status': null,
           'expression': {
             'lemma': 'fiila',
+            'presentationLemma': 'fiila',
             'pos': 'N',
             'language': 'sme'
           }
@@ -943,6 +993,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'sme',
               'lemma': 'vuorká',
+              'presentationLemma': 'vuorká',
               'pos': 'N'
             },
             'note': null,
@@ -953,6 +1004,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'sme',
               'lemma': 'fiila',
+              'presentationLemma': 'fiila',
               'pos': 'N'
             },
             'note': null,
@@ -973,6 +1025,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'smj',
               'lemma': 'fijlla',
+              'presentationLemma': 'fijlla',
               'pos': 'N'
             },
             'note': 'jll jl',
@@ -993,6 +1046,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'fin',
               'lemma': 'viila',
+              'presentationLemma': 'viila',
               'pos': 'N'
             },
             'note': null,
@@ -1003,6 +1057,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'fin',
               'lemma': 'kaista',
+              'presentationLemma': 'kaista',
               'pos': 'N'
             },
             'note': null,
@@ -1013,6 +1068,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'fin',
               'lemma': 'tiedosto',
+              'presentationLemma': 'tiedosto',
               'pos': 'N'
             },
             'note': null,
@@ -1033,6 +1089,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'eng',
               'lemma': 'file',
+              'presentationLemma': 'file',
               'pos': 'N'
             },
             'note': null,
@@ -1053,6 +1110,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'nob',
               'lemma': 'fil',
+              'presentationLemma': 'fil',
               'pos': 'N'
             },
             'note': null,
@@ -1073,6 +1131,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'swe',
               'lemma': 'fil',
+              'presentationLemma': 'fil',
               'pos': 'N'
             },
             'note': null,
@@ -1093,6 +1152,7 @@ describe('Massage termwiki data from backend', () => {
             'expression': {
               'language': 'sma',
               'lemma': 'fijle',
+              'presentationLemma': 'fijle',
               'pos': 'N'
             },
             'note': null,
@@ -1121,6 +1181,7 @@ describe('Massage Giellatekno dictionaries from backend', () => {
             'dialect': null,
             'language': 'sme',
             'lemma': 'vuorká',
+            'presentationLemma': 'vuorká',
             'pos': 'N'
           }
         ]
@@ -1137,6 +1198,7 @@ describe('Massage Giellatekno dictionaries from backend', () => {
                 'dialect': null,
                 'language': 'nob',
                 'lemma': 'arkiv',
+                'presentationLemma': 'arkiv',
                 'pos': 'N'
               }
             ]
@@ -1150,6 +1212,7 @@ describe('Massage Giellatekno dictionaries from backend', () => {
                 'dialect': null,
                 'language': 'nob',
                 'lemma': 'depot',
+                'presentationLemma': 'depot',
                 'pos': 'N'
               },
               {
@@ -1157,6 +1220,7 @@ describe('Massage Giellatekno dictionaries from backend', () => {
                 'dialect': null,
                 'language': 'nob',
                 'lemma': 'oppbevaringsplass',
+                'presentationLemma': 'oppbevaringsplass',
                 'pos': 'N'
               }
             ]
@@ -1170,6 +1234,7 @@ describe('Massage Giellatekno dictionaries from backend', () => {
                 'dialect': null,
                 'language': 'nob',
                 'lemma': 'oppbevaring',
+                'presentationLemma': 'oppbevaring',
                 'pos': 'N'
               }
             ]

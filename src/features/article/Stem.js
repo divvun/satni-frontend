@@ -37,7 +37,7 @@ const useStyles = makeStyles({
 
 const Stem = ({ stem, restriction, withLink }) => {
   const classes = useStyles();
-  const {lemma, pos, language, dialect, country} = stem;
+  const {lemma, presentationLemma, pos, language, dialect, country} = stem;
   const [openParadigm, setOpenParadigm] = useState(false);
 
   const handleClickParadigmDialog = () => {
@@ -56,9 +56,9 @@ const Stem = ({ stem, restriction, withLink }) => {
           className={classes.lemma}>
           {(withLink) ?
             <Link to={`/${lemma}`}>
-              {lemma}
+              {presentationLemma}
             </Link> :
-            <>{lemma}</>
+            <>{presentationLemma}</>
           }
         </Typography>
         {restriction && <Typography component='span'> ({restriction.restriction})</Typography>}
