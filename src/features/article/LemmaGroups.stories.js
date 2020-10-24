@@ -9,6 +9,7 @@ const terms = [
       'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhZA==',
       'language': 'sme',
       'lemma': 'vuorká',
+      'presentationLemma': 'vuorká',
       'pos': 'N'
     },
     'note': 'vuorkánote',
@@ -21,6 +22,7 @@ const terms = [
       'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhYw==',
       'language': 'sme',
       'lemma': 'fiila',
+      'presentationLemma': 'fiila',
       'pos': 'N'
     },
     'note': 'fiilanote',
@@ -33,6 +35,7 @@ const terms = [
       'id': 'TGVtbWFUeXBlOjVlZDk1NjZlN2JkZmY0ODc0YzViNmJhOQ==',
       'language': 'sma',
       'lemma': 'fijle',
+      'presentationLemma': 'fijle',
       'pos': 'N'
     },
     'note': 'smanote ',

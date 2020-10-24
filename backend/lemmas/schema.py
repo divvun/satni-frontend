@@ -1,3 +1,4 @@
+"""GraphQL schemas for Lemmas."""
 import graphene
 from graphene_mongo.fields import MongoengineConnectionField
 

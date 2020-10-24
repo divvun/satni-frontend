@@ -1,11 +1,13 @@
+"""Models for lemmas."""
 from mongoengine import Document
-from mongoengine.fields import ObjectIdField, StringField
+from mongoengine.fields import StringField
 
 
 class Lemma(Document):
+    """A representation of lemmas."""
     meta = {'collection': 'lemmas'}
-    ID = ObjectIdField()
     lemma = StringField()
+    presentation_lemma = StringField()
     pos = StringField()
     language = StringField()
     dialect = StringField()

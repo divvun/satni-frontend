@@ -36,28 +36,29 @@ def sammallahti_replacer(line):
 
 
 def make_lemma(lang, expression):
-    lemma = Lemma(lemma=expression['expression'],
-                  pos=expression['pos'],
-                  language=LANGS[lang],
-                  dialect=None,
-                  country=None)
-    lemma.save()
+    lemma_key = (f"{expression['expression']}{expression['expression']}"
+                 f"{expression['pos']}{LANGS[lang]}")
+    if not LEMMAS.get(lemma_key):
+        lemma = Lemma(lemma=expression['expression'],
+                      presentation_lemma=expression['expression'],
+                      pos=expression['pos'],
+                      language=LANGS[lang],
+                      dialect=None,
+                      country=None)
+        lemma.save()
+        LEMMAS[lemma_key] = lemma
 
-    return lemma
+    return LEMMAS[lemma_key]
 
 
 def make_terms(lang, concept):
     for expression in same_lang_sanctioned_expressions(
             lang, concept.related_expressions):
-        lemma_key = (expression['expression'], expression['pos'], LANGS[lang])
-        if not LEMMAS.get(lemma_key):
-            LEMMAS[lemma_key] = make_lemma(lang, expression)
-
         term = Term(status=expression.get('status'),
                     sanctioned=expression.get('sanctioned', False),
                     note=expression.get('note'),
                     source=expression.get('source'),
-                    expression=LEMMAS.get(lemma_key))
+                    expression=make_lemma(lang, expression))
         yield term
 
 
@@ -139,21 +140,21 @@ def normalise_lemma(lemma: str) -> str:
     return lemma
 
 
-def l_or_t2stem(element, src):
-    lemma = Lemma(lemma=normalise_lemma(element.text),
-              language=src,
-              pos=element.get('pos'),
-              dialect=element.get('dialect'),
-              country=element.get('country'))
-    lemma.save()
-
-    return lemma
-
-
 def make_dict_lemma(element, lang):
-    lemma_key = (normalise_lemma(element.text), element.get('pos'), lang)
+    normalised_lemma = normalise_lemma(element.text)
+    lemma = sammallahti_replacer(normalised_lemma)
+    presentation_lemma = normalised_lemma
+
+    lemma_key = (f"{lemma}{presentation_lemma}" f"{element.get('pos')}{lang}")
     if not LEMMAS.get(lemma_key):
-        LEMMAS[lemma_key] = l_or_t2stem(element, lang)
+        lemma = Lemma(lemma=sammallahti_replacer(normalised_lemma),
+                      presentation_lemma=normalised_lemma,
+                      language=lang,
+                      pos=element.get('pos'),
+                      dialect=element.get('dialect'),
+                      country=element.get('country'))
+        lemma.save()
+        LEMMAS[lemma_key] = lemma
 
     return LEMMAS[lemma_key]
 
@@ -218,8 +219,7 @@ def make_entries(dictxml, dictname, src, target):
                     STEMS[lemma]['tolangs'] = set()
                     STEMS[lemma]['dicts'] = set()
 
-                STEMS[lemma]['dicts'].add(
-                    f'{dictname}{src}{target}')
+                STEMS[lemma]['dicts'].add(f'{dictname}{src}{target}')
                 STEMS[lemma]['fromlangs'].add(src)
                 STEMS[lemma]['tolangs'].add(target)
 
@@ -295,7 +295,7 @@ def make_stems():
 
 
 def run():
+    import_sammalahti()
     make_dicts()
     make_m()
-    import_sammalahti()
     make_stems()

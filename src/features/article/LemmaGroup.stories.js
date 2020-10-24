@@ -7,6 +7,7 @@ const term = {
   'expression': {
     'language': 'sme',
     'lemma': 'vuorká',
+    'presentationLemma': 'vuorká',
     'pos': 'N'
   },
   'note': 'vuorkánote',
