@@ -195,12 +195,12 @@ msgstr "Veahkki"
 #: src/features/article/Source.js:28
 #: src/features/article/Source.js:29
 msgid "Hide this dictionary"
-msgstr "Čiehkat dán sátnegirjji"
+msgstr "Čiega dán sátnegirjji"
 
 #: src/features/article/PairHeader.js:36
 #: src/features/article/PairHeader.js:37
 msgid "Hide this language"
-msgstr "Čiehkat dán giela"
+msgstr "Čiega dán giela"
 
 #: src/translateble_variables.js:48
 msgid "Huksenteknihkka"
