@@ -1,4 +1,5 @@
 # Børre Gaup <borre.gaup@uit.no>, 2020.
+# Sara Marja Magga <sara.marja.magga@uit.no>
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2020-07-22 21:16+0200\n"
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2020-10-20 10:25+0200\n"
-"Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
-"Language-Team: Northern Sami <feedback@divvun.no>\n"
+"Last-Translator: Sara Marja Magga <sara.marja.magga@uit.no>\n"
+"Language-Team: South Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
 "MIME-Version: 1.0\n"
 
@@ -60,7 +61,7 @@ msgstr ""
 
 #: src/translateble_variables.js:36
 msgid "Beaivválaš giella"
-msgstr ""
+msgstr "Biejjeladtje gïele"
 
 #: src/translateble_variables.js:37
 msgid "Boazodoallu"
@@ -96,7 +97,7 @@ msgstr "Definisjovne"
 
 #: src/containers/SatniDrawer.js:27
 msgid "Delivered by"
-msgstr ""
+msgstr "Darjoje"
 
 #: src/features/article/Stem.js:94
 msgid "Dialect"
@@ -142,11 +143,11 @@ msgstr "Pedagogihke"
 
 #: src/translateble_variables.js:42
 msgid "Ekologiija ja biras"
-msgstr "Økologije jïh voenge"
+msgstr "Ekologije jïh voenge"
 
 #: src/translateble_variables.js:43
 msgid "Ekonomiija ja gávppašeapmi"
-msgstr "Økonomije jïh åesiestimmie"
+msgstr "Ekonomije jïh åesiestimmie"
 
 #: src/features/wantedlangs/DictChooser.js:28
 msgid ""
@@ -182,31 +183,31 @@ msgstr ""
 
 #: src/translateble_variables.js:46
 msgid "Gulahallanteknihkka"
-msgstr "Gaskesadtemeteknigke"
+msgstr "Gaskesadtemeteknihke"
 
 #: src/translateble_variables.js:47
 msgid "Guolástus"
-msgstr "Gøølemdahke"
+msgstr "Göölemdahke"
 
 #: src/containers/HelpDialog.js:47
 #: src/containers/SatniAppBar.js:68
 #: src/containers/SatniAppBar.js:69
 msgid "Help"
-msgstr ""
+msgstr "Viehkie"
 
 #: src/features/article/Source.js:28
 #: src/features/article/Source.js:29
 msgid "Hide this dictionary"
-msgstr ""
+msgstr "Vöörhkh dam baakoegærjam"
 
 #: src/features/article/PairHeader.js:36
 #: src/features/article/PairHeader.js:37
 msgid "Hide this language"
-msgstr ""
+msgstr "Vöörhkh dam gïelem"
 
 #: src/translateble_variables.js:48
 msgid "Huksenteknihkka"
-msgstr "Bigkemeteknigke"
+msgstr "Bigkemeteknihke"
 
 #: src/containers/Welcome.js:131
 msgid ""
@@ -227,7 +228,7 @@ msgstr "Gïelh"
 #: src/features/search/FilterBar.js:98
 #: src/features/search/FilterBar.js:99
 msgid "Lookup the search word"
-msgstr ""
+msgstr "Vuesedh ohtsemebaakoem båatoem"
 
 #: src/translateble_variables.js:50
 msgid "Luonddudieđa ja matematihkka"
@@ -239,7 +240,7 @@ msgstr "Medisijne"
 
 #: src/translateble_variables.js:52
 msgid "Mášenteknihkka"
-msgstr "Maasjinateknigke"
+msgstr "Maasjinateknihke"
 
 #: src/translateble_variables.js:9
 msgid "N"
@@ -301,7 +302,7 @@ msgstr "Sveerje"
 
 #: src/features/search/FilterBar.js:103
 msgid "Search"
-msgstr ""
+msgstr "Ohtsedh"
 
 #: src/containers/Welcome.js:73
 msgid "Search results will appear here."
@@ -314,17 +315,17 @@ msgstr "Sïebredahkendotkeme"
 #: src/containers/SatniAppBar.js:50
 #: src/containers/SatniAppBar.js:51
 msgid "Settings"
-msgstr ""
+msgstr "Sjïehtiesjimmieh"
 
 #: src/features/paradigm/ParadigmButton.js:28
 #: src/features/paradigm/ParadigmButton.js:29
 msgid "Show paradigm for this word"
-msgstr ""
+msgstr "Vuesedh dam baakoen sojjehtimmiemaallem"
 
 #: src/features/korp/KorpButton.js:26
 #: src/features/korp/KorpButton.js:27
 msgid "Show this word in our corpus"
-msgstr ""
+msgstr "Vuesedh dam baakoem korpusisnie"
 
 #: src/features/article/LemmaGroup.js:17
 #: src/features/article/Source.js:24
@@ -346,11 +347,11 @@ msgstr "Byjjes reereme"
 #: src/features/search/FilterBar.js:81
 #: src/features/search/FilterBar.js:82
 msgid "Sámi letters"
-msgstr ""
+msgstr "Saemien bokstavh"
 
 #: src/translateble_variables.js:57
 msgid "Teknihkka industriija duodji"
-msgstr "Teknigke, industrije jïh vætnoeh"
+msgstr "Teknihke, industrije jïh vætnoeh"
 
 #: src/features/wantedlangs/DictChooser.js:63
 #: src/features/wantedlangs/DictChooser.js:69
@@ -385,7 +386,7 @@ msgstr ""
 #: src/features/paradigm/ParadigmButton.js:44
 #: src/features/paradigm/ParadigmButton.js:45
 msgid "There is no paradigm for this word"
-msgstr ""
+msgstr "Ij naan sojjehtimmiemaalle dan baakose"
 
 #: src/features/wantedlangs/DictChooser.js:40
 msgid ""
@@ -443,7 +444,7 @@ msgstr ""
 #: src/features/korp/KorpButton.js:48
 #: src/features/korp/KorpButton.js:49
 msgid "This word is not found in our corpus"
-msgstr ""
+msgstr "Daate baakoe ij leah korpusisnie"
 
 #: src/translateble_variables.js:9
 msgid "V"
@@ -664,7 +665,7 @@ msgstr "sveerjengïelen"
 
 #: src/features/search/FilterBar.js:86
 msgid "sámi keys"
-msgstr ""
+msgstr "saemien bokstavh"
 
 #: src/translateble_variables.js:4
 msgid "termwiki"
@@ -688,7 +689,7 @@ msgstr "{0}/{totalCount} mej aalkoe lea <0>{searchExpression}</0>"
 
 #: src/translateble_variables.js:58
 msgid "Álšateknihkka"
-msgstr "Energiteknigke"
+msgstr "Energiteknihke"
 
 #: src/translateble_variables.js:59
 msgid "Ásttoáigi ja faláštallan"
