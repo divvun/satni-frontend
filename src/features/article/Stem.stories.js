@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react';
 import Stem from './Stem';
 
 const stem = {
-  id: '68360',
   lemma: 'bárdni',
   presentationLemma: 'bárdni',
   language: 'sme',
@@ -18,7 +17,7 @@ const restriction = {
   attributes: {}
 };
 
-storiesOf('Stem', module)
+storiesOf('Stem')
   .add('with space', () => <Stem
     stem={{...stem, lemma: 'bar dni'}}
     restriction={restriction} />)
@@ -34,5 +33,9 @@ storiesOf('Stem', module)
     restriction={restriction} />)
   .add('other presentation lemma, link', () => <Stem
     stem={{...stem, presentationLemma: 'burdni'}}
+    restriction={restriction}
+    withLink />)
+  .add('with @ and link', () => <Stem
+    stem={{...stem, presentationLemma: 'bur@dni'}}
     restriction={restriction}
     withLink />);
