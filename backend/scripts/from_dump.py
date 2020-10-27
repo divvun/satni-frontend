@@ -305,6 +305,6 @@ def make_stems():
 
 def run():
     import_sammalahti()
-    # make_dicts()
-    # make_m()
+    make_dicts()
+    make_m()
     make_stems()
