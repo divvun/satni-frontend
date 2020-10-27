@@ -9,6 +9,8 @@ import KorpButton from 'features/korp/KorpButton';
 import ParadigmButton from 'features/paradigm/ParadigmButton';
 import ParadigmDialog from 'features/paradigm/ParadigmDialog';
 
+import PresentationLemma from './PresentationLemma';
+
 const useStyles = makeStyles({
   stemContainer: {
     width: '100%',
@@ -51,16 +53,17 @@ const Stem = ({ stem, restriction, withLink }) => {
   return (
     <>
       <Typography className={classes.stemContainer}>
-        <Typography
-          component='span'
-          className={classes.lemma}>
-          {(withLink) ?
-            <Link to={`/${lemma}`}>
-              {presentationLemma}
-            </Link> :
-            <>{presentationLemma}</>
-          }
-        </Typography>
+        {(withLink) ?
+          <Link to={`/${lemma}`}>
+            <PresentationLemma
+              presentationLemma={presentationLemma}
+            />
+          </Link> :
+          <PresentationLemma
+            presentationLemma={presentationLemma}
+          />
+
+        }
         {restriction && <Typography component='span'> ({restriction.restriction})</Typography>}
         {!lemma.includes(' ') && <>
           <span className={classes.rightGroup}>
