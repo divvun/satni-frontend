@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 import glob
 import os
+import re
 import sys
-
-from lxml import etree
 
 from dicts.models import DictEntry, ExampleGroup, Restriction, TranslationGroup
 from lemmas.models import Lemma
+from lxml import etree
 from mongoengine.errors import ValidationError
 from stems.models import Stem
 from terms.models import Concept, Term
 from termwikiimporter import bot
+
+REMOVER_RE = r'[|@ˣ."]'
+"""Remove these characters from Sammallahti's original lemmas."""
 
 LEMMAS = {}
 STEMS = {}
@@ -29,10 +32,16 @@ LANGS = {
 }
 
 
+def sammallahti_remover(line):
+    """Remove Sammallahti's special characters."""
+    return re.sub(REMOVER_RE, '', line).strip()
+
+
 def sammallahti_replacer(line):
     """Replace special characters found in Sammallahti's dictionary."""
-    return line.translate(
-        str.maketrans('Èéíïēīĵĺōūḥḷṃṇṿạẹọụÿ', 'Eeiieijlouhlmrvaeouy'))
+    return sammallahti_remover(line).translate(
+        str.maketrans('Èéíïēīĵĺōūḥḷṃṇṿạẹọụÿⓑⓓⓖ',
+        'Eeiieijlouhlmrvaeouybdg'))
 
 
 def make_lemma(lang, expression):
@@ -296,6 +305,6 @@ def make_stems():
 
 def run():
     import_sammalahti()
-    make_dicts()
-    make_m()
+    # make_dicts()
+    # make_m()
     make_stems()
