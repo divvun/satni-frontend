@@ -1,3 +1,5 @@
+import { dictionaryInfo } from 'translateble_variables';
+
 export const stemToKey = (stem) => {
   return `${stem.lemma}_${stem.pos}_${stem.language}`;
 };
@@ -122,13 +124,7 @@ export const dictBackend2Frontend = (backendDictArticle) => {
   };
 };
 
-export const availableDicts = [
-  'termwiki', 'gtsmenob', 'gtnobsme', 'gtnobsma', 'gtsmanob', 'gtsmefin',
-  'gtfinsme', 'gtfinsmn', 'gtsmnfin', 'gtsmesmn', 'gtsmnsme',
-  'sammallahtismefin'
-];
-
-export const hasAvailableDict = pathname => availableDicts.some(
+export const hasAvailableDict = pathname => Object.keys(dictionaryInfo).some(
   availableDict => pathname.startsWith(`/${availableDict}`));
 
 export const pathname2Dict = pathname => {
@@ -161,7 +157,7 @@ export const locationParser = pathname => {
   }
 
   if (parts.length === 2) {
-    if (availableDicts.includes(parts[1])) {
+    if (Object.keys(dictionaryInfo).includes(parts[1])) {
       return {
         currentDict: parts[1],
         currentLemma: ''

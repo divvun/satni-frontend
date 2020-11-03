@@ -10,13 +10,13 @@ msgstr ""
 "Language: nb\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-11-03 18:10+0100\n"
+"PO-Revision-Date: 2020-11-03 19:21+0100\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
 "Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
 "MIME-Version: 1.0\n"
 
-#: src/containers/StatusBar.js:20
+#: src/containers/StatusBar.js:21
 msgid "(<0>Show all</0>)"
 msgstr "(<0>Vis alle</0>)"
 
@@ -48,8 +48,8 @@ msgstr "adj."
 msgid "Adv"
 msgstr "adv."
 
-#: src/features/wantedlangs/DictChooser.js:41
-#: src/features/wantedlangs/DictChooser.js:47
+#: src/translateble_variables.js:82
+#: src/translateble_variables.js:88
 msgid ""
 "Approximately half of the content of the dictionary is taken by searching for"
 " parallels in a parallel corpus of administrative text. This work was"
@@ -148,7 +148,7 @@ msgstr "Økologi og miljø"
 msgid "Ekonomiija ja gávppašeapmi"
 msgstr "Økonomi og handel"
 
-#: src/features/wantedlangs/DictChooser.js:28
+#: src/translateble_variables.js:69
 msgid ""
 "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own"
 " printed dictionaries published in 1989 and 1993."
@@ -168,7 +168,7 @@ msgstr "Geografi"
 msgid "Gielladieđa"
 msgstr "Språkvitenskap"
 
-#: src/features/wantedlangs/DictChooser.js:34
+#: src/translateble_variables.js:75
 msgid ""
 "Giellagáldu's main task is to standardise new terminology and written"
 " language for the Sami languages. The standardised terms from their <a"
@@ -261,7 +261,7 @@ msgstr ""
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "Ingen resultater for <0>{searchExpression}</0>"
 
-#: src/features/wantedlangs/DictChooser.js:46
+#: src/translateble_variables.js:87
 msgid ""
 "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but"
 " frequent Norwegian words have been added. It contains about 26,000 Norwegian"
@@ -291,7 +291,7 @@ msgstr "pron."
 msgid "Religion"
 msgstr "Religion"
 
-#: src/containers/StatusBar.js:20
+#: src/containers/StatusBar.js:21
 msgid "Results only from"
 msgstr "Viser resultater bare fra"
 
@@ -352,12 +352,12 @@ msgstr "Samiske bokstaver"
 msgid "Teknihkka industriija duodji"
 msgstr "Teknikk, industri og duodji"
 
-#: src/features/wantedlangs/DictChooser.js:63
-#: src/features/wantedlangs/DictChooser.js:69
+#: src/translateble_variables.js:104
+#: src/translateble_variables.js:110
 msgid "The dictionary contains about 11,000 entries."
 msgstr "Ordboken har omtrent 11 000 oppslagsord."
 
-#: src/features/wantedlangs/DictChooser.js:29
+#: src/translateble_variables.js:70
 msgid ""
 "The dictionary contains more than 50.000 entries, and Sammallahti adds"
 " entries regularly."
@@ -375,7 +375,7 @@ msgstr ""
 " ikke har samiske bokstaver på maskinen din, trykk <0/> for å kunne skrive"
 " dem i søkefeltet."
 
-#: src/features/wantedlangs/DictChooser.js:35
+#: src/translateble_variables.js:76
 msgid ""
 "The termbase consists of over 50,000 term articles, and is updated on a"
 " regular basis."
@@ -386,7 +386,7 @@ msgstr "Termbase har over 50 000 termartikler og oppdateres jevnlig."
 msgid "There is no paradigm for this word"
 msgstr "Dette ordet har ikke bøyingsmønster"
 
-#: src/features/wantedlangs/DictChooser.js:40
+#: src/translateble_variables.js:81
 msgid ""
 "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322"
 " words), but now it contains 30,000 entries, plus 6000 place name entries."
@@ -394,8 +394,8 @@ msgstr ""
 "Denne ordboken bygger på Nils Jernslettens ordbok Álgosátnegirji (4322 ord),"
 " men nå inneholder ordboka 31 000 oppslagsord, pluss 6000 stedsnavn."
 
-#: src/features/wantedlangs/DictChooser.js:52
-#: src/features/wantedlangs/DictChooser.js:57
+#: src/translateble_variables.js:93
+#: src/translateble_variables.js:98
 msgid ""
 "This dictionary builds on material prepared by Albert Jåma and Tove Brustad"
 " in the Hemnes Saami Organization, but has in addition gained words from"
@@ -405,10 +405,10 @@ msgstr ""
 " sameforening, men har i tillegg ord fra Giellateknos og Aajeges arbeid med"
 " sørsamisk Oahpa."
 
-#: src/features/wantedlangs/DictChooser.js:74
-#: src/features/wantedlangs/DictChooser.js:79
-#: src/features/wantedlangs/DictChooser.js:84
-#: src/features/wantedlangs/DictChooser.js:89
+#: src/translateble_variables.js:115
+#: src/translateble_variables.js:120
+#: src/translateble_variables.js:125
+#: src/translateble_variables.js:130
 msgid ""
 "This dictionary builds on the Valtonen and Olthuis"
 " Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
@@ -416,7 +416,7 @@ msgstr ""
 "Denne ordboken bygger på Valtonen og Olthuis' Inarinsaame-suomi-inarinsaame"
 " ordbok (30 000 ord)."
 
-#: src/features/wantedlangs/DictChooser.js:68
+#: src/translateble_variables.js:109
 msgid ""
 "This dictionary is based on lexical material from the Institute for the"
 " Languages of Finland, and from Giellatekno's work with the North Saami"
@@ -426,7 +426,7 @@ msgstr ""
 " inhemska språken i Finland, og fra Giellateknos arbeid med nordsamisk Oahpa."
 " I tillegg er det lagt til vanlige finske ord."
 
-#: src/features/wantedlangs/DictChooser.js:62
+#: src/translateble_variables.js:103
 msgid ""
 "This dictionary is based on lexical material from the Institute for the"
 " Languages of Finland, and from Giellatekno's work with the North Saami"
@@ -441,7 +441,7 @@ msgstr ""
 msgid "This word is not found in our corpus"
 msgstr "Dette ordet finnes ikke i tekstsamlingen vår"
 
-#: src/features/wantedlangs/DictChooser.js:94
+#: src/translateble_variables.js:135
 msgid ""
 "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search"
 " words."
@@ -678,11 +678,11 @@ msgstr "Giellagáldus flerspråklige termer"
 msgid "west"
 msgstr "vestlig"
 
-#: src/containers/StatusBar.js:29
+#: src/containers/StatusBar.js:30
 msgid "{0}/{1} languages."
 msgstr "{0}/{1} språk."
 
-#: src/containers/StatusBar.js:24
+#: src/containers/StatusBar.js:25
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} kilder."
 
