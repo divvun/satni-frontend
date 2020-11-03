@@ -1,5 +1,6 @@
 import { InMemoryCache, makeVar } from '@apollo/client';
-import { availableDicts, availableLanguages } from 'utils';
+import { availableLanguages } from 'utils';
+import { dictionaryInfo } from 'translateble_variables';
 
 export const interfaceLanguageVar = makeVar(
   localStorage.getItem('interfaceLanguage') ?
@@ -8,7 +9,7 @@ export const interfaceLanguageVar = makeVar(
 
 export const wantedDictsVar = makeVar(
   localStorage.getItem('wantedDicts') ?
-    JSON.parse(localStorage.getItem('wantedDicts')) : availableDicts
+    JSON.parse(localStorage.getItem('wantedDicts')) : Object.keys(dictionaryInfo)
 );
 
 export const wantedLangsVar = makeVar(

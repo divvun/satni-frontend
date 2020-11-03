@@ -10,13 +10,13 @@ msgstr ""
 "Language: sma\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-11-03 18:15+0100\n"
+"PO-Revision-Date: 2020-11-03 19:22+0100\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
 "Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
 "MIME-Version: 1.0\n"
 
-#: src/containers/StatusBar.js:20
+#: src/containers/StatusBar.js:21
 msgid "(<0>Show all</0>)"
 msgstr "(<0>Vuesedh gaajhkh</0>)"
 
@@ -48,8 +48,8 @@ msgstr "adj."
 msgid "Adv"
 msgstr "adv."
 
-#: src/features/wantedlangs/DictChooser.js:41
-#: src/features/wantedlangs/DictChooser.js:47
+#: src/translateble_variables.js:82
+#: src/translateble_variables.js:88
 msgid ""
 "Approximately half of the content of the dictionary is taken by searching for"
 " parallels in a parallel corpus of administrative text. This work was"
@@ -149,7 +149,7 @@ msgstr "Ekologije jïh voenge"
 msgid "Ekonomiija ja gávppašeapmi"
 msgstr "Ekonomije jïh åesiestimmie"
 
-#: src/features/wantedlangs/DictChooser.js:28
+#: src/translateble_variables.js:69
 msgid ""
 "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own"
 " printed dictionaries published in 1989 and 1993."
@@ -169,7 +169,7 @@ msgstr "Geografije"
 msgid "Gielladieđa"
 msgstr "Gïelendotkeme"
 
-#: src/features/wantedlangs/DictChooser.js:34
+#: src/translateble_variables.js:75
 msgid ""
 "Giellagáldu's main task is to standardise new terminology and written"
 " language for the Sami languages. The standardised terms from their <a"
@@ -262,7 +262,7 @@ msgstr ""
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "<0>{searchExpression}</0> ij baakoegærjine gååvnesh"
 
-#: src/features/wantedlangs/DictChooser.js:46
+#: src/translateble_variables.js:87
 msgid ""
 "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but"
 " frequent Norwegian words have been added. It contains about 26,000 Norwegian"
@@ -292,7 +292,7 @@ msgstr "pron."
 msgid "Religion"
 msgstr "Religijovne"
 
-#: src/containers/StatusBar.js:20
+#: src/containers/StatusBar.js:21
 msgid "Results only from"
 msgstr "Båatoeh ajve"
 
@@ -353,12 +353,12 @@ msgstr "Saemien bokstavh"
 msgid "Teknihkka industriija duodji"
 msgstr "Teknihke, industrije jïh vætnoeh"
 
-#: src/features/wantedlangs/DictChooser.js:63
-#: src/features/wantedlangs/DictChooser.js:69
+#: src/translateble_variables.js:104
+#: src/translateble_variables.js:110
 msgid "The dictionary contains about 11,000 entries."
 msgstr "Baakoegærjesne medtie 11 000 ohtsemebaakoeh."
 
-#: src/features/wantedlangs/DictChooser.js:29
+#: src/translateble_variables.js:70
 msgid ""
 "The dictionary contains more than 50.000 entries, and Sammallahti adds"
 " entries regularly."
@@ -376,7 +376,7 @@ msgstr ""
 " latinegïelen. Jis dov faatoes saemien bokstavh dov masjijnesne, diedtelh <0/"
 "> juktie båaloeh jijhtieh mej leah saemien bokstavh."
 
-#: src/features/wantedlangs/DictChooser.js:35
+#: src/translateble_variables.js:76
 msgid ""
 "The termbase consists of over 50,000 term articles, and is updated on a"
 " regular basis."
@@ -388,7 +388,7 @@ msgstr ""
 msgid "There is no paradigm for this word"
 msgstr "Ij naan sojjehtimmiemaalle dan baakose"
 
-#: src/features/wantedlangs/DictChooser.js:40
+#: src/translateble_variables.js:81
 msgid ""
 "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322"
 " words), but now it contains 30,000 entries, plus 6000 place name entries."
@@ -397,8 +397,8 @@ msgstr ""
 " madthbaakoen), men daelie baakoegærjesne 30,000 ohtsemebaakeoh, jïh lissine"
 " desnie 6000 sijjiehnommh."
 
-#: src/features/wantedlangs/DictChooser.js:52
-#: src/features/wantedlangs/DictChooser.js:57
+#: src/translateble_variables.js:93
+#: src/translateble_variables.js:98
 msgid ""
 "This dictionary builds on material prepared by Albert Jåma and Tove Brustad"
 " in the Hemnes Saami Organization, but has in addition gained words from"
@@ -408,10 +408,10 @@ msgstr ""
 " dorjeme Hemnes saemiensiebresne. Giellatekno jïh Aajege aaj lissiehtamme"
 " åarjelsaemien baakoeh gosse barkeme Oahpa,  mij åarjelsaemiengïelese.  "
 
-#: src/features/wantedlangs/DictChooser.js:74
-#: src/features/wantedlangs/DictChooser.js:79
-#: src/features/wantedlangs/DictChooser.js:84
-#: src/features/wantedlangs/DictChooser.js:89
+#: src/translateble_variables.js:115
+#: src/translateble_variables.js:120
+#: src/translateble_variables.js:125
+#: src/translateble_variables.js:130
 msgid ""
 "This dictionary builds on the Valtonen and Olthuis"
 " Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
@@ -419,7 +419,7 @@ msgstr ""
 "Dan baakoegærjan våarome lea Valtonen jïh Olthuis"
 " Inarinsaame-suomi-inarinsaame baakoegærja (30000 baakoeh)."
 
-#: src/features/wantedlangs/DictChooser.js:68
+#: src/translateble_variables.js:109
 msgid ""
 "This dictionary is based on lexical material from the Institute for the"
 " Languages of Finland, and from Giellatekno's work with the North Saami"
@@ -430,7 +430,7 @@ msgstr ""
 " tjaaleme gosse barkeme Oahpa mij noerhtesaemien. Lissine sïejhme soemen"
 " baakoeh lissiehtamme."
 
-#: src/features/wantedlangs/DictChooser.js:62
+#: src/translateble_variables.js:103
 msgid ""
 "This dictionary is based on lexical material from the Institute for the"
 " Languages of Finland, and from Giellatekno's work with the North Saami"
@@ -446,7 +446,7 @@ msgstr ""
 msgid "This word is not found in our corpus"
 msgstr "Daate baakoe ij leah korpusisnie"
 
-#: src/features/wantedlangs/DictChooser.js:94
+#: src/translateble_variables.js:135
 msgid ""
 "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search"
 " words."
@@ -685,11 +685,11 @@ msgstr "Gïelegaaltijen gelliegïeledh teermh"
 msgid "west"
 msgstr "jillie"
 
-#: src/containers/StatusBar.js:29
+#: src/containers/StatusBar.js:30
 msgid "{0}/{1} languages."
 msgstr "{0}/{1} gïeleste."
 
-#: src/containers/StatusBar.js:24
+#: src/containers/StatusBar.js:25
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} gaaltijijstie."
 
