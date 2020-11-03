@@ -1261,7 +1261,6 @@ describe('Massage input from paradigm generator', () => {
       analyses: {
         'N+Sg+Nom': ['Kárášjohka'],
         'N+Sg+Gen': ['Kárášjoga'],
-        'N+Sg+Gen': ['Kárášjoga']
       }
     };
 

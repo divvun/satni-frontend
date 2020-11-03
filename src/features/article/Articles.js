@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 
 import PresentArticles from './PresentArticles';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   icons: {
     fontSize: 'inherit'
   }

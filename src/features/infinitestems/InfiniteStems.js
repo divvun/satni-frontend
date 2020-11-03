@@ -16,7 +16,7 @@ import Typography from '@material-ui/core/Typography';
 
 import { locationParser } from 'utils';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   infiniteList: {
     height: '80vh'
   },
