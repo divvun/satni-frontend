@@ -60,6 +60,10 @@ const GivenInterface = ({language}) => {
 
 };
 
+GivenInterface.propTypes = {
+  language: PropTypes.string.isRequired
+};
+
 const Root = ({ store, client }) => {
   return (
     <ProviderWrapper

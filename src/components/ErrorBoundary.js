@@ -1,5 +1,6 @@
 import * as Sentry from '@sentry/browser';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class ErrorBoundary extends Component {
   constructor (props) {
@@ -29,3 +30,7 @@ export default class ErrorBoundary extends Component {
     }
   }
 }
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.array.isRequired
+};

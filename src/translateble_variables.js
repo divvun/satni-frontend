@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { t } from '@lingui/macro';
+
 
 const dicts = [
   t`termwiki`, t`gtsmenob`, t`gtnobsme`, t`gtnobsma`, t`gtsmanob`, t`gtsmefin`,
@@ -6,7 +8,8 @@ const dicts = [
   t`sammallahtismefin`
 ];
 
-const partOfSpeech = [ t`N`, t`V`, t`A`, t`Adv`, t`Pron`];
+const partOfSpeech = [
+  t`N`, t`V`, t`A`, t`Adv`, t`Pron`];
 
 const languageCodes = [
   t`en`, t`eng`, t`fi`, t`fin`, t`nb`, t`nn`, t`nno`, t`nob`, t`se`, t`sv`,
