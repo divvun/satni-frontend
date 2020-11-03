@@ -12,13 +12,13 @@ const TermCore = ({ concept, lemma }) => {
   return (
     <Grid container>
       <Grid
-        sm={3}
+        md={3}
         xs={12}
         item>
         <PairHeader language={terms[0].expression.language} />
       </Grid>
       <Grid
-        sm={4}
+        md={4}
         xs={12}
         item>
         <LemmaGroups
@@ -27,7 +27,7 @@ const TermCore = ({ concept, lemma }) => {
         />
       </Grid>
       <Grid
-        sm={5}
+        md={5}
         xs={12}
         item>
         {definition && <Definitions definitions={definition} />}
