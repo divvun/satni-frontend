@@ -1,10 +1,20 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { Trans } from '@lingui/macro';
 
 import Source from './Source';
 
 const source = 'gtsmenob';
 
-storiesOf('Source', module)
-  .add('default', () => <Trans><Source source={source} /></Trans>);
+export default {
+  title: 'Source',
+};
+
+export const Default = () => (
+  <Trans>
+    <Source source={source} />
+  </Trans>
+);
+
+Default.story = {
+  name: 'default',
+};

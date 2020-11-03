@@ -1,7 +1,13 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import SamiKeys from './SamiKeys';
 
-storiesOf('SamiKeys', module)
-  .add('default', () => <SamiKeys />);
+export default {
+  title: 'SamiKeys',
+};
+
+export const Default = () => <SamiKeys />;
+
+Default.story = {
+  name: 'default',
+};

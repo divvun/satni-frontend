@@ -1,9 +1,15 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import Example from './Example';
 
-const example = { example: 'original', translation: 'translation'};
+const example = { example: 'original', translation: 'translation' };
 
-storiesOf('Example', module)
-  .add('default', () => <Example example={example} />);
+export default {
+  title: 'Example',
+};
+
+export const Default = () => <Example example={example} />;
+
+Default.story = {
+  name: 'default',
+};
