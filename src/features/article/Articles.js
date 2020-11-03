@@ -10,7 +10,6 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 
 import PresentArticles from './PresentArticles';
-import FetchArticlesError from './FetchArticlesError';
 
 const useStyles = makeStyles(theme => ({
   icons: {
