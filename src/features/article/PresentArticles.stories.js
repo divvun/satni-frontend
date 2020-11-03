@@ -1,10 +1,16 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import PresentArticles from './PresentArticles';
 import { conceptList, dictEntryList } from 'utils.data';
 
-storiesOf('PresentArticles')
-  .add('vuorka dicts and terms', () => <PresentArticles
-    lemma='vuorká'
-    data={{conceptList, dictEntryList}} />);
+export default {
+  title: 'PresentArticles',
+};
+
+export const VuorkaDictsAndTerms = () => (
+  <PresentArticles lemma="vuorká" data={{ conceptList, dictEntryList }} />
+);
+
+VuorkaDictsAndTerms.story = {
+  name: 'vuorka dicts and terms',
+};

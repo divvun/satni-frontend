@@ -1,27 +1,32 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import LemmaGroup from './LemmaGroup';
 
 const term = {
-  'expression': {
-    'language': 'sme',
-    'lemma': 'vuorká',
-    'presentationLemma': 'vuorká',
-    'pos': 'N'
+  expression: {
+    language: 'sme',
+    lemma: 'vuorká',
+    presentationLemma: 'vuorká',
+    pos: 'N',
   },
-  'note': 'vuorkánote',
-  'sanctioned': true,
-  'source': 'vuorkásource',
-  'status': 'vuorkástatus'
+  note: 'vuorkánote',
+  sanctioned: true,
+  source: 'vuorkásource',
+  status: 'vuorkástatus',
 };
 
-storiesOf('LemmaGroup', module)
-  .add('no link', () => <LemmaGroup
-    lemma='vuorká'
-    term={term}
-  />)
-  .add('with link', () => <LemmaGroup
-    lemma='aka'
-    term={term}
-  />);
+export default {
+  title: 'LemmaGroup',
+};
+
+export const NoLink = () => <LemmaGroup lemma="vuorká" term={term} />;
+
+NoLink.story = {
+  name: 'no link',
+};
+
+export const WithLink = () => <LemmaGroup lemma="aka" term={term} />;
+
+WithLink.story = {
+  name: 'with link',
+};

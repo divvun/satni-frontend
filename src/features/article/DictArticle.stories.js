@@ -1,59 +1,62 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import DictArticle from './DictArticle';
 
 const dictGroup = {
-  'dict': 'gtnobsme',
-  'from': {
-    'language': 'nob',
-    'lookupLemmas': [
+  dict: 'gtnobsme',
+  from: {
+    language: 'nob',
+    lookupLemmas: [
       {
-        'lemma': 'kanskje',
-        'presentationLemma': 'kanskje',
-        'pos': 'Adv'
-      }
-    ]
+        lemma: 'kanskje',
+        presentationLemma: 'kanskje',
+        pos: 'Adv',
+      },
+    ],
   },
-  'to': {
-    'language': 'sme',
-    'translationGroups': [
+  to: {
+    language: 'sme',
+    translationGroups: [
       {
-        'examples': [
+        examples: [
           {
-            'example': 'Vi får kanskje ikke engang representant til Sametinget.',
-            'translation': 'Eat soaitte oba oažžut ge áirasa Sámediggái.'
+            example: 'Vi får kanskje ikke engang representant til Sametinget.',
+            translation: 'Eat soaitte oba oažžut ge áirasa Sámediggái.',
           },
           {
-            'example': 'Mor stemmer kanskje ikke på Arbeiderpartiet ved årets valg.',
-            'translation': 'Eadni ii dáidde jienastit Bargiidbellodaga dán jagi válggas.'
-          }
+            example: 'Mor stemmer kanskje ikke på Arbeiderpartiet ved årets valg.',
+            translation: 'Eadni ii dáidde jienastit Bargiidbellodaga dán jagi válggas.',
+          },
         ],
-        'restriction': {
+        restriction: {
           restriction: 'om julenissen',
-          attributes: {}
+          attributes: {},
         },
-        'translations': [
+        translations: [
           {
-            'language': 'sme',
-            'lemma': 'soaitit',
-            'presentationLemma': 'soaitit',
-            'pos': 'V'
+            language: 'sme',
+            lemma: 'soaitit',
+            presentationLemma: 'soaitit',
+            pos: 'V',
           },
           {
-            'language': 'sme',
-            'lemma': 'várra',
-            'presentationLemma': 'várra',
-            'pos': 'Adv'
-          }
-        ]
-      }
-    ]
-  }
+            language: 'sme',
+            lemma: 'várra',
+            presentationLemma: 'várra',
+            pos: 'Adv',
+          },
+        ],
+      },
+    ],
+  },
 };
 
-storiesOf('DictArticle', module)
-  .add('default', () => <DictArticle
-    dictGroup={dictGroup}
-    lemma='kanskje'
-  />);
+export default {
+  title: 'DictArticle',
+};
+
+export const Default = () => <DictArticle dictGroup={dictGroup} lemma="kanskje" />;
+
+Default.story = {
+  name: 'default',
+};
