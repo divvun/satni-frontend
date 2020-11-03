@@ -10,7 +10,7 @@ msgstr ""
 "Language: nb\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-20 10:23+0200\n"
+"PO-Revision-Date: 2020-11-03 18:10+0100\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
 "Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
@@ -20,11 +20,11 @@ msgstr ""
 msgid "(<0>Show all</0>)"
 msgstr "(<0>Vis alle</0>)"
 
-#: src/features/article/Source.stories.js:10
+#: src/features/article/Source.stories.js:13
 msgid "<0/>"
 msgstr "<0/>"
 
-#: src/features/article/Articles.js:136
+#: src/features/article/Articles.js:140
 msgid "<0>Error {0}</0>"
 msgstr "<0>Feil {0}</0>"
 
@@ -32,19 +32,19 @@ msgstr "<0>Feil {0}</0>"
 msgid "<0>Giellagáldu</0>"
 msgstr "<0>Giellagáldu</0>"
 
-#: src/features/article/Articles.js:135
+#: src/features/article/Articles.js:139
 msgid "<0>Loading...</0>"
 msgstr "<0>Laster …</0>"
 
-#: src/features/article/Articles.js:137
+#: src/features/article/Articles.js:141
 msgid "<0>Not found</0>"
 msgstr "<0>Ikke funnet</0>"
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:12
 msgid "A"
 msgstr "adj."
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:12
 msgid "Adv"
 msgstr "adv."
 
@@ -59,11 +59,11 @@ msgstr ""
 " av administrative tekster, finansiert av Kommunal- og"
 " administrasjonsdepartementet."
 
-#: src/translateble_variables.js:36
+#: src/translateble_variables.js:39
 msgid "Beaivválaš giella"
 msgstr "Dagligspråk"
 
-#: src/translateble_variables.js:37
+#: src/translateble_variables.js:40
 msgid "Boazodoallu"
 msgstr "Reindrift"
 
@@ -87,7 +87,7 @@ msgstr ""
 "Klikk på <0/> for å se hvordan ordet bøyes. Klikk på <1/> for å se eksempler"
 " på hvordan ordet brukes."
 
-#: src/features/article/Stem.js:95
+#: src/features/article/Stem.js:98
 msgid "Country"
 msgstr "Land"
 
@@ -99,7 +99,7 @@ msgstr "Definisjon"
 msgid "Delivered by"
 msgstr "Laget av"
 
-#: src/features/article/Stem.js:94
+#: src/features/article/Stem.js:97
 msgid "Dialect"
 msgstr "Dialekt"
 
@@ -115,7 +115,7 @@ msgstr ""
 "I dette panelet dukker det opp ordboksartikler når du trykker på et ord blant"
 " søkeresultatene til venstre."
 
-#: src/translateble_variables.js:38
+#: src/translateble_variables.js:41
 msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Datateknologi og datateknikk"
 
@@ -128,23 +128,23 @@ msgstr ""
 "Gjør søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamisk –"
 " finsk ordbok</1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>."
 
-#: src/translateble_variables.js:39
+#: src/translateble_variables.js:42
 msgid "Dáidda ja girjjálašvuohta"
 msgstr "Kunst og litteratur"
 
-#: src/translateble_variables.js:40
+#: src/translateble_variables.js:43
 msgid "Eanandoallu"
 msgstr "Jordbruk"
 
-#: src/translateble_variables.js:41
+#: src/translateble_variables.js:44
 msgid "Education"
 msgstr "Undervisning"
 
-#: src/translateble_variables.js:42
+#: src/translateble_variables.js:45
 msgid "Ekologiija ja biras"
 msgstr "Økologi og miljø"
 
-#: src/translateble_variables.js:43
+#: src/translateble_variables.js:46
 msgid "Ekonomiija ja gávppašeapmi"
 msgstr "Økonomi og handel"
 
@@ -156,15 +156,15 @@ msgstr ""
 "Professor emeritus Pekka Sammallahti har basert denne ordboken på sine egne"
 " trykte ordbøker som ble publisert i 1989 og 1993."
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:20
 msgid "FI"
 msgstr "Finland"
 
-#: src/translateble_variables.js:44
+#: src/translateble_variables.js:47
 msgid "Geografiija"
 msgstr "Geografi"
 
-#: src/translateble_variables.js:45
+#: src/translateble_variables.js:48
 msgid "Gielladieđa"
 msgstr "Språkvitenskap"
 
@@ -180,11 +180,11 @@ msgstr ""
 " daglig til dette nettstedet, slik at de er enkelt tilgjengelig for det"
 " samiske samfunnet."
 
-#: src/translateble_variables.js:46
+#: src/translateble_variables.js:49
 msgid "Gulahallanteknihkka"
 msgstr "Kommunikasjonsteknikk"
 
-#: src/translateble_variables.js:47
+#: src/translateble_variables.js:50
 msgid "Guolástus"
 msgstr "Fiskeri"
 
@@ -204,7 +204,7 @@ msgstr "Gjem denne ordboka"
 msgid "Hide this language"
 msgstr "Gjem dette språket"
 
-#: src/translateble_variables.js:48
+#: src/translateble_variables.js:51
 msgid "Huksenteknihkka"
 msgstr "Begyningsteknikk"
 
@@ -216,7 +216,7 @@ msgstr ""
 "Inne i artiklene kan du skjule uønskede språk og ordbøker. For å aktivere dem"
 " på nytt, trykk på <0/> eller <1/>."
 
-#: src/translateble_variables.js:49
+#: src/translateble_variables.js:52
 msgid "Juridihkka"
 msgstr "Jus"
 
@@ -229,27 +229,27 @@ msgstr "Språk"
 msgid "Lookup the search word"
 msgstr "Slå opp søkeordet"
 
-#: src/translateble_variables.js:50
+#: src/translateble_variables.js:53
 msgid "Luonddudieđa ja matematihkka"
 msgstr "Naturvitenskap og matematikk"
 
-#: src/translateble_variables.js:51
+#: src/translateble_variables.js:54
 msgid "Medisiidna"
 msgstr "Medisin"
 
-#: src/translateble_variables.js:52
+#: src/translateble_variables.js:55
 msgid "Mášenteknihkka"
 msgstr "Maskinteknikk"
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:12
 msgid "N"
 msgstr "subst."
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:20
 msgid "NO"
 msgstr "Norge"
 
-#: src/features/article/Articles.js:154
+#: src/features/article/Articles.js:158
 msgid ""
 "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if"
 " the wanted languages or dictionaries are selected."
@@ -275,7 +275,7 @@ msgstr ""
 msgid "Note:"
 msgstr "Notat:"
 
-#: src/translateble_variables.js:53
+#: src/translateble_variables.js:56
 msgid "Ođđa sánit"
 msgstr "Nye ord"
 
@@ -283,11 +283,11 @@ msgstr "Nye ord"
 msgid "Paradigm"
 msgstr "Bøyingsmønster"
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:12
 msgid "Pron"
 msgstr "pron."
 
-#: src/translateble_variables.js:54
+#: src/translateble_variables.js:57
 msgid "Religion"
 msgstr "Religion"
 
@@ -295,7 +295,7 @@ msgstr "Religion"
 msgid "Results only from"
 msgstr "Viser resultater bare fra"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:20
 msgid "SE"
 msgstr "Sverige"
 
@@ -307,7 +307,7 @@ msgstr "Søk"
 msgid "Search results will appear here."
 msgstr "Søkeresultater dukker opp her."
 
-#: src/translateble_variables.js:55
+#: src/translateble_variables.js:58
 msgid "Servodatdieđa"
 msgstr "Samfunnsvitenskap"
 
@@ -339,7 +339,7 @@ msgstr "Start"
 msgid "Status:"
 msgstr "Status:"
 
-#: src/translateble_variables.js:56
+#: src/translateble_variables.js:59
 msgid "Stáda almmolaš hálddašeapmi"
 msgstr "Offentlig forvaltning"
 
@@ -348,7 +348,7 @@ msgstr "Offentlig forvaltning"
 msgid "Sámi letters"
 msgstr "Samiske bokstaver"
 
-#: src/translateble_variables.js:57
+#: src/translateble_variables.js:60
 msgid "Teknihkka industriija duodji"
 msgstr "Teknikk, industri og duodji"
 
@@ -441,7 +441,13 @@ msgstr ""
 msgid "This word is not found in our corpus"
 msgstr "Dette ordet finnes ikke i tekstsamlingen vår"
 
-#: src/translateble_variables.js:9
+#: src/features/wantedlangs/DictChooser.js:94
+msgid ""
+"Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search"
+" words."
+msgstr "Trond Trosteruds finsk – norske ordbok har mer en 30000 søkeord."
+
+#: src/translateble_variables.js:12
 msgid "V"
 msgstr "verb"
 
@@ -464,195 +470,199 @@ msgid ""
 msgstr ""
 "Du kan bla blant søkeordene her, nye hentes til alle treff har blitt funnet."
 
-#: src/translateble_variables.js:21
+#: src/translateble_variables.js:24
 msgid "east"
 msgstr "østlig"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "en"
 msgstr "Engelsk"
 
-#: src/translateble_variables.js:28
+#: src/translateble_variables.js:31
 msgid "en_genitive"
 msgstr "engelsk"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "eng"
 msgstr "Engelsk"
 
-#: src/translateble_variables.js:28
+#: src/translateble_variables.js:31
 msgid "eng_genitive"
 msgstr "engelsk"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "fi"
 msgstr "Finsk"
 
-#: src/translateble_variables.js:28
+#: src/translateble_variables.js:31
 msgid "fi_genitive"
 msgstr "finsk"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "fin"
 msgstr "Finsk"
 
-#: src/translateble_variables.js:28
+#: src/translateble_variables.js:31
 msgid "fin_genitive"
 msgstr "finsk"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:7
+msgid "gtfinnob"
+msgstr "Trond Trosteruds finsk – norske ordbok"
+
+#: src/translateble_variables.js:7
 msgid "gtfinsme"
 msgstr "Giellateknos finsk – nordsamisk ordbok"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:7
 msgid "gtfinsmn"
 msgstr "Giellateknos finsk - enaresamisk ordbok"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "gtnobsma"
 msgstr "Giellateknos bokmål – sørsamisk ordbok"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "gtnobsme"
 msgstr "Giellateknos bokmål – nordsamisk ordbok"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "gtsmanob"
 msgstr "Giellateknos sørsamisk – bokmål ordbok"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "gtsmefin"
 msgstr "Giellateknos nordsamisk – finsk ordbok"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "gtsmenob"
 msgstr "Giellateknos nordsamisk – bokmål ordbok"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:7
 msgid "gtsmesmn"
 msgstr "Giellateknos nordsamisk – enaresamisk ordbok"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:7
 msgid "gtsmnfin"
 msgstr "Giellateknos enaresamisk – finsk ordbok"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:7
 msgid "gtsmnsme"
 msgstr "Giellateknos enaresamisk – nordsamisk ordbok"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "lat"
 msgstr "Latinsk"
 
-#: src/translateble_variables.js:32
+#: src/translateble_variables.js:35
 msgid "lat_genitive"
 msgstr "latinsk"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "nb"
 msgstr "Bokmål"
 
-#: src/translateble_variables.js:29
+#: src/translateble_variables.js:32
 msgid "nb_genitive"
 msgstr "bokmål"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "nn"
 msgstr "Nynorsk"
 
-#: src/translateble_variables.js:29
+#: src/translateble_variables.js:32
 msgid "nn_genitive"
 msgstr "nynorsk"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "nno"
 msgstr "Nynorsk"
 
-#: src/translateble_variables.js:29
+#: src/translateble_variables.js:32
 msgid "nno_genitive"
 msgstr "nynorsk"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "nob"
 msgstr "Bokmål"
 
-#: src/translateble_variables.js:29
+#: src/translateble_variables.js:32
 msgid "nob_genitive"
 msgstr "bokmål"
 
-#: src/translateble_variables.js:23
+#: src/translateble_variables.js:26
 msgid "north"
 msgstr "nordlig"
 
-#: src/translateble_variables.js:6
+#: src/translateble_variables.js:8
 msgid "sammallahtismefin"
 msgstr "Pekka Sammalahtis nordsamisk – finsk ordbok"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "se"
 msgstr "Nordsamisk"
 
-#: src/translateble_variables.js:30
+#: src/translateble_variables.js:33
 msgid "se_genitive"
 msgstr "nordsamisk"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "sma"
 msgstr "Sørsamisk"
 
-#: src/translateble_variables.js:30
+#: src/translateble_variables.js:33
 msgid "sma_genitive"
 msgstr "sørsamisk"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "sme"
 msgstr "Nordsamisk"
 
-#: src/translateble_variables.js:30
+#: src/translateble_variables.js:33
 msgid "sme_genitive"
 msgstr "nordsamisk"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "smj"
 msgstr "Lulesamisk"
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:34
 msgid "smj_genitive"
 msgstr "lulesamisk"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "smn"
 msgstr "Enaresamisk"
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:34
 msgid "smn_genitive"
 msgstr "enaresamisk"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "sms"
 msgstr "Skoltesamisk"
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:34
 msgid "sms_genitive"
 msgstr "skoltesamisk"
 
-#: src/translateble_variables.js:24
+#: src/translateble_variables.js:27
 msgid "south"
 msgstr "sørlig"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "sv"
 msgstr "Svensk"
 
-#: src/translateble_variables.js:30
+#: src/translateble_variables.js:33
 msgid "sv_genitive"
 msgstr "svensk"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "swe"
 msgstr "Svensk"
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:34
 msgid "swe_genitive"
 msgstr "svensk"
 
@@ -660,11 +670,11 @@ msgstr "svensk"
 msgid "sámi keys"
 msgstr "Samiske bokstaver"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "termwiki"
 msgstr "Giellagáldus flerspråklige termer"
 
-#: src/translateble_variables.js:22
+#: src/translateble_variables.js:25
 msgid "west"
 msgstr "vestlig"
 
@@ -680,14 +690,14 @@ msgstr "{0}/{1} kilder."
 msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
 msgstr "{0}/{totalCount} som begynner med <0>{searchExpression}</0>"
 
-#: src/translateble_variables.js:58
+#: src/translateble_variables.js:61
 msgid "Álšateknihkka"
 msgstr "Energiteknikk"
 
-#: src/translateble_variables.js:59
+#: src/translateble_variables.js:62
 msgid "Ásttoáigi ja faláštallan"
 msgstr "Fritid og sport"
 
-#: src/translateble_variables.js:60
+#: src/translateble_variables.js:63
 msgid "Ávnnasindustriija"
 msgstr "Råstoffindustri"

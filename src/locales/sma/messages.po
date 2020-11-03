@@ -1,5 +1,5 @@
-# Børre Gaup <borre.gaup@uit.no>, 2020.
 # Sara Marja Magga <sara.marja.magga@uit.no>
+# Børre Gaup <borre.gaup@uit.no>, 2020.
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2020-07-22 21:16+0200\n"
@@ -10,9 +10,9 @@ msgstr ""
 "Language: sma\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-20 10:25+0200\n"
-"Last-Translator: Sara Marja Magga <sara.marja.magga@uit.no>\n"
-"Language-Team: South Sami <feedback@divvun.no>\n"
+"PO-Revision-Date: 2020-11-03 18:15+0100\n"
+"Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
+"Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
 "MIME-Version: 1.0\n"
 
@@ -20,11 +20,11 @@ msgstr ""
 msgid "(<0>Show all</0>)"
 msgstr "(<0>Vuesedh gaajhkh</0>)"
 
-#: src/features/article/Source.stories.js:10
+#: src/features/article/Source.stories.js:13
 msgid "<0/>"
 msgstr "<0/>"
 
-#: src/features/article/Articles.js:136
+#: src/features/article/Articles.js:140
 msgid "<0>Error {0}</0>"
 msgstr "<0>Båajhtede {0}</0>"
 
@@ -32,19 +32,19 @@ msgstr "<0>Båajhtede {0}</0>"
 msgid "<0>Giellagáldu</0>"
 msgstr "<0>Gïelegaaltije</0>"
 
-#: src/features/article/Articles.js:135
+#: src/features/article/Articles.js:139
 msgid "<0>Loading...</0>"
 msgstr "<0>Vïedtjeminie …</0>"
 
-#: src/features/article/Articles.js:137
+#: src/features/article/Articles.js:141
 msgid "<0>Not found</0>"
 msgstr "<0>Idtji gååvnesh</0>"
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:12
 msgid "A"
 msgstr "adj."
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:12
 msgid "Adv"
 msgstr "adv."
 
@@ -59,11 +59,11 @@ msgstr ""
 " teekstiste, jïh dam barkoem Tjïelte- jïh regionaaledepartemeente"
 " beetnehvierhtiejgujmie dåårjeme."
 
-#: src/translateble_variables.js:36
+#: src/translateble_variables.js:39
 msgid "Beaivválaš giella"
 msgstr "Biejjeladtje gïele"
 
-#: src/translateble_variables.js:37
+#: src/translateble_variables.js:40
 msgid "Boazodoallu"
 msgstr "Båatsoe"
 
@@ -87,7 +87,7 @@ msgstr ""
 "Gosse diedtelh <0/>, dle vuajnah guktie baakoem sojjehtidh. Gosse diedtelh <"
 "1/>, dle vuajnah guktie baakoe provhkesovveme."
 
-#: src/features/article/Stem.js:95
+#: src/features/article/Stem.js:98
 msgid "Country"
 msgstr "Rïjhke"
 
@@ -99,7 +99,7 @@ msgstr "Definisjovne"
 msgid "Delivered by"
 msgstr "Darjoje"
 
-#: src/features/article/Stem.js:94
+#: src/features/article/Stem.js:97
 msgid "Dialect"
 msgstr "Smaarege"
 
@@ -115,7 +115,7 @@ msgstr ""
 "Baakoegærjaartihkelh jijhtieh dagkoe gosse diedtelh baakoem ohtseme baakojste"
 " garrabealesne."
 
-#: src/translateble_variables.js:38
+#: src/translateble_variables.js:41
 msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Daatateknologije jïh daatateknigke"
 
@@ -129,23 +129,23 @@ msgstr ""
 " noerhtesaemien - soemen baakoegærjesne</1> jïh <2>Gïeletekno</2> <3>saemien"
 " baakoegærjine</3> seammasïenten. "
 
-#: src/translateble_variables.js:39
+#: src/translateble_variables.js:42
 msgid "Dáidda ja girjjálašvuohta"
 msgstr "Tjiehpiesvuekieh jïh tjaaleldahkh"
 
-#: src/translateble_variables.js:40
+#: src/translateble_variables.js:43
 msgid "Eanandoallu"
 msgstr "Laanteburrie"
 
-#: src/translateble_variables.js:41
+#: src/translateble_variables.js:44
 msgid "Education"
 msgstr "Pedagogihke"
 
-#: src/translateble_variables.js:42
+#: src/translateble_variables.js:45
 msgid "Ekologiija ja biras"
 msgstr "Ekologije jïh voenge"
 
-#: src/translateble_variables.js:43
+#: src/translateble_variables.js:46
 msgid "Ekonomiija ja gávppašeapmi"
 msgstr "Ekonomije jïh åesiestimmie"
 
@@ -157,15 +157,15 @@ msgstr ""
 "Emeritusprofessore Pekka Sammallahti tjaaleme dam baakoegærjam jïjtse 1989"
 " jïh 1993 preenteme baakoegærjaj mïetie."
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:20
 msgid "FI"
 msgstr "Soeme"
 
-#: src/translateble_variables.js:44
+#: src/translateble_variables.js:47
 msgid "Geografiija"
 msgstr "Geografije"
 
-#: src/translateble_variables.js:45
+#: src/translateble_variables.js:48
 msgid "Gielladieđa"
 msgstr "Gïelendotkeme"
 
@@ -181,11 +181,11 @@ msgstr ""
 ">teermebaseste<a> vïedtjesovva fïerhten biejjien dan nedtesæjrose, juktie"
 " aelhkebe jaksoes saemien sïebredahkese."
 
-#: src/translateble_variables.js:46
+#: src/translateble_variables.js:49
 msgid "Gulahallanteknihkka"
 msgstr "Gaskesadtemeteknihke"
 
-#: src/translateble_variables.js:47
+#: src/translateble_variables.js:50
 msgid "Guolástus"
 msgstr "Göölemdahke"
 
@@ -205,7 +205,7 @@ msgstr "Vöörhkh dam baakoegærjam"
 msgid "Hide this language"
 msgstr "Vöörhkh dam gïelem"
 
-#: src/translateble_variables.js:48
+#: src/translateble_variables.js:51
 msgid "Huksenteknihkka"
 msgstr "Bigkemeteknihke"
 
@@ -217,7 +217,7 @@ msgstr ""
 "Artihkelinie maahtah vöörhkedh gïelh jallh baakoegærjah maam ij sïjhth"
 " vuejnedh. Dejtie maahtah vihth vuesiehtidh jis diedtelh <0/> jallh <1/>."
 
-#: src/translateble_variables.js:49
+#: src/translateble_variables.js:52
 msgid "Juridihkka"
 msgstr "Jussh"
 
@@ -230,27 +230,27 @@ msgstr "Gïelh"
 msgid "Lookup the search word"
 msgstr "Vuesedh ohtsemebaakoem båatoem"
 
-#: src/translateble_variables.js:50
+#: src/translateble_variables.js:53
 msgid "Luonddudieđa ja matematihkka"
 msgstr "Eatnemedotkeme jih maatematigke"
 
-#: src/translateble_variables.js:51
+#: src/translateble_variables.js:54
 msgid "Medisiidna"
 msgstr "Medisijne"
 
-#: src/translateble_variables.js:52
+#: src/translateble_variables.js:55
 msgid "Mášenteknihkka"
 msgstr "Maasjinateknihke"
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:12
 msgid "N"
 msgstr "subst."
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:20
 msgid "NO"
 msgstr "Nöörje"
 
-#: src/features/article/Articles.js:154
+#: src/features/article/Articles.js:158
 msgid ""
 "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if"
 " the wanted languages or dictionaries are selected."
@@ -276,7 +276,7 @@ msgstr ""
 msgid "Note:"
 msgstr "Notaate:"
 
-#: src/translateble_variables.js:53
+#: src/translateble_variables.js:56
 msgid "Ođđa sánit"
 msgstr "Orre baakoeh"
 
@@ -284,11 +284,11 @@ msgstr "Orre baakoeh"
 msgid "Paradigm"
 msgstr "Sojjehtimmiemaalle"
 
-#: src/translateble_variables.js:9
+#: src/translateble_variables.js:12
 msgid "Pron"
 msgstr "pron."
 
-#: src/translateble_variables.js:54
+#: src/translateble_variables.js:57
 msgid "Religion"
 msgstr "Religijovne"
 
@@ -296,7 +296,7 @@ msgstr "Religijovne"
 msgid "Results only from"
 msgstr "Båatoeh ajve"
 
-#: src/translateble_variables.js:17
+#: src/translateble_variables.js:20
 msgid "SE"
 msgstr "Sveerje"
 
@@ -308,7 +308,7 @@ msgstr "Ohtsedh"
 msgid "Search results will appear here."
 msgstr "Maam ohtseme jijhtieh dagkoe."
 
-#: src/translateble_variables.js:55
+#: src/translateble_variables.js:58
 msgid "Servodatdieđa"
 msgstr "Sïebredahkendotkeme"
 
@@ -340,7 +340,7 @@ msgstr "Aalkoe"
 msgid "Status:"
 msgstr "Staatuse:"
 
-#: src/translateble_variables.js:56
+#: src/translateble_variables.js:59
 msgid "Stáda almmolaš hálddašeapmi"
 msgstr "Byjjes reereme"
 
@@ -349,7 +349,7 @@ msgstr "Byjjes reereme"
 msgid "Sámi letters"
 msgstr "Saemien bokstavh"
 
-#: src/translateble_variables.js:57
+#: src/translateble_variables.js:60
 msgid "Teknihkka industriija duodji"
 msgstr "Teknihke, industrije jïh vætnoeh"
 
@@ -446,7 +446,13 @@ msgstr ""
 msgid "This word is not found in our corpus"
 msgstr "Daate baakoe ij leah korpusisnie"
 
-#: src/translateble_variables.js:9
+#: src/features/wantedlangs/DictChooser.js:94
+msgid ""
+"Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search"
+" words."
+msgstr ""
+
+#: src/translateble_variables.js:12
 msgid "V"
 msgstr "verbe"
 
@@ -471,195 +477,199 @@ msgstr ""
 "Dagkoe datne maahtah plæredh ohtsemebåatoejsne, orre båatoeh båetieh goske"
 " gaajhkh gaavneme."
 
-#: src/translateble_variables.js:21
+#: src/translateble_variables.js:24
 msgid "east"
 msgstr "luvlie"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "en"
 msgstr "Englaantengïele"
 
-#: src/translateble_variables.js:28
+#: src/translateble_variables.js:31
 msgid "en_genitive"
 msgstr "englaantengïelen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "eng"
 msgstr "Englaantengïele"
 
-#: src/translateble_variables.js:28
+#: src/translateble_variables.js:31
 msgid "eng_genitive"
 msgstr "englaantengïelen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "fi"
 msgstr "Soemengïele"
 
-#: src/translateble_variables.js:28
+#: src/translateble_variables.js:31
 msgid "fi_genitive"
 msgstr "soemengïelen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "fin"
 msgstr "Soemengïele"
 
-#: src/translateble_variables.js:28
+#: src/translateble_variables.js:31
 msgid "fin_genitive"
 msgstr "soemengïelen"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:7
+msgid "gtfinnob"
+msgstr "Trond Trostedud soemen – daaroen baakeogærja"
+
+#: src/translateble_variables.js:7
 msgid "gtfinsme"
 msgstr "Giellatekno soemen – noerhtesaemien baakoegærja"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:7
 msgid "gtfinsmn"
 msgstr "Giellatekno soemen – enaresaemien baakoegærja"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "gtnobsma"
 msgstr "Giellatekno daaroen – åarjelsaemien baakoegærja"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "gtnobsme"
 msgstr "Giellatekno daaroen – noerhtesaemien baakoegærja"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "gtsmanob"
 msgstr "Giellatekno åarjelsaemien – daaroen baakoegærja"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "gtsmefin"
 msgstr "Giellatekno noerhtesaemien – soemen baakoegærja"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "gtsmenob"
 msgstr "Giellatekno noerhtesaemien – daaroen baakoegærja"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:7
 msgid "gtsmesmn"
 msgstr "Giellatekno noerhtesaemien – enaresaemien baakoegærja"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:7
 msgid "gtsmnfin"
 msgstr "Giellatekno enaresaemien – soemen baakoegærja"
 
-#: src/translateble_variables.js:5
+#: src/translateble_variables.js:7
 msgid "gtsmnsme"
 msgstr "Giellatekno enaresaemien – noerhtesaemien baakoegærja"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "lat"
 msgstr "Latijnegïele"
 
-#: src/translateble_variables.js:32
+#: src/translateble_variables.js:35
 msgid "lat_genitive"
 msgstr "latijnegïelen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "nb"
 msgstr "Daaaroengïele"
 
-#: src/translateble_variables.js:29
+#: src/translateble_variables.js:32
 msgid "nb_genitive"
 msgstr "daaroen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "nn"
 msgstr "Orredaaroengïele"
 
-#: src/translateble_variables.js:29
+#: src/translateble_variables.js:32
 msgid "nn_genitive"
 msgstr "orredaaroen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "nno"
 msgstr "Orredaaroengïele"
 
-#: src/translateble_variables.js:29
+#: src/translateble_variables.js:32
 msgid "nno_genitive"
 msgstr "orredaaroen"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "nob"
 msgstr "Daaroengïele"
 
-#: src/translateble_variables.js:29
+#: src/translateble_variables.js:32
 msgid "nob_genitive"
 msgstr "daaroen"
 
-#: src/translateble_variables.js:23
+#: src/translateble_variables.js:26
 msgid "north"
 msgstr "noerhte"
 
-#: src/translateble_variables.js:6
+#: src/translateble_variables.js:8
 msgid "sammallahtismefin"
 msgstr "Pekka Sammallahti daaroen – soemen baakeogærja"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "se"
 msgstr "Noerhtesaemiengïele"
 
-#: src/translateble_variables.js:30
+#: src/translateble_variables.js:33
 msgid "se_genitive"
 msgstr "noerhtesaemien"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "sma"
 msgstr "Åarjelsaemiengïele"
 
-#: src/translateble_variables.js:30
+#: src/translateble_variables.js:33
 msgid "sma_genitive"
 msgstr "åarjelsaemien"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "sme"
 msgstr "Noerhtesaemiengïele"
 
-#: src/translateble_variables.js:30
+#: src/translateble_variables.js:33
 msgid "sme_genitive"
 msgstr "noerhtesaemien"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "smj"
 msgstr "Julevsaemiengïele"
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:34
 msgid "smj_genitive"
 msgstr "julevsaemien"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "smn"
 msgstr "Enaresaemiengïele"
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:34
 msgid "smn_genitive"
 msgstr "enaresaemien"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "sms"
 msgstr "Luvliesaemiengïele"
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:34
 msgid "sms_genitive"
 msgstr "luvliesaemien"
 
-#: src/translateble_variables.js:24
+#: src/translateble_variables.js:27
 msgid "south"
 msgstr "åarjel"
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:15
 msgid "sv"
 msgstr "Sveerjengïele"
 
-#: src/translateble_variables.js:30
+#: src/translateble_variables.js:33
 msgid "sv_genitive"
 msgstr "sveerjengïelen"
 
-#: src/translateble_variables.js:13
+#: src/translateble_variables.js:16
 msgid "swe"
 msgstr "Sveerjengïele"
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:34
 msgid "swe_genitive"
 msgstr "sveerjengïelen"
 
@@ -667,11 +677,11 @@ msgstr "sveerjengïelen"
 msgid "sámi keys"
 msgstr "saemien bokstavh"
 
-#: src/translateble_variables.js:4
+#: src/translateble_variables.js:6
 msgid "termwiki"
 msgstr "Gïelegaaltijen gelliegïeledh teermh"
 
-#: src/translateble_variables.js:22
+#: src/translateble_variables.js:25
 msgid "west"
 msgstr "jillie"
 
@@ -687,14 +697,14 @@ msgstr "{0}/{1} gaaltijijstie."
 msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
 msgstr "{0}/{totalCount} mej aalkoe lea <0>{searchExpression}</0>"
 
-#: src/translateble_variables.js:58
+#: src/translateble_variables.js:61
 msgid "Álšateknihkka"
 msgstr "Energiteknihke"
 
-#: src/translateble_variables.js:59
+#: src/translateble_variables.js:62
 msgid "Ásttoáigi ja faláštallan"
 msgstr "Eejehtse jih gaarsje"
 
-#: src/translateble_variables.js:60
+#: src/translateble_variables.js:63
 msgid "Ávnnasindustriija"
 msgstr "Raaveskhindustrije"

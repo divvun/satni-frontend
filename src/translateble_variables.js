@@ -4,7 +4,7 @@ import { t } from '@lingui/macro';
 
 const dicts = [
   t`termwiki`, t`gtsmenob`, t`gtnobsme`, t`gtnobsma`, t`gtsmanob`, t`gtsmefin`,
-  t`gtfinsme`, t`gtsmesmn`, t`gtsmnsme`, t`gtfinsmn`, t`gtsmnfin`,
+  t`gtfinsme`, t`gtsmesmn`, t`gtsmnsme`, t`gtfinsmn`, t`gtsmnfin`, t`gtfinnob`,
   t`sammallahtismefin`
 ];
 

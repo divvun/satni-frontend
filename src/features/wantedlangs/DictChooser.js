@@ -88,6 +88,11 @@ export const dictionaryInfo = {
     info: [
       t`This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words).`
     ]
+  },
+  gtfinnob: {
+    info: [
+      t`Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words.`
+    ]
   }
 };
 
