@@ -260,7 +260,7 @@ def import_dict(pair):
 def make_dicts():
     for pair in [
             'smenob', 'nobsme', 'nobsma', 'smanob', 'smefin', 'finsme',
-            'smesmn', 'smnsme', 'finsmn', 'smnfin'
+            'smesmn', 'smnsme', 'finsmn', 'smnfin', 'finnob'
     ]:
         import_dict(pair)
 
