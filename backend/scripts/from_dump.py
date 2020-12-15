@@ -156,7 +156,7 @@ def make_dict_lemma(element, lang):
 
     lemma_key = (f"{lemma}{presentation_lemma}" f"{element.get('pos')}{lang}")
     if not LEMMAS.get(lemma_key):
-        lemma = Lemma(lemma=sammallahti_replacer(normalised_lemma),
+        lemma = Lemma(lemma=lemma,
                       presentation_lemma=normalised_lemma,
                       language=lang,
                       pos=element.get('pos'),
