@@ -1,11 +1,14 @@
+import logging
+
 import graphene
 from graphene_mongo.fields import MongoengineConnectionField
-from mongoengine.queryset.visitor import Q
-
 from lemmas.models import Lemma
+from mongoengine.queryset.visitor import Q
 
 from .models import Concept
 from .types import ConceptType
+
+LOGGER = logging.getLogger(__name__)
 
 
 class Query(graphene.ObjectType):
@@ -14,7 +17,8 @@ class Query(graphene.ObjectType):
                                  wanted=graphene.List(graphene.String))
 
     def resolve_concept_list(self, info, exact, wanted, **kwargs):
-        print('namelist', exact)
+        LOGGER.info(f'termlist: {exact} '
+                    f'langs: {", ".join(sorted(wanted))}')
         names = [
             concept.name for concept in Concept.objects(
                 terms__expression__in=Lemma.objects(lemma=exact))

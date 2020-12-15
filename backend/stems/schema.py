@@ -1,9 +1,13 @@
+import logging
+
 import graphene
 from graphene_mongo.fields import MongoengineConnectionField
 from mongoengine.queryset.visitor import Q
 
 from .models import Stem
 from .types import StemType
+
+LOGGER = logging.getLogger(__name__)
 
 
 class Query(graphene.ObjectType):
@@ -18,9 +22,19 @@ class Query(graphene.ObjectType):
         return Stem.objects(stem=exact)
 
     def resolve_stem_list(self, info, **kwargs):
-        print('stem kwargs:', kwargs)
+        search = kwargs['search']
         wanted = kwargs['wanted']
         wanted_dicts = kwargs['wanted_dicts']
+
+        uff = []
+        for key, value in kwargs.items():
+            uff.append(f'{key}:')
+            if isinstance(value, list):
+                uff.append(', '.join(sorted(value)))
+            else:
+                uff.append(str(value))
+        LOGGER.info(' '.join(uff))
+
         filter = Q(stem__istartswith=kwargs['search'])
 
         by_stem = Stem.objects(filter).order_by('stem')

@@ -1,11 +1,14 @@
+import logging
+
 import graphene
 from graphene_mongo.fields import MongoengineConnectionField
-from mongoengine.queryset.visitor import Q
-
 from lemmas.models import Lemma
+from mongoengine.queryset.visitor import Q
 
 from .models import DictEntry
 from .types import DictEntryType
+
+LOGGER = logging.getLogger(__name__)
 
 
 class Query(graphene.ObjectType):
@@ -21,7 +24,9 @@ class Query(graphene.ObjectType):
                                 wanted_dicts,
                                 exact=None,
                                 **kwargs):
-        print('dicts kwargs', wanted, sorted(wanted_dicts))
+        LOGGER.info(f'dictlist: {exact} '
+                    f'langs: {", ".join(sorted(wanted))} '
+                    f'dicts: {", ".join(sorted(wanted_dicts))}')
         filter = Q(lookupLemmas__in=Lemma.objects(lemma=exact))
 
         by_lemma = DictEntry.objects(filter)
