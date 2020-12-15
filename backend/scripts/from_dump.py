@@ -12,7 +12,7 @@ from stems.models import Stem
 from terms.models import Concept, Term
 from termwikiimporter import bot
 
-REMOVER_RE = r'[|@ˣ."]'
+REMOVER_RE = r'[ꞌ|@ˣ."*]'
 """Remove these characters from Sammallahti's original lemmas."""
 
 LEMMAS = {}
@@ -40,8 +40,8 @@ def sammallahti_remover(line):
 def sammallahti_replacer(line):
     """Replace special characters found in Sammallahti's dictionary."""
     return sammallahti_remover(line).translate(
-        str.maketrans('Èéíïēīĵĺōūḥḷṃṇṿạẹọụÿⓑⓓⓖ',
-        'Eeiieijlouhlmrvaeouybdg'))
+        str.maketrans('Èéíïēīĵĺōūḥḷṃṇṿạẹọụÿⓑⓓⓖ·ṛü’ ',
+        'Eeiieijlouhlmrvaeouybdg ru\' '))
 
 
 def make_lemma(lang, expression):
