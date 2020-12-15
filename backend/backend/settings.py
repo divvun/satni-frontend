@@ -87,15 +87,24 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formatters': {
+        'timestamp': {
+            'format': '{asctime} {funcName}: {message}',
+            'style': '{'
+        }
+    },
     'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
+        'file': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'formatter': 'timestamp',
+            'filename': 'search.log',
+            'when': 'midnight',
         },
     },
     'root': {
-        'handlers': ['console'],
+        'handlers': ['file'],
         'level': 'INFO',
-    },
+    }
 }
 
 # Database
