@@ -24,14 +24,16 @@ class Query(graphene.ObjectType):
                                 wanted_dicts,
                                 exact=None,
                                 **kwargs):
-        LOGGER.info(f'dictlist: {exact} '
-                    f'langs: {", ".join(sorted(wanted))} '
-                    f'dicts: {", ".join(sorted(wanted_dicts))}')
         filter = Q(lookupLemmas__in=Lemma.objects(lemma=exact))
 
         by_lemma = DictEntry.objects(filter)
         by_src_lang = [d for d in by_lemma if d.srcLang in wanted]
         by_target_lang = [d for d in by_src_lang if d.targetLang in wanted]
         by_dicts = [d for d in by_target_lang if d.dictName in wanted_dicts]
+
+        if by_dicts:
+            LOGGER.info(f'dictlist: {exact} '
+                        f'langs: {", ".join(sorted(wanted))} '
+                        f'dicts: {", ".join(sorted(wanted_dicts))}')
 
         return by_dicts

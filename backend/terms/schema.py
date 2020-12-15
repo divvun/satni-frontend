@@ -17,8 +17,6 @@ class Query(graphene.ObjectType):
                                  wanted=graphene.List(graphene.String))
 
     def resolve_concept_list(self, info, exact, wanted, **kwargs):
-        LOGGER.info(f'termlist: {exact} '
-                    f'langs: {", ".join(sorted(wanted))}')
         names = [
             concept.name for concept in Concept.objects(
                 terms__expression__in=Lemma.objects(lemma=exact))
@@ -38,8 +36,13 @@ class Query(graphene.ObjectType):
             name_filter |= item
 
         named = Concept.objects(name_filter)
-
-        return [
+        wanted_by_lang = [
             name for name in named
             if name.terms[0].expression.language in wanted
         ]
+
+        if wanted_by_lang:
+            LOGGER.info(f'termlist: {exact} '
+                        f'langs: {", ".join(sorted(wanted))}')
+
+        return wanted_by_lang
