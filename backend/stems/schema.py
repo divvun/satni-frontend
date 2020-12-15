@@ -21,12 +21,11 @@ class Query(graphene.ObjectType):
     def resolve_has_stem(self, info, exact, **kwargs):
         return Stem.objects(stem=exact)
 
-    def resolve_stem_list(self, info, **kwargs):
-        search = kwargs['search']
+    def resolve_stem_list(self, info, search, **kwargs):
         wanted = kwargs['wanted']
         wanted_dicts = kwargs['wanted_dicts']
 
-        uff = []
+        uff = [search]
         for key, value in kwargs.items():
             uff.append(f'{key}:')
             if isinstance(value, list):
@@ -35,7 +34,7 @@ class Query(graphene.ObjectType):
                 uff.append(str(value))
         LOGGER.info(' '.join(uff))
 
-        filter = Q(stem__istartswith=kwargs['search'])
+        filter = Q(stem__istartswith=search)
 
         by_stem = Stem.objects(filter).order_by('stem')
         by_src_langs = [

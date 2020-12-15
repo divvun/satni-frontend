@@ -32,7 +32,7 @@ class Query(graphene.ObjectType):
         by_dicts = [d for d in by_target_lang if d.dictName in wanted_dicts]
 
         if by_dicts:
-            LOGGER.info(f'dictlist: {exact} '
+            LOGGER.info(f'{exact} '
                         f'langs: {", ".join(sorted(wanted))} '
                         f'dicts: {", ".join(sorted(wanted_dicts))}')
 
