@@ -6,9 +6,15 @@ const paradigmsSlice = createSlice({
   name: 'paradigms',
   initialState: {isFetching: false, error: null},
   reducers: {
+    getParadigmStart (state) {
+      state.isFetching = true;
+    },
     getParadigmSuccess (state, action) {
-      const { stem, json } = action.payload;
-      state[`${stemToKey(stem)}`] = json;
+      console.log('state', state);
+      console.log('action', action);
+      const { stem, paradigm } = action.payload;
+      console.log('sus', stem, paradigm);
+      state[`${stemToKey(stem)}`] = paradigm;
       state.isFetching = false;
       state.error = null;
     },
@@ -20,6 +26,7 @@ const paradigmsSlice = createSlice({
 });
 
 export const {
+  getParadigmStart,
   getParadigmSuccess,
   getParadigmFailure
 } = paradigmsSlice.actions;
@@ -28,9 +35,12 @@ export default paradigmsSlice.reducer;
 
 export const fetchParadigms = (stem) => async dispatch => {
   try {
+    dispatch(getParadigmStart());
     const paradigm = await fetchParadigm(stem);
-    dispatch(getParadigmSuccess(stem, paradigm));
+    console.log('abba', stem, paradigm);
+    dispatch(getParadigmSuccess({stem, paradigm}));
   } catch (err) {
-    dispatch(getParadigmsFailure(stem, err.toString()));
+    console.log('uff', err);
+    dispatch(getParadigmFailure(err.toString()));
   }
 };
