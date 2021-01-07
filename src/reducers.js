@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
-
-import { articlesByLemma } from './articleReducers';
+import { articlesByLemma } from 'features/article/articleReducers';
 import { search } from './searchItemReducers';
 import paradigmsReducer from 'features/paradigm/paradigmsSlice';
 

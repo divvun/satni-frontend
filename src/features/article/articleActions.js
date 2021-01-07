@@ -1,6 +1,6 @@
 import * as Sentry from '@sentry/browser';
 import fetch from 'cross-fetch';
-import {handleErrors, normaliseArticles, toJson} from './utils';
+import {handleErrors, normaliseArticles, toJson} from 'utils';
 
 export const FETCH_ARTICLES_BEGIN = 'FETCH_ARTICLES_BEGIN';
 export const FETCH_ARTICLES_SUCCESS = 'FETCH_ARTICLES_SUCCESS';

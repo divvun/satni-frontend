@@ -3,7 +3,7 @@ import {
   useParams
 } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchArticlesIfNeeded } from '../articleActions';
+import { fetchArticlesIfNeeded } from './articleActions';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
 
