@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchArticlesIfNeeded } from '../actions';
+import { fetchArticlesIfNeeded } from '../articleActions';
 import PresentArticles from './PresentArticles';
 import FetchArticlesError from './FetchArticlesError';
 
