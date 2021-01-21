@@ -26,11 +26,10 @@ export const moveLangFirst = (language, concepts) => {
   );
 };
 
-export const moveLemmaFirst = (lemma, language, terms) => {
+export const moveLemmaFirst = (lemma, terms) => {
   return terms.reduce(
     (accumulator, term) => {
-      if (term.expression.language === language &&
-        term.expression.lemma === lemma) {
+      if (term.expression.lemma === lemma) {
         accumulator.unshift(term);
       } else {
         accumulator.push(term);
@@ -42,11 +41,11 @@ export const moveLemmaFirst = (lemma, language, terms) => {
   );
 };
 
-export const cleanFrom = (lemma, language, concept) => {
+export const cleanFrom = (lemma, concept) => {
   return {
     ...concept,
-    language,
-    terms: moveLemmaFirst(lemma, language, concept.terms)
+    language: concept.terms[0].expression.language,
+    terms: moveLemmaFirst(lemma, concept.terms)
   };
 };
 
@@ -60,7 +59,7 @@ export const orderedMultilingualConcept = (lemma, multilingualConcept) => {
   const languages = languagesOfLemma(lemma, multilingualConcept);
   const [ first, ...rest ] = moveLangFirst(languages[0], multilingualConcept);
 
-  return [cleanFrom(lemma, languages[0], first), ...rest];
+  return [cleanFrom(lemma, first), ...rest];
 };
 
 /**

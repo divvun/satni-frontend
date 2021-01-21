@@ -937,7 +937,6 @@ describe('Massage termwiki data from backend', () => {
         conceptList
       )['Dihtorteknologiija ja diehtoteknihkka:fiila'])[0];
     const lemma = 'vuorká';
-    const language = 'sme';
     const want = {
       'language': 'sme',
       'collections': [
@@ -971,8 +970,8 @@ describe('Massage termwiki data from backend', () => {
         }
       ]
     };
-
-    expect(cleanFrom(lemma, language, got)).toEqual(want);
+    
+    expect(cleanFrom(lemma, got)).toEqual(want);
   });
 
   it('Order the multilingual concept by lemma and language', () => {
