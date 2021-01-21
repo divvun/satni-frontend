@@ -12,6 +12,12 @@ export const handleErrors = (response) => {
   return response;
 };
 
+/**
+ * Place the concept of the wanted language first in a multilingual concept
+ * @param {String} language The language should appear first
+ * @param {Array} concepts  Concepts where the language might not appear first
+ * @returns {Array}         Concept where the language is placed first
+ */
 export const moveLangFirst = (language, concepts) => {
   return concepts.reduce(
     (accumulator, concept) => {
@@ -26,6 +32,12 @@ export const moveLangFirst = (language, concepts) => {
   );
 };
 
+/**
+ * An array of terms of the same language
+ * @param   {String}  lemma     The lemma that should be in the front
+ * @param   {Array}   terms     Terms where term containing the lemma might not be first
+ * @return  {Array}             The term containing the lemma is placed first
+ */
 export const moveLemmaFirst = (lemma, terms) => {
   return terms.reduce(
     (accumulator, term) => {
@@ -41,6 +53,14 @@ export const moveLemmaFirst = (lemma, terms) => {
   );
 };
 
+/**
+ * Massage a monolingual concept into the format expected by the view
+ * @param   {String}  lemma               The lemma we want
+ * @param   {Dict}    concept             A monolingual concept
+ * @return  {Dict}                        A monolingual concept where language
+ *                                        is added and terms has the wanted lemma
+ *                                        placed in the front
+ */
 export const cleanFrom = (lemma, concept) => {
   return {
     ...concept,
@@ -64,8 +84,6 @@ export const orderedMultilingualConcept = (lemma, multilingualConcept) => {
 
 /**
  * Order concept list to sublists ordered by the concept names
- * @param  {String} lemma       The lemma we want
- * @param  {String} language    The ISO-639-3 language code of the lemma
  * @param  {Array}  conceptList List of concepts
  * @return {Dict}               Concept lists ordered by names => multilingual
  *                              concepts
