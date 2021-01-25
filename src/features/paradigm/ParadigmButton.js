@@ -1,29 +1,38 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Trans } from '@lingui/macro';
-import { useDispatch, useSelector } from 'react-redux';
 import IconButton from '@material-ui/core/IconButton';
 import InfoOutlined from '@material-ui/icons/InfoOutlined';
 import PropTypes from 'prop-types';
 import Tooltip from '@material-ui/core/Tooltip';
+import { useQuery } from '@apollo/client';
+import gql from 'graphql-tag';
 
-import { fetchParadigms } from 'features/paradigm/paradigmsSlice';
-import { stemToKey } from 'utils';
+const GET_NOUN = gql`
+  query paradigm($text: String!, $lang: String!, $pos: String!) {
+    paradigm(text: $text, lang: $lang, pos: $pos)
+    @rest(type: "Paradigm", path: "smi.cgi?{args}&mode=full&action=paradigm&json=true") {
+      analyses
+    }
+  }
+`;
 
 const ParadigmButton = ({lemma, language, pos, onClick, classes}) => {
   const paradigmLangs = new Set(['sme', 'sma', 'smn', 'sms', 'smj', 'fin']);
   const paradigmPos = new Set(['N', 'V', 'Adj']);
-  const paradigms = useSelector(state => state['paradigms']);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchParadigms({lemma, pos, language}));
-  }, [dispatch, lemma, pos, language]);
+  const {data} = useQuery(
+    GET_NOUN, {
+      variables: {
+        text: lemma,
+        lang: language,
+        pos: pos
+      }
+    }
+  );
 
   if (
     paradigmLangs.has(language) &&
     paradigmPos.has(pos) &&
-    paradigms &&
-    paradigms[stemToKey({lemma, pos, language})]) {
+    data) {
     return <Tooltip
       title={<Trans>Show paradigm for this word</Trans>}
       aria-label={<Trans>Show paradigm for this word</Trans>}

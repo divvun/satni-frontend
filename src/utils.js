@@ -1,9 +1,5 @@
 import { dictionaryInfo } from 'translateble_variables';
 
-export const stemToKey = (stem) => {
-  return `${stem.lemma}_${stem.pos}_${stem.language}`;
-};
-
 // Handle HTTP errors since fetch won't.
 export const handleErrors = (response) => {
   if (!response.ok) {

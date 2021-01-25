@@ -1,24 +1,36 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
+import { useQuery } from '@apollo/client';
+import gql from 'graphql-tag';
 
-import { filterProp, stemToKey } from 'utils';
-import { fetchParadigms } from 'features/paradigm/paradigmsSlice';
+import { filterProp } from 'utils';
 import AdjParadigm from './AdjParadigm';
 import NounParadigm from './NounParadigm';
 import VerbParadigm from './VerbParadigm';
+
+const GET_NOUN = gql`
+  query paradigm($text: String!, $lang: String!, $pos: String!) {
+    paradigm(text: $text, lang: $lang, pos: $pos)
+    @rest(type: "Paradigm", path: "smi.cgi?{args}&mode=full&action=paradigm&json=true") {
+      analyses
+    }
+  }
+`;
 
 const langs = new Set(['fin', 'sma', 'sme', 'smj', 'smn', 'sms']);
 const poses = new Set(['N', 'V', 'A']);
 
 const Paradigm = ({lemma, language, pos}) => {
-  const paradigms = useSelector(state => state['paradigms']);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchParadigms({lemma, pos, language}));
-  }, [dispatch, lemma, pos, language]);
+  const {data, loading, error} = useQuery(
+    GET_NOUN, {
+      variables: {
+        text: lemma,
+        lang: language,
+        pos: pos
+      }
+    }
+  );
 
   if (!langs.has(language)) {
     return <Typography>Cannot produce paradigm for {language}</Typography>;
@@ -28,26 +40,26 @@ const Paradigm = ({lemma, language, pos}) => {
     return <Typography>Cannot produce paradigm for {pos} in {language}</Typography>;
   }
 
-  if (paradigms.errorMessage) {
+  if (error) {
     return <Typography>No paradigm for {lemma} {pos} {language}</Typography>;
   }
 
-  if (paradigms.isFetching) {
+  if (loading) {
     return <Typography>Loading paradigms…</Typography>;
   }
 
   switch (pos) {
   case 'A':
     return <AdjParadigm
-      paradigm={paradigms[stemToKey({lemma, pos, language})]}
+      paradigm={data.paradigm}
       language={language} />;
   case 'N':
     return <NounParadigm
-      paradigm={filterProp(paradigms[stemToKey({lemma, pos, language})])}
+      paradigm={filterProp(data.paradigm)}
       language={language} />;
   case 'V':
     return <VerbParadigm
-      paradigm={paradigms[stemToKey({lemma, pos, language})]}
+      paradigm={data.paradigm}
       language={language} />;
   default:
     return <Typography>Failed to make paradigm for {lemma}, {language}, {pos}</Typography>;
