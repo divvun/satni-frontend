@@ -30,19 +30,3 @@ export const doesLemmaExist = async (language, lemma) => {
 
   return 'hits' in json && json['hits'] > 0;
 };
-
-export const getArticles = async(lemma) => {
-  const url = `https://satni.uit.no/satnibackend/article/${lemma}`;
-  const response = await fetch(encodeURI(url));
-  const text = await response.text();
-
-  return text;
-};
-
-export const getSearchItems = async(key) => {
-  const url = `https://satni.uit.no/satnibackend/search?query=${key}`;
-  const response = await fetch(encodeURI(url));
-  const text = await response.text();
-
-  return text;
-};
