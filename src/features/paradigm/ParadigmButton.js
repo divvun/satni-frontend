@@ -18,7 +18,7 @@ const GET_NOUN = gql`
 
 const ParadigmButton = ({lemma, language, pos, onClick, classes}) => {
   const paradigmLangs = new Set(['sme', 'sma', 'smn', 'sms', 'smj', 'fin']);
-  const paradigmPos = new Set(['N', 'V', 'Adj']);
+  const paradigmPos = new Set(['N', 'V', 'A']);
   const {data} = useQuery(
     GET_NOUN, {
       variables: {
