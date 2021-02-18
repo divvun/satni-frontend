@@ -139,7 +139,7 @@ const TableRows = {
       values: ['V+Ind+Prs+Sg1', 'V+Ind+Prt+Sg1']
     },
     {
-      pron: 'tom',
+      pron: 'tun',
       values: ['V+Ind+Prs+Sg2', 'V+Ind+Prt+Sg2']
     },
     {
@@ -159,7 +159,7 @@ const TableRows = {
       values: ['V+Ind+Prs+Du3', 'V+Ind+Prt+Du3']
     },
     {
-      pron: 'mii',
+      pron: 'mij',
       values: ['V+Ind+Prs+Pl1', 'V+Ind+Prt+Pl1']
     },
     {
