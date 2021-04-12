@@ -138,7 +138,7 @@ const AsyncApp = ({classes}) => {
               <Grid item xs={8}>
                 {currentLemma &&
                   <ArticlesGroup
-                    lemmas={[currentLemma]}
+                    lemmas={currentLemma}
                     wantedDicts={wantedDicts}
                     wantedLangs={data.wantedLangs}
                   />
