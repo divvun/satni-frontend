@@ -32,5 +32,5 @@ export default class ErrorBoundary extends Component {
 }
 
 ErrorBoundary.propTypes = {
-  children: PropTypes.array.isRequired
+  children: PropTypes.object.isRequired
 };
