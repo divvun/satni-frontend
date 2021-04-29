@@ -1,4 +1,5 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
 import {
   dictBackend2Frontend,
@@ -9,12 +10,22 @@ import DictArticle from './DictArticle';
 import PropTypes from 'prop-types';
 import TermWikiArticle from './TermWikiArticle';
 
+const useStyles = makeStyles(theme => ({
+  articles: {
+    height: '80vh',
+    overflowY: 'auto',
+    paddingRight: theme.spacing(2),
+    paddingLeft: theme.spacing(2)
+  }
+}));
+
 const Articles = ({data, lemma}) => {
+  const classes = useStyles();
   const { dictEntryList, conceptList } = data;
   const termsByNames = conceptList ?
     multilingualconceptListsByNames(conceptList) : {};
   return (
-    <>
+    <div className={classes.articles}>
       {dictEntryList && dictEntryList.map((dictEntry, index) => (
         <DictArticle
           dictGroup={dictBackend2Frontend(dictEntry)}
@@ -30,7 +41,7 @@ const Articles = ({data, lemma}) => {
           lemma={lemma}
         />
       ))}
-    </>
+    </div>
   );
 };
 
