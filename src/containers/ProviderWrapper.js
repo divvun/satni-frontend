@@ -19,7 +19,7 @@ const ProviderWrapper = ({ children, store, client }) => (
 );
 
 ProviderWrapper.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.array.isRequired,
   store: PropTypes.object.isRequired,
   client: PropTypes.object.isRequired
 };
