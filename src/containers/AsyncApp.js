@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
 import qs from 'qs';
 
 import { locationParser } from 'utils';
-import ArticlesGroup from 'features/article/ArticlesGroup';
+import Articles from 'features/article/Articles';
 import { WelcomeHeader } from 'containers/Welcome';
 import InfiniteStems from 'features/infinitestems/InfiniteStems';
 import SatniAppBar from './SatniAppBar';
@@ -137,8 +137,8 @@ const AsyncApp = ({classes}) => {
               </Grid>
               <Grid item xs={8}>
                 {currentLemma &&
-                  <ArticlesGroup
-                    lemmas={[currentLemma]}
+                  <Articles
+                    lemma={currentLemma}
                     wantedDicts={wantedDicts}
                     wantedLangs={data.wantedLangs}
                   />
