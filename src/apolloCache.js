@@ -3,18 +3,21 @@ import { availableLanguages } from 'utils';
 import { dictionaryInfo } from 'translateble_variables';
 
 export const interfaceLanguageVar = makeVar(
-  localStorage.getItem('interfaceLanguage') ?
-    localStorage.getItem('interfaceLanguage') : 'se'
+  localStorage.getItem('interfaceLanguage')
+    ? localStorage.getItem('interfaceLanguage')
+    : 'se',
 );
 
 export const wantedDictsVar = makeVar(
-  localStorage.getItem('wantedDicts') ?
-    JSON.parse(localStorage.getItem('wantedDicts')) : Object.keys(dictionaryInfo)
+  localStorage.getItem('wantedDicts')
+    ? JSON.parse(localStorage.getItem('wantedDicts'))
+    : Object.keys(dictionaryInfo),
 );
 
 export const wantedLangsVar = makeVar(
-  localStorage.getItem('wantedLangs') ?
-    JSON.parse(localStorage.getItem('wantedLangs')) : availableLanguages
+  localStorage.getItem('wantedLangs')
+    ? JSON.parse(localStorage.getItem('wantedLangs'))
+    : availableLanguages,
 );
 
 export const cache = new InMemoryCache({
@@ -22,21 +25,21 @@ export const cache = new InMemoryCache({
     Query: {
       fields: {
         interfaceLanguage: {
-          read () {
+          read() {
             return interfaceLanguageVar();
-          }
+          },
         },
         wantedDicts: {
-          read () {
+          read() {
             return wantedDictsVar();
-          }
+          },
         },
         wantedLangs: {
-          read () {
+          read() {
             return wantedLangsVar();
-          }
-        }
-      }
-    }
-  }
+          },
+        },
+      },
+    },
+  },
 });

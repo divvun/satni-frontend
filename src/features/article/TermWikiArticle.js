@@ -15,66 +15,61 @@ import { hasAvailableDict } from 'utils';
 import Source from './Source';
 import TermCore from './TermCore';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
-    marginBottom: theme.spacing(1)
+    marginBottom: theme.spacing(1),
   },
   title: {
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 }));
 
 const TermWikiArticle = ({ category, multiLingualConcept, lemma }) => {
   const classes = useStyles();
   const pathname = useLocation().pathname;
 
-  return <Paper
-    className={classes.paper}
-    elevation={1}
-  >
-    <Table>
-      <TableHead>
-        <TableRow>
-          <TableCell
-            variant='head'
-            padding='none'
-          ><Trans>Category</Trans>: {category}</TableCell>
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {!hasAvailableDict(pathname) &&
-        <TableRow>
-          <TableCell padding='none'>
-            <Source
-              className={classes.paper}
-              source='termwiki'
-              lemma={lemma} />
-          </TableCell>
-        </TableRow>
-        }
-        {multiLingualConcept.map((concept, index) => {
-          return (
-            <TableRow key={index}>
-              <TableCell padding='none'>
-                <TermCore
-                  concept={concept}
+  return (
+    <Paper className={classes.paper} elevation={1}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell variant="head" padding="none">
+              <Trans>Category</Trans>: {category}
+            </TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {!hasAvailableDict(pathname) && (
+            <TableRow>
+              <TableCell padding="none">
+                <Source
+                  className={classes.paper}
+                  source="termwiki"
                   lemma={lemma}
                 />
               </TableCell>
             </TableRow>
-          );
-        })}
-      </TableBody>
-    </Table>
-  </Paper>
-  ;
+          )}
+          {multiLingualConcept.map((concept, index) => {
+            return (
+              <TableRow key={index}>
+                <TableCell padding="none">
+                  <TermCore concept={concept} lemma={lemma} />
+                </TableCell>
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table>
+    </Paper>
+  );
 };
 
 TermWikiArticle.propTypes = {
   category: PropTypes.string.isRequired,
   multiLingualConcept: PropTypes.array.isRequired,
-  lemma: PropTypes.string.isRequired
+  lemma: PropTypes.string.isRequired,
 };
 
 export default TermWikiArticle;

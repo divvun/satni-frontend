@@ -16,30 +16,30 @@ const useStyles = makeStyles({
     width: '100%',
     borderStyle: 'dotted',
     borderWidth: 1,
-    borderColor: 'transparent'
+    borderColor: 'transparent',
   },
   stem: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   lemma: {
-    fontWeight: 'normal'
+    fontWeight: 'normal',
   },
   rightGroup: {
     float: 'right',
-    justify: 'space-evenly'
+    justify: 'space-evenly',
   },
   icons: {
     margin: 0,
     paddingTop: 0,
     paddingBottom: 0,
     paddingLeft: 5,
-    paddingRight: 5
-  }
+    paddingRight: 5,
+  },
 });
 
 const Stem = ({ stem, restriction, withLink }) => {
   const classes = useStyles();
-  const {lemma, presentationLemma, pos, language, dialect, country} = stem;
+  const { lemma, presentationLemma, pos, language, dialect, country } = stem;
   const [openParadigm, setOpenParadigm] = useState(false);
 
   const handleClickParadigmDialog = () => {
@@ -53,50 +53,61 @@ const Stem = ({ stem, restriction, withLink }) => {
   return (
     <>
       <Typography className={classes.stemContainer}>
-        {(withLink) ?
+        {withLink ? (
           <Link to={`/${lemma}`}>
-            <PresentationLemma
-              presentationLemma={presentationLemma}
-            />
-          </Link> :
-          <PresentationLemma
-            presentationLemma={presentationLemma}
-          />
-
-        }
-        {restriction && <Typography component='span'> ({restriction.restriction})</Typography>}
-        {!lemma.includes(' ') && <>
-          <span className={classes.rightGroup}>
-            {pos && <Typography
-              component='span'
-              color='textSecondary'
-              className={classes.pos}>(<Trans id={pos}/>)</Typography>}
-            <ParadigmButton
+            <PresentationLemma presentationLemma={presentationLemma} />
+          </Link>
+        ) : (
+          <PresentationLemma presentationLemma={presentationLemma} />
+        )}
+        {restriction && (
+          <Typography component="span"> ({restriction.restriction})</Typography>
+        )}
+        {!lemma.includes(' ') && (
+          <>
+            <span className={classes.rightGroup}>
+              {pos && (
+                <Typography
+                  component="span"
+                  color="textSecondary"
+                  className={classes.pos}
+                >
+                  (<Trans id={pos} />)
+                </Typography>
+              )}
+              <ParadigmButton
+                lemma={lemma}
+                pos={pos}
+                language={language}
+                onClick={handleClickParadigmDialog}
+                classes={classes}
+              />
+              <KorpButton lemma={lemma} language={language} classes={classes} />
+            </span>
+            <ParadigmDialog
               lemma={lemma}
               pos={pos}
               language={language}
-              onClick={handleClickParadigmDialog}
-              classes={classes}
+              open={openParadigm}
+              onClose={handleCloseParadigmDialog}
             />
-            <KorpButton
-              lemma={lemma}
-              language={language}
-              classes={classes}
-            />
-          </span>
-          <ParadigmDialog
-            lemma={lemma}
-            pos={pos}
-            language={language}
-            open={openParadigm}
-            onClose={handleCloseParadigmDialog} />
-        </>
-        }
+          </>
+        )}
       </Typography>
-      {(dialect || country) && <Typography>
-        {dialect && <Typography component='span'><Trans>Dialect</Trans>: <Trans id={dialect}/> </Typography>}
-        {country && <Typography component='span'><Trans>Country</Trans>: <Trans id={country}/></Typography>}
-      </Typography>}
+      {(dialect || country) && (
+        <Typography>
+          {dialect && (
+            <Typography component="span">
+              <Trans>Dialect</Trans>: <Trans id={dialect} />{' '}
+            </Typography>
+          )}
+          {country && (
+            <Typography component="span">
+              <Trans>Country</Trans>: <Trans id={country} />
+            </Typography>
+          )}
+        </Typography>
+      )}
     </>
   );
 };
@@ -104,7 +115,7 @@ const Stem = ({ stem, restriction, withLink }) => {
 Stem.propTypes = {
   stem: PropTypes.object.isRequired,
   restriction: PropTypes.object,
-  withLink: PropTypes.number
+  withLink: PropTypes.number,
 };
 
 export default Stem;

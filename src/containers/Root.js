@@ -4,7 +4,7 @@ import { gql, useQuery } from '@apollo/client';
 import { I18nProvider } from '@lingui/react';
 import {
   createMuiTheme,
-  ThemeProvider as MuiThemeProvider
+  ThemeProvider as MuiThemeProvider,
 } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
@@ -23,46 +23,38 @@ export const GET_INTERFACE_LANGUAGE = gql`
 `;
 
 const InterfaceLanguage = () => {
-  const {data, error, loading} = useQuery(GET_INTERFACE_LANGUAGE);
+  const { data, error, loading } = useQuery(GET_INTERFACE_LANGUAGE);
   if (loading) return <div>Loading language …</div>;
   if (error) return <div>Error: {JSON.stringify(error)}</div>;
-  return <GivenInterface language={data.interfaceLanguage}/>;
+  return <GivenInterface language={data.interfaceLanguage} />;
 };
 
-const GivenInterface = ({language}) => {
+const GivenInterface = ({ language }) => {
   const [catalogs, setCatalogs] = useState({});
 
-  const handleLanguageChange = async(language) => {
+  const handleLanguageChange = async (language) => {
     const newCatalog = await loadMessages(language);
-    setCatalogs(catalogs => ({ ...catalogs, [language]: newCatalog }));
+    setCatalogs((catalogs) => ({ ...catalogs, [language]: newCatalog }));
   };
 
-  useEffect(
-    () => {
-      const fetchCatalog = () => handleLanguageChange(language);
-      fetchCatalog();
-    },
-    [language]
+  useEffect(() => {
+    const fetchCatalog = () => handleLanguageChange(language);
+    fetchCatalog();
+  }, [language]);
+
+  useEffect(() => {
+    localStorage.setItem('interfaceLanguage', language);
+  }, [language]);
+
+  return (
+    <I18nProvider language={language} catalogs={catalogs}>
+      <AsyncApp />
+    </I18nProvider>
   );
-
-  useEffect(
-    () => {
-      localStorage.setItem('interfaceLanguage', language);
-    },
-    [language]
-  );
-
-  return <I18nProvider
-    language={language}
-    catalogs={catalogs}
-  >
-    <AsyncApp/>
-  </I18nProvider>;
-
 };
 
 GivenInterface.propTypes = {
-  language: PropTypes.string.isRequired
+  language: PropTypes.string.isRequired,
 };
 
 const Root = ({ store, client }) => {
@@ -73,8 +65,8 @@ const Root = ({ store, client }) => {
           <div>You have encountered an error</div>
           <div>{error.toString()}</div>
           <Button
-            color='primary'
-            href='/'
+            color="primary"
+            href="/"
             onClick={() => {
               resetError();
             }}
@@ -95,7 +87,7 @@ const Root = ({ store, client }) => {
 
 Root.propTypes = {
   store: PropTypes.object.isRequired,
-  client: PropTypes.object.isRequired
+  client: PropTypes.object.isRequired,
 };
 
 export default Root;

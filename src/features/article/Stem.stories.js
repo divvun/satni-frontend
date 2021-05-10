@@ -28,20 +28,27 @@ WithSpace.story = {
   name: 'with space',
 };
 
-export const WithLinkTrue = () => <Stem stem={stem} restriction={restriction} withLink />;
+export const WithLinkTrue = () => (
+  <Stem stem={stem} restriction={restriction} withLink />
+);
 
 WithLinkTrue.story = {
   name: 'withLink true',
 };
 
-export const WithLinkFalse = () => <Stem stem={stem} restriction={restriction} />;
+export const WithLinkFalse = () => (
+  <Stem stem={stem} restriction={restriction} />
+);
 
 WithLinkFalse.story = {
   name: 'withLink false',
 };
 
 export const OtherPresentationLemma = () => (
-  <Stem stem={{ ...stem, presentationLemma: 'burdni' }} restriction={restriction} />
+  <Stem
+    stem={{ ...stem, presentationLemma: 'burdni' }}
+    restriction={restriction}
+  />
 );
 
 OtherPresentationLemma.story = {
@@ -49,7 +56,11 @@ OtherPresentationLemma.story = {
 };
 
 export const OtherPresentationLemmaLink = () => (
-  <Stem stem={{ ...stem, presentationLemma: 'burdni' }} restriction={restriction} withLink />
+  <Stem
+    stem={{ ...stem, presentationLemma: 'burdni' }}
+    restriction={restriction}
+    withLink
+  />
 );
 
 OtherPresentationLemmaLink.story = {
@@ -57,7 +68,11 @@ OtherPresentationLemmaLink.story = {
 };
 
 export const WithAndLink = () => (
-  <Stem stem={{ ...stem, presentationLemma: 'bur@dni' }} restriction={restriction} withLink />
+  <Stem
+    stem={{ ...stem, presentationLemma: 'bur@dni' }}
+    restriction={restriction}
+    withLink
+  />
 );
 
 WithAndLink.story = {

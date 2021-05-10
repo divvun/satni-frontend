@@ -19,18 +19,18 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(3),
     marginRight: theme.spacing(8),
-    marginLeft: theme.spacing(8)
+    marginLeft: theme.spacing(8),
   },
   appBar: {
-    position: 'relative'
+    position: 'relative',
   },
   title: {
     marginLeft: theme.spacing(2),
-    flex: 1
-  }
+    flex: 1,
+  },
 }));
 
-const DictChooserDialog = ({open, onClose}) => {
+const DictChooserDialog = ({ open, onClose }) => {
   const classes = useStyles();
   const [dicts, setDicts] = useState(wantedDictsVar());
 
@@ -40,23 +40,25 @@ const DictChooserDialog = ({open, onClose}) => {
   };
 
   return (
-    <Dialog onClose={handleClose} aria-labelledby='DictChooser' open={open}>
+    <Dialog onClose={handleClose} aria-labelledby="DictChooser" open={open}>
       <AppBar className={classes.appBar}>
         <Toolbar>
-          <IconButton edge='start' color='inherit' onClick={handleClose} aria-label='close'>
+          <IconButton
+            edge="start"
+            color="inherit"
+            onClick={handleClose}
+            aria-label="close"
+          >
             <CloseIcon />
           </IconButton>
-          <Typography variant='h6' className={classes.title}>
+          <Typography variant="h6" className={classes.title}>
             <Trans>Choose dictionaries</Trans>
           </Typography>
         </Toolbar>
       </AppBar>
       <Box className={classes.root}>
         <DialogContent>
-          <DictChooser
-            dicts={dicts}
-            setDicts={setDicts}
-          />
+          <DictChooser dicts={dicts} setDicts={setDicts} />
         </DialogContent>
       </Box>
     </Dialog>
@@ -65,7 +67,7 @@ const DictChooserDialog = ({open, onClose}) => {
 
 DictChooserDialog.propTypes = {
   open: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired
+  onClose: PropTypes.func.isRequired,
 };
 
 export default DictChooserDialog;

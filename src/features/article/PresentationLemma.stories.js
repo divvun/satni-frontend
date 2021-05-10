@@ -18,7 +18,9 @@ WithOne.story = {
   name: 'with one @',
 };
 
-export const WithTwo = () => <PresentationLemma presentationLemma="ka@nsk@je" />;
+export const WithTwo = () => (
+  <PresentationLemma presentationLemma="ka@nsk@je" />
+);
 
 WithTwo.story = {
   name: 'with two @',

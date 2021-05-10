@@ -8,26 +8,39 @@ import Typography from '@material-ui/core/Typography';
 import { availableLanguages } from 'utils';
 import { dictionaryInfo } from 'translateble_variables';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   status: {
     textAlign: 'center',
-    margin: theme.spacing(1)
-  }
+    margin: theme.spacing(1),
+  },
 }));
 
 const dictStatus = (wantedDicts, currentLemma) => {
   if (wantedDicts.length === 1) {
-    return <>
-      <Trans>Results only from</Trans> <Trans id={wantedDicts[0]} /> <Trans>(<Link to={`/${currentLemma}`}>Show all</Link>)</Trans>
-    </>;
+    return (
+      <>
+        <Trans>Results only from</Trans> <Trans id={wantedDicts[0]} />{' '}
+        <Trans>
+          (<Link to={`/${currentLemma}`}>Show all</Link>)
+        </Trans>
+      </>
+    );
   }
 
-  return <Trans>{wantedDicts.length}/{Object.keys(dictionaryInfo).length} sources.</Trans>;
+  return (
+    <Trans>
+      {wantedDicts.length}/{Object.keys(dictionaryInfo).length} sources.
+    </Trans>
+  );
 };
 
 const langStatus = (wantedDicts, wantedLangs) => {
   if (wantedDicts.length > 1 || wantedDicts.includes('termwiki')) {
-    return <Trans>{wantedLangs.length}/{availableLanguages.length} languages.</Trans>;
+    return (
+      <Trans>
+        {wantedLangs.length}/{availableLanguages.length} languages.
+      </Trans>
+    );
   }
 
   return null;
@@ -38,7 +51,8 @@ const StatusBar = ({ wantedDicts, wantedLangs, currentLemma }) => {
 
   return (
     <Typography className={classes.status}>
-      {langStatus(wantedDicts, wantedLangs)} {dictStatus(wantedDicts, currentLemma)}
+      {langStatus(wantedDicts, wantedLangs)}{' '}
+      {dictStatus(wantedDicts, currentLemma)}
     </Typography>
   );
 };
@@ -46,7 +60,7 @@ const StatusBar = ({ wantedDicts, wantedLangs, currentLemma }) => {
 StatusBar.propTypes = {
   wantedLangs: PropTypes.array.isRequired,
   wantedDicts: PropTypes.array.isRequired,
-  currentLemma: PropTypes.string.isRequired
+  currentLemma: PropTypes.string.isRequired,
 };
 
 export default StatusBar;

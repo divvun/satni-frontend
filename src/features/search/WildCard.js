@@ -13,7 +13,13 @@ export default function WildCard() {
 
   return (
     <FormControl component="fieldset">
-      <RadioGroup row aria-label="searchFrom" name="searchFrom1" value={value} onChange={handleChange}>
+      <RadioGroup
+        row
+        aria-label="searchFrom"
+        name="searchFrom1"
+        value={value}
+        onChange={handleChange}
+      >
         <FormControlLabel value="start" control={<Radio />} label="Start" />
         <FormControlLabel value="middle" control={<Radio />} label="Middle" />
         <FormControlLabel value="end" control={<Radio />} label="End" />

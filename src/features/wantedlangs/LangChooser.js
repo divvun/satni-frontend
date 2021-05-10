@@ -8,29 +8,28 @@ import PropTypes from 'prop-types';
 
 import { availableLanguages } from 'utils';
 
-const LangChooser = ({langs, setLangs}) => {
+const LangChooser = ({ langs, setLangs }) => {
   const samiLanguages = new Set(['sma', 'sme', 'smj', 'smn', 'sms']);
 
   const handleChange = (event) => {
-    const newLangs = langs.includes(event.target.name) ?
-      langs.filter(value => value !== event.target.name) :
-      [...langs, event.target.name];
+    const newLangs = langs.includes(event.target.name)
+      ? langs.filter((value) => value !== event.target.name)
+      : [...langs, event.target.name];
     setLangs(newLangs);
   };
 
   return (
     <Grid container>
-      <Grid item
-        xs={6}>
+      <Grid item xs={6}>
         <FormGroup row>
           {availableLanguages
-            .filter(lang => samiLanguages.has(lang))
-            .map(lang => (
+            .filter((lang) => samiLanguages.has(lang))
+            .map((lang) => (
               <FormControlLabel
                 key={lang}
                 control={
                   <Checkbox
-                    color='default'
+                    color="default"
                     checked={langs.includes(lang)}
                     onChange={handleChange}
                     name={lang}
@@ -41,17 +40,16 @@ const LangChooser = ({langs, setLangs}) => {
             ))}
         </FormGroup>
       </Grid>
-      <Grid item
-        xs={6}>
+      <Grid item xs={6}>
         <FormGroup row>
           {availableLanguages
-            .filter(lang => !samiLanguages.has(lang))
-            .map(lang => (
+            .filter((lang) => !samiLanguages.has(lang))
+            .map((lang) => (
               <FormControlLabel
                 key={lang}
                 control={
                   <Checkbox
-                    color='default'
+                    color="default"
                     checked={langs.includes(lang)}
                     onChange={handleChange}
                     name={lang}
@@ -68,7 +66,7 @@ const LangChooser = ({langs, setLangs}) => {
 
 LangChooser.propTypes = {
   langs: PropTypes.array.isRequired,
-  setLangs: PropTypes.func.isRequired
+  setLangs: PropTypes.func.isRequired,
 };
 
 export default LangChooser;

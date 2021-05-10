@@ -14,24 +14,24 @@ import FilterBar from 'features/search/FilterBar';
 import HelpDialog from 'containers/HelpDialog';
 
 const SatniAppBar = ({ handleSearch, handleDrawerToggle, drawerWidth }) => {
-  const useStyles = makeStyles(theme => ({
+  const useStyles = makeStyles((theme) => ({
     appBar: {
       position: 'relative',
       flexDirection: 'column',
       [theme.breakpoints.up('md')]: {
         width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: drawerWidth
-      }
+        marginLeft: drawerWidth,
+      },
     },
     helpButton: {
-      paddingLeft: theme.spacing(4)
+      paddingLeft: theme.spacing(4),
     },
     menuButton: {
       marginRight: theme.spacing(2),
       [theme.breakpoints.up('md')]: {
-        display: 'none'
-      }
-    }
+        display: 'none',
+      },
+    },
   }));
   const classes = useStyles();
 
@@ -44,34 +44,31 @@ const SatniAppBar = ({ handleSearch, handleDrawerToggle, drawerWidth }) => {
   };
 
   return (
-    <AppBar position='static' className={classes.appBar}>
+    <AppBar position="static" className={classes.appBar}>
       <Toolbar>
         <Tooltip
           title={<Trans>Settings</Trans>}
           aria-label={<Trans>Settings</Trans>}
         >
           <IconButton
-            color='inherit'
-            aria-label='Settings'
-            edge='start'
+            color="inherit"
+            aria-label="Settings"
+            edge="start"
             onClick={handleDrawerToggle}
             className={classes.menuButton}
           >
             <MenuIcon />
           </IconButton>
         </Tooltip>
-        <Typography variant='h6' noWrap>
+        <Typography variant="h6" noWrap>
           sátni.org
         </Typography>
         <FilterBar searchHandler={handleSearch} />
-        <Tooltip
-          title={<Trans>Help</Trans>}
-          aria-label={<Trans>Help</Trans>}
-        >
+        <Tooltip title={<Trans>Help</Trans>} aria-label={<Trans>Help</Trans>}>
           <IconButton
-            color='inherit'
-            aria-label='Settings'
-            edge='start'
+            color="inherit"
+            aria-label="Settings"
+            edge="start"
             onClick={handleClickHelpDialog}
             className={classes.helpButton}
           >
@@ -79,9 +76,7 @@ const SatniAppBar = ({ handleSearch, handleDrawerToggle, drawerWidth }) => {
           </IconButton>
         </Tooltip>
       </Toolbar>
-      <HelpDialog
-        open={openHelpDialog}
-        onClose={handleCloseHelpDialog} />
+      <HelpDialog open={openHelpDialog} onClose={handleCloseHelpDialog} />
     </AppBar>
   );
 };
@@ -89,7 +84,7 @@ const SatniAppBar = ({ handleSearch, handleDrawerToggle, drawerWidth }) => {
 SatniAppBar.propTypes = {
   handleSearch: PropTypes.func.isRequired,
   handleDrawerToggle: PropTypes.func.isRequired,
-  drawerWidth: PropTypes.number.isRequired
+  drawerWidth: PropTypes.number.isRequired,
 };
 
 export default SatniAppBar;

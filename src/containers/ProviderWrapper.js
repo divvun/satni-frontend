@@ -5,15 +5,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const ProviderWrapper = ({ children, store, client }) => (
-  <ApolloProvider
-    client={client}
-  >
-    <Provider
-      store={store}
-    >
-      <Router>
-        { children }
-      </Router>
+  <ApolloProvider client={client}>
+    <Provider store={store}>
+      <Router>{children}</Router>
     </Provider>
   </ApolloProvider>
 );
@@ -21,7 +15,7 @@ const ProviderWrapper = ({ children, store, client }) => (
 ProviderWrapper.propTypes = {
   children: PropTypes.array.isRequired,
   store: PropTypes.object.isRequired,
-  client: PropTypes.object.isRequired
+  client: PropTypes.object.isRequired,
 };
 
 export default ProviderWrapper;

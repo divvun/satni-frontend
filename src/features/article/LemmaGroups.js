@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 
 import LemmaGroup from './LemmaGroup';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   divisor: {
-    margin: theme.spacing(1)
-  }
+    margin: theme.spacing(1),
+  },
 }));
 
 const LemmaGroups = ({ lemma, terms }) => {
@@ -16,17 +16,16 @@ const LemmaGroups = ({ lemma, terms }) => {
 
   return (
     <Box className={classes.divisor}>
-      {terms.map((term, index) => <LemmaGroup
-        key={index}
-        lemma={lemma}
-        term={term} />)}
+      {terms.map((term, index) => (
+        <LemmaGroup key={index} lemma={lemma} term={term} />
+      ))}
     </Box>
   );
 };
 
 LemmaGroups.propTypes = {
   lemma: PropTypes.string.isRequired,
-  terms: PropTypes.array.isRequired
+  terms: PropTypes.array.isRequired,
 };
 
 export default LemmaGroups;

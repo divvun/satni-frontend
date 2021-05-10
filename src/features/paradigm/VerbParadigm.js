@@ -264,7 +264,7 @@ const ExtraContent = ({ listOfAnalyses, analyses }) => (
             <span key={wordform}>{wordform}</span>
           ))}
         </div>
-      ) : null
+      ) : null,
     )}
   </>
 );

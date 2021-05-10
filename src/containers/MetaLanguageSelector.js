@@ -13,22 +13,22 @@ const MetaLanguageSelector = () => {
   };
 
   return (
-    <FormControl variant='filled'>
-      <InputLabel id='page-language-label'>Page language</InputLabel>
+    <FormControl variant="filled">
+      <InputLabel id="page-language-label">Page language</InputLabel>
       <Select
-        labelId='page-language-label'
-        id='page-language'
+        labelId="page-language-label"
+        id="page-language"
         value={interfaceLanguageVar()}
         onChange={handleChange}
-        label='Page language'
+        label="Page language"
       >
-        <MenuItem value='en'>English</MenuItem>
-        <MenuItem value='se'>Davvisámegiella</MenuItem>
-        <MenuItem value='smj'>Julevsámegiella</MenuItem>
-        <MenuItem value='sma'>Åarjelsaemiengïele</MenuItem>
-        <MenuItem value='fi'>Suomen kieli</MenuItem>
-        <MenuItem value='nb'>Bokmål</MenuItem>
-        <MenuItem value='nn'>Nynorsk</MenuItem>
+        <MenuItem value="en">English</MenuItem>
+        <MenuItem value="se">Davvisámegiella</MenuItem>
+        <MenuItem value="smj">Julevsámegiella</MenuItem>
+        <MenuItem value="sma">Åarjelsaemiengïele</MenuItem>
+        <MenuItem value="fi">Suomen kieli</MenuItem>
+        <MenuItem value="nb">Bokmål</MenuItem>
+        <MenuItem value="nn">Nynorsk</MenuItem>
       </Select>
     </FormControl>
   );

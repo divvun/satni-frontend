@@ -18,15 +18,15 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(3),
     marginRight: theme.spacing(8),
-    marginLeft: theme.spacing(8)
+    marginLeft: theme.spacing(8),
   },
   appBar: {
-    position: 'relative'
+    position: 'relative',
   },
   title: {
     marginLeft: theme.spacing(2),
-    flex: 1
-  }
+    flex: 1,
+  },
 }));
 
 const HelpDialog = ({ open, onClose }) => {
@@ -37,21 +37,26 @@ const HelpDialog = ({ open, onClose }) => {
   };
 
   return (
-    <Dialog onClose={handleClose} aria-labelledby='Paradigm' open={open}>
+    <Dialog onClose={handleClose} aria-labelledby="Paradigm" open={open}>
       <AppBar className={classes.appBar}>
         <Toolbar>
-          <IconButton edge='start' color='inherit' onClick={handleClose} aria-label='close'>
+          <IconButton
+            edge="start"
+            color="inherit"
+            onClick={handleClose}
+            aria-label="close"
+          >
             <CloseIcon />
           </IconButton>
-          <Typography variant='h6' className={classes.title}>
+          <Typography variant="h6" className={classes.title}>
             <Trans>Help</Trans>
           </Typography>
         </Toolbar>
       </AppBar>
       <Box className={classes.root}>
         <DialogContent>
-          <SearchWelcome/>
-          <DictWelcome/>
+          <SearchWelcome />
+          <DictWelcome />
         </DialogContent>
       </Box>
     </Dialog>

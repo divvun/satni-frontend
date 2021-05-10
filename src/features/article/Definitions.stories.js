@@ -44,7 +44,9 @@ export default {
 };
 
 export const Default = () => (
-  <Definitions definitions={[termGroup.from.definition, termGroup.to.definition]} />
+  <Definitions
+    definitions={[termGroup.from.definition, termGroup.to.definition]}
+  />
 );
 
 Default.story = {

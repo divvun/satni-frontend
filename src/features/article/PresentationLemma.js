@@ -5,11 +5,11 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   lemma: {
-    fontWeight: 'normal'
+    fontWeight: 'normal',
   },
   sammallahti: {
-    fontWeight: 'bolder'
-  }
+    fontWeight: 'bolder',
+  },
 });
 
 const Parts = ({ lemma, classes }) => {
@@ -17,42 +17,38 @@ const Parts = ({ lemma, classes }) => {
 
   return parts.map((part, index) => {
     if (index < parts.length - 1) {
-      return <React.Fragment
-        key={index}
-      >
-        <Typography component='span' className={classes.lemma}>
-          {part.slice(0,-1)}
-        </Typography>
-        <Typography component='span' className={classes.sammallahti}>
-          {part.slice(-1)}
-        </Typography>
-      </React.Fragment>;
+      return (
+        <React.Fragment key={index}>
+          <Typography component="span" className={classes.lemma}>
+            {part.slice(0, -1)}
+          </Typography>
+          <Typography component="span" className={classes.sammallahti}>
+            {part.slice(-1)}
+          </Typography>
+        </React.Fragment>
+      );
     }
 
-    return <Typography
-      key={index}
-      component='span'
-      className={classes.lemma}
-    >
-      {part}
-    </Typography>;
-  }
-  );
+    return (
+      <Typography key={index} component="span" className={classes.lemma}>
+        {part}
+      </Typography>
+    );
+  });
 };
 
 const PresentationLemma = ({ presentationLemma }) => {
   const classes = useStyles();
 
-  return <>
-    <Parts
-      lemma={presentationLemma}
-      classes={classes}
-    />
-  </>;
+  return (
+    <>
+      <Parts lemma={presentationLemma} classes={classes} />
+    </>
+  );
 };
 
 PresentationLemma.propTypes = {
-  presentationLemma: PropTypes.string.isRequired
+  presentationLemma: PropTypes.string.isRequired,
 };
 
 export default PresentationLemma;

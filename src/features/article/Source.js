@@ -10,19 +10,24 @@ import Typography from '@material-ui/core/Typography';
 
 import { wantedDictsVar } from 'apolloCache';
 
-const Source = ({source, lemma}) => {
+const Source = ({ source, lemma }) => {
   const wantedDicts = wantedDictsVar();
 
   const handleChange = (event) => {
     event.stopPropagation();
-    wantedDictsVar(wantedDicts.filter(value => value !== event.target.name));
+    wantedDictsVar(wantedDicts.filter((value) => value !== event.target.name));
   };
 
   return (
     <FormControlLabel
-      label={<Typography variant='body2'>
-        <Trans>Source:</Trans> <Link to={`${source}/${lemma}`}><Trans id={source} /></Link>
-      </Typography>}
+      label={
+        <Typography variant="body2">
+          <Trans>Source:</Trans>{' '}
+          <Link to={`${source}/${lemma}`}>
+            <Trans id={source} />
+          </Link>
+        </Typography>
+      }
       control={
         <Tooltip
           title={<Trans>Hide this dictionary</Trans>}
@@ -30,7 +35,7 @@ const Source = ({source, lemma}) => {
         >
           <Checkbox
             checked
-            color='default'
+            color="default"
             name={source}
             onChange={handleChange}
           />
@@ -42,7 +47,7 @@ const Source = ({source, lemma}) => {
 
 Source.propTypes = {
   source: PropTypes.string.isRequired,
-  lemma: PropTypes.string.isRequired
+  lemma: PropTypes.string.isRequired,
 };
 
 export default Source;

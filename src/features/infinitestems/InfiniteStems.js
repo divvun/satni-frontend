@@ -33,7 +33,7 @@ const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
   const { stems, loading, loadMore, hasNextPage, totalCount } = useStems(
     searchExpression,
     wantedDicts,
-    wantedLangs
+    wantedLangs,
   );
   const classes = useStyles();
   const [clickedItem, setClickedItem] = useState(-1);
@@ -89,11 +89,11 @@ const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
                   );
                   const stemNode =
                     stem === clickedItem ? (
-                      <Typography component='span' className={classes.clicked}>
+                      <Typography component="span" className={classes.clicked}>
                         {truncStem}
                       </Typography>
                     ) : (
-                      <Typography component='span'>{truncStem}</Typography>
+                      <Typography component="span">{truncStem}</Typography>
                     );
 
                   const path =

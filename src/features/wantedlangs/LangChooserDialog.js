@@ -19,18 +19,18 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(3),
     marginRight: theme.spacing(8),
-    marginLeft: theme.spacing(8)
+    marginLeft: theme.spacing(8),
   },
   appBar: {
-    position: 'relative'
+    position: 'relative',
   },
   title: {
     marginLeft: theme.spacing(2),
-    flex: 1
-  }
+    flex: 1,
+  },
 }));
 
-const LangChooserDialog = ({open, onClose}) => {
+const LangChooserDialog = ({ open, onClose }) => {
   const classes = useStyles();
   const [langs, setLangs] = useState(wantedLangsVar());
 
@@ -40,23 +40,25 @@ const LangChooserDialog = ({open, onClose}) => {
   };
 
   return (
-    <Dialog onClose={handleClose} aria-labelledby='LangChooser' open={open}>
+    <Dialog onClose={handleClose} aria-labelledby="LangChooser" open={open}>
       <AppBar className={classes.appBar}>
         <Toolbar>
-          <IconButton edge='start' color='inherit' onClick={handleClose} aria-label='close'>
+          <IconButton
+            edge="start"
+            color="inherit"
+            onClick={handleClose}
+            aria-label="close"
+          >
             <CloseIcon />
           </IconButton>
-          <Typography variant='h6' className={classes.title}>
+          <Typography variant="h6" className={classes.title}>
             <Trans>Choose languages</Trans>
           </Typography>
         </Toolbar>
       </AppBar>
       <Box className={classes.root}>
         <DialogContent>
-          <LangChooser
-            langs={langs}
-            setLangs={setLangs}
-          />
+          <LangChooser langs={langs} setLangs={setLangs} />
         </DialogContent>
       </Box>
     </Dialog>
@@ -65,7 +67,7 @@ const LangChooserDialog = ({open, onClose}) => {
 
 LangChooserDialog.propTypes = {
   open: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired
+  onClose: PropTypes.func.isRequired,
 };
 
 export default LangChooserDialog;

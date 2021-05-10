@@ -14,48 +14,75 @@ import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
 
 import { locationParser } from 'utils';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   welcome: {
-    margin: theme.spacing(2)
+    margin: theme.spacing(2),
   },
   heading: {
     textAlign: 'center',
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
   },
   list: {
-    marginBottom: theme.spacing(1)
+    marginBottom: theme.spacing(1),
   },
   icons: {
-    fontSize: 'inherit'
-  }
+    fontSize: 'inherit',
+  },
 }));
 
 export const WelcomeHeader = () => {
   const classes = useStyles();
-  const {currentLemma, currentDict} = locationParser(useLocation().pathname);
+  const { currentLemma, currentDict } = locationParser(useLocation().pathname);
   return (
     <div className={classes.welcome}>
-      <Typography
-        variant='h5'
-        className={classes.heading}
-      >
-        {(currentDict && !currentLemma) ?
-          <Trans id={currentDict}/> :
+      <Typography variant="h5" className={classes.heading}>
+        {currentDict && !currentLemma ? (
+          <Trans id={currentDict} />
+        ) : (
           <Trans>Welcome!</Trans>
-        }
+        )}
       </Typography>
-      <Typography
-        component='p'
-        className={classes.list}
-      >
-        {(currentDict && !currentLemma) ?
-          <>{dictionaryInfo[currentDict].info.map((infoText, index) => <Typography key={index} className={classes.infoText}>
-            <Trans id={infoText}/>
-          </Typography>)}</> :
+      <Typography component="p" className={classes.list}>
+        {currentDict && !currentLemma ? (
+          <>
+            {dictionaryInfo[currentDict].info.map((infoText, index) => (
+              <Typography key={index} className={classes.infoText}>
+                <Trans id={infoText} />
+              </Typography>
+            ))}
+          </>
+        ) : (
           <Trans>
-          Do searches in <Link target='_blank' rel='noopener noreferrer' href='https://giella.org'>Giellagáldu&apos;s</Link> term collection, <Link href='/sammallahtismefin'>Pekka Sammallahti&apos;s North Sami – Finnish dictionary</Link> and <Link target='_blank' rel='noopener noreferrer' href='http://giellatekno.uit.no'>Giellatekno&apos;s</Link> <Link target='_blank' rel='noopener noreferrer' href='http://sanit.oahpa.no'>sami dictionaries</Link>.
+            Do searches in{' '}
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://giella.org"
+            >
+              Giellagáldu&apos;s
+            </Link>{' '}
+            term collection,{' '}
+            <Link href="/sammallahtismefin">
+              Pekka Sammallahti&apos;s North Sami – Finnish dictionary
+            </Link>{' '}
+            and{' '}
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://giellatekno.uit.no"
+            >
+              Giellatekno&apos;s
+            </Link>{' '}
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://sanit.oahpa.no"
+            >
+              sami dictionaries
+            </Link>
+            .
           </Trans>
-        }
+        )}
       </Typography>
     </div>
   );
@@ -66,35 +93,24 @@ export const SearchWelcome = () => {
 
   return (
     <div className={classes.welcome}>
-      <Typography
-        component='p'
-        className={classes.list}
-      >
-        <Trans>
-          Search results will appear here.
-        </Trans>
+      <Typography component="p" className={classes.list}>
+        <Trans>Search results will appear here.</Trans>
       </Typography>
-      <Typography
-        component='p'
-        className={classes.list}
-      >
+      <Typography component="p" className={classes.list}>
         <Trans>
           The input field accepts sami, nordic, english and latin search words.
-          If you do not have Sami letters on your device, press <KeyboardIcon className={classes.icons} /> to write them in the input field.
+          If you do not have Sami letters on your device, press{' '}
+          <KeyboardIcon className={classes.icons} /> to write them in the input
+          field.
         </Trans>
       </Typography>
-      <Typography
-        component='p'
-        className={classes.list}
-      >
+      <Typography component="p" className={classes.list}>
         <Trans>
-          You can browse the search words here, new ones will be fetched until all matches have been found.
+          You can browse the search words here, new ones will be fetched until
+          all matches have been found.
         </Trans>
       </Typography>
-      <Typography
-        component='p'
-        className={classes.list}
-      >
+      <Typography component="p" className={classes.list}>
         <Trans>
           When you click a word here, dictionary articles appear to the right.
         </Trans>
@@ -108,28 +124,25 @@ export const DictWelcome = () => {
 
   return (
     <div className={classes.welcome}>
-      <Typography
-        component='p'
-        className={classes.list}
-      >
+      <Typography component="p" className={classes.list}>
         <Trans>
-          Dictionary articles will appear in this pane when you press a word in the search results to the left.
+          Dictionary articles will appear in this pane when you press a word in
+          the search results to the left.
         </Trans>
       </Typography>
-      <Typography
-        component='p'
-        className={classes.list}
-      >
+      <Typography component="p" className={classes.list}>
         <Trans>
-          Click <InfoOutlined className={classes.icons} /> to see the inflection paradigm of words. Click <ViewHeadlineOutlined className={classes.icons} /> to see examples of how the word is used.
+          Click <InfoOutlined className={classes.icons} /> to see the inflection
+          paradigm of words. Click{' '}
+          <ViewHeadlineOutlined className={classes.icons} /> to see examples of
+          how the word is used.
         </Trans>
       </Typography>
-      <Typography
-        component='p'
-        className={classes.list}
-      >
+      <Typography component="p" className={classes.list}>
         <Trans>
-          Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <LanguageIcon className={classes.icons} /> or <MenuBookIcon className={classes.icons} /> .
+          Inside the articles you can hide unwanted languages and dictionaries.
+          To reactivate them, press <LanguageIcon className={classes.icons} />{' '}
+          or <MenuBookIcon className={classes.icons} /> .
         </Trans>
       </Typography>
     </div>

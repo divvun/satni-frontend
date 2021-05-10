@@ -100,9 +100,9 @@ const AsyncApp = ({ classes }) => {
               <div>You have encountered an error</div>
               <div>{error.toString()}</div>
               <Button
-                color='primary'
+                color="primary"
                 component={Link}
-                to='/'
+                to="/"
                 onClick={() => {
                   setSearchExpression('');
                   resetError();
@@ -119,7 +119,7 @@ const AsyncApp = ({ classes }) => {
               to={`/${currentLemma}`}
             />
             <Redirect from={'/details'} to={`/${location_dict.lemma}`} />
-            <Route path='/'>
+            <Route path="/">
               <Grid container>
                 <Grid item xs={12}>
                   {currentLemma || searchExpression ? (

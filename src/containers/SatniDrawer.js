@@ -24,52 +24,53 @@ import { ListSubheader } from '@material-ui/core';
 const Footer = () => (
   <List
     subheader={
-      <ListSubheader><Trans>Delivered by</Trans></ListSubheader>
+      <ListSubheader>
+        <Trans>Delivered by</Trans>
+      </ListSubheader>
     }
   >
     <ListItem>
       <ListItemText
         inset
-        primary={<a
-          href='http://divvun.no'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Divvun
-        </a>}
-      />
-    </ListItem>
-    <ListItem>
-      <ListItemText
-        inset
-        primary={<Trans>
-          <a
-            href='http://giella.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-          Giellagáldu
+        primary={
+          <a href="http://divvun.no" target="_blank" rel="noopener noreferrer">
+            Divvun
           </a>
-        </Trans>}
+        }
       />
     </ListItem>
     <ListItem>
       <ListItemText
         inset
-        primary={<a
-          href='http://giellatekno.uit.no'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Giellatekno
-        </a>}
+        primary={
+          <Trans>
+            <a
+              href="http://giella.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Giellagáldu
+            </a>
+          </Trans>
+        }
       />
     </ListItem>
     <ListItem>
       <ListItemText
         inset
-        primary='Pekka Sammallahti'
+        primary={
+          <a
+            href="http://giellatekno.uit.no"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Giellatekno
+          </a>
+        }
       />
+    </ListItem>
+    <ListItem>
+      <ListItemText inset primary="Pekka Sammallahti" />
     </ListItem>
   </List>
 );
@@ -78,19 +79,19 @@ const SatniDrawer = ({
   drawerWidth,
   handleDrawerToggle,
   mobileOpen,
-  handleSearch
+  handleSearch,
 }) => {
-  const useStyles = makeStyles(theme => ({
+  const useStyles = makeStyles((theme) => ({
     drawer: {
       [theme.breakpoints.up('sm')]: {
         width: drawerWidth,
-        flexShrink: 0
-      }
+        flexShrink: 0,
+      },
     },
     drawerPaper: {
-      width: drawerWidth
+      width: drawerWidth,
     },
-    toolbar: theme.mixins.toolbar
+    toolbar: theme.mixins.toolbar,
   }));
   const classes = useStyles();
 
@@ -116,86 +117,101 @@ const SatniDrawer = ({
       <Divider />
       <List>
         <ListItem
-          key='Home'
+          key="Home"
           button
           onClick={() => {
             handleSearch('');
           }}
         >
-          <ListItemIcon><HomeIcon /></ListItemIcon>
-          <ListItemText primary={<Link to='/'><Trans>Start</Trans></Link>} />
+          <ListItemIcon>
+            <HomeIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary={
+              <Link to="/">
+                <Trans>Start</Trans>
+              </Link>
+            }
+          />
         </ListItem>
         <ListItem
-          key='LangChooser'
+          key="LangChooser"
           onClick={handleClickLangChooserDialog}
           button
         >
-          <ListItemIcon><LanguageIcon /></ListItemIcon>
+          <ListItemIcon>
+            <LanguageIcon />
+          </ListItemIcon>
           <ListItemText primary={<Trans>Languages</Trans>} />
         </ListItem>
         <ListItem
-          key='DictChooser'
+          key="DictChooser"
           onClick={handleClickDictChooserDialog}
           button
         >
-          <ListItemIcon><MenuBookIcon /></ListItemIcon>
+          <ListItemIcon>
+            <MenuBookIcon />
+          </ListItemIcon>
           <ListItemText primary={<Trans>Dictionaries</Trans>} />
         </ListItem>
         <ListItem
-          key='Feedback'
+          key="Feedback"
           button
-          component='a'
-          href='mailto:feedback@divvun.no'
+          component="a"
+          href="mailto:feedback@divvun.no"
         >
-          <ListItemIcon><FeedbackIcon /></ListItemIcon>
-          <ListItemText primary='Feedback' />
+          <ListItemIcon>
+            <FeedbackIcon />
+          </ListItemIcon>
+          <ListItemText primary="Feedback" />
         </ListItem>
-        <ListItem
-          key='Site language'
-          button
-        >
-          <ListItemIcon><TranslateIcon /></ListItemIcon>
+        <ListItem key="Site language" button>
+          <ListItemIcon>
+            <TranslateIcon />
+          </ListItemIcon>
           <MetaLanguageSelector />
         </ListItem>
         <ListItem>
-          <Footer/>
+          <Footer />
         </ListItem>
       </List>
       <LangChooserDialog
         open={openLangChooser}
-        onClose={handleCloseLangChooserDialog} />
+        onClose={handleCloseLangChooserDialog}
+      />
       <DictChooserDialog
         open={openDictChooser}
-        onClose={handleCloseDictChooserDialog} />
+        onClose={handleCloseDictChooserDialog}
+      />
     </div>
   );
 
   return (
-    <nav className={classes.drawer} aria-label='mailbox folders'>
+    <nav className={classes.drawer} aria-label="mailbox folders">
       {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-      <Hidden smUp implementation='css'>
+      <Hidden smUp implementation="css">
         <Drawer
           container={null}
-          variant='temporary'
+          variant="temporary"
           anchor={'left'}
           open={mobileOpen}
           onClose={handleDrawerToggle}
           classes={{
-            paper: classes.drawerPaper
+            paper: classes.drawerPaper,
           }}
           ModalProps={{
-            keepMounted: true // Better open performance on mobile.
+            keepMounted: true, // Better open performance on mobile.
           }}
         >
           {drawer}
         </Drawer>
       </Hidden>
-      <Hidden smDown implementation='css'>
+      <Hidden smDown implementation="css">
         <Drawer
           classes={{
-            paper: classes.drawerPaper
+            paper: classes.drawerPaper,
           }}
-          variant='permanent'
+          variant="permanent"
           open
         >
           {drawer}
@@ -210,7 +226,7 @@ SatniDrawer.propTypes = {
   handleDrawerToggle: PropTypes.func.isRequired,
   mobileOpen: PropTypes.bool.isRequired,
   handleSearch: PropTypes.func.isRequired,
-  container: PropTypes.element
+  container: PropTypes.element,
 };
 
 export default SatniDrawer;

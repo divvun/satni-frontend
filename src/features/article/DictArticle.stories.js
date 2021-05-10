@@ -24,8 +24,10 @@ const dictGroup = {
             translation: 'Eat soaitte oba oažžut ge áirasa Sámediggái.',
           },
           {
-            example: 'Mor stemmer kanskje ikke på Arbeiderpartiet ved årets valg.',
-            translation: 'Eadni ii dáidde jienastit Bargiidbellodaga dán jagi válggas.',
+            example:
+              'Mor stemmer kanskje ikke på Arbeiderpartiet ved årets valg.',
+            translation:
+              'Eadni ii dáidde jienastit Bargiidbellodaga dán jagi válggas.',
           },
         ],
         restriction: {
@@ -55,7 +57,9 @@ export default {
   title: 'DictArticle',
 };
 
-export const Default = () => <DictArticle dictGroup={dictGroup} lemma="kanskje" />;
+export const Default = () => (
+  <DictArticle dictGroup={dictGroup} lemma="kanskje" />
+);
 
 Default.story = {
   name: 'default',

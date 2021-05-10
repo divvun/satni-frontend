@@ -9,11 +9,11 @@ const useStyles = makeStyles((theme) => ({
   input: {
     color: 'inherit',
     marginLeft: theme.spacing(1),
-    flex: 1
+    flex: 1,
   },
 }));
 
-const InputWithTranslation = props => {
+const InputWithTranslation = (props) => {
   const classes = useStyles();
   const { value, onChange, onKeyUp } = props;
 
@@ -23,11 +23,12 @@ const InputWithTranslation = props => {
         <InputBase
           autoFocus
           value={value}
-          onChange={(onChange)}
-          onKeyUp={(onKeyUp)}
+          onChange={onChange}
+          onKeyUp={onKeyUp}
           placeholder={i18n._(t`Write at least one letter here`)}
           className={classes.input}
-          inputProps={{ 'aria-label': 'search' }} />
+          inputProps={{ 'aria-label': 'search' }}
+        />
       )}
     </I18n>
   );
@@ -36,7 +37,7 @@ const InputWithTranslation = props => {
 InputWithTranslation.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  onKeyUp: PropTypes.func.isRequired
+  onKeyUp: PropTypes.func.isRequired,
 };
 
 export default InputWithTranslation;

@@ -5,7 +5,7 @@ import {
   languagesOfLemma,
   moveLangFirst,
   multilingualconceptListsByNames,
-  orderedMultilingualConcept
+  orderedMultilingualConcept,
 } from './utils';
 import { conceptList, dictEntryList } from 'utils.data';
 
@@ -14,717 +14,684 @@ describe('Massage termwiki data from backend', () => {
     const want = {
       'Dihtorteknologiija ja diehtoteknihkka:fiila': [
         {
-          'collections': [
+          collections: [
             'Collection:SD-terms',
-            'Collection:Dáhtábágo javllamáno 2013'
+            'Collection:Dáhtábágo javllamáno 2013',
           ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'smj',
-                'lemma': 'fijlla',
-                'presentationLemma': 'fijlla',
-                'pos': 'N'
+              expression: {
+                language: 'smj',
+                lemma: 'fijlla',
+                presentationLemma: 'fijlla',
+                pos: 'N',
               },
-              'note': 'jll jl',
-              'source': null,
-              'status': null
-            }
-          ]
+              note: 'jll jl',
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
+          collections: [
             'Collection:SD-terms',
-            'Collection:Dáhtábágo javllamáno 2013'
+            'Collection:Dáhtábágo javllamáno 2013',
           ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'fin',
-                'lemma': 'viila',
-                'presentationLemma': 'viila',
-                'pos': 'N'
+              expression: {
+                language: 'fin',
+                lemma: 'viila',
+                presentationLemma: 'viila',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
+              note: null,
+              source: null,
+              status: null,
             },
             {
-              'expression': {
-                'language': 'fin',
-                'lemma': 'kaista',
-                'presentationLemma': 'kaista',
-                'pos': 'N'
+              expression: {
+                language: 'fin',
+                lemma: 'kaista',
+                presentationLemma: 'kaista',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
+              note: null,
+              source: null,
+              status: null,
             },
             {
-              'expression': {
-                'language': 'fin',
-                'lemma': 'tiedosto',
-                'presentationLemma': 'tiedosto',
-                'pos': 'N'
+              expression: {
+                language: 'fin',
+                lemma: 'tiedosto',
+                presentationLemma: 'tiedosto',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
+          collections: [
             'Collection:SD-terms',
-            'Collection:Dáhtábágo javllamáno 2013'
+            'Collection:Dáhtábágo javllamáno 2013',
           ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'eng',
-                'lemma': 'file',
-                'presentationLemma': 'file',
-                'pos': 'N'
+              expression: {
+                language: 'eng',
+                lemma: 'file',
+                presentationLemma: 'file',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
+          collections: [
             'Collection:SD-terms',
-            'Collection:Dáhtábágo javllamáno 2013'
+            'Collection:Dáhtábágo javllamáno 2013',
           ],
-          'definition': 'fil, i edb: en ordnet mengde av sammenhørende data',
-          'explanation': null,
-          'terms': [
+          definition: 'fil, i edb: en ordnet mengde av sammenhørende data',
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'nob',
-                'lemma': 'fil',
-                'presentationLemma': 'fil',
-                'pos': 'N'
+              expression: {
+                language: 'nob',
+                lemma: 'fil',
+                presentationLemma: 'fil',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
+          collections: [
             'Collection:SD-terms',
-            'Collection:Dáhtábágo javllamáno 2013'
+            'Collection:Dáhtábágo javllamáno 2013',
           ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'swe',
-                'lemma': 'fil',
-                'presentationLemma': 'fil',
-                'pos': 'N'
+              expression: {
+                language: 'swe',
+                lemma: 'fil',
+                presentationLemma: 'fil',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
+          collections: [
             'Collection:SD-terms',
-            'Collection:Dáhtábágo javllamáno 2013'
+            'Collection:Dáhtábágo javllamáno 2013',
           ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'sme',
-                'lemma': 'fiila',
-                'presentationLemma': 'fiila',
-                'pos': 'N'
+              expression: {
+                language: 'sme',
+                lemma: 'fiila',
+                presentationLemma: 'fiila',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
+              note: null,
+              source: null,
+              status: null,
             },
             {
-              'expression': {
-                'language': 'sme',
-                'lemma': 'vuorká',
-                'presentationLemma': 'vuorká',
-                'pos': 'N'
+              expression: {
+                language: 'sme',
+                lemma: 'vuorká',
+                presentationLemma: 'vuorká',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
+          collections: [
             'Collection:SD-terms',
-            'Collection:Dáhtábágo javllamáno 2013'
+            'Collection:Dáhtábágo javllamáno 2013',
           ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'sma',
-                'lemma': 'fijle',
-                'presentationLemma': 'fijle',
-                'pos': 'N'
+              expression: {
+                language: 'sma',
+                lemma: 'fijle',
+                presentationLemma: 'fijle',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
-        }
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
+        },
       ],
       'Dihtorteknologiija ja diehtoteknihkka:vuorká': [
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'nob',
-                'lemma': 'arkiv',
-                'presentationLemma': 'arkiv',
-                'pos': 'N'
+              expression: {
+                language: 'nob',
+                lemma: 'arkiv',
+                presentationLemma: 'arkiv',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'swe',
-                'lemma': 'arkiv',
-                'presentationLemma': 'arkiv',
-                'pos': 'N'
+              expression: {
+                language: 'swe',
+                lemma: 'arkiv',
+                presentationLemma: 'arkiv',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'sme',
-                'lemma': 'vuorká',
-                'presentationLemma': 'vuorká',
-                'pos': 'N'
+              expression: {
+                language: 'sme',
+                lemma: 'vuorká',
+                presentationLemma: 'vuorká',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
-        }
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
+        },
       ],
       'Ekonomiija ja gávppašeapmi:arkiiva': [
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'fin',
-                'lemma': 'arkisto',
-                'presentationLemma': 'arkisto',
-                'pos': 'N'
+              expression: {
+                language: 'fin',
+                lemma: 'arkisto',
+                presentationLemma: 'arkisto',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': 'samling av brev og dokumenter; oppbevaringssted for brev og dokumenter',
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition:
+            'samling av brev og dokumenter; oppbevaringssted for brev og dokumenter',
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'nob',
-                'lemma': 'arkiv',
-                'presentationLemma': 'arkiv',
-                'pos': 'N'
+              expression: {
+                language: 'nob',
+                lemma: 'arkiv',
+                presentationLemma: 'arkiv',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'swe',
-                'lemma': 'arkiv',
-                'presentationLemma': 'arkiv',
-                'pos': 'N'
+              expression: {
+                language: 'swe',
+                lemma: 'arkiv',
+                presentationLemma: 'arkiv',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'sme',
-                'lemma': 'arkiiva',
-                'presentationLemma': 'arkiiva',
-                'pos': 'N'
+              expression: {
+                language: 'sme',
+                lemma: 'arkiiva',
+                presentationLemma: 'arkiiva',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
+              note: null,
+              source: null,
+              status: null,
             },
             {
-              'expression': {
-                'language': 'sme',
-                'lemma': 'vuorká',
-                'presentationLemma': 'vuorká',
-                'pos': 'N'
+              expression: {
+                language: 'sme',
+                lemma: 'vuorká',
+                presentationLemma: 'vuorká',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
+              note: null,
+              source: null,
+              status: null,
             },
             {
-              'expression': {
-                'language': 'sme',
-                'lemma': 'vuorká',
-                'presentationLemma': 'vuorká',
-                'pos': 'N'
+              expression: {
+                language: 'sme',
+                lemma: 'vuorká',
+                presentationLemma: 'vuorká',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'smn',
-                'lemma': 'arkkâdâh',
-                'presentationLemma': 'arkkâdâh',
-                'pos': 'N'
+              expression: {
+                language: 'smn',
+                lemma: 'arkkâdâh',
+                presentationLemma: 'arkkâdâh',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'sma',
-                'lemma': 'våarhkoe',
-                'presentationLemma': 'våarhkoe',
-                'pos': 'N'
+              expression: {
+                language: 'sma',
+                lemma: 'våarhkoe',
+                presentationLemma: 'våarhkoe',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
-        }
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
+        },
       ],
       'Medisiidna:vuorká': [
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'fin',
-                'lemma': 'varasto',
-                'presentationLemma': 'varasto',
-                'pos': 'N'
+              expression: {
+                language: 'fin',
+                lemma: 'varasto',
+                presentationLemma: 'varasto',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'nob',
-                'lemma': 'depot',
-                'presentationLemma': 'depot',
-                'pos': 'N'
+              expression: {
+                language: 'nob',
+                lemma: 'depot',
+                presentationLemma: 'depot',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'swe',
-                'lemma': 'depå',
-                'presentationLemma': 'depå',
-                'pos': 'N'
+              expression: {
+                language: 'swe',
+                lemma: 'depå',
+                presentationLemma: 'depå',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
+              note: null,
+              source: null,
+              status: null,
             },
             {
-              'expression': {
-                'language': 'swe',
-                'lemma': 'förråd',
-                'presentationLemma': 'förråd',
-                'pos': 'N'
+              expression: {
+                language: 'swe',
+                lemma: 'förråd',
+                presentationLemma: 'förråd',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': 'vuorká - vuorkái - vuorkkáide',
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: 'vuorká - vuorkái - vuorkkáide',
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'sme',
-                'lemma': 'vuorká',
-                'presentationLemma': 'vuorká',
-                'pos': 'N'
+              expression: {
+                language: 'sme',
+                lemma: 'vuorká',
+                presentationLemma: 'vuorká',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'smn',
-                'lemma': 'vuárkká',
-                'presentationLemma': 'vuárkká',
-                'pos': 'N'
+              expression: {
+                language: 'smn',
+                lemma: 'vuárkká',
+                presentationLemma: 'vuárkká',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
-        }
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
+        },
       ],
       'Servodatdieđa:vurkkohat': [
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': 'rom i bolig for oppbevaring og lagring av utstyr, mat, klær, etc.',
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition:
+            'rom i bolig for oppbevaring og lagring av utstyr, mat, klær, etc.',
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'nob',
-                'lemma': 'bod',
-                'presentationLemma': 'bod',
-                'pos': 'N'
+              expression: {
+                language: 'nob',
+                lemma: 'bod',
+                presentationLemma: 'bod',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
+            {
+              expression: {
+                language: 'sme',
+                lemma: 'vurkkohat',
+                presentationLemma: 'vurkkohat',
+                pos: 'N',
+              },
+              note: null,
+              source: null,
+              status: null,
+            },
+            {
+              expression: {
+                language: 'sme',
+                lemma: 'vuorká',
+                presentationLemma: 'vuorká',
+                pos: 'N',
+              },
+              note: null,
+              source: null,
+              status: null,
+            },
+            {
+              expression: {
+                language: 'sme',
+                lemma: 'rádju',
+                presentationLemma: 'rádju',
+                pos: 'N',
+              },
+              note: null,
+              source: null,
+              status: null,
+            },
           ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
-            {
-              'expression': {
-                'language': 'sme',
-                'lemma': 'vurkkohat',
-                'presentationLemma': 'vurkkohat',
-                'pos': 'N'
-              },
-              'note': null,
-              'source': null,
-              'status': null
-            },
-            {
-              'expression': {
-                'language': 'sme',
-                'lemma': 'vuorká',
-                'presentationLemma': 'vuorká',
-                'pos': 'N'
-              },
-              'note': null,
-              'source': null,
-              'status': null
-            },
-            {
-              'expression': {
-                'language': 'sme',
-                'lemma': 'rádju',
-                'presentationLemma': 'rádju',
-                'pos': 'N'
-              },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': 'asunnon huone, jossa säilytetään ruokaa, vaatteita, välineitä jne.',
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition:
+            'asunnon huone, jossa säilytetään ruokaa, vaatteita, välineitä jne.',
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'fin',
-                'lemma': 'varasto',
-                'presentationLemma': 'varasto',
-                'pos': 'N'
+              expression: {
+                language: 'fin',
+                lemma: 'varasto',
+                presentationLemma: 'varasto',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
+              note: null,
+              source: null,
+              status: null,
             },
             {
-              'expression': {
-                'language': 'fin',
-                'lemma': 'komero',
-                'presentationLemma': 'komero',
-                'pos': 'N'
+              expression: {
+                language: 'fin',
+                lemma: 'komero',
+                presentationLemma: 'komero',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
-            'Collection:SD-terms'
-          ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          collections: ['Collection:SD-terms'],
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'swe',
-                'lemma': 'boda',
-                'presentationLemma': 'boda',
-                'pos': 'N'
+              expression: {
+                language: 'swe',
+                lemma: 'boda',
+                presentationLemma: 'boda',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
+              note: null,
+              source: null,
+              status: null,
             },
             {
-              'expression': {
-                'language': 'swe',
-                'lemma': 'gömsle',
-                'presentationLemma': 'gömsle',
-                'pos': 'N'
+              expression: {
+                language: 'swe',
+                lemma: 'gömsle',
+                presentationLemma: 'gömsle',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
-        }
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
+        },
       ],
       'Teknihkka industriija duodji:vuorká': [
         {
-          'collections': [
+          collections: [
             'Collection:SD-terms',
-            'Collection:teknisk ordliste sg 10-03'
+            'Collection:teknisk ordliste sg 10-03',
           ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'nob',
-                'lemma': 'oppbevaringsplass',
-                'presentationLemma': 'oppbevaringsplass',
-                'pos': 'N'
+              expression: {
+                language: 'nob',
+                lemma: 'oppbevaringsplass',
+                presentationLemma: 'oppbevaringsplass',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
+          collections: [
             'Collection:SD-terms',
-            'Collection:teknisk ordliste sg 10-03'
+            'Collection:teknisk ordliste sg 10-03',
           ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'sme',
-                'lemma': 'vuorká',
-                'presentationLemma': 'vuorká',
-                'pos': 'N'
+              expression: {
+                language: 'sme',
+                lemma: 'vuorká',
+                presentationLemma: 'vuorká',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
+          collections: [
             'Collection:SD-terms',
-            'Collection:teknisk ordliste sg 10-03'
+            'Collection:teknisk ordliste sg 10-03',
           ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'swe',
-                'lemma': 'förråd',
-                'presentationLemma': 'förråd',
-                'pos': 'N'
+              expression: {
+                language: 'swe',
+                lemma: 'förråd',
+                presentationLemma: 'förråd',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
         },
         {
-          'collections': [
+          collections: [
             'Collection:SD-terms',
-            'Collection:teknisk ordliste sg 10-03'
+            'Collection:teknisk ordliste sg 10-03',
           ],
-          'definition': null,
-          'explanation': null,
-          'terms': [
+          definition: null,
+          explanation: null,
+          terms: [
             {
-              'expression': {
-                'language': 'fin',
-                'lemma': 'säilytyspaikka',
-                'presentationLemma': 'säilytyspaikka',
-                'pos': 'N'
+              expression: {
+                language: 'fin',
+                lemma: 'säilytyspaikka',
+                presentationLemma: 'säilytyspaikka',
+                pos: 'N',
               },
-              'note': null,
-              'source': null,
-              'status': null
-            }
-          ]
-        }
-      ]
+              note: null,
+              source: null,
+              status: null,
+            },
+          ],
+        },
+      ],
     };
 
     expect(multilingualconceptListsByNames(conceptList)).toEqual(want);
@@ -733,433 +700,441 @@ describe('Massage termwiki data from backend', () => {
   it('Find which languages the lemma has in a single term concept', () => {
     const want = ['sme'];
 
-    expect(languagesOfLemma(
-      'vuorká',
-      multilingualconceptListsByNames(
-        conceptList
-      )['Dihtorteknologiija ja diehtoteknihkka:fiila']
-    )).toEqual(want);
+    expect(
+      languagesOfLemma(
+        'vuorká',
+        multilingualconceptListsByNames(conceptList)[
+          'Dihtorteknologiija ja diehtoteknihkka:fiila'
+        ],
+      ),
+    ).toEqual(want);
   });
 
   it('Move the found lang to the start of concepts', () => {
     const want = [
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'terms': [
+        definition: null,
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'sme',
-              'lemma': 'fiila',
-              'presentationLemma': 'fiila',
-              'pos': 'N'
+            expression: {
+              language: 'sme',
+              lemma: 'fiila',
+              presentationLemma: 'fiila',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
+            note: null,
+            source: null,
+            status: null,
           },
           {
-            'expression': {
-              'language': 'sme',
-              'lemma': 'vuorká',
-              'presentationLemma': 'vuorká',
-              'pos': 'N'
+            expression: {
+              language: 'sme',
+              lemma: 'vuorká',
+              presentationLemma: 'vuorká',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'terms': [
+        definition: null,
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'smj',
-              'lemma': 'fijlla',
-              'presentationLemma': 'fijlla',
-              'pos': 'N'
+            expression: {
+              language: 'smj',
+              lemma: 'fijlla',
+              presentationLemma: 'fijlla',
+              pos: 'N',
             },
-            'note': 'jll jl',
-            'source': null,
-            'status': null
-          }
-        ]
+            note: 'jll jl',
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'terms': [
+        definition: null,
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'fin',
-              'lemma': 'viila',
-              'presentationLemma': 'viila',
-              'pos': 'N'
+            expression: {
+              language: 'fin',
+              lemma: 'viila',
+              presentationLemma: 'viila',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
+            note: null,
+            source: null,
+            status: null,
           },
           {
-            'expression': {
-              'language': 'fin',
-              'lemma': 'kaista',
-              'presentationLemma': 'kaista',
-              'pos': 'N'
+            expression: {
+              language: 'fin',
+              lemma: 'kaista',
+              presentationLemma: 'kaista',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
+            note: null,
+            source: null,
+            status: null,
           },
           {
-            'expression': {
-              'language': 'fin',
-              'lemma': 'tiedosto',
-              'presentationLemma': 'tiedosto',
-              'pos': 'N'
+            expression: {
+              language: 'fin',
+              lemma: 'tiedosto',
+              presentationLemma: 'tiedosto',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'terms': [
+        definition: null,
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'eng',
-              'lemma': 'file',
-              'presentationLemma': 'file',
-              'pos': 'N'
+            expression: {
+              language: 'eng',
+              lemma: 'file',
+              presentationLemma: 'file',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': 'fil, i edb: en ordnet mengde av sammenhørende data',
-        'explanation': null,
-        'terms': [
+        definition: 'fil, i edb: en ordnet mengde av sammenhørende data',
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'nob',
-              'lemma': 'fil',
-              'presentationLemma': 'fil',
-              'pos': 'N'
+            expression: {
+              language: 'nob',
+              lemma: 'fil',
+              presentationLemma: 'fil',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'terms': [
+        definition: null,
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'swe',
-              'lemma': 'fil',
-              'presentationLemma': 'fil',
-              'pos': 'N'
+            expression: {
+              language: 'swe',
+              lemma: 'fil',
+              presentationLemma: 'fil',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'terms': [
+        definition: null,
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'sma',
-              'lemma': 'fijle',
-              'presentationLemma': 'fijle',
-              'pos': 'N'
+            expression: {
+              language: 'sma',
+              lemma: 'fijle',
+              presentationLemma: 'fijle',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
-      }
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
+      },
     ];
 
-    expect(moveLangFirst('sme',
-      multilingualconceptListsByNames(
-        conceptList
-      )['Dihtorteknologiija ja diehtoteknihkka:fiila'])).toEqual(want);
+    expect(
+      moveLangFirst(
+        'sme',
+        multilingualconceptListsByNames(conceptList)[
+          'Dihtorteknologiija ja diehtoteknihkka:fiila'
+        ],
+      ),
+    ).toEqual(want);
   });
 
   it('Move the found lemma first in a given concept', () => {
-    const got = moveLangFirst('sme',
-      multilingualconceptListsByNames(
-        conceptList
-      )['Dihtorteknologiija ja diehtoteknihkka:fiila'])[0];
+    const got = moveLangFirst(
+      'sme',
+      multilingualconceptListsByNames(conceptList)[
+        'Dihtorteknologiija ja diehtoteknihkka:fiila'
+      ],
+    )[0];
     const lemma = 'vuorká';
     const want = {
-      'language': 'sme',
-      'collections': [
+      language: 'sme',
+      collections: [
         'Collection:SD-terms',
-        'Collection:Dáhtábágo javllamáno 2013'
+        'Collection:Dáhtábágo javllamáno 2013',
       ],
-      'definition': null,
-      'explanation': null,
-      'terms': [
+      definition: null,
+      explanation: null,
+      terms: [
         {
-          'note': null,
-          'source': null,
-          'status': null,
-          'expression': {
-            'lemma': 'vuorká',
-            'presentationLemma': 'vuorká',
-            'pos': 'N',
-            'language': 'sme'
-          }
+          note: null,
+          source: null,
+          status: null,
+          expression: {
+            lemma: 'vuorká',
+            presentationLemma: 'vuorká',
+            pos: 'N',
+            language: 'sme',
+          },
         },
         {
-          'note': null,
-          'source': null,
-          'status': null,
-          'expression': {
-            'lemma': 'fiila',
-            'presentationLemma': 'fiila',
-            'pos': 'N',
-            'language': 'sme'
-          }
-        }
-      ]
+          note: null,
+          source: null,
+          status: null,
+          expression: {
+            lemma: 'fiila',
+            presentationLemma: 'fiila',
+            pos: 'N',
+            language: 'sme',
+          },
+        },
+      ],
     };
-    
+
     expect(cleanFrom(lemma, got)).toEqual(want);
   });
 
   it('Order the multilingual concept by lemma and language', () => {
-    const got = multilingualconceptListsByNames(
-      conceptList
-    )['Dihtorteknologiija ja diehtoteknihkka:fiila'];
+    const got = multilingualconceptListsByNames(conceptList)[
+      'Dihtorteknologiija ja diehtoteknihkka:fiila'
+    ];
     const want = [
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'language': 'sme',
-        'terms': [
+        definition: null,
+        explanation: null,
+        language: 'sme',
+        terms: [
           {
-            'expression': {
-              'language': 'sme',
-              'lemma': 'vuorká',
-              'presentationLemma': 'vuorká',
-              'pos': 'N'
+            expression: {
+              language: 'sme',
+              lemma: 'vuorká',
+              presentationLemma: 'vuorká',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
+            note: null,
+            source: null,
+            status: null,
           },
           {
-            'expression': {
-              'language': 'sme',
-              'lemma': 'fiila',
-              'presentationLemma': 'fiila',
-              'pos': 'N'
+            expression: {
+              language: 'sme',
+              lemma: 'fiila',
+              presentationLemma: 'fiila',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'terms': [
+        definition: null,
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'smj',
-              'lemma': 'fijlla',
-              'presentationLemma': 'fijlla',
-              'pos': 'N'
+            expression: {
+              language: 'smj',
+              lemma: 'fijlla',
+              presentationLemma: 'fijlla',
+              pos: 'N',
             },
-            'note': 'jll jl',
-            'source': null,
-            'status': null
-          }
-        ]
+            note: 'jll jl',
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'terms': [
+        definition: null,
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'fin',
-              'lemma': 'viila',
-              'presentationLemma': 'viila',
-              'pos': 'N'
+            expression: {
+              language: 'fin',
+              lemma: 'viila',
+              presentationLemma: 'viila',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
+            note: null,
+            source: null,
+            status: null,
           },
           {
-            'expression': {
-              'language': 'fin',
-              'lemma': 'kaista',
-              'presentationLemma': 'kaista',
-              'pos': 'N'
+            expression: {
+              language: 'fin',
+              lemma: 'kaista',
+              presentationLemma: 'kaista',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
+            note: null,
+            source: null,
+            status: null,
           },
           {
-            'expression': {
-              'language': 'fin',
-              'lemma': 'tiedosto',
-              'presentationLemma': 'tiedosto',
-              'pos': 'N'
+            expression: {
+              language: 'fin',
+              lemma: 'tiedosto',
+              presentationLemma: 'tiedosto',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'terms': [
+        definition: null,
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'eng',
-              'lemma': 'file',
-              'presentationLemma': 'file',
-              'pos': 'N'
+            expression: {
+              language: 'eng',
+              lemma: 'file',
+              presentationLemma: 'file',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': 'fil, i edb: en ordnet mengde av sammenhørende data',
-        'explanation': null,
-        'terms': [
+        definition: 'fil, i edb: en ordnet mengde av sammenhørende data',
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'nob',
-              'lemma': 'fil',
-              'presentationLemma': 'fil',
-              'pos': 'N'
+            expression: {
+              language: 'nob',
+              lemma: 'fil',
+              presentationLemma: 'fil',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'terms': [
+        definition: null,
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'swe',
-              'lemma': 'fil',
-              'presentationLemma': 'fil',
-              'pos': 'N'
+            expression: {
+              language: 'swe',
+              lemma: 'fil',
+              presentationLemma: 'fil',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
       },
       {
-        'collections': [
+        collections: [
           'Collection:SD-terms',
-          'Collection:Dáhtábágo javllamáno 2013'
+          'Collection:Dáhtábágo javllamáno 2013',
         ],
-        'definition': null,
-        'explanation': null,
-        'terms': [
+        definition: null,
+        explanation: null,
+        terms: [
           {
-            'expression': {
-              'language': 'sma',
-              'lemma': 'fijle',
-              'presentationLemma': 'fijle',
-              'pos': 'N'
+            expression: {
+              language: 'sma',
+              lemma: 'fijle',
+              presentationLemma: 'fijle',
+              pos: 'N',
             },
-            'note': null,
-            'source': null,
-            'status': null
-          }
-        ]
-      }
+            note: null,
+            source: null,
+            status: null,
+          },
+        ],
+      },
     ];
 
     expect(orderedMultilingualConcept('vuorká', got)).toEqual(want);
@@ -1171,75 +1146,75 @@ describe('Massage Giellatekno dictionaries from backend', () => {
     const got = dictEntryList[0];
 
     const want = {
-      'dict': 'gtsmenob',
-      'from': {
-        'language': 'sme',
-        'lookupLemmas': [
+      dict: 'gtsmenob',
+      from: {
+        language: 'sme',
+        lookupLemmas: [
           {
-            'country': null,
-            'dialect': null,
-            'language': 'sme',
-            'lemma': 'vuorká',
-            'presentationLemma': 'vuorká',
-            'pos': 'N'
-          }
-        ]
+            country: null,
+            dialect: null,
+            language: 'sme',
+            lemma: 'vuorká',
+            presentationLemma: 'vuorká',
+            pos: 'N',
+          },
+        ],
       },
-      'to': {
-        'language': 'nob',
-        'translationGroups': [
+      to: {
+        language: 'nob',
+        translationGroups: [
           {
-            'examples': [],
-            'restriction': null,
-            'translations': [
+            examples: [],
+            restriction: null,
+            translations: [
               {
-                'country': null,
-                'dialect': null,
-                'language': 'nob',
-                'lemma': 'arkiv',
-                'presentationLemma': 'arkiv',
-                'pos': 'N'
-              }
-            ]
+                country: null,
+                dialect: null,
+                language: 'nob',
+                lemma: 'arkiv',
+                presentationLemma: 'arkiv',
+                pos: 'N',
+              },
+            ],
           },
           {
-            'examples': [],
-            'restriction': null,
-            'translations': [
+            examples: [],
+            restriction: null,
+            translations: [
               {
-                'country': null,
-                'dialect': null,
-                'language': 'nob',
-                'lemma': 'depot',
-                'presentationLemma': 'depot',
-                'pos': 'N'
+                country: null,
+                dialect: null,
+                language: 'nob',
+                lemma: 'depot',
+                presentationLemma: 'depot',
+                pos: 'N',
               },
               {
-                'country': null,
-                'dialect': null,
-                'language': 'nob',
-                'lemma': 'oppbevaringsplass',
-                'presentationLemma': 'oppbevaringsplass',
-                'pos': 'N'
-              }
-            ]
+                country: null,
+                dialect: null,
+                language: 'nob',
+                lemma: 'oppbevaringsplass',
+                presentationLemma: 'oppbevaringsplass',
+                pos: 'N',
+              },
+            ],
           },
           {
-            'examples': [],
-            'restriction': null,
-            'translations': [
+            examples: [],
+            restriction: null,
+            translations: [
               {
-                'country': null,
-                'dialect': null,
-                'language': 'nob',
-                'lemma': 'oppbevaring',
-                'presentationLemma': 'oppbevaring',
-                'pos': 'N'
-              }
-            ]
-          }
-        ]
-      }
+                country: null,
+                dialect: null,
+                language: 'nob',
+                lemma: 'oppbevaring',
+                presentationLemma: 'oppbevaring',
+                pos: 'N',
+              },
+            ],
+          },
+        ],
+      },
     };
 
     expect(dictBackend2Frontend(got)).toEqual(want);
@@ -1252,15 +1227,15 @@ describe('Massage input from paradigm generator', () => {
       analyses: {
         'N+Prop+Sg+Nom': ['Kárášjohka'],
         'N+Prop+Sg+Gen': ['Kárášjoga'],
-        'N+Sg+Gen': ['Kárášjoga']
-      }
+        'N+Sg+Gen': ['Kárášjoga'],
+      },
     };
 
     const want = {
       analyses: {
         'N+Sg+Nom': ['Kárášjohka'],
         'N+Sg+Gen': ['Kárášjoga'],
-      }
+      },
     };
 
     expect(filterProp(got)).toEqual(want);

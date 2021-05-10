@@ -11,25 +11,13 @@ const TermCore = ({ concept, lemma }) => {
 
   return (
     <Grid container>
-      <Grid
-        md={3}
-        xs={12}
-        item>
+      <Grid md={3} xs={12} item>
         <PairHeader language={terms[0].expression.language} />
       </Grid>
-      <Grid
-        md={4}
-        xs={12}
-        item>
-        <LemmaGroups
-          lemma={lemma}
-          terms={terms}
-        />
+      <Grid md={4} xs={12} item>
+        <LemmaGroups lemma={lemma} terms={terms} />
       </Grid>
-      <Grid
-        md={5}
-        xs={12}
-        item>
+      <Grid md={5} xs={12} item>
         {definition && <Definitions definitions={definition} />}
       </Grid>
     </Grid>
@@ -38,7 +26,7 @@ const TermCore = ({ concept, lemma }) => {
 
 TermCore.propTypes = {
   concept: PropTypes.object.isRequired,
-  lemma: PropTypes.string.isRequired
+  lemma: PropTypes.string.isRequired,
 };
 
 export default TermCore;

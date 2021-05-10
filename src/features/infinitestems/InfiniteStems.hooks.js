@@ -2,14 +2,19 @@ import { gql } from '@apollo/client';
 import { useQuery } from '@apollo/client';
 
 const GET_LEMMAS = gql`
-  query AllLemmas($inputValue: String!, $wantedLangs: [String]!,
-                  $wantedDicts: [String]!, $after: String ) {
-      stemList(first:100,
-               search: $inputValue,
-               wanted: $wantedLangs,
-               wantedDicts: $wantedDicts
-               after: $after
-             ) {
+  query AllLemmas(
+    $inputValue: String!
+    $wantedLangs: [String]!
+    $wantedDicts: [String]!
+    $after: String
+  ) {
+    stemList(
+      first: 100
+      search: $inputValue
+      wanted: $wantedLangs
+      wantedDicts: $wantedDicts
+      after: $after
+    ) {
       totalCount
       edges {
         node {
@@ -26,24 +31,23 @@ const GET_LEMMAS = gql`
   }
 `;
 
-function useStems (inputValue, wantedDicts, wantedLangs) {
-  const {data, loading, fetchMore, error} = useQuery(
-    GET_LEMMAS, {
-      notifyOnNetworkStatusChange: true,
-      variables: {
-        inputValue,
-        wantedLangs,
-        wantedDicts
-      }
-    });
+function useStems(inputValue, wantedDicts, wantedLangs) {
+  const { data, loading, fetchMore, error } = useQuery(GET_LEMMAS, {
+    notifyOnNetworkStatusChange: true,
+    variables: {
+      inputValue,
+      wantedLangs,
+      wantedDicts,
+    },
+  });
 
-  if (loading && !data) return {loading, stems: []};
-  if (error) return {error, stems: []};
+  if (loading && !data) return { loading, stems: [] };
+  if (error) return { error, stems: [] };
 
-  const loadMore = () => (
+  const loadMore = () =>
     fetchMore({
       variables: {
-        after: data.stemList.pageInfo.endCursor
+        after: data.stemList.pageInfo.endCursor,
       },
       updateQuery: (previousResult, { fetchMoreResult }) => {
         const newEdges = fetchMoreResult.stemList.edges;
@@ -51,25 +55,25 @@ function useStems (inputValue, wantedDicts, wantedLangs) {
 
         return newEdges.length
           ? {
-            // Put the new comments at the end of the list and update `pageInfo`
-            // so we have the new `endCursor` and `hasNextPage` values
-            stemList: {
-              __typename: previousResult.stemList.__typename,
-              totalCount: previousResult.stemList.totalCount,
-              edges: [...previousResult.stemList.edges, ...newEdges],
-              pageInfo
+              // Put the new comments at the end of the list and update `pageInfo`
+              // so we have the new `endCursor` and `hasNextPage` values
+              stemList: {
+                __typename: previousResult.stemList.__typename,
+                totalCount: previousResult.stemList.totalCount,
+                edges: [...previousResult.stemList.edges, ...newEdges],
+                pageInfo,
+              },
             }
-          }
           : previousResult;
-      }
-    }));
+      },
+    });
   return {
     totalCount: data.stemList.totalCount,
-    stems: data.stemList.edges.map(({node}) => node),
+    stems: data.stemList.edges.map(({ node }) => node),
     error,
     hasNextPage: data.stemList.pageInfo.hasNextPage,
     loading,
-    loadMore
+    loadMore,
   };
 }
 

@@ -23,13 +23,13 @@ export const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: fade(theme.palette.common.white, 0.15),
     '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25)
-    }
+      backgroundColor: fade(theme.palette.common.white, 0.25),
+    },
   },
   iconButton: {
     color: 'inherit',
-    padding: theme.spacing(1)
-  }
+    padding: theme.spacing(1),
+  },
 }));
 
 function FilterBar({ searchHandler }) {
@@ -45,18 +45,20 @@ function FilterBar({ searchHandler }) {
     searchHandler(newValue);
   };
 
-  const handleKeyInput = input => {
+  const handleKeyInput = (input) => {
     const newValue = `${value}${input}`;
     setValue(newValue);
     searchHandler(newValue);
   };
 
   const lookup = () => {
-    const path = currentPath.currentDict ? `/${currentPath.currentDict}/${value}` : `/${value}`;
+    const path = currentPath.currentDict
+      ? `/${currentPath.currentDict}/${value}`
+      : `/${value}`;
     history.push(path);
   };
 
-  const keyPress = event => {
+  const keyPress = (event) => {
     if (event.key === 'Enter') {
       lookup();
     }
@@ -76,7 +78,7 @@ function FilterBar({ searchHandler }) {
   const id = open ? 'sami-keys' : undefined;
 
   return (
-    <Paper component='div' className={classes.root}>
+    <Paper component="div" className={classes.root}>
       <Tooltip
         title={<Trans>Sámi letters</Trans>}
         aria-label={<Trans>Sámi letters</Trans>}
@@ -92,8 +94,9 @@ function FilterBar({ searchHandler }) {
       </Tooltip>
       <InputWithTranslation
         value={value}
-        onChange={(handleChange)}
-        onKeyUp={(keyPress)} />
+        onChange={handleChange}
+        onKeyUp={keyPress}
+      />
       <Tooltip
         title={<Trans>Lookup the search word</Trans>}
         aria-label={<Trans>Lookup the search word</Trans>}
@@ -113,11 +116,11 @@ function FilterBar({ searchHandler }) {
         onClose={handleClose}
         anchorOrigin={{
           vertical: 'bottom',
-          horizontal: 'center'
+          horizontal: 'center',
         }}
         transformOrigin={{
           vertical: 'top',
-          horizontal: 'center'
+          horizontal: 'center',
         }}
       >
         <SamiKeys keyHandler={handleKeyInput} />
@@ -127,7 +130,7 @@ function FilterBar({ searchHandler }) {
 }
 
 FilterBar.propTypes = {
-  searchHandler: PropTypes.func.isRequired
+  searchHandler: PropTypes.func.isRequired,
 };
 
 export default FilterBar;

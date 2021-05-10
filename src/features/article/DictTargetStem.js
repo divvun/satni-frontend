@@ -15,27 +15,28 @@ export const HAS_STEM = gql`
 `;
 
 const DictTargetStem = ({ stem, restriction }) => {
-  const {lemma} = stem;
+  const { lemma } = stem;
 
-  const {data, loading} = useQuery(
-    HAS_STEM, {
-      variables: {
-        stem: lemma
-      }
-    }
-  );
+  const { data, loading } = useQuery(HAS_STEM, {
+    variables: {
+      stem: lemma,
+    },
+  });
 
   if (loading) return <CircularProgress size={20} />;
 
-  return <Stem
-    stem={stem}
-    restriction={restriction}
-    withLink={(data && data.hasStem.length)} />;
+  return (
+    <Stem
+      stem={stem}
+      restriction={restriction}
+      withLink={data && data.hasStem.length}
+    />
+  );
 };
 
 DictTargetStem.propTypes = {
   stem: PropTypes.object.isRequired,
-  restriction: PropTypes.object
+  restriction: PropTypes.object,
 };
 
 export default DictTargetStem;

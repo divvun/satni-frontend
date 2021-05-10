@@ -12,57 +12,43 @@ import Examples from './Examples';
 import Source from './Source';
 import Stem from './Stem';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
-    marginBottom: theme.spacing(1)
+    marginBottom: theme.spacing(1),
   },
   translations: {
-    marginLeft: theme.spacing(2)
-  }
+    marginLeft: theme.spacing(2),
+  },
 }));
 
-const DictArticle = ({dictGroup, lemma}) => {
+const DictArticle = ({ dictGroup, lemma }) => {
   const classes = useStyles();
-  const {dict, from, to} = dictGroup;
+  const { dict, from, to } = dictGroup;
   const pathname = useLocation().pathname;
 
   return (
-    <Paper
-      className={classes.paper}
-      elevation={1}
-    >
+    <Paper className={classes.paper} elevation={1}>
       <Grid container spacing={1}>
-        <Grid
-          item
-          xs={12}
-        >
-          {!hasAvailableDict(pathname) && <Source
-            source={dict}
-            lemma={lemma} />
-          }
+        <Grid item xs={12}>
+          {!hasAvailableDict(pathname) && (
+            <Source source={dict} lemma={lemma} />
+          )}
           <Divider />
         </Grid>
-        <Grid
-          item
-          xs={12}
-        >
-          {from.lookupLemmas.map((lookupLemma, i) => (
-            (lookupLemma.lemma === lemma) ?
-              <Stem key={i} stem={lookupLemma} /> :
+        <Grid item xs={12}>
+          {from.lookupLemmas.map((lookupLemma, i) =>
+            lookupLemma.lemma === lemma ? (
+              <Stem key={i} stem={lookupLemma} />
+            ) : (
               <DictTargetStem key={i} stem={lookupLemma} />
-          ))}
+            ),
+          )}
         </Grid>
-        <Grid
-          item
-          xs={12}
-          className={classes.translations}
-        >
+        <Grid item xs={12} className={classes.translations}>
           {to.translationGroups.map((translationGroup, i) => {
             return (
-              <React.Fragment
-                key={i}
-              >
+              <React.Fragment key={i}>
                 {translationGroup.translations.map((stem, index) => (
                   <DictTargetStem
                     key={index}
@@ -70,9 +56,9 @@ const DictArticle = ({dictGroup, lemma}) => {
                     restriction={translationGroup.restriction}
                   />
                 ))}
-                {translationGroup.examples &&
-                <Examples examples={translationGroup.examples} />
-                }
+                {translationGroup.examples && (
+                  <Examples examples={translationGroup.examples} />
+                )}
               </React.Fragment>
             );
           })}
@@ -84,7 +70,7 @@ const DictArticle = ({dictGroup, lemma}) => {
 
 DictArticle.propTypes = {
   lemma: PropTypes.string.isRequired,
-  dictGroup: PropTypes.object.isRequired
+  dictGroup: PropTypes.object.isRequired,
 };
 
 export default DictArticle;

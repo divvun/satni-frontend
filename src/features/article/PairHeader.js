@@ -10,10 +10,10 @@ import Typography from '@material-ui/core/Typography';
 
 import { wantedLangsVar } from 'apolloCache';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   lang1: {
-    marginRight: theme.spacing(1)
-  }
+    marginRight: theme.spacing(1),
+  },
 }));
 
 const PairHeader = ({ language }) => {
@@ -22,15 +22,17 @@ const PairHeader = ({ language }) => {
 
   const handleChange = (event) => {
     event.stopPropagation();
-    wantedLangsVar(wantedLangs.filter(value => value !== event.target.name));
+    wantedLangsVar(wantedLangs.filter((value) => value !== event.target.name));
   };
 
   return (
     <FormControlLabel
       className={classes.lang1}
-      label={<Typography
-        variant='subtitle2'
-      ><Trans id={language} /></Typography>}
+      label={
+        <Typography variant="subtitle2">
+          <Trans id={language} />
+        </Typography>
+      }
       control={
         <Tooltip
           title={<Trans>Hide this language</Trans>}
@@ -39,7 +41,7 @@ const PairHeader = ({ language }) => {
           <Checkbox
             checked
             className={classes.check}
-            color='default'
+            color="default"
             name={language}
             onChange={handleChange}
           />
@@ -50,7 +52,7 @@ const PairHeader = ({ language }) => {
 };
 
 PairHeader.propTypes = {
-  language: PropTypes.string.isRequired
+  language: PropTypes.string.isRequired,
 };
 
 export default PairHeader;
