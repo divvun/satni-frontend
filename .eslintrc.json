@@ -1,34 +1,15 @@
 {
-    "env": {
-        "browser": true,
-        "es2020": true
-    },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
+        "airbnb",
+        "airbnb/hooks",
+        "prettier"
     ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 11,
-        "sourceType": "module"
-    },
     "plugins": [
-        "react"
+        "prettier"
     ],
     "rules": {
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
+        "prettier/prettier": [
+            "error"
         ]
     }
 }
