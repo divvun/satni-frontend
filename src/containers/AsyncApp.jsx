@@ -51,77 +51,11 @@ const styles = (theme) => ({
   },
 });
 
-const Main = ({
-  currentLemma,
-  locationDict,
-  searchExpression,
-  wantedDicts,
-  wantedLangs,
-  currentDict,
-}) => (
-  <Switch>
-    <Redirect from={`/article/${currentLemma}`} to={`/${currentLemma}`} />
-    <Redirect from="/details" to={`/${locationDict.lemma}`} />
-    <Route path="/">
-      <Grid container>
-        <Grid item xs={12}>
-          {currentLemma || searchExpression ? (
-            <StatusBar
-              wantedDicts={wantedDicts}
-              wantedLangs={wantedLangs}
-              currentLemma={currentLemma}
-            />
-          ) : (
-            <WelcomeHeader />
-          )}
-        </Grid>
-        <Grid item xs={4}>
-          {searchExpression && (
-            <InfiniteStems
-              searchExpression={searchExpression}
-              wantedDicts={wantedDicts}
-              wantedLangs={wantedLangs}
-              currentDict={currentDict}
-            />
-          )}
-        </Grid>
-        <Grid item xs={8}>
-          {currentLemma && (
-            <Articles
-              lemma={currentLemma}
-              wantedDicts={wantedDicts}
-              wantedLangs={wantedLangs}
-            />
-          )}
-        </Grid>
-      </Grid>
-    </Route>
-  </Switch>
-);
-
-Main.propTypes = {
-  currentLemma: PropTypes.string.isRequired,
-  locationDict: PropTypes.shape.isRequired,
-  searchExpression: PropTypes.string.isRequired,
-  wantedDicts: PropTypes.arrayOf.isRequired,
-  wantedLangs: PropTypes.arrayOf.isRequired,
-  currentDict: PropTypes.arrayOf.isRequired,
-};
-
-const AsyncApp = ({ classes }) => {
-  const { data, error, loading } = useQuery(GET_LANGS_AND_DICTS);
-  const [searchExpression, setSearchExpression] = useState('');
+const Main = ({ searchExpression }) => {
   const location = useLocation();
-  const { currentLemma, currentDict } = locationParser(location.pathname);
   const locationDict = qs.parse(location.search.slice(1));
-
-  const handleSearch = (value) => setSearchExpression(value);
-
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+  const { data, error, loading } = useQuery(GET_LANGS_AND_DICTS);
+  const { currentLemma, currentDict } = locationParser(location.pathname);
 
   useEffect(() => {
     localStorage.setItem('wantedDicts', JSON.stringify(data.wantedDicts));
@@ -135,6 +69,62 @@ const AsyncApp = ({ classes }) => {
 
   if (loading) return <div>Loading dicts and languages</div>;
   if (error) return <div>Error loading dicts and languages</div>;
+
+  return (
+    <Switch>
+      <Redirect from={`/article/${currentLemma}`} to={`/${currentLemma}`} />
+      <Redirect from="/details" to={`/${locationDict.lemma}`} />
+      <Route path="/">
+        <Grid container>
+          <Grid item xs={12}>
+            {currentLemma || searchExpression ? (
+              <StatusBar
+                wantedDicts={wantedDicts}
+                wantedLangs={data.wantedLangs}
+                currentLemma={currentLemma}
+              />
+            ) : (
+              <WelcomeHeader />
+            )}
+          </Grid>
+          <Grid item xs={4}>
+            {searchExpression && (
+              <InfiniteStems
+                searchExpression={searchExpression}
+                wantedDicts={wantedDicts}
+                wantedLangs={data.wantedLangs}
+                currentDict={currentDict}
+              />
+            )}
+          </Grid>
+          <Grid item xs={8}>
+            {currentLemma && (
+              <Articles
+                lemma={currentLemma}
+                wantedDicts={wantedDicts}
+                wantedLangs={data.wantedLangs}
+              />
+            )}
+          </Grid>
+        </Grid>
+      </Route>
+    </Switch>
+  );
+};
+
+Main.propTypes = {
+  searchExpression: PropTypes.string.isRequired,
+};
+
+const AsyncApp = ({ classes }) => {
+  const [searchExpression, setSearchExpression] = useState('');
+  const handleSearch = (value) => setSearchExpression(value);
+
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
   return (
     <div className={classes.container}>
@@ -170,14 +160,7 @@ const AsyncApp = ({ classes }) => {
             </React.Fragment>
           )}
         >
-          <Main
-            currentLemma={currentLemma}
-            locationDict={locationDict}
-            searchExpression={searchExpression}
-            wantedDicts={wantedDicts}
-            wantedLangs={data.wantedLangs}
-            currentDict={currentDict}
-          />
+          <Main searchExpression={searchExpression} />
         </Sentry.ErrorBoundary>
       </main>
     </div>
