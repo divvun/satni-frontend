@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as Sentry from '@sentry/react';
-import { gql, useQuery } from '@apollo/client';
+import { ApolloClient, gql, useQuery } from '@apollo/client';
 import { I18nProvider } from '@lingui/react';
 import {
   createMuiTheme,
@@ -86,8 +86,12 @@ const Root = ({ store, client }) => {
 };
 
 Root.propTypes = {
-  store: PropTypes.shape.isRequired,
-  client: PropTypes.shape.isRequired,
+  store: PropTypes.shape({
+    subscribe: PropTypes.func.isRequired,
+    dispatch: PropTypes.func.isRequired,
+    getState: PropTypes.func.isRequired,
+  }).isRequired,
+  client: PropTypes.instanceOf(ApolloClient).isRequired,
 };
 
 export default Root;

@@ -65,7 +65,7 @@ const LangChooser = ({ langs, setLangs }) => {
 };
 
 LangChooser.propTypes = {
-  langs: PropTypes.arrayOf.isRequired,
+  langs: PropTypes.arrayOf(PropTypes.string).isRequired,
   setLangs: PropTypes.func.isRequired,
 };
 

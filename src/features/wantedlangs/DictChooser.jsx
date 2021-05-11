@@ -72,7 +72,7 @@ const DictChooser = ({ dicts, setDicts }) => {
 };
 
 DictChooser.propTypes = {
-  dicts: PropTypes.arrayOf.isRequired,
+  dicts: PropTypes.arrayOf(PropTypes.string).isRequired,
   setDicts: PropTypes.func.isRequired,
 };
 
