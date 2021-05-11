@@ -1,5 +1,5 @@
-import { gql } from '@apollo/client';
-import { useQuery } from '@apollo/client';
+/* eslint-disable no-underscore-dangle */
+import { gql, useQuery } from '@apollo/client';
 
 const GET_LEMMAS = gql`
   query AllLemmas(
@@ -50,8 +50,7 @@ function useStems(inputValue, wantedDicts, wantedLangs) {
         after: data.stemList.pageInfo.endCursor,
       },
       updateQuery: (previousResult, { fetchMoreResult }) => {
-        const newEdges = fetchMoreResult.stemList.edges;
-        const pageInfo = fetchMoreResult.stemList.pageInfo;
+        const { newEdges, pageInfo } = fetchMoreResult.stemList;
 
         return newEdges.length
           ? {
@@ -67,6 +66,7 @@ function useStems(inputValue, wantedDicts, wantedLangs) {
           : previousResult;
       },
     });
+
   return {
     totalCount: data.stemList.totalCount,
     stems: data.stemList.edges.map(({ node }) => node),

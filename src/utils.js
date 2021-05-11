@@ -1,4 +1,4 @@
-import { dictionaryInfo } from 'translateble_variables';
+import dictionaryInfo from './translateble_variables';
 
 // Handle HTTP errors since fetch won't.
 export const handleErrors = (response) => {
@@ -14,8 +14,8 @@ export const handleErrors = (response) => {
  * @param {Array} concepts  Concepts where the language might not appear first
  * @returns {Array}         Concept where the language is placed first
  */
-export const moveLangFirst = (language, concepts) => {
-  return concepts.reduce((accumulator, concept) => {
+export const moveLangFirst = (language, concepts) =>
+  concepts.reduce((accumulator, concept) => {
     if (concept.terms[0].expression.language !== language) {
       accumulator.push(concept);
     } else {
@@ -23,7 +23,6 @@ export const moveLangFirst = (language, concepts) => {
     }
     return accumulator;
   }, []);
-};
 
 /**
  * An array of terms of the same language
@@ -31,8 +30,8 @@ export const moveLangFirst = (language, concepts) => {
  * @param   {Array}   terms     Terms where term containing the lemma might not be first
  * @return  {Array}             The term containing the lemma is placed first
  */
-export const moveLemmaFirst = (lemma, terms) => {
-  return terms.reduce((accumulator, term) => {
+export const moveLemmaFirst = (lemma, terms) =>
+  terms.reduce((accumulator, term) => {
     if (term.expression.lemma === lemma) {
       accumulator.unshift(term);
     } else {
@@ -41,7 +40,6 @@ export const moveLemmaFirst = (lemma, terms) => {
 
     return accumulator;
   }, []);
-};
 
 /**
  * Massage a monolingual concept into the format expected by the view
@@ -51,13 +49,27 @@ export const moveLemmaFirst = (lemma, terms) => {
  *                                        is added and terms has the wanted lemma
  *                                        placed in the front
  */
-export const cleanFrom = (lemma, concept) => {
-  return {
-    ...concept,
-    language: concept.terms[0].expression.language,
-    terms: moveLemmaFirst(lemma, concept.terms),
-  };
-};
+export const cleanFrom = (lemma, concept) => ({
+  ...concept,
+  language: concept.terms[0].expression.language,
+  terms: moveLemmaFirst(lemma, concept.terms),
+});
+
+/**
+ * Given a multilingual concept and lemma find which languages the lemma has
+ * @param   {string}  lemma       The lemma we want
+ * @param   {Array}   conceptList A multilingual concept
+ * @return  {Array}               List of languages
+ */
+export const languagesOfLemma = (lemma, conceptList) =>
+  Array.from(
+    new Set(
+      conceptList
+        .flatMap((concept) => concept.terms.map((term) => term))
+        .filter((term) => term.expression.lemma === lemma)
+        .map((term) => term.expression.language),
+    ),
+  );
 
 /**
  * Order the lemma to the front of the multilingual concept
@@ -78,8 +90,8 @@ export const orderedMultilingualConcept = (lemma, multilingualConcept) => {
  * @return {Dict}               Concept lists ordered by names => multilingual
  *                              concepts
  */
-export const multilingualconceptListsByNames = (conceptList) => {
-  return conceptList.reduce((accumulator, concept) => {
+export const multilingualconceptListsByNames = (conceptList) =>
+  conceptList.reduce((accumulator, concept) => {
     const { name, ...rest } = concept;
     if (!(name in accumulator)) {
       accumulator[name] = [];
@@ -88,56 +100,32 @@ export const multilingualconceptListsByNames = (conceptList) => {
 
     return accumulator;
   }, {});
-};
-
-/**
- * Given a multilingual concept and lemma find which languages the lemma has
- * @param   {string}  lemma       The lemma we want
- * @param   {Array}   conceptList A multilingual concept
- * @return  {Array}               List of languages
- */
-export const languagesOfLemma = (lemma, conceptList) => {
-  return Array.from(
-    new Set(
-      conceptList
-        .flatMap((concept) => concept.terms.map((term) => term))
-        .filter((term) => term.expression.lemma === lemma)
-        .map((term) => term.expression.language),
-    ),
-  );
-};
 
 export const backendTranslationGroup2frontendTranslationGroup = (
   translationGroup,
-) => {
-  return {
-    restriction: translationGroup.restriction,
-    translations: translationGroup.translationLemmas.edges.map(
+) => ({
+  restriction: translationGroup.restriction,
+  translations: translationGroup.translationLemmas.edges.map(
+    (edge) => edge.node,
+  ),
+  examples: translationGroup.exampleGroups.map((exampleGroup) => exampleGroup),
+});
+
+export const dictBackend2Frontend = (backendDictArticle) => ({
+  dict: backendDictArticle.dictName,
+  from: {
+    language: backendDictArticle.srcLang,
+    lookupLemmas: backendDictArticle.lookupLemmas.edges.map(
       (edge) => edge.node,
     ),
-    examples: translationGroup.exampleGroups.map(
-      (exampleGroup) => exampleGroup,
+  },
+  to: {
+    language: backendDictArticle.targetLang,
+    translationGroups: backendDictArticle.translationGroups.map(
+      backendTranslationGroup2frontendTranslationGroup,
     ),
-  };
-};
-
-export const dictBackend2Frontend = (backendDictArticle) => {
-  return {
-    dict: backendDictArticle.dictName,
-    from: {
-      language: backendDictArticle.srcLang,
-      lookupLemmas: backendDictArticle.lookupLemmas.edges.map(
-        (edge) => edge.node,
-      ),
-    },
-    to: {
-      language: backendDictArticle.targetLang,
-      translationGroups: backendDictArticle.translationGroups.map(
-        backendTranslationGroup2frontendTranslationGroup,
-      ),
-    },
-  };
-};
+  },
+});
 
 export const hasAvailableDict = (pathname) =>
   Object.keys(dictionaryInfo).some((availableDict) =>
@@ -171,7 +159,6 @@ export const availableLanguages = [
 
 export const locationParser = (pathname) => {
   const parts = pathname.split('/');
-  console.log(parts);
 
   if (parts.length === 3) {
     return {
@@ -186,26 +173,23 @@ export const locationParser = (pathname) => {
         currentDict: parts[1],
         currentLemma: '',
       };
-    } else {
-      return {
-        currentDict: '',
-        currentLemma: parts[1],
-      };
     }
+
+    return {
+      currentDict: '',
+      currentLemma: parts[1],
+    };
   }
 
   return { currentDict: '', currentLemma: '' };
 };
 
 export const filterProp = (analyses) => {
-  const content = Object.keys(analyses['analyses']).reduce(
-    (accumulator, key) => {
-      accumulator[key.replace('+Prop', '')] = analyses['analyses'][key];
+  const content = Object.keys(analyses.analyses).reduce((accumulator, key) => {
+    accumulator[key.replace('+Prop', '')] = analyses.analyses[key];
 
-      return accumulator;
-    },
-    {},
-  );
+    return accumulator;
+  }, {});
 
   return { analyses: content };
 };

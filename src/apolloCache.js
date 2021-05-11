@@ -1,6 +1,6 @@
 import { InMemoryCache, makeVar } from '@apollo/client';
-import { availableLanguages } from 'utils';
-import { dictionaryInfo } from 'translateble_variables';
+import { availableLanguages } from './utils';
+import dictionaryInfo from './translateble_variables';
 
 export const interfaceLanguageVar = makeVar(
   localStorage.getItem('interfaceLanguage')

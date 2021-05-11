@@ -1,5 +1,7 @@
+/* eslint-disable no-param-reassign */
+// Disabled because reduxjs takes care of mutability
 import { createSlice } from '@reduxjs/toolkit';
-import { doesLemmaExist } from 'api';
+import doesLemmaExist from '../../api';
 
 const korpSlice = createSlice({
   name: 'korp',

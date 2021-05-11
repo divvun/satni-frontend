@@ -91,7 +91,7 @@ const categories = [
   t`Ávnnasindustriija`,
 ];
 
-export const dictionaryInfo = {
+const dictionaryInfo = {
   sammallahtismefin: {
     info: [
       t`Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993.`,
@@ -164,3 +164,5 @@ export const dictionaryInfo = {
     ],
   },
 };
+
+export default dictionaryInfo;

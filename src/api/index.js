@@ -28,10 +28,12 @@ const korpInfo = {
   },
 };
 
-export const doesLemmaExist = async (language, lemma) => {
-  const url = `${korpInfo[language]['start_query']}${korpInfo[language]['corpora']}&cqp=%5Blemma+%3D+%22${lemma}%22%5D&start=0&end=1`;
+const doesLemmaExist = async (language, lemma) => {
+  const url = `${korpInfo[language].start_query}${korpInfo[language].corpora}&cqp=%5Blemma+%3D+%22${lemma}%22%5D&start=0&end=1`;
   const response = await fetch(url);
   const json = await response.json();
 
-  return 'hits' in json && json['hits'] > 0;
+  return 'hits' in json && json.hits > 0;
 };
+
+export default doesLemmaExist;
