@@ -10,10 +10,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 
-import FilterBar from '../features/search/FilterBar';
 import HelpDialog from './HelpDialog';
 
-const SatniAppBar = ({ handleSearch, handleDrawerToggle, drawerWidth }) => {
+const SatniAppBar = ({ handleDrawerToggle, drawerWidth }) => {
   const useStyles = makeStyles((theme) => ({
     appBar: {
       position: 'relative',
@@ -63,7 +62,6 @@ const SatniAppBar = ({ handleSearch, handleDrawerToggle, drawerWidth }) => {
         <Typography variant="h6" noWrap>
           sátni.org
         </Typography>
-        <FilterBar searchHandler={handleSearch} />
         <Tooltip title={<Trans>Help</Trans>} aria-label={<Trans>Help</Trans>}>
           <IconButton
             color="inherit"
@@ -82,7 +80,6 @@ const SatniAppBar = ({ handleSearch, handleDrawerToggle, drawerWidth }) => {
 };
 
 SatniAppBar.propTypes = {
-  handleSearch: PropTypes.func.isRequired,
   handleDrawerToggle: PropTypes.func.isRequired,
   drawerWidth: PropTypes.number.isRequired,
 };
