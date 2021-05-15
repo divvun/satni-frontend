@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as Sentry from '@sentry/react';
 import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Button from '@material-ui/core/Button';
@@ -79,7 +80,10 @@ const AsyncApp = ({ classes }) => {
             </>
           )}
         >
-          <SatniMain searchExpression={searchExpression} />
+          <SatniMain
+            searchExpression={searchExpression}
+            searchHandler={handleSearch}
+          />
         </Sentry.ErrorBoundary>
       </main>
     </div>

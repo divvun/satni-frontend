@@ -8,9 +8,10 @@ import qs from 'qs';
 
 import { locationParser } from '../utils';
 import Articles from '../features/article/Articles';
-import { WelcomeHeader } from './Welcome';
 import InfiniteStems from '../features/infinitestems/InfiniteStems';
 import StatusBar from './StatusBar';
+import FilterBar from '../features/search/FilterBar';
+import { WelcomeHeader } from './Welcome';
 
 export const GET_LANGS_AND_DICTS = gql`
   query GetLangsAndDicts {
@@ -19,7 +20,7 @@ export const GET_LANGS_AND_DICTS = gql`
   }
 `;
 
-const SatniMain = ({ searchExpression }) => {
+const SatniMain = ({ searchExpression, searchHandler }) => {
   const location = useLocation();
   const locationDict = qs.parse(location.search.slice(1));
   const { data, error, loading } = useQuery(GET_LANGS_AND_DICTS);
@@ -45,15 +46,13 @@ const SatniMain = ({ searchExpression }) => {
       <Route path="/">
         <Grid container>
           <Grid item xs={12}>
-            {currentLemma || searchExpression ? (
-              <StatusBar
-                wantedDicts={wantedDicts}
-                wantedLangs={data.wantedLangs}
-                currentLemma={currentLemma}
-              />
-            ) : (
-              <WelcomeHeader />
-            )}
+            <StatusBar
+              wantedDicts={wantedDicts}
+              wantedLangs={data.wantedLangs}
+              currentLemma={currentLemma}
+            />
+            <FilterBar searchHandler={searchHandler} />
+            {!currentLemma && <WelcomeHeader />}
           </Grid>
           <Grid item xs={4}>
             {searchExpression && (
@@ -82,6 +81,7 @@ const SatniMain = ({ searchExpression }) => {
 
 SatniMain.propTypes = {
   searchExpression: PropTypes.string.isRequired,
+  searchHandler: PropTypes.func.isRequired,
 };
 
 export default SatniMain;

@@ -16,14 +16,14 @@ import InputWithTranslation from './InputWithTranslation';
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
     marginLeft: theme.spacing(2),
     display: 'flex',
     alignItems: 'center',
     flexGrow: 1,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: fade(theme.palette.common.black, 0.15),
     '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: fade(theme.palette.common.black, 0.25),
     },
   },
   iconButton: {
