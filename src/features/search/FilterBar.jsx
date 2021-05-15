@@ -32,7 +32,7 @@ export const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function FilterBar({ searchHandler }) {
+const FilterBar = ({ searchHandler }) => {
   const classes = useStyles();
   const history = useHistory();
   const location = useLocation();
@@ -127,7 +127,7 @@ function FilterBar({ searchHandler }) {
       </Popover>
     </Paper>
   );
-}
+};
 
 FilterBar.propTypes = {
   searchHandler: PropTypes.func.isRequired,

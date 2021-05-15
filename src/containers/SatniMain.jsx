@@ -12,6 +12,7 @@ import InfiniteStems from '../features/infinitestems/InfiniteStems';
 import StatusBar from './StatusBar';
 import FilterBar from '../features/search/FilterBar';
 import { WelcomeHeader } from './Welcome';
+import WildCard from '../features/search/WildCard';
 
 export const GET_LANGS_AND_DICTS = gql`
   query GetLangsAndDicts {
@@ -45,12 +46,17 @@ const SatniMain = ({ searchExpression, searchHandler }) => {
       <Redirect from="/details" to={`/${locationDict.lemma}`} />
       <Route path="/">
         <Grid container>
-          <Grid item xs={12}>
+          <Grid item xs={6}>
             <StatusBar
               wantedDicts={wantedDicts}
               wantedLangs={data.wantedLangs}
               currentLemma={currentLemma}
             />
+          </Grid>
+          <Grid item xs={6}>
+            <WildCard />
+          </Grid>
+          <Grid item xs={12}>
             <FilterBar searchHandler={searchHandler} />
             {!currentLemma && <WelcomeHeader />}
           </Grid>

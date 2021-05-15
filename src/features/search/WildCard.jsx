@@ -4,7 +4,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 
-export default function WildCard() {
+const WildCard = () => {
   const [value, setValue] = React.useState('start');
 
   const handleChange = (event) => {
@@ -26,4 +26,6 @@ export default function WildCard() {
       </RadioGroup>
     </FormControl>
   );
-}
+};
+
+export default WildCard;
