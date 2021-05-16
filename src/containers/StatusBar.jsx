@@ -58,8 +58,8 @@ const StatusBar = ({ wantedDicts, wantedLangs, currentLemma }) => {
 };
 
 StatusBar.propTypes = {
-  wantedLangs: PropTypes.arrayOf.isRequired,
-  wantedDicts: PropTypes.arrayOf.isRequired,
+  wantedLangs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  wantedDicts: PropTypes.arrayOf(PropTypes.string).isRequired,
   currentLemma: PropTypes.string.isRequired,
 };
 

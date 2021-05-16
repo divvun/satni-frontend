@@ -191,8 +191,8 @@ const Articles = ({ lemma, wantedDicts, wantedLangs }) => {
 
 Articles.propTypes = {
   lemma: PropTypes.string.isRequired,
-  wantedDicts: PropTypes.arrayOf.isRequired,
-  wantedLangs: PropTypes.arrayOf.isRequired,
+  wantedDicts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  wantedLangs: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Articles;
