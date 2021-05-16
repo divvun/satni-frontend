@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
 
 import Grid from '@material-ui/core/Grid';
@@ -13,18 +13,12 @@ import StatusBar from './StatusBar';
 import FilterBar from '../features/search/FilterBar';
 import { WelcomeHeader } from './Welcome';
 import WildCard from '../features/search/WildCard';
-
-export const GET_LANGS_AND_DICTS = gql`
-  query GetLangsAndDicts {
-    wantedDicts @client
-    wantedLangs @client
-  }
-`;
+import GET_LANGS_DICTS from '../operations/queries/getLangsDicts';
 
 const SatniMain = ({ searchExpression, searchHandler }) => {
   const location = useLocation();
   const locationDict = qs.parse(location.search.slice(1));
-  const { data, error, loading } = useQuery(GET_LANGS_AND_DICTS);
+  const { data, error, loading } = useQuery(GET_LANGS_DICTS);
   const { currentLemma, currentDict } = locationParser(location.pathname);
 
   useEffect(() => {

@@ -4,19 +4,9 @@ import IconButton from '@material-ui/core/IconButton';
 import InfoOutlined from '@material-ui/icons/InfoOutlined';
 import PropTypes from 'prop-types';
 import Tooltip from '@material-ui/core/Tooltip';
-import { useQuery, gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 
-const GET_NOUN = gql`
-  query paradigm($text: String!, $lang: String!, $pos: String!) {
-    paradigm(text: $text, lang: $lang, pos: $pos)
-      @rest(
-        type: "Paradigm"
-        path: "smi.cgi?{args}&mode=full&action=paradigm&json=true"
-      ) {
-      analyses
-    }
-  }
-`;
+import GET_NOUN from '../../operations/queries/getNoun';
 
 const ParadigmButton = ({ lemma, language, pos, onClick, classes }) => {
   const paradigmLangs = new Set(['sme', 'sma', 'smn', 'sms', 'smj', 'fin']);

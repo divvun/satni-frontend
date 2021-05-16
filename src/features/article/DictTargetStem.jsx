@@ -1,17 +1,10 @@
 import React from 'react';
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import PropTypes from 'prop-types';
 
 import Stem from './Stem';
-
-export const HAS_STEM = gql`
-  query HasStem($stem: String!) {
-    hasStem(exact: $stem) {
-      stem
-    }
-  }
-`;
+import HAS_STEM from '../../operations/queries/hasStem';
 
 const DictTargetStem = ({ stem, restriction }) => {
   const { lemma } = stem;

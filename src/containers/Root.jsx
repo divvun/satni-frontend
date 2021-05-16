@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as Sentry from '@sentry/react';
-import { ApolloClient, gql, useQuery } from '@apollo/client';
+import { ApolloClient, useQuery } from '@apollo/client';
 import { I18nProvider } from '@lingui/react';
 import {
   createMuiTheme,
@@ -11,16 +11,11 @@ import PropTypes from 'prop-types';
 
 import AsyncApp from './AsyncApp';
 import ProviderWrapper from './ProviderWrapper';
+import GET_INTERFACE_LANGUAGE from '../operations/queries/getInterfaceLanguage';
 
 async function loadMessages(language) {
   return import(`@lingui/loader!locales/${language}/messages.po`);
 }
-
-export const GET_INTERFACE_LANGUAGE = gql`
-  query GetInterfaceLanguage {
-    interfaceLanguage @client
-  }
-`;
 
 const InterfaceLanguage = () => {
   const { data, error, loading } = useQuery(GET_INTERFACE_LANGUAGE);

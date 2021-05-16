@@ -1,24 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
-import { useQuery, gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 
 import { filterProp } from '../../utils';
 import AdjParadigm from './AdjParadigm';
 import NounParadigm from './NounParadigm';
 import VerbParadigm from './VerbParadigm';
-
-const GET_NOUN = gql`
-  query paradigm($text: String!, $lang: String!, $pos: String!) {
-    paradigm(text: $text, lang: $lang, pos: $pos)
-      @rest(
-        type: "Paradigm"
-        path: "smi.cgi?{args}&mode=full&action=paradigm&json=true"
-      ) {
-      analyses
-    }
-  }
-`;
+import GET_NOUN from '../../operations/queries/getNoun';
 
 const langs = new Set(['fin', 'sma', 'sme', 'smj', 'smn', 'sms']);
 const poses = new Set(['N', 'V', 'A']);

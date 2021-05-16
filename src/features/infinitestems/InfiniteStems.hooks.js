@@ -1,35 +1,6 @@
 /* eslint-disable no-underscore-dangle */
-import { gql, useQuery } from '@apollo/client';
-
-const GET_LEMMAS = gql`
-  query AllLemmas(
-    $inputValue: String!
-    $wantedLangs: [String]!
-    $wantedDicts: [String]!
-    $after: String
-  ) {
-    stemList(
-      first: 100
-      search: $inputValue
-      wanted: $wantedLangs
-      wantedDicts: $wantedDicts
-      after: $after
-    ) {
-      totalCount
-      edges {
-        node {
-          stem
-          srclangs
-          targetlangs
-        }
-      }
-      pageInfo {
-        endCursor
-        hasNextPage
-      }
-    }
-  }
-`;
+import { useQuery } from '@apollo/client';
+import GET_LEMMAS from '../../operations/queries/getLemmas';
 
 function useStems(inputValue, wantedDicts, wantedLangs) {
   const { data, loading, fetchMore, error } = useQuery(GET_LEMMAS, {
