@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useQuery } from '@apollo/client';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
 import AppBar from '@material-ui/core/AppBar';
@@ -12,7 +13,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import DictChooser from './DictChooser';
-import { wantedDictsVar } from '../../apolloCache';
+import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
+import setWantedDicts from '../../operations/mutations/setWantedDicts';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,11 +33,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DictChooserDialog = ({ open, onClose }) => {
+  const getLangsDictsResult = useQuery(GET_LANGS_DICTS);
+  const { wantedDicts: dicts } = getLangsDictsResult.data;
   const classes = useStyles();
-  const [dicts, setDicts] = useState(wantedDictsVar());
-
   const handleClose = () => {
-    wantedDictsVar(dicts);
     onClose();
   };
 
@@ -58,7 +59,7 @@ const DictChooserDialog = ({ open, onClose }) => {
       </AppBar>
       <Box className={classes.root}>
         <DialogContent>
-          <DictChooser dicts={dicts} setDicts={setDicts} />
+          <DictChooser dicts={dicts} setDicts={setWantedDicts} />
         </DialogContent>
       </Box>
     </Dialog>

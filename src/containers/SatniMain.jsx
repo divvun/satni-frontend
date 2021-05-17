@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useQuery } from '@apollo/client';
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
 
@@ -20,14 +20,6 @@ const SatniMain = ({ searchExpression, searchHandler }) => {
   const locationDict = qs.parse(location.search.slice(1));
   const { data, error, loading } = useQuery(GET_LANGS_DICTS);
   const { currentLemma, currentDict } = locationParser(location.pathname);
-
-  useEffect(() => {
-    localStorage.setItem('wantedDicts', JSON.stringify(data.wantedDicts));
-  }, [data.wantedDicts]);
-
-  useEffect(() => {
-    localStorage.setItem('wantedLangs', JSON.stringify(data.wantedLangs));
-  }, [data.wantedLangs]);
 
   const wantedDicts = currentDict ? [currentDict] : data.wantedDicts;
 

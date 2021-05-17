@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useQuery } from '@apollo/client';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
 import AppBar from '@material-ui/core/AppBar';
@@ -12,7 +13,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import LangChooser from './LangChooser';
-import { wantedLangsVar } from '../../apolloCache';
+import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
+import setWantedLangs from '../../operations/mutations/setWantedLangs';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,11 +33,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const LangChooserDialog = ({ open, onClose }) => {
+  const getLangsDictsResult = useQuery(GET_LANGS_DICTS);
+  const { wantedLangs: langs } = getLangsDictsResult.data;
   const classes = useStyles();
-  const [langs, setLangs] = useState(wantedLangsVar());
 
   const handleClose = () => {
-    wantedLangsVar(langs);
     onClose();
   };
 
@@ -58,7 +60,7 @@ const LangChooserDialog = ({ open, onClose }) => {
       </AppBar>
       <Box className={classes.root}>
         <DialogContent>
-          <LangChooser langs={langs} setLangs={setLangs} />
+          <LangChooser langs={langs} setLangs={setWantedLangs} />
         </DialogContent>
       </Box>
     </Dialog>
