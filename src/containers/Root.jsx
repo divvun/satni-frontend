@@ -32,10 +32,6 @@ const InterfaceLanguage = () => {
     fetchCatalog();
   }, [interfaceLanguage]);
 
-  useEffect(() => {
-    localStorage.setItem('interfaceLanguage', interfaceLanguage);
-  }, [interfaceLanguage]);
-
   return (
     <I18nProvider language={interfaceLanguage} catalogs={catalogs}>
       <AsyncApp />

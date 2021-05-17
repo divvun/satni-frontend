@@ -1,15 +1,20 @@
 import React from 'react';
+import { useQuery } from '@apollo/client';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 
-import { interfaceLanguageVar } from '../apolloCache';
+import GET_INTERFACE_LANGUAGE from '../operations/queries/getInterfaceLanguage';
+import setInterfaceLanguage from '../operations/mutations/setInterfaceLanguage';
 
 const MetaLanguageSelector = () => {
+  const interfaceLanguageQueryResult = useQuery(GET_INTERFACE_LANGUAGE);
+  const { interfaceLanguage } = interfaceLanguageQueryResult.data;
+
   const handleChange = (event) => {
     event.preventDefault();
-    interfaceLanguageVar(event.target.value);
+    setInterfaceLanguage(event.target.value);
   };
 
   return (
@@ -18,7 +23,7 @@ const MetaLanguageSelector = () => {
       <Select
         labelId="page-language-label"
         id="page-language"
-        value={interfaceLanguageVar()}
+        value={interfaceLanguage}
         onChange={handleChange}
         label="Page language"
       >
