@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import * as Sentry from '@sentry/react';
-import { ApolloClient, useQuery } from '@apollo/client';
-import { I18nProvider } from '@lingui/react';
+import { ApolloClient } from '@apollo/client';
 import {
   createMuiTheme,
   ThemeProvider as MuiThemeProvider,
@@ -9,35 +8,8 @@ import {
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 
-import AsyncApp from './AsyncApp';
 import ProviderWrapper from './ProviderWrapper';
-import GET_INTERFACE_LANGUAGE from '../operations/queries/getInterfaceLanguage';
-
-async function loadMessages(language) {
-  return import(`@lingui/loader!locales/${language}/messages.po`);
-}
-
-const InterfaceLanguage = () => {
-  const interfaceLanguageQueryResult = useQuery(GET_INTERFACE_LANGUAGE);
-  const { interfaceLanguage } = interfaceLanguageQueryResult.data;
-  const [catalogs, setCatalogs] = useState({});
-
-  const handleLanguageChange = async (lang) => {
-    const newCatalog = await loadMessages(lang);
-    setCatalogs((cats) => ({ ...cats, [lang]: newCatalog }));
-  };
-
-  useEffect(() => {
-    const fetchCatalog = () => handleLanguageChange(interfaceLanguage);
-    fetchCatalog();
-  }, [interfaceLanguage]);
-
-  return (
-    <I18nProvider language={interfaceLanguage} catalogs={catalogs}>
-      <AsyncApp />
-    </I18nProvider>
-  );
-};
+import InterfaceLanguage from './InterfaceLanguage';
 
 const Root = ({ store, client }) => {
   return (
