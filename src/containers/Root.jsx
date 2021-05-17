@@ -18,13 +18,8 @@ async function loadMessages(language) {
 }
 
 const InterfaceLanguage = () => {
-  const { data, error, loading } = useQuery(GET_INTERFACE_LANGUAGE);
-  if (loading) return <div>Loading language …</div>;
-  if (error) return <div>Error: {JSON.stringify(error)}</div>;
-  return <GivenInterface language={data.interfaceLanguage} />;
-};
-
-const GivenInterface = ({ language }) => {
+  const interfaceLanguageQueryResult = useQuery(GET_INTERFACE_LANGUAGE);
+  const { interfaceLanguage } = interfaceLanguageQueryResult.data;
   const [catalogs, setCatalogs] = useState({});
 
   const handleLanguageChange = async (lang) => {
@@ -33,23 +28,19 @@ const GivenInterface = ({ language }) => {
   };
 
   useEffect(() => {
-    const fetchCatalog = () => handleLanguageChange(language);
+    const fetchCatalog = () => handleLanguageChange(interfaceLanguage);
     fetchCatalog();
-  }, [language]);
+  }, [interfaceLanguage]);
 
   useEffect(() => {
-    localStorage.setItem('interfaceLanguage', language);
-  }, [language]);
+    localStorage.setItem('interfaceLanguage', interfaceLanguage);
+  }, [interfaceLanguage]);
 
   return (
-    <I18nProvider language={language} catalogs={catalogs}>
+    <I18nProvider language={interfaceLanguage} catalogs={catalogs}>
       <AsyncApp />
     </I18nProvider>
   );
-};
-
-GivenInterface.propTypes = {
-  language: PropTypes.string.isRequired,
 };
 
 const Root = ({ store, client }) => {
