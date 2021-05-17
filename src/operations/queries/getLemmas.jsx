@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 const GET_LEMMAS = gql`
   query AllLemmas(
     $inputValue: String!
-    $mode: String!
+    $searchMode: String!
     $wantedLangs: [String]!
     $wantedDicts: [String]!
     $after: String
@@ -11,7 +11,7 @@ const GET_LEMMAS = gql`
     stemList(
       first: 100
       search: $inputValue
-      mode: $mode
+      mode: $searchMode
       wanted: $wantedLangs
       wantedDicts: $wantedDicts
       after: $after

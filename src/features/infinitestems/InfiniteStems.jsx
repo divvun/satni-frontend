@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import * as Sentry from '@sentry/react';
+import { useQuery } from '@apollo/client';
 import { makeStyles } from '@material-ui/core/styles';
 import { FixedSizeList as List } from 'react-window';
 import { Link, useLocation } from 'react-router-dom';
-import { Trans } from '@lingui/macro';
 import AutoSizer from 'react-virtualized-auto-sizer';
 import InfiniteLoader from 'react-window-infinite-loader';
 import ListItem from '@material-ui/core/ListItem';
@@ -14,7 +14,9 @@ import Truncate from 'react-truncate';
 import Typography from '@material-ui/core/Typography';
 
 import useStems from './InfiniteStems.hooks';
+import SearchInfo from './SearchInfo';
 import { locationParser } from '../../utils';
+import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
 
 const useStyles = makeStyles(() => ({
   infiniteList: {
@@ -29,6 +31,8 @@ const useStyles = makeStyles(() => ({
 }));
 
 const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
+  const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
+  const { searchMode } = searchModeQueryResult.data;
   const { stems, loading, loadMore, hasNextPage, totalCount } = useStems(
     searchExpression,
     wantedDicts,
@@ -47,15 +51,12 @@ const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
   return (
     <div className={classes.infiniteList}>
       <Typography className={classes.status}>
-        {totalCount ? (
-          <Trans>
-            {stems.length}/{totalCount} starting with <b>{searchExpression}</b>
-          </Trans>
-        ) : (
-          <Trans>
-            No results for <b>{searchExpression}</b>
-          </Trans>
-        )}
+        <SearchInfo
+          stemsLength={stems.length}
+          totalCount={totalCount}
+          searchExpression={searchExpression}
+          searchMode={searchMode}
+        />
       </Typography>
       <AutoSizer>
         {({ height, width }) => (
@@ -124,8 +125,8 @@ const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
 
 InfiniteStems.propTypes = {
   searchExpression: PropTypes.string.isRequired,
-  wantedDicts: PropTypes.arrayOf.isRequired,
-  wantedLangs: PropTypes.arrayOf.isRequired,
+  wantedDicts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  wantedLangs: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default InfiniteStems;

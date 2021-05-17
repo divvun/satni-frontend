@@ -5,12 +5,12 @@ import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
 
 function useStems(inputValue, wantedDicts, wantedLangs) {
   const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
-  const { searchMode: mode } = searchModeQueryResult.data;
+  const { searchMode } = searchModeQueryResult.data;
   const { data, loading, fetchMore, error } = useQuery(GET_LEMMAS, {
     notifyOnNetworkStatusChange: true,
     variables: {
       inputValue,
-      mode,
+      searchMode,
       wantedLangs,
       wantedDicts,
     },

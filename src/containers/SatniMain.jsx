@@ -14,8 +14,11 @@ import FilterBar from '../features/search/FilterBar';
 import { WelcomeHeader } from './Welcome';
 import WildCard from '../features/search/WildCard';
 import GET_LANGS_DICTS from '../operations/queries/getLangsDicts';
+import GET_SEARCH_MODE from '../operations/queries/getSearchMode';
 
 const SatniMain = ({ searchExpression, searchHandler }) => {
+  const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
+  const { searchMode } = searchModeQueryResult.data;
   const location = useLocation();
   const locationDict = qs.parse(location.search.slice(1));
   const { data, error, loading } = useQuery(GET_LANGS_DICTS);
@@ -53,6 +56,7 @@ const SatniMain = ({ searchExpression, searchHandler }) => {
                 wantedDicts={wantedDicts}
                 wantedLangs={data.wantedLangs}
                 currentDict={currentDict}
+                searchMode={searchMode}
               />
             )}
           </Grid>
