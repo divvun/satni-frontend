@@ -1,14 +1,19 @@
 import React from 'react';
+import { useQuery } from '@apollo/client';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 
+import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
+import setSearchMode from '../../operations/mutations/setSearchMode';
+
 const WildCard = () => {
-  const [value, setValue] = React.useState('start');
+  const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
+  const { searchMode } = searchModeQueryResult.data;
 
   const handleChange = (event) => {
-    setValue(event.target.value);
+    setSearchMode(event.target.value);
   };
 
   return (
@@ -17,7 +22,7 @@ const WildCard = () => {
         row
         aria-label="searchFrom"
         name="searchFrom1"
-        value={value}
+        value={searchMode}
         onChange={handleChange}
       >
         <FormControlLabel value="start" control={<Radio />} label="Start" />

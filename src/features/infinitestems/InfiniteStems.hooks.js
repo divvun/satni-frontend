@@ -1,12 +1,16 @@
 /* eslint-disable no-underscore-dangle */
 import { useQuery } from '@apollo/client';
 import GET_LEMMAS from '../../operations/queries/getLemmas';
+import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
 
 function useStems(inputValue, wantedDicts, wantedLangs) {
+  const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
+  const { searchMode: mode } = searchModeQueryResult.data;
   const { data, loading, fetchMore, error } = useQuery(GET_LEMMAS, {
     notifyOnNetworkStatusChange: true,
     variables: {
       inputValue,
+      mode,
       wantedLangs,
       wantedDicts,
     },

@@ -20,6 +20,8 @@ export const wantedLangsVar = makeVar(
     : availableLanguages,
 );
 
+export const searchModeVar = makeVar('start');
+
 export const cache = new InMemoryCache({
   typePolicies: {
     Query: {
@@ -37,6 +39,11 @@ export const cache = new InMemoryCache({
         wantedLangs: {
           read() {
             return wantedLangsVar();
+          },
+        },
+        searchMode: {
+          read() {
+            return searchModeVar();
           },
         },
       },
