@@ -1,4 +1,5 @@
 import { InMemoryCache, makeVar } from '@apollo/client';
+import { relayStylePagination } from '@apollo/client/utilities';
 import { availableLanguages } from './utils';
 import dictionaryInfo from './translateble_variables';
 
@@ -46,6 +47,7 @@ export const cache = new InMemoryCache({
             return searchModeVar();
           },
         },
+        stemList: relayStylePagination(['search', 'mode']),
       },
     },
   },
