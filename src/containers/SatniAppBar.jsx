@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
 import AppBar from '@material-ui/core/AppBar';
@@ -22,14 +23,16 @@ const SatniAppBar = ({ handleDrawerToggle, drawerWidth }) => {
         marginLeft: drawerWidth,
       },
     },
-    helpButton: {
-      paddingLeft: theme.spacing(4),
-    },
     menuButton: {
-      marginRight: theme.spacing(2),
       [theme.breakpoints.up('md')]: {
         display: 'none',
       },
+    },
+    title: {
+      flexGrow: 1,
+    },
+    titleLink: {
+      color: 'white',
     },
   }));
   const classes = useStyles();
@@ -44,7 +47,12 @@ const SatniAppBar = ({ handleDrawerToggle, drawerWidth }) => {
 
   return (
     <AppBar position="static" className={classes.appBar}>
-      <Toolbar>
+      <Toolbar variant="dense">
+        <Typography variant="h6" noWrap className={classes.title}>
+          <Link className={classes.titleLink} to="/">
+            sátni.org
+          </Link>
+        </Typography>
         <Tooltip
           title={<Trans>Settings</Trans>}
           aria-label={<Trans>Settings</Trans>}
@@ -54,14 +62,10 @@ const SatniAppBar = ({ handleDrawerToggle, drawerWidth }) => {
             aria-label="Settings"
             edge="start"
             onClick={handleDrawerToggle}
-            className={classes.menuButton}
           >
             <MenuIcon />
           </IconButton>
         </Tooltip>
-        <Typography variant="h6" noWrap>
-          sátni.org
-        </Typography>
         <Tooltip title={<Trans>Help</Trans>} aria-label={<Trans>Help</Trans>}>
           <IconButton
             color="inherit"
