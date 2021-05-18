@@ -18,7 +18,6 @@ import WildCard from './WildCard';
 export const useStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.common.black,
-    marginLeft: theme.spacing(2),
     display: 'flex',
     alignItems: 'center',
     flexGrow: 1,
