@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import FeedbackIcon from '@material-ui/icons/Feedback';
 import Hidden from '@material-ui/core/Hidden';
-import HomeIcon from '@material-ui/icons/Home';
 import LanguageIcon from '@material-ui/icons/Language';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -75,12 +73,7 @@ const Footer = () => (
   </List>
 );
 
-const SatniDrawer = ({
-  drawerWidth,
-  handleDrawerToggle,
-  mobileOpen,
-  handleSearch,
-}) => {
+const SatniDrawer = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
   const useStyles = makeStyles((theme) => ({
     drawer: {
       [theme.breakpoints.up('sm')]: {
@@ -116,24 +109,6 @@ const SatniDrawer = ({
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        <ListItem
-          key="Home"
-          button
-          onClick={() => {
-            handleSearch('');
-          }}
-        >
-          <ListItemIcon>
-            <HomeIcon />
-          </ListItemIcon>
-          <ListItemText
-            primary={
-              <Link to="/">
-                <Trans>Start</Trans>
-              </Link>
-            }
-          />
-        </ListItem>
         <ListItem
           key="LangChooser"
           onClick={handleClickLangChooserDialog}
@@ -225,7 +200,6 @@ SatniDrawer.propTypes = {
   drawerWidth: PropTypes.number.isRequired,
   handleDrawerToggle: PropTypes.func.isRequired,
   mobileOpen: PropTypes.bool.isRequired,
-  handleSearch: PropTypes.func.isRequired,
 };
 
 export default SatniDrawer;

@@ -51,7 +51,6 @@ const AsyncApp = ({ classes }) => {
     <div className={classes.container}>
       <CssBaseline />
       <SatniAppBar
-        handleSearch={handleSearch}
         handleDrawerToggle={handleDrawerToggle}
         drawerWidth={drawerWidth}
       />
