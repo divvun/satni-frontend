@@ -1,9 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
+import { Trans } from '@lingui/macro';
 import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
 
 import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
 import setSearchMode from '../../operations/mutations/setSearchMode';
@@ -17,19 +15,29 @@ const WildCard = () => {
   };
 
   return (
-    <FormControl component="fieldset">
-      <RadioGroup
-        row
-        aria-label="searchFrom"
-        name="searchFrom1"
-        value={searchMode}
-        onChange={handleChange}
-      >
-        <FormControlLabel value="start" control={<Radio />} label="Start" />
-        <FormControlLabel value="middle" control={<Radio />} label="Middle" />
-        <FormControlLabel value="end" control={<Radio />} label="End" />
-      </RadioGroup>
-    </FormControl>
+    <>
+      <Trans>Search mode:</Trans>
+      <>
+        <Radio
+          checked={searchMode === 'start'}
+          onChange={handleChange}
+          value="start"
+          inputProps={{ 'aria-label': 'Start' }}
+        />
+        <Radio
+          checked={searchMode === 'middle'}
+          onChange={handleChange}
+          value="middle"
+          inputProps={{ 'aria-label': 'Middle' }}
+        />
+        <Radio
+          checked={searchMode === 'end'}
+          onChange={handleChange}
+          value="end"
+          inputProps={{ 'aria-label': 'End' }}
+        />
+      </>
+    </>
   );
 };
 
