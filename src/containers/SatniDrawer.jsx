@@ -84,7 +84,9 @@ const SatniDrawer = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
     drawerPaper: {
       width: drawerWidth,
     },
-    toolbar: theme.mixins.toolbar,
+    toolbarDense: {
+      minHeight: 48,
+    },
   }));
   const classes = useStyles();
 
@@ -106,7 +108,7 @@ const SatniDrawer = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
 
   const drawer = (
     <div>
-      <div className={classes.toolbar} />
+      <div className={classes.toolbarDense} />
       <Divider />
       <List>
         <ListItem
