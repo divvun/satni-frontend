@@ -20,13 +20,12 @@ const SatniMain = ({ searchExpression, searchHandler }) => {
   const { searchMode } = searchModeQueryResult.data;
   const location = useLocation();
   const locationDict = qs.parse(location.search.slice(1));
-  const { data, error, loading } = useQuery(GET_LANGS_DICTS);
+  const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
   const { currentLemma, currentDict } = locationParser(location.pathname);
 
-  const wantedDicts = currentDict ? [currentDict] : data.wantedDicts;
-
-  if (loading) return <div>Loading dicts and languages</div>;
-  if (error) return <div>Error loading dicts and languages</div>;
+  const wantedDicts = currentDict
+    ? [currentDict]
+    : langsDictsQueryResult.data.wantedDicts;
 
   return (
     <Switch>
@@ -37,7 +36,7 @@ const SatniMain = ({ searchExpression, searchHandler }) => {
           <Grid item xs={12}>
             <StatusBar
               wantedDicts={wantedDicts}
-              wantedLangs={data.wantedLangs}
+              wantedLangs={langsDictsQueryResult.data.wantedLangs}
               currentLemma={currentLemma}
             />
           </Grid>
@@ -50,7 +49,7 @@ const SatniMain = ({ searchExpression, searchHandler }) => {
               <InfiniteStems
                 searchExpression={searchExpression}
                 wantedDicts={wantedDicts}
-                wantedLangs={data.wantedLangs}
+                wantedLangs={langsDictsQueryResult.data.wantedLangs}
                 currentDict={currentDict}
                 searchMode={searchMode}
               />
@@ -61,7 +60,7 @@ const SatniMain = ({ searchExpression, searchHandler }) => {
               <Articles
                 lemma={currentLemma}
                 wantedDicts={wantedDicts}
-                wantedLangs={data.wantedLangs}
+                wantedLangs={langsDictsQueryResult.data.wantedLangs}
               />
             )}
           </Grid>
