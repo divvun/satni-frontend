@@ -44,7 +44,7 @@ const Footer = () => (
         inset
         primary={<Trans>
           <a
-            href='http://divvun.no'
+            href='http://giella.org'
             target='_blank'
             rel='noopener noreferrer'
           >
