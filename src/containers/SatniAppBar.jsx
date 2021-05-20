@@ -12,6 +12,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 
 import HelpDialog from './HelpDialog';
+import setSearchExpression from '../operations/mutations/setSearchExpression';
 
 const SatniAppBar = ({ handleDrawerToggle, drawerWidth }) => {
   const useStyles = makeStyles((theme) => ({
@@ -49,7 +50,11 @@ const SatniAppBar = ({ handleDrawerToggle, drawerWidth }) => {
     <AppBar position="static" className={classes.appBar}>
       <Toolbar variant="dense">
         <Typography variant="h6" noWrap className={classes.title}>
-          <Link className={classes.titleLink} to="/">
+          <Link
+            className={classes.titleLink}
+            to="/"
+            onClick={() => setSearchExpression('')}
+          >
             sátni.org
           </Link>
         </Typography>
