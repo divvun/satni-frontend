@@ -54,7 +54,12 @@ export const cache = new InMemoryCache({
             return searchExpressionVar();
           },
         },
-        stemList: relayStylePagination(['search', 'mode']),
+        stemList: relayStylePagination([
+          'search',
+          'mode',
+          'wanted',
+          'wantedDicts',
+        ]),
       },
     },
   },
