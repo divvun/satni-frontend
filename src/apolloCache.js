@@ -23,6 +23,8 @@ export const wantedLangsVar = makeVar(
 
 export const searchModeVar = makeVar('start');
 
+export const searchExpressionVar = makeVar('');
+
 export const cache = new InMemoryCache({
   typePolicies: {
     Query: {
@@ -45,6 +47,11 @@ export const cache = new InMemoryCache({
         searchMode: {
           read() {
             return searchModeVar();
+          },
+        },
+        searchExpression: {
+          read() {
+            return searchExpressionVar();
           },
         },
         stemList: relayStylePagination(['search', 'mode']),
