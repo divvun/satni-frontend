@@ -2,13 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 import { Trans } from '@lingui/macro';
+import { useLocation } from 'react-router-dom';
+import { locationParser } from '../../utils';
 import GET_DICT_ARTICLES from '../../operations/queries/getDictArticles';
 import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
 import PresentDictArticles from './PresentDictArticles';
 
 const DictArticles = ({ lemma }) => {
-  const langsDictsResult = useQuery(GET_LANGS_DICTS);
-  const { wantedDicts, wantedLangs } = langsDictsResult.data;
+  const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
+  const { wantedLangs } = langsDictsQueryResult.data;
+  const location = useLocation();
+  const { currentDict } = locationParser(location.pathname);
+
+  const wantedDicts = currentDict
+    ? [currentDict]
+    : langsDictsQueryResult.data.wantedDicts;
+
   const { data, loading, error } = useQuery(GET_DICT_ARTICLES, {
     variables: {
       lemma,
@@ -16,6 +25,7 @@ const DictArticles = ({ lemma }) => {
       wantedDicts,
     },
   });
+
   if (loading) {
     return (
       <Trans>
