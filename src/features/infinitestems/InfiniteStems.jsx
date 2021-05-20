@@ -9,7 +9,6 @@ import InfiniteLoader from 'react-window-infinite-loader';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import PropTypes from 'prop-types';
 import Truncate from 'react-truncate';
 import Typography from '@material-ui/core/Typography';
 
@@ -31,15 +30,13 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const InfiniteStems = ({ wantedDicts, wantedLangs }) => {
+const InfiniteStems = () => {
   const searchExpressionQuery = useQuery(GET_SEARCH_EXPRESSION);
   const { searchExpression } = searchExpressionQuery.data;
   const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
   const { searchMode } = searchModeQueryResult.data;
   const { stems, loading, loadMore, hasNextPage, totalCount } = useStems(
     searchExpression,
-    wantedDicts,
-    wantedLangs,
   );
   const classes = useStyles();
   const [clickedItem, setClickedItem] = useState(-1);
@@ -126,11 +123,6 @@ const InfiniteStems = ({ wantedDicts, wantedLangs }) => {
       </AutoSizer>
     </div>
   );
-};
-
-InfiniteStems.propTypes = {
-  wantedDicts: PropTypes.arrayOf(PropTypes.string).isRequired,
-  wantedLangs: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default InfiniteStems;
