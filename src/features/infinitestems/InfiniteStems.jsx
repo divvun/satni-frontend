@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as Sentry from '@sentry/react';
 import { useQuery } from '@apollo/client';
 import { makeStyles } from '@material-ui/core/styles';
@@ -17,10 +17,12 @@ import SearchInfo from './SearchInfo';
 import { locationParser } from '../../utils';
 import GET_SEARCH_EXPRESSION from '../../operations/queries/getSearchExpression';
 import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
+import GET_SEARCH_LIST_CLICKED_ITEM from '../../operations/queries/getSearchListClickedItem';
+import setSearchListClickedItem from '../../operations/mutations/setSearchListClickedItem';
 
 const useStyles = makeStyles(() => ({
   infiniteList: {
-    height: '80vh',
+    height: '74vh',
   },
   status: {
     textAlign: 'center',
@@ -38,8 +40,9 @@ const InfiniteStems = () => {
   const { stems, loading, loadMore, hasNextPage, totalCount } = useStems(
     searchExpression,
   );
+  const searchListClickedItemQuery = useQuery(GET_SEARCH_LIST_CLICKED_ITEM);
+  const { searchListClickedItem } = searchListClickedItemQuery.data;
   const classes = useStyles();
-  const [clickedItem, setClickedItem] = useState(-1);
 
   const stemsCount = hasNextPage ? stems.length + 1 : stems.length;
   const loadMoreStems = loading ? () => {} : loadMore;
@@ -90,7 +93,7 @@ const InfiniteStems = () => {
                     <Truncate width={width - 50}>{stem}</Truncate>
                   );
                   const stemNode =
-                    stem === clickedItem ? (
+                    stem === searchListClickedItem ? (
                       <Typography component="span" className={classes.clicked}>
                         {truncStem}
                       </Typography>
@@ -107,7 +110,7 @@ const InfiniteStems = () => {
                       <ListItem
                         key={index}
                         style={style}
-                        onClick={() => setClickedItem(stem)}
+                        onClick={() => setSearchListClickedItem(stem)}
                       >
                         <ListItemText
                           primary={<Link to={path}>{stemNode}</Link>}
