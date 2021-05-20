@@ -1,5 +1,4 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
 
 import Grid from '@material-ui/core/Grid';
@@ -11,17 +10,11 @@ import InfiniteStems from '../features/infinitestems/InfiniteStems';
 import StatusBar from './StatusBar';
 import FilterBar from '../features/search/FilterBar';
 import { WelcomeHeader } from './Welcome';
-import GET_LANGS_DICTS from '../operations/queries/getLangsDicts';
 
 const SatniMain = () => {
   const location = useLocation();
   const locationDict = qs.parse(location.search.slice(1));
-  const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
-  const { currentLemma, currentDict } = locationParser(location.pathname);
-
-  const wantedDicts = currentDict
-    ? [currentDict]
-    : langsDictsQueryResult.data.wantedDicts;
+  const { currentLemma } = locationParser(location.pathname);
 
   return (
     <Switch>
@@ -41,19 +34,10 @@ const SatniMain = () => {
             {!currentLemma && <WelcomeHeader />}
           </Grid>
           <Grid item xs={4}>
-            <InfiniteStems
-              wantedDicts={wantedDicts}
-              wantedLangs={langsDictsQueryResult.data.wantedLangs}
-            />
+            <InfiniteStems />
           </Grid>
           <Grid item xs={8}>
-            {currentLemma && (
-              <Articles
-                lemma={currentLemma}
-                wantedDicts={wantedDicts}
-                wantedLangs={langsDictsQueryResult.data.wantedLangs}
-              />
-            )}
+            {currentLemma && <Articles lemma={currentLemma} />}
           </Grid>
         </Grid>
       </Route>
