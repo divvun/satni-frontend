@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useQuery } from '@apollo/client';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
 import { useHistory, useLocation } from 'react-router-dom';
@@ -6,10 +7,11 @@ import IconButton from '@material-ui/core/IconButton';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
 import Paper from '@material-ui/core/Paper';
 import Popover from '@material-ui/core/Popover';
-import PropTypes from 'prop-types';
 import SearchIcon from '@material-ui/icons/Search';
 import Tooltip from '@material-ui/core/Tooltip';
 
+import GET_SEARCH_EXPRESSION from '../../operations/queries/getSearchExpression';
+import setSearchExpression from '../../operations/mutations/setSearchExpression';
 import { locationParser } from '../../utils';
 import SamiKeys from './SamiKeys';
 import InputWithTranslation from './InputWithTranslation';
@@ -32,29 +34,26 @@ export const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const FilterBar = ({ searchHandler }) => {
+const FilterBar = () => {
   const classes = useStyles();
   const history = useHistory();
   const location = useLocation();
   const currentPath = locationParser(location.pathname);
-  const [value, setValue] = useState('');
+  const searchExpressionQuery = useQuery(GET_SEARCH_EXPRESSION);
+  const { searchExpression } = searchExpressionQuery.data;
 
   const handleChange = (event) => {
-    const newValue = event.target.value;
-    setValue(newValue);
-    searchHandler(newValue);
+    setSearchExpression(event.target.value);
   };
 
   const handleKeyInput = (input) => {
-    const newValue = `${value}${input}`;
-    setValue(newValue);
-    searchHandler(newValue);
+    setSearchExpression(`${searchExpression}${input}`);
   };
 
   const lookup = () => {
     const path = currentPath.currentDict
-      ? `/${currentPath.currentDict}/${value}`
-      : `/${value}`;
+      ? `/${currentPath.currentDict}/${searchExpression}`
+      : `/${searchExpression}`;
     history.push(path);
   };
 
@@ -93,7 +92,7 @@ const FilterBar = ({ searchHandler }) => {
         </IconButton>
       </Tooltip>
       <InputWithTranslation
-        value={value}
+        value={searchExpression}
         onChange={handleChange}
         onKeyUp={keyPress}
       />
@@ -138,10 +137,6 @@ const FilterBar = ({ searchHandler }) => {
       </Popover>
     </Paper>
   );
-};
-
-FilterBar.propTypes = {
-  searchHandler: PropTypes.func.isRequired,
 };
 
 export default FilterBar;

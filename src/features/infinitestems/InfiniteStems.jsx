@@ -16,6 +16,7 @@ import Typography from '@material-ui/core/Typography';
 import useStems from './InfiniteStems.hooks';
 import SearchInfo from './SearchInfo';
 import { locationParser } from '../../utils';
+import GET_SEARCH_EXPRESSION from '../../operations/queries/getSearchExpression';
 import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
 
 const useStyles = makeStyles(() => ({
@@ -30,7 +31,9 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
+const InfiniteStems = ({ wantedDicts, wantedLangs }) => {
+  const searchExpressionQuery = useQuery(GET_SEARCH_EXPRESSION);
+  const { searchExpression } = searchExpressionQuery.data;
   const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
   const { searchMode } = searchModeQueryResult.data;
   const { stems, loading, loadMore, hasNextPage, totalCount } = useStems(
@@ -50,14 +53,16 @@ const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
 
   return (
     <div className={classes.infiniteList}>
-      <Typography className={classes.status}>
-        <SearchInfo
-          stemsLength={stems.length}
-          totalCount={totalCount}
-          searchExpression={searchExpression}
-          searchMode={searchMode}
-        />
-      </Typography>
+      {searchExpression && (
+        <Typography className={classes.status}>
+          <SearchInfo
+            stemsLength={stems.length}
+            totalCount={totalCount}
+            searchExpression={searchExpression}
+            searchMode={searchMode}
+          />
+        </Typography>
+      )}
       <AutoSizer>
         {({ height, width }) => (
           <InfiniteLoader
@@ -124,7 +129,6 @@ const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
 };
 
 InfiniteStems.propTypes = {
-  searchExpression: PropTypes.string.isRequired,
   wantedDicts: PropTypes.arrayOf(PropTypes.string).isRequired,
   wantedLangs: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

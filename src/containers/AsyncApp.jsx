@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as Sentry from '@sentry/react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Button from '@material-ui/core/Button';
-import PropTypes from 'prop-types';
 
 import SatniAppBar from './SatniAppBar';
 import SatniDrawer from './SatniDrawer';
@@ -38,9 +37,6 @@ const styles = (theme) => ({
 });
 
 const AsyncApp = ({ classes }) => {
-  const [searchExpression, setSearchExpression] = useState('');
-  const handleSearch = (value) => setSearchExpression(value);
-
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -58,7 +54,6 @@ const AsyncApp = ({ classes }) => {
         drawerWidth={drawerWidth}
         handleDrawerToggle={handleDrawerToggle}
         mobileOpen={mobileOpen}
-        handleSearch={handleSearch}
       />
       <main className={classes.main}>
         <Sentry.ErrorBoundary
@@ -70,7 +65,6 @@ const AsyncApp = ({ classes }) => {
                 color="primary"
                 href="/"
                 onClick={() => {
-                  setSearchExpression('');
                   resetError();
                 }}
               >
@@ -79,10 +73,7 @@ const AsyncApp = ({ classes }) => {
             </>
           )}
         >
-          <SatniMain
-            searchExpression={searchExpression}
-            searchHandler={handleSearch}
-          />
+          <SatniMain />
         </Sentry.ErrorBoundary>
       </main>
     </div>
