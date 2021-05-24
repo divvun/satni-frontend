@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import * as Sentry from '@sentry/react';
 import { gql, useQuery } from '@apollo/client';
-import {
-  Redirect,
-  Route,
-  Switch,
-  useLocation
-} from 'react-router-dom';
+import { Link, Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import qs from 'qs';
 
@@ -30,16 +27,16 @@ export const GET_LANGS_AND_DICTS = gql`
   }
 `;
 
-const styles = theme => ({
+const styles = (theme) => ({
   '@global': {
     body: {
-      backgroundColor: theme.palette.common.grey
-    }
+      backgroundColor: theme.palette.common.grey,
+    },
   },
   container: {
     minHeight: '100vh',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   main: {
     display: 'flex',
@@ -48,20 +45,20 @@ const styles = theme => ({
     height: '80vh',
     [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth
+      marginLeft: drawerWidth,
     },
-    marginTop: theme.spacing(1)
-  }
+    marginTop: theme.spacing(1),
+  },
 });
 
-const AsyncApp = ({classes}) => {
-  const {data, error, loading} = useQuery(GET_LANGS_AND_DICTS);
+const AsyncApp = ({ classes }) => {
+  const { data, error, loading } = useQuery(GET_LANGS_AND_DICTS);
   const [searchExpression, setSearchExpression] = useState('');
   const location = useLocation();
-  const {currentLemma, currentDict} = locationParser(location.pathname);
+  const { currentLemma, currentDict } = locationParser(location.pathname);
   const location_dict = qs.parse(location.search.slice(1));
 
-  const handleSearch = value => setSearchExpression(value);
+  const handleSearch = (value) => setSearchExpression(value);
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -69,23 +66,15 @@ const AsyncApp = ({classes}) => {
     setMobileOpen(!mobileOpen);
   };
 
-  useEffect(
-    () => {
-      localStorage.setItem('wantedDicts', JSON.stringify(data.wantedDicts));
-    },
-    [data.wantedDicts]
-  );
+  useEffect(() => {
+    localStorage.setItem('wantedDicts', JSON.stringify(data.wantedDicts));
+  }, [data.wantedDicts]);
 
-  useEffect(
-    () => {
-      localStorage.setItem('wantedLangs', JSON.stringify(data.wantedLangs));
-    },
-    [data.wantedLangs]
-  );
+  useEffect(() => {
+    localStorage.setItem('wantedLangs', JSON.stringify(data.wantedLangs));
+  }, [data.wantedLangs]);
 
-  const wantedDicts = currentDict ?
-    [currentDict] :
-    data.wantedDicts;
+  const wantedDicts = currentDict ? [currentDict] : data.wantedDicts;
 
   if (loading) return <div>Loading dicts and languages</div>;
   if (error) return <div>Error loading dicts and languages</div>;
@@ -96,7 +85,8 @@ const AsyncApp = ({classes}) => {
       <SatniAppBar
         handleSearch={handleSearch}
         handleDrawerToggle={handleDrawerToggle}
-        drawerWidth={drawerWidth} />
+        drawerWidth={drawerWidth}
+      />
       <SatniDrawer
         drawerWidth={drawerWidth}
         handleDrawerToggle={handleDrawerToggle}
@@ -104,56 +94,74 @@ const AsyncApp = ({classes}) => {
         handleSearch={handleSearch}
       />
       <main className={classes.main}>
-        <Switch>
-          <Redirect
-            from={`/article/${currentLemma}`}
-            to={`/${currentLemma}`} />
-          <Redirect
-            from={'/details'}
-            to={`/${location_dict.lemma}`} />
-          <Route path='/'>
-            <Grid container>
-              <Grid
-                item
-                xs={12}
+        <Sentry.ErrorBoundary
+          fallback={({ error, resetError }) => (
+            <React.Fragment>
+              <div>You have encountered an error</div>
+              <div>{error.toString()}</div>
+              <Button
+                color='primary'
+                component={Link}
+                to='/'
+                onClick={() => {
+                  setSearchExpression('');
+                  resetError();
+                }}
               >
-                {(currentLemma || searchExpression) ?
-                  <StatusBar
-                    wantedDicts={wantedDicts}
-                    wantedLangs={data.wantedLangs}
-                    currentLemma={currentLemma} /> :
-                  <WelcomeHeader />
-                }
+                Click here to reset!
+              </Button>
+            </React.Fragment>
+          )}
+        >
+          <Switch>
+            <Redirect
+              from={`/article/${currentLemma}`}
+              to={`/${currentLemma}`}
+            />
+            <Redirect from={'/details'} to={`/${location_dict.lemma}`} />
+            <Route path='/'>
+              <Grid container>
+                <Grid item xs={12}>
+                  {currentLemma || searchExpression ? (
+                    <StatusBar
+                      wantedDicts={wantedDicts}
+                      wantedLangs={data.wantedLangs}
+                      currentLemma={currentLemma}
+                    />
+                  ) : (
+                    <WelcomeHeader />
+                  )}
+                </Grid>
+                <Grid item xs={4}>
+                  {searchExpression && (
+                    <InfiniteStems
+                      searchExpression={searchExpression}
+                      wantedDicts={wantedDicts}
+                      wantedLangs={data.wantedLangs}
+                      currentDict={currentDict}
+                    />
+                  )}
+                </Grid>
+                <Grid item xs={8}>
+                  {currentLemma && (
+                    <Articles
+                      lemma={currentLemma}
+                      wantedDicts={wantedDicts}
+                      wantedLangs={data.wantedLangs}
+                    />
+                  )}
+                </Grid>
               </Grid>
-              <Grid item xs={4}>
-                {searchExpression &&
-                  <InfiniteStems
-                    searchExpression={searchExpression}
-                    wantedDicts={wantedDicts}
-                    wantedLangs={data.wantedLangs}
-                    currentDict={currentDict}
-                  />
-                }
-              </Grid>
-              <Grid item xs={8}>
-                {currentLemma &&
-                  <Articles
-                    lemma={currentLemma}
-                    wantedDicts={wantedDicts}
-                    wantedLangs={data.wantedLangs}
-                  />
-                }
-              </Grid>
-            </Grid>
-          </Route>
-        </Switch>
+            </Route>
+          </Switch>
+        </Sentry.ErrorBoundary>
       </main>
     </div>
   );
 };
 
 AsyncApp.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(AsyncApp);
