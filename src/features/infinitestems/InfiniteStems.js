@@ -19,56 +19,62 @@ import { locationParser } from 'utils';
 
 const useStyles = makeStyles(() => ({
   infiniteList: {
-    height: '80vh'
+    height: '80vh',
   },
   status: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   clicked: {
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 }));
 
 const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
-  const {stems, loading, loadMore, hasNextPage, totalCount} = useStems(
-    searchExpression, wantedDicts, wantedLangs);
+  const { stems, loading, loadMore, hasNextPage, totalCount } = useStems(
+    searchExpression,
+    wantedDicts,
+    wantedLangs
+  );
   const classes = useStyles();
   const [clickedItem, setClickedItem] = useState(-1);
 
   const stemsCount = hasNextPage ? stems.length + 1 : stems.length;
   const loadMoreStems = loading ? () => {} : loadMore;
-  const isStemLoaded = index => !hasNextPage || index < stems.length;
+  const isStemLoaded = (index) => !hasNextPage || index < stems.length;
 
-  const {currentLemma, currentDict} = locationParser(useLocation().pathname);
+  const { currentLemma, currentDict } = locationParser(useLocation().pathname);
   if (loading && stems.length === 0) return <CircularProgress size={16} />;
 
   return (
     <div className={classes.infiniteList}>
       <Typography className={classes.status}>
-        {totalCount ?
+        {totalCount ? (
           <Trans>
             {stems.length}/{totalCount} starting with <b>{searchExpression}</b>
-          </Trans> :
+          </Trans>
+        ) : (
           <Trans>
             No results for <b>{searchExpression}</b>
           </Trans>
-        }
+        )}
       </Typography>
       <AutoSizer>
-        {({height, width}) => (
+        {({ height, width }) => (
           <InfiniteLoader
             isItemLoaded={isStemLoaded}
             itemCount={stemsCount}
-            loadMoreItems={loadMoreStems}>
-            {({onItemsRendered, ref}) => (
+            loadMoreItems={loadMoreStems}
+          >
+            {({ onItemsRendered, ref }) => (
               <List
                 height={height}
                 itemCount={stemsCount}
                 itemSize={20}
                 onItemsRendered={onItemsRendered}
                 ref={ref}
-                width={width}>
-                {({index, style}) => {
+                width={width}
+              >
+                {({ index, style }) => {
                   if (!isStemLoaded(index)) {
                     return (
                       <ListItem button key={index} style={style}>
@@ -77,28 +83,23 @@ const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
                     );
                   }
 
-                  const {stem} = stems[index];
-                  const truncStem = <Truncate
-                    width={width - 50}
-                  >
-                    {stem}
-                  </Truncate>;
-                  const stemNode = stem === clickedItem ?
-                    <Typography
-                      component='span'
-                      className={classes.clicked}
-                    >
-                      {truncStem}
-                    </Typography> :
-                    <Typography
-                      component='span'
-                    >
-                      {truncStem}
-                    </Typography>;
+                  const { stem } = stems[index];
+                  const truncStem = (
+                    <Truncate width={width - 50}>{stem}</Truncate>
+                  );
+                  const stemNode =
+                    stem === clickedItem ? (
+                      <Typography component='span' className={classes.clicked}>
+                        {truncStem}
+                      </Typography>
+                    ) : (
+                      <Typography component='span'>{truncStem}</Typography>
+                    );
 
-                  const path = (currentDict && !currentLemma) ?
-                    `${currentDict}/${stem}` :
-                    stem;
+                  const path =
+                    currentDict && !currentLemma
+                      ? `${currentDict}/${stem}`
+                      : stem;
                   return (
                     <Sentry.ErrorBoundary>
                       <ListItem
@@ -122,10 +123,10 @@ const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
   );
 };
 
-InfiniteStems.propTypes  = {
+InfiniteStems.propTypes = {
   searchExpression: PropTypes.string.isRequired,
   wantedDicts: PropTypes.array.isRequired,
-  wantedLangs: PropTypes.array.isRequired
+  wantedLangs: PropTypes.array.isRequired,
 };
 
 export default InfiniteStems;
