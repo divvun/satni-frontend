@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import * as Sentry from '@sentry/react';
 import { makeStyles } from '@material-ui/core/styles';
 import { FixedSizeList as List } from 'react-window';
 import { Link, useLocation } from 'react-router-dom';
@@ -99,13 +100,17 @@ const InfiniteStems = ({ searchExpression, wantedDicts, wantedLangs }) => {
                     `${currentDict}/${stem}` :
                     stem;
                   return (
-                    <ListItem
-                      key={index}
-                      style={style}
-                      onClick={() => setClickedItem(stem)}
-                    >
-                      <ListItemText primary={<Link to={path}>{stemNode}</Link>} />
-                    </ListItem>
+                    <Sentry.ErrorBoundary>
+                      <ListItem
+                        key={index}
+                        style={style}
+                        onClick={() => setClickedItem(stem)}
+                      >
+                        <ListItemText
+                          primary={<Link to={path}>{stemNode}</Link>}
+                        />
+                      </ListItem>
+                    </Sentry.ErrorBoundary>
                   );
                 }}
               </List>
