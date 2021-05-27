@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/containers/StatusBar.js:21
+#: src/containers/StatusBar.jsx:24
 msgid "(<0>Show all</0>)"
 msgstr ""
 
@@ -21,64 +21,77 @@ msgstr ""
 msgid "<0/>"
 msgstr ""
 
-#: src/features/article/Articles.js:140
+#: src/features/article/DictArticles.jsx:38
+#: src/features/article/TermArticles.jsx:29
 msgid "<0>Error {0}</0>"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:45
+#: src/containers/SatniDrawer.jsx:44
 msgid "<0>Giellagáldu</0>"
 msgstr ""
 
-#: src/features/article/Articles.js:139
-msgid "<0>Loading...</0>"
+#: src/features/article/DictArticles.jsx:31
+msgid "<0>Loading dicts …</0>"
 msgstr ""
+
+#: src/features/article/TermArticles.jsx:22
+msgid "<0>Loading terms …</0>"
+msgstr ""
+
+#: src/features/article/Articles.js:139
+#~ msgid "<0>Loading...</0>"
+#~ msgstr ""
 
 #: src/features/article/Articles.js:141
-msgid "<0>Not found</0>"
-msgstr ""
+#~ msgid "<0>Not found</0>"
+#~ msgstr ""
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:20
 msgid "A"
 msgstr ""
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:20
 msgid "Adv"
 msgstr ""
 
-#: src/translateble_variables.js:82
-#: src/translateble_variables.js:88
+#: src/translateble_variables.js:110
+#: src/translateble_variables.js:116
 msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
 msgstr ""
 
-#: src/translateble_variables.js:39
+#: src/translateble_variables.js:67
 msgid "Beaivválaš giella"
 msgstr ""
 
-#: src/translateble_variables.js:40
+#: src/translateble_variables.js:68
 msgid "Boazodoallu"
 msgstr ""
 
-#: src/features/article/TermWikiArticle.js:42
+#: src/features/article/TermWikiArticle.jsx:39
 msgid "Category"
 msgstr ""
 
-#: src/features/wantedlangs/DictChooserDialog.js:50
+#: src/features/wantedlangs/DictChooserDialog.jsx:56
 msgid "Choose dictionaries"
 msgstr ""
 
-#: src/features/wantedlangs/LangChooserDialog.js:50
+#: src/features/wantedlangs/LangChooserDialog.jsx:57
 msgid "Choose languages"
 msgstr ""
 
-#: src/containers/Welcome.js:123
+#: src/features/search/FilterBar.jsx:110
+msgid "Choose whether the search expression is in the start, middle or the end of words."
+msgstr ""
+
+#: src/containers/Welcome.jsx:134
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr ""
 
-#: src/features/article/Stem.js:98
+#: src/features/article/Stem.jsx:106
 msgid "Country"
 msgstr ""
 
-#: src/features/article/Definitions.js:20
+#: src/features/article/Definitions.jsx:20
 msgid "Definition"
 msgstr ""
 
@@ -86,23 +99,23 @@ msgstr ""
 #~ msgid "Definitions:"
 #~ msgstr ""
 
-#: src/containers/SatniDrawer.js:27
+#: src/containers/SatniDrawer.jsx:26
 msgid "Delivered by"
 msgstr ""
 
-#: src/features/article/Stem.js:97
+#: src/features/article/Stem.jsx:101
 msgid "Dialect"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:142
+#: src/containers/SatniDrawer.jsx:132
 msgid "Dictionaries"
 msgstr ""
 
-#: src/containers/Welcome.js:115
+#: src/containers/Welcome.jsx:128
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr ""
 
-#: src/translateble_variables.js:41
+#: src/translateble_variables.js:69
 msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr ""
 
@@ -110,43 +123,43 @@ msgstr ""
 #~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
 #~ msgstr ""
 
-#: src/containers/Welcome.js:55
+#: src/containers/Welcome.jsx:55
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
 msgstr ""
 
-#: src/translateble_variables.js:42
+#: src/translateble_variables.js:70
 msgid "Dáidda ja girjjálašvuohta"
 msgstr ""
 
-#: src/translateble_variables.js:43
+#: src/translateble_variables.js:71
 msgid "Eanandoallu"
 msgstr ""
 
-#: src/translateble_variables.js:44
+#: src/translateble_variables.js:72
 msgid "Education"
 msgstr ""
 
-#: src/translateble_variables.js:45
+#: src/translateble_variables.js:73
 msgid "Ekologiija ja biras"
 msgstr ""
 
-#: src/translateble_variables.js:46
+#: src/translateble_variables.js:74
 msgid "Ekonomiija ja gávppašeapmi"
 msgstr ""
 
-#: src/translateble_variables.js:69
+#: src/translateble_variables.js:97
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
 msgstr ""
 
-#: src/translateble_variables.js:20
+#: src/translateble_variables.js:42
 msgid "FI"
 msgstr ""
 
-#: src/translateble_variables.js:47
+#: src/translateble_variables.js:75
 msgid "Geografiija"
 msgstr ""
 
-#: src/translateble_variables.js:48
+#: src/translateble_variables.js:76
 msgid "Gielladieđa"
 msgstr ""
 
@@ -154,304 +167,316 @@ msgstr ""
 #~ msgid "Giellagáldu"
 #~ msgstr ""
 
-#: src/translateble_variables.js:75
+#: src/translateble_variables.js:103
 msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
 msgstr ""
 
-#: src/translateble_variables.js:49
+#: src/translateble_variables.js:77
 msgid "Gulahallanteknihkka"
 msgstr ""
 
-#: src/translateble_variables.js:50
+#: src/translateble_variables.js:78
 msgid "Guolástus"
 msgstr ""
 
-#: src/containers/HelpDialog.js:47
-#: src/containers/SatniAppBar.js:68
-#: src/containers/SatniAppBar.js:69
+#: src/containers/HelpDialog.jsx:52
+#: src/containers/SatniAppBar.jsx:74
+#: src/containers/SatniAppBar.jsx:74
 msgid "Help"
 msgstr ""
 
-#: src/features/article/Source.js:28
-#: src/features/article/Source.js:29
+#: src/features/article/Source.jsx:33
+#: src/features/article/Source.jsx:34
 msgid "Hide this dictionary"
 msgstr ""
 
-#: src/features/article/PairHeader.js:36
-#: src/features/article/PairHeader.js:37
+#: src/features/article/PairHeader.jsx:38
+#: src/features/article/PairHeader.jsx:39
 msgid "Hide this language"
 msgstr ""
 
-#: src/translateble_variables.js:51
+#: src/translateble_variables.js:79
 msgid "Huksenteknihkka"
 msgstr ""
 
-#: src/containers/Welcome.js:131
+#: src/containers/Welcome.jsx:142
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr ""
 
-#: src/translateble_variables.js:52
+#: src/translateble_variables.js:80
 msgid "Juridihkka"
 msgstr ""
 
-#: src/containers/SatniDrawer.js:134
+#: src/containers/SatniDrawer.jsx:122
 msgid "Languages"
 msgstr ""
 
-#: src/features/search/FilterBar.js:98
-#: src/features/search/FilterBar.js:99
+#: src/features/search/FilterBar.jsx:97
+#: src/features/search/FilterBar.jsx:98
 msgid "Lookup the search word"
 msgstr ""
 
-#: src/translateble_variables.js:53
+#: src/translateble_variables.js:81
 msgid "Luonddudieđa ja matematihkka"
 msgstr ""
 
-#: src/translateble_variables.js:54
+#: src/translateble_variables.js:82
 msgid "Medisiidna"
 msgstr ""
 
-#: src/translateble_variables.js:55
+#: src/translateble_variables.js:83
 msgid "Mášenteknihkka"
 msgstr ""
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:20
 msgid "N"
 msgstr ""
 
-#: src/translateble_variables.js:20
+#: src/translateble_variables.js:42
 msgid "NO"
 msgstr ""
 
 #: src/features/article/Articles.js:158
-msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
-msgstr ""
+#~ msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
+#~ msgstr ""
 
-#: src/features/infinitestems/InfiniteStems.js:51
+#: src/features/infinitestems/SearchInfo.jsx:13
 msgid "No results for <0>{searchExpression}</0>"
 msgstr ""
 
-#: src/translateble_variables.js:87
+#: src/translateble_variables.js:115
 msgid "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but frequent Norwegian words have been added. It contains about 26,000 Norwegian entries."
 msgstr ""
 
-#: src/features/article/LemmaGroup.js:15
+#: src/features/article/LemmaGroup.jsx:14
 msgid "Note:"
 msgstr ""
 
-#: src/translateble_variables.js:56
+#: src/translateble_variables.js:84
 msgid "Ođđa sánit"
 msgstr ""
 
-#: src/features/paradigm/ParadigmDialog.js:47
+#: src/features/paradigm/ParadigmDialog.jsx:52
 msgid "Paradigm"
 msgstr ""
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:20
 msgid "Pron"
 msgstr ""
 
-#: src/translateble_variables.js:57
+#: src/translateble_variables.js:85
 msgid "Religion"
 msgstr ""
 
-#: src/containers/StatusBar.js:21
+#: src/features/article/Articles.jsx:27
+msgid "Results for «{lemma}»"
+msgstr ""
+
+#: src/containers/StatusBar.jsx:23
 msgid "Results only from"
 msgstr ""
 
-#: src/translateble_variables.js:20
+#: src/translateble_variables.js:42
 msgid "SE"
 msgstr ""
 
-#: src/features/search/FilterBar.js:103
+#: src/features/search/FilterBar.jsx:102
 msgid "Search"
 msgstr ""
 
-#: src/containers/Welcome.js:73
+#: src/features/search/FilterBar.jsx:115
+msgid "Search mode"
+msgstr ""
+
+#: src/features/search/WildCard.jsx:19
+msgid "Search mode:"
+msgstr ""
+
+#: src/containers/Welcome.jsx:97
 msgid "Search results will appear here."
 msgstr ""
 
-#: src/translateble_variables.js:58
+#: src/translateble_variables.js:86
 msgid "Servodatdieđa"
 msgstr ""
 
-#: src/containers/SatniAppBar.js:50
-#: src/containers/SatniAppBar.js:51
+#: src/containers/SatniAppBar.jsx:62
+#: src/containers/SatniAppBar.jsx:63
 msgid "Settings"
 msgstr ""
 
-#: src/features/paradigm/ParadigmButton.js:28
-#: src/features/paradigm/ParadigmButton.js:29
+#: src/features/paradigm/ParadigmButton.jsx:25
+#: src/features/paradigm/ParadigmButton.jsx:26
 msgid "Show paradigm for this word"
 msgstr ""
 
-#: src/features/korp/KorpButton.js:26
-#: src/features/korp/KorpButton.js:27
+#: src/features/korp/KorpButton.jsx:28
+#: src/features/korp/KorpButton.jsx:29
 msgid "Show this word in our corpus"
 msgstr ""
 
-#: src/features/article/LemmaGroup.js:17
-#: src/features/article/Source.js:24
+#: src/features/article/LemmaGroup.jsx:24
+#: src/features/article/Source.jsx:25
 msgid "Source:"
 msgstr ""
 
 #: src/containers/SatniDrawer.js:126
-msgid "Start"
-msgstr ""
+#~ msgid "Start"
+#~ msgstr ""
 
-#: src/features/article/LemmaGroup.js:16
+#: src/features/article/LemmaGroup.jsx:19
 msgid "Status:"
 msgstr ""
 
-#: src/translateble_variables.js:59
+#: src/translateble_variables.js:87
 msgid "Stáda almmolaš hálddašeapmi"
 msgstr ""
 
-#: src/features/search/FilterBar.js:81
-#: src/features/search/FilterBar.js:82
+#: src/features/search/FilterBar.jsx:79
+#: src/features/search/FilterBar.jsx:80
 msgid "Sámi letters"
 msgstr ""
 
-#: src/translateble_variables.js:60
+#: src/translateble_variables.js:88
 msgid "Teknihkka industriija duodji"
 msgstr ""
 
-#: src/translateble_variables.js:104
-#: src/translateble_variables.js:110
+#: src/translateble_variables.js:132
+#: src/translateble_variables.js:138
 msgid "The dictionary contains about 11,000 entries."
 msgstr ""
 
-#: src/translateble_variables.js:70
+#: src/translateble_variables.js:98
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
 msgstr ""
 
-#: src/containers/Welcome.js:81
+#: src/containers/Welcome.jsx:100
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 msgstr ""
 
-#: src/translateble_variables.js:76
+#: src/translateble_variables.js:104
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr ""
 
-#: src/features/paradigm/ParadigmButton.js:44
-#: src/features/paradigm/ParadigmButton.js:45
+#: src/features/paradigm/ParadigmButton.jsx:43
+#: src/features/paradigm/ParadigmButton.jsx:44
 msgid "There is no paradigm for this word"
 msgstr ""
 
-#: src/translateble_variables.js:81
+#: src/translateble_variables.js:109
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
 msgstr ""
 
-#: src/translateble_variables.js:93
-#: src/translateble_variables.js:98
+#: src/translateble_variables.js:121
+#: src/translateble_variables.js:126
 msgid "This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern Sámi Oahpa."
 msgstr ""
 
-#: src/translateble_variables.js:115
-#: src/translateble_variables.js:120
-#: src/translateble_variables.js:125
-#: src/translateble_variables.js:130
+#: src/translateble_variables.js:143
+#: src/translateble_variables.js:148
+#: src/translateble_variables.js:153
+#: src/translateble_variables.js:158
 msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
 msgstr ""
 
-#: src/translateble_variables.js:109
+#: src/translateble_variables.js:137
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been added."
 msgstr ""
 
-#: src/translateble_variables.js:103
+#: src/translateble_variables.js:131
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr ""
 
-#: src/features/korp/KorpButton.js:48
-#: src/features/korp/KorpButton.js:49
+#: src/features/korp/KorpButton.jsx:52
+#: src/features/korp/KorpButton.jsx:53
 msgid "This word is not found in our corpus"
 msgstr ""
 
-#: src/translateble_variables.js:135
+#: src/translateble_variables.js:163
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
 msgstr ""
 
-#: src/translateble_variables.js:12
+#: src/translateble_variables.js:20
 msgid "V"
 msgstr ""
 
-#: src/containers/Welcome.js:44
+#: src/containers/Welcome.jsx:42
 msgid "Welcome!"
 msgstr ""
 
-#: src/containers/Welcome.js:98
+#: src/containers/Welcome.jsx:114
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr ""
 
-#: src/features/search/InputWithTranslation.js:28
+#: src/features/search/InputWithTranslation.jsx:28
 msgid "Write at least one letter here"
 msgstr ""
 
-#: src/containers/Welcome.js:90
+#: src/containers/Welcome.jsx:108
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr ""
 
-#: src/translateble_variables.js:24
+#: src/translateble_variables.js:44
 msgid "east"
 msgstr ""
 
-#: src/translateble_variables.js:15
+#: src/translateble_variables.js:23
 msgid "en"
 msgstr ""
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:47
 msgid "en_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:15
+#: src/translateble_variables.js:24
 msgid "eng"
 msgstr ""
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:48
 msgid "eng_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:15
+#: src/translateble_variables.js:25
 msgid "fi"
 msgstr ""
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:49
 msgid "fi_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:15
+#: src/translateble_variables.js:26
 msgid "fin"
 msgstr ""
 
-#: src/translateble_variables.js:31
+#: src/translateble_variables.js:50
 msgid "fin_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:7
+#: src/translateble_variables.js:16
 msgid "gtfinnob"
 msgstr ""
 
-#: src/translateble_variables.js:7
+#: src/translateble_variables.js:11
 msgid "gtfinsme"
 msgstr ""
 
-#: src/translateble_variables.js:7
+#: src/translateble_variables.js:14
 msgid "gtfinsmn"
 msgstr ""
 
-#: src/translateble_variables.js:6
+#: src/translateble_variables.js:8
 msgid "gtnobsma"
 msgstr ""
 
-#: src/translateble_variables.js:6
+#: src/translateble_variables.js:7
 msgid "gtnobsme"
 msgstr ""
 
-#: src/translateble_variables.js:6
+#: src/translateble_variables.js:9
 msgid "gtsmanob"
 msgstr ""
 
-#: src/translateble_variables.js:6
+#: src/translateble_variables.js:10
 msgid "gtsmefin"
 msgstr ""
 
@@ -459,166 +484,178 @@ msgstr ""
 msgid "gtsmenob"
 msgstr ""
 
-#: src/translateble_variables.js:7
+#: src/translateble_variables.js:12
 msgid "gtsmesmn"
 msgstr ""
 
-#: src/translateble_variables.js:7
+#: src/translateble_variables.js:15
 msgid "gtsmnfin"
 msgstr ""
 
-#: src/translateble_variables.js:7
+#: src/translateble_variables.js:13
 msgid "gtsmnsme"
 msgstr ""
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:39
 msgid "lat"
 msgstr ""
 
-#: src/translateble_variables.js:35
+#: src/translateble_variables.js:63
 msgid "lat_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:15
+#: src/translateble_variables.js:27
 msgid "nb"
 msgstr ""
 
-#: src/translateble_variables.js:32
+#: src/translateble_variables.js:51
 msgid "nb_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:15
+#: src/translateble_variables.js:28
 msgid "nn"
 msgstr ""
 
-#: src/translateble_variables.js:32
+#: src/translateble_variables.js:52
 msgid "nn_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:15
+#: src/translateble_variables.js:29
 msgid "nno"
 msgstr ""
 
-#: src/translateble_variables.js:32
+#: src/translateble_variables.js:53
 msgid "nno_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:15
+#: src/translateble_variables.js:30
 msgid "nob"
 msgstr ""
 
-#: src/translateble_variables.js:32
+#: src/translateble_variables.js:54
 msgid "nob_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:26
+#: src/translateble_variables.js:44
 msgid "north"
 msgstr ""
 
-#: src/translateble_variables.js:8
+#: src/translateble_variables.js:17
 msgid "sammallahtismefin"
 msgstr ""
 
-#: src/translateble_variables.js:15
+#: src/translateble_variables.js:31
 msgid "se"
 msgstr ""
 
-#: src/translateble_variables.js:33
+#: src/translateble_variables.js:55
 msgid "se_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:33
 msgid "sma"
 msgstr ""
 
-#: src/translateble_variables.js:33
+#: src/translateble_variables.js:57
 msgid "sma_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:34
 msgid "sme"
 msgstr ""
 
-#: src/translateble_variables.js:33
+#: src/translateble_variables.js:58
 msgid "sme_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:35
 msgid "smj"
 msgstr ""
 
-#: src/translateble_variables.js:34
+#: src/translateble_variables.js:59
 msgid "smj_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:36
 msgid "smn"
 msgstr ""
 
-#: src/translateble_variables.js:34
+#: src/translateble_variables.js:60
 msgid "smn_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:37
 msgid "sms"
 msgstr ""
 
-#: src/translateble_variables.js:34
+#: src/translateble_variables.js:61
 msgid "sms_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:27
+#: src/translateble_variables.js:44
 msgid "south"
 msgstr ""
 
-#: src/translateble_variables.js:15
+#: src/translateble_variables.js:32
 msgid "sv"
 msgstr ""
 
-#: src/translateble_variables.js:33
+#: src/translateble_variables.js:56
 msgid "sv_genitive"
 msgstr ""
 
-#: src/translateble_variables.js:16
+#: src/translateble_variables.js:38
 msgid "swe"
 msgstr ""
 
-#: src/translateble_variables.js:34
+#: src/translateble_variables.js:62
 msgid "swe_genitive"
 msgstr ""
 
-#: src/features/search/FilterBar.js:86
+#: src/features/search/FilterBar.jsx:84
 msgid "sámi keys"
 msgstr ""
 
-#: src/translateble_variables.js:6
+#: src/translateble_variables.js:5
 msgid "termwiki"
 msgstr ""
 
-#: src/translateble_variables.js:25
+#: src/translateble_variables.js:44
 msgid "west"
 msgstr ""
 
-#: src/containers/StatusBar.js:30
+#: src/containers/StatusBar.jsx:41
 msgid "{0}/{1} languages."
 msgstr ""
 
-#: src/containers/StatusBar.js:25
+#: src/containers/StatusBar.jsx:32
 msgid "{0}/{1} sources."
 msgstr ""
 
 #: src/features/infinitestems/InfiniteStems.js:48
-msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
+#~ msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
+#~ msgstr ""
+
+#: src/features/infinitestems/SearchInfo.jsx:28
+msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
 msgstr ""
 
-#: src/translateble_variables.js:61
+#: src/features/infinitestems/SearchInfo.jsx:35
+msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
+msgstr ""
+
+#: src/features/infinitestems/SearchInfo.jsx:20
+msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
+msgstr ""
+
+#: src/translateble_variables.js:89
 msgid "Álšateknihkka"
 msgstr ""
 
-#: src/translateble_variables.js:62
+#: src/translateble_variables.js:90
 msgid "Ásttoáigi ja faláštallan"
 msgstr ""
 
-#: src/translateble_variables.js:63
+#: src/translateble_variables.js:91
 msgid "Ávnnasindustriija"
 msgstr ""
