@@ -41,7 +41,7 @@
     "extract": "lingui extract",
     "compile": "lingui compile",
     "build-storybook": "build-storybook -s public",
-    "deploy": "rsync -vaz  --delete --delete-excluded --info=progress2 build/* satni.org:/var/www/html/risten/"
+    "deploy": "rsync -vaz  --info=progress2 build/* satni.org:/var/www/html/risten/"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
