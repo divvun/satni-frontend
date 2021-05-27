@@ -23,11 +23,7 @@ const SatniMain = () => {
       <Route path="/">
         <Grid container>
           <Grid item xs={12}>
-            <StatusBar
-              wantedDicts={wantedDicts}
-              wantedLangs={langsDictsQueryResult.data.wantedLangs}
-              currentLemma={currentLemma}
-            />
+            <StatusBar />
           </Grid>
           <Grid item xs={12}>
             <FilterBar />

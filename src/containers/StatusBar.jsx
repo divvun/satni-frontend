@@ -1,12 +1,13 @@
 import React from 'react';
+import { useQuery } from '@apollo/client';
 import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { Link, useLocation } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 
-import { availableLanguages } from '../utils';
+import { availableLanguages, locationParser } from '../utils';
 import dictionaryInfo from '../translateble_variables';
+import GET_LANGS_DICTS from '../operations/queries/getLangsDicts';
 
 const useStyles = makeStyles((theme) => ({
   status: {
@@ -46,8 +47,16 @@ const langStatus = (wantedDicts, wantedLangs) => {
   return null;
 };
 
-const StatusBar = ({ wantedDicts, wantedLangs, currentLemma }) => {
+const StatusBar = () => {
   const classes = useStyles();
+  const location = useLocation();
+  const { currentDict, currentLemma } = locationParser(location.pathname);
+  const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
+  const { wantedLangs } = langsDictsQueryResult.data;
+
+  const wantedDicts = currentDict
+    ? [currentDict]
+    : langsDictsQueryResult.data.wantedDicts;
 
   return (
     <Typography className={classes.status}>
@@ -55,12 +64,6 @@ const StatusBar = ({ wantedDicts, wantedLangs, currentLemma }) => {
       {dictStatus(wantedDicts, currentLemma)}
     </Typography>
   );
-};
-
-StatusBar.propTypes = {
-  wantedLangs: PropTypes.arrayOf(PropTypes.string).isRequired,
-  wantedDicts: PropTypes.arrayOf(PropTypes.string).isRequired,
-  currentLemma: PropTypes.string.isRequired,
 };
 
 export default StatusBar;
