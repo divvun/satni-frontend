@@ -9,7 +9,7 @@ const paradigmLink = new RestLink({
 const SATNI_ENDPOINT =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:8000/graphql/'
-    : 'https://satni.uit.no/newsatni';
+    : 'https://satni.uit.no/newsatni/';
 const dictLink = new HttpLink({ uri: SATNI_ENDPOINT });
 const link = ApolloLink.from([paradigmLink, dictLink]);
 
