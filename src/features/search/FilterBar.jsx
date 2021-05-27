@@ -24,9 +24,6 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     flexGrow: 1,
     backgroundColor: fade(theme.palette.common.black, 0.15),
-    '&:hover': {
-      backgroundColor: fade(theme.palette.common.black, 0.25),
-    },
   },
   iconButton: {
     color: 'inherit',
