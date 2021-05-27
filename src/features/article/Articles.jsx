@@ -8,7 +8,7 @@ import TermArticles from './TermArticles';
 
 const useStyles = makeStyles((theme) => ({
   articles: {
-    height: '80vh',
+    height: '72vh',
     overflowY: 'auto',
     paddingRight: theme.spacing(2),
     paddingLeft: theme.spacing(2),

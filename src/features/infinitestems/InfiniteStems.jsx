@@ -22,7 +22,7 @@ import setSearchListClickedItem from '../../operations/mutations/setSearchListCl
 
 const useStyles = makeStyles(() => ({
   infiniteList: {
-    height: '74vh',
+    height: '72vh',
   },
   status: {
     textAlign: 'center',
