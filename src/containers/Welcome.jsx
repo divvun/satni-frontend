@@ -8,6 +8,7 @@ import KeyboardIcon from '@material-ui/icons/Keyboard';
 import LanguageIcon from '@material-ui/icons/Language';
 import Link from '@material-ui/core/Link';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
 
@@ -16,7 +17,16 @@ import { locationParser } from '../utils';
 
 const useStyles = makeStyles((theme) => ({
   welcome: {
-    margin: theme.spacing(2),
+    [theme.breakpoints.up('xs')]: {
+      marginRight: '20%',
+      marginLeft: '20%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginRight: theme.spacing(4),
+      marginLeft: theme.spacing(4),
+    },
+    marginTop: theme.spacing(4),
+    padding: theme.spacing(2),
   },
   heading: {
     textAlign: 'center',
@@ -34,7 +44,7 @@ export const WelcomeHeader = () => {
   const classes = useStyles();
   const { currentLemma, currentDict } = locationParser(useLocation().pathname);
   return (
-    <div className={classes.welcome}>
+    <Paper className={classes.welcome}>
       <Typography variant="h5" className={classes.heading}>
         {currentDict && !currentLemma ? (
           <Trans id={currentDict} />
@@ -84,7 +94,7 @@ export const WelcomeHeader = () => {
           </Trans>
         )}
       </Typography>
-    </div>
+    </Paper>
   );
 };
 
