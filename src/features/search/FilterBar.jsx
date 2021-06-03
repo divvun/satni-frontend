@@ -30,6 +30,9 @@ export const useStyles = makeStyles((theme) => ({
     color: 'inherit',
     padding: theme.spacing(1),
   },
+  samiKeys: {
+    maxWidth: '600px',
+  },
 }));
 
 const FilterBar = () => {
@@ -120,6 +123,7 @@ const FilterBar = () => {
         </Tooltip>
       </Hidden>
       <Popover
+        className={classes.samiKeys}
         id={id}
         open={open}
         anchorEl={anchorEl}
