@@ -36,7 +36,7 @@ const Root = ({ store, client }) => (
           createMuiTheme({
             typography: {
               // Tell Material-UI what's the font-size on the html element is.
-              htmlFontSize: 12,
+              htmlFontSize: 14,
             },
           }),
         )}
