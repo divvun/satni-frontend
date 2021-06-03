@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
 import AppBar from '@material-ui/core/AppBar';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import PropTypes from 'prop-types';
@@ -58,19 +59,21 @@ const SatniAppBar = ({ handleDrawerToggle, drawerWidth }) => {
             sátni.org
           </Link>
         </Typography>
-        <Tooltip
-          title={<Trans>Settings</Trans>}
-          aria-label={<Trans>Settings</Trans>}
-        >
-          <IconButton
-            color="inherit"
-            aria-label="Settings"
-            edge="start"
-            onClick={handleDrawerToggle}
+        <Hidden mdUp>
+          <Tooltip
+            title={<Trans>Settings</Trans>}
+            aria-label={<Trans>Settings</Trans>}
           >
-            <MenuIcon />
-          </IconButton>
-        </Tooltip>
+            <IconButton
+              color="inherit"
+              aria-label="Settings"
+              edge="start"
+              onClick={handleDrawerToggle}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Tooltip>
+        </Hidden>
         <Tooltip title={<Trans>Help</Trans>} aria-label={<Trans>Help</Trans>}>
           <IconButton
             color="inherit"
