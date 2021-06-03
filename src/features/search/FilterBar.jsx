@@ -6,6 +6,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
+import MoreVert from '@material-ui/icons/MoreVert';
 import Paper from '@material-ui/core/Paper';
 import Popover from '@material-ui/core/Popover';
 import SearchIcon from '@material-ui/icons/Search';
@@ -33,6 +34,10 @@ export const useStyles = makeStyles((theme) => ({
   },
   samiKeys: {
     maxWidth: '600px',
+  },
+  searchMode: {
+    margin: theme.spacing(1),
+    width: '100%',
   },
 }));
 
@@ -65,18 +70,31 @@ const FilterBar = () => {
     }
   };
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [samiKeyAnchor, setSamiKeyAnchor] = React.useState(null);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const handleOpenSamiKey = (event) => {
+    setSamiKeyAnchor(event.currentTarget);
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
+  const handleCloseSamiKey = () => {
+    setSamiKeyAnchor(null);
   };
 
-  const open = Boolean(anchorEl);
-  const id = open ? 'sami-keys' : undefined;
+  const samiKeyOpen = Boolean(samiKeyAnchor);
+  const idSamiKey = samiKeyOpen ? 'sami-keys' : undefined;
+
+  const [searchModeAnchor, setSearchModeAnchor] = React.useState(null);
+
+  const handleOpenSearchMode = (event) => {
+    setSearchModeAnchor(event.currentTarget);
+  };
+
+  const handleCloseSearchMode = () => {
+    setSearchModeAnchor(null);
+  };
+
+  const searchModeOpen = Boolean(searchModeAnchor);
+  const idSearchMode = searchModeOpen ? 'search-mode' : undefined;
 
   return (
     <Paper component="div" className={classes.root}>
@@ -87,8 +105,8 @@ const FilterBar = () => {
         <IconButton
           className={classes.iconButton}
           aria-label={<Trans>sámi keys</Trans>}
-          aria-describedby={id}
-          onClick={handleClick}
+          aria-describedby={idSamiKey}
+          onClick={handleOpenSamiKey}
         >
           <KeyboardIcon />
         </IconButton>
@@ -110,6 +128,25 @@ const FilterBar = () => {
           <SearchIcon />
         </IconButton>
       </Tooltip>
+      <Hidden smUp>
+        <Tooltip
+          title={
+            <Trans>
+              Choose whether the search expression is in the start, middle or
+              the end of words.
+            </Trans>
+          }
+          aria-label={<Trans>Search mode</Trans>}
+        >
+          <IconButton
+            className={classes.iconButton}
+            aria-label={<Trans>Search mode</Trans>}
+            onClick={handleOpenSearchMode}
+          >
+            <MoreVert />
+          </IconButton>
+        </Tooltip>
+      </Hidden>
       <Hidden xsDown>
         <Tooltip
           title={
@@ -125,10 +162,10 @@ const FilterBar = () => {
       </Hidden>
       <Popover
         className={classes.samiKeys}
-        id={id}
-        open={open}
-        anchorEl={anchorEl}
-        onClose={handleClose}
+        id={idSamiKey}
+        open={samiKeyOpen}
+        anchorEl={samiKeyAnchor}
+        onClose={handleCloseSamiKey}
         anchorOrigin={{
           vertical: 'bottom',
           horizontal: 'left',
@@ -139,6 +176,23 @@ const FilterBar = () => {
         }}
       >
         <SamiKeys keyHandler={handleKeyInput} />
+      </Popover>
+      <Popover
+        className={classes.searchMode}
+        id={idSearchMode}
+        open={searchModeOpen}
+        anchorEl={searchModeAnchor}
+        onClose={handleCloseSearchMode}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+      >
+        <WildCard />
       </Popover>
     </Paper>
   );
