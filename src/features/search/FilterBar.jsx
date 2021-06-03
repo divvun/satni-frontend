@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
 import { useHistory, useLocation } from 'react-router-dom';
+import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
 import Paper from '@material-ui/core/Paper';
@@ -105,17 +106,19 @@ const FilterBar = () => {
           <SearchIcon />
         </IconButton>
       </Tooltip>
-      <Tooltip
-        title={
-          <Trans>
-            Choose whether the search expression is in the start, middle or the
-            end of words.
-          </Trans>
-        }
-        aria-label={<Trans>Search mode</Trans>}
-      >
-        <WildCard />
-      </Tooltip>
+      <Hidden xsDown>
+        <Tooltip
+          title={
+            <Trans>
+              Choose whether the search expression is in the start, middle or
+              the end of words.
+            </Trans>
+          }
+          aria-label={<Trans>Search mode</Trans>}
+        >
+          <WildCard />
+        </Tooltip>
+      </Hidden>
       <Popover
         id={id}
         open={open}
