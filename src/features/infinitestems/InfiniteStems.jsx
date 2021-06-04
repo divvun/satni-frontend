@@ -1,6 +1,8 @@
 import React from 'react';
 import * as Sentry from '@sentry/react';
 import { useQuery } from '@apollo/client';
+import PropTypes from 'prop-types';
+
 import { makeStyles } from '@material-ui/core/styles';
 import { FixedSizeList as List } from 'react-window';
 import { Link, useLocation } from 'react-router-dom';
@@ -15,7 +17,6 @@ import Typography from '@material-ui/core/Typography';
 import useStems from './InfiniteStems.hooks';
 import SearchInfo from './SearchInfo';
 import { locationParser } from '../../utils';
-import GET_SEARCH_EXPRESSION from '../../operations/queries/getSearchExpression';
 import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
 import GET_SEARCH_LIST_CLICKED_ITEM from '../../operations/queries/getSearchListClickedItem';
 import setSearchListClickedItem from '../../operations/mutations/setSearchListClickedItem';
@@ -32,9 +33,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const InfiniteStems = () => {
-  const searchExpressionQuery = useQuery(GET_SEARCH_EXPRESSION);
-  const { searchExpression } = searchExpressionQuery.data;
+const InfiniteStems = ({ searchExpression }) => {
   const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
   const { searchMode } = searchModeQueryResult.data;
   const { stems, loading, loadMore, hasNextPage, totalCount } = useStems(
@@ -126,6 +125,10 @@ const InfiniteStems = () => {
       </AutoSizer>
     </div>
   );
+};
+
+InfiniteStems.propTypes = {
+  searchExpression: PropTypes.string.isRequired,
 };
 
 export default InfiniteStems;

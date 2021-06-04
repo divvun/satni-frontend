@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
 import qs from 'qs';
@@ -11,14 +11,11 @@ import InfiniteStems from '../features/infinitestems/InfiniteStems';
 import StatusBar from './StatusBar';
 import FilterBar from '../features/search/FilterBar';
 import { WelcomeHeader } from './Welcome';
-import GET_SEARCH_EXPRESSION from '../operations/queries/getSearchExpression';
 
-const SatniMain = () => {
+const SatniMain = ({ searchExpression, setSearchExpression }) => {
   const location = useLocation();
   const locationDict = qs.parse(location.search.slice(1));
   const { currentLemma } = locationParser(location.pathname);
-  const searchExpressionQuery = useQuery(GET_SEARCH_EXPRESSION);
-  const { searchExpression } = searchExpressionQuery.data;
 
   return (
     <Switch>
@@ -30,11 +27,14 @@ const SatniMain = () => {
             <StatusBar />
           </Grid>
           <Grid item xs={12}>
-            <FilterBar />
+            <FilterBar
+              searchExpression={searchExpression}
+              setSearchExpression={setSearchExpression}
+            />
             {!currentLemma && !searchExpression && <WelcomeHeader />}
           </Grid>
           <Grid item xs={4}>
-            <InfiniteStems />
+            <InfiniteStems searchExpression={searchExpression} />
           </Grid>
           <Grid item xs={8}>
             {currentLemma && <Articles lemma={currentLemma} />}
@@ -43,6 +43,11 @@ const SatniMain = () => {
       </Route>
     </Switch>
   );
+};
+
+SatniMain.propTypes = {
+  searchExpression: PropTypes.string.isRequired,
+  setSearchExpression: PropTypes.func.isRequired,
 };
 
 export default SatniMain;

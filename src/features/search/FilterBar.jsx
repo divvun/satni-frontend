@@ -1,8 +1,9 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
 import { useHistory, useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
@@ -12,8 +13,6 @@ import Popover from '@material-ui/core/Popover';
 import SearchIcon from '@material-ui/icons/Search';
 import Tooltip from '@material-ui/core/Tooltip';
 
-import GET_SEARCH_EXPRESSION from '../../operations/queries/getSearchExpression';
-import setSearchExpression from '../../operations/mutations/setSearchExpression';
 import { locationParser } from '../../utils';
 import SamiKeys from './SamiKeys';
 import InputWithTranslation from './InputWithTranslation';
@@ -41,13 +40,11 @@ export const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const FilterBar = () => {
+const FilterBar = ({ searchExpression, setSearchExpression }) => {
   const classes = useStyles();
   const history = useHistory();
   const location = useLocation();
   const currentPath = locationParser(location.pathname);
-  const searchExpressionQuery = useQuery(GET_SEARCH_EXPRESSION);
-  const { searchExpression } = searchExpressionQuery.data;
 
   const handleChange = (event) => {
     setSearchExpression(event.target.value);
@@ -196,6 +193,11 @@ const FilterBar = () => {
       </Popover>
     </Paper>
   );
+};
+
+FilterBar.propTypes = {
+  searchExpression: PropTypes.string.isRequired,
+  setSearchExpression: PropTypes.func.isRequired,
 };
 
 export default FilterBar;

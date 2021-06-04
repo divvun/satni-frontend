@@ -37,6 +37,7 @@ const styles = (theme) => ({
 });
 
 const AsyncApp = ({ classes }) => {
+  const [searchExpression, setSearchExpression] = React.useState('');
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -47,6 +48,7 @@ const AsyncApp = ({ classes }) => {
     <div className={classes.container}>
       <CssBaseline />
       <SatniAppBar
+        setSearchExpression={setSearchExpression}
         handleDrawerToggle={handleDrawerToggle}
         drawerWidth={drawerWidth}
       />
@@ -73,7 +75,10 @@ const AsyncApp = ({ classes }) => {
             </>
           )}
         >
-          <SatniMain />
+          <SatniMain
+            searchExpression={searchExpression}
+            setSearchExpression={setSearchExpression}
+          />
         </Sentry.ErrorBoundary>
       </main>
     </div>

@@ -23,8 +23,6 @@ export const wantedLangsVar = makeVar(
 
 export const searchModeVar = makeVar('start');
 
-export const searchExpressionVar = makeVar('');
-
 export const searchListClickedItemVar = makeVar(-1);
 
 export const cache = new InMemoryCache({
@@ -49,11 +47,6 @@ export const cache = new InMemoryCache({
         searchMode: {
           read() {
             return searchModeVar();
-          },
-        },
-        searchExpression: {
-          read() {
-            return searchExpressionVar();
           },
         },
         searchListClickedItem: {
