@@ -3,10 +3,14 @@ import { gql } from '@apollo/client';
 const HAS_STEM = gql`
   query HasStem(
     $stem: String!
-    $wantedLangs: [String]!
+    $targetLangs: [String]!
     $wantedDicts: [String]!
   ) {
-    hasStem(exact: $stem, wanted: $wantedLangs, wantedDicts: $wantedDicts) {
+    hasStem(
+      exact: $stem
+      targetLangs: $targetLangs
+      wantedDicts: $wantedDicts
+    ) {
       stem
     }
   }

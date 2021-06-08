@@ -9,11 +9,12 @@ import { multilingualconceptListsByNames } from '../../utils';
 
 const TermArticles = ({ lemma }) => {
   const langsDictsResult = useQuery(GET_LANGS_DICTS);
-  const { wantedLangs } = langsDictsResult.data;
+  const { srcLangs, targetLangs } = langsDictsResult.data;
   const { data, loading, error } = useQuery(GET_TERM_ARTICLES, {
     variables: {
       lemma,
-      wantedLangs,
+      srcLangs,
+      targetLangs,
     },
   });
 

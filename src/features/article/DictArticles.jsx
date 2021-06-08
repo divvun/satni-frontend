@@ -10,7 +10,7 @@ import PresentDictArticles from './PresentDictArticles';
 
 const DictArticles = ({ lemma }) => {
   const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
-  const { wantedLangs } = langsDictsQueryResult.data;
+  const { srcLangs, targetLangs } = langsDictsQueryResult.data;
   const location = useLocation();
   const { currentDict } = locationParser(location.pathname);
 
@@ -21,7 +21,8 @@ const DictArticles = ({ lemma }) => {
   const { data, loading, error } = useQuery(GET_DICT_ARTICLES, {
     variables: {
       lemma,
-      wantedLangs,
+      srcLangs,
+      targetLangs,
       wantedDicts,
     },
   });

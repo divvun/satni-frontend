@@ -1,8 +1,12 @@
 import { gql } from '@apollo/client';
 
 const GET_TERM_ARTICLES = gql`
-  query TermArticles($lemma: String!, $wantedLangs: [String]!) {
-    conceptList(exact: $lemma, wanted: $wantedLangs) {
+  query TermArticles(
+    $lemma: String!
+    $srcLangs: [String]!
+    $targetLangs: [String]!
+  ) {
+    conceptList(exact: $lemma, srcLangs: $srcLangs, targetLangs: $targetLangs) {
       name
       collections
       definition

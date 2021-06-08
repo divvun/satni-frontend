@@ -12,7 +12,7 @@ import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
 const DictTargetStem = ({ stem, restriction }) => {
   const { lemma } = stem;
   const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
-  const { wantedLangs } = langsDictsQueryResult.data;
+  const { targetLangs } = langsDictsQueryResult.data;
   const location = useLocation();
   const { currentDict } = locationParser(location.pathname);
 
@@ -23,7 +23,7 @@ const DictTargetStem = ({ stem, restriction }) => {
   const { data, loading } = useQuery(HAS_STEM, {
     variables: {
       stem: lemma,
-      wantedLangs,
+      targetLangs,
       wantedDicts,
     },
   });

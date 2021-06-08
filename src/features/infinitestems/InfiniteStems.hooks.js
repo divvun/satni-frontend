@@ -9,7 +9,7 @@ function useStems(inputValue) {
   const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
   const { searchMode } = searchModeQueryResult.data;
   const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
-  const { wantedLangs } = langsDictsQueryResult.data;
+  const { srcLangs, targetLangs } = langsDictsQueryResult.data;
 
   const location = useLocation();
   const { currentDict } = locationParser(location.pathname);
@@ -23,7 +23,8 @@ function useStems(inputValue) {
     variables: {
       inputValue,
       searchMode,
-      wantedLangs,
+      srcLangs,
+      targetLangs,
       wantedDicts,
     },
   });

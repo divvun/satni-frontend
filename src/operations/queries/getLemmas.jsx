@@ -4,7 +4,8 @@ const GET_LEMMAS = gql`
   query AllLemmas(
     $inputValue: String!
     $searchMode: String!
-    $wantedLangs: [String]!
+    $srcLangs: [String]!
+    $targetLangs: [String]!
     $wantedDicts: [String]!
     $after: String
   ) {
@@ -12,7 +13,8 @@ const GET_LEMMAS = gql`
       first: 100
       search: $inputValue
       mode: $searchMode
-      wanted: $wantedLangs
+      srcLangs: $srcLangs
+      targetLangs: $targetLangs
       wantedDicts: $wantedDicts
       after: $after
     ) {

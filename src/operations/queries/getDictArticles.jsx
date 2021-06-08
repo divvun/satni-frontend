@@ -3,12 +3,14 @@ import { gql } from '@apollo/client';
 const GET_DICT_ARTICLES = gql`
   query DictArticles(
     $lemma: String!
-    $wantedLangs: [String]!
+    $srcLangs: [String]!
+    $targetLangs: [String]!
     $wantedDicts: [String]!
   ) {
     dictEntryList(
       exact: $lemma
-      wanted: $wantedLangs
+      srcLangs: $srcLangs
+      targetLangs: $targetLangs
       wantedDicts: $wantedDicts
     ) {
       dictName

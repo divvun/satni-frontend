@@ -15,9 +15,15 @@ export const wantedDictsVar = makeVar(
     : Object.keys(dictionaryInfo),
 );
 
-export const wantedLangsVar = makeVar(
-  localStorage.getItem('wantedLangs')
-    ? JSON.parse(localStorage.getItem('wantedLangs'))
+export const srcLangsVar = makeVar(
+  localStorage.getItem('srcLangs')
+    ? JSON.parse(localStorage.getItem('srcLangs'))
+    : availableLanguages,
+);
+
+export const targetLangsVar = makeVar(
+  localStorage.getItem('targetLangs')
+    ? JSON.parse(localStorage.getItem('targetLangs'))
     : availableLanguages,
 );
 
@@ -39,9 +45,14 @@ export const cache = new InMemoryCache({
             return wantedDictsVar();
           },
         },
-        wantedLangs: {
+        srcLangs: {
           read() {
-            return wantedLangsVar();
+            return srcLangsVar();
+          },
+        },
+        targetLangs: {
+          read() {
+            return targetLangsVar();
           },
         },
         searchMode: {
