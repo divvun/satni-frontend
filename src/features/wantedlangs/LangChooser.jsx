@@ -7,15 +7,18 @@ import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 
 import { availableLanguages } from '../../utils';
+import setSrcLangs from '../../operations/mutations/setSrcLangs';
+import setTargetLangs from '../../operations/mutations/setTargetLangs';
 
-const LangChooser = ({ langs, setLangs }) => {
+const LangChooser = ({ langs }) => {
   const samiLanguages = new Set(['sma', 'sme', 'smj', 'smn', 'sms']);
 
   const handleChange = (event) => {
     const newLangs = langs.includes(event.target.name)
       ? langs.filter((value) => value !== event.target.name)
       : [...langs, event.target.name];
-    setLangs(newLangs);
+    setSrcLangs(newLangs);
+    setTargetLangs(newLangs);
   };
 
   return (
@@ -66,7 +69,6 @@ const LangChooser = ({ langs, setLangs }) => {
 
 LangChooser.propTypes = {
   langs: PropTypes.arrayOf(PropTypes.string).isRequired,
-  setLangs: PropTypes.func.isRequired,
 };
 
 export default LangChooser;
