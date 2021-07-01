@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 
-import { wantedLangsVar } from '../../apolloCache';
+// import { wantedLangsVar } from '../../apolloCache';
 
 const useStyles = makeStyles((theme) => ({
   lang1: {
@@ -18,11 +18,11 @@ const useStyles = makeStyles((theme) => ({
 
 const PairHeader = ({ language }) => {
   const classes = useStyles();
-  const wantedLangs = wantedLangsVar();
+  // const wantedLangs = wantedLangsVar();
 
   const handleChange = (event) => {
     event.stopPropagation();
-    wantedLangsVar(wantedLangs.filter((value) => value !== event.target.name));
+    // wantedLangsVar(wantedLangs.filter((value) => value !== event.target.name));
   };
 
   return (
