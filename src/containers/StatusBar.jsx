@@ -35,11 +35,11 @@ const dictStatus = (wantedDicts, currentLemma) => {
   );
 };
 
-const langStatus = (wantedDicts, wantedLangs) => {
+const langStatus = (wantedDicts, srcLangs) => {
   if (wantedDicts.length > 1 || wantedDicts.includes('termwiki')) {
     return (
       <Trans>
-        {wantedLangs.length}/{availableLanguages.length} languages.
+        {srcLangs.length}/{availableLanguages.length} languages.
       </Trans>
     );
   }
@@ -52,7 +52,7 @@ const StatusBar = () => {
   const location = useLocation();
   const { currentDict, currentLemma } = locationParser(location.pathname);
   const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
-  const { wantedLangs } = langsDictsQueryResult.data;
+  const { srcLangs } = langsDictsQueryResult.data;
 
   const wantedDicts = currentDict
     ? [currentDict]
@@ -60,7 +60,7 @@ const StatusBar = () => {
 
   return (
     <Typography className={classes.status}>
-      {langStatus(wantedDicts, wantedLangs)}{' '}
+      {langStatus(wantedDicts, srcLangs)}{' '}
       {dictStatus(wantedDicts, currentLemma)}
     </Typography>
   );
