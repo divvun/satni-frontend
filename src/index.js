@@ -9,6 +9,9 @@ import Root from './containers/Root';
 import satniStore from './configureStore';
 import apolloClient from './apolloClient';
 
+import './Nds.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 Sentry.init({
   dsn: 'https://65960ebe11524e22b83637dfe43344a2@sentry.io/1303235',
 });

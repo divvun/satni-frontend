@@ -8,9 +8,7 @@ import qs from 'qs';
 import { locationParser } from '../utils';
 import Articles from '../features/article/Articles';
 import InfiniteStems from '../features/infinitestems/InfiniteStems';
-import StatusBar from './StatusBar';
 import FilterBar from '../features/search/FilterBar';
-import { WelcomeHeader } from './Welcome';
 
 const SatniMain = ({ searchExpression, setSearchExpression }) => {
   const location = useLocation();
@@ -24,14 +22,10 @@ const SatniMain = ({ searchExpression, setSearchExpression }) => {
       <Route path="/">
         <Grid container>
           <Grid item xs={12}>
-            <StatusBar />
-          </Grid>
-          <Grid item xs={12}>
             <FilterBar
               searchExpression={searchExpression}
               setSearchExpression={setSearchExpression}
             />
-            {!currentLemma && !searchExpression && <WelcomeHeader />}
           </Grid>
           <Grid item xs={4}>
             <InfiniteStems searchExpression={searchExpression} />

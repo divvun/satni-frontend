@@ -1,103 +1,76 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
-import { Trans } from '@lingui/macro';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Toolbar from '@material-ui/core/Toolbar';
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
 
+import Button from 'react-bootstrap/Button';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+
+import MetaLanguageSelector from './MetaLanguageSelector';
 import HelpDialog from './HelpDialog';
 
-const SatniAppBar = ({
-  setSearchExpression,
-  handleDrawerToggle,
-  drawerWidth,
-}) => {
-  const useStyles = makeStyles((theme) => ({
-    appBar: {
-      position: 'relative',
-      flexDirection: 'column',
-      [theme.breakpoints.up('md')]: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: drawerWidth,
-      },
-    },
-    menuButton: {
-      [theme.breakpoints.up('md')]: {
-        display: 'none',
-      },
-    },
-    title: {
-      flexGrow: 1,
-    },
-    titleLink: {
-      color: 'white',
-    },
-  }));
-  const classes = useStyles();
-
-  const [openHelpDialog, setOpenHelpDialog] = useState(false);
+const SatniAppBar = ({ setSearchExpression }) => {
+  const [setOpenHelpDialog] = useState(false);
   const handleClickHelpDialog = () => {
     setOpenHelpDialog(true);
   };
-  const handleCloseHelpDialog = () => {
-    setOpenHelpDialog(false);
-  };
 
   return (
-    <AppBar position="static" className={classes.appBar}>
-      <Toolbar variant="dense">
-        <Typography variant="h6" noWrap className={classes.title}>
-          <Link
-            className={classes.titleLink}
-            to="/"
-            onClick={() => setSearchExpression('')}
-          >
-            sátni.org
-          </Link>
-        </Typography>
-        <Hidden mdUp>
-          <Tooltip
-            title={<Trans>Settings</Trans>}
-            aria-label={<Trans>Settings</Trans>}
-          >
-            <IconButton
-              color="inherit"
-              aria-label="Settings"
-              edge="start"
-              onClick={handleDrawerToggle}
+    <Navbar bg="light">
+      <Container>
+        <Nav.Item>
+          <Navbar.Brand href="#home" className="nds_title">
+            Neahttadigisánit
+          </Navbar.Brand>
+        </Nav.Item>
+        <Nav>
+          <Nav.Item>
+            <Nav.Link
+              href="#home"
+              to="/"
+              onClick={() => setSearchExpression('')}
             >
-              <MenuIcon />
-            </IconButton>
-          </Tooltip>
-        </Hidden>
-        <Tooltip title={<Trans>Help</Trans>} aria-label={<Trans>Help</Trans>}>
-          <IconButton
-            color="inherit"
-            aria-label="Settings"
-            edge="start"
-            onClick={handleClickHelpDialog}
-            className={classes.helpButton}
-          >
-            <HelpOutlineIcon />
-          </IconButton>
-        </Tooltip>
-      </Toolbar>
-      <HelpDialog open={openHelpDialog} onClose={handleCloseHelpDialog} />
-    </AppBar>
+              Home
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Button
+              variant="outline-success"
+              aria-label="Settings"
+              href="#click-in-text"
+            >
+              Click-in-text
+            </Button>
+          </Nav.Item>
+          &nbsp;
+          <Nav.Item>
+            <Button
+              variant="outline-success"
+              aria-label="Settings"
+              href="#about"
+              onClick={handleClickHelpDialog}
+            >
+              About
+            </Button>
+          </Nav.Item>
+          &nbsp;
+        </Nav>
+        <Nav className="ms-auto">
+          <Nav.Item>
+            <MetaLanguageSelector />
+          </Nav.Item>
+          &nbsp;
+          <Nav.Item>
+            <HelpDialog />
+          </Nav.Item>
+        </Nav>
+      </Container>
+    </Navbar>
   );
 };
 
 SatniAppBar.propTypes = {
   setSearchExpression: PropTypes.func.isRequired,
-  handleDrawerToggle: PropTypes.func.isRequired,
-  drawerWidth: PropTypes.number.isRequired,
 };
 
 export default SatniAppBar;

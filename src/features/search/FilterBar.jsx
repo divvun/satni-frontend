@@ -1,17 +1,9 @@
 import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import { Trans } from '@lingui/macro';
 import { useHistory, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import KeyboardIcon from '@material-ui/icons/Keyboard';
-import MoreVert from '@material-ui/icons/MoreVert';
-import Paper from '@material-ui/core/Paper';
 import Popover from '@material-ui/core/Popover';
-import SearchIcon from '@material-ui/icons/Search';
-import Tooltip from '@material-ui/core/Tooltip';
 
 import { locationParser } from '../../utils';
 import SamiKeys from './SamiKeys';
@@ -69,10 +61,6 @@ const FilterBar = ({ searchExpression, setSearchExpression }) => {
 
   const [samiKeyAnchor, setSamiKeyAnchor] = React.useState(null);
 
-  const handleOpenSamiKey = (event) => {
-    setSamiKeyAnchor(event.currentTarget);
-  };
-
   const handleCloseSamiKey = () => {
     setSamiKeyAnchor(null);
   };
@@ -82,10 +70,6 @@ const FilterBar = ({ searchExpression, setSearchExpression }) => {
 
   const [searchModeAnchor, setSearchModeAnchor] = React.useState(null);
 
-  const handleOpenSearchMode = (event) => {
-    setSearchModeAnchor(event.currentTarget);
-  };
-
   const handleCloseSearchMode = () => {
     setSearchModeAnchor(null);
   };
@@ -94,69 +78,15 @@ const FilterBar = ({ searchExpression, setSearchExpression }) => {
   const idSearchMode = searchModeOpen ? 'search-mode' : undefined;
 
   return (
-    <Paper component="div" className={classes.root}>
-      <Tooltip
-        title={<Trans>Sámi letters</Trans>}
-        aria-label={<Trans>Sámi letters</Trans>}
-      >
-        <IconButton
-          className={classes.iconButton}
-          aria-label={<Trans>sámi keys</Trans>}
-          aria-describedby={idSamiKey}
-          onClick={handleOpenSamiKey}
-        >
-          <KeyboardIcon />
-        </IconButton>
-      </Tooltip>
+    <div className="search_bar">
       <InputWithTranslation
         value={searchExpression}
         onChange={handleChange}
         onKeyUp={keyPress}
       />
-      <Tooltip
-        title={<Trans>Lookup the search word</Trans>}
-        aria-label={<Trans>Lookup the search word</Trans>}
-      >
-        <IconButton
-          className={classes.iconButton}
-          aria-label={<Trans>Search</Trans>}
-          onClick={lookup}
-        >
-          <SearchIcon />
-        </IconButton>
-      </Tooltip>
-      <Hidden smUp>
-        <Tooltip
-          title={
-            <Trans>
-              Choose whether the search expression is in the start, middle or
-              the end of words.
-            </Trans>
-          }
-          aria-label={<Trans>Search mode</Trans>}
-        >
-          <IconButton
-            className={classes.iconButton}
-            aria-label={<Trans>Search mode</Trans>}
-            onClick={handleOpenSearchMode}
-          >
-            <MoreVert />
-          </IconButton>
-        </Tooltip>
-      </Hidden>
-      <Hidden xsDown>
-        <Tooltip
-          title={
-            <Trans>
-              Choose whether the search expression is in the start, middle or
-              the end of words.
-            </Trans>
-          }
-          aria-label={<Trans>Search mode</Trans>}
-        >
-          <WildCard />
-        </Tooltip>
-      </Hidden>
+
+      <WildCard />
+
       <Popover
         className={classes.samiKeys}
         id={idSamiKey}
@@ -191,7 +121,7 @@ const FilterBar = ({ searchExpression, setSearchExpression }) => {
       >
         <WildCard />
       </Popover>
-    </Paper>
+    </div>
   );
 };
 

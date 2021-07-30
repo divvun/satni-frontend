@@ -5,73 +5,14 @@ import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import FeedbackIcon from '@material-ui/icons/Feedback';
 import Hidden from '@material-ui/core/Hidden';
-import LanguageIcon from '@material-ui/icons/Language';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import PropTypes from 'prop-types';
-import TranslateIcon from '@material-ui/icons/Translate';
-import { ListSubheader } from '@material-ui/core';
 
 import DictChooserDialog from '../features/wantedlangs/DictChooserDialog';
-import LangChooserDialog from '../features/wantedlangs/LangChooserDialog';
-import MetaLanguageSelector from './MetaLanguageSelector';
-
-const Footer = () => (
-  <List
-    subheader={
-      <ListSubheader>
-        <Trans>Delivered by</Trans>
-      </ListSubheader>
-    }
-  >
-    <ListItem>
-      <ListItemText
-        inset
-        primary={
-          <a href="http://divvun.no" target="_blank" rel="noopener noreferrer">
-            Divvun
-          </a>
-        }
-      />
-    </ListItem>
-    <ListItem>
-      <ListItemText
-        inset
-        primary={
-          <Trans>
-            <a
-              href="http://giella.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Giellagáldu
-            </a>
-          </Trans>
-        }
-      />
-    </ListItem>
-    <ListItem>
-      <ListItemText
-        inset
-        primary={
-          <a
-            href="http://giellatekno.uit.no"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Giellatekno
-          </a>
-        }
-      />
-    </ListItem>
-    <ListItem>
-      <ListItemText inset primary="Pekka Sammallahti" />
-    </ListItem>
-  </List>
-);
 
 const SatniDrawer = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
   const useStyles = makeStyles((theme) => ({
@@ -90,14 +31,6 @@ const SatniDrawer = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
   }));
   const classes = useStyles();
 
-  const [openLangChooser, setOpenLangChooser] = useState(false);
-  const handleClickLangChooserDialog = () => {
-    setOpenLangChooser(true);
-  };
-  const handleCloseLangChooserDialog = () => {
-    setOpenLangChooser(false);
-  };
-
   const [openDictChooser, setOpenDictChooser] = useState(false);
   const handleClickDictChooserDialog = () => {
     setOpenDictChooser(true);
@@ -112,16 +45,6 @@ const SatniDrawer = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
       <Divider />
       <List>
         <ListItem
-          key="LangChooser"
-          onClick={handleClickLangChooserDialog}
-          button
-        >
-          <ListItemIcon>
-            <LanguageIcon />
-          </ListItemIcon>
-          <ListItemText primary={<Trans>Languages</Trans>} />
-        </ListItem>
-        <ListItem
           key="DictChooser"
           onClick={handleClickDictChooserDialog}
           button
@@ -131,6 +54,10 @@ const SatniDrawer = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
           </ListItemIcon>
           <ListItemText primary={<Trans>Dictionaries</Trans>} />
         </ListItem>
+        <DictChooserDialog
+          open={openDictChooser}
+          onClose={handleCloseDictChooserDialog}
+        />
         <ListItem
           key="Feedback"
           button
@@ -142,24 +69,7 @@ const SatniDrawer = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
           </ListItemIcon>
           <ListItemText primary="Feedback" />
         </ListItem>
-        <ListItem key="Site language" button>
-          <ListItemIcon>
-            <TranslateIcon />
-          </ListItemIcon>
-          <MetaLanguageSelector />
-        </ListItem>
-        <ListItem>
-          <Footer />
-        </ListItem>
       </List>
-      <LangChooserDialog
-        open={openLangChooser}
-        onClose={handleCloseLangChooserDialog}
-      />
-      <DictChooserDialog
-        open={openDictChooser}
-        onClose={handleCloseDictChooserDialog}
-      />
     </div>
   );
 

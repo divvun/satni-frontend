@@ -1,9 +1,11 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
+
+import Dropdown from 'react-bootstrap/Dropdown';
+import EnFlag from '../img/en_20x15.png';
+import FiFlag from '../img/fi_20x15.png';
+import SeFlag from '../img/se_20x15.png';
+import NoFlag from '../img/no_20x15.png';
 
 import GET_INTERFACE_LANGUAGE from '../operations/queries/getInterfaceLanguage';
 import setInterfaceLanguage from '../operations/mutations/setInterfaceLanguage';
@@ -12,30 +14,35 @@ const MetaLanguageSelector = () => {
   const interfaceLanguageQueryResult = useQuery(GET_INTERFACE_LANGUAGE);
   const { interfaceLanguage } = interfaceLanguageQueryResult.data;
 
-  const handleChange = (event) => {
-    event.preventDefault();
-    setInterfaceLanguage(event.target.value);
-  };
-
   return (
-    <FormControl variant="filled">
-      <InputLabel id="page-language-label">Page language</InputLabel>
-      <Select
-        labelId="page-language-label"
-        id="page-language"
-        value={interfaceLanguage}
-        onChange={handleChange}
-        label="Page language"
-      >
-        <MenuItem value="en">English</MenuItem>
-        <MenuItem value="se">Davvisámegiella</MenuItem>
-        <MenuItem value="smj">Julevsámegiella</MenuItem>
-        <MenuItem value="sma">Åarjelsaemiengïele</MenuItem>
-        <MenuItem value="fi">Suomen kieli</MenuItem>
-        <MenuItem value="nb">Bokmål</MenuItem>
-        <MenuItem value="nn">Nynorsk</MenuItem>
-      </Select>
-    </FormControl>
+    <Dropdown
+      eventKey={interfaceLanguage}
+      onSelect={(eventKey) => {
+        setInterfaceLanguage(eventKey);
+      }}
+    >
+      <Dropdown.Toggle variant="light" id="dropdown-basic">
+        <img src={SeFlag} alt="se flag" /> &nbsp;
+        <img src={NoFlag} alt="no flag" /> &nbsp;
+        <img src={FiFlag} alt="fi flag" /> &nbsp;
+        <img src={EnFlag} alt="en flag" />
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item eventKey="en">
+          <img src={EnFlag} alt="en flag" /> English
+        </Dropdown.Item>
+        <Dropdown.Item eventKey="fi">
+          <img src={FiFlag} alt="fi flag" /> Finnish
+        </Dropdown.Item>
+        <Dropdown.Item eventKey="se">
+          <img src={SeFlag} alt="se flag" /> North Saami
+        </Dropdown.Item>
+        <Dropdown.Item eventKey="nb">
+          <img src={NoFlag} alt="nb flag" /> Bokmål
+        </Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
   );
 };
 

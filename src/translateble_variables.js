@@ -17,6 +17,8 @@ const dicts = [
   t`sammallahtismefin`,
 ];
 
+export const sanit = ['gtsmenob', 'gtnobsme', 'gtsmefin', 'gtfinsme'];
+
 const partOfSpeech = [t`N`, t`V`, t`A`, t`Adv`, t`Pron`];
 
 const languageCodes = [

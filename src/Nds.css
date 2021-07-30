@@ -1,0 +1,63 @@
+.navbar {
+  box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+  border-width: 0 0 1px;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+.nds_title {
+  color: #800 !important;
+  font-weight: lighter;
+}
+
+.form-control {
+  width: auto;
+}
+
+.help_header {
+  box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+  border-width: 0 0 1px;
+  background-color: #0dcaf0;
+  color: #f8f9fa;
+}
+
+.help_title {
+  color: #666;
+}
+
+.input-group {
+  width: 50%;
+  position: absolute;
+}
+
+.btn-group {
+  float: right;
+}
+
+.radio_text {
+  padding-left: 2px;
+}
+
+.search_bar {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 30px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #9ca4ac;
+  border-color: #6c757d;
+}
+
+.btn-check:active + .btn-outline-secondary,
+.btn-check:checked + .btn-outline-secondary,
+.btn-outline-secondary.active,
+.btn-outline-secondary.dropdown-toggle.show,
+.btn-outline-secondary:active {
+  background-color: #9ca4ac;
+  border-color: #6c757d;
+}
+
+.MuiGrid-container {
+  background-color: white;
+}
