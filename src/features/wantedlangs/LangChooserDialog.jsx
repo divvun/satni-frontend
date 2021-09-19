@@ -59,7 +59,7 @@ const LangChooserDialog = ({ open, onClose }) => {
       </AppBar>
       <Box className={classes.root}>
         <DialogContent>
-          <LangChooser langs={langs}/>
+          <LangChooser langs={langs} />
         </DialogContent>
       </Box>
     </Dialog>
