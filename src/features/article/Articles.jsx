@@ -31,10 +31,10 @@ const Articles = ({ lemma }) => {
         <Trans>Results for «{lemma}»</Trans>
       </Typography>
       <div className={classes.articles}>
-        <DictArticles lemma={lemma} />
         {(!currentDict || currentDict === 'termwiki') && (
           <TermArticles lemma={lemma} />
         )}
+        <DictArticles lemma={lemma} />
       </div>
     </div>
   );
