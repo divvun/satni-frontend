@@ -35,20 +35,20 @@ const TermWikiArticle = ({ category, multiLingualConcept, lemma }) => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell variant="head" padding="none">
-              <Trans>Category</Trans>: {category}
+            <TableCell padding="none">
+              <Source
+                className={classes.paper}
+                source="termwiki"
+                lemma={lemma}
+              />
             </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {!hasAvailableDict(pathname) && (
             <TableRow>
-              <TableCell padding="none">
-                <Source
-                  className={classes.paper}
-                  source="termwiki"
-                  lemma={lemma}
-                />
+              <TableCell variant="head" padding="none">
+                <Trans>Category</Trans>: {category}
               </TableCell>
             </TableRow>
           )}
