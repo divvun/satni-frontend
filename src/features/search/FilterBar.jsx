@@ -145,17 +145,7 @@ const FilterBar = ({ searchExpression, setSearchExpression }) => {
         </Tooltip>
       </Hidden>
       <Hidden xsDown>
-        <Tooltip
-          title={
-            <Trans>
-              Choose whether the search expression is in the start, middle or
-              the end of words.
-            </Trans>
-          }
-          aria-label={<Trans>Search mode</Trans>}
-        >
-          <WildCard />
-        </Tooltip>
+        <WildCard />
       </Hidden>
       <Popover
         className={classes.samiKeys}
