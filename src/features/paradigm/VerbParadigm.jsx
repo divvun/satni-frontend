@@ -351,7 +351,7 @@ Content.propTypes = {
 };
 
 const VerbParadigm = ({ paradigm, language }) => {
-  if (paradigm) {
+  if (paradigm && paradigm.analyses) {
     return <Content analyses={paradigm.analyses} language={language} />;
   }
   return <div>Paradigm undefined {language}</div>;
