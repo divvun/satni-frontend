@@ -1,4 +1,7 @@
+# Release howto
+
 List tags by running:
+
 ```git tag -l```
 
 After that, run the following commands. Replace the version number
