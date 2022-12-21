@@ -1,19 +1,16 @@
-# Børre Gaup <borre.gaup@uit.no>, 2020.
+# Inga Lill Mikkelsen <inga.l.mikkelsen@uit.no>
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2020-07-22 21:16+0200\n"
-"Mime-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.2\n"
-"Language: smj\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-11-03 19:22+0100\n"
-"Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
-"Language-Team: Northern Sami <feedback@divvun.no>\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"MIME-Version: 1.0\n"
 
 #: src/containers/StatusBar.jsx:24
 msgid "(<0>Show all</0>)"
@@ -34,19 +31,11 @@ msgstr "<0>Giellagálldo</0>"
 
 #: src/features/article/DictArticles.jsx:32
 msgid "<0>Loading dicts …</0>"
-msgstr ""
+msgstr "Apertium: <0>Viedtjamin báhkogirjjebåhtusij …</0>"
 
 #: src/features/article/TermArticles.jsx:23
 msgid "<0>Loading terms …</0>"
-msgstr ""
-
-#: src/features/article/Articles.js:139
-#~ msgid "<0>Loading...</0>"
-#~ msgstr "<0>Viedtjamin …</0>"
-
-#: src/features/article/Articles.js:141
-#~ msgid "<0>Not found</0>"
-#~ msgstr "<0>Ij gávnnu</0>"
+msgstr "Apertium: <0>Viedtjamin tærmmabåhtusij …</0>"
 
 #: src/translateble_variables.js:22
 msgid "A"
@@ -83,7 +72,7 @@ msgstr "Vállji gielajt"
 
 #: src/features/search/FilterBar.jsx:131
 msgid "Choose whether the search expression is in the start, middle or the end of words."
-msgstr ""
+msgstr "Apertium: Vállji jus åhtsåmgárgadis galggá álgon liehket, dålggijinno jali låhpan bágojn majt åtså."
 
 #: src/containers/Welcome.jsx:144
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
@@ -99,7 +88,7 @@ msgstr "Definisjåvnnå"
 
 #: src/containers/SatniDrawer.jsx:26
 msgid "Delivered by"
-msgstr ""
+msgstr "Apertium: Dahkke"
 
 #: src/features/article/Stem.jsx:101
 msgid "Dialect"
@@ -173,7 +162,7 @@ msgstr "Guolástus"
 #: src/containers/SatniAppBar.jsx:80
 #: src/containers/SatniAppBar.jsx:80
 msgid "Help"
-msgstr ""
+msgstr "Apertium: Viehkke"
 
 #: src/features/article/Source.jsx:33
 #: src/features/article/Source.jsx:34
@@ -189,13 +178,13 @@ msgstr "Tjiega dáv gielav"
 msgid "Huksenteknihkka"
 msgstr "Biggimteknihkka"
 
-#: src/translateble_variables.js:169
-msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary"
-msgstr ""
+#: src/translateble_variables.js:170
+msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
+msgstr "Apertium: Hábmela suohkana julevsáme - dáro medisijnnabáhkogirjje.#Sisadnet suláj 1600 åhtsåmbágo."
 
-#: src/translateble_variables.js:172
-msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary"
-msgstr ""
+#: src/translateble_variables.js:175
+msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
+msgstr "Apertium: Hábmela suohkana dáro - julevsáme medisijnnabáhkogirjje.#Sisadnet suláj 1600 åhtsåmbágo."
 
 #: src/containers/Welcome.jsx:152
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
@@ -212,7 +201,7 @@ msgstr "Giela"
 #: src/features/search/FilterBar.jsx:117
 #: src/features/search/FilterBar.jsx:118
 msgid "Lookup the search word"
-msgstr ""
+msgstr "Apertium: Vuoseda åhtsåmbágo båhtusa"
 
 #: src/translateble_variables.js:83
 msgid "Luonddudieđa ja matematihkka"
@@ -233,10 +222,6 @@ msgstr "subst."
 #: src/translateble_variables.js:44
 msgid "NO"
 msgstr "Vuodna"
-
-#: src/features/article/Articles.js:158
-#~ msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
-#~ msgstr "Ælla båhtusa <0>{lemma}</0> åhtsåmbágos. Guoradalá <1/> jali <2/> jus giela jali báhkogirje gånnå sidá åhtåt li válljiduvvam."
 
 #: src/features/infinitestems/SearchInfo.jsx:13
 msgid "No results for <0>{searchExpression}</0>"
@@ -268,7 +253,7 @@ msgstr "Relijåvnnå"
 
 #: src/features/article/Articles.jsx:31
 msgid "Results for «{lemma}»"
-msgstr ""
+msgstr "Apertium: «{lemma}» båhtusa"
 
 #: src/containers/StatusBar.jsx:23
 msgid "Results only from"
@@ -280,7 +265,7 @@ msgstr "Svierik"
 
 #: src/features/search/FilterBar.jsx:122
 msgid "Search"
-msgstr ""
+msgstr "Apertium: Åtså"
 
 #: src/features/search/FilterBar.jsx:136
 #: src/features/search/FilterBar.jsx:140
@@ -288,11 +273,11 @@ msgstr ""
 #: src/features/search/WildCard.jsx:35
 #: src/features/search/WildCard.jsx:46
 msgid "Search mode"
-msgstr ""
+msgstr "Apertium: *Ohcanmodus"
 
 #: src/features/search/WildCard.jsx:20
 msgid "Search mode:"
-msgstr ""
+msgstr "Apertium: *Ohcanmodus:"
 
 #: src/containers/Welcome.jsx:107
 msgid "Search results will appear here."
@@ -300,15 +285,15 @@ msgstr "Åhtsåmbåhtusa ihti dási"
 
 #: src/features/search/WildCard.jsx:34
 msgid "Search words that contain your search term"
-msgstr ""
+msgstr "Apertium: Åtså bágojt majt åhtsåmbágo #sisadnet"
 
 #: src/features/search/WildCard.jsx:45
 msgid "Search words that end in your search term"
-msgstr ""
+msgstr "Apertium: Åtså bágojt majna låhpa åhtsåmbágon"
 
 #: src/features/search/WildCard.jsx:23
 msgid "Search words that start with your search term"
-msgstr ""
+msgstr "Apertium: Åtså bágojt majna álggo l åhtsåmbágon"
 
 #: src/translateble_variables.js:88
 msgid "Servodatdieđa"
@@ -317,7 +302,7 @@ msgstr "Sebrudakdiehtaga"
 #: src/containers/SatniAppBar.jsx:67
 #: src/containers/SatniAppBar.jsx:68
 msgid "Settings"
-msgstr ""
+msgstr "Apertium: Hiebadime"
 
 #: src/features/paradigm/ParadigmButton.jsx:25
 #: src/features/paradigm/ParadigmButton.jsx:26
@@ -334,10 +319,6 @@ msgstr "Vuoseda dáv bágo tækstatjoakkáldagán"
 msgid "Source:"
 msgstr "Gálldo"
 
-#: src/containers/SatniDrawer.js:126
-#~ msgid "Start"
-#~ msgstr "Álggo"
-
 #: src/features/article/LemmaGroup.jsx:19
 msgid "Status:"
 msgstr "Status:"
@@ -349,7 +330,7 @@ msgstr "Almulasj háldadus"
 #: src/features/search/FilterBar.jsx:99
 #: src/features/search/FilterBar.jsx:100
 msgid "Sámi letters"
-msgstr ""
+msgstr "Apertium: Sáme bokstáva"
 
 #: src/translateble_variables.js:90
 msgid "Teknihkka industriija duodji"
@@ -408,7 +389,7 @@ msgstr "Dát báhko ij lim tækstatjoakkáldagán"
 
 #: src/translateble_variables.js:165
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
-msgstr ""
+msgstr "Apertium: Trond Trosteruda suoma – girjjedáro báhkogirjen li ienep gå 30000 åhtsåmbágo."
 
 #: src/translateble_variables.js:22
 msgid "V"
@@ -512,11 +493,11 @@ msgstr "Giellatekno anársáme – nuorttasáme báhkogirjje"
 
 #: src/translateble_variables.js:19
 msgid "habmernobsmj"
-msgstr ""
+msgstr "Apertium: Hábmela suohkana dáro - julevsáme medisijnnabáhkogirjje."
 
 #: src/translateble_variables.js:18
 msgid "habmersmjnob"
-msgstr ""
+msgstr "Apertium: Hábmela suohkana julevsáme - dáro medisijnnabáhkogirjje."
 
 #: src/translateble_variables.js:41
 msgid "lat"
@@ -636,7 +617,7 @@ msgstr "svierigadárogiela"
 
 #: src/features/search/FilterBar.jsx:104
 msgid "sámi keys"
-msgstr ""
+msgstr "Apertium: Sáme bokstáva"
 
 #: src/translateble_variables.js:5
 msgid "termwiki"
@@ -654,21 +635,17 @@ msgstr "{0}/{1} giela."
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} gáldo"
 
-#: src/features/infinitestems/InfiniteStems.js:48
-#~ msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
-#~ msgstr "{0}/{totalCount}:s ma álggi <0>{searchExpression}</0>"
-
 #: src/features/infinitestems/SearchInfo.jsx:28
 msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
-msgstr ""
+msgstr "Apertium: {stemsLength}/{totalCount} ma <#sisadnet><0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:35
 msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
-msgstr ""
+msgstr "Apertium: {stemsLength}/{totalCount} majna loahppa l <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:20
 msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr ""
+msgstr "Apertium: {stemsLength}/{totalCount} majna álggo l <0>{searchExpression}</0>"
 
 #: src/translateble_variables.js:91
 msgid "Álšateknihkka"

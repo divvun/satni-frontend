@@ -2,19 +2,16 @@
 # Børre Gaup <borre.gaup@uit.no>, 2020.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2020-07-22 21:16+0200\n"
-"Mime-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.2\n"
-"Language: sma\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-11-03 19:22+0100\n"
-"Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
-"Language-Team: Northern Sami <feedback@divvun.no>\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"MIME-Version: 1.0\n"
 
 #: src/containers/StatusBar.jsx:24
 msgid "(<0>Show all</0>)"
@@ -35,19 +32,11 @@ msgstr "<0>Gïelegaaltije</0>"
 
 #: src/features/article/DictArticles.jsx:32
 msgid "<0>Loading dicts …</0>"
-msgstr ""
+msgstr "Apertium: Baakoegærjailledahkh veedtjeminie …"
 
 #: src/features/article/TermArticles.jsx:23
 msgid "<0>Loading terms …</0>"
-msgstr ""
-
-#: src/features/article/Articles.js:139
-#~ msgid "<0>Loading...</0>"
-#~ msgstr "<0>Vïedtjeminie …</0>"
-
-#: src/features/article/Articles.js:141
-#~ msgid "<0>Not found</0>"
-#~ msgstr "<0>Idtji gååvnesh</0>"
+msgstr "Apertium: Termeilledahkh veedtjeminie …"
 
 #: src/translateble_variables.js:22
 msgid "A"
@@ -84,7 +73,7 @@ msgstr "Veeljh gïelh"
 
 #: src/features/search/FilterBar.jsx:131
 msgid "Choose whether the search expression is in the start, middle or the end of words."
-msgstr ""
+msgstr "Apertium: Veeljie jis ohtsemeraajese galka  aalkoevisnie, bihkien jallh minngemosth baakojne mejtie ohtsh."
 
 #: src/containers/Welcome.jsx:144
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
@@ -190,13 +179,13 @@ msgstr "Vöörhkh dam gïelem"
 msgid "Huksenteknihkka"
 msgstr "Bigkemeteknihke"
 
-#: src/translateble_variables.js:169
-msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary"
-msgstr ""
+#: src/translateble_variables.js:170
+msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
+msgstr "Apertium: Hábmeren tjïelten julevsaemien - daaroen *medisidnasátnegirji. Åtna medtie jaepien 1600 ohtsemebaakoem."
 
-#: src/translateble_variables.js:172
-msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary"
-msgstr ""
+#: src/translateble_variables.js:175
+msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
+msgstr "Apertium: Hábmeren tjïelten daaroen - julevsaemiem *medisiidnasátnegirji. Åtna medtie jaepien 1600 ohtsemebaakoem"
 
 #: src/containers/Welcome.jsx:152
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
@@ -235,10 +224,6 @@ msgstr "subst."
 msgid "NO"
 msgstr "Nöörje"
 
-#: src/features/article/Articles.js:158
-#~ msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
-#~ msgstr "Ij naan båatoeh <0>{lemma}</0> ohtsemebaakose. Goerehth <1/> jallh <2/> jis gïelh jallh baakoegærjah mam sïjhth, veeljesovveme."
-
 #: src/features/infinitestems/SearchInfo.jsx:13
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "<0>{searchExpression}</0> ij baakoegærjine gååvnesh"
@@ -269,7 +254,7 @@ msgstr "Religijovne"
 
 #: src/features/article/Articles.jsx:31
 msgid "Results for «{lemma}»"
-msgstr ""
+msgstr "Apertium: «{lemma}» illedahkh"
 
 #: src/containers/StatusBar.jsx:23
 msgid "Results only from"
@@ -289,11 +274,11 @@ msgstr "Ohtsedh"
 #: src/features/search/WildCard.jsx:35
 #: src/features/search/WildCard.jsx:46
 msgid "Search mode"
-msgstr ""
+msgstr "Apertium: Ohtsememoduse"
 
 #: src/features/search/WildCard.jsx:20
 msgid "Search mode:"
-msgstr ""
+msgstr "Apertium: Ohtsememoduse:"
 
 #: src/containers/Welcome.jsx:107
 msgid "Search results will appear here."
@@ -301,15 +286,15 @@ msgstr "Maam ohtseme jijhtieh dagkoe."
 
 #: src/features/search/WildCard.jsx:34
 msgid "Search words that contain your search term"
-msgstr ""
+msgstr "Apertium: #Ohtsedh baakoeh mej ohtsemebaakoem #Ohtsedh"
 
 #: src/features/search/WildCard.jsx:45
 msgid "Search words that end in your search term"
-msgstr ""
+msgstr "Apertium: baakoeh utnieh mejnie minngiegietjien lea ohtsemebaakosne"
 
 #: src/features/search/WildCard.jsx:23
 msgid "Search words that start with your search term"
-msgstr ""
+msgstr "Apertium: baakoeh utnieh mejnie minngiegietjien lea ohtsemebaakosne"
 
 #: src/translateble_variables.js:88
 msgid "Servodatdieđa"
@@ -334,10 +319,6 @@ msgstr "Vuesedh dam baakoem korpusisnie"
 #: src/features/article/Source.jsx:25
 msgid "Source:"
 msgstr "Gaaltije"
-
-#: src/containers/SatniDrawer.js:126
-#~ msgid "Start"
-#~ msgstr "Aalkoe"
 
 #: src/features/article/LemmaGroup.jsx:19
 msgid "Status:"
@@ -409,7 +390,7 @@ msgstr "Daate baakoe ij leah korpusisnie"
 
 #: src/translateble_variables.js:165
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
-msgstr ""
+msgstr "Apertium: Trond Trosteruden *suoma – gærjadaaroen baakoegærjesne leah vielie gosse 30000 ohtsemebaakoem."
 
 #: src/translateble_variables.js:22
 msgid "V"
@@ -513,11 +494,11 @@ msgstr "Giellatekno enaresaemien – noerhtesaemien baakoegærja"
 
 #: src/translateble_variables.js:19
 msgid "habmernobsmj"
-msgstr ""
+msgstr "Apertium: Hábmeren tjïelten daaroen - julevsaemien *medisiidnasátnegirji"
 
 #: src/translateble_variables.js:18
 msgid "habmersmjnob"
-msgstr ""
+msgstr "Apertium: Hábmeren tjïelten julevsaemien -daaroen *medisiidnasátnegirji"
 
 #: src/translateble_variables.js:41
 msgid "lat"
@@ -655,21 +636,17 @@ msgstr "{0}/{1} gïeleste."
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} gaaltijijstie."
 
-#: src/features/infinitestems/InfiniteStems.js:48
-#~ msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
-#~ msgstr "{0}/{totalCount} mej aalkoe lea <0>{searchExpression}</0>"
-
 #: src/features/infinitestems/SearchInfo.jsx:28
 msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
-msgstr ""
+msgstr "Apertium: {stemsLength}/{totalCount} mah utnieh <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:35
 msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
-msgstr ""
+msgstr "Apertium: {stemsLength}/{totalCount} mejnie minngiegietjie lea <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:20
 msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr ""
+msgstr "Apertium: {stemsLength}/{totalCount} mejnie aalkoe lea <0>{searchExpression}</0>"
 
 #: src/translateble_variables.js:91
 msgid "Álšateknihkka"

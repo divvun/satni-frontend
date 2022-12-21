@@ -1,19 +1,17 @@
 # Sjur <sjurnm@mac.com>, 2020.
+# Apertium, 2022.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2020-08-24 10:06+0200\n"
-"Mime-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
-"Language: nn\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-08-25 16:44+0200\n"
-"Last-Translator: Sjur <sjurnm@mac.com>\n"
-"Language-Team: NorwegianNynorsk <>\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"MIME-Version: 1.0\n"
 
 #: src/containers/StatusBar.jsx:24
 msgid "(<0>Show all</0>)"
@@ -30,23 +28,15 @@ msgstr "<0>Feil {0}</0>"
 
 #: src/containers/SatniDrawer.jsx:44
 msgid "<0>Giellagáldu</0>"
-msgstr ""
+msgstr "<0>Giellagáldu</0>"
 
 #: src/features/article/DictArticles.jsx:32
 msgid "<0>Loading dicts …</0>"
-msgstr ""
+msgstr "<0>Lastar ordbøker …</0>"
 
 #: src/features/article/TermArticles.jsx:23
 msgid "<0>Loading terms …</0>"
-msgstr ""
-
-#: src/features/article/Articles.js:139
-#~ msgid "<0>Loading...</0>"
-#~ msgstr "<0>Lastar...</0>"
-
-#: src/features/article/Articles.js:141
-#~ msgid "<0>Not found</0>"
-#~ msgstr "<0>Ikkje funne</0>"
+msgstr "<0>Lastar termartikler …</0>"
 
 #: src/translateble_variables.js:22
 msgid "A"
@@ -63,15 +53,15 @@ msgstr "Omtrent halvparten av innhaldet i ordbøkene er henta frå eit parallelk
 
 #: src/translateble_variables.js:69
 msgid "Beaivválaš giella"
-msgstr ""
+msgstr "Dagligspråk"
 
 #: src/translateble_variables.js:70
 msgid "Boazodoallu"
-msgstr ""
+msgstr "Reindrift"
 
 #: src/features/article/TermWikiArticle.jsx:51
 msgid "Category"
-msgstr ""
+msgstr "Kategori"
 
 #: src/features/wantedlangs/DictChooserDialog.jsx:56
 msgid "Choose dictionaries"
@@ -83,7 +73,7 @@ msgstr "Vel språk"
 
 #: src/features/search/FilterBar.jsx:131
 msgid "Choose whether the search expression is in the start, middle or the end of words."
-msgstr ""
+msgstr "Vel om søkjeuttrykket skal vera i byrjinga, midten eller slutten av det du leitar etter."
 
 #: src/containers/Welcome.jsx:144
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
@@ -91,7 +81,7 @@ msgstr "Klikk på <0/> for å sjå korleis ordet vert bøygd. Klikk på <1/> for
 
 #: src/features/article/Stem.jsx:106
 msgid "Country"
-msgstr ""
+msgstr "Land"
 
 #: src/features/article/Definitions.jsx:20
 msgid "Definition"
@@ -99,11 +89,11 @@ msgstr "Definisjon"
 
 #: src/containers/SatniDrawer.jsx:26
 msgid "Delivered by"
-msgstr ""
+msgstr "Laga av"
 
 #: src/features/article/Stem.jsx:101
 msgid "Dialect"
-msgstr ""
+msgstr "Dialekt"
 
 #: src/containers/SatniDrawer.jsx:132
 msgid "Dictionaries"
@@ -115,7 +105,7 @@ msgstr "I dette panelet dukkar det opp ordboksartiklar når du trykkjer på eit 
 
 #: src/translateble_variables.js:71
 msgid "Dihtorteknologiija ja diehtoteknihkka"
-msgstr ""
+msgstr "Datateknologi og datateknikk"
 
 #: src/containers/Welcome.jsx:65
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
@@ -123,23 +113,23 @@ msgstr "Gjer søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nords
 
 #: src/translateble_variables.js:72
 msgid "Dáidda ja girjjálašvuohta"
-msgstr ""
+msgstr "Kunst og litteratur"
 
 #: src/translateble_variables.js:73
 msgid "Eanandoallu"
-msgstr ""
+msgstr "Jordbruk"
 
 #: src/translateble_variables.js:74
 msgid "Education"
-msgstr ""
+msgstr "Undervisning"
 
 #: src/translateble_variables.js:75
 msgid "Ekologiija ja biras"
-msgstr ""
+msgstr "Økologi og miljø"
 
 #: src/translateble_variables.js:76
 msgid "Ekonomiija ja gávppašeapmi"
-msgstr ""
+msgstr "Økonomi og handel "
 
 #: src/translateble_variables.js:99
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
@@ -147,15 +137,15 @@ msgstr "Professor emeritus Pekka Sammallahti har basert denne ordboka på sine e
 
 #: src/translateble_variables.js:44
 msgid "FI"
-msgstr ""
+msgstr "Finland"
 
 #: src/translateble_variables.js:77
 msgid "Geografiija"
-msgstr ""
+msgstr "Geografi"
 
 #: src/translateble_variables.js:78
 msgid "Gielladieđa"
-msgstr ""
+msgstr "Språkvitskap"
 
 #: src/translateble_variables.js:105
 msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
@@ -163,39 +153,39 @@ msgstr "Giellagáldu si hovudoppgåve er normering av ny terminologi og skriftsp
 
 #: src/translateble_variables.js:79
 msgid "Gulahallanteknihkka"
-msgstr ""
+msgstr "Kommunikasjonsteknikk"
 
 #: src/translateble_variables.js:80
 msgid "Guolástus"
-msgstr ""
+msgstr "Fiskeri"
 
 #: src/containers/HelpDialog.jsx:52
 #: src/containers/SatniAppBar.jsx:80
 #: src/containers/SatniAppBar.jsx:80
 msgid "Help"
-msgstr ""
+msgstr "Hjelp"
 
 #: src/features/article/Source.jsx:33
 #: src/features/article/Source.jsx:34
 msgid "Hide this dictionary"
-msgstr ""
+msgstr "Gøym denne ordboka"
 
 #: src/features/article/PairHeader.jsx:38
 #: src/features/article/PairHeader.jsx:39
 msgid "Hide this language"
-msgstr ""
+msgstr "Gøym dette språket"
 
 #: src/translateble_variables.js:81
 msgid "Huksenteknihkka"
-msgstr ""
+msgstr "Begyningsteknikk"
 
-#: src/translateble_variables.js:169
-msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary"
-msgstr ""
+#: src/translateble_variables.js:170
+msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
+msgstr "Hamarøy kommunes lulesamisk-norske medisinordbok. Inneheld ca 1600 søkjeord."
 
-#: src/translateble_variables.js:172
-msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary"
-msgstr ""
+#: src/translateble_variables.js:175
+msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
+msgstr "Hamarøy kommunes norsk-lulesamiske medisinordbok. Inneheld ca 1600 søkjeord."
 
 #: src/containers/Welcome.jsx:152
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
@@ -203,7 +193,7 @@ msgstr "Inne i artiklane kan du gøyma uønska språk og ordbøker. For å aktiv
 
 #: src/translateble_variables.js:82
 msgid "Juridihkka"
-msgstr ""
+msgstr "Jus"
 
 #: src/containers/SatniDrawer.jsx:122
 msgid "Languages"
@@ -212,19 +202,19 @@ msgstr "Språk"
 #: src/features/search/FilterBar.jsx:117
 #: src/features/search/FilterBar.jsx:118
 msgid "Lookup the search word"
-msgstr ""
+msgstr "Slå opp søkjeordet"
 
 #: src/translateble_variables.js:83
 msgid "Luonddudieđa ja matematihkka"
-msgstr ""
+msgstr "Naturvitskap og matematikk"
 
 #: src/translateble_variables.js:84
 msgid "Medisiidna"
-msgstr ""
+msgstr "Medisin"
 
 #: src/translateble_variables.js:85
 msgid "Mášenteknihkka"
-msgstr ""
+msgstr "Maskinteknikk"
 
 #: src/translateble_variables.js:22
 msgid "N"
@@ -232,11 +222,7 @@ msgstr "subst."
 
 #: src/translateble_variables.js:44
 msgid "NO"
-msgstr ""
-
-#: src/features/article/Articles.js:158
-#~ msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
-#~ msgstr "Inga resultat for <0>{lemma}</0>. Sjekk <1/> eller <2>/ i venstremenyen for å sjå om dei ønska språka eller ordbøkene er aktive."
+msgstr "Norge"
 
 #: src/features/infinitestems/SearchInfo.jsx:13
 msgid "No results for <0>{searchExpression}</0>"
@@ -252,7 +238,7 @@ msgstr "Notat:"
 
 #: src/translateble_variables.js:86
 msgid "Ođđa sánit"
-msgstr ""
+msgstr "Nye ord"
 
 #: src/features/paradigm/ParadigmDialog.jsx:52
 msgid "Paradigm"
@@ -264,11 +250,11 @@ msgstr "pron."
 
 #: src/translateble_variables.js:87
 msgid "Religion"
-msgstr ""
+msgstr "Religion"
 
 #: src/features/article/Articles.jsx:31
 msgid "Results for «{lemma}»"
-msgstr ""
+msgstr "Resultat for «{lemma}»"
 
 #: src/containers/StatusBar.jsx:23
 msgid "Results only from"
@@ -276,11 +262,11 @@ msgstr "Viser berre resultat frå:"
 
 #: src/translateble_variables.js:44
 msgid "SE"
-msgstr ""
+msgstr "Sverige"
 
 #: src/features/search/FilterBar.jsx:122
 msgid "Search"
-msgstr ""
+msgstr "Søk"
 
 #: src/features/search/FilterBar.jsx:136
 #: src/features/search/FilterBar.jsx:140
@@ -288,11 +274,11 @@ msgstr ""
 #: src/features/search/WildCard.jsx:35
 #: src/features/search/WildCard.jsx:46
 msgid "Search mode"
-msgstr ""
+msgstr "Søkjemodus"
 
 #: src/features/search/WildCard.jsx:20
 msgid "Search mode:"
-msgstr ""
+msgstr "Søkjemodus:"
 
 #: src/containers/Welcome.jsx:107
 msgid "Search results will appear here."
@@ -300,43 +286,39 @@ msgstr "Søkeresultat dukkar opp her."
 
 #: src/features/search/WildCard.jsx:34
 msgid "Search words that contain your search term"
-msgstr ""
+msgstr "Søk etter ord som inneheld søkjetermen"
 
 #: src/features/search/WildCard.jsx:45
 msgid "Search words that end in your search term"
-msgstr ""
+msgstr "Søk etter ord som sluttar på søkjetermen"
 
 #: src/features/search/WildCard.jsx:23
 msgid "Search words that start with your search term"
-msgstr ""
+msgstr "Søk etter ord som byrjar med søkjetermen"
 
 #: src/translateble_variables.js:88
 msgid "Servodatdieđa"
-msgstr ""
+msgstr "Samfunnsvitskap"
 
 #: src/containers/SatniAppBar.jsx:67
 #: src/containers/SatniAppBar.jsx:68
 msgid "Settings"
-msgstr ""
+msgstr "Innstillingar"
 
 #: src/features/paradigm/ParadigmButton.jsx:25
 #: src/features/paradigm/ParadigmButton.jsx:26
 msgid "Show paradigm for this word"
-msgstr ""
+msgstr "Vis bøyingsmønsteret for dette ordet"
 
 #: src/features/korp/KorpButton.jsx:28
 #: src/features/korp/KorpButton.jsx:29
 msgid "Show this word in our corpus"
-msgstr ""
+msgstr "Vis dette ordet i tekstsamlinga vår"
 
 #: src/features/article/LemmaGroup.jsx:24
 #: src/features/article/Source.jsx:25
 msgid "Source:"
 msgstr "Kjelde:"
-
-#: src/containers/SatniDrawer.js:126
-#~ msgid "Start"
-#~ msgstr "Start"
 
 #: src/features/article/LemmaGroup.jsx:19
 msgid "Status:"
@@ -344,16 +326,16 @@ msgstr "Status:"
 
 #: src/translateble_variables.js:89
 msgid "Stáda almmolaš hálddašeapmi"
-msgstr ""
+msgstr "Offentleg forvaltning"
 
 #: src/features/search/FilterBar.jsx:99
 #: src/features/search/FilterBar.jsx:100
 msgid "Sámi letters"
-msgstr ""
+msgstr "Samiske bokstavar"
 
 #: src/translateble_variables.js:90
 msgid "Teknihkka industriija duodji"
-msgstr ""
+msgstr "Teknikk, industri og duodji"
 
 #: src/translateble_variables.js:134
 #: src/translateble_variables.js:140
@@ -375,7 +357,7 @@ msgstr "Termbasen inneheld 50 000 termartiklar og vert oppdatert jamleg."
 #: src/features/paradigm/ParadigmButton.jsx:43
 #: src/features/paradigm/ParadigmButton.jsx:44
 msgid "There is no paradigm for this word"
-msgstr ""
+msgstr "Dette ordet har ikkje bøyingsmønster"
 
 #: src/translateble_variables.js:111
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
@@ -404,11 +386,11 @@ msgstr "Denne ordboka er basert på leksikalsk materiale frå Intitutionen för 
 #: src/features/korp/KorpButton.jsx:52
 #: src/features/korp/KorpButton.jsx:53
 msgid "This word is not found in our corpus"
-msgstr ""
+msgstr "Dette ordet finst ikkje i tekstsamlinga vår"
 
 #: src/translateble_variables.js:165
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
-msgstr ""
+msgstr "Trond Trosterud si finsk – norske ordbok har meir ein 30000 søkjeord."
 
 #: src/translateble_variables.js:22
 msgid "V"
@@ -432,7 +414,7 @@ msgstr "Du kan bla blant søkjeorda her, nye vert henta til alle treff har vorte
 
 #: src/translateble_variables.js:46
 msgid "east"
-msgstr ""
+msgstr "østleg"
 
 #: src/translateble_variables.js:25
 msgid "en"
@@ -468,7 +450,7 @@ msgstr "finsk"
 
 #: src/translateble_variables.js:16
 msgid "gtfinnob"
-msgstr ""
+msgstr "Trond Trosterud si finsk – norske ordbok"
 
 #: src/translateble_variables.js:11
 msgid "gtfinsme"
@@ -512,11 +494,11 @@ msgstr "Giellatekno si enaresamisk–nordsamiske ordbok"
 
 #: src/translateble_variables.js:19
 msgid "habmernobsmj"
-msgstr ""
+msgstr "Hamarøy kommune si norsk-lulesamiske medisinordbok"
 
 #: src/translateble_variables.js:18
 msgid "habmersmjnob"
-msgstr ""
+msgstr "Hamarøy kommune si lulesamisk-norske medisinordbok"
 
 #: src/translateble_variables.js:41
 msgid "lat"
@@ -560,7 +542,7 @@ msgstr "bokmål"
 
 #: src/translateble_variables.js:46
 msgid "north"
-msgstr ""
+msgstr "nordleg"
 
 #: src/translateble_variables.js:17
 msgid "sammallahtismefin"
@@ -616,7 +598,7 @@ msgstr "skoltesamisk"
 
 #: src/translateble_variables.js:46
 msgid "south"
-msgstr ""
+msgstr "sørleg"
 
 #: src/translateble_variables.js:34
 msgid "sv"
@@ -636,7 +618,7 @@ msgstr "svensk"
 
 #: src/features/search/FilterBar.jsx:104
 msgid "sámi keys"
-msgstr ""
+msgstr "Samiske bokstavar"
 
 #: src/translateble_variables.js:5
 msgid "termwiki"
@@ -644,7 +626,7 @@ msgstr "Giellagáldu sine fleirspråklege termar"
 
 #: src/translateble_variables.js:46
 msgid "west"
-msgstr ""
+msgstr "vestleg"
 
 #: src/containers/StatusBar.jsx:41
 msgid "{0}/{1} languages."
@@ -654,30 +636,26 @@ msgstr "{0}/{1} språk."
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} kjelder."
 
-#: src/features/infinitestems/InfiniteStems.js:48
-#~ msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
-#~ msgstr "{0}/{totalCount} som byrjar med <0>{searchExpression}</0>"
-
 #: src/features/infinitestems/SearchInfo.jsx:28
 msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
-msgstr ""
+msgstr "{stemsLength}/{totalCount} som innehold <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:35
 msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
-msgstr ""
+msgstr "{stemsLength}/{totalCount} som sluttar med <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:20
 msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr ""
+msgstr "{stemsLength}/{totalCount} som begynner med <0>{searchExpression}"
 
 #: src/translateble_variables.js:91
 msgid "Álšateknihkka"
-msgstr ""
+msgstr "Energiteknikk"
 
 #: src/translateble_variables.js:92
 msgid "Ásttoáigi ja faláštallan"
-msgstr ""
+msgstr "Fritid og sport"
 
 #: src/translateble_variables.js:93
 msgid "Ávnnasindustriija"
-msgstr ""
+msgstr "Råstoffindustri"
