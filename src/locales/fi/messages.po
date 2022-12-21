@@ -8,7 +8,7 @@ msgstr ""
 "Language: fi\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-10-14 19:17+0200\n"
+"PO-Revision-Date: 2022-12-21 17:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Plural-Forms: \n"
@@ -28,15 +28,15 @@ msgstr "<0>Virhe {0}</0>"
 
 #: src/containers/SatniDrawer.jsx:44
 msgid "<0>Giellagáldu</0>"
-msgstr ""
+msgstr "<0>Giellagáldu</0>"
 
 #: src/features/article/DictArticles.jsx:32
 msgid "<0>Loading dicts …</0>"
-msgstr ""
+msgstr "<0>Ladataan sanakirjoja…</0>"
 
 #: src/features/article/TermArticles.jsx:23
 msgid "<0>Loading terms …</0>"
-msgstr ""
+msgstr "<0>Ladataan termejä…</0>"
 
 #: src/features/article/Articles.js:139
 #~ msgid "<0>Loading...</0>"
@@ -61,11 +61,11 @@ msgstr "Suunnilleen puolet sanakirjan sisällöstä on otettu etsimällä vastin
 
 #: src/translateble_variables.js:69
 msgid "Beaivválaš giella"
-msgstr ""
+msgstr "Arkikieli"
 
 #: src/translateble_variables.js:70
 msgid "Boazodoallu"
-msgstr ""
+msgstr "Poronhoito"
 
 #: src/features/article/TermWikiArticle.jsx:51
 msgid "Category"
@@ -81,7 +81,7 @@ msgstr "Valitse kieliä"
 
 #: src/features/search/FilterBar.jsx:131
 msgid "Choose whether the search expression is in the start, middle or the end of words."
-msgstr ""
+msgstr "Valitse koskeeko haku sanojen alkua, keskiosaa vai loppua."
 
 #: src/containers/Welcome.jsx:144
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
@@ -97,7 +97,7 @@ msgstr "Määritelmä"
 
 #: src/containers/SatniDrawer.jsx:26
 msgid "Delivered by"
-msgstr ""
+msgstr "Toimittanut"
 
 #: src/features/article/Stem.jsx:101
 msgid "Dialect"
@@ -113,7 +113,7 @@ msgstr "Sanakirja-artikkelit ilmestyvät tähän paneeliin kun sana on valittu v
 
 #: src/translateble_variables.js:71
 msgid "Dihtorteknologiija ja diehtoteknihkka"
-msgstr ""
+msgstr "Tietojenkäsittely ja tietotekniikka"
 
 #: src/containers/Welcome.jsx:65
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
@@ -121,11 +121,11 @@ msgstr "Tee hakuja <0>Giellagáldun</0> termikokoelmasta, <1>Pekka Sammallahden<
 
 #: src/translateble_variables.js:72
 msgid "Dáidda ja girjjálašvuohta"
-msgstr ""
+msgstr "Taide ja kirjallisuus"
 
 #: src/translateble_variables.js:73
 msgid "Eanandoallu"
-msgstr ""
+msgstr "Maatalous"
 
 #: src/translateble_variables.js:74
 msgid "Education"
@@ -133,11 +133,11 @@ msgstr "Koulutus"
 
 #: src/translateble_variables.js:75
 msgid "Ekologiija ja biras"
-msgstr ""
+msgstr "Ekologia ja ympäristö"
 
 #: src/translateble_variables.js:76
 msgid "Ekonomiija ja gávppašeapmi"
-msgstr ""
+msgstr "Ekonomia ja kauppatiede"
 
 #: src/translateble_variables.js:99
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
@@ -149,11 +149,11 @@ msgstr "Suomi"
 
 #: src/translateble_variables.js:77
 msgid "Geografiija"
-msgstr ""
+msgstr "Maantiede"
 
 #: src/translateble_variables.js:78
 msgid "Gielladieđa"
-msgstr ""
+msgstr "Kielitiede"
 
 #: src/translateble_variables.js:105
 msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
@@ -161,31 +161,31 @@ msgstr "Giellagáldun päätehtävä on standardoida uutta termistöä saamen ki
 
 #: src/translateble_variables.js:79
 msgid "Gulahallanteknihkka"
-msgstr ""
+msgstr "Viestintä"
 
 #: src/translateble_variables.js:80
 msgid "Guolástus"
-msgstr ""
+msgstr "Kalastus"
 
 #: src/containers/HelpDialog.jsx:52
 #: src/containers/SatniAppBar.jsx:80
 #: src/containers/SatniAppBar.jsx:80
 msgid "Help"
-msgstr ""
+msgstr "Ohje"
 
 #: src/features/article/Source.jsx:33
 #: src/features/article/Source.jsx:34
 msgid "Hide this dictionary"
-msgstr ""
+msgstr "Piilota tämä sanakirja"
 
 #: src/features/article/PairHeader.jsx:38
 #: src/features/article/PairHeader.jsx:39
 msgid "Hide this language"
-msgstr ""
+msgstr "Piilota tämä kieli"
 
 #: src/translateble_variables.js:81
 msgid "Huksenteknihkka"
-msgstr ""
+msgstr "Rakennustekniikka"
 
 #: src/translateble_variables.js:169
 #~ msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary"
@@ -193,7 +193,7 @@ msgstr ""
 
 #: src/translateble_variables.js:170
 msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
-msgstr ""
+msgstr "Hamarøyn kunnan luulajansaame–norjan lääketieteellinen sanakirja. Sisältää noin 1600 hakusanaa."
 
 #: src/translateble_variables.js:172
 #~ msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary"
@@ -201,7 +201,7 @@ msgstr ""
 
 #: src/translateble_variables.js:175
 msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
-msgstr ""
+msgstr "Hamarøyn kunnan norjan –luulajansaamen lääketieteellinen sanakirja. Sisältää noin 1600 hakusanaa."
 
 #: src/containers/Welcome.jsx:152
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
@@ -209,7 +209,7 @@ msgstr "Artikkelien sisältä voi poistaa ei-haluttuja kieliä tai sanakirjoja. 
 
 #: src/translateble_variables.js:82
 msgid "Juridihkka"
-msgstr ""
+msgstr "Lakitiede"
 
 #: src/containers/SatniDrawer.jsx:122
 msgid "Languages"
@@ -218,19 +218,19 @@ msgstr "Kielet"
 #: src/features/search/FilterBar.jsx:117
 #: src/features/search/FilterBar.jsx:118
 msgid "Lookup the search word"
-msgstr ""
+msgstr "Hae hakusanaa"
 
 #: src/translateble_variables.js:83
 msgid "Luonddudieđa ja matematihkka"
-msgstr ""
+msgstr "Luonnontieteet ja matematiikka"
 
 #: src/translateble_variables.js:84
 msgid "Medisiidna"
-msgstr ""
+msgstr "Lääketiede"
 
 #: src/translateble_variables.js:85
 msgid "Mášenteknihkka"
-msgstr ""
+msgstr "Laitetekniikka"
 
 #: src/translateble_variables.js:22
 msgid "N"
@@ -250,7 +250,7 @@ msgstr "Ei tuloksia haulla <0>{searchExpression}</0>"
 
 #: src/translateble_variables.js:117
 msgid "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but frequent Norwegian words have been added. It contains about 26,000 Norwegian entries."
-msgstr ""
+msgstr "Norja→pohjoissaame perustuu pohjoissaame→norja-sanakirjaan, mitta sisältää myös yleisiä norjankielisiä sanoja. Sisältää 26 000 norjan sanaa."
 
 #: src/features/article/LemmaGroup.jsx:14
 msgid "Note:"
@@ -258,7 +258,7 @@ msgstr "Huom:"
 
 #: src/translateble_variables.js:86
 msgid "Ođđa sánit"
-msgstr ""
+msgstr "Uudet sanat"
 
 #: src/features/paradigm/ParadigmDialog.jsx:52
 msgid "Paradigm"
@@ -274,7 +274,7 @@ msgstr "Uskonto"
 
 #: src/features/article/Articles.jsx:31
 msgid "Results for «{lemma}»"
-msgstr ""
+msgstr "Tulokset haulle {lemma}"
 
 #: src/containers/StatusBar.jsx:23
 msgid "Results only from"
@@ -286,7 +286,7 @@ msgstr "Ruotsi"
 
 #: src/features/search/FilterBar.jsx:122
 msgid "Search"
-msgstr ""
+msgstr "Hae"
 
 #: src/features/search/FilterBar.jsx:136
 #: src/features/search/FilterBar.jsx:140
@@ -294,11 +294,11 @@ msgstr ""
 #: src/features/search/WildCard.jsx:35
 #: src/features/search/WildCard.jsx:46
 msgid "Search mode"
-msgstr ""
+msgstr "Hakutila"
 
 #: src/features/search/WildCard.jsx:20
 msgid "Search mode:"
-msgstr ""
+msgstr "Hakutila:"
 
 #: src/containers/Welcome.jsx:107
 msgid "Search results will appear here."
@@ -306,34 +306,34 @@ msgstr "Hakutulokset tulevat tähän."
 
 #: src/features/search/WildCard.jsx:34
 msgid "Search words that contain your search term"
-msgstr ""
+msgstr "Hae sanoja jotka sisältävät hakusanan"
 
 #: src/features/search/WildCard.jsx:45
 msgid "Search words that end in your search term"
-msgstr ""
+msgstr "Hae sanoja jotka loppuvat hakusanaan"
 
 #: src/features/search/WildCard.jsx:23
 msgid "Search words that start with your search term"
-msgstr ""
+msgstr "Hae sanoja jotka alkavat hakusanalla"
 
 #: src/translateble_variables.js:88
 msgid "Servodatdieđa"
-msgstr ""
+msgstr "Yhteiskuntatiede"
 
 #: src/containers/SatniAppBar.jsx:67
 #: src/containers/SatniAppBar.jsx:68
 msgid "Settings"
-msgstr ""
+msgstr "Asetukset"
 
 #: src/features/paradigm/ParadigmButton.jsx:25
 #: src/features/paradigm/ParadigmButton.jsx:26
 msgid "Show paradigm for this word"
-msgstr ""
+msgstr "Näytä sanan paradigma"
 
 #: src/features/korp/KorpButton.jsx:28
 #: src/features/korp/KorpButton.jsx:29
 msgid "Show this word in our corpus"
-msgstr ""
+msgstr "Näytä sana korpuksessa"
 
 #: src/features/article/LemmaGroup.jsx:24
 #: src/features/article/Source.jsx:25
@@ -350,16 +350,16 @@ msgstr "Status:"
 
 #: src/translateble_variables.js:89
 msgid "Stáda almmolaš hálddašeapmi"
-msgstr ""
+msgstr "Valtionhallinto"
 
 #: src/features/search/FilterBar.jsx:99
 #: src/features/search/FilterBar.jsx:100
 msgid "Sámi letters"
-msgstr ""
+msgstr "Saamenkieliset kirjaimet"
 
 #: src/translateble_variables.js:90
 msgid "Teknihkka industriija duodji"
-msgstr ""
+msgstr "Käsityöteollisuus"
 
 #: src/translateble_variables.js:134
 #: src/translateble_variables.js:140
@@ -381,7 +381,7 @@ msgstr "Termipankissa on yli 50 000 termiartikkelia ja sitä päivitetään sä
 #: src/features/paradigm/ParadigmButton.jsx:43
 #: src/features/paradigm/ParadigmButton.jsx:44
 msgid "There is no paradigm for this word"
-msgstr ""
+msgstr "Tälle sanalle ei löydy paradigmaa"
 
 #: src/translateble_variables.js:111
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
@@ -410,11 +410,11 @@ msgstr "Tämä sanakirja perustuu Kotimaisten kielten keskuksen sana-aineistoon 
 #: src/features/korp/KorpButton.jsx:52
 #: src/features/korp/KorpButton.jsx:53
 msgid "This word is not found in our corpus"
-msgstr ""
+msgstr "Tätä sanaa ei löydy korpuksistamme"
 
 #: src/translateble_variables.js:165
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
-msgstr ""
+msgstr "Trond Trosterudin suomi–norja-sanakirja sisältää yli 30 000 hakusanaa."
 
 #: src/translateble_variables.js:22
 msgid "V"
@@ -474,7 +474,7 @@ msgstr "suomen"
 
 #: src/translateble_variables.js:16
 msgid "gtfinnob"
-msgstr ""
+msgstr "Giellateknon suomi-bokmål-sanakirja"
 
 #: src/translateble_variables.js:11
 msgid "gtfinsme"
@@ -518,11 +518,11 @@ msgstr "Giellateknon inarinsaame–pohjoissaame-sanakirja"
 
 #: src/translateble_variables.js:19
 msgid "habmernobsmj"
-msgstr ""
+msgstr "Hamarøyn bokmål–luulajansaame-lääketiedesanakirja"
 
 #: src/translateble_variables.js:18
 msgid "habmersmjnob"
-msgstr ""
+msgstr "Hamarøyn luulajansaame-bokmål-lääketiedesanakirja"
 
 #: src/translateble_variables.js:41
 msgid "lat"
@@ -566,7 +566,7 @@ msgstr "norjan bokmålin"
 
 #: src/translateble_variables.js:46
 msgid "north"
-msgstr ""
+msgstr "pohjoinen"
 
 #: src/translateble_variables.js:17
 msgid "sammallahtismefin"
@@ -642,7 +642,7 @@ msgstr "ruotsin"
 
 #: src/features/search/FilterBar.jsx:104
 msgid "sámi keys"
-msgstr ""
+msgstr "saamelaiset näppäimet"
 
 #: src/translateble_variables.js:5
 msgid "termwiki"
@@ -666,24 +666,24 @@ msgstr "{0}/{1} lähdettä."
 
 #: src/features/infinitestems/SearchInfo.jsx:28
 msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
-msgstr ""
+msgstr "{stemsLength}/{totalCount} sisältää hakusanan <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:35
 msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
-msgstr ""
+msgstr "{stemsLength}/{totalCount} loppuu hakusanaan <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:20
 msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr ""
+msgstr "{stemsLength}/{totalCount} alkaa hakusanalla <0>{searchExpression}</0>"
 
 #: src/translateble_variables.js:91
 msgid "Álšateknihkka"
-msgstr ""
+msgstr "Kuntoilutekniikka"
 
 #: src/translateble_variables.js:92
 msgid "Ásttoáigi ja faláštallan"
-msgstr ""
+msgstr "Urheilu ja vapaa-aika"
 
 #: src/translateble_variables.js:93
 msgid "Ávnnasindustriija"
-msgstr ""
+msgstr "Materiaalitekniikka"
