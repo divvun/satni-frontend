@@ -15,6 +15,8 @@ const dicts = [
   t`gtsmnfin`,
   t`gtfinnob`,
   t`sammallahtismefin`,
+  t`habmersmjnob`,
+  t`habmernobsmj`,
 ];
 
 const partOfSpeech = [t`N`, t`V`, t`A`, t`Adv`, t`Pron`];
@@ -162,6 +164,12 @@ const dictionaryInfo = {
     info: [
       t`Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words.`,
     ],
+  },
+  habmersmjnob: {
+    info: [t`Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary`],
+  },
+  habmernobsmj: {
+    info: [t`Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary`],
   },
 };
 
