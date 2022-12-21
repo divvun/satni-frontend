@@ -1,19 +1,16 @@
 # Børre Gaup <borre.gaup@uit.no>, 2020, 2021.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2020-07-22 21:16+0200\n"
-"Mime-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.04.1\n"
-"Language: se\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-05-27 22:25+0200\n"
-"Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
-"Language-Team: Northern Sami <feedback@divvun.no>\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"MIME-Version: 1.0\n"
 
 #: src/containers/StatusBar.jsx:24
 msgid "(<0>Show all</0>)"
@@ -39,14 +36,6 @@ msgstr "<0>Viežžamin sátnegirjebohtosiid …</0>"
 #: src/features/article/TermArticles.jsx:23
 msgid "<0>Loading terms …</0>"
 msgstr "<0>Viežžamin tearbmabohtosiid …</0>"
-
-#: src/features/article/Articles.js:139
-#~ msgid "<0>Loading...</0>"
-#~ msgstr "<0>Viežžamin …</0>"
-
-#: src/features/article/Articles.js:141
-#~ msgid "<0>Not found</0>"
-#~ msgstr "<0>Ii gávdnon</0>"
 
 #: src/translateble_variables.js:22
 msgid "A"
@@ -189,13 +178,13 @@ msgstr "Čiega dán giela"
 msgid "Huksenteknihkka"
 msgstr "Huksenteknihkka"
 
-#: src/translateble_variables.js:169
-msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary"
-msgstr ""
+#: src/translateble_variables.js:170
+msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
+msgstr "Hábmera suohkana julevsámi - dáro medisidnasátnegirji.Sisttisdoallá sullii 1600 ohcansáni."
 
-#: src/translateble_variables.js:172
-msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary"
-msgstr ""
+#: src/translateble_variables.js:175
+msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
+msgstr "Hábmera suohkana dáro - julevsámi medisiidnasátnegirji.Sisttisdoallá sullii 1600 ohcansáni"
 
 #: src/containers/Welcome.jsx:152
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
@@ -233,10 +222,6 @@ msgstr "subst."
 #: src/translateble_variables.js:44
 msgid "NO"
 msgstr "Norga"
-
-#: src/features/article/Articles.js:158
-#~ msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
-#~ msgstr "Eai lean bohtosat <0>{lemma}</0> várás. Iskka <1/> dahje <2/> gurutfálus jus gielat dahje sátnegirjjit maid háliidat leat aktiiva."
 
 #: src/features/infinitestems/SearchInfo.jsx:13
 msgid "No results for <0>{searchExpression}</0>"
@@ -300,15 +285,15 @@ msgstr "Ohcanbohtosat ihtet dása."
 
 #: src/features/search/WildCard.jsx:34
 msgid "Search words that contain your search term"
-msgstr ""
+msgstr "Oza sániid maid sisttisdollet ohcansáni"
 
 #: src/features/search/WildCard.jsx:45
 msgid "Search words that end in your search term"
-msgstr ""
+msgstr "Oza sániid main loahpa lea ohcansánis"
 
 #: src/features/search/WildCard.jsx:23
 msgid "Search words that start with your search term"
-msgstr ""
+msgstr "Oza sániid main álgu lea ohcansánis"
 
 #: src/translateble_variables.js:88
 msgid "Servodatdieđa"
@@ -333,10 +318,6 @@ msgstr "Čájet dán sáni min teakstačoakkáldagas"
 #: src/features/article/Source.jsx:25
 msgid "Source:"
 msgstr "Gáldu:"
-
-#: src/containers/SatniDrawer.js:126
-#~ msgid "Start"
-#~ msgstr "Álgu"
 
 #: src/features/article/LemmaGroup.jsx:19
 msgid "Status:"
@@ -512,11 +493,11 @@ msgstr "Giellatekno anársámi – davvisámi sátnegirji"
 
 #: src/translateble_variables.js:19
 msgid "habmernobsmj"
-msgstr ""
+msgstr "Hábmera suohkana dáro - julevsámi medisiidnasátnegirji"
 
 #: src/translateble_variables.js:18
 msgid "habmersmjnob"
-msgstr ""
+msgstr "Hábmera suohkana julevsámi - dáro medisiidnasátnegirji"
 
 #: src/translateble_variables.js:41
 msgid "lat"
@@ -654,21 +635,17 @@ msgstr "{0}/{1} gielas."
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} gáldus."
 
-#: src/features/infinitestems/InfiniteStems.js:48
-#~ msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
-#~ msgstr "{0}/{totalCount}:s main álgu lea <0>{searchExpression}</0>"
-
 #: src/features/infinitestems/SearchInfo.jsx:28
 msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
-msgstr ""
+msgstr "{stemsLength}/{totalCount} mat sisttisdollet <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:35
 msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
-msgstr ""
+msgstr "{stemsLength}/{totalCount} main loahppa lea <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:20
 msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr ""
+msgstr "{stemsLength}/{totalCount} main álgu lea <0>{searchExpression}</0>"
 
 #: src/translateble_variables.js:91
 msgid "Álšateknihkka"
