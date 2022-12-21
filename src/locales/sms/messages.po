@@ -200,11 +200,19 @@ msgid "Huksenteknihkka"
 msgstr ""
 
 #: src/translateble_variables.js:169
-msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary"
+#~ msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary"
+#~ msgstr ""
+
+#: src/translateble_variables.js:170
+msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
 msgstr ""
 
 #: src/translateble_variables.js:172
-msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary"
+#~ msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary"
+#~ msgstr ""
+
+#: src/translateble_variables.js:175
+msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
 msgstr ""
 
 #: src/containers/Welcome.jsx:152

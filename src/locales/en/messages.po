@@ -1,15 +1,15 @@
-# Børre Gaup <borre.gaup@uit.no>, 2020.
+# Børre Gaup <borre.gaup@uit.no>, 2020, 2022.
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2020-07-22 21:16+0200\n"
 "Mime-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.2\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Language: en\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-11-03 19:20+0100\n"
+"PO-Revision-Date: 2022-12-21 16:05+0100\n"
 "Last-Translator: Børre Gaup <borre.gaup@uit.no>\n"
 "Language-Team: Northern Sami <feedback@divvun.no>\n"
 "Plural-Forms: \n"
@@ -39,14 +39,6 @@ msgstr "<0>Loading dicts …</0>"
 #: src/features/article/TermArticles.jsx:23
 msgid "<0>Loading terms …</0>"
 msgstr "<0>Loading terms …</0>"
-
-#: src/features/article/Articles.js:139
-#~ msgid "<0>Loading...</0>"
-#~ msgstr "<0>Loading...</0>"
-
-#: src/features/article/Articles.js:141
-#~ msgid "<0>Not found</0>"
-#~ msgstr "<0>Not found</0>"
 
 #: src/translateble_variables.js:22
 msgid "A"
@@ -97,10 +89,6 @@ msgstr "Country"
 msgid "Definition"
 msgstr "Definition"
 
-#: src/features/article/Definitions.js:20
-#~ msgid "Definitions:"
-#~ msgstr "Definitions:"
-
 #: src/containers/SatniDrawer.jsx:26
 msgid "Delivered by"
 msgstr "Delivered by"
@@ -120,10 +108,6 @@ msgstr "Dictionary articles will appear in this pane when you press a word in th
 #: src/translateble_variables.js:71
 msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Dihtorteknologiija ja diehtoteknihkka"
-
-#: src/containers/Welcome.js:55
-#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
-#~ msgstr "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>, all set up by <4>Divvun</4>."
 
 #: src/containers/Welcome.jsx:65
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
@@ -165,10 +149,6 @@ msgstr "Geography"
 msgid "Gielladieđa"
 msgstr "Linguistics"
 
-#: src/containers/SatniDrawer.js:30
-#~ msgid "Giellagáldu"
-#~ msgstr "Giellagáldu"
-
 #: src/translateble_variables.js:105
 msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
 msgstr "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
@@ -201,13 +181,13 @@ msgstr "Hide this language"
 msgid "Huksenteknihkka"
 msgstr "Building technology"
 
-#: src/translateble_variables.js:169
-msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary"
-msgstr "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary"
+#: src/translateble_variables.js:170
+msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
+msgstr "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
 
-#: src/translateble_variables.js:172
-msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary"
-msgstr "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary"
+#: src/translateble_variables.js:175
+msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
+msgstr "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
 
 #: src/containers/Welcome.jsx:152
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
@@ -245,10 +225,6 @@ msgstr "noun"
 #: src/translateble_variables.js:44
 msgid "NO"
 msgstr "Norway"
-
-#: src/features/article/Articles.js:158
-#~ msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
-#~ msgstr "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
 
 #: src/features/infinitestems/SearchInfo.jsx:13
 msgid "No results for <0>{searchExpression}</0>"
@@ -345,10 +321,6 @@ msgstr "Show this word in our corpus"
 #: src/features/article/Source.jsx:25
 msgid "Source:"
 msgstr "Source:"
-
-#: src/containers/SatniDrawer.js:126
-#~ msgid "Start"
-#~ msgstr "Start"
 
 #: src/features/article/LemmaGroup.jsx:19
 msgid "Status:"
@@ -665,10 +637,6 @@ msgstr "{0}/{1} languages."
 #: src/containers/StatusBar.jsx:32
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} sources."
-
-#: src/features/infinitestems/InfiniteStems.js:48
-#~ msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
-#~ msgstr "{0}/{totalCount} starting with <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:28
 msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
