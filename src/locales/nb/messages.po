@@ -41,14 +41,6 @@ msgstr "<0>Laster ordbøker …</0>"
 msgid "<0>Loading terms …</0>"
 msgstr "<0>Laster termartikler …</0>"
 
-#: src/features/article/Articles.js:139
-#~ msgid "<0>Loading...</0>"
-#~ msgstr "<0>Laster …</0>"
-
-#: src/features/article/Articles.js:141
-#~ msgid "<0>Not found</0>"
-#~ msgstr "<0>Ikke funnet</0>"
-
 #: src/translateble_variables.js:22
 msgid "A"
 msgstr "adj."
@@ -235,10 +227,6 @@ msgstr "subst."
 msgid "NO"
 msgstr "Norge"
 
-#: src/features/article/Articles.js:158
-#~ msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
-#~ msgstr "Ingen resultater for <0>{lemma}</0>. Sjekk </1> eller <2/> i venstremenyen for å se om de ønskede språkene eller ordbøkene er aktivert."
-
 #: src/features/infinitestems/SearchInfo.jsx:13
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "Ingen resultater for <0>{searchExpression}</0>"
@@ -334,10 +322,6 @@ msgstr "Vis dette ordet i tekstsamlingen vår"
 #: src/features/article/Source.jsx:25
 msgid "Source:"
 msgstr "Kilde:"
-
-#: src/containers/SatniDrawer.js:126
-#~ msgid "Start"
-#~ msgstr "Start"
 
 #: src/features/article/LemmaGroup.jsx:19
 msgid "Status:"
@@ -654,10 +638,6 @@ msgstr "{0}/{1} språk."
 #: src/containers/StatusBar.jsx:32
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} kilder."
-
-#: src/features/infinitestems/InfiniteStems.js:48
-#~ msgid "{0}/{totalCount} starting with <0>{searchExpression}</0>"
-#~ msgstr "{0}/{totalCount} som begynner med <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.jsx:28
 msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
