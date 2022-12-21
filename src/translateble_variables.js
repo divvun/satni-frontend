@@ -166,10 +166,14 @@ const dictionaryInfo = {
     ],
   },
   habmersmjnob: {
-    info: [t`Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary`],
+    info: [
+      t`Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words.`,
+    ],
   },
   habmernobsmj: {
-    info: [t`Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary`],
+    info: [
+      t`Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words.`,
+    ],
   },
 };
 
