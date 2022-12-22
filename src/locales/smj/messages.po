@@ -31,11 +31,11 @@ msgstr "<0>Giellagálldo</0>"
 
 #: src/features/article/DictArticles.jsx:32
 msgid "<0>Loading dicts …</0>"
-msgstr "Apertium: <0>Viedtjamin báhkogirjjebåhtusij …</0>"
+msgstr "<0>Viedtjamin báhkogirjjebåhtusijt …</0>"
 
 #: src/features/article/TermArticles.jsx:23
 msgid "<0>Loading terms …</0>"
-msgstr "Apertium: <0>Viedtjamin tærmmabåhtusij …</0>"
+msgstr "<0>Viedtjamin tærmmabåhtusijt …</0>"
 
 #: src/translateble_variables.js:22
 msgid "A"
@@ -72,7 +72,7 @@ msgstr "Vállji gielajt"
 
 #: src/features/search/FilterBar.jsx:131
 msgid "Choose whether the search expression is in the start, middle or the end of words."
-msgstr "Apertium: Vállji jus åhtsåmgárgadis galggá álgon liehket, dålggijinno jali låhpan bágojn majt åtså."
+msgstr "Vállji jus åhtsåmbáhko galggá liehket bágo álgon, sinna jali låhpan."
 
 #: src/containers/Welcome.jsx:144
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
@@ -80,7 +80,7 @@ msgstr "Gå diebttjista <0/> de vuojná gåktu báhko såjåduvvá. Gå diebttji
 
 #: src/features/article/Stem.jsx:106
 msgid "Country"
-msgstr "Riika"
+msgstr "Rijka"
 
 #: src/features/article/Definitions.jsx:20
 msgid "Definition"
@@ -88,7 +88,7 @@ msgstr "Definisjåvnnå"
 
 #: src/containers/SatniDrawer.jsx:26
 msgid "Delivered by"
-msgstr "Apertium: Dahkke"
+msgstr "Dahkke"
 
 #: src/features/article/Stem.jsx:101
 msgid "Dialect"
@@ -162,7 +162,7 @@ msgstr "Guolástus"
 #: src/containers/SatniAppBar.jsx:80
 #: src/containers/SatniAppBar.jsx:80
 msgid "Help"
-msgstr "Apertium: Viehkke"
+msgstr "Viehkke"
 
 #: src/features/article/Source.jsx:33
 #: src/features/article/Source.jsx:34
@@ -180,11 +180,11 @@ msgstr "Biggimteknihkka"
 
 #: src/translateble_variables.js:170
 msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
-msgstr "Apertium: Hábmela suohkana julevsáme - dáro medisijnnabáhkogirjje.#Sisadnet suláj 1600 åhtsåmbágo."
+msgstr "Hábmera suohkana julevsáme - dáro medisijnalasj báhkogirjje. Birrusij 1600 åhtsåmbágo."
 
 #: src/translateble_variables.js:175
 msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
-msgstr "Apertium: Hábmela suohkana dáro - julevsáme medisijnnabáhkogirjje.#Sisadnet suláj 1600 åhtsåmbágo."
+msgstr "Hábmera suohkana dáro - julevsáme medisijnalasj báhkogirjje. Birrusij 1600 åhtsåmbágo."
 
 #: src/containers/Welcome.jsx:152
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
@@ -201,7 +201,7 @@ msgstr "Giela"
 #: src/features/search/FilterBar.jsx:117
 #: src/features/search/FilterBar.jsx:118
 msgid "Lookup the search word"
-msgstr "Apertium: Vuoseda åhtsåmbágo båhtusa"
+msgstr "Vuoseda åhtsåmbágo båhtusijt"
 
 #: src/translateble_variables.js:83
 msgid "Luonddudieđa ja matematihkka"
@@ -253,7 +253,7 @@ msgstr "Relijåvnnå"
 
 #: src/features/article/Articles.jsx:31
 msgid "Results for «{lemma}»"
-msgstr "Apertium: «{lemma}» båhtusa"
+msgstr "«{lemma}» båhtusa"
 
 #: src/containers/StatusBar.jsx:23
 msgid "Results only from"
@@ -265,7 +265,7 @@ msgstr "Svierik"
 
 #: src/features/search/FilterBar.jsx:122
 msgid "Search"
-msgstr "Apertium: Åtså"
+msgstr "Åtså"
 
 #: src/features/search/FilterBar.jsx:136
 #: src/features/search/FilterBar.jsx:140
@@ -273,11 +273,11 @@ msgstr "Apertium: Åtså"
 #: src/features/search/WildCard.jsx:35
 #: src/features/search/WildCard.jsx:46
 msgid "Search mode"
-msgstr "Apertium: *Ohcanmodus"
+msgstr "Åhtsåmmodus"
 
 #: src/features/search/WildCard.jsx:20
 msgid "Search mode:"
-msgstr "Apertium: *Ohcanmodus:"
+msgstr "Åhtsåmmodus:"
 
 #: src/containers/Welcome.jsx:107
 msgid "Search results will appear here."
