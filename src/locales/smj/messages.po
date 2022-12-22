@@ -107,12 +107,8 @@ msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Dáhtáteknologijja ja dáhtáteknihkka"
 
 #: src/containers/Welcome.jsx:65
-#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
-#~ msgstr "Åtså <0>Giellagáldo</0> tærmmatjoahkkáldagán, <1>Pekka Sammallahti davvesáme – suoma báhkogirjen</1> ja <2>Giellatekno</2> <3>sáme báhkogirjijn</3>."
-
-#: src/containers/Welcome.jsx:65
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
-msgstr ""
+msgstr "Apertium: Åtså <0>Giellagáldo</0> tærmmatjoahkkáldagán, <1>Pekka Sammallahti davvesáme – suoma báhkogirjen</1>, Hábmera suohkana <2>julevsáme - dáro</2> jali <3>dáro - julevsámev</3> medisijnnabáhkogirjijn jali <4>Giellatekno</4> <5>sáme báhkogirjijn</5>."
 
 #: src/translateble_variables.js:72
 msgid "Dáidda ja girjjálašvuohta"
