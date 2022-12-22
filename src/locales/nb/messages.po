@@ -75,7 +75,7 @@ msgstr "Velg språk"
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr "Velg om søkeuttrykket skal være i begynnelsen, midten eller slutten av det du leter etter."
 
-#: src/containers/Welcome.jsx:144
+#: src/containers/Welcome.jsx:147
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr "Klikk på <0/> for å se hvordan ordet bøyes. Klikk på <1/> for å se eksempler på hvordan ordet brukes."
 
@@ -99,7 +99,7 @@ msgstr "Dialekt"
 msgid "Dictionaries"
 msgstr "Ordbøker"
 
-#: src/containers/Welcome.jsx:138
+#: src/containers/Welcome.jsx:141
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr "I dette panelet dukker det opp ordboksartikler når du trykker på et ord blant søkeresultatene til venstre."
 
@@ -108,8 +108,8 @@ msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Datateknologi og datateknikk"
 
 #: src/containers/Welcome.jsx:65
-msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
-msgstr "Gjør søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamisk – finsk ordbok</1> eller i <2>Giellateknos</2> <3>samiske ordbøker</3>."
+msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
+msgstr "Gjør søk i <0>Giellagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamisk – finsk ordbok</1>, Hamarøy kommunes <2>lulesamisk - norske</2> eller <3>norsk - lulesamiske</3> medisinordbøker eller i <4>Giellateknos</4> <5>samiske ordbøker</5>."
 
 #: src/translateble_variables.js:72
 msgid "Dáidda ja girjjálašvuohta"
@@ -187,7 +187,7 @@ msgstr "Hamarøy kommunes lulesamisk-norske medisinordbok. Inneholder ca 1600 s�
 msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
 msgstr "Hamarøy kommunes norsk-lulesamiske medisinordbok. Inneholder ca 1600 søkeord."
 
-#: src/containers/Welcome.jsx:152
+#: src/containers/Welcome.jsx:155
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr "Inne i artiklene kan du skjule uønskede språk og ordbøker. For å aktivere dem på nytt, trykk på <0/> eller <1/>."
 
@@ -280,7 +280,7 @@ msgstr "Søkemodus"
 msgid "Search mode:"
 msgstr "Søkemodus:"
 
-#: src/containers/Welcome.jsx:107
+#: src/containers/Welcome.jsx:110
 msgid "Search results will appear here."
 msgstr "Søkeresultater dukker opp her."
 
@@ -346,7 +346,7 @@ msgstr "Ordboken har omtrent 11 000 oppslagsord."
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
 msgstr "Ordboken har mer enn 50 000 oppslagsord, og Sammallahti legger jevnlig inn nytt innhold."
 
-#: src/containers/Welcome.jsx:110
+#: src/containers/Welcome.jsx:113
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 msgstr "Søkefeltet forstår samiske, nordiske, engelske og latinske søkeord. Om du ikke har samiske bokstaver på maskinen din, trykk <0/> for å kunne skrive dem i søkefeltet."
 
@@ -400,7 +400,7 @@ msgstr "verb"
 msgid "Welcome!"
 msgstr "Velkommen!"
 
-#: src/containers/Welcome.jsx:124
+#: src/containers/Welcome.jsx:127
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Når du klikker på et ord her, dukker ordboksartikler opp til høyre."
 
@@ -408,7 +408,7 @@ msgstr "Når du klikker på et ord her, dukker ordboksartikler opp til høyre."
 msgid "Write at least one letter here"
 msgstr "Skriv minst en bokstav her"
 
-#: src/containers/Welcome.jsx:118
+#: src/containers/Welcome.jsx:121
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr "Du kan bla blant søkeordene her, nye hentes til alle treff har blitt funnet."
 

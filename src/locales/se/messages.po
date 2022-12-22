@@ -74,7 +74,7 @@ msgstr "Vállje gielaid"
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr "Vállje jus ohcancealkka galgá leat álggus, gasku dahje loahpas sániin maid ozat."
 
-#: src/containers/Welcome.jsx:144
+#: src/containers/Welcome.jsx:147
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr "Go coahkkalat <0/>, de oainnát mo sátni sodjá. Go coahkkalat <1/>, de oainnát mo sátni lea atnon."
 
@@ -98,7 +98,7 @@ msgstr "Suopman"
 msgid "Dictionaries"
 msgstr "Sátnegirjjit"
 
-#: src/containers/Welcome.jsx:138
+#: src/containers/Welcome.jsx:141
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr "Sátnegirjeartihkkalat ihtet dása go coahkkalat sáni ohcanbohtosiin dás gurut bealde."
 
@@ -107,8 +107,12 @@ msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Dihtorteknologiija ja diehtoteknihkka"
 
 #: src/containers/Welcome.jsx:65
-msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
-msgstr "Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi – suoma sátnegirjjis</1> ja <2>Giellatekno</2> <3>sámi sátnegirjjiin</3>."
+#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
+#~ msgstr "Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi – suoma sátnegirjjis</1> ja <2>Giellatekno</2> <3>sámi sátnegirjjiin</3>."
+
+#: src/containers/Welcome.jsx:65
+msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
+msgstr "Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi – suoma sátnegirjjis</1>, Hábmera suohkana <2>julevsámi - dáro</2> dahje <3>dáro - julevsámi</3> medisiidnasátnegirjjiin dahje <4>Giellatekno</4> <5>sámi sátnegirjjiin</5>."
 
 #: src/translateble_variables.js:72
 msgid "Dáidda ja girjjálašvuohta"
@@ -186,7 +190,7 @@ msgstr "Hábmera suohkana julevsámi - dáro medisidnasátnegirji.Sisttisdoallá
 msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
 msgstr "Hábmera suohkana dáro - julevsámi medisiidnasátnegirji.Sisttisdoallá sullii 1600 ohcansáni"
 
-#: src/containers/Welcome.jsx:152
+#: src/containers/Welcome.jsx:155
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr "Artihkkaliin sáhtát čiehkat gielaid dahje sátnegirjjiid maid it háliit oaidnit. Sáhtát daid čájehit fas jus coahkkalat <0/> dahje <1/>."
 
@@ -279,7 +283,7 @@ msgstr "Ohcanmodus"
 msgid "Search mode:"
 msgstr "Ohcanmodus:"
 
-#: src/containers/Welcome.jsx:107
+#: src/containers/Welcome.jsx:110
 msgid "Search results will appear here."
 msgstr "Ohcanbohtosat ihtet dása."
 
@@ -345,7 +349,7 @@ msgstr "Sátnegirjjis lea sullii 11 000 ohcansáni."
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
 msgstr "Sátnegirjjis lea eanet go 50 000 ohcansáni, ja Sammallahti jeavddalaččat lasiha ođđa materiála."
 
-#: src/containers/Welcome.jsx:110
+#: src/containers/Welcome.jsx:113
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 msgstr "Oza sámi, davviriikkalaš, eŋgelas dahje latiinna sániid ohcangiettis. Jus du mašiinnas eai leat sámi bustávat, coahkkal <0/> vai boalut main leat sámi bustávat ihtet."
 
@@ -399,7 +403,7 @@ msgstr "vearba"
 msgid "Welcome!"
 msgstr "Bures boahtin!"
 
-#: src/containers/Welcome.jsx:124
+#: src/containers/Welcome.jsx:127
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Go coahkkalat sáni dás, de sátnegirjeartihkkalat ihtet olgeš beallái."
 
@@ -407,7 +411,7 @@ msgstr "Go coahkkalat sáni dás, de sátnegirjeartihkkalat ihtet olgeš beallá
 msgid "Write at least one letter here"
 msgstr "Čális unnimustá ovtta bustáva dása"
 
-#: src/containers/Welcome.jsx:118
+#: src/containers/Welcome.jsx:121
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr "Sáhtát bláđet ohcanbohtosiid gaskkas dás, ođđa bohtosat ihtet dassáigo visot deaivamat leat gávdnon."
 
