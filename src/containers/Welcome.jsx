@@ -74,8 +74,11 @@ export const WelcomeHeader = () => {
             term collection,{' '}
             <Link href="/sammallahtismefin">
               Pekka Sammallahti&apos;s North Sami – Finnish dictionary
-            </Link>{' '}
-            and{' '}
+            </Link>
+            {', '}Hábmer municipality&apos;s{' '}
+            <Link href="/habmersmjnob">Lule Sámi - Norwegian</Link> or{' '}
+            <Link href="/habmernobsmj">Norwegian - Lule Sámi</Link> medicinal
+            dictionaries and{' '}
             <Link
               target="_blank"
               rel="noopener noreferrer"
