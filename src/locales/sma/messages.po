@@ -75,7 +75,7 @@ msgstr "Veeljh gïelh"
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr "Apertium: Veeljie jis ohtsemeraajese galka  aalkoevisnie, bihkien jallh minngemosth baakojne mejtie ohtsh."
 
-#: src/containers/Welcome.jsx:144
+#: src/containers/Welcome.jsx:147
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr "Gosse diedtelh <0/>, dle vuajnah guktie baakoem sojjehtidh. Gosse diedtelh <1/>, dle vuajnah guktie baakoe provhkesovveme."
 
@@ -99,7 +99,7 @@ msgstr "Smaarege"
 msgid "Dictionaries"
 msgstr "Baakoegærjah"
 
-#: src/containers/Welcome.jsx:138
+#: src/containers/Welcome.jsx:141
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr "Baakoegærjaartihkelh jijhtieh dagkoe gosse diedtelh baakoem ohtseme baakojste garrabealesne."
 
@@ -108,8 +108,12 @@ msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Daatateknologije jïh daatateknigke"
 
 #: src/containers/Welcome.jsx:65
-msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
-msgstr "Ohtsh <0>Gïelegaaltijen</0>teermetjåagkestahke, <1>Pekka Sammallahti noerhtesaemien - soemen baakoegærjesne</1> jïh <2>Gïeletekno</2> <3>saemien baakoegærjine</3> seammasïenten. "
+#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
+#~ msgstr "Ohtsh <0>Gïelegaaltijen</0>teermetjåagkestahke, <1>Pekka Sammallahti noerhtesaemien - soemen baakoegærjesne</1> jïh <2>Gïeletekno</2> <3>saemien baakoegærjine</3> seammasïenten. "
+
+#: src/containers/Welcome.jsx:65
+msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
+msgstr ""
 
 #: src/translateble_variables.js:72
 msgid "Dáidda ja girjjálašvuohta"
@@ -187,7 +191,7 @@ msgstr "Apertium: Hábmeren tjïelten julevsaemien - daaroen *medisidnasátnegir
 msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
 msgstr "Apertium: Hábmeren tjïelten daaroen - julevsaemiem *medisiidnasátnegirji. Åtna medtie jaepien 1600 ohtsemebaakoem"
 
-#: src/containers/Welcome.jsx:152
+#: src/containers/Welcome.jsx:155
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr "Artihkelinie maahtah vöörhkedh gïelh jallh baakoegærjah maam ij sïjhth vuejnedh. Dejtie maahtah vihth vuesiehtidh jis diedtelh <0/> jallh <1/>."
 
@@ -280,7 +284,7 @@ msgstr "Apertium: Ohtsememoduse"
 msgid "Search mode:"
 msgstr "Apertium: Ohtsememoduse:"
 
-#: src/containers/Welcome.jsx:107
+#: src/containers/Welcome.jsx:110
 msgid "Search results will appear here."
 msgstr "Maam ohtseme jijhtieh dagkoe."
 
@@ -346,7 +350,7 @@ msgstr "Baakoegærjesne medtie 11 000 ohtsemebaakoeh."
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
 msgstr "Baakoegærjesne lea jeaneb goh 50 000 ohtsemebaakoeh, jïh Sammallahti daamhtetje lissehte orre materiaalem."
 
-#: src/containers/Welcome.jsx:110
+#: src/containers/Welcome.jsx:113
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 msgstr "Maahtah baakoem ohtsedh saemien, noerhtelaanti, englaanten jallh latinegïelen. Jis dov faatoes saemien bokstavh dov masjijnesne, diedtelh <0/> juktie båaloeh jijhtieh mej leah saemien bokstavh."
 
@@ -400,7 +404,7 @@ msgstr "verbe"
 msgid "Welcome!"
 msgstr "Bueriebåeteme!"
 
-#: src/containers/Welcome.jsx:124
+#: src/containers/Welcome.jsx:127
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Gosse baakoem dagkoe diedtel, baakoegærjaartihkelh jijhtieh garrabealan."
 
@@ -408,7 +412,7 @@ msgstr "Gosse baakoem dagkoe diedtel, baakoegærjaartihkelh jijhtieh garrabealan
 msgid "Write at least one letter here"
 msgstr "Tjaelel unnemes aktem bokstaavem dagka"
 
-#: src/containers/Welcome.jsx:118
+#: src/containers/Welcome.jsx:121
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr "Dagkoe datne maahtah plæredh ohtsemebåatoejsne, orre båatoeh båetieh goske gaajhkh gaavneme."
 

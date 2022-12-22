@@ -83,7 +83,7 @@ msgstr ""
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr ""
 
-#: src/containers/Welcome.jsx:144
+#: src/containers/Welcome.jsx:147
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr ""
 
@@ -111,7 +111,7 @@ msgstr ""
 msgid "Dictionaries"
 msgstr ""
 
-#: src/containers/Welcome.jsx:138
+#: src/containers/Welcome.jsx:141
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr ""
 
@@ -124,7 +124,11 @@ msgstr ""
 #~ msgstr ""
 
 #: src/containers/Welcome.jsx:65
-msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
+#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
+#~ msgstr ""
+
+#: src/containers/Welcome.jsx:65
+msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
 msgstr ""
 
 #: src/translateble_variables.js:72
@@ -215,7 +219,7 @@ msgstr ""
 msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
 msgstr ""
 
-#: src/containers/Welcome.jsx:152
+#: src/containers/Welcome.jsx:155
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr ""
 
@@ -312,7 +316,7 @@ msgstr ""
 msgid "Search mode:"
 msgstr ""
 
-#: src/containers/Welcome.jsx:107
+#: src/containers/Welcome.jsx:110
 msgid "Search results will appear here."
 msgstr ""
 
@@ -382,7 +386,7 @@ msgstr ""
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
 msgstr ""
 
-#: src/containers/Welcome.jsx:110
+#: src/containers/Welcome.jsx:113
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 msgstr ""
 
@@ -436,7 +440,7 @@ msgstr ""
 msgid "Welcome!"
 msgstr ""
 
-#: src/containers/Welcome.jsx:124
+#: src/containers/Welcome.jsx:127
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr ""
 
@@ -444,7 +448,7 @@ msgstr ""
 msgid "Write at least one letter here"
 msgstr ""
 
-#: src/containers/Welcome.jsx:118
+#: src/containers/Welcome.jsx:121
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr ""
 
