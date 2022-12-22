@@ -108,12 +108,8 @@ msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Daatateknologije jïh daatateknigke"
 
 #: src/containers/Welcome.jsx:65
-#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
-#~ msgstr "Ohtsh <0>Gïelegaaltijen</0>teermetjåagkestahke, <1>Pekka Sammallahti noerhtesaemien - soemen baakoegærjesne</1> jïh <2>Gïeletekno</2> <3>saemien baakoegærjine</3> seammasïenten. "
-
-#: src/containers/Welcome.jsx:65
-msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
-msgstr ""
+msgid "Apertium: Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
+msgstr "Ohtsh <0>Gïelegaaltijen</0>teermetjåagkestahke, <1>Pekka Sammallahti noerhtesaemien - soemen baakoegærjesne</1>, Hábmeren tjïelten <2>julevsaemien - daaroen</2> jallh <3>daaroeh - julevsaemiem</3> *medisiidnasátnegirjjiin jallh jïh <4>Gïeletekno</4> <5>saemien baakoegærjine</5> seammasïenten."
 
 #: src/translateble_variables.js:72
 msgid "Dáidda ja girjjálašvuohta"
