@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/containers/StatusBar.jsx:24
 msgid "(<0>Show all</0>)"
-msgstr "(<0>Vuesedh gaajhkh</0>)"
+msgstr "(<0>Vuesehth gaajhkem</0>)"
 
 #: src/features/article/Source.stories.js:13
 msgid "<0/>"
@@ -24,7 +24,7 @@ msgstr "<0/>"
 #: src/features/article/DictArticles.jsx:39
 #: src/features/article/TermArticles.jsx:30
 msgid "<0>Error {0}</0>"
-msgstr "<0>Båajhtede {0}</0>"
+msgstr "<0>Båajhtode {0}</0>"
 
 #: src/containers/SatniDrawer.jsx:44
 msgid "<0>Giellagáldu</0>"
@@ -49,11 +49,11 @@ msgstr "adv."
 #: src/translateble_variables.js:112
 #: src/translateble_variables.js:118
 msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
-msgstr "Mahte bielie baakoepaarine vïedtjesovveme daaroe-saemien baaltelaake teekstiste, jïh dam barkoem Tjïelte- jïh regionaaledepartemeente beetnehvierhtiejgujmie dåårjeme."
+msgstr "Mahte bielie baakoepaarine vïedtjesovveme daaroen-saemien baaltelaaketje teekstijste, jïh dam barkoem Tjïelte- jïh regionaaledepartemeente beetnehvierhtiejgujmie dåårjeme."
 
 #: src/translateble_variables.js:69
 msgid "Beaivválaš giella"
-msgstr "Biejjeladtje gïele"
+msgstr "fïerhtenbeajjetje gïele"
 
 #: src/translateble_variables.js:70
 msgid "Boazodoallu"
@@ -77,7 +77,7 @@ msgstr ""
 
 #: src/containers/Welcome.jsx:147
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
-msgstr "Gosse diedtelh <0/>, dle vuajnah guktie baakoem sojjehtidh. Gosse diedtelh <1/>, dle vuajnah guktie baakoe provhkesovveme."
+msgstr "Gosse dïedtelh <0/>, dle vuajnah guktie baakoem sojjehtidh. Gosse d¨edtelh <1/>, dle vuajnah guktie baakoe provhkesovveme."
 
 #: src/features/article/Stem.jsx:106
 msgid "Country"
@@ -101,15 +101,16 @@ msgstr "Baakoegærjah"
 
 #: src/containers/Welcome.jsx:141
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
-msgstr "Baakoegærjaartihkelh jijhtieh dagkoe gosse diedtelh baakoem ohtseme baakojste garrabealesne."
+msgstr "Baakoegærjaartihkelh dagkoe jijhtieh gosse baakoem ohtseme dïedtelhbaakojste garrabealesne."
 
 #: src/translateble_variables.js:71
 msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Daatateknologije jïh daatateknigke"
 
+# TODO: Mangler oversettelse for Hábmer
 #: src/containers/Welcome.jsx:65
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
-msgstr ""
+msgstr "Ohtsh <0>Gïelegaaltijen</0>teermetjåagkestahke, <1>Pekka Sammallahti noerhtesaemien - soemen baakoegærjesne</1> jïh <4>Gïeletekno</4> <5>saemien baakoegærjine</5> seammasïenten. "
 
 #: src/translateble_variables.js:72
 msgid "Dáidda ja girjjálašvuohta"
@@ -202,7 +203,7 @@ msgstr "Gïelh"
 #: src/features/search/FilterBar.jsx:117
 #: src/features/search/FilterBar.jsx:118
 msgid "Lookup the search word"
-msgstr "Vuesedh ohtsemebaakoem båatoem"
+msgstr "Vuesehth ohtsemebaakoem båatoem"
 
 #: src/translateble_variables.js:83
 msgid "Luonddudieđa ja matematihkka"
@@ -214,7 +215,7 @@ msgstr "Medisijne"
 
 #: src/translateble_variables.js:85
 msgid "Mášenteknihkka"
-msgstr "Maasjinateknihke"
+msgstr "Maskijneteknihke"
 
 #: src/translateble_variables.js:22
 msgid "N"
