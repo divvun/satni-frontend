@@ -14,7 +14,7 @@ msgstr ""
 
 #: src/containers/StatusBar.jsx:24
 msgid "(<0>Show all</0>)"
-msgstr "Vuoseda divna"
+msgstr "(<0>Vuoseda divna</0>)"
 
 #: src/features/article/Source.stories.js:13
 msgid "<0/>"
