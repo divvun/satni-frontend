@@ -3,17 +3,27 @@ import { relayStylePagination } from '@apollo/client/utilities';
 import { availableLanguages } from './utils';
 import dictionaryInfo from './translateble_variables';
 
+export const availableDictsVar = makeVar(Object.keys(dictionaryInfo));
+
 export const interfaceLanguageVar = makeVar(
   localStorage.getItem('interfaceLanguage')
     ? localStorage.getItem('interfaceLanguage')
     : 'se',
 );
 
-export const wantedDictsVar = makeVar(
-  localStorage.getItem('wantedDicts')
-    ? JSON.parse(localStorage.getItem('wantedDicts'))
-    : Object.keys(dictionaryInfo),
-);
+const getWanted = () => {
+  const unwanted = localStorage.getItem('unwantedDicts')
+    ? JSON.parse(localStorage.getItem('unwantedDicts'))
+    : [];
+
+  return unwanted
+    ? Object.keys(dictionaryInfo).filter(
+        (availableDict) => !unwanted.includes(availableDict),
+      )
+    : Object.keys(dictionaryInfo);
+};
+
+export const wantedDictsVar = makeVar(getWanted());
 
 export const srcLangsVar = makeVar(
   localStorage.getItem('srcLangs')
