@@ -108,7 +108,7 @@ msgstr "Dáhtáteknologijja ja dáhtáteknihkka"
 
 #: src/containers/Welcome.jsx:65
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
-msgstr "Apertium: Åtså <0>Giellagáldo</0> tærmmatjoahkkáldagán, <1>Pekka Sammallahti davvesáme – suoma báhkogirjen</1>, Hábmera suohkana <2>julevsáme - dáro</2> jali <3>dáro - julevsámev</3> medisijnnabáhkogirjijn jali <4>Giellatekno</4> <5>sáme báhkogirjijn</5>."
+msgstr ""
 
 #: src/translateble_variables.js:72
 msgid "Dáidda ja girjjálašvuohta"
@@ -285,15 +285,15 @@ msgstr "Åhtsåmbåhtusa ihti dási"
 
 #: src/features/search/WildCard.jsx:34
 msgid "Search words that contain your search term"
-msgstr "Apertium: Åtså bágojt majt åhtsåmbágo #sisadnet"
+msgstr ""
 
 #: src/features/search/WildCard.jsx:45
 msgid "Search words that end in your search term"
-msgstr "Apertium: Åtså bágojt majna låhpa åhtsåmbágon"
+msgstr ""
 
 #: src/features/search/WildCard.jsx:23
 msgid "Search words that start with your search term"
-msgstr "Apertium: Åtså bágojt majna álggo l åhtsåmbágon"
+msgstr ""
 
 #: src/translateble_variables.js:88
 msgid "Servodatdieđa"
@@ -302,7 +302,7 @@ msgstr "Sebrudakdiehtaga"
 #: src/containers/SatniAppBar.jsx:67
 #: src/containers/SatniAppBar.jsx:68
 msgid "Settings"
-msgstr "Apertium: Hiebadime"
+msgstr ""
 
 #: src/features/paradigm/ParadigmButton.jsx:25
 #: src/features/paradigm/ParadigmButton.jsx:26
@@ -330,7 +330,7 @@ msgstr "Almulasj háldadus"
 #: src/features/search/FilterBar.jsx:99
 #: src/features/search/FilterBar.jsx:100
 msgid "Sámi letters"
-msgstr "Apertium: Sáme bokstáva"
+msgstr ""
 
 #: src/translateble_variables.js:90
 msgid "Teknihkka industriija duodji"
@@ -389,7 +389,7 @@ msgstr "Dát báhko ij lim tækstatjoakkáldagán"
 
 #: src/translateble_variables.js:165
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
-msgstr "Apertium: Trond Trosteruda suoma – girjjedáro báhkogirjen li ienep gå 30000 åhtsåmbágo."
+msgstr ""
 
 #: src/translateble_variables.js:22
 msgid "V"
@@ -493,11 +493,11 @@ msgstr "Giellatekno anársáme – nuorttasáme báhkogirjje"
 
 #: src/translateble_variables.js:19
 msgid "habmernobsmj"
-msgstr "Apertium: Hábmela suohkana dáro - julevsáme medisijnnabáhkogirjje."
+msgstr ""
 
 #: src/translateble_variables.js:18
 msgid "habmersmjnob"
-msgstr "Apertium: Hábmela suohkana julevsáme - dáro medisijnnabáhkogirjje."
+msgstr ""
 
 #: src/translateble_variables.js:41
 msgid "lat"
@@ -617,7 +617,7 @@ msgstr "svierigadárogiela"
 
 #: src/features/search/FilterBar.jsx:104
 msgid "sámi keys"
-msgstr "Apertium: Sáme bokstáva"
+msgstr ""
 
 #: src/translateble_variables.js:5
 msgid "termwiki"
@@ -637,15 +637,15 @@ msgstr "{0}/{1} gáldo"
 
 #: src/features/infinitestems/SearchInfo.jsx:28
 msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
-msgstr "Apertium: {stemsLength}/{totalCount} ma <#sisadnet><0>{searchExpression}</0>"
+msgstr ""
 
 #: src/features/infinitestems/SearchInfo.jsx:35
 msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
-msgstr "Apertium: {stemsLength}/{totalCount} majna loahppa l <0>{searchExpression}</0>"
+msgstr ""
 
 #: src/features/infinitestems/SearchInfo.jsx:20
 msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr "Apertium: {stemsLength}/{totalCount} majna álggo l <0>{searchExpression}</0>"
+msgstr ""
 
 #: src/translateble_variables.js:91
 msgid "Álšateknihkka"

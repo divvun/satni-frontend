@@ -32,11 +32,11 @@ msgstr "<0>Gïelegaaltije</0>"
 
 #: src/features/article/DictArticles.jsx:32
 msgid "<0>Loading dicts …</0>"
-msgstr "Apertium: Baakoegærjailledahkh veedtjeminie …"
+msgstr ""
 
 #: src/features/article/TermArticles.jsx:23
 msgid "<0>Loading terms …</0>"
-msgstr "Apertium: Termeilledahkh veedtjeminie …"
+msgstr ""
 
 #: src/translateble_variables.js:22
 msgid "A"
@@ -73,7 +73,7 @@ msgstr "Veeljh gïelh"
 
 #: src/features/search/FilterBar.jsx:131
 msgid "Choose whether the search expression is in the start, middle or the end of words."
-msgstr "Apertium: Veeljie jis ohtsemeraajese galka  aalkoevisnie, bihkien jallh minngemosth baakojne mejtie ohtsh."
+msgstr ""
 
 #: src/containers/Welcome.jsx:147
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
@@ -108,8 +108,8 @@ msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Daatateknologije jïh daatateknigke"
 
 #: src/containers/Welcome.jsx:65
-msgid "Apertium: Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
-msgstr "Ohtsh <0>Gïelegaaltijen</0>teermetjåagkestahke, <1>Pekka Sammallahti noerhtesaemien - soemen baakoegærjesne</1>, Hábmeren tjïelten <2>julevsaemien - daaroen</2> jallh <3>daaroeh - julevsaemiem</3> *medisiidnasátnegirjjiin jallh jïh <4>Gïeletekno</4> <5>saemien baakoegærjine</5> seammasïenten."
+msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
+msgstr ""
 
 #: src/translateble_variables.js:72
 msgid "Dáidda ja girjjálašvuohta"
@@ -181,11 +181,11 @@ msgstr "Bigkemeteknihke"
 
 #: src/translateble_variables.js:170
 msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
-msgstr "Apertium: Hábmeren tjïelten julevsaemien - daaroen *medisidnasátnegirji. Åtna medtie jaepien 1600 ohtsemebaakoem."
+msgstr ""
 
 #: src/translateble_variables.js:175
 msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
-msgstr "Apertium: Hábmeren tjïelten daaroen - julevsaemiem *medisiidnasátnegirji. Åtna medtie jaepien 1600 ohtsemebaakoem"
+msgstr ""
 
 #: src/containers/Welcome.jsx:155
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
@@ -254,7 +254,7 @@ msgstr "Religijovne"
 
 #: src/features/article/Articles.jsx:31
 msgid "Results for «{lemma}»"
-msgstr "Apertium: «{lemma}» illedahkh"
+msgstr ""
 
 #: src/containers/StatusBar.jsx:23
 msgid "Results only from"
@@ -274,11 +274,11 @@ msgstr "Ohtsedh"
 #: src/features/search/WildCard.jsx:35
 #: src/features/search/WildCard.jsx:46
 msgid "Search mode"
-msgstr "Apertium: Ohtsememoduse"
+msgstr ""
 
 #: src/features/search/WildCard.jsx:20
 msgid "Search mode:"
-msgstr "Apertium: Ohtsememoduse:"
+msgstr ""
 
 #: src/containers/Welcome.jsx:110
 msgid "Search results will appear here."
@@ -286,15 +286,15 @@ msgstr "Maam ohtseme jijhtieh dagkoe."
 
 #: src/features/search/WildCard.jsx:34
 msgid "Search words that contain your search term"
-msgstr "Apertium: #Ohtsedh baakoeh mej ohtsemebaakoem #Ohtsedh"
+msgstr ""
 
 #: src/features/search/WildCard.jsx:45
 msgid "Search words that end in your search term"
-msgstr "Apertium: baakoeh utnieh mejnie minngiegietjien lea ohtsemebaakosne"
+msgstr ""
 
 #: src/features/search/WildCard.jsx:23
 msgid "Search words that start with your search term"
-msgstr "Apertium: baakoeh utnieh mejnie minngiegietjien lea ohtsemebaakosne"
+msgstr ""
 
 #: src/translateble_variables.js:88
 msgid "Servodatdieđa"
@@ -390,7 +390,7 @@ msgstr "Daate baakoe ij leah korpusisnie"
 
 #: src/translateble_variables.js:165
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
-msgstr "Apertium: Trond Trosteruden *suoma – gærjadaaroen baakoegærjesne leah vielie gosse 30000 ohtsemebaakoem."
+msgstr ""
 
 #: src/translateble_variables.js:22
 msgid "V"
@@ -494,11 +494,11 @@ msgstr "Giellatekno enaresaemien – noerhtesaemien baakoegærja"
 
 #: src/translateble_variables.js:19
 msgid "habmernobsmj"
-msgstr "Apertium: Hábmeren tjïelten daaroen - julevsaemien *medisiidnasátnegirji"
+msgstr ""
 
 #: src/translateble_variables.js:18
 msgid "habmersmjnob"
-msgstr "Apertium: Hábmeren tjïelten julevsaemien -daaroen *medisiidnasátnegirji"
+msgstr ""
 
 #: src/translateble_variables.js:41
 msgid "lat"
@@ -638,15 +638,15 @@ msgstr "{0}/{1} gaaltijijstie."
 
 #: src/features/infinitestems/SearchInfo.jsx:28
 msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
-msgstr "Apertium: {stemsLength}/{totalCount} mah utnieh <0>{searchExpression}</0>"
+msgstr ""
 
 #: src/features/infinitestems/SearchInfo.jsx:35
 msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
-msgstr "Apertium: {stemsLength}/{totalCount} mejnie minngiegietjie lea <0>{searchExpression}</0>"
+msgstr ""
 
 #: src/features/infinitestems/SearchInfo.jsx:20
 msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr "Apertium: {stemsLength}/{totalCount} mejnie aalkoe lea <0>{searchExpression}</0>"
+msgstr ""
 
 #: src/translateble_variables.js:91
 msgid "Álšateknihkka"
