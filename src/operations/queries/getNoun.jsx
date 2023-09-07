@@ -1,13 +1,21 @@
 import { gql } from '@apollo/client';
 
 const GET_NOUN = gql`
-  query paradigm($text: String!, $lang: String!, $pos: String!) {
-    paradigm(text: $text, lang: $lang, pos: $pos)
-      @rest(
-        type: "Paradigm"
-        path: "smi.cgi?{args}&mode=full&action=paradigm&json=true"
-      ) {
-      analyses
+  query Generated(
+    $origform: String!
+    $language: String!
+    $paradigmTemplates: [String]!
+  ) {
+    generated(
+      origform: $origform
+      language: $language
+      paradigmTemplates: $paradigmTemplates
+    ) {
+      paradigmTemplate
+      analyses {
+        wordform
+        weight
+      }
     }
   }
 `;
