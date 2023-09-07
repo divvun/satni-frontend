@@ -28,7 +28,7 @@ MyTableRow.propTypes = {
   values: PropTypes.arrayOf.isRequired,
 };
 
-const TableRows = {
+const VerbTableRows = {
   sme: [
     {
       values: ['V+Ind+Prs+Sg1', 'V+Ind+Prt+Sg1'],
@@ -225,7 +225,7 @@ const LangTable = ({ analyses, language }) => (
       </TableRow>
     </TableHead>
     <TableBody>
-      {TableRows[language].map((MapTableRow, rowIndex) => {
+      {VerbTableRows[language].map((MapTableRow, rowIndex) => {
         if (MapTableRow.values.some((value) => analyses[value])) {
           return (
             <MyTableRow

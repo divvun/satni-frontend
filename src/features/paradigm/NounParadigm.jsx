@@ -35,7 +35,7 @@ MyTableRow.propTypes = {
   values: PropTypes.arrayOf.isRequired,
 };
 
-const TableRows = {
+const NounTableRows = {
   sma: [
     {
       name: 'Nom',
@@ -272,7 +272,7 @@ const TableRows = {
 
 const LangTable = ({ analyses, language }) => (
   <TableBody>
-    {TableRows[language].map((MapTableRow, rowIndex) => {
+    {NounTableRows[language].map((MapTableRow, rowIndex) => {
       if (MapTableRow.values.some((value) => analyses[value])) {
         return (
           <MyTableRow

@@ -7,7 +7,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
-const TableRows = {
+const AdjTableRows = {
   sma: [
     {
       name: 'Attr',
@@ -488,7 +488,7 @@ MyTableRow.propTypes = {
 
 const LangTable = ({ analyses, language }) => (
   <TableBody>
-    {TableRows[language].map((MapTableRow, rowIndex) => {
+    {AdjTableRows[language].map((MapTableRow, rowIndex) => {
       if (MapTableRow.values.some((value) => analyses[value])) {
         return (
           <MyTableRow
