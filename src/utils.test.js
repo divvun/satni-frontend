@@ -2,6 +2,7 @@ import { conceptList, dictEntryList } from './utils.data';
 import {
   cleanFrom,
   dictBackend2Frontend,
+  filterParadigm,
   filterProp,
   languagesOfLemma,
   moveLangFirst,
@@ -1239,5 +1240,153 @@ describe('Massage input from paradigm generator', () => {
     };
 
     expect(filterProp(got)).toEqual(want);
+  });
+
+  it('Turn satni-backend paradigm into smi-cgi paradigm', () => {
+    const got = {
+      generated: [
+        {
+          paradigmTemplate: '+N+Sg+Nom',
+          analyses: [
+            {
+              wordform: 'guolli',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Pl+Nom',
+          analyses: [
+            {
+              wordform: 'guolit',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Sg+Acc',
+          analyses: [
+            {
+              wordform: 'guoli',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Pl+Acc',
+          analyses: [
+            {
+              wordform: 'guliid',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Sg+Gen',
+          analyses: [
+            {
+              wordform: 'guole',
+              weight: 0,
+            },
+            {
+              wordform: 'guoli',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Pl+Gen',
+          analyses: [
+            {
+              wordform: 'guliid',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Sg+Ill',
+          analyses: [
+            {
+              wordform: 'guollái',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Pl+Ill',
+          analyses: [
+            {
+              wordform: 'guliide',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Sg+Loc',
+          analyses: [
+            {
+              wordform: 'guolis',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Pl+Loc',
+          analyses: [
+            {
+              wordform: 'guliin',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Sg+Com',
+          analyses: [
+            {
+              wordform: 'guliin',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Pl+Com',
+          analyses: [
+            {
+              wordform: 'guliiguin',
+              weight: 0,
+            },
+          ],
+        },
+        {
+          paradigmTemplate: '+N+Ess',
+          analyses: [
+            {
+              wordform: 'guollin',
+              weight: 0,
+            },
+          ],
+        },
+      ],
+    };
+
+    const want = {
+      analyses: {
+        'N+Sg+Nom': ['guolli'],
+        'N+Pl+Nom': ['guolit'],
+        'N+Sg+Acc': ['guoli'],
+        'N+Pl+Acc': ['guliid'],
+        'N+Sg+Gen': ['guole', 'guoli'],
+        'N+Pl+Gen': ['guliid'],
+        'N+Sg+Ill': ['guollái'],
+        'N+Pl+Ill': ['guliide'],
+        'N+Sg+Loc': ['guolis'],
+        'N+Pl+Loc': ['guliin'],
+        'N+Sg+Com': ['guliin'],
+        'N+Pl+Com': ['guliiguin'],
+        'N+Ess': ['guollin'],
+      },
+    };
+
+    expect(filterParadigm(got)).toEqual(want);
   });
 });

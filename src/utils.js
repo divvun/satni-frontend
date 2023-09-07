@@ -193,3 +193,14 @@ export const filterProp = (analyses) => {
 
   return { analyses: content };
 };
+
+export const filterParadigm = (satniParadigm) => {
+  const analyses = satniParadigm.generated.reduce((accumulator, key) => {
+    accumulator[key.paradigmTemplate.slice(1)] = key.analyses.map(
+      (analysis) => analysis.wordform,
+    );
+    return accumulator;
+  }, {});
+
+  return { analyses };
+};
