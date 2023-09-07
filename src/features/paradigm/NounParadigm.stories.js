@@ -604,7 +604,7 @@ export default {
 };
 
 export const SouthSaamiNoun = () => (
-  <NounParadigm paradigm={paradigm['sma']} language="sma" />
+  <NounParadigm paradigm={paradigm.sma} language="sma" />
 );
 
 SouthSaamiNoun.story = {
@@ -612,7 +612,7 @@ SouthSaamiNoun.story = {
 };
 
 export const NorthSaamiNoun = () => (
-  <NounParadigm paradigm={paradigm['sme']} language="sme" />
+  <NounParadigm paradigm={paradigm.sme} language="sme" />
 );
 
 NorthSaamiNoun.story = {
@@ -620,7 +620,7 @@ NorthSaamiNoun.story = {
 };
 
 export const LuleSaamiNoun = () => (
-  <NounParadigm paradigm={paradigm['smj']} language="smj" />
+  <NounParadigm paradigm={paradigm.smj} language="smj" />
 );
 
 LuleSaamiNoun.story = {
@@ -628,7 +628,7 @@ LuleSaamiNoun.story = {
 };
 
 export const InariSaamiNoun = () => (
-  <NounParadigm paradigm={paradigm['smn']} language="smn" />
+  <NounParadigm paradigm={paradigm.smn} language="smn" />
 );
 
 InariSaamiNoun.story = {
@@ -636,7 +636,7 @@ InariSaamiNoun.story = {
 };
 
 export const SkoltSaamiNoun = () => (
-  <NounParadigm paradigm={paradigm['sms']} language="sms" />
+  <NounParadigm paradigm={paradigm.sms} language="sms" />
 );
 
 SkoltSaamiNoun.story = {
@@ -644,7 +644,7 @@ SkoltSaamiNoun.story = {
 };
 
 export const FinnishNoun = () => (
-  <NounParadigm paradigm={paradigm['fin']} language="fin" />
+  <NounParadigm paradigm={paradigm.fin} language="fin" />
 );
 
 FinnishNoun.story = {
