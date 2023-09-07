@@ -12,7 +12,7 @@ import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
 const DictTargetStem = ({ stem, restriction }) => {
   const { lemma } = stem;
   const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
-  const { targetLangs } = langsDictsQueryResult.data;
+  const { srcLangs, targetLangs } = langsDictsQueryResult.data;
   const location = useLocation();
   const { currentDict } = locationParser(location.pathname);
 
@@ -23,6 +23,7 @@ const DictTargetStem = ({ stem, restriction }) => {
   const { data, loading } = useQuery(HAS_STEM, {
     variables: {
       stem: lemma,
+      srcLangs,
       targetLangs,
       wantedDicts,
     },
@@ -30,11 +31,12 @@ const DictTargetStem = ({ stem, restriction }) => {
 
   if (loading) return <CircularProgress size={20} />;
 
+  console.log('dicttargetstem33', restriction == null ? '' : restriction);
   return (
     <Stem
       stem={stem}
-      restriction={restriction}
-      withLink={data && data.hasStem.length}
+      restriction={restriction == null ? '' : restriction}
+      withLink={data && data.hasStem.length > 0}
     />
   );
 };
