@@ -15,8 +15,8 @@ const KorpButton = ({ language, lemma, classes }) => {
   const dispatch = useDispatch();
   const korpAddress =
     language !== 'sme'
-      ? `http://gtweb.uit.no/korp/?mode=${language}#?search=cqp|[lemma%3D"${lemma}"]`
-      : `http://gtweb.uit.no/korp/#?search=cqp|[lemma%3D"${lemma}"]`;
+      ? `https://gtweb.uit.no/korp/?mode=${language}#?search=cqp|[lemma%3D"${lemma}"]`
+      : `https://gtweb.uit.no/korp/#?search=cqp|[lemma%3D"${lemma}"]`;
 
   useEffect(() => {
     dispatch(isLemmaInKorp(language, lemma));

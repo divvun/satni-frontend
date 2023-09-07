@@ -18,7 +18,7 @@ const tableDict = {
 };
 
 const Paradigm = ({ lemma, language, pos }) => {
-  const fullParadigmLink = `http://gtweb.uit.no/cgi-bin/smi/smi.cgi?text=${lemma}&pos=${pos}&lang=${language}&mode=full&action=paradigm`;
+  const fullParadigmLink = `https://gtweb.uit.no/cgi-bin/smi/smi.cgi?text=${lemma}&pos=${pos}&lang=${language}&mode=full&action=paradigm`;
 
   const { data, loading, error } = useQuery(GET_NOUN, {
     variables: {
