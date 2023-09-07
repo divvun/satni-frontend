@@ -1,3 +1,4 @@
+import { conceptList, dictEntryList } from './utils.data';
 import {
   cleanFrom,
   dictBackend2Frontend,
@@ -7,7 +8,6 @@ import {
   multilingualconceptListsByNames,
   orderedMultilingualConcept,
 } from './utils';
-import { conceptList, dictEntryList } from 'utils.data';
 
 describe('Massage termwiki data from backend', () => {
   it('Order concept list by concept names', () => {
