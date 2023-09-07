@@ -6,20 +6,36 @@ import PropTypes from 'prop-types';
 import Tooltip from '@material-ui/core/Tooltip';
 import { useQuery } from '@apollo/client';
 
+import { tableRowToParadigmList } from '../../utils';
+import { AdjTableRows } from './AdjParadigm';
+import { NounTableRows } from './NounParadigm';
+import { VerbTableRows } from './VerbParadigm';
 import GET_NOUN from '../../operations/queries/getNoun';
 
+const tableDict = {
+  A: AdjTableRows,
+  N: NounTableRows,
+  V: VerbTableRows,
+};
+
 const ParadigmButton = ({ lemma, language, pos, onClick, classes }) => {
-  const paradigmLangs = new Set(['sme', 'sma', 'smn', 'sms', 'smj', 'fin']);
-  const paradigmPos = new Set(['N', 'V', 'A']);
   const { data } = useQuery(GET_NOUN, {
     variables: {
-      text: lemma,
-      lang: language,
-      pos,
+      origform: lemma,
+      language,
+      paradigmTemplates:
+        pos in tableDict && language in tableDict[pos]
+          ? tableRowToParadigmList(tableDict[pos][language]).slice(0, 1)
+          : [],
     },
   });
 
-  if (paradigmLangs.has(language) && paradigmPos.has(pos) && data) {
+  if (
+    pos in tableDict &&
+    language in tableDict[pos] &&
+    data &&
+    data.generated.length > 0
+  ) {
     return (
       <Tooltip
         title={<Trans>Show paradigm for this word</Trans>}

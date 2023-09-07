@@ -39,233 +39,233 @@ export const NounTableRows = {
   sma: [
     {
       name: 'Nom',
-      values: ['N+Sg+Nom', 'N+Pl+Nom'],
+      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
     },
     {
       name: 'Acc',
-      values: ['N+Sg+Acc', 'N+Pl+Acc'],
+      values: ['+N+Sg+Acc', '+N+Pl+Acc'],
     },
     {
       name: 'Gen',
-      values: ['N+Sg+Gen', 'N+Pl+Gen'],
+      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
     },
     {
       name: 'Ill',
-      values: ['N+Sg+Ill', 'N+Pl+Ill'],
+      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
     },
     {
       name: 'Ine',
-      values: ['N+Sg+Ine', 'N+Pl+Ine'],
+      values: ['+N+Sg+Ine', '+N+Pl+Ine'],
     },
     {
       name: 'Ela',
-      values: ['N+Sg+Ela', 'N+Pl+Ela'],
+      values: ['+N+Sg+Ela', '+N+Pl+Ela'],
     },
     {
       name: 'Com',
-      values: ['N+Sg+Com', 'N+Pl+Com'],
+      values: ['+N+Sg+Com', '+N+Pl+Com'],
     },
     {
       name: 'Ess',
-      values: ['N+Ess'],
+      values: ['+N+Ess'],
     },
   ],
   sme: [
     {
       name: 'Nom',
-      values: ['N+Sg+Nom', 'N+Pl+Nom'],
+      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
     },
     {
       name: 'Acc',
-      values: ['N+Sg+Acc', 'N+Pl+Acc'],
+      values: ['+N+Sg+Acc', '+N+Pl+Acc'],
     },
     {
       name: 'Gen',
-      values: ['N+Sg+Gen', 'N+Pl+Gen'],
+      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
     },
     {
       name: 'Ill',
-      values: ['N+Sg+Ill', 'N+Pl+Ill'],
+      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
     },
     {
       name: 'Loc',
-      values: ['N+Sg+Loc', 'N+Pl+Loc'],
+      values: ['+N+Sg+Loc', '+N+Pl+Loc'],
     },
     {
       name: 'Com',
-      values: ['N+Sg+Com', 'N+Pl+Com'],
+      values: ['+N+Sg+Com', '+N+Pl+Com'],
     },
     {
       name: 'Ess',
-      values: ['N+Ess'],
+      values: ['+N+Ess'],
     },
   ],
   smj: [
     {
       name: 'Nom',
-      values: ['N+Sg+Nom', 'N+Pl+Nom'],
+      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
     },
     {
       name: 'Acc',
-      values: ['N+Sg+Acc', 'N+Pl+Acc'],
+      values: ['+N+Sg+Acc', '+N+Pl+Acc'],
     },
     {
       name: 'Gen',
-      values: ['N+Sg+Gen', 'N+Pl+Gen'],
+      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
     },
     {
       name: 'Ill',
-      values: ['N+Sg+Ill', 'N+Pl+Ill'],
+      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
     },
     {
       name: 'Ine',
-      values: ['N+Sg+Ine', 'N+Pl+Ine'],
+      values: ['+N+Sg+Ine', '+N+Pl+Ine'],
     },
     {
       name: 'Ela',
-      values: ['N+Sg+Ela', 'N+Pl+Ela'],
+      values: ['+N+Sg+Ela', '+N+Pl+Ela'],
     },
     {
       name: 'Com',
-      values: ['N+Sg+Com', 'N+Pl+Com'],
+      values: ['+N+Sg+Com', '+N+Pl+Com'],
     },
     {
       name: 'Abe',
-      values: ['N+Abe'],
+      values: ['+N+Abe'],
     },
     {
       name: 'Ess',
-      values: ['N+Ess'],
+      values: ['+N+Ess'],
     },
   ],
   smn: [
     {
       name: 'Nom',
-      values: ['N+Sg+Nom', 'N+Pl+Nom'],
+      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
     },
     {
       name: 'Acc',
-      values: ['N+Sg+Acc', 'N+Pl+Acc'],
+      values: ['+N+Sg+Acc', '+N+Pl+Acc'],
     },
     {
       name: 'Gen',
-      values: ['N+Sg+Gen', 'N+Pl+Gen'],
+      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
     },
     {
       name: 'Ill',
-      values: ['N+Sg+Ill', 'N+Pl+Ill'],
+      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
     },
     {
       name: 'Loc',
-      values: ['N+Sg+Loc', 'N+Pl+Loc'],
+      values: ['+N+Sg+Loc', '+N+Pl+Loc'],
     },
     {
       name: 'Com',
-      values: ['N+Sg+Com', 'N+Pl+Com'],
+      values: ['+N+Sg+Com', '+N+Pl+Com'],
     },
     {
       name: 'Abe',
-      values: ['N+Sg+Abe', 'N+Pl+Abe'],
+      values: ['+N+Sg+Abe', '+N+Pl+Abe'],
     },
     {
       name: 'Par',
-      values: ['N+Par'],
+      values: ['+N+Par'],
     },
     {
       name: 'Ess',
-      values: ['N+Ess'],
+      values: ['+N+Ess'],
     },
   ],
   sms: [
     {
       name: 'Nom',
-      values: ['N+Sg+Nom', 'N+Pl+Nom'],
+      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
     },
     {
       name: 'Acc',
-      values: ['N+Sg+Acc', 'N+Pl+Acc'],
+      values: ['+N+Sg+Acc', '+N+Pl+Acc'],
     },
     {
       name: 'Gen',
-      values: ['N+Sg+Gen', 'N+Pl+Gen'],
+      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
     },
     {
       name: 'Ill',
-      values: ['N+Sg+Ill', 'N+Pl+Ill'],
+      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
     },
     {
       name: 'Loc',
-      values: ['N+Sg+Loc', 'N+Pl+Loc'],
+      values: ['+N+Sg+Loc', '+N+Pl+Loc'],
     },
     {
       name: 'Com',
-      values: ['N+Sg+Com', 'N+Pl+Com'],
+      values: ['+N+Sg+Com', '+N+Pl+Com'],
     },
     {
       name: 'Abe',
-      values: ['N+Sg+Abe', 'N+Pl+Abe'],
+      values: ['+N+Sg+Abe', '+N+Pl+Abe'],
     },
     {
       name: 'Par',
-      values: ['N+Par'],
+      values: ['+N+Par'],
     },
     {
       name: 'Ess',
-      values: ['N+Ess'],
+      values: ['+N+Ess'],
     },
   ],
   fin: [
     {
       name: 'Nom',
-      values: ['N+Sg+Nom', 'N+Pl+Nom'],
+      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
     },
     {
       name: 'Gen',
-      values: ['N+Sg+Gen', 'N+Pl+Gen'],
+      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
     },
     {
       name: 'Par',
-      values: ['N+Sg+Par', 'N+Pl+Par'],
+      values: ['+N+Sg+Par', '+N+Pl+Par'],
     },
     {
       name: 'All',
-      values: ['N+Sg+All', 'N+Pl+All'],
+      values: ['+N+Sg+All', '+N+Pl+All'],
     },
     {
       name: 'Abl',
-      values: ['N+Sg+Abl', 'N+Pl+Abl'],
+      values: ['+N+Sg+Abl', '+N+Pl+Abl'],
     },
     {
       name: 'Ade',
-      values: ['N+Sg+Ade', 'N+Pl+Ade'],
+      values: ['+N+Sg+Ade', '+N+Pl+Ade'],
     },
     {
       name: 'Ill',
-      values: ['N+Sg+Ill', 'N+Pl+Ill'],
+      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
     },
     {
       name: 'Ine',
-      values: ['N+Sg+Ine', 'N+Pl+Ine'],
+      values: ['+N+Sg+Ine', '+N+Pl+Ine'],
     },
     {
       name: 'Ela',
-      values: ['N+Sg+Ela', 'N+Pl+Ela'],
+      values: ['+N+Sg+Ela', '+N+Pl+Ela'],
     },
     {
       name: 'Abe',
-      values: ['N+Sg+Abe', 'N+Pl+Abe'],
+      values: ['+N+Sg+Abe', '+N+Pl+Abe'],
     },
     {
       name: 'Ess',
-      values: ['N+Sg+Ess', 'N+Pl+Ess'],
+      values: ['+N+Sg+Ess', '+N+Pl+Ess'],
     },
     {
       name: 'Tra',
-      values: ['N+Sg+Tra', 'N+Pl+Tra'],
+      values: ['+N+Sg+Tra', '+N+Pl+Tra'],
     },
     {
       name: 'Ins',
-      values: ['N+Sg+Ins', 'N+Pl+Ins'],
+      values: ['+N+Sg+Ins', '+N+Pl+Ins'],
     },
   ],
 };

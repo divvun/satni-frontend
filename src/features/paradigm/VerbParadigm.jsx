@@ -31,189 +31,189 @@ MyTableRow.propTypes = {
 export const VerbTableRows = {
   sme: [
     {
-      values: ['V+Ind+Prs+Sg1', 'V+Ind+Prt+Sg1'],
+      values: ['+V+Ind+Prs+Sg1', '+V+Ind+Prt+Sg1'],
       pron: 'mun',
     },
     {
-      values: ['V+Ind+Prs+Sg2', 'V+Ind+Prt+Sg2'],
+      values: ['+V+Ind+Prs+Sg2', '+V+Ind+Prt+Sg2'],
       pron: 'don',
     },
     {
-      values: ['V+Ind+Prs+Sg3', 'V+Ind+Prt+Sg3'],
+      values: ['+V+Ind+Prs+Sg3', '+V+Ind+Prt+Sg3'],
       pron: 'son',
     },
     {
-      values: ['V+Ind+Prs+Du1', 'V+Ind+Prt+Du1'],
+      values: ['+V+Ind+Prs+Du1', '+V+Ind+Prt+Du1'],
       pron: 'moai',
     },
     {
-      values: ['V+Ind+Prs+Du2', 'V+Ind+Prt+Du2'],
+      values: ['+V+Ind+Prs+Du2', '+V+Ind+Prt+Du2'],
       pron: 'doai',
     },
     {
-      values: ['V+Ind+Prs+Du3', 'V+Ind+Prt+Du3'],
+      values: ['+V+Ind+Prs+Du3', '+V+Ind+Prt+Du3'],
       pron: 'soai',
     },
     {
-      values: ['V+Ind+Prs+Pl1', 'V+Ind+Prt+Pl1'],
+      values: ['+V+Ind+Prs+Pl1', '+V+Ind+Prt+Pl1'],
       pron: 'mii',
     },
     {
-      values: ['V+Ind+Prs+Pl2', 'V+Ind+Prt+Pl2'],
+      values: ['+V+Ind+Prs+Pl2', '+V+Ind+Prt+Pl2'],
       pron: 'dii',
     },
     {
-      values: ['V+Ind+Prs+Pl3', 'V+Ind+Prt+Pl3'],
+      values: ['+V+Ind+Prs+Pl3', '+V+Ind+Prt+Pl3'],
       pron: 'sii',
     },
   ],
   sma: [
     {
       pron: 'manne',
-      values: ['V+Ind+Prs+Sg1', 'V+Ind+Prt+Sg1'],
+      values: ['+V+Ind+Prs+Sg1', '+V+Ind+Prt+Sg1'],
     },
     {
       pron: 'datne',
-      values: ['V+Ind+Prs+Sg2', 'V+Ind+Prt+Sg2'],
+      values: ['+V+Ind+Prs+Sg2', '+V+Ind+Prt+Sg2'],
     },
     {
       pron: 'dïhte',
-      values: ['V+Ind+Prs+Sg3', 'V+Ind+Prt+Sg3'],
+      values: ['+V+Ind+Prs+Sg3', '+V+Ind+Prt+Sg3'],
     },
     {
       pron: 'månnoeh',
-      values: ['V+Ind+Prs+Du1', 'V+Ind+Prt+Du1'],
+      values: ['+V+Ind+Prs+Du1', '+V+Ind+Prt+Du1'],
     },
     {
       pron: 'dotne/dåtnoeh',
-      values: ['V+Ind+Prs+Du2', 'V+Ind+Prt+Du2'],
+      values: ['+V+Ind+Prs+Du2', '+V+Ind+Prt+Du2'],
     },
     {
       pron: 'dah guaktah',
-      values: ['V+Ind+Prs+Du3', 'V+Ind+Prt+Du3'],
+      values: ['+V+Ind+Prs+Du3', '+V+Ind+Prt+Du3'],
     },
     {
       pron: 'mij',
-      values: ['V+Ind+Prs+Pl1', 'V+Ind+Prt+Pl1'],
+      values: ['+V+Ind+Prs+Pl1', '+V+Ind+Prt+Pl1'],
     },
     {
       pron: 'dijjieh',
-      values: ['V+Ind+Prs+Pl2', 'V+Ind+Prt+Pl2'],
+      values: ['+V+Ind+Prs+Pl2', '+V+Ind+Prt+Pl2'],
     },
     {
       pron: 'dah',
-      values: ['V+Ind+Prs+Pl3', 'V+Ind+Prt+Pl3'],
+      values: ['+V+Ind+Prs+Pl3', '+V+Ind+Prt+Pl3'],
     },
   ],
   smj: [
     {
       pron: 'mån',
-      values: ['V+Ind+Prs+Sg1', 'V+Ind+Prt+Sg1'],
+      values: ['+V+Ind+Prs+Sg1', '+V+Ind+Prt+Sg1'],
     },
     {
       pron: 'duon',
-      values: ['V+Ind+Prs+Sg2', 'V+Ind+Prt+Sg2'],
+      values: ['+V+Ind+Prs+Sg2', '+V+Ind+Prt+Sg2'],
     },
     {
       pron: 'sån',
-      values: ['V+Ind+Prs+Sg3', 'V+Ind+Prt+Sg3'],
+      values: ['+V+Ind+Prs+Sg3', '+V+Ind+Prt+Sg3'],
     },
     {
       pron: 'måj',
-      values: ['V+Ind+Prs+Du1', 'V+Ind+Prt+Du1'],
+      values: ['+V+Ind+Prs+Du1', '+V+Ind+Prt+Du1'],
     },
     {
       pron: 'dåj',
-      values: ['V+Ind+Prs+Du2', 'V+Ind+Prt+Du2'],
+      values: ['+V+Ind+Prs+Du2', '+V+Ind+Prt+Du2'],
     },
     {
       pron: 'såj',
-      values: ['V+Ind+Prs+Du3', 'V+Ind+Prt+Du3'],
+      values: ['+V+Ind+Prs+Du3', '+V+Ind+Prt+Du3'],
     },
     {
       pron: 'mij',
-      values: ['V+Ind+Prs+Pl1', 'V+Ind+Prt+Pl1'],
+      values: ['+V+Ind+Prs+Pl1', '+V+Ind+Prt+Pl1'],
     },
     {
       pron: 'dij',
-      values: ['V+Ind+Prs+Pl2', 'V+Ind+Prt+Pl2'],
+      values: ['+V+Ind+Prs+Pl2', '+V+Ind+Prt+Pl2'],
     },
     {
       pron: 'sij',
-      values: ['V+Ind+Prs+Pl3', 'V+Ind+Prt+Pl3'],
+      values: ['+V+Ind+Prs+Pl3', '+V+Ind+Prt+Pl3'],
     },
   ],
   smn: [
     {
       pron: 'mun',
-      values: ['V+Ind+Prs+Sg1', 'V+Ind+Prt+Sg1'],
+      values: ['+V+Ind+Prs+Sg1', '+V+Ind+Prt+Sg1'],
     },
     {
       pron: 'tun',
-      values: ['V+Ind+Prs+Sg2', 'V+Ind+Prt+Sg2'],
+      values: ['+V+Ind+Prs+Sg2', '+V+Ind+Prt+Sg2'],
     },
     {
       pron: 'sun',
-      values: ['V+Ind+Prs+Sg3', 'V+Ind+Prt+Sg3'],
+      values: ['+V+Ind+Prs+Sg3', '+V+Ind+Prt+Sg3'],
     },
     {
       pron: 'muoi',
-      values: ['V+Ind+Prs+Du1', 'V+Ind+Prt+Du1'],
+      values: ['+V+Ind+Prs+Du1', '+V+Ind+Prt+Du1'],
     },
     {
       pron: 'tuoi',
-      values: ['V+Ind+Prs+Du2', 'V+Ind+Prt+Du2'],
+      values: ['+V+Ind+Prs+Du2', '+V+Ind+Prt+Du2'],
     },
     {
       pron: 'suoi',
-      values: ['V+Ind+Prs+Du3', 'V+Ind+Prt+Du3'],
+      values: ['+V+Ind+Prs+Du3', '+V+Ind+Prt+Du3'],
     },
     {
       pron: 'mij',
-      values: ['V+Ind+Prs+Pl1', 'V+Ind+Prt+Pl1'],
+      values: ['+V+Ind+Prs+Pl1', '+V+Ind+Prt+Pl1'],
     },
     {
       pron: 'tij',
-      values: ['V+Ind+Prs+Pl2', 'V+Ind+Prt+Pl2'],
+      values: ['+V+Ind+Prs+Pl2', '+V+Ind+Prt+Pl2'],
     },
     {
       pron: 'sij',
-      values: ['V+Ind+Prs+Pl3', 'V+Ind+Prt+Pl3'],
+      values: ['+V+Ind+Prs+Pl3', '+V+Ind+Prt+Pl3'],
     },
   ],
   sms: [
     {
       pron: 'mon',
-      values: ['V+Ind+Prs+Sg1', 'V+Ind+Prt+Sg1'],
+      values: ['+V+Ind+Prs+Sg1', '+V+Ind+Prt+Sg1'],
     },
     {
       pron: 'ton',
-      values: ['V+Ind+Prs+Sg2', 'V+Ind+Prt+Sg2'],
+      values: ['+V+Ind+Prs+Sg2', '+V+Ind+Prt+Sg2'],
     },
     {
       pron: 'son',
-      values: ['V+Ind+Prs+Sg3', 'V+Ind+Prt+Sg3'],
+      values: ['+V+Ind+Prs+Sg3', '+V+Ind+Prt+Sg3'],
     },
     {
       pron: 'mii',
-      values: ['V+Ind+Prs+Pl1', 'V+Ind+Prt+Pl1'],
+      values: ['+V+Ind+Prs+Pl1', '+V+Ind+Prt+Pl1'],
     },
     {
       pron: 'tij',
-      values: ['V+Ind+Prs+Pl2', 'V+Ind+Prt+Pl2'],
+      values: ['+V+Ind+Prs+Pl2', '+V+Ind+Prt+Pl2'],
     },
     {
       pron: 'sij',
-      values: ['V+Ind+Prs+Pl3', 'V+Ind+Prt+Pl3'],
+      values: ['+V+Ind+Prs+Pl3', '+V+Ind+Prt+Pl3'],
     },
     {
       pron: '',
-      values: ['V+Ind+Prs+Sg4', 'V+Ind+Prt+Sg4'],
+      values: ['+V+Ind+Prs+Sg4', '+V+Ind+Prt+Sg4'],
     },
   ],
 };
 
-const FinContent = () => <div>sma</div>;
+const FinContent = () => <div>fin</div>;
 
 const LangTable = ({ analyses, language }) => (
   <Table>
@@ -275,9 +275,9 @@ const Content = ({ analyses, language }) => {
           <LangTable analyses={analyses} language={language} />
           <ExtraContent
             listOfAnalyses={[
-              ['ij', 'V+ConNeg'],
-              ['lea', 'V+PrfPrc'],
-              ['lea', 'V+Ger'],
+              ['ij', '+V+ConNeg'],
+              ['lea', '+V+PrfPrc'],
+              ['lea', '+V+Ger'],
             ]}
             analyses={analyses}
           />
@@ -289,9 +289,9 @@ const Content = ({ analyses, language }) => {
           <LangTable analyses={analyses} language={language} />
           <ExtraContent
             listOfAnalyses={[
-              ['otne in', 'V+Ind+Prs+ConNeg'],
-              ['ikte in', 'V+Ind+Prt+ConNeg'],
-              ['lean', 'V+PrfPrc'],
+              ['otne in', '+V+Ind+Prs+ConNeg'],
+              ['ikte in', '+V+Ind+Prt+ConNeg'],
+              ['lean', '+V+PrfPrc'],
             ]}
             analyses={analyses}
           />
@@ -303,9 +303,9 @@ const Content = ({ analyses, language }) => {
           <LangTable analyses={analyses} language={language} />
           <ExtraContent
             listOfAnalyses={[
-              ['uddni iv', 'V+Ind+ConNeg'],
-              ['iektu ittjiv', 'V+Ind+ConNeg'],
-              ['lav', 'V+PrfPrc'],
+              ['uddni iv', '+V+Ind+ConNeg'],
+              ['iektu ittjiv', '+V+Ind+ConNeg'],
+              ['lav', '+V+PrfPrc'],
             ]}
             analyses={analyses}
           />
@@ -317,9 +317,9 @@ const Content = ({ analyses, language }) => {
           <LangTable analyses={analyses} language={language} />
           <ExtraContent
             listOfAnalyses={[
-              ['onne jiem', 'V+Ind+Prs+ConNeg'],
-              ['jieht jiem', 'V+Ind+Prt+ConNeg'],
-              ['lam', 'V+PrfPrc'],
+              ['onne jiem', '+V+Ind+Prs+ConNeg'],
+              ['jieht jiem', '+V+Ind+Prt+ConNeg'],
+              ['lam', '+V+PrfPrc'],
             ]}
             analyses={analyses}
           />
@@ -331,8 +331,8 @@ const Content = ({ analyses, language }) => {
           <LangTable analyses={analyses} language={language} />
           <ExtraContent
             listOfAnalyses={[
-              ['täʹbbe jiõm', 'V+Ind+Prs+ConNeg'],
-              ['jåhtta jiõm', 'V+Ind+Prt+ConNeg'],
+              ['täʹbbe jiõm', '+V+Ind+Prs+ConNeg'],
+              ['jåhtta jiõm', '+V+Ind+Prt+ConNeg'],
             ]}
             analyses={analyses}
           />

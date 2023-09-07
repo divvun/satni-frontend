@@ -3,23 +3,31 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { useQuery } from '@apollo/client';
 
-import { filterProp } from '../../utils';
-import AdjParadigm from './AdjParadigm';
-import NounParadigm from './NounParadigm';
-import VerbParadigm from './VerbParadigm';
+import { filterParadigm, tableRowToParadigmList } from '../../utils';
+import AdjParadigm, { AdjTableRows } from './AdjParadigm';
+import NounParadigm, { NounTableRows } from './NounParadigm';
+import VerbParadigm, { VerbTableRows } from './VerbParadigm';
 import GET_NOUN from '../../operations/queries/getNoun';
 
 const langs = new Set(['fin', 'sma', 'sme', 'smj', 'smn', 'sms']);
 const poses = new Set(['N', 'V', 'A']);
+const tableDict = {
+  A: AdjTableRows,
+  N: NounTableRows,
+  V: VerbTableRows,
+};
 
 const Paradigm = ({ lemma, language, pos }) => {
   const fullParadigmLink = `http://gtweb.uit.no/cgi-bin/smi/smi.cgi?text=${lemma}&pos=${pos}&lang=${language}&mode=full&action=paradigm`;
 
   const { data, loading, error } = useQuery(GET_NOUN, {
     variables: {
-      text: lemma,
-      lang: language,
-      pos,
+      origform: lemma,
+      language,
+      paradigmTemplates:
+        pos in tableDict && language in tableDict[pos]
+          ? tableRowToParadigmList(tableDict[pos][language])
+          : [],
     },
   });
 
@@ -51,7 +59,7 @@ const Paradigm = ({ lemma, language, pos }) => {
     case 'A':
       return (
         <>
-          <AdjParadigm paradigm={data.paradigm} language={language} />
+          <AdjParadigm paradigm={filterParadigm(data)} language={language} />
           <a href={fullParadigmLink} rel="noreferrer noopener" target="_blank">
             More …
           </a>
@@ -60,10 +68,7 @@ const Paradigm = ({ lemma, language, pos }) => {
     case 'N':
       return (
         <>
-          <NounParadigm
-            paradigm={filterProp(data.paradigm)}
-            language={language}
-          />
+          <NounParadigm paradigm={filterParadigm(data)} language={language} />
           <a href={fullParadigmLink} rel="noreferrer noopener" target="_blank">
             More …
           </a>
@@ -72,7 +77,7 @@ const Paradigm = ({ lemma, language, pos }) => {
     case 'V':
       return (
         <>
-          <VerbParadigm paradigm={data.paradigm} language={language} />
+          <VerbParadigm paradigm={filterParadigm(data)} language={language} />
           <a href={fullParadigmLink} rel="noreferrer noopener" target="_blank">
             More …
           </a>
