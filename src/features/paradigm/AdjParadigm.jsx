@@ -7,7 +7,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
-const AdjTableRows = {
+export const AdjTableRows = {
   sma: [
     {
       name: 'Attr',

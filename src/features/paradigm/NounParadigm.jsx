@@ -35,7 +35,7 @@ MyTableRow.propTypes = {
   values: PropTypes.arrayOf.isRequired,
 };
 
-const NounTableRows = {
+export const NounTableRows = {
   sma: [
     {
       name: 'Nom',

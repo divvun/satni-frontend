@@ -28,7 +28,7 @@ MyTableRow.propTypes = {
   values: PropTypes.arrayOf.isRequired,
 };
 
-const VerbTableRows = {
+export const VerbTableRows = {
   sme: [
     {
       values: ['V+Ind+Prs+Sg1', 'V+Ind+Prt+Sg1'],
