@@ -1371,19 +1371,19 @@ describe('Massage input from paradigm generator', () => {
 
     const want = {
       analyses: {
-        'N+Sg+Nom': ['guolli'],
-        'N+Pl+Nom': ['guolit'],
-        'N+Sg+Acc': ['guoli'],
-        'N+Pl+Acc': ['guliid'],
-        'N+Sg+Gen': ['guole', 'guoli'],
-        'N+Pl+Gen': ['guliid'],
-        'N+Sg+Ill': ['guollái'],
-        'N+Pl+Ill': ['guliide'],
-        'N+Sg+Loc': ['guolis'],
-        'N+Pl+Loc': ['guliin'],
-        'N+Sg+Com': ['guliin'],
-        'N+Pl+Com': ['guliiguin'],
-        'N+Ess': ['guollin'],
+        '+N+Sg+Nom': ['guolli'],
+        '+N+Pl+Nom': ['guolit'],
+        '+N+Sg+Acc': ['guoli'],
+        '+N+Pl+Acc': ['guliid'],
+        '+N+Sg+Gen': ['guole', 'guoli'],
+        '+N+Pl+Gen': ['guliid'],
+        '+N+Sg+Ill': ['guollái'],
+        '+N+Pl+Ill': ['guliide'],
+        '+N+Sg+Loc': ['guolis'],
+        '+N+Pl+Loc': ['guliin'],
+        '+N+Sg+Com': ['guliin'],
+        '+N+Pl+Com': ['guliiguin'],
+        '+N+Ess': ['guollin'],
       },
     };
 

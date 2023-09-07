@@ -195,12 +195,15 @@ export const filterProp = (analyses) => {
 };
 
 export const filterParadigm = (satniParadigm) => {
-  const analyses = satniParadigm.generated.reduce((accumulator, key) => {
-    accumulator[key.paradigmTemplate.slice(1)] = key.analyses.map(
+  const result = satniParadigm.generated.reduce((accumulator, key) => {
+    accumulator[key.paradigmTemplate] = key.analyses.map(
       (analysis) => analysis.wordform,
     );
     return accumulator;
   }, {});
 
-  return { analyses };
+  return { analyses: result };
 };
+
+export const tableRowToParadigmList = (tableRow) =>
+  tableRow.flatMap((item) => item.values);
