@@ -31,7 +31,6 @@ const DictTargetStem = ({ stem, restriction }) => {
 
   if (loading) return <CircularProgress size={20} />;
 
-  console.log('dicttargetstem33', restriction == null ? '' : restriction);
   return (
     <Stem
       stem={stem}
