@@ -155,6 +155,7 @@ export const availableLanguages = [
   'lat',
   'eng',
   'nno',
+  'rus',
 ];
 
 export const locationParser = (pathname) => {
