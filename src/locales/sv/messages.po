@@ -4,8 +4,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-22 21:16+0200\n"
-"PO-Revision-Date: 2024-04-25 14:29+0000\n"
-"Last-Translator: borre.gaup <borre.gaup@uit.no>\n"
+"PO-Revision-Date: 2024-09-30 12:01+0000\n"
+"Last-Translator: Sjur <sjur.n.moshagen@uit.no>\n"
 "Language-Team: \n"
 "Language: sv\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -385,7 +385,7 @@ msgstr "Status:"
 
 #: src/translateble_variables.js:96
 msgid "Stáda almmolaš hálddašeapmi"
-msgstr ""
+msgstr "Offentlig förvaltning"
 
 #: src/translateble_variables.js:238
 msgid "Subsequent updating of these files is being continued using the Veʹrdd dictionary editing platform, which played an instrumental role in the development of 2020."
@@ -431,7 +431,7 @@ msgstr ""
 
 #: src/translateble_variables.js:141 src/translateble_variables.js:147
 msgid "The dictionary contains about 11,000 entries."
-msgstr ""
+msgstr "Ordboken har ungefär 11 000 uppslagsord."
 
 #: src/translateble_variables.js:107
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
