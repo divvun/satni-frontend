@@ -4,8 +4,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-22 21:16+0200\n"
-"PO-Revision-Date: 2024-09-30 12:01+0000\n"
-"Last-Translator: Sjur <sjur.n.moshagen@uit.no>\n"
+"PO-Revision-Date: 2024-11-06 11:50+0000\n"
+"Last-Translator: Jacob <jacob.larsson@tuta.io>\n"
 "Language-Team: \n"
 "Language: sv\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -435,11 +435,11 @@ msgstr "Ordboken har ungefär 11 000 uppslagsord."
 
 #: src/translateble_variables.js:107
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
-msgstr ""
+msgstr "Ordboken innehåller med än 50.000 poster, och Sammallahti lägger regelbundet till fler."
 
 #: src/containers/Welcome.jsx:113
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
-msgstr ""
+msgstr "Inmatningsfältet accepterar samisk, nordisk, engelska och latinska sökord. Om du inte har samiska bokstäver på ditt tangentbord så klickar du på <0/> för att få in dom i inmatningsfältet."
 
 #: src/translateble_variables.js:239
 msgid ""
@@ -455,41 +455,45 @@ msgstr ""
 
 #: src/translateble_variables.js:113
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
-msgstr ""
+msgstr "Termbasen täcker över 50,000 termposter, och uppdateras regelbundet."
 
 #: src/features/paradigm/ParadigmButton.jsx:59 src/features/paradigm/ParadigmButton.jsx:60
 msgid "There is no paradigm for this word"
-msgstr ""
+msgstr "Det finns inget paradigm för detta ord"
 
 #: src/translateble_variables.js:118
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
-msgstr ""
+msgstr "Ordboken bygger på Nils Jernslettens ordbok Álgosátnegirji (med 4322 ord) men innehåller idag 30,000 ord samt 6000 ortsnamn."
 
 #: src/translateble_variables.js:130 src/translateble_variables.js:135
 msgid ""
 "This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern "
 "Sámi Oahpa."
-msgstr ""
+msgstr "Ordboken bygger på material framtaget av Alber Jåma och Tove Brustad i Hemnes samiska förening men har även fått material från Giellatekno och Aajages arbete med sydsamiska Oahpa."
 
 #: src/translateble_variables.js:152 src/translateble_variables.js:157 src/translateble_variables.js:162 src/translateble_variables.js:167
 msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
-msgstr ""
+msgstr "Ordboken bygger på Valtonen och Olthuis Inarinsaame-suomi-inarinsaame ordbok (30000 ord)."
 
 #: src/translateble_variables.js:146
 msgid ""
 "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been "
 "added."
 msgstr ""
+"Ordboken bygger på lexikalt material framtaget av Institutet för dom inhemska språken i Finland samt material hämtat från Giellateknos arbete med nordsamisk Oahpa. Utöver detta har frekventa "
+"finländska ord även inkluderats."
 
 #: src/translateble_variables.js:140
 msgid ""
 "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words "
 "from North Saami."
 msgstr ""
+"Ordboken bygger på lexikalt material framtaget av Institutet för dom inhemska språken i Finland samt material hämtat från Giellateknos arbete med nordsamisk Oahpa. Utöver detta har frekventa "
+"nordsamiska ord även inkluderats."
 
 #: src/features/korp/KorpButton.jsx:52 src/features/korp/KorpButton.jsx:53
 msgid "This word is not found in our corpus"
-msgstr ""
+msgstr "Detta ord finns ej i våran korpus"
 
 #: src/translateble_variables.js:236
 msgid ""
@@ -499,39 +503,39 @@ msgstr ""
 
 #: src/translateble_variables.js:172
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
-msgstr ""
+msgstr "Trond Trosteruds Finska - Norska ordbok har mer än 30000 sökord."
 
 #: src/translateble_variables.js:28
 msgid "V"
-msgstr ""
+msgstr "V"
 
 #: src/containers/Welcome.jsx:52
 msgid "Welcome!"
-msgstr ""
+msgstr "Välkomen!"
 
 #: src/containers/Welcome.jsx:127
 msgid "When you click a word here, dictionary articles appear to the right."
-msgstr ""
+msgstr "När du klickar på ord här dyker ordboksartiklarna upp till höger."
 
 #: src/features/search/InputWithTranslation.jsx:28
 msgid "Write at least one letter here"
-msgstr ""
+msgstr "Skriv åtminstone en bokstav här"
 
 #: src/containers/Welcome.jsx:121
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
-msgstr ""
+msgstr "Du kan söka bland dom hämtade orden här, nya ord laddas in tills alla matchningar har hittats."
 
 #: src/translateble_variables.js:53
 msgid "east"
-msgstr ""
+msgstr "öst"
 
 #: src/translateble_variables.js:31
 msgid "en"
-msgstr ""
+msgstr "en"
 
 #: src/translateble_variables.js:56
 msgid "en_genitive"
-msgstr ""
+msgstr "en-genitive"
 
 #: src/translateble_variables.js:32
 msgid "eng"
