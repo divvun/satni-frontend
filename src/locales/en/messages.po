@@ -573,7 +573,7 @@ msgstr "Giellatekno's Finnish – Inari Sami dictionary"
 
 #: src/translateble_variables.js:24
 msgid "gtfinsms"
-msgstr "gtfinsms"
+msgstr "Giellatekno's Finnish – Skolt Sami dictionary"
 
 #: src/translateble_variables.js:8
 msgid "gtnobsma"
@@ -585,11 +585,11 @@ msgstr "Giellatekno's Bokmål – North Sami dictionary"
 
 #: src/translateble_variables.js:23
 msgid "gtnobsms"
-msgstr "gtnobsms"
+msgstr "Giellatekno's Bokmål – Skolt Sami dictionary"
 
 #: src/translateble_variables.js:25
 msgid "gtrussms"
-msgstr "gtrussms"
+msgstr "Giellatekno's Russian – Skolt Sami dictionary"
 
 #: src/translateble_variables.js:9
 msgid "gtsmanob"
