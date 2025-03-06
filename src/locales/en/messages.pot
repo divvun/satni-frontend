@@ -617,23 +617,23 @@ msgstr "Giellatekno's Inari Sami – North Sami dictionary"
 
 #: src/translateble_variables.js:21
 msgid "gtsmsfin"
-msgstr "gtsmsfin"
+msgstr "Giellatekno's Skolt Sami - Finnish dictionary"
 
 #: src/translateble_variables.js:20
 msgid "gtsmsnob"
-msgstr "gtsmsnob"
+msgstr "Giellatekno's Skolt Sami - Norwegian Bokmål dictionary"
 
 #: src/translateble_variables.js:22
 msgid "gtsmsrus"
-msgstr "gtsmsrus"
+msgstr "Giellatekno's Skolt Sami - Russian dictionary"
 
 #: src/translateble_variables.js:19
 msgid "habmernobsmj"
-msgstr "habmernobsmj"
+msgstr "Hábmer municipality's Norwegian Bokmål - Lule Sami dictionary"
 
 #: src/translateble_variables.js:18
 msgid "habmersmjnob"
-msgstr "habmersmjnob"
+msgstr "Hábmer municipality's Lule Sami - Norwegian Bokmål dictionary"
 
 #: src/translateble_variables.js:47
 msgid "lat"
