@@ -601,7 +601,7 @@ msgstr "Giellateknon suomi–inarinsaame-sanakirja"
 
 #: src/translateble_variables.js:24
 msgid "gtfinsms"
-msgstr ""
+msgstr "Giellatekno's Finnish – Skolt Sami dictionary"
 
 #: src/translateble_variables.js:8
 msgid "gtnobsma"
@@ -613,11 +613,11 @@ msgstr "Giellateknon bokmål–pohjoissaame-sanakirja"
 
 #: src/translateble_variables.js:23
 msgid "gtnobsms"
-msgstr ""
+msgstr "Giellatekno's Bokmål – Skolt Sami dictionary"
 
 #: src/translateble_variables.js:25
 msgid "gtrussms"
-msgstr ""
+msgstr "Giellatekno's Russian – Skolt Sami dictionary"
 
 #: src/translateble_variables.js:9
 msgid "gtsmanob"
@@ -645,15 +645,15 @@ msgstr "Giellateknon inarinsaame–pohjoissaame-sanakirja"
 
 #: src/translateble_variables.js:21
 msgid "gtsmsfin"
-msgstr ""
+msgstr "Giellatekno's Skolt Sami - Finnish dictionary"
 
 #: src/translateble_variables.js:20
 msgid "gtsmsnob"
-msgstr ""
+msgstr "Giellatekno's Skolt Sami - Norwegian Bokmål dictionary"
 
 #: src/translateble_variables.js:22
 msgid "gtsmsrus"
-msgstr ""
+msgstr "Giellatekno's Skolt Sami - Russian dictionary"
 
 #: src/translateble_variables.js:19
 msgid "habmernobsmj"
