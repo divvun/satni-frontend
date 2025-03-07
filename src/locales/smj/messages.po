@@ -567,7 +567,7 @@ msgstr "suomagiela"
 
 #: src/translateble_variables.js:16
 msgid "gtfinnob"
-msgstr "Trond Trosterud suoma –  girjjedáro báhkogirjje"
+msgstr "Trond Trosterud suoma – girjjedáro báhkogirjje"
 
 #: src/translateble_variables.js:11
 msgid "gtfinsme"
@@ -579,7 +579,7 @@ msgstr "Giellatekno suoma – anársáme báhkogirjje"
 
 #: src/translateble_variables.js:24
 msgid "gtfinsms"
-msgstr "Giellatekno's Finnish – Skolt Sami dictionary"
+msgstr "Giellatekno suoma – lullesáme báhkogirjje"
 
 #: src/translateble_variables.js:8
 msgid "gtnobsma"
@@ -591,11 +591,11 @@ msgstr "Giellatekno girjjedáro – nuorttasáme báhkogirjje"
 
 #: src/translateble_variables.js:23
 msgid "gtnobsms"
-msgstr "Giellatekno's Bokmål – Skolt Sami dictionary"
+msgstr "Giellatekno girjjedáro – lullesáme báhkogirjje"
 
 #: src/translateble_variables.js:25
 msgid "gtrussms"
-msgstr "Giellatekno's Russian – Skolt Sami dictionary"
+msgstr "Giellatekno gárjjel – lullesáme báhkogirjje"
 
 #: src/translateble_variables.js:9
 msgid "gtsmanob"
@@ -623,15 +623,15 @@ msgstr "Giellatekno anársáme – nuorttasáme báhkogirjje"
 
 #: src/translateble_variables.js:21
 msgid "gtsmsfin"
-msgstr "Giellatekno's Skolt Sami - Finnish dictionary"
+msgstr "Giellatekno lullesáme – suoma báhkogirjje"
 
 #: src/translateble_variables.js:20
 msgid "gtsmsnob"
-msgstr "Giellatekno's Skolt Sami - Norwegian Bokmål dictionary"
+msgstr "Giellatekno lullesáme – girjjedáro báhkogirjje"
 
 #: src/translateble_variables.js:22
 msgid "gtsmsrus"
-msgstr "Giellatekno's Skolt Sami - Russian dictionary"
+msgstr "Giellatekno lullesáme – gárjjel báhkogirjje"
 
 #: src/translateble_variables.js:19
 msgid "habmernobsmj"
