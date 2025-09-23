@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
@@ -16,14 +16,34 @@ const useStyles = makeStyles((theme) => ({
 const InputWithTranslation = (props) => {
   const classes = useStyles();
   const { value, onChange, onKeyUp } = props;
+  const [inputValue, setInputValue] = useState(value);
+
+  // Custom hook for debouncing
+  useEffect(() => {
+    setInputValue(value);
+  }, [value]);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (inputValue !== value) {
+        onChange({ target: { value: inputValue } });
+      }
+    }, 300);
+
+    return () => clearTimeout(timeoutId);
+  }, [inputValue, onChange, value]);
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
 
   return (
     <I18n>
       {({ i18n }) => (
         <InputBase
           autoFocus
-          value={value}
-          onChange={onChange}
+          value={inputValue}
+          onChange={handleInputChange}
           onKeyUp={onKeyUp}
           placeholder={i18n._(t`Write at least one letter here`)}
           className={classes.input}
