@@ -12,12 +12,12 @@ Individual UI components and screens are developed using [Storybook](https://sto
 
 For those new to these frameworks, these are fine starting points for
 
-* React
-  * [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
-* Redux
-  * [Getting started with Redux](https://egghead.io/series/getting-started-with-redux)
-* Storybook
-  * [Storybook tutorial](https://www.learnstorybook.com/)
+- React
+  - [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
+- Redux
+  - [Getting started with Redux](https://egghead.io/series/getting-started-with-redux)
+- Storybook
+  - [Storybook tutorial](https://www.learnstorybook.com/)
 
 Install all dependencies
 `yarn install`
@@ -25,7 +25,7 @@ Install all dependencies
 Start up the app:
 `yarn start`
 
-A browser with the app will appear, the url is http://localhost:3000
+A browser with the app will appear, the url is <http://localhost:3000>
 
 Start up the testing framework
 `yarn test`
