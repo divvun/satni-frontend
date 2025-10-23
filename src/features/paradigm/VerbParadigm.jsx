@@ -1,31 +1,59 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
-const MyTableRow = ({ analyses, pron, values }) => (
-  <TableRow key={pron}>
-    <TableCell>{pron}</TableCell>
-    {values.map((value, index1) => (
-      <TableCell key={index1}>
-        {analyses[value]
-          ? analyses[value].map((analysis, index) => (
-              <div key={`${analysis}_${index}`}>{analysis}</div>
-            ))
-          : ''}
-      </TableCell>
-    ))}
-  </TableRow>
-);
+import SpeakerButton from '../speaker/SpeakerButton';
+
+const useStyles = makeStyles({
+  analysisRow: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '4px',
+  },
+});
+
+const MyTableRow = ({ analyses, pron, values, language }) => {
+  const classes = useStyles();
+
+  return (
+    <TableRow key={pron}>
+      <TableCell>{pron}</TableCell>
+      {values.map((value, index1) => (
+        <TableCell key={index1}>
+          {analyses[value]
+            ? analyses[value].map((analysis, index) => (
+                <div
+                  key={`${analysis}_${index}`}
+                  className={classes.analysisRow}
+                >
+                  {['sme', 'sma', 'smj'].includes(language) && (
+                    <SpeakerButton
+                      text={analysis}
+                      language={language}
+                      classes={{ icons: '' }}
+                    />
+                  )}
+                  <span>{analysis}</span>
+                </div>
+              ))
+            : ''}
+        </TableCell>
+      ))}
+    </TableRow>
+  );
+};
 
 MyTableRow.propTypes = {
   analyses: PropTypes.shape.isRequired,
   pron: PropTypes.string.isRequired,
   values: PropTypes.arrayOf.isRequired,
+  language: PropTypes.string.isRequired,
 };
 
 export const VerbTableRows = {
@@ -233,6 +261,7 @@ const LangTable = ({ analyses, language }) => (
               analyses={analyses}
               pron={MapTableRow.pron}
               values={MapTableRow.values}
+              language={language}
             />
           );
         }

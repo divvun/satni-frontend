@@ -1,38 +1,75 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
-const MyTableRow = ({ analyses, name, values }) => (
-  <TableRow key={name}>
-    <TableCell>{name}</TableCell>
-    {values.length === 1 && (
-      <TableCell key={`${name}_1`} colSpan={2} align="center">
-        {analyses[values[0]].map((analysis, index) => (
-          <div key={`${analysis}_${index}`}>{analysis}</div>
-        ))}
-      </TableCell>
-    )}
-    {values.length > 1 &&
-      values.map((value, index1) => (
-        <TableCell key={index1}>
-          {analyses[value] &&
-            analyses[value].map((analysis, index) => (
-              <div key={`${analysis}_${index}`}>{analysis}</div>
-            ))}
+import SpeakerButton from '../speaker/SpeakerButton';
+
+const useStyles = makeStyles({
+  analysisRow: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '4px',
+  },
+});
+
+const MyTableRow = ({ analyses, name, values, language }) => {
+  const classes = useStyles();
+
+  return (
+    <TableRow key={name}>
+      <TableCell>{name}</TableCell>
+      {values.length === 1 && (
+        <TableCell key={`${name}_1`} colSpan={2} align="center">
+          {analyses[values[0]].map((analysis, index) => (
+            <div key={`${analysis}_${index}`} className={classes.analysisRow}>
+              {['sme', 'sma', 'smj'].includes(language) && (
+                <SpeakerButton
+                  text={analysis}
+                  language={language}
+                  classes={{ icons: '' }}
+                />
+              )}
+              <span>{analysis}</span>
+            </div>
+          ))}
         </TableCell>
-      ))}
-  </TableRow>
-);
+      )}
+      {values.length > 1 &&
+        values.map((value, index1) => (
+          <TableCell key={index1}>
+            {analyses[value] &&
+              analyses[value].map((analysis, index) => (
+                <div
+                  key={`${analysis}_${index}`}
+                  className={classes.analysisRow}
+                >
+                  {['sme', 'sma', 'smj'].includes(language) && (
+                    <SpeakerButton
+                      text={analysis}
+                      language={language}
+                      classes={{ icons: '' }}
+                    />
+                  )}
+                  <span>{analysis}</span>
+                </div>
+              ))}
+          </TableCell>
+        ))}
+    </TableRow>
+  );
+};
 
 MyTableRow.propTypes = {
   analyses: PropTypes.shape.isRequired,
   name: PropTypes.string.isRequired,
   values: PropTypes.arrayOf.isRequired,
+  language: PropTypes.string.isRequired,
 };
 
 export const NounTableRows = {
@@ -280,6 +317,7 @@ const LangTable = ({ analyses, language }) => (
             analyses={analyses}
             name={MapTableRow.name}
             values={MapTableRow.values}
+            language={language}
           />
         );
       }
