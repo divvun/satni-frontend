@@ -57,7 +57,10 @@ const DictArticle = ({ dictGroup, lemma }) => {
                 />
               ))}
               {translationGroup.examples && (
-                <Examples examples={translationGroup.examples} />
+                <Examples
+                  examples={translationGroup.examples}
+                  language={from.language}
+                />
               )}
             </React.Fragment>
           ))}
