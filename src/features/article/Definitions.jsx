@@ -5,13 +5,20 @@ import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 
+import SpeakerButton from '../speaker/SpeakerButton';
+
 const useStyles = makeStyles((theme) => ({
   divisor: {
     margin: theme.spacing(1),
   },
+  definitionRow: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '4px',
+  },
 }));
 
-const Definitions = ({ definitions }) => {
+const Definitions = ({ definitions, language }) => {
   const classes = useStyles();
 
   return (
@@ -19,13 +26,23 @@ const Definitions = ({ definitions }) => {
       <Typography color="textSecondary">
         <Trans>Definition</Trans>:
       </Typography>
-      <Typography>{definitions}</Typography>
+      <div className={classes.definitionRow}>
+        {['sme', 'sma', 'smj'].includes(language) && (
+          <SpeakerButton
+            text={definitions}
+            language={language}
+            classes={{ icons: '' }}
+          />
+        )}
+        <Typography>{definitions}</Typography>
+      </div>
     </Box>
   );
 };
 
 Definitions.propTypes = {
   definitions: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
 };
 
 export default Definitions;

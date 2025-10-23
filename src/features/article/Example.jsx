@@ -25,31 +25,45 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Example = ({ example, language }) => {
+const Example = ({ example, sourceLanguage, targetLanguage }) => {
   const classes = useStyles();
 
   return (
     <Box borderLeft={5} className={classes.divisor}>
       <div className={classNames(classes.padding, classes.exampleRow)}>
-        {['sme', 'sma', 'smj'].includes(language) && (
+        {['sme', 'sma', 'smj'].includes(sourceLanguage) && (
           <SpeakerButton
             text={example.example}
-            language={language}
+            language={sourceLanguage}
             classes={{ icons: '' }}
           />
         )}
         <Typography>{example.example}</Typography>
       </div>
-      <Typography className={classNames(classes.second, classes.padding)}>
-        {example.translation}
-      </Typography>
+      <div
+        className={classNames(
+          classes.second,
+          classes.padding,
+          classes.exampleRow,
+        )}
+      >
+        {['sme', 'sma', 'smj'].includes(targetLanguage) && (
+          <SpeakerButton
+            text={example.translation}
+            language={targetLanguage}
+            classes={{ icons: '' }}
+          />
+        )}
+        <Typography>{example.translation}</Typography>
+      </div>
     </Box>
   );
 };
 
 Example.propTypes = {
   example: PropTypes.shape.isRequired,
-  language: PropTypes.string.isRequired,
+  sourceLanguage: PropTypes.string.isRequired,
+  targetLanguage: PropTypes.string.isRequired,
 };
 
 export default Example;

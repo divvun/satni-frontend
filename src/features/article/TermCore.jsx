@@ -18,7 +18,12 @@ const TermCore = ({ concept, lemma }) => {
         <LemmaGroups lemma={lemma} terms={terms} />
       </Grid>
       <Grid md={5} xs={12} item>
-        {definition && <Definitions definitions={definition} />}
+        {definition && (
+          <Definitions
+            definitions={definition}
+            language={terms[0].expression.language}
+          />
+        )}
       </Grid>
     </Grid>
   );
