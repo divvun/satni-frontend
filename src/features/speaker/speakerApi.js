@@ -1,12 +1,15 @@
+import { getSelectedVoice } from './speakerVoices';
+
 const TTS_API_BASE = 'https://api-giellalt.uit.no/tts';
 
 /**
  * Fetch TTS audio from GiellaLT API
  * @param {string} text - Text to convert to speech
  * @param {string} language - Language code (se, sma, smj)
+ * @param {string} voice - Optional voice name, if not provided uses selected voice
  * @returns {Promise<string>} - URL to the audio blob or null if error
  */
-export const fetchTTSAudio = async (text, language) => {
+export const fetchTTSAudio = async (text, language, voice = null) => {
   // Map language codes to API language codes
   const langMap = {
     sme: 'se',
@@ -21,15 +24,21 @@ export const fetchTTSAudio = async (text, language) => {
     return null;
   }
 
+  // Get the selected voice for this language if not provided
+  const selectedVoice = voice || getSelectedVoice(language);
+
   try {
-    const response = await fetch(`${TTS_API_BASE}/${apiLang}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'audio/mpeg', // Request MP3 format
+    const response = await fetch(
+      `${TTS_API_BASE}/${apiLang}/${selectedVoice}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'audio/mpeg', // Request MP3 format
+        },
+        body: JSON.stringify({ text }),
       },
-      body: JSON.stringify({ text }),
-    });
+    );
 
     if (!response.ok) {
       console.error('TTS API error:', response.status);
