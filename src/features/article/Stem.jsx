@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import KorpButton from '../korp/KorpButton';
 import ParadigmButton from '../paradigm/ParadigmButton';
 import ParadigmDialog from '../paradigm/ParadigmDialog';
+import SpeakerButton from '../speaker/SpeakerButton';
 
 import PresentationLemma from './PresentationLemma';
 
@@ -74,6 +75,13 @@ const Stem = ({ stem, restriction, withLink }) => {
                 >
                   (<Trans id={pos} />)
                 </Typography>
+              )}
+              {['sme', 'sma', 'smj'].includes(language) && (
+                <SpeakerButton
+                  text={lemma}
+                  language={language}
+                  classes={classes}
+                />
               )}
               <ParadigmButton
                 lemma={lemma}
