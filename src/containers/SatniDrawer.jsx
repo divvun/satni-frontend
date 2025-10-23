@@ -12,11 +12,13 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import PropTypes from 'prop-types';
+import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
 import TranslateIcon from '@material-ui/icons/Translate';
 import { ListSubheader } from '@material-ui/core';
 
 import DictChooserDialog from '../features/wantedlangs/DictChooserDialog';
 import LangChooserDialog from '../features/wantedlangs/LangChooserDialog';
+import SpeakerChooserDialog from '../features/speaker/SpeakerChooserDialog';
 import MetaLanguageSelector from './MetaLanguageSelector';
 
 const Footer = () => (
@@ -106,6 +108,14 @@ const SatniDrawer = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
     setOpenDictChooser(false);
   };
 
+  const [openSpeakerChooser, setOpenSpeakerChooser] = useState(false);
+  const handleClickSpeakerChooserDialog = () => {
+    setOpenSpeakerChooser(true);
+  };
+  const handleCloseSpeakerChooserDialog = () => {
+    setOpenSpeakerChooser(false);
+  };
+
   const drawer = (
     <div>
       <div className={classes.toolbarDense} />
@@ -130,6 +140,16 @@ const SatniDrawer = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
             <MenuBookIcon />
           </ListItemIcon>
           <ListItemText primary={<Trans>Dictionaries</Trans>} />
+        </ListItem>
+        <ListItem
+          key="SpeakerChooser"
+          onClick={handleClickSpeakerChooserDialog}
+          button
+        >
+          <ListItemIcon>
+            <RecordVoiceOverIcon />
+          </ListItemIcon>
+          <ListItemText primary={<Trans>TTS Voices</Trans>} />
         </ListItem>
         <ListItem
           key="Feedback"
@@ -159,6 +179,10 @@ const SatniDrawer = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
       <DictChooserDialog
         open={openDictChooser}
         onClose={handleCloseDictChooserDialog}
+      />
+      <SpeakerChooserDialog
+        open={openSpeakerChooser}
+        onClose={handleCloseSpeakerChooserDialog}
       />
     </div>
   );
