@@ -1,21 +1,16 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
+import { useReactiveVar } from '@apollo/client';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Radio from '@mui/material/Radio';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Tooltip from '@mui/material/Tooltip';
+import { searchModeVar } from '../../apolloCache';
 import setSearchMode from '../../operations/mutations/setSearchMode';
-import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
-
-interface SearchModeQueryData {
-  searchMode: string;
-}
 
 const WildCard: React.FC = () => {
-  const searchModeQueryResult = useQuery<SearchModeQueryData>(GET_SEARCH_MODE);
-  const { searchMode } = searchModeQueryResult.data || { searchMode: 'start' };
+  const searchMode = useReactiveVar(searchModeVar);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchMode(event.target.value);
