@@ -24,7 +24,6 @@ const MetaLanguageSelector: React.FC = () => {
   };
 
   const handleChange = (event: any) => {
-    event.preventDefault();
     setInterfaceLanguage(event.target.value as string);
   };
 

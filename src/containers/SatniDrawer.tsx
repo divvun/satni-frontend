@@ -185,12 +185,12 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
           </ListItemIcon>
           <ListItemText primary="Feedback" />
         </ListItem>
-        <ListItemButton key="Site language">
+        <ListItem key="Site language">
           <ListItemIcon>
             <TranslateIcon />
           </ListItemIcon>
           <MetaLanguageSelector />
-        </ListItemButton>
+        </ListItem>
         <ListItem>
           <Footer />
         </ListItem>
