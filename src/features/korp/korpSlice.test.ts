@@ -6,14 +6,17 @@ import korp, {
 
 describe('reducers', () => {
   it('should return the initial state', () => {
-    expect(korp(undefined, {})).toEqual({ isFetching: false, error: null });
+    expect(korp(undefined, {} as any)).toEqual({
+      isFetching: false,
+      error: null,
+    });
   });
 
   it('should handle FETCH_KORP_BEGIN', () => {
     expect(
       korp(undefined, {
         type: getKorpStart.type,
-      }),
+      } as any),
     ).toEqual({
       error: null,
       isFetching: true,
@@ -25,7 +28,7 @@ describe('reducers', () => {
       korp(undefined, {
         type: getKorpFailure.type,
         payload: 'Error',
-      }),
+      } as any),
     ).toEqual({
       isFetching: false,
       error: 'Error',
@@ -39,7 +42,7 @@ describe('reducers', () => {
         payload: {
           korp: true,
         },
-      }),
+      } as any),
     ).toEqual({
       isFetching: false,
       error: null,

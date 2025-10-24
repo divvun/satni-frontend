@@ -1,6 +1,6 @@
 import { availableDictsVar, wantedDictsVar } from '../../apolloCache';
 
-const setWantedDicts = (dicts) => {
+const setWantedDicts = (dicts: string[]): void => {
   localStorage.setItem(
     'unwantedDicts',
     JSON.stringify(

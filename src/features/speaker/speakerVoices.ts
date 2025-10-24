@@ -1,7 +1,7 @@
 /**
  * Available TTS voices for each Sami language
  */
-export const availableVoices = {
+export const availableVoices: Record<string, string[]> = {
   sme: ['biret', 'mahtte', 'sunna'],
   smj: ['abmut', 'nihkol', 'sigga'],
   sma: ['aanna'],
@@ -10,7 +10,7 @@ export const availableVoices = {
 /**
  * Default voice for each language
  */
-export const defaultVoices = {
+export const defaultVoices: Record<string, string> = {
   sme: 'biret',
   smj: 'abmut',
   sma: 'aanna',
@@ -19,7 +19,7 @@ export const defaultVoices = {
 /**
  * Get the selected voice for a language from localStorage or return default
  */
-export const getSelectedVoice = (language) => {
+export const getSelectedVoice = (language: string): string => {
   const storedVoices = localStorage.getItem('ttsVoices');
   if (storedVoices) {
     try {
@@ -35,7 +35,7 @@ export const getSelectedVoice = (language) => {
 /**
  * Get all selected voices from localStorage or return defaults
  */
-export const getAllSelectedVoices = () => {
+export const getAllSelectedVoices = (): Record<string, string> => {
   const storedVoices = localStorage.getItem('ttsVoices');
   if (storedVoices) {
     try {

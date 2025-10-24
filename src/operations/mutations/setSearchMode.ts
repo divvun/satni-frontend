@@ -1,6 +1,6 @@
 import { searchModeVar } from '../../apolloCache';
 
-const setSearchMode = (mode) => {
+const setSearchMode = (mode: string): void => {
   searchModeVar(mode);
 };
 

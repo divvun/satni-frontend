@@ -1,6 +1,6 @@
 import { interfaceLanguageVar } from '../../apolloCache';
 
-const setInterfaceLanguage = (language) => {
+const setInterfaceLanguage = (language: string): void => {
   localStorage.setItem('interfaceLanguage', language);
   interfaceLanguageVar(language);
 };

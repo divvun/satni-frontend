@@ -4,14 +4,18 @@ const TTS_API_BASE = 'https://api-giellalt.uit.no/tts';
 
 /**
  * Fetch TTS audio from GiellaLT API
- * @param {string} text - Text to convert to speech
- * @param {string} language - Language code (se, sma, smj)
- * @param {string} voice - Optional voice name, if not provided uses selected voice
- * @returns {Promise<string>} - URL to the audio blob or null if error
+ * @param text - Text to convert to speech
+ * @param language - Language code (se, sma, smj)
+ * @param voice - Optional voice name, if not provided uses selected voice
+ * @returns URL to the audio blob or null if error
  */
-export const fetchTTSAudio = async (text, language, voice = null) => {
+export const fetchTTSAudio = async (
+  text: string,
+  language: string,
+  voice: string | null = null,
+): Promise<string | null> => {
   // Map language codes to API language codes
-  const langMap = {
+  const langMap: Record<string, string> = {
     sme: 'se',
     smj: 'smj',
     sma: 'sma',
@@ -60,10 +64,10 @@ export const fetchTTSAudio = async (text, language, voice = null) => {
 
 /**
  * Check if TTS is available for a given language
- * @param {string} language - Language code
- * @returns {boolean}
+ * @param language - Language code
+ * @returns boolean indicating TTS availability
  */
-export const isTTSAvailable = (language) => {
+export const isTTSAvailable = (language: string): boolean => {
   const supportedLanguages = ['sme', 'smj', 'sma'];
   return supportedLanguages.includes(language);
 };

@@ -1,0 +1,13 @@
+import React from 'react';
+
+import apolloClient from './apolloClient';
+import satniStore from './configureStore';
+import ProviderWrapper from './containers/ProviderWrapper';
+
+const StoryWrapper = (story: () => React.ReactNode): React.ReactElement => (
+  <ProviderWrapper store={satniStore} client={apolloClient}>
+    {story()}
+  </ProviderWrapper>
+);
+
+export default StoryWrapper;

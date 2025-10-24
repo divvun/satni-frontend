@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-vars */
+// @ts-nocheck - Variables are intentionally unused (used by @lingui/macro for translation extraction)
+// @ts-ignore - @lingui/macro has no type definitions
 import { t } from '@lingui/macro';
 
 const _dicts = [
@@ -100,7 +102,11 @@ const _categories = [
   t`Ávnnasindustriija`,
 ];
 
-const dictionaryInfo = {
+interface DictionaryInfoEntry {
+  info: any[];
+}
+
+const dictionaryInfo: Record<string, DictionaryInfoEntry> = {
   sammallahtismefin: {
     info: [
       t`Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993.`,
@@ -190,7 +196,7 @@ const dictionaryInfo = {
       t`Other main contributors to these projects were (in alphabetical order) Katri Jefremoff, Erkki Lumisalmi, Zoja Nosova, Lena Terhart, and Joshua Wilbur.`,
       t`The KSDP started in 2005 and in principle is still active.`,
       t`Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009.`,
-      t`The Kone funded project "Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others`,
+      t`The Kone funded project "Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others`,
     ],
   },
   gtsmsfin: {
@@ -216,7 +222,7 @@ const dictionaryInfo = {
       t`Other main contributors to these projects were (in alphabetical order) Katri Jefremoff, Erkki Lumisalmi, Zoja Nosova, Lena Terhart, and Joshua Wilbur.`,
       t`The KSDP started in 2005 and in principle is still active.`,
       t`Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009.`,
-      t`The Kone funded project "Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others`,
+      t`The Kone funded project "Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others`,
     ],
   },
   gtnobsms: {
@@ -227,7 +233,7 @@ const dictionaryInfo = {
       t`Other main contributors to these projects were (in alphabetical order) Katri Jefremoff, Erkki Lumisalmi, Zoja Nosova, Lena Terhart, and Joshua Wilbur.`,
       t`The KSDP started in 2005 and in principle is still active.`,
       t`Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009.`,
-      t`The Kone funded project "Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others`,
+      t`The Kone funded project "Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others`,
     ],
   },
   gtfinsms: {
@@ -248,7 +254,7 @@ const dictionaryInfo = {
       t`Other main contributors to these projects were (in alphabetical order) Katri Jefremoff, Erkki Lumisalmi, Zoja Nosova, Lena Terhart, and Joshua Wilbur.`,
       t`The KSDP started in 2005 and in principle is still active.`,
       t`Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009.`,
-      t`The Kone funded project "Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others`,
+      t`The Kone funded project "Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others`,
     ],
   },
 };

@@ -695,7 +695,7 @@ describe('Massage termwiki data from backend', () => {
       ],
     };
 
-    expect(multilingualconceptListsByNames(conceptList)).toEqual(want);
+    expect(multilingualconceptListsByNames(conceptList as any)).toEqual(want);
   });
 
   it('Find which languages the lemma has in a single term concept', () => {
@@ -704,7 +704,7 @@ describe('Massage termwiki data from backend', () => {
     expect(
       languagesOfLemma(
         'vuorká',
-        multilingualconceptListsByNames(conceptList)[
+        multilingualconceptListsByNames(conceptList as any)[
           'Dihtorteknologiija ja diehtoteknihkka:fiila'
         ],
       ),
@@ -898,7 +898,7 @@ describe('Massage termwiki data from backend', () => {
     expect(
       moveLangFirst(
         'sme',
-        multilingualconceptListsByNames(conceptList)[
+        multilingualconceptListsByNames(conceptList as any)[
           'Dihtorteknologiija ja diehtoteknihkka:fiila'
         ],
       ),
@@ -908,7 +908,7 @@ describe('Massage termwiki data from backend', () => {
   it('Move the found lemma first in a given concept', () => {
     const got = moveLangFirst(
       'sme',
-      multilingualconceptListsByNames(conceptList)[
+      multilingualconceptListsByNames(conceptList as any)[
         'Dihtorteknologiija ja diehtoteknihkka:fiila'
       ],
     )[0];
@@ -951,10 +951,9 @@ describe('Massage termwiki data from backend', () => {
   });
 
   it('Order the multilingual concept by lemma and language', () => {
-    const got =
-      multilingualconceptListsByNames(conceptList)[
-        'Dihtorteknologiija ja diehtoteknihkka:fiila'
-      ];
+    const got = multilingualconceptListsByNames(conceptList as any)[
+      'Dihtorteknologiija ja diehtoteknihkka:fiila'
+    ];
     const want = [
       {
         collections: [
@@ -1219,7 +1218,7 @@ describe('Massage Giellatekno dictionaries from backend', () => {
       },
     };
 
-    expect(dictBackend2Frontend(got)).toEqual(want);
+    expect(dictBackend2Frontend(got as any)).toEqual(want);
   });
 });
 

@@ -1,6 +1,6 @@
 import { searchListClickedItemVar } from '../../apolloCache';
 
-const setSearchListClickedItem = (position) => {
+const setSearchListClickedItem = (position: number): void => {
   searchListClickedItemVar(position);
 };
 

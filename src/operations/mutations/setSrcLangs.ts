@@ -1,6 +1,6 @@
 import { srcLangsVar } from '../../apolloCache';
 
-const setSrcLangs = (langs) => {
+const setSrcLangs = (langs: string[]): void => {
   localStorage.setItem('srcLangs', JSON.stringify(langs));
   srcLangsVar(langs);
 };
