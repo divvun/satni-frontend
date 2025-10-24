@@ -26,18 +26,14 @@ const TermCore: React.FC<TermCoreProps> = ({ concept, lemma }) => {
   const { definition, terms } = concept;
 
   return (
-    // @ts-ignore - Material-UI v4 compatibility
     <Grid container>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
-      <Grid md={3} xs={12} item>
+      <Grid size={{ xs: 12, md: 3 }}>
         <PairHeader language={terms[0].expression.language} />
       </Grid>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
-      <Grid md={4} xs={12} item>
+      <Grid size={{ xs: 12, md: 4 }}>
         <LemmaGroups lemma={lemma} terms={terms} />
       </Grid>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
-      <Grid md={5} xs={12} item>
+      <Grid size={{ xs: 12, md: 5 }}>
         {definition && (
           <Definitions
             definitions={definition}

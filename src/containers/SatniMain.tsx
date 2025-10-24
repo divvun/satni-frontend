@@ -1,5 +1,4 @@
 import React from 'react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Grid from '@mui/material/Grid';
 import qs from 'qs';
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
@@ -32,26 +31,21 @@ const SatniMain: React.FC<SatniMainProps> = ({
       <Redirect from="/details" to={`/${locationDict.lemma}`} />
       {/* @ts-ignore - React Router DOM v5 compatibility */}
       <Route path="/">
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Grid container>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
-          <Grid xs={12}>
+          <Grid size={12}>
             <StatusBar />
           </Grid>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
-          <Grid xs={12}>
+          <Grid size={12}>
             <FilterBar
               searchExpression={searchExpression}
               setSearchExpression={setSearchExpression}
             />
             {!currentLemma && !searchExpression && <WelcomeHeader />}
           </Grid>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
-          <Grid xs={4}>
+          <Grid size={4}>
             <InfiniteStems searchExpression={searchExpression} />
           </Grid>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
-          <Grid xs={8}>
+          <Grid size={8}>
             {currentLemma && <Articles lemma={currentLemma} />}
           </Grid>
         </Grid>
