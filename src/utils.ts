@@ -22,8 +22,14 @@ export interface ExampleGroup {
   [key: string]: any;
 }
 
-export interface TranslationGroup {
+export interface RestrictionData {
+  __typename?: string;
   restriction: string;
+  attributes?: any;
+}
+
+export interface TranslationGroup {
+  restriction: RestrictionData | null;
   translationLemmas: {
     edges: TranslationLemma[];
   };
@@ -41,7 +47,7 @@ export interface BackendDictArticle {
 }
 
 export interface FrontendTranslationGroup {
-  restriction: string;
+  restriction: RestrictionData | null;
   translations: any[];
   examples: ExampleGroup[];
 }

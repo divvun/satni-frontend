@@ -18,12 +18,14 @@ interface StemData {
 }
 
 interface RestrictionData {
+  __typename?: string;
   restriction: string;
+  attributes?: any;
 }
 
 interface DictTargetStemProps {
   stem: StemData;
-  restriction?: RestrictionData;
+  restriction?: RestrictionData | null;
 }
 
 interface LangsDictsData {
@@ -77,7 +79,7 @@ const DictTargetStem: React.FC<DictTargetStemProps> = ({
   return (
     <Stem
       stem={stem}
-      restriction={restriction == null ? '' : restriction}
+      restriction={restriction}
       withLink={data && data.hasStem.length > 0}
     />
   );

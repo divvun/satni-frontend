@@ -64,11 +64,7 @@ const DictArticle: React.FC<DictArticleProps> = ({ dictGroup, lemma }) => {
                 <DictTargetStem
                   key={index}
                   stem={stem}
-                  restriction={
-                    translationGroup.restriction
-                      ? { restriction: translationGroup.restriction }
-                      : undefined
-                  }
+                  restriction={translationGroup.restriction}
                 />
               ))}
               {translationGroup.examples && (

@@ -36,7 +36,13 @@ export interface TranslationLemmaNode {
   language: string;
   pos: string;
   dialect: string | null;
-  country: string | null;
+  country?: string;
+}
+
+export interface RestrictionData {
+  __typename?: string;
+  restriction: string;
+  attributes?: any;
 }
 
 export interface DictTranslationGroup {
@@ -45,11 +51,9 @@ export interface DictTranslationGroup {
       node: TranslationLemmaNode;
     }>;
   };
-  restriction: string | null;
+  restriction: RestrictionData | null;
   exampleGroups: any[]; // TODO: Define proper structure when examples are present
-}
-
-export interface DictEntry {
+}export interface DictEntry {
   dictName: string;
   srcLang: string;
   targetLang: string;
