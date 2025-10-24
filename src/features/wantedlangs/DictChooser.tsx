@@ -1,6 +1,7 @@
 import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
+import { useLingui } from '@lingui/react';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Accordion from '@mui/material/Accordion';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
@@ -26,6 +27,7 @@ interface DictChooserProps {
 }
 
 const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
+  const { _ } = useLingui();
   const useStyles = makeStyles((theme: Theme) => ({
     accordionHeading: {
       // fontSize: theme.typography.pxToRem(15),
@@ -78,12 +80,17 @@ const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
           </AccordionSummary>
           {/* @ts-ignore - Material-UI v4 compatibility */}
           <AccordionDetails>
-            {(dictionaryInfo as any)[dict]?.info?.map((infoText: string) => (
-              // @ts-ignore - Material-UI v4 compatibility
-              <Typography key={infoText} className={classes.infoText}>
-                <Trans id={infoText}>{infoText}</Trans>
-              </Typography>
-            ))}
+            {(dictionaryInfo as any)[dict]?.info?.map(
+              (infoText: any, index: number) => (
+                // @ts-ignore - Material-UI v4 compatibility
+                <Typography
+                  key={`${dict}-info-${index}`}
+                  className={classes.infoText}
+                >
+                  {_(infoText)}
+                </Typography>
+              ),
+            )}
           </AccordionDetails>
         </Accordion>
       ))}
