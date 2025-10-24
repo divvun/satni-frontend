@@ -3,7 +3,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 
-import { makeStyles } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import Typography from '@mui/material/Typography';
 import * as Sentry from '@sentry/react';
 import PropTypes from 'prop-types';
