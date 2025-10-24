@@ -127,7 +127,7 @@ Stem.propTypes = {
 };
 
 Stem.defaultProps = {
-  restriction: '',
+  restriction: null,
   withLink: false,
 };
 
