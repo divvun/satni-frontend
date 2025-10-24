@@ -53,7 +53,8 @@ export interface DictTranslationGroup {
   };
   restriction: RestrictionData | null;
   exampleGroups: any[]; // TODO: Define proper structure when examples are present
-}export interface DictEntry {
+}
+export interface DictEntry {
   dictName: string;
   srcLang: string;
   targetLang: string;

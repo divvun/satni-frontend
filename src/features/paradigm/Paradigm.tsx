@@ -1,8 +1,6 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
+import React, { useEffect, useState } from 'react';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Typography from '@mui/material/Typography';
-import GET_NOUN from '../../operations/queries/getNoun';
 import {
   filterParadigm,
   tableRowToParadigmList,
@@ -11,6 +9,7 @@ import {
 import AdjParadigm, { AdjTableRows } from './AdjParadigm';
 import NounParadigm, { NounTableRows } from './NounParadigm';
 import VerbParadigm, { VerbTableRows } from './VerbParadigm';
+import { fetchParadigm } from './paradigmService';
 
 const langs = new Set(['fin', 'sma', 'sme', 'smj', 'smn', 'sms']);
 const poses = new Set(['N', 'V', 'A']);
@@ -34,18 +33,39 @@ interface ParadigmProps {
 }
 
 const Paradigm: React.FC<ParadigmProps> = ({ lemma, language, pos }) => {
+  const [data, setData] = useState<SatniParadigm | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<Error | null>(null);
+
   const fullParadigmLink = `https://gtweb.uit.no/cgi-bin/smi/smi.cgi?text=${lemma}&pos=${pos}&lang=${language}&mode=full&action=paradigm`;
 
-  const { data, loading, error } = useQuery<SatniParadigm>(GET_NOUN, {
-    variables: {
-      origform: lemma,
-      language,
-      paradigmTemplates:
-        pos in tableDict && language in tableDict[pos]
-          ? tableRowToParadigmList(tableDict[pos][language])
-          : [],
-    },
-  });
+  useEffect(() => {
+    const loadParadigm = async () => {
+      setLoading(true);
+      setError(null);
+
+      try {
+        const templates =
+          pos in tableDict && language in tableDict[pos]
+            ? tableRowToParadigmList(tableDict[pos][language])
+            : [];
+
+        const generated = await fetchParadigm(lemma, language, templates);
+
+        if (generated.length === 0) {
+          setError(new Error('No paradigm data'));
+        } else {
+          setData({ generated });
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err : new Error('Unknown error'));
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadParadigm();
+  }, [lemma, language, pos]);
 
   if (!langs.has(language)) {
     return (

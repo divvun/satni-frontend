@@ -1,5 +1,4 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
+import React, { useEffect, useState } from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
@@ -8,11 +7,11 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import InfoOutlined from '@mui/icons-material/InfoOutlined';
-import GET_NOUN from '../../operations/queries/getNoun';
 import { tableRowToParadigmList } from '../../utils';
 import { AdjTableRows } from './AdjParadigm';
 import { NounTableRows } from './NounParadigm';
 import { VerbTableRows } from './VerbParadigm';
+import { hasParadigm } from './paradigmService';
 
 interface ParadigmButtonProps {
   lemma: string;
@@ -22,10 +21,6 @@ interface ParadigmButtonProps {
   classes: {
     icons: string;
   };
-}
-
-interface GeneratedData {
-  generated: any[];
 }
 
 interface TableDict {
@@ -41,28 +36,38 @@ const ParadigmButton: React.FC<ParadigmButtonProps> = ({
   onClick,
   classes,
 }) => {
+  const [paradigmExists, setParadigmExists] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
   const tableDict: TableDict = {
     A: AdjTableRows,
     N: NounTableRows,
     V: VerbTableRows,
   };
 
-  const { data } = useQuery<GeneratedData>(GET_NOUN, {
-    variables: {
-      origform: lemma,
-      language,
-      paradigmTemplates:
-        pos in tableDict && language in tableDict[pos]
-          ? tableRowToParadigmList(tableDict[pos][language]).slice(0, 1)
-          : [],
-    },
-  });
+  useEffect(() => {
+    const checkParadigm = async () => {
+      if (pos in tableDict && language in tableDict[pos]) {
+        setIsLoading(true);
+        const templates = tableRowToParadigmList(
+          tableDict[pos][language],
+        ).slice(0, 1);
+        const exists = await hasParadigm(lemma, language, templates);
+        setParadigmExists(exists);
+        setIsLoading(false);
+      } else {
+        setIsLoading(false);
+      }
+    };
+
+    checkParadigm();
+  }, [lemma, language, pos]);
 
   if (
     pos in tableDict &&
     language in tableDict[pos] &&
-    data &&
-    data.generated.length > 0
+    paradigmExists &&
+    !isLoading
   ) {
     return (
       // @ts-ignore - Material-UI v4 compatibility

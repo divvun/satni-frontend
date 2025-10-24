@@ -46,6 +46,9 @@ export const korpCacheVar: ReactiveVar<Record<string, boolean>> = makeVar({});
 // TTS cache: Map of "language:voice:text" -> audioUrl (blob URL)
 export const ttsCacheVar: ReactiveVar<Record<string, string>> = makeVar({});
 
+// Paradigm cache: Map of "language:lemma:templates" -> ParadigmResult[]
+export const paradigmCacheVar: ReactiveVar<Record<string, any[]>> = makeVar({});
+
 export const cache = new InMemoryCache({
   typePolicies: {
     Query: {
