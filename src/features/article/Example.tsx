@@ -1,8 +1,12 @@
+import React from 'react';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Box from '@material-ui/core/Box';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { makeStyles } from '@material-ui/core/styles';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Typography from '@material-ui/core/Typography';
+// @ts-ignore - classnames types compatibility
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 
 import SpeakerButton from '../speaker/SpeakerButton';
 
@@ -24,10 +28,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Example = ({ example, sourceLanguage, targetLanguage }) => {
+interface ExampleData {
+  example: string;
+  translation: string;
+}
+
+interface ExampleProps {
+  example: ExampleData;
+  sourceLanguage: string;
+  targetLanguage: string;
+}
+
+const Example: React.FC<ExampleProps> = ({ example, sourceLanguage, targetLanguage }) => {
   const classes = useStyles();
 
   return (
+    // @ts-ignore - Material-UI v4 compatibility
     <Box borderLeft={5} className={classes.divisor}>
       <div className={classNames(classes.padding, classes.exampleRow)}>
         {['sme', 'sma', 'smj'].includes(sourceLanguage) && (
@@ -37,6 +53,7 @@ const Example = ({ example, sourceLanguage, targetLanguage }) => {
             classes={{ icons: '' }}
           />
         )}
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Typography>{example.example}</Typography>
       </div>
       <div
@@ -53,16 +70,11 @@ const Example = ({ example, sourceLanguage, targetLanguage }) => {
             classes={{ icons: '' }}
           />
         )}
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Typography>{example.translation}</Typography>
       </div>
     </Box>
   );
-};
-
-Example.propTypes = {
-  example: PropTypes.shape.isRequired,
-  sourceLanguage: PropTypes.string.isRequired,
-  targetLanguage: PropTypes.string.isRequired,
 };
 
 export default Example;

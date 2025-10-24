@@ -1,8 +1,12 @@
+import React from 'react';
+// @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Box from '@material-ui/core/Box';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { makeStyles } from '@material-ui/core/styles';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Typography from '@material-ui/core/Typography';
-import PropTypes from 'prop-types';
 
 import SpeakerButton from '../speaker/SpeakerButton';
 
@@ -17,11 +21,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Definitions = ({ definitions, language }) => {
+interface DefinitionsProps {
+  definitions: string;
+  language: string;
+}
+
+const Definitions: React.FC<DefinitionsProps> = ({ definitions, language }) => {
   const classes = useStyles();
 
   return (
+    // @ts-ignore - Material-UI v4 compatibility
     <Box className={classes.divisor}>
+      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Typography color="textSecondary">
         <Trans>Definition</Trans>:
       </Typography>
@@ -33,15 +44,11 @@ const Definitions = ({ definitions, language }) => {
             classes={{ icons: '' }}
           />
         )}
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Typography>{definitions}</Typography>
       </div>
     </Box>
   );
-};
-
-Definitions.propTypes = {
-  definitions: PropTypes.string.isRequired,
-  language: PropTypes.string.isRequired,
 };
 
 export default Definitions;

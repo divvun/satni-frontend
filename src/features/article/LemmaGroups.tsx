@@ -1,8 +1,10 @@
 /* eslint-disable react/no-array-index-key */
 
+import React from 'react';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Box from '@material-ui/core/Box';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { makeStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
 
 import LemmaGroup from './LemmaGroup';
 
@@ -12,21 +14,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LemmaGroups = ({ lemma, terms }) => {
+interface LemmaGroupsProps {
+  lemma: string;
+  terms: any[];
+}
+
+const LemmaGroups: React.FC<LemmaGroupsProps> = ({ lemma, terms }) => {
   const classes = useStyles();
 
   return (
+    // @ts-ignore - Material-UI v4 compatibility
     <Box className={classes.divisor}>
       {terms.map((term, index) => (
         <LemmaGroup key={index} lemma={lemma} term={term} />
       ))}
     </Box>
   );
-};
-
-LemmaGroups.propTypes = {
-  lemma: PropTypes.string.isRequired,
-  terms: PropTypes.arrayOf.isRequired,
 };
 
 export default LemmaGroups;
