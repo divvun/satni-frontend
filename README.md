@@ -2,38 +2,138 @@
 
 This is a frontend for Divvun's GraphQL [dictionary and term api backend](https://github.com/divvun/satni-backend).
 
-[![Build Status](https://travis-ci.org/divvun/satni-frontend.svg?branch=master)](https://travis-ci.org/divvun/satni-frontend)
+## Tech Stack
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project is built with these web technologies:
 
-The app is developed using the javascript frameworks [React](https://reactjs.org/) and [Redux](https://redux.js.org/).
+- **[React 19](https://react.dev/)** - UI framework
+- **[Apollo Client](https://www.apollographql.com/docs/react/)** - GraphQL client with reactive variables for state management
+- **[MUI (Material-UI) v7](https://mui.com/)** - Component library
+- **[Vite](https://vite.dev/)** - Fast build tool and dev server
+- **[TypeScript](https://www.typescriptlang.org/)** - Type safety
+- **[Lingui](https://lingui.dev/)** - Internationalization (i18n)
+- **[Vitest](https://vitest.dev/)** - Unit testing
+- **[Storybook](https://storybook.js.org/)** - Component development
+- **[Biome](https://biomejs.dev/)** - Fast linting and formatting
 
-Individual UI components and screens are developed using [Storybook](https://storybook.js.org).
+## Getting Started
 
-For those new to these frameworks, these are fine starting points for
+### Prerequisites
 
-- React
-  - [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
-- Redux
-  - [Getting started with Redux](https://egghead.io/series/getting-started-with-redux)
-- Storybook
-  - [Storybook tutorial](https://www.learnstorybook.com/)
+- Node.js 20+ (see `.nvmrc`)
+- pnpm package manager
 
-Install all dependencies
-`yarn install`
+### Installation
 
-Start up the app:
-`yarn start`
+Install all dependencies:
 
-A browser with the app will appear, the url is <http://localhost:3000>
+```bash
+pnpm install
+```
 
-Start up the testing framework
-`yarn test`
+### Development
 
-You will see the test results in the terminal window
+Start the development server:
 
-Start up Storybook:
-`yarn run storybook`
+```bash
+pnpm dev
+```
 
-Tests are found in `*.test.js`, code that makes UI elements appear in the
-storybook is found in `*.stories.js`
+The app will be available at <http://localhost:3000>
+
+### Testing
+
+Run tests:
+
+```bash
+pnpm test
+```
+
+Run tests with UI:
+
+```bash
+pnpm test:ui
+```
+
+### Storybook
+
+Start Storybook for component development:
+
+```bash
+pnpm storybook
+```
+
+Storybook will be available at <http://localhost:6006>
+
+### Building
+
+Build for production:
+
+```bash
+pnpm build
+```
+
+Preview the production build:
+
+```bash
+pnpm preview
+```
+
+### Linting & Formatting
+
+Check code quality:
+
+```bash
+pnpm lint
+```
+
+Auto-fix issues:
+
+```bash
+pnpm lint:fix
+```
+
+Format code:
+
+```bash
+pnpm format
+```
+
+### Internationalization
+
+Add a new locale:
+
+```bash
+pnpm add-locale
+```
+
+Extract messages for translation:
+
+```bash
+pnpm extract
+```
+
+Compile translations:
+
+```bash
+pnpm compile
+```
+
+## Project Structure
+
+- `src/` - Source code
+  - `features/` - Feature-based modules
+  - `containers/` - Container components
+  - `locales/` - Translation files
+  - `apolloCache.ts` - Apollo Client reactive variables
+- `public/` - Static assets
+- Tests are in `*.test.ts(x)` files
+- Storybook stories are in `*.stories.ts(x)` files
+
+## Learning Resources
+
+- [React Documentation](https://react.dev/)
+- [Apollo Client Documentation](https://www.apollographql.com/docs/react/)
+- [Vite Guide](https://vite.dev/guide/)
+- [Storybook Tutorial](https://storybook.js.org/tutorials/)
+- [Lingui Documentation](https://lingui.dev/)
