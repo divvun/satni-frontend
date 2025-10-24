@@ -1,6 +1,20 @@
 import fetch from 'cross-fetch';
 
-const korpInfo = {
+interface KorpConfig {
+  start_query: string;
+  corpora: string;
+}
+
+interface KorpInfo {
+  [language: string]: KorpConfig;
+}
+
+interface KorpResponse {
+  hits?: number;
+  [key: string]: any;
+}
+
+const korpInfo: KorpInfo = {
   sma: {
     start_query: 'https://gtweb.uit.no/korp/backend-sma/query?corpus=',
     corpora:
@@ -28,12 +42,16 @@ const korpInfo = {
   },
 };
 
-const doesLemmaExist = async (language, lemma) => {
+const doesLemmaExist = async (language: string, lemma: string): Promise<boolean> => {
+  if (!korpInfo[language]) {
+    throw new Error(`Language '${language}' is not supported`);
+  }
+
   const url = `${korpInfo[language].start_query}${korpInfo[language].corpora}&cqp=%5Blemma+%3D+%22${lemma}%22%5D&start=0&end=0`;
   const response = await fetch(url);
-  const json = await response.json();
+  const json: KorpResponse = await response.json();
 
-  return 'hits' in json && json.hits > 0;
+  return 'hits' in json && json.hits! > 0;
 };
 
 export default doesLemmaExist;
