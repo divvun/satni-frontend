@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { I18nProvider } from '@lingui/react';
@@ -5,7 +6,7 @@ import AsyncApp from './AsyncApp';
 import GET_INTERFACE_LANGUAGE from '../operations/queries/getInterfaceLanguage';
 
 async function loadMessages(language) {
-  return import(`@lingui/loader!locales/${language}/messages.po`);
+  return import(/* @vite-ignore */ `@lingui/loader!locales/${language}/messages.po`);
 }
 
 const InterfaceLanguage = () => {
