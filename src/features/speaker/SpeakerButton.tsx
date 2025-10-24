@@ -10,8 +10,11 @@ import Tooltip from '@mui/material/Tooltip';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { fetchTTSAudio, isTTSAvailable } from './speakerApi';
+import { isTTSAvailable } from './speakerApi';
+import { fetchCachedTTSAudio } from './speakerSlice';
+import type { RootState } from '../../reducers';
 
 interface SpeakerButtonProps {
   text: string;
@@ -31,14 +34,17 @@ const SpeakerButton: React.FC<SpeakerButtonProps> = ({
   classes = {},
 }) => {
   const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const dispatch = useDispatch();
+  const isLoading = useSelector(
+    (state: RootState) => state.speaker?.isFetching || false,
+  );
 
   const handleSpeak = async () => {
     // Check if GiellaLT TTS supports this language
     if (isTTSAvailable(language)) {
-      setIsLoading(true);
-      const audioUrl = await fetchTTSAudio(text, language);
-      setIsLoading(false);
+      const audioUrl = (await dispatch(
+        fetchCachedTTSAudio(text, language) as any,
+      )) as string | null;
 
       if (audioUrl) {
         // Play the MP3 from the API
