@@ -1,18 +1,19 @@
+import type { Meta, StoryFn } from '@storybook/react';
 import {
   multilingualconceptListsByNames,
   orderedMultilingualConcept,
-} from 'utils';
-import { conceptList } from 'utils.data';
+} from '../../utils';
+import { conceptList } from '../../utils.data';
 import TermWikiArticle from './TermWikiArticle';
 
 const lemma = 'vuorká';
-const termsByNames = multilingualconceptListsByNames(conceptList);
+const termsByNames = multilingualconceptListsByNames(conceptList as any);
 
 export default {
   title: 'TermWikiArticle',
-};
+} as Meta<typeof TermWikiArticle>;
 
-export const Default = () => (
+export const Default: StoryFn<typeof TermWikiArticle> = () => (
   <TermWikiArticle
     category="Servodatdieđa"
     multiLingualConcept={orderedMultilingualConcept(
@@ -23,6 +24,4 @@ export const Default = () => (
   />
 );
 
-Default.story = {
-  name: 'default',
-};
+Default.storyName = 'default';

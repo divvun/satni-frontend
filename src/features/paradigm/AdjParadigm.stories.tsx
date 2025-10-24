@@ -1,3 +1,4 @@
+import type { Meta } from '@storybook/react';
 import AdjParadigm from './AdjParadigm';
 
 const paradigm = {
@@ -2099,52 +2100,40 @@ const paradigm = {
 
 export default {
   title: 'AdjParadigm',
-};
+} as Meta<typeof AdjParadigm>;
 
 export const SouthSaamiAdjective = () => (
   <AdjParadigm paradigm={paradigm.sma} language="sma" />
 );
 
-SouthSaamiAdjective.story = {
-  name: 'South saami adjective',
-};
+SouthSaamiAdjective.storyName = 'South saami adjective';
 
 export const NorthSaamiAdjective = () => (
   <AdjParadigm paradigm={paradigm.sme} language="sme" />
 );
 
-NorthSaamiAdjective.story = {
-  name: 'North saami adjective',
-};
+NorthSaamiAdjective.storyName = 'North saami adjective';
 
 export const LuleSaamiAdjective = () => (
   <AdjParadigm paradigm={paradigm.smj} language="smj" />
 );
 
-LuleSaamiAdjective.story = {
-  name: 'Lule saami adjective',
-};
+LuleSaamiAdjective.storyName = 'Lule saami adjective';
 
 export const InariSaamiAdjective = () => (
   <AdjParadigm paradigm={paradigm.smn} language="smn" />
 );
 
-InariSaamiAdjective.story = {
-  name: 'Inari saami adjective',
-};
+InariSaamiAdjective.storyName = 'Inari saami adjective';
 
 export const SkoltSaamiAdjective = () => (
   <AdjParadigm paradigm={paradigm.sms} language="sms" />
 );
 
-SkoltSaamiAdjective.story = {
-  name: 'Skolt saami adjective',
-};
+SkoltSaamiAdjective.storyName = 'Skolt saami adjective';
 
 export const FinnishAdjective = () => (
   <AdjParadigm paradigm={paradigm.fin} language="fin" />
 );
 
-FinnishAdjective.story = {
-  name: 'Finnish adjective',
-};
+FinnishAdjective.storyName = 'Finnish adjective';

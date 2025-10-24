@@ -1,3 +1,4 @@
+import type { Meta, StoryFn } from '@storybook/react';
 import Definitions from './Definitions';
 
 const termGroup = {
@@ -39,14 +40,10 @@ const termGroup = {
 
 export default {
   title: 'Definitions',
-};
+} as Meta<typeof Definitions>;
 
-export const Default = () => (
-  <Definitions
-    definitions={[termGroup.from.definition, termGroup.to.definition]}
-  />
+export const Default: StoryFn<typeof Definitions> = () => (
+  <Definitions definitions={termGroup.from.definition} language="swe" />
 );
 
-Default.story = {
-  name: 'default',
-};
+Default.storyName = 'default';

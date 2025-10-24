@@ -1,3 +1,4 @@
+import type { Meta, StoryFn } from '@storybook/react';
 import Stem from './Stem';
 
 const stem = {
@@ -16,44 +17,36 @@ const restriction = {
 
 export default {
   title: 'Stem',
-};
+} as Meta<typeof Stem>;
 
-export const WithSpace = () => (
+export const WithSpace: StoryFn<typeof Stem> = () => (
   <Stem stem={{ ...stem, lemma: 'bar dni' }} restriction={restriction} />
 );
 
-WithSpace.story = {
-  name: 'with space',
-};
+WithSpace.storyName = 'with space';
 
-export const WithLinkTrue = () => (
+export const WithLinkTrue: StoryFn<typeof Stem> = () => (
   <Stem stem={stem} restriction={restriction} withLink />
 );
 
-WithLinkTrue.story = {
-  name: 'withLink true',
-};
+WithLinkTrue.storyName = 'withLink true';
 
-export const WithLinkFalse = () => (
+export const WithLinkFalse: StoryFn<typeof Stem> = () => (
   <Stem stem={stem} restriction={restriction} />
 );
 
-WithLinkFalse.story = {
-  name: 'withLink false',
-};
+WithLinkFalse.storyName = 'withLink false';
 
-export const OtherPresentationLemma = () => (
+export const OtherPresentationLemma: StoryFn<typeof Stem> = () => (
   <Stem
     stem={{ ...stem, presentationLemma: 'burdni' }}
     restriction={restriction}
   />
 );
 
-OtherPresentationLemma.story = {
-  name: 'other presentation lemma',
-};
+OtherPresentationLemma.storyName = 'other presentation lemma';
 
-export const OtherPresentationLemmaLink = () => (
+export const OtherPresentationLemmaLink: StoryFn<typeof Stem> = () => (
   <Stem
     stem={{ ...stem, presentationLemma: 'burdni' }}
     restriction={restriction}
@@ -61,11 +54,9 @@ export const OtherPresentationLemmaLink = () => (
   />
 );
 
-OtherPresentationLemmaLink.story = {
-  name: 'other presentation lemma, link',
-};
+OtherPresentationLemmaLink.storyName = 'other presentation lemma, link';
 
-export const WithAndLink = () => (
+export const WithAndLink: StoryFn<typeof Stem> = () => (
   <Stem
     stem={{ ...stem, presentationLemma: 'bur@dni' }}
     restriction={restriction}
@@ -73,6 +64,4 @@ export const WithAndLink = () => (
   />
 );
 
-WithAndLink.story = {
-  name: 'with @ and link',
-};
+WithAndLink.storyName = 'with @ and link';

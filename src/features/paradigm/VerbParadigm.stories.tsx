@@ -1,3 +1,4 @@
+import type { Meta } from '@storybook/react';
 import VerbParadigm from './VerbParadigm';
 
 const paradigm = {
@@ -150,50 +151,38 @@ const čágadit = {
 
 export default {
   title: 'VerbParadigm',
-};
+} as Meta<typeof VerbParadigm>;
 
 export const SouthSaamiVerbs = () => (
   <VerbParadigm paradigm={paradigm.sma} language="sma" />
 );
 
-SouthSaamiVerbs.story = {
-  name: 'South saami verbs',
-};
+SouthSaamiVerbs.storyName = 'South saami verbs';
 
 export const NorthSaamiVerbs = () => (
   <VerbParadigm paradigm={paradigm.sme} language="sme" />
 );
 
-NorthSaamiVerbs.story = {
-  name: 'North saami verbs',
-};
+NorthSaamiVerbs.storyName = 'North saami verbs';
 
 export const LuleSaamiVerbs = () => (
   <VerbParadigm paradigm={paradigm.smj} language="smj" />
 );
 
-LuleSaamiVerbs.story = {
-  name: 'Lule saami verbs',
-};
+LuleSaamiVerbs.storyName = 'Lule saami verbs';
 
 export const InariSaamiVerbs = () => (
   <VerbParadigm paradigm={paradigm.smn} language="smn" />
 );
 
-InariSaamiVerbs.story = {
-  name: 'Inari saami verbs',
-};
+InariSaamiVerbs.storyName = 'Inari saami verbs';
 
 export const SkoltSaamiVerbs = () => (
   <VerbParadigm paradigm={paradigm.sms} language="sms" />
 );
 
-SkoltSaamiVerbs.story = {
-  name: 'Skolt saami verbs',
-};
+SkoltSaamiVerbs.storyName = 'Skolt saami verbs';
 
 export const Cagadit = () => <VerbParadigm paradigm={čágadit} language="sme" />;
 
-Cagadit.story = {
-  name: 'čágadit',
-};
+Cagadit.storyName = 'čágadit';

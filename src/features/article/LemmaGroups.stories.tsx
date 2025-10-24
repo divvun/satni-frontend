@@ -1,3 +1,4 @@
+import type { Meta, StoryFn } from '@storybook/react';
 import LemmaGroups from './LemmaGroups';
 
 const terms = [
@@ -44,10 +45,10 @@ const terms = [
 
 export default {
   title: 'LemmaGroups',
-};
+} as Meta<typeof LemmaGroups>;
 
-export const Default = () => <LemmaGroups lemma="vuorká" terms={terms} />;
+export const Default: StoryFn<typeof LemmaGroups> = () => (
+  <LemmaGroups lemma="vuorká" terms={terms} />
+);
 
-Default.story = {
-  name: 'default',
-};
+Default.storyName = 'default';

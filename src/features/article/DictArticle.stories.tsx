@@ -1,3 +1,4 @@
+import type { Meta, StoryFn } from '@storybook/react';
 import DictArticle from './DictArticle';
 
 const dictGroup = {
@@ -28,10 +29,7 @@ const dictGroup = {
               'Eadni ii dáidde jienastit Bargiidbellodaga dán jagi válggas.',
           },
         ],
-        restriction: {
-          restriction: 'om julenissen',
-          attributes: {},
-        },
+        restriction: 'om julenissen',
         translations: [
           {
             language: 'sme',
@@ -53,12 +51,10 @@ const dictGroup = {
 
 export default {
   title: 'DictArticle',
-};
+} as Meta<typeof DictArticle>;
 
-export const Default = () => (
+export const Default: StoryFn<typeof DictArticle> = () => (
   <DictArticle dictGroup={dictGroup} lemma="kanskje" />
 );
 
-Default.story = {
-  name: 'default',
-};
+Default.storyName = 'default';
