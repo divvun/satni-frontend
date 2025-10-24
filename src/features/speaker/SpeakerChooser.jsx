@@ -17,7 +17,7 @@ const SpeakerChooser = ({ selectedVoices, onVoiceChange }) => {
   return (
     <Grid container spacing={3}>
       {Object.entries(availableVoices).map(([language, voices]) => (
-        <Grid item xs={12} sm={4} key={language}>
+        <Grid xs={12} sm={4} key={language}>
           <FormControl component="fieldset">
             <FormLabel component="legend">
               <Trans id={language}>{language}</Trans>

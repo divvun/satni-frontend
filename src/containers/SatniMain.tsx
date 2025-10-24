@@ -35,11 +35,11 @@ const SatniMain: React.FC<SatniMainProps> = ({
         {/* @ts-ignore - Material-UI v4 compatibility */}
         <Grid container>
           {/* @ts-ignore - Material-UI v4 compatibility */}
-          <Grid item xs={12}>
+          <Grid xs={12}>
             <StatusBar />
           </Grid>
           {/* @ts-ignore - Material-UI v4 compatibility */}
-          <Grid item xs={12}>
+          <Grid xs={12}>
             <FilterBar
               searchExpression={searchExpression}
               setSearchExpression={setSearchExpression}
@@ -47,11 +47,11 @@ const SatniMain: React.FC<SatniMainProps> = ({
             {!currentLemma && !searchExpression && <WelcomeHeader />}
           </Grid>
           {/* @ts-ignore - Material-UI v4 compatibility */}
-          <Grid item xs={4}>
+          <Grid xs={4}>
             <InfiniteStems searchExpression={searchExpression} />
           </Grid>
           {/* @ts-ignore - Material-UI v4 compatibility */}
-          <Grid item xs={8}>
+          <Grid xs={8}>
             {currentLemma && <Articles lemma={currentLemma} />}
           </Grid>
         </Grid>

@@ -32,7 +32,7 @@ const LangChooser: React.FC<LangChooserProps> = ({ langs }) => {
     // @ts-ignore - Material-UI v4 compatibility
     <Grid container>
       {/* @ts-ignore - Material-UI v4 compatibility */}
-      <Grid item xs={6}>
+      <Grid xs={6}>
         {/* @ts-ignore - Material-UI v4 compatibility */}
         <FormGroup row>
           {availableLanguages
@@ -56,7 +56,7 @@ const LangChooser: React.FC<LangChooserProps> = ({ langs }) => {
         </FormGroup>
       </Grid>
       {/* @ts-ignore - Material-UI v4 compatibility */}
-      <Grid item xs={6}>
+      <Grid xs={6}>
         {/* @ts-ignore - Material-UI v4 compatibility */}
         <FormGroup row>
           {availableLanguages

@@ -44,7 +44,7 @@ const DictArticle: React.FC<DictArticleProps> = ({ dictGroup, lemma }) => {
       {/* @ts-ignore - Material-UI v4 compatibility */}
       <Grid container spacing={1}>
         {/* @ts-ignore - Material-UI v4 compatibility */}
-        <Grid item xs={12}>
+        <Grid xs={12}>
           {!hasAvailableDict(pathname) && (
             <Source source={dict} lemma={lemma} />
           )}
@@ -52,7 +52,7 @@ const DictArticle: React.FC<DictArticleProps> = ({ dictGroup, lemma }) => {
           <Divider />
         </Grid>
         {/* @ts-ignore - Material-UI v4 compatibility */}
-        <Grid item xs={12}>
+        <Grid xs={12}>
           {from.lookupLemmas.map((lookupLemma) =>
             lookupLemma.lemma === lemma ? (
               <Stem key={lookupLemma.lemma} stem={lookupLemma} />
@@ -62,7 +62,7 @@ const DictArticle: React.FC<DictArticleProps> = ({ dictGroup, lemma }) => {
           )}
         </Grid>
         {/* @ts-ignore - Material-UI v4 compatibility */}
-        <Grid item xs={12} className={classes.translations}>
+        <Grid xs={12} className={classes.translations}>
           {to.translationGroups.map((translationGroup, i) => (
             <React.Fragment key={i}>
               {translationGroup.translations.map((stem, index) => (
