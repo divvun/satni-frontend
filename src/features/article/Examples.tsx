@@ -15,7 +15,11 @@ interface ExamplesProps {
   targetLanguage: string;
 }
 
-const Examples: React.FC<ExamplesProps> = ({ examples, sourceLanguage, targetLanguage }) => (
+const Examples: React.FC<ExamplesProps> = ({
+  examples,
+  sourceLanguage,
+  targetLanguage,
+}) => (
   <>
     {examples.map((example, i) => (
       <Example

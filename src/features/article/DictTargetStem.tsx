@@ -36,10 +36,13 @@ interface HasStemData {
   hasStem: any[];
 }
 
-const DictTargetStem: React.FC<DictTargetStemProps> = ({ stem, restriction }) => {
+const DictTargetStem: React.FC<DictTargetStemProps> = ({
+  stem,
+  restriction,
+}) => {
   const { lemma } = stem;
   const langsDictsQueryResult = useQuery<LangsDictsData>(GET_LANGS_DICTS);
-  
+
   // Handle loading and error states for the first query
   if (langsDictsQueryResult.loading || !langsDictsQueryResult.data) {
     return (
@@ -65,10 +68,11 @@ const DictTargetStem: React.FC<DictTargetStemProps> = ({ stem, restriction }) =>
     },
   });
 
-  if (loading) return (
-    // @ts-ignore - Material-UI v4 compatibility
-    <CircularProgress size={20} />
-  );
+  if (loading)
+    return (
+      // @ts-ignore - Material-UI v4 compatibility
+      <CircularProgress size={20} />
+    );
 
   return (
     <Stem

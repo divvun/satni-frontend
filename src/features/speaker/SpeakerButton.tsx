@@ -25,7 +25,11 @@ interface LangMap {
   [key: string]: string;
 }
 
-const SpeakerButton: React.FC<SpeakerButtonProps> = ({ text, language, classes = {} }) => {
+const SpeakerButton: React.FC<SpeakerButtonProps> = ({
+  text,
+  language,
+  classes = {},
+}) => {
   const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 

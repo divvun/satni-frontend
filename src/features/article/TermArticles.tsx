@@ -23,7 +23,7 @@ interface TermArticlesData {
 
 const TermArticles: React.FC<TermArticlesProps> = ({ lemma }) => {
   const langsDictsResult = useQuery<LangsDictsData>(GET_LANGS_DICTS);
-  
+
   if (langsDictsResult.loading || !langsDictsResult.data) {
     return (
       <Trans>
@@ -33,13 +33,16 @@ const TermArticles: React.FC<TermArticlesProps> = ({ lemma }) => {
   }
 
   const { srcLangs, targetLangs } = langsDictsResult.data;
-  const { data, loading, error } = useQuery<TermArticlesData>(GET_TERM_ARTICLES, {
-    variables: {
-      lemma,
-      srcLangs,
-      targetLangs,
+  const { data, loading, error } = useQuery<TermArticlesData>(
+    GET_TERM_ARTICLES,
+    {
+      variables: {
+        lemma,
+        srcLangs,
+        targetLangs,
+      },
     },
-  });
+  );
 
   if (loading) {
     return (

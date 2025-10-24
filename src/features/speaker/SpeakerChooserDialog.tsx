@@ -44,9 +44,14 @@ interface SpeakerChooserDialogProps {
   onClose: () => void;
 }
 
-const SpeakerChooserDialog: React.FC<SpeakerChooserDialogProps> = ({ open, onClose }) => {
+const SpeakerChooserDialog: React.FC<SpeakerChooserDialogProps> = ({
+  open,
+  onClose,
+}) => {
   const classes = useStyles();
-  const [selectedVoices, setSelectedVoices] = useState<Record<string, string>>(getAllSelectedVoices());
+  const [selectedVoices, setSelectedVoices] = useState<Record<string, string>>(
+    getAllSelectedVoices(),
+  );
 
   const handleVoiceChange = (language: string, voice: string) => {
     const newVoices = { ...selectedVoices, [language]: voice };

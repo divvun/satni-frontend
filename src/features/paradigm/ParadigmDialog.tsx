@@ -46,7 +46,13 @@ interface ParadigmDialogProps {
   onClose: () => void;
 }
 
-const ParadigmDialog: React.FC<ParadigmDialogProps> = ({ lemma, pos, language, open, onClose }) => {
+const ParadigmDialog: React.FC<ParadigmDialogProps> = ({
+  lemma,
+  pos,
+  language,
+  open,
+  onClose,
+}) => {
   const classes = useStyles();
 
   const handleClose = () => {

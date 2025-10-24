@@ -22,7 +22,7 @@ const SearchInfo: React.FC<SearchInfoProps> = ({
       </Trans>
     );
   }
-  
+
   if (searchMode === 'start') {
     return (
       <Trans>

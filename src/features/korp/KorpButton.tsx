@@ -28,12 +28,16 @@ interface RootState {
   korp: KorpState;
 }
 
-const KorpButton: React.FC<KorpButtonProps> = ({ language, lemma, classes }) => {
+const KorpButton: React.FC<KorpButtonProps> = ({
+  language,
+  lemma,
+  classes,
+}) => {
   const korpLangs = new Set(['sma', 'sme', 'smj', 'smn', 'sms']);
   const korp = useSelector((state: RootState) => state.korp);
   const dispatch = useDispatch();
   const korpAddress = `https://gtweb.uit.no/korp/${language}/#?cqp=[lemma%3D"${lemma}"]&search_tab=1&within=sentence&search=cqp`;
-  
+
   useEffect(() => {
     dispatch(isLemmaInKorp(language, lemma) as any);
   }, [dispatch, language, lemma]);

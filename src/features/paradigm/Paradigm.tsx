@@ -3,7 +3,11 @@ import { useQuery } from '@apollo/client';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Typography from '@material-ui/core/Typography';
 import GET_NOUN from '../../operations/queries/getNoun';
-import { filterParadigm, tableRowToParadigmList, SatniParadigm } from '../../utils';
+import {
+  filterParadigm,
+  tableRowToParadigmList,
+  SatniParadigm,
+} from '../../utils';
 import AdjParadigm, { AdjTableRows } from './AdjParadigm';
 import NounParadigm, { NounTableRows } from './NounParadigm';
 import VerbParadigm, { VerbTableRows } from './VerbParadigm';

@@ -23,7 +23,7 @@ const InputWithTranslation: React.FC<InputWithTranslationProps> = (props) => {
     },
   }));
   const classes = useStyles();
-  
+
   const { value, onChange, onKeyUp } = props;
   const [inputValue, setInputValue] = useState<string>(value);
 
@@ -35,7 +35,9 @@ const InputWithTranslation: React.FC<InputWithTranslationProps> = (props) => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (inputValue !== value) {
-        onChange({ target: { value: inputValue } } as React.ChangeEvent<HTMLInputElement>);
+        onChange({ target: { value: inputValue } } as React.ChangeEvent<
+          HTMLInputElement
+        >);
       }
     }, 300);
 

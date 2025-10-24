@@ -39,7 +39,11 @@ interface ExampleProps {
   targetLanguage: string;
 }
 
-const Example: React.FC<ExampleProps> = ({ example, sourceLanguage, targetLanguage }) => {
+const Example: React.FC<ExampleProps> = ({
+  example,
+  sourceLanguage,
+  targetLanguage,
+}) => {
   const classes = useStyles();
 
   return (

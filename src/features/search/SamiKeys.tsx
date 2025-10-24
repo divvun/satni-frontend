@@ -14,7 +14,7 @@ const SamiKeys: React.FC<SamiKeysProps> = ({ keyHandler }) => {
     },
   });
   const classes = useStyles();
-  
+
   const chars = [
     'á',
     'â',

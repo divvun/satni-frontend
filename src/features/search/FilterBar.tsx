@@ -53,7 +53,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const FilterBar: React.FC<FilterBarProps> = ({ searchExpression, setSearchExpression }) => {
+const FilterBar: React.FC<FilterBarProps> = ({
+  searchExpression,
+  setSearchExpression,
+}) => {
   const classes = useStyles();
   const history = useHistory();
   const location = useLocation();
@@ -80,7 +83,9 @@ const FilterBar: React.FC<FilterBarProps> = ({ searchExpression, setSearchExpres
     }
   };
 
-  const [samiKeyAnchor, setSamiKeyAnchor] = React.useState<HTMLElement | null>(null);
+  const [samiKeyAnchor, setSamiKeyAnchor] = React.useState<HTMLElement | null>(
+    null,
+  );
 
   const handleOpenSamiKey = (event: React.MouseEvent<HTMLElement>) => {
     setSamiKeyAnchor(event.currentTarget);
@@ -93,7 +98,10 @@ const FilterBar: React.FC<FilterBarProps> = ({ searchExpression, setSearchExpres
   const samiKeyOpen = Boolean(samiKeyAnchor);
   const idSamiKey = samiKeyOpen ? 'sami-keys' : undefined;
 
-  const [searchModeAnchor, setSearchModeAnchor] = React.useState<HTMLElement | null>(null);
+  const [
+    searchModeAnchor,
+    setSearchModeAnchor,
+  ] = React.useState<HTMLElement | null>(null);
 
   const handleOpenSearchMode = (event: React.MouseEvent<HTMLElement>) => {
     setSearchModeAnchor(event.currentTarget);

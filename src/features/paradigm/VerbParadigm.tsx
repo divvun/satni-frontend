@@ -35,7 +35,12 @@ interface MyTableRowProps {
   language: string;
 }
 
-const MyTableRow: React.FC<MyTableRowProps> = ({ analyses, pron, values, language }) => {
+const MyTableRow: React.FC<MyTableRowProps> = ({
+  analyses,
+  pron,
+  values,
+  language,
+}) => {
   const classes = useStyles();
 
   return (
@@ -310,7 +315,10 @@ interface ExtraContentProps {
   analyses: Analyses;
 }
 
-const ExtraContent: React.FC<ExtraContentProps> = ({ listOfAnalyses, analyses }) => (
+const ExtraContent: React.FC<ExtraContentProps> = ({
+  listOfAnalyses,
+  analyses,
+}) => (
   <>
     {listOfAnalyses.map((uff, index) =>
       analyses[uff[1]] ? (

@@ -495,7 +495,12 @@ interface MyTableRowProps {
   language: string;
 }
 
-const MyTableRow: React.FC<MyTableRowProps> = ({ analyses, name, values, language }) => {
+const MyTableRow: React.FC<MyTableRowProps> = ({
+  analyses,
+  name,
+  values,
+  language,
+}) => {
   const classes = useStyles();
 
   return (

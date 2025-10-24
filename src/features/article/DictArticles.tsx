@@ -24,7 +24,7 @@ interface DictArticlesData {
 
 const DictArticles: React.FC<DictArticlesProps> = ({ lemma }) => {
   const langsDictsQueryResult = useQuery<LangsDictsData>(GET_LANGS_DICTS);
-  
+
   if (langsDictsQueryResult.loading || !langsDictsQueryResult.data) {
     return (
       <Trans>
@@ -41,14 +41,17 @@ const DictArticles: React.FC<DictArticlesProps> = ({ lemma }) => {
     ? [currentDict]
     : langsDictsQueryResult.data.wantedDicts;
 
-  const { data, loading, error } = useQuery<DictArticlesData>(GET_DICT_ARTICLES, {
-    variables: {
-      lemma,
-      srcLangs,
-      targetLangs,
-      wantedDicts,
+  const { data, loading, error } = useQuery<DictArticlesData>(
+    GET_DICT_ARTICLES,
+    {
+      variables: {
+        lemma,
+        srcLangs,
+        targetLangs,
+        wantedDicts,
+      },
     },
-  });
+  );
 
   if (loading) {
     return (

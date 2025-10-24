@@ -59,7 +59,9 @@ interface PresentationLemmaProps {
   presentationLemma: string;
 }
 
-const PresentationLemma: React.FC<PresentationLemmaProps> = ({ presentationLemma }) => {
+const PresentationLemma: React.FC<PresentationLemmaProps> = ({
+  presentationLemma,
+}) => {
   const classes = useStyles();
 
   return <Parts lemma={presentationLemma} classes={classes} />;

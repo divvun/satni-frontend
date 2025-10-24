@@ -34,7 +34,13 @@ interface TableDict {
   };
 }
 
-const ParadigmButton: React.FC<ParadigmButtonProps> = ({ lemma, language, pos, onClick, classes }) => {
+const ParadigmButton: React.FC<ParadigmButtonProps> = ({
+  lemma,
+  language,
+  pos,
+  onClick,
+  classes,
+}) => {
   const tableDict: TableDict = {
     A: AdjTableRows,
     N: NounTableRows,
