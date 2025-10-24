@@ -1,23 +1,23 @@
 import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
+import Box from '@mui/material/Box';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@mui/material/IconButton';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import IconButton from '@material-ui/core/IconButton';
+import Paper from '@mui/material/Paper';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Paper from '@material-ui/core/Paper';
+import Popover from '@mui/material/Popover';
+import { alpha, Theme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Popover from '@material-ui/core/Popover';
-import { fade, makeStyles, Theme } from '@material-ui/core/styles';
+import Tooltip from '@mui/material/Tooltip';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Tooltip from '@material-ui/core/Tooltip';
+import KeyboardIcon from '@mui/icons-material/Keyboard';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import KeyboardIcon from '@material-ui/icons/Keyboard';
+import MoreVert from '@mui/icons-material/MoreVert';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import MoreVert from '@material-ui/icons/MoreVert';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from '@mui/icons-material/Search';
 // @ts-ignore - React Router DOM v5 compatibility
 import { useHistory, useLocation } from 'react-router-dom';
 
@@ -38,7 +38,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     flexGrow: 1,
-    backgroundColor: fade(theme.palette.common.black, 0.15),
+    backgroundColor: alpha(theme.palette.common.black, 0.15),
   },
   iconButton: {
     color: 'inherit',
@@ -153,9 +153,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           <SearchIcon />
         </IconButton>
       </Tooltip>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
-      <Hidden smUp>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
+      <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
         <Tooltip
           title={
             <Trans>
@@ -163,23 +161,19 @@ const FilterBar: React.FC<FilterBarProps> = ({
               the end of words.
             </Trans>
           }
-          aria-label={<Trans>Search mode</Trans>}
         >
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <IconButton
             className={classes.iconButton}
-            aria-label={<Trans>Search mode</Trans>}
+            aria-label="Search mode"
             onClick={handleOpenSearchMode}
           >
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <MoreVert />
           </IconButton>
         </Tooltip>
-      </Hidden>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
-      <Hidden xsDown>
+      </Box>
+      <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
         <WildCard />
-      </Hidden>
+      </Box>
       {/* @ts-ignore - Material-UI v4 compatibility */}
       <Popover
         className={classes.samiKeys}

@@ -2,9 +2,9 @@ import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Box from '@material-ui/core/Box';
+import Box from '@mui/material/Box';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 
 import Stem from './Stem';
 

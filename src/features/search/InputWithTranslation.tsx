@@ -4,8 +4,9 @@ import { t } from '@lingui/macro';
 // @ts-ignore - @lingui/react types compatibility
 import { I18n } from '@lingui/react';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import InputBase from '@material-ui/core/InputBase';
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import InputBase from '@mui/material/InputBase';
+import { Theme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import { useEffect, useState } from 'react';
 
 interface InputWithTranslationProps {

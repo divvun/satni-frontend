@@ -3,11 +3,11 @@ import { useQuery } from '@apollo/client';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from '@mui/material/IconButton';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import InfoOutlined from '@material-ui/icons/InfoOutlined';
+import InfoOutlined from '@mui/icons-material/InfoOutlined';
 import GET_NOUN from '../../operations/queries/getNoun';
 import { tableRowToParadigmList } from '../../utils';
 import { AdjTableRows } from './AdjParadigm';

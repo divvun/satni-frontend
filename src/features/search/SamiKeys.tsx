@@ -1,7 +1,8 @@
 import React from 'react';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
+import Button from '@mui/material/Button';
+import { } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 
 interface SamiKeysProps {
   keyHandler: (char: string) => void;

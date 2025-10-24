@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import GET_NOUN from '../../operations/queries/getNoun';
 import {
   filterParadigm,

@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import qs from 'qs';
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import Articles from '../features/article/Articles';

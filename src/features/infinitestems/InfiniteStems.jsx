@@ -1,10 +1,10 @@
 import { useQuery } from '@apollo/client';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import CircularProgress from '@mui/material/CircularProgress';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 import * as Sentry from '@sentry/react';
 import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';

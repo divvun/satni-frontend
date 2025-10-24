@@ -2,17 +2,18 @@
 
 import React from 'react';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import { makeStyles } from '@material-ui/core/styles';
+import { } from '@mui/material/styles';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Table from '@material-ui/core/Table';
+import Table from '@mui/material/Table';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import TableBody from '@material-ui/core/TableBody';
+import TableBody from '@mui/material/TableBody';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import TableCell from '@material-ui/core/TableCell';
+import TableCell from '@mui/material/TableCell';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import TableHead from '@material-ui/core/TableHead';
+import TableHead from '@mui/material/TableHead';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import TableRow from '@material-ui/core/TableRow';
+import TableRow from '@mui/material/TableRow';
+import { makeStyles } from '@mui/styles';
 
 import SpeakerButton from '../speaker/SpeakerButton';
 

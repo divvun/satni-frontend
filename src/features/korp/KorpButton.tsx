@@ -2,11 +2,11 @@ import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from '@mui/material/IconButton';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
+import ViewHeadlineOutlined from '@mui/icons-material/ViewHeadlineOutlined';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 

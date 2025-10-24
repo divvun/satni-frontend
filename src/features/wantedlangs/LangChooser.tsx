@@ -2,13 +2,13 @@ import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Checkbox from '@material-ui/core/Checkbox';
+import Checkbox from '@mui/material/Checkbox';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControlLabel from '@mui/material/FormControlLabel';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import FormGroup from '@material-ui/core/FormGroup';
+import FormGroup from '@mui/material/FormGroup';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import setSrcLangs from '../../operations/mutations/setSrcLangs';
 import setTargetLangs from '../../operations/mutations/setTargetLangs';
 import { availableLanguages } from '../../utils';

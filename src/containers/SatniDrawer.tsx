@@ -2,32 +2,32 @@ import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import { ListSubheader } from '@material-ui/core';
+import { ListSubheader } from '@mui/material';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Divider from '@material-ui/core/Divider';
+import Divider from '@mui/material/Divider';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Drawer from '@material-ui/core/Drawer';
+import Drawer from '@mui/material/Drawer';
+import Box from '@mui/material/Box';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Hidden from '@material-ui/core/Hidden';
+import List from '@mui/material/List';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import List from '@material-ui/core/List';
+import ListItem from '@mui/material/ListItem';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import { Theme } from '@mui/material/styles';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import ListItemText from '@material-ui/core/ListItemText';
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import FeedbackIcon from '@mui/icons-material/Feedback';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import FeedbackIcon from '@material-ui/icons/Feedback';
+import LanguageIcon from '@mui/icons-material/Language';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import LanguageIcon from '@material-ui/icons/Language';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import MenuBookIcon from '@material-ui/icons/MenuBook';
+import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
-import TranslateIcon from '@material-ui/icons/Translate';
+import TranslateIcon from '@mui/icons-material/Translate';
+import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
 import SpeakerChooserDialog from '../features/speaker/SpeakerChooserDialog';
 import DictChooserDialog from '../features/wantedlangs/DictChooserDialog';
@@ -198,19 +198,10 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
           {/* @ts-ignore - Material-UI v4 compatibility */}
           <ListItemText primary={<Trans>TTS Voices</Trans>} />
         </ListItem>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
-        <ListItem
-          key="Feedback"
-          button
-          component="a"
-          href="mailto:feedback@divvun.no"
-        >
-          {/* @ts-ignore - Material-UI v4 compatibility */}
+        <ListItem key="Feedback" component="a" href="mailto:feedback@divvun.no">
           <ListItemIcon>
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <FeedbackIcon />
           </ListItemIcon>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <ListItemText primary="Feedback" />
         </ListItem>
         {/* @ts-ignore - Material-UI v4 compatibility */}
@@ -245,9 +236,7 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
   return (
     <nav className={classes.drawer} aria-label="mailbox folders">
       {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-      {/* @ts-ignore - Material-UI v4 compatibility */}
-      <Hidden smUp implementation="css">
-        {/* @ts-ignore - Material-UI v4 compatibility */}
+      <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
         <Drawer
           container={null}
           variant="temporary"
@@ -263,10 +252,8 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
         >
           {drawer}
         </Drawer>
-      </Hidden>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
-      <Hidden smDown implementation="css">
-        {/* @ts-ignore - Material-UI v4 compatibility */}
+      </Box>
+      <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
         <Drawer
           classes={{
             paper: classes.drawerPaper,
@@ -276,7 +263,7 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
         >
           {drawer}
         </Drawer>
-      </Hidden>
+      </Box>
     </nav>
   );
 };

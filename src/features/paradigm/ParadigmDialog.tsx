@@ -2,23 +2,24 @@ import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import AppBar from '@material-ui/core/AppBar';
+import AppBar from '@mui/material/AppBar';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Box from '@material-ui/core/Box';
+import Box from '@mui/material/Box';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Dialog from '@material-ui/core/Dialog';
+import Dialog from '@mui/material/Dialog';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import DialogContent from '@material-ui/core/DialogContent';
+import DialogContent from '@mui/material/DialogContent';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from '@mui/material/IconButton';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import { makeStyles } from '@material-ui/core/styles';
+import { } from '@mui/material/styles';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Toolbar from '@material-ui/core/Toolbar';
+import Toolbar from '@mui/material/Toolbar';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import CloseIcon from '@material-ui/icons/Close';
+import CloseIcon from '@mui/icons-material/Close';
+import { makeStyles } from '@mui/styles';
 
 import Paradigm from './Paradigm';
 

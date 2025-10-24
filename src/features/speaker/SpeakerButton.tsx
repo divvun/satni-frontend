@@ -2,13 +2,13 @@ import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from '@mui/material/IconButton';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import VolumeUpIcon from '@material-ui/icons/VolumeUp';
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import { useState } from 'react';
 
 import { fetchTTSAudio, isTTSAvailable } from './speakerApi';

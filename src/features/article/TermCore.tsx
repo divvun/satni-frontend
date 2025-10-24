@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 
 import Definitions from './Definitions';
 import LemmaGroups from './LemmaGroups';

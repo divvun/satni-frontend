@@ -2,9 +2,10 @@
 
 import React from 'react';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import { makeStyles } from '@material-ui/core/styles';
+import { } from '@mui/material/styles';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
   lemma: {

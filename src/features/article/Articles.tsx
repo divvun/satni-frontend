@@ -1,9 +1,10 @@
 // @ts-ignore - @lingui/macro has no type definitions
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import { makeStyles } from '@material-ui/core/styles';
+import { } from '@mui/material/styles';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
+import { makeStyles } from '@mui/styles';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 

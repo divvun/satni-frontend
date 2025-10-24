@@ -2,22 +2,22 @@ import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import AppBar from '@material-ui/core/AppBar';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@mui/material/IconButton';
+import { Theme } from '@mui/material/styles';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import IconButton from '@material-ui/core/IconButton';
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import Toolbar from '@mui/material/Toolbar';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Toolbar from '@material-ui/core/Toolbar';
+import Tooltip from '@mui/material/Tooltip';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Tooltip from '@material-ui/core/Tooltip';
+import Typography from '@mui/material/Typography';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Typography from '@material-ui/core/Typography';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
-import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -84,27 +84,19 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
             sátni.org
           </Link>
         </Typography>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
-        <Hidden mdUp>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
-          <Tooltip
-            title={<Trans>Settings</Trans>}
-            aria-label={<Trans>Settings</Trans>}
-          >
-            {/* @ts-ignore - Material-UI v4 compatibility */}
+        <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+          <Tooltip title={<Trans>Settings</Trans>}>
             <IconButton
               color="inherit"
               aria-label="Settings"
               edge="start"
               onClick={handleDrawerToggle}
             >
-              {/* @ts-ignore - Material-UI v4 compatibility */}
               <MenuIcon />
             </IconButton>
           </Tooltip>
-        </Hidden>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
-        <Tooltip title={<Trans>Help</Trans>} aria-label={<Trans>Help</Trans>}>
+        </Box>
+        <Tooltip title={<Trans>Help</Trans>}>
           {/* @ts-ignore - Material-UI v4 compatibility */}
           <IconButton
             color="inherit"

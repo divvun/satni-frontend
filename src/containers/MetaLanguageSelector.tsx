@@ -1,13 +1,13 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import FormControl from '@material-ui/core/FormControl';
+import FormControl from '@mui/material/FormControl';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import InputLabel from '@material-ui/core/InputLabel';
+import InputLabel from '@mui/material/InputLabel';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import MenuItem from '@material-ui/core/MenuItem';
+import MenuItem from '@mui/material/MenuItem';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Select from '@material-ui/core/Select';
+import Select from '@mui/material/Select';
 import setInterfaceLanguage from '../operations/mutations/setInterfaceLanguage';
 import GET_INTERFACE_LANGUAGE from '../operations/queries/getInterfaceLanguage';
 
@@ -23,7 +23,7 @@ const MetaLanguageSelector: React.FC = () => {
     interfaceLanguage: 'en',
   };
 
-  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+  const handleChange = (event: any) => {
     event.preventDefault();
     setInterfaceLanguage(event.target.value as string);
   };

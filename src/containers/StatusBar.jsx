@@ -1,9 +1,9 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/material/styles';
 import { Trans } from '@lingui/macro';
 import { Link, useLocation } from 'react-router-dom';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 
 import { availableLanguages, locationParser } from '../utils';
 import dictionaryInfo from '../translateble_variables';

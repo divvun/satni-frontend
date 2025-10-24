@@ -1,16 +1,16 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/material/styles';
 import { useLocation } from 'react-router-dom';
 
 import { Trans } from '@lingui/macro';
-import InfoOutlined from '@material-ui/icons/InfoOutlined';
-import KeyboardIcon from '@material-ui/icons/Keyboard';
-import LanguageIcon from '@material-ui/icons/Language';
-import Link from '@material-ui/core/Link';
-import MenuBookIcon from '@material-ui/icons/MenuBook';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
+import InfoOutlined from '@mui/icons-material/InfoOutlined';
+import KeyboardIcon from '@mui/icons-material/Keyboard';
+import LanguageIcon from '@mui/icons-material/Language';
+import Link from '@mui/material/Link';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import ViewHeadlineOutlined from '@mui/icons-material/ViewHeadlineOutlined';
 
 import dictionaryInfo from '../translateble_variables';
 import { locationParser } from '../utils';

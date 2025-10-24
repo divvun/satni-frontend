@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 import { useLocation } from 'react-router-dom';
 import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
 import HAS_STEM from '../../operations/queries/hasStem';

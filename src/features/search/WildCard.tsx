@@ -3,9 +3,9 @@ import { useQuery } from '@apollo/client';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Radio from '@material-ui/core/Radio';
+import Radio from '@mui/material/Radio';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 import setSearchMode from '../../operations/mutations/setSearchMode';
 import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
 

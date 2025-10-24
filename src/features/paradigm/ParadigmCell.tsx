@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import TableCell from '@material-ui/core/TableCell';
+import TableCell from '@mui/material/TableCell';
 
 interface ParadigmCellProps {
   key: string;

@@ -2,13 +2,14 @@
 
 import React from 'react';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Divider from '@material-ui/core/Divider';
+import Divider from '@mui/material/Divider';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Paper from '@material-ui/core/Paper';
+import Paper from '@mui/material/Paper';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import { makeStyles } from '@material-ui/core/styles';
+import { } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import { useLocation } from 'react-router-dom';
 
 import { hasAvailableDict, type DictArticle as DictGroup } from '../../utils';

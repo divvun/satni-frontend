@@ -1,8 +1,9 @@
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { Theme, withStyles, WithStyles } from '@material-ui/core/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { Theme } from '@mui/material/styles';
+import { withStyles, WithStyles } from '@mui/styles';
 import * as Sentry from '@sentry/react';
 import React from 'react';
 

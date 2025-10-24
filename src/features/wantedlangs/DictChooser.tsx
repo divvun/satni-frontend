@@ -2,20 +2,21 @@ import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Accordion from '@material-ui/core/Accordion';
+import Accordion from '@mui/material/Accordion';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionDetails from '@mui/material/AccordionDetails';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionSummary from '@mui/material/AccordionSummary';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Checkbox from '@material-ui/core/Checkbox';
+import Checkbox from '@mui/material/Checkbox';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import { Theme } from '@mui/material/styles';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { makeStyles } from '@mui/styles';
 
 import dictionaryInfo from '../../translateble_variables';
 

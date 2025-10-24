@@ -1,12 +1,12 @@
 import React from 'react';
 import { ApolloClient } from '@apollo/client';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import {
-  createMuiTheme,
+  createTheme,
   ThemeProvider as MuiThemeProvider,
   responsiveFontSizes,
-} from '@material-ui/core/styles';
+} from '@mui/material/styles';
 import * as Sentry from '@sentry/react';
 import { Store } from 'redux';
 import InterfaceLanguage from './InterfaceLanguage';
@@ -40,7 +40,7 @@ const Root: React.FC<RootProps> = ({ store, client }) => (
     <ProviderWrapper store={store} client={client}>
       <MuiThemeProvider
         theme={responsiveFontSizes(
-          createMuiTheme({
+          createTheme({
             typography: {
               // Tell Material-UI what's the font-size on the html element is.
               htmlFontSize: 14,
