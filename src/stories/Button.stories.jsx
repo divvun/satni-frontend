@@ -1,4 +1,4 @@
-import { Button } from './Button';
+import { Button } from './Button.jsx';
 
 export default {
   title: 'Example/Button',
