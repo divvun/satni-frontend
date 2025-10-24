@@ -1,7 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-
 import * as Sentry from '@sentry/react';
 import ReactDOM from 'react-dom';
 import apolloClient from './apolloClient';

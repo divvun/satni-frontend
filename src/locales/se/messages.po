@@ -40,28 +40,28 @@ msgstr ""
 msgid "\"Vuõʹlǧǧe jååʹtted ooudâs\" (Sammallahti, 2012)"
 msgstr ""
 
-#: src/containers/StatusBar.jsx:24
+#: src/containers/StatusBar.jsx:22
 msgid "(<0>Show all</0>)"
 msgstr "(<0>Čájet visot</0>)"
 
-#: src/features/article/Source.stories.js:13
+#: src/features/article/Source.stories.js:12
 msgid "<0/>"
 msgstr "<0/>"
 
-#: src/features/article/DictArticles.jsx:39
-#: src/features/article/TermArticles.jsx:30
+#: src/features/article/DictArticles.jsx:38
+#: src/features/article/TermArticles.jsx:29
 msgid "<0>Error {0}</0>"
 msgstr "<0>Meattáhus {0}</0>"
 
-#: src/containers/SatniDrawer.jsx:44
+#: src/containers/SatniDrawer.jsx:45
 msgid "<0>Giellagáldu</0>"
 msgstr "<0>Giellagáldu</0>"
 
-#: src/features/article/DictArticles.jsx:32
+#: src/features/article/DictArticles.jsx:31
 msgid "<0>Loading dicts …</0>"
 msgstr "<0>Viežžamin sátnegirjebohtosiid …</0>"
 
-#: src/features/article/TermArticles.jsx:23
+#: src/features/article/TermArticles.jsx:22
 msgid "<0>Loading terms …</0>"
 msgstr "<0>Viežžamin tearbmabohtosiid …</0>"
 
@@ -86,43 +86,47 @@ msgstr "Beaivválaš giella"
 msgid "Boazodoallu"
 msgstr "Boazodoallu"
 
-#: src/features/article/TermWikiArticle.jsx:51
+#: src/features/article/TermWikiArticle.jsx:50
 msgid "Category"
 msgstr "Kategoriija"
 
-#: src/features/wantedlangs/DictChooserDialog.jsx:56
+#: src/features/speaker/SpeakerChooserDialog.jsx:66
+msgid "Choose TTS voices"
+msgstr ""
+
+#: src/features/wantedlangs/DictChooserDialog.jsx:54
 msgid "Choose dictionaries"
 msgstr "Vállje sátnegirjjiid"
 
-#: src/features/wantedlangs/LangChooserDialog.jsx:56
+#: src/features/wantedlangs/LangChooserDialog.jsx:54
 msgid "Choose languages"
 msgstr "Vállje gielaid"
 
-#: src/features/search/FilterBar.jsx:131
+#: src/features/search/FilterBar.jsx:130
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr "Vállje jus ohcancealkka galgá leat álggus, gasku dahje loahpas sániin maid ozat."
 
-#: src/containers/Welcome.jsx:147
+#: src/containers/Welcome.jsx:143
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr "Go coahkkalat <0/>, de oainnát mo sátni sodjá. Go coahkkalat <1/>, de oainnát mo sátni lea atnon."
 
-#: src/features/article/Stem.jsx:106
+#: src/features/article/Stem.jsx:114
 msgid "Country"
 msgstr "Riika"
 
-#: src/features/article/Definitions.jsx:20
+#: src/features/article/Definitions.jsx:26
 msgid "Definition"
 msgstr "Definišuvdna"
 
-#: src/containers/SatniDrawer.jsx:26
+#: src/containers/SatniDrawer.jsx:27
 msgid "Delivered by"
 msgstr "Ráhkadeaddjit"
 
-#: src/features/article/Stem.jsx:101
+#: src/features/article/Stem.jsx:109
 msgid "Dialect"
 msgstr "Suopman"
 
-#: src/containers/SatniDrawer.jsx:132
+#: src/containers/SatniDrawer.jsx:141
 msgid "Dictionaries"
 msgstr "Sátnegirjjit"
 
@@ -134,7 +138,7 @@ msgstr ""
 msgid "Dictionaries:"
 msgstr ""
 
-#: src/containers/Welcome.jsx:141
+#: src/containers/Welcome.jsx:137
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr "Sátnegirjeartihkkalat ihtet dása go coahkkalat sáni ohcanbohtosiin dás gurut bealde."
 
@@ -146,7 +150,7 @@ msgstr "Dihtorteknologiija ja diehtoteknihkka"
 #~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
 #~ msgstr "Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi – suoma sátnegirjjis</1> ja <2>Giellatekno</2> <3>sámi sátnegirjjiin</3>."
 
-#: src/containers/Welcome.jsx:65
+#: src/containers/Welcome.jsx:61
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
 msgstr "Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi – suoma sátnegirjjis</1>, Hábmera suohkana <2>julevsámi - dáro</2> dahje <3>dáro - julevsámi</3> medisiidnasátnegirjjiin dahje <4>Giellatekno</4> <5>sámi sátnegirjjiin</5>."
 
@@ -198,19 +202,19 @@ msgstr "Gulahallanteknihkka"
 msgid "Guolástus"
 msgstr "Guolástus"
 
-#: src/containers/HelpDialog.jsx:52
+#: src/containers/HelpDialog.jsx:51
 #: src/containers/SatniAppBar.jsx:80
 #: src/containers/SatniAppBar.jsx:80
 msgid "Help"
 msgstr "Veahkki"
 
-#: src/features/article/Source.jsx:33
-#: src/features/article/Source.jsx:34
+#: src/features/article/Source.jsx:31
+#: src/features/article/Source.jsx:32
 msgid "Hide this dictionary"
 msgstr "Čiega dán sátnegirjji"
 
-#: src/features/article/PairHeader.jsx:38
-#: src/features/article/PairHeader.jsx:39
+#: src/features/article/PairHeader.jsx:36
+#: src/features/article/PairHeader.jsx:37
 msgid "Hide this language"
 msgstr "Čiega dán giela"
 
@@ -230,7 +234,7 @@ msgstr "Hábmera suohkana dáro - julevsámi medisiidnasátnegirji.Sisttisdoall�
 msgid "In June of 2020, the files generated by Jack Rueter (approximately 30000 entries) were moved into main/words/dicts/finsms/inc/ for future consultation. The files have been replaced by a newer set (approximately 20000 entries) deriving directly from editing of the Satu & Jouni Moshnikoff dictionary organized by the Oulu University Giellagas Institute and Saami Parliament in Inari, Finland with funding from the Finnish Ministry of Education (2019–2020)."
 msgstr ""
 
-#: src/containers/Welcome.jsx:155
+#: src/containers/Welcome.jsx:151
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr "Artihkkaliin sáhtát čiehkat gielaid dahje sátnegirjjiid maid it háliit oaidnit. Sáhtát daid čájehit fas jus coahkkalat <0/> dahje <1/>."
 
@@ -245,12 +249,16 @@ msgstr "Juridihkka"
 msgid "Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009."
 msgstr ""
 
-#: src/containers/SatniDrawer.jsx:122
+#: src/containers/SatniDrawer.jsx:131
 msgid "Languages"
 msgstr "Gielat"
 
+#: src/features/speaker/SpeakerButton.jsx:77
+msgid "Listen to pronunciation"
+msgstr ""
+
+#: src/features/search/FilterBar.jsx:116
 #: src/features/search/FilterBar.jsx:117
-#: src/features/search/FilterBar.jsx:118
 msgid "Lookup the search word"
 msgstr "Čájet ohcansáni bohtosa"
 
@@ -274,7 +282,7 @@ msgstr "subst."
 msgid "NO"
 msgstr "Norga"
 
-#: src/features/infinitestems/SearchInfo.jsx:13
+#: src/features/infinitestems/SearchInfo.jsx:12
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "<0>{searchExpression}</0> ii gávdno sátnegirjjiin"
 
@@ -282,7 +290,7 @@ msgstr "<0>{searchExpression}</0> ii gávdno sátnegirjjiin"
 msgid "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but frequent Norwegian words have been added. It contains about 26,000 Norwegian entries."
 msgstr "Dáru → davvisámi lea vuođđuduvvon Davvisámi → dáru sátnegirjái, muhto leat lasihan dábálaš dáru sániid. Sátnegirjjis leat oktiibuot 26,000 ohcansáni."
 
-#: src/features/article/LemmaGroup.jsx:14
+#: src/features/article/LemmaGroup.jsx:13
 msgid "Note:"
 msgstr "Notáhta:"
 
@@ -297,7 +305,7 @@ msgstr ""
 msgid "Ođđa sánit"
 msgstr "Ođđa sánit"
 
-#: src/features/paradigm/ParadigmDialog.jsx:52
+#: src/features/paradigm/ParadigmDialog.jsx:51
 msgid "Paradigm"
 msgstr "Sojahanminsttar"
 
@@ -309,11 +317,11 @@ msgstr "pron."
 msgid "Religion"
 msgstr "Religiovdna"
 
-#: src/features/article/Articles.jsx:31
+#: src/features/article/Articles.jsx:30
 msgid "Results for «{lemma}»"
 msgstr "«{lemma}» bohtosat"
 
-#: src/containers/StatusBar.jsx:23
+#: src/containers/StatusBar.jsx:21
 msgid "Results only from"
 msgstr "Bohtosat dušše"
 
@@ -325,35 +333,35 @@ msgstr "Ruoŧŧa"
 msgid "Satu & Jouni Moshnikoff sanasto"
 msgstr ""
 
-#: src/features/search/FilterBar.jsx:122
+#: src/features/search/FilterBar.jsx:121
 msgid "Search"
 msgstr "Oza"
 
-#: src/features/search/FilterBar.jsx:136
-#: src/features/search/FilterBar.jsx:140
-#: src/features/search/WildCard.jsx:24
-#: src/features/search/WildCard.jsx:35
-#: src/features/search/WildCard.jsx:46
+#: src/features/search/FilterBar.jsx:135
+#: src/features/search/FilterBar.jsx:139
+#: src/features/search/WildCard.jsx:22
+#: src/features/search/WildCard.jsx:33
+#: src/features/search/WildCard.jsx:44
 msgid "Search mode"
 msgstr "Ohcanmodus"
 
-#: src/features/search/WildCard.jsx:20
+#: src/features/search/WildCard.jsx:18
 msgid "Search mode:"
 msgstr "Ohcanmodus:"
 
-#: src/containers/Welcome.jsx:110
+#: src/containers/Welcome.jsx:106
 msgid "Search results will appear here."
 msgstr "Ohcanbohtosat ihtet dása."
 
-#: src/features/search/WildCard.jsx:34
+#: src/features/search/WildCard.jsx:32
 msgid "Search words that contain your search term"
 msgstr "Oza sániid maid sisttisdollet ohcansáni"
 
-#: src/features/search/WildCard.jsx:45
+#: src/features/search/WildCard.jsx:43
 msgid "Search words that end in your search term"
 msgstr "Oza sániid main loahpa lea ohcansánis"
 
-#: src/features/search/WildCard.jsx:23
+#: src/features/search/WildCard.jsx:21
 msgid "Search words that start with your search term"
 msgstr "Oza sániid main álgu lea ohcansánis"
 
@@ -366,13 +374,13 @@ msgstr "Servodatdieđa"
 msgid "Settings"
 msgstr "Heivehusat"
 
-#: src/features/paradigm/ParadigmButton.jsx:41
-#: src/features/paradigm/ParadigmButton.jsx:42
+#: src/features/paradigm/ParadigmButton.jsx:39
+#: src/features/paradigm/ParadigmButton.jsx:40
 msgid "Show paradigm for this word"
 msgstr "Čájet dán sáni sojahanminstara"
 
-#: src/features/korp/KorpButton.jsx:28
-#: src/features/korp/KorpButton.jsx:29
+#: src/features/korp/KorpButton.jsx:23
+#: src/features/korp/KorpButton.jsx:24
 msgid "Show this word in our corpus"
 msgstr "Čájet dán sáni min teakstačoakkáldagas"
 
@@ -387,12 +395,12 @@ msgstr ""
 msgid "Skolt Sámi → X project contains materials deriving from the research of numerous projects, dictionaries and word lists."
 msgstr ""
 
-#: src/features/article/LemmaGroup.jsx:24
-#: src/features/article/Source.jsx:25
+#: src/features/article/LemmaGroup.jsx:23
+#: src/features/article/Source.jsx:23
 msgid "Source:"
 msgstr "Gáldu:"
 
-#: src/features/article/LemmaGroup.jsx:19
+#: src/features/article/LemmaGroup.jsx:18
 msgid "Status:"
 msgstr "Stáhtus:"
 
@@ -408,10 +416,14 @@ msgstr ""
 msgid "Subsequent updating of these files is being continued using the Veʹrdd dictionary editing platform, which played an instrumental role in the development of 2020. Extensive work can be attributed to members of the language community, language researchers and students at the Giellagas Institute and language technology researchers."
 msgstr ""
 
+#: src/features/search/FilterBar.jsx:98
 #: src/features/search/FilterBar.jsx:99
-#: src/features/search/FilterBar.jsx:100
 msgid "Sámi letters"
 msgstr "Sámi bustávat"
+
+#: src/containers/SatniDrawer.jsx:151
+msgid "TTS Voices"
+msgstr ""
 
 #: src/translateble_variables.js:97
 msgid "Teknihkka industriija duodji"
@@ -451,7 +463,7 @@ msgstr "Sátnegirjjis lea sullii 11 000 ohcansáni."
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
 msgstr "Sátnegirjjis lea eanet go 50 000 ohcansáni, ja Sammallahti jeavddalaččat lasiha ođđa materiála."
 
-#: src/containers/Welcome.jsx:113
+#: src/containers/Welcome.jsx:109
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 msgstr "Oza sámi, davviriikkalaš, eŋgelas dahje latiinna sániid ohcangiettis. Jus du mašiinnas eai leat sámi bustávat, coahkkal <0/> vai boalut main leat sámi bustávat ihtet."
 
@@ -470,8 +482,8 @@ msgstr ""
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr "Tearbmavuođus lea badjel 50 000 artihkkala, ja ođasmahtto jeavddalaččat."
 
-#: src/features/paradigm/ParadigmButton.jsx:59
-#: src/features/paradigm/ParadigmButton.jsx:60
+#: src/features/paradigm/ParadigmButton.jsx:57
+#: src/features/paradigm/ParadigmButton.jsx:58
 msgid "There is no paradigm for this word"
 msgstr "Dán sánis ii leat sojahanminsttar"
 
@@ -499,8 +511,8 @@ msgstr "Dán sátnegirjji vuođđun leat sátnelisttut «Forskingscentralen för
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr "Dán sátnegirjji vuođđun leat sátnelisttut «Forskingscentralen för de inhemska språken i Helsingfors»-ásahusas ja Giellatekno bargu davvisámi Oahpain. Dasa lassin dasa leat lasihuvvon dábálaš davvisámi sánit."
 
-#: src/features/korp/KorpButton.jsx:52
-#: src/features/korp/KorpButton.jsx:53
+#: src/features/korp/KorpButton.jsx:47
+#: src/features/korp/KorpButton.jsx:48
 msgid "This word is not found in our corpus"
 msgstr "Dát sátni ii gávdno min teakstačoakkáldagas"
 
@@ -516,19 +528,19 @@ msgstr "Trond Trosteruda suoma – girjedáru sátnegirjjis leat eanet go 30000 
 msgid "V"
 msgstr "vearba"
 
-#: src/containers/Welcome.jsx:52
+#: src/containers/Welcome.jsx:50
 msgid "Welcome!"
 msgstr "Bures boahtin!"
 
-#: src/containers/Welcome.jsx:127
+#: src/containers/Welcome.jsx:123
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Go coahkkalat sáni dás, de sátnegirjeartihkkalat ihtet olgeš beallái."
 
-#: src/features/search/InputWithTranslation.jsx:28
+#: src/features/search/InputWithTranslation.jsx:48
 msgid "Write at least one letter here"
 msgstr "Čális unnimustá ovtta bustáva dása"
 
-#: src/containers/Welcome.jsx:121
+#: src/containers/Welcome.jsx:117
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr "Sáhtát bláđet ohcanbohtosiid gaskkas dás, ođđa bohtosat ihtet dassáigo visot deaivamat leat gávdnon."
 
@@ -764,7 +776,7 @@ msgstr "Ruoŧagiella"
 msgid "swe_genitive"
 msgstr "ruoŧagiela"
 
-#: src/features/search/FilterBar.jsx:104
+#: src/features/search/FilterBar.jsx:103
 msgid "sámi keys"
 msgstr "Sámi bustávat"
 
@@ -776,23 +788,23 @@ msgstr "Giellagáldu máŋggagielat tearpmat"
 msgid "west"
 msgstr "oarji"
 
-#: src/containers/StatusBar.jsx:41
+#: src/containers/StatusBar.jsx:39
 msgid "{0}/{1} languages."
 msgstr "{0}/{1} gielas."
 
-#: src/containers/StatusBar.jsx:32
+#: src/containers/StatusBar.jsx:30
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} gáldus."
 
-#: src/features/infinitestems/SearchInfo.jsx:28
+#: src/features/infinitestems/SearchInfo.jsx:27
 msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
 msgstr "{stemsLength}/{totalCount} mat sisttisdollet <0>{searchExpression}</0>"
 
-#: src/features/infinitestems/SearchInfo.jsx:35
+#: src/features/infinitestems/SearchInfo.jsx:34
 msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
 msgstr "{stemsLength}/{totalCount} main loahppa lea <0>{searchExpression}</0>"
 
-#: src/features/infinitestems/SearchInfo.jsx:20
+#: src/features/infinitestems/SearchInfo.jsx:19
 msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
 msgstr "{stemsLength}/{totalCount} main álgu lea <0>{searchExpression}</0>"
 
