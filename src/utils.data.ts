@@ -1,4 +1,67 @@
-export const conceptList = [
+// Define more complete type interfaces based on the actual data structure
+export interface TermExpression {
+  lemma: string;
+  presentationLemma: string;
+  language: string;
+  pos: string;
+}
+
+export interface ConceptTerm {
+  note: string | null;
+  source: string | null;
+  status: string | null;
+  expression: TermExpression;
+}
+
+export interface ConceptData {
+  name: string;
+  collections: string[];
+  definition: string | null;
+  explanation: string | null;
+  terms: ConceptTerm[];
+}
+
+export interface LookupLemmaNode {
+  lemma: string;
+  presentationLemma: string;
+  language: string;
+  pos: string;
+  dialect: string | null;
+  country: string | null;
+}
+
+export interface TranslationLemmaNode {
+  lemma: string;
+  presentationLemma: string;
+  language: string;
+  pos: string;
+  dialect: string | null;
+  country: string | null;
+}
+
+export interface DictTranslationGroup {
+  translationLemmas: {
+    edges: Array<{
+      node: TranslationLemmaNode;
+    }>;
+  };
+  restriction: string | null;
+  exampleGroups: any[]; // TODO: Define proper structure when examples are present
+}
+
+export interface DictEntry {
+  dictName: string;
+  srcLang: string;
+  targetLang: string;
+  lookupLemmas: {
+    edges: Array<{
+      node: LookupLemmaNode;
+    }>;
+  };
+  translationGroups: DictTranslationGroup[];
+}
+
+export const conceptList: readonly ConceptData[] = [
   {
     name: 'Dihtorteknologiija ja diehtoteknihkka:fiila',
     collections: [
@@ -696,9 +759,9 @@ export const conceptList = [
       },
     ],
   },
-];
+] as const;
 
-export const dictEntryList = [
+export const dictEntryList: readonly DictEntry[] = [
   {
     dictName: 'gtsmenob',
     srcLang: 'sme',
@@ -939,4 +1002,4 @@ export const dictEntryList = [
       },
     ],
   },
-];
+] as const;
