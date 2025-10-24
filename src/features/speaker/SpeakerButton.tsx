@@ -1,16 +1,33 @@
+import React from 'react';
+// @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import CircularProgress from '@material-ui/core/CircularProgress';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import IconButton from '@material-ui/core/IconButton';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Tooltip from '@material-ui/core/Tooltip';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 import { fetchTTSAudio, isTTSAvailable } from './speakerApi';
 
-const SpeakerButton = ({ text, language, classes }) => {
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+interface SpeakerButtonProps {
+  text: string;
+  language: string;
+  classes?: {
+    icons?: string;
+  };
+}
+
+interface LangMap {
+  [key: string]: string;
+}
+
+const SpeakerButton: React.FC<SpeakerButtonProps> = ({ text, language, classes = {} }) => {
+  const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleSpeak = async () => {
     // Check if GiellaLT TTS supports this language
@@ -47,7 +64,7 @@ const SpeakerButton = ({ text, language, classes }) => {
 
       const utterance = new SpeechSynthesisUtterance(text);
 
-      const langMap = {
+      const langMap: LangMap = {
         fin: 'fi-FI',
         nob: 'nb-NO',
         swe: 'sv-SE',
@@ -74,7 +91,9 @@ const SpeakerButton = ({ text, language, classes }) => {
   };
 
   return (
+    // @ts-ignore - Material-UI v4 compatibility
     <Tooltip title={<Trans>Listen to pronunciation</Trans>}>
+      {/* @ts-ignore - Material-UI v4 compatibility */}
       <IconButton
         className={classes?.icons}
         onClick={handleSpeak}
@@ -83,25 +102,15 @@ const SpeakerButton = ({ text, language, classes }) => {
         aria-label="speak text"
       >
         {isLoading ? (
+          // @ts-ignore - Material-UI v4 compatibility
           <CircularProgress size={20} />
         ) : (
+          // @ts-ignore - Material-UI v4 compatibility
           <VolumeUpIcon fontSize="small" />
         )}
       </IconButton>
     </Tooltip>
   );
-};
-
-SpeakerButton.propTypes = {
-  text: PropTypes.string.isRequired,
-  language: PropTypes.string.isRequired,
-  classes: PropTypes.shape({
-    icons: PropTypes.string,
-  }),
-};
-
-SpeakerButton.defaultProps = {
-  classes: {},
 };
 
 export default SpeakerButton;

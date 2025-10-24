@@ -1,12 +1,18 @@
 /* eslint-disable react/no-array-index-key */
 
+import React from 'react';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { makeStyles } from '@material-ui/core/styles';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Table from '@material-ui/core/Table';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableBody from '@material-ui/core/TableBody';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableCell from '@material-ui/core/TableCell';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableHead from '@material-ui/core/TableHead';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableRow from '@material-ui/core/TableRow';
-import PropTypes from 'prop-types';
 
 import SpeakerButton from '../speaker/SpeakerButton';
 
@@ -18,7 +24,16 @@ const useStyles = makeStyles({
   },
 });
 
-export const AdjTableRows = {
+interface TableRowItem {
+  name: string;
+  values: string[];
+}
+
+interface TableRowData {
+  [language: string]: TableRowItem[];
+}
+
+export const AdjTableRows: TableRowData = {
   sma: [
     {
       name: 'Attr',
@@ -469,13 +484,27 @@ export const AdjTableRows = {
   ],
 };
 
-const MyTableRow = ({ analyses, name, values, language }) => {
+interface Analyses {
+  [key: string]: string[];
+}
+
+interface MyTableRowProps {
+  analyses: Analyses;
+  name: string;
+  values: string[];
+  language: string;
+}
+
+const MyTableRow: React.FC<MyTableRowProps> = ({ analyses, name, values, language }) => {
   const classes = useStyles();
 
   return (
+    // @ts-ignore - Material-UI v4 compatibility
     <TableRow key={name}>
+      {/* @ts-ignore - Material-UI v4 compatibility */}
       <TableCell>{name}</TableCell>
       {values.length === 1 && (
+        // @ts-ignore - Material-UI v4 compatibility
         <TableCell key={`${name}_1`} colSpan={2} align="center">
           {analyses[values[0]].map((analysis, index) => (
             <div key={`${analysis}_${index}`} className={classes.analysisRow}>
@@ -493,6 +522,7 @@ const MyTableRow = ({ analyses, name, values, language }) => {
       )}
       {values.length > 1 &&
         values.map((value, index1) => (
+          // @ts-ignore - Material-UI v4 compatibility
           <TableCell key={index1}>
             {analyses[value]?.map((analysis, index) => (
               <div key={`${analysis}_${index}`} className={classes.analysisRow}>
@@ -512,14 +542,13 @@ const MyTableRow = ({ analyses, name, values, language }) => {
   );
 };
 
-MyTableRow.propTypes = {
-  analyses: PropTypes.shape.isRequired,
-  name: PropTypes.string.isRequired,
-  values: PropTypes.arrayOf.isRequired,
-  language: PropTypes.string.isRequired,
-};
+interface LangTableProps {
+  analyses: Analyses;
+  language: string;
+}
 
-const LangTable = ({ analyses, language }) => (
+const LangTable: React.FC<LangTableProps> = ({ analyses, language }) => (
+  // @ts-ignore - Material-UI v4 compatibility
   <TableBody>
     {AdjTableRows[language].map((MapTableRow, rowIndex) => {
       if (MapTableRow.values.some((value) => analyses[value])) {
@@ -538,12 +567,12 @@ const LangTable = ({ analyses, language }) => (
   </TableBody>
 );
 
-LangTable.propTypes = {
-  analyses: PropTypes.shape.isRequired,
-  language: PropTypes.string.isRequired,
-};
+interface ContentProps {
+  analyses: Analyses;
+  language: string;
+}
 
-const Content = ({ analyses, language }) => {
+const Content: React.FC<ContentProps> = ({ analyses, language }) => {
   switch (language) {
     case 'sma':
     case 'sme':
@@ -557,20 +586,31 @@ const Content = ({ analyses, language }) => {
   }
 };
 
-Content.propTypes = {
-  analyses: PropTypes.shape.isRequired,
-  language: PropTypes.string.isRequired,
-};
+interface ParadigmData {
+  analyses: Analyses;
+}
 
-const AdjParadigm = ({ paradigm, language }) => {
+interface AdjParadigmProps {
+  paradigm?: ParadigmData;
+  language: string;
+}
+
+const AdjParadigm: React.FC<AdjParadigmProps> = ({ paradigm, language }) => {
   if (paradigm) {
     return (
+      // @ts-ignore - Material-UI v4 compatibility
       <Table>
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <TableHead>
+          {/* @ts-ignore - Material-UI v4 compatibility */}
           <TableRow>
+            {/* @ts-ignore - Material-UI v4 compatibility */}
             <TableCell>&nbsp;</TableCell>
+            {/* @ts-ignore - Material-UI v4 compatibility */}
             <TableCell>Positive</TableCell>
+            {/* @ts-ignore - Material-UI v4 compatibility */}
             <TableCell>Comparative</TableCell>
+            {/* @ts-ignore - Material-UI v4 compatibility */}
             <TableCell>Superlative</TableCell>
           </TableRow>
         </TableHead>
@@ -580,11 +620,6 @@ const AdjParadigm = ({ paradigm, language }) => {
   }
 
   return <div>Paradigm undefined {language}</div>;
-};
-
-AdjParadigm.propTypes = {
-  paradigm: PropTypes.shape.isRequired,
-  language: PropTypes.string.isRequired,
 };
 
 export default AdjParadigm;

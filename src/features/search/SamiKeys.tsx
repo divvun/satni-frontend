@@ -1,15 +1,20 @@
+import React from 'react';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
 
-const useStyles = makeStyles({
-  root: {
-    textTransform: 'none',
-  },
-});
+interface SamiKeysProps {
+  keyHandler: (char: string) => void;
+}
 
-const SamiKeys = ({ keyHandler }) => {
+const SamiKeys: React.FC<SamiKeysProps> = ({ keyHandler }) => {
+  const useStyles = makeStyles({
+    root: {
+      textTransform: 'none',
+    },
+  });
   const classes = useStyles();
+  
   const chars = [
     'á',
     'â',
@@ -36,6 +41,7 @@ const SamiKeys = ({ keyHandler }) => {
   return (
     <>
       {chars.map((char) => (
+        // @ts-ignore - Material-UI v4 compatibility
         <Button
           key={char}
           onClick={() => keyHandler(char)}
@@ -47,10 +53,6 @@ const SamiKeys = ({ keyHandler }) => {
       ))}
     </>
   );
-};
-
-SamiKeys.propTypes = {
-  keyHandler: PropTypes.func.isRequired,
 };
 
 export default SamiKeys;

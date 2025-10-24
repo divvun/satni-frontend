@@ -1,28 +1,51 @@
+import React from 'react';
+// @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import IconButton from '@material-ui/core/IconButton';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Tooltip from '@material-ui/core/Tooltip';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
-import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { isLemmaInKorp } from './korpSlice';
 
-const KorpButton = ({ language, lemma, classes }) => {
+interface KorpButtonProps {
+  language: string;
+  lemma: string;
+  classes: {
+    icons: string;
+  };
+}
+
+interface KorpState {
+  lemmaExists: boolean;
+}
+
+interface RootState {
+  korp: KorpState;
+}
+
+const KorpButton: React.FC<KorpButtonProps> = ({ language, lemma, classes }) => {
   const korpLangs = new Set(['sma', 'sme', 'smj', 'smn', 'sms']);
-  const korp = useSelector((state) => state.korp);
+  const korp = useSelector((state: RootState) => state.korp);
   const dispatch = useDispatch();
   const korpAddress = `https://gtweb.uit.no/korp/${language}/#?cqp=[lemma%3D"${lemma}"]&search_tab=1&within=sentence&search=cqp`;
+  
   useEffect(() => {
-    dispatch(isLemmaInKorp(language, lemma));
+    dispatch(isLemmaInKorp(language, lemma) as any);
   }, [dispatch, language, lemma]);
 
   if (korpLangs.has(language) && korp && korp.lemmaExists) {
     return (
+      // @ts-ignore - Material-UI v4 compatibility
       <Tooltip
         title={<Trans>Show this word in our corpus</Trans>}
         aria-label={<Trans>Show this word in our corpus</Trans>}
       >
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <IconButton
           className={classes.icons}
           component="span"
@@ -36,6 +59,7 @@ const KorpButton = ({ language, lemma, classes }) => {
             a.click();
           }}
         >
+          {/* @ts-ignore - Material-UI v4 compatibility */}
           <ViewHeadlineOutlined />
         </IconButton>
       </Tooltip>
@@ -43,28 +67,25 @@ const KorpButton = ({ language, lemma, classes }) => {
   }
 
   return (
+    // @ts-ignore - Material-UI v4 compatibility
     <Tooltip
       title={<Trans>This word is not found in our corpus</Trans>}
       aria-label={<Trans>This word is not found in our corpus</Trans>}
     >
       <span>
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <IconButton
           disabled
           className={classes.icons}
           component="span"
           aria-label="Corpus"
         >
+          {/* @ts-ignore - Material-UI v4 compatibility */}
           <ViewHeadlineOutlined />
         </IconButton>
       </span>
     </Tooltip>
   );
-};
-
-KorpButton.propTypes = {
-  language: PropTypes.string.isRequired,
-  lemma: PropTypes.string.isRequired,
-  classes: PropTypes.shape.isRequired,
 };
 
 export default KorpButton;

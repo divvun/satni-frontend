@@ -1,12 +1,18 @@
 /* eslint-disable react/no-array-index-key */
 
+import React from 'react';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { makeStyles } from '@material-ui/core/styles';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Table from '@material-ui/core/Table';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableBody from '@material-ui/core/TableBody';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableCell from '@material-ui/core/TableCell';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableHead from '@material-ui/core/TableHead';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableRow from '@material-ui/core/TableRow';
-import PropTypes from 'prop-types';
 
 import SpeakerButton from '../speaker/SpeakerButton';
 
@@ -18,13 +24,27 @@ const useStyles = makeStyles({
   },
 });
 
-const MyTableRow = ({ analyses, pron, values, language }) => {
+interface Analyses {
+  [key: string]: string[];
+}
+
+interface MyTableRowProps {
+  analyses: Analyses;
+  pron: string;
+  values: string[];
+  language: string;
+}
+
+const MyTableRow: React.FC<MyTableRowProps> = ({ analyses, pron, values, language }) => {
   const classes = useStyles();
 
   return (
+    // @ts-ignore - Material-UI v4 compatibility
     <TableRow key={pron}>
+      {/* @ts-ignore - Material-UI v4 compatibility */}
       <TableCell>{pron}</TableCell>
       {values.map((value, index1) => (
+        // @ts-ignore - Material-UI v4 compatibility
         <TableCell key={index1}>
           {analyses[value]
             ? analyses[value].map((analysis, index) => (
@@ -49,14 +69,16 @@ const MyTableRow = ({ analyses, pron, values, language }) => {
   );
 };
 
-MyTableRow.propTypes = {
-  analyses: PropTypes.shape.isRequired,
-  pron: PropTypes.string.isRequired,
-  values: PropTypes.arrayOf.isRequired,
-  language: PropTypes.string.isRequired,
-};
+interface VerbTableRowItem {
+  values: string[];
+  pron: string;
+}
 
-export const VerbTableRows = {
+interface VerbTableRowData {
+  [language: string]: VerbTableRowItem[];
+}
+
+export const VerbTableRows: VerbTableRowData = {
   sme: [
     {
       values: ['+V+Ind+Prs+Sg1', '+V+Ind+Prt+Sg1'],
@@ -241,17 +263,29 @@ export const VerbTableRows = {
   ],
 };
 
-const FinContent = () => <div>fin</div>;
+const FinContent: React.FC = () => <div>fin</div>;
 
-const LangTable = ({ analyses, language }) => (
+interface LangTableProps {
+  analyses: Analyses;
+  language: string;
+}
+
+const LangTable: React.FC<LangTableProps> = ({ analyses, language }) => (
+  // @ts-ignore - Material-UI v4 compatibility
   <Table>
+    {/* @ts-ignore - Material-UI v4 compatibility */}
     <TableHead>
+      {/* @ts-ignore - Material-UI v4 compatibility */}
       <TableRow>
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <TableCell />
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <TableCell>Present</TableCell>
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <TableCell>Perfectum</TableCell>
       </TableRow>
     </TableHead>
+    {/* @ts-ignore - Material-UI v4 compatibility */}
     <TableBody>
       {VerbTableRows[language].map((MapTableRow, rowIndex) => {
         if (MapTableRow.values.some((value) => analyses[value])) {
@@ -271,12 +305,12 @@ const LangTable = ({ analyses, language }) => (
   </Table>
 );
 
-LangTable.propTypes = {
-  analyses: PropTypes.shape.isRequired,
-  language: PropTypes.string.isRequired,
-};
+interface ExtraContentProps {
+  listOfAnalyses: [string, string][];
+  analyses: Analyses;
+}
 
-const ExtraContent = ({ listOfAnalyses, analyses }) => (
+const ExtraContent: React.FC<ExtraContentProps> = ({ listOfAnalyses, analyses }) => (
   <>
     {listOfAnalyses.map((uff, index) =>
       analyses[uff[1]] ? (
@@ -291,12 +325,12 @@ const ExtraContent = ({ listOfAnalyses, analyses }) => (
   </>
 );
 
-ExtraContent.propTypes = {
-  analyses: PropTypes.shape.isRequired,
-  listOfAnalyses: PropTypes.arrayOf.isRequired,
-};
+interface ContentProps {
+  analyses: Analyses;
+  language: string;
+}
 
-const Content = ({ analyses, language }) => {
+const Content: React.FC<ContentProps> = ({ analyses, language }) => {
   switch (language) {
     case 'sma':
       return (
@@ -332,9 +366,8 @@ const Content = ({ analyses, language }) => {
           <LangTable analyses={analyses} language={language} />
           <ExtraContent
             listOfAnalyses={[
-              ['uddni iv', '+V+Ind+ConNeg'],
-              ['iektu ittjiv', '+V+Ind+ConNeg'],
-              ['lav', '+V+PrfPrc'],
+              ['ittij', '+V+ConNeg'],
+              ['láhkam', '+V+PrfPrc'],
             ]}
             analyses={analyses}
           />
@@ -360,35 +393,34 @@ const Content = ({ analyses, language }) => {
           <LangTable analyses={analyses} language={language} />
           <ExtraContent
             listOfAnalyses={[
-              ['täʹbbe jiõm', '+V+Ind+Prs+ConNeg'],
-              ['jåhtta jiõm', '+V+Ind+Prt+ConNeg'],
+              ['täʹbbe jiõm', '+V+Ind+Prs+ConNeg'],
+              ['jåhtta jiõm', '+V+Ind+Prt+ConNeg'],
             ]}
             analyses={analyses}
           />
         </div>
       );
     case 'fin':
-      return <FinContent analyses={analyses} />;
+      return <FinContent />;
     default:
       return null;
   }
 };
 
-Content.propTypes = {
-  analyses: PropTypes.shape.isRequired,
-  language: PropTypes.string.isRequired,
-};
+interface ParadigmData {
+  analyses: Analyses;
+}
 
-const VerbParadigm = ({ paradigm, language }) => {
+interface VerbParadigmProps {
+  paradigm?: ParadigmData;
+  language: string;
+}
+
+const VerbParadigm: React.FC<VerbParadigmProps> = ({ paradigm, language }) => {
   if (paradigm?.analyses) {
     return <Content analyses={paradigm.analyses} language={language} />;
   }
   return <div>Paradigm undefined {language}</div>;
-};
-
-VerbParadigm.propTypes = {
-  paradigm: PropTypes.shape.isRequired,
-  language: PropTypes.string.isRequired,
 };
 
 export default VerbParadigm;

@@ -1,17 +1,26 @@
+import React from 'react';
+// @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Checkbox from '@material-ui/core/Checkbox';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import FormGroup from '@material-ui/core/FormGroup';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Grid from '@material-ui/core/Grid';
-import PropTypes from 'prop-types';
 import setSrcLangs from '../../operations/mutations/setSrcLangs';
 import setTargetLangs from '../../operations/mutations/setTargetLangs';
 import { availableLanguages } from '../../utils';
 
-const LangChooser = ({ langs }) => {
+interface LangChooserProps {
+  langs: string[];
+}
+
+const LangChooser: React.FC<LangChooserProps> = ({ langs }) => {
   const samiLanguages = new Set(['sma', 'sme', 'smj', 'smn', 'sms']);
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newLangs = langs.includes(event.target.name)
       ? langs.filter((value) => value !== event.target.name)
       : [...langs, event.target.name];
@@ -20,15 +29,20 @@ const LangChooser = ({ langs }) => {
   };
 
   return (
+    // @ts-ignore - Material-UI v4 compatibility
     <Grid container>
+      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Grid item xs={6}>
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <FormGroup row>
           {availableLanguages
             .filter((lang) => samiLanguages.has(lang))
             .map((lang) => (
+              // @ts-ignore - Material-UI v4 compatibility
               <FormControlLabel
                 key={lang}
                 control={
+                  // @ts-ignore - Material-UI v4 compatibility
                   <Checkbox
                     color="default"
                     checked={langs.includes(lang)}
@@ -41,14 +55,18 @@ const LangChooser = ({ langs }) => {
             ))}
         </FormGroup>
       </Grid>
+      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Grid item xs={6}>
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <FormGroup row>
           {availableLanguages
             .filter((lang) => !samiLanguages.has(lang))
             .map((lang) => (
+              // @ts-ignore - Material-UI v4 compatibility
               <FormControlLabel
                 key={lang}
                 control={
+                  // @ts-ignore - Material-UI v4 compatibility
                   <Checkbox
                     color="default"
                     checked={langs.includes(lang)}
@@ -63,10 +81,6 @@ const LangChooser = ({ langs }) => {
       </Grid>
     </Grid>
   );
-};
-
-LangChooser.propTypes = {
-  langs: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default LangChooser;

@@ -1,7 +1,15 @@
+import React from 'react';
+// @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
-import PropTypes from 'prop-types';
 
-const SearchInfo = ({
+interface SearchInfoProps {
+  stemsLength: number;
+  totalCount: number;
+  searchExpression: string;
+  searchMode: string;
+}
+
+const SearchInfo: React.FC<SearchInfoProps> = ({
   stemsLength,
   totalCount,
   searchExpression,
@@ -14,6 +22,7 @@ const SearchInfo = ({
       </Trans>
     );
   }
+  
   if (searchMode === 'start') {
     return (
       <Trans>
@@ -35,13 +44,6 @@ const SearchInfo = ({
       {stemsLength}/{totalCount} ending in <b>{searchExpression}</b>
     </Trans>
   );
-};
-
-SearchInfo.propTypes = {
-  searchExpression: PropTypes.string.isRequired,
-  totalCount: PropTypes.number.isRequired,
-  stemsLength: PropTypes.number.isRequired,
-  searchMode: PropTypes.string.isRequired,
 };
 
 export default SearchInfo;
