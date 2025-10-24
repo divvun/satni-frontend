@@ -1,5 +1,4 @@
 import React from 'react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Button from '@mui/material/Button';
 import { } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
@@ -42,7 +41,6 @@ const SamiKeys: React.FC<SamiKeysProps> = ({ keyHandler }) => {
   return (
     <>
       {chars.map((char) => (
-        // @ts-ignore - Material-UI v4 compatibility
         <Button
           key={char}
           onClick={() => keyHandler(char)}

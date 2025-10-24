@@ -1,5 +1,4 @@
 import React from 'react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Grid from '@mui/material/Grid';
 
 import Definitions from './Definitions';

@@ -2,21 +2,14 @@ import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 import Box from '@mui/material/Box';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import IconButton from '@mui/material/IconButton';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Paper from '@mui/material/Paper';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Popover from '@mui/material/Popover';
 import { alpha, Theme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Tooltip from '@mui/material/Tooltip';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import KeyboardIcon from '@mui/icons-material/Keyboard';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import MoreVert from '@mui/icons-material/MoreVert';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import SearchIcon from '@mui/icons-material/Search';
 // @ts-ignore - React Router DOM v5 compatibility
 import { useHistory, useLocation } from 'react-router-dom';
@@ -115,21 +108,17 @@ const FilterBar: React.FC<FilterBarProps> = ({
   const idSearchMode = searchModeOpen ? 'search-mode' : undefined;
 
   return (
-    // @ts-ignore - Material-UI v4 compatibility
     <Paper component="div" className={classes.root}>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Tooltip
         title={<Trans>Sámi letters</Trans>}
         aria-label={<Trans>Sámi letters</Trans>}
       >
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <IconButton
           className={classes.iconButton}
           aria-label={<Trans>sámi keys</Trans>}
           aria-describedby={idSamiKey}
           onClick={handleOpenSamiKey}
         >
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <KeyboardIcon />
         </IconButton>
       </Tooltip>
@@ -138,18 +127,15 @@ const FilterBar: React.FC<FilterBarProps> = ({
         onChange={handleChange}
         onKeyUp={keyPress}
       />
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Tooltip
         title={<Trans>Lookup the search word</Trans>}
         aria-label={<Trans>Lookup the search word</Trans>}
       >
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <IconButton
           className={classes.iconButton}
           aria-label={<Trans>Search</Trans>}
           onClick={lookup}
         >
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <SearchIcon />
         </IconButton>
       </Tooltip>
@@ -174,7 +160,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
       <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
         <WildCard />
       </Box>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Popover
         className={classes.samiKeys}
         id={idSamiKey}
@@ -192,7 +177,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
       >
         <SamiKeys keyHandler={handleKeyInput} />
       </Popover>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Popover
         className={classes.searchMode}
         id={idSearchMode}

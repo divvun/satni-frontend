@@ -1,5 +1,4 @@
 import React from 'react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableCell from '@mui/material/TableCell';
 
 interface ParadigmCellProps {
@@ -8,7 +7,6 @@ interface ParadigmCellProps {
 }
 
 const ParadigmCell: React.FC<ParadigmCellProps> = ({ key, values }) => (
-  // @ts-ignore - Material-UI v4 compatibility
   <TableCell key={key}>
     {values.map((value, index) => (
       <div key={index}>{value}</div>

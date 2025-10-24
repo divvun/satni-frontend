@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Typography from '@mui/material/Typography';
 import {
   filterParadigm,
@@ -69,14 +68,12 @@ const Paradigm: React.FC<ParadigmProps> = ({ lemma, language, pos }) => {
 
   if (!langs.has(language)) {
     return (
-      // @ts-ignore - Material-UI v4 compatibility
       <Typography>Cannot produce paradigm for {language}</Typography>
     );
   }
 
   if (!poses.has(pos)) {
     return (
-      // @ts-ignore - Material-UI v4 compatibility
       <Typography>
         Cannot produce paradigm for {pos} in {language}
       </Typography>
@@ -85,7 +82,6 @@ const Paradigm: React.FC<ParadigmProps> = ({ lemma, language, pos }) => {
 
   if (error) {
     return (
-      // @ts-ignore - Material-UI v4 compatibility
       <Typography>
         No paradigm for {lemma} {pos} {language}
       </Typography>
@@ -94,14 +90,12 @@ const Paradigm: React.FC<ParadigmProps> = ({ lemma, language, pos }) => {
 
   if (loading) {
     return (
-      // @ts-ignore - Material-UI v4 compatibility
       <Typography>Loading paradigms…</Typography>
     );
   }
 
   if (!data) {
     return (
-      // @ts-ignore - Material-UI v4 compatibility
       <Typography>No data available</Typography>
     );
   }
@@ -136,7 +130,6 @@ const Paradigm: React.FC<ParadigmProps> = ({ lemma, language, pos }) => {
       );
     default:
       return (
-        // @ts-ignore - Material-UI v4 compatibility
         <Typography>
           Failed to make paradigm for {lemma}, {language}, {pos}
         </Typography>

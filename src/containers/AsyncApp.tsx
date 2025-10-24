@@ -1,6 +1,4 @@
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Button from '@mui/material/Button';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import CssBaseline from '@mui/material/CssBaseline';
 import { Theme } from '@mui/material/styles';
 import { withStyles, WithStyles } from '@mui/styles';
@@ -49,7 +47,6 @@ const AsyncApp: React.FC<AsyncAppProps> = ({ classes }) => {
 
   return (
     <div className={classes.container}>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <CssBaseline />
       <SatniAppBar
         setSearchExpression={setSearchExpression}
@@ -68,7 +65,6 @@ const AsyncApp: React.FC<AsyncAppProps> = ({ classes }) => {
             <>
               <div>You have encountered an error</div>
               <div>{error.toString()}</div>
-              {/* @ts-ignore - Material-UI v4 compatibility */}
               <Button
                 color="primary"
                 href="/"

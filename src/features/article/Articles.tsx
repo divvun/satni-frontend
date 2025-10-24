@@ -1,8 +1,6 @@
 // @ts-ignore - @lingui/macro has no type definitions
 import { Trans } from '@lingui/macro';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { } from '@mui/material/styles';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
@@ -35,7 +33,6 @@ const Articles: React.FC<ArticlesProps> = ({ lemma }) => {
 
   return (
     <div>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Typography className={classes.status}>
         <Trans>Results for «{lemma}»</Trans>
       </Typography>

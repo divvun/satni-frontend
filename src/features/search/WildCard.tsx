@@ -2,9 +2,7 @@ import React from 'react';
 import { useReactiveVar } from '@apollo/client';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Radio from '@mui/material/Radio';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Tooltip from '@mui/material/Tooltip';
 import { searchModeVar } from '../../apolloCache';
 import setSearchMode from '../../operations/mutations/setSearchMode';
@@ -20,12 +18,10 @@ const WildCard: React.FC = () => {
     <>
       <Trans>Search mode:</Trans>
 
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Tooltip
         title={<Trans>Search words that start with your search term</Trans>}
         aria-label={<Trans>Search mode</Trans>}
       >
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Radio
           checked={searchMode === 'start'}
           onChange={handleChange}
@@ -33,12 +29,10 @@ const WildCard: React.FC = () => {
           inputProps={{ 'aria-label': 'Start' }}
         />
       </Tooltip>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Tooltip
         title={<Trans>Search words that contain your search term</Trans>}
         aria-label={<Trans>Search mode</Trans>}
       >
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Radio
           checked={searchMode === 'middle'}
           onChange={handleChange}
@@ -46,12 +40,10 @@ const WildCard: React.FC = () => {
           inputProps={{ 'aria-label': 'Middle' }}
         />
       </Tooltip>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Tooltip
         title={<Trans>Search words that end in your search term</Trans>}
         aria-label={<Trans>Search mode</Trans>}
       >
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Radio
           checked={searchMode === 'end'}
           onChange={handleChange}

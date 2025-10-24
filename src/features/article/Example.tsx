@@ -1,9 +1,6 @@
 import React from 'react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Box from '@mui/material/Box';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { } from '@mui/material/styles';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
 // @ts-ignore - classnames types compatibility
@@ -48,7 +45,6 @@ const Example: React.FC<ExampleProps> = ({
   const classes = useStyles();
 
   return (
-    // @ts-ignore - Material-UI v4 compatibility
     <Box borderLeft={5} className={classes.divisor}>
       <div className={classNames(classes.padding, classes.exampleRow)}>
         {['sme', 'sma', 'smj'].includes(sourceLanguage) && (
@@ -58,7 +54,6 @@ const Example: React.FC<ExampleProps> = ({
             classes={{ icons: '' }}
           />
         )}
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Typography>{example.example}</Typography>
       </div>
       <div
@@ -75,7 +70,6 @@ const Example: React.FC<ExampleProps> = ({
             classes={{ icons: '' }}
           />
         )}
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Typography>{example.translation}</Typography>
       </div>
     </Box>

@@ -1,29 +1,20 @@
 import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { ListSubheader } from '@mui/material';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Divider from '@mui/material/Divider';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { Theme } from '@mui/material/styles';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import FeedbackIcon from '@mui/icons-material/Feedback';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import LanguageIcon from '@mui/icons-material/Language';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TranslateIcon from '@mui/icons-material/Translate';
 import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
@@ -33,18 +24,14 @@ import LangChooserDialog from '../features/wantedlangs/LangChooserDialog';
 import MetaLanguageSelector from './MetaLanguageSelector';
 
 const Footer: React.FC = () => (
-  // @ts-ignore - Material-UI v4 compatibility
   <List
     subheader={
-      // @ts-ignore - Material-UI v4 compatibility
       <ListSubheader>
         <Trans>Delivered by</Trans>
       </ListSubheader>
     }
   >
-    {/* @ts-ignore - Material-UI v4 compatibility */}
     <ListItem>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <ListItemText
         inset
         primary={
@@ -54,9 +41,7 @@ const Footer: React.FC = () => (
         }
       />
     </ListItem>
-    {/* @ts-ignore - Material-UI v4 compatibility */}
     <ListItem>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <ListItemText
         inset
         primary={
@@ -72,9 +57,7 @@ const Footer: React.FC = () => (
         }
       />
     </ListItem>
-    {/* @ts-ignore - Material-UI v4 compatibility */}
     <ListItem>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <ListItemText
         inset
         primary={
@@ -88,9 +71,7 @@ const Footer: React.FC = () => (
         }
       />
     </ListItem>
-    {/* @ts-ignore - Material-UI v4 compatibility */}
     <ListItem>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <ListItemText inset primary="Pekka Sammallahti" />
     </ListItem>
   </List>

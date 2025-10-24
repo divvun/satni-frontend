@@ -1,9 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 
 import React from 'react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { } from '@mui/material/styles';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
 
@@ -33,11 +31,9 @@ const Parts: React.FC<PartsProps> = ({ lemma, classes }) => {
         if (index < parts.length - 1) {
           return (
             <React.Fragment key={index}>
-              {/* @ts-ignore - Material-UI v4 compatibility */}
               <Typography component="span" className={classes.lemma}>
                 {part.slice(0, -1)}
               </Typography>
-              {/* @ts-ignore - Material-UI v4 compatibility */}
               <Typography component="span" className={classes.sammallahti}>
                 {part.slice(-1)}
               </Typography>
@@ -46,7 +42,6 @@ const Parts: React.FC<PartsProps> = ({ lemma, classes }) => {
         }
 
         return (
-          // @ts-ignore - Material-UI v4 compatibility
           <Typography key={index} component="span" className={classes.lemma}>
             {part}
           </Typography>

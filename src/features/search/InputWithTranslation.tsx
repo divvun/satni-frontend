@@ -1,7 +1,6 @@
 import React from 'react';
 import { msg } from '@lingui/macro';
 import { useLingui } from '@lingui/react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import InputBase from '@mui/material/InputBase';
 import { Theme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
@@ -49,7 +48,6 @@ const InputWithTranslation: React.FC<InputWithTranslationProps> = (props) => {
   };
 
   return (
-    // @ts-ignore - Material-UI v4 compatibility
     <InputBase
       autoFocus
       value={inputValue}

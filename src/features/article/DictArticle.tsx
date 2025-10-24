@@ -1,13 +1,9 @@
 /* eslint-disable react/no-array-index-key */
 
 import React from 'react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Divider from '@mui/material/Divider';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Grid from '@mui/material/Grid';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Paper from '@mui/material/Paper';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import { useLocation } from 'react-router-dom';
@@ -45,7 +41,6 @@ const DictArticle: React.FC<DictArticleProps> = ({ dictGroup, lemma }) => {
           {!hasAvailableDict(pathname) && (
             <Source source={dict} lemma={lemma} />
           )}
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <Divider />
         </Grid>
         <Grid size={12}>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import CircularProgress from '@mui/material/CircularProgress';
 import { useLocation } from 'react-router-dom';
 import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
@@ -48,7 +47,6 @@ const DictTargetStem: React.FC<DictTargetStemProps> = ({
   // Handle loading and error states for the first query
   if (langsDictsQueryResult.loading || !langsDictsQueryResult.data) {
     return (
-      // @ts-ignore - Material-UI v4 compatibility
       <CircularProgress size={20} />
     );
   }
@@ -72,7 +70,6 @@ const DictTargetStem: React.FC<DictTargetStemProps> = ({
 
   if (loading)
     return (
-      // @ts-ignore - Material-UI v4 compatibility
       <CircularProgress size={20} />
     );
 

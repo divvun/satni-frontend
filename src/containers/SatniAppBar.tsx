@@ -1,21 +1,14 @@
 import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import IconButton from '@mui/material/IconButton';
 import { Theme } from '@mui/material/styles';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Toolbar from '@mui/material/Toolbar';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Tooltip from '@mui/material/Tooltip';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Typography from '@mui/material/Typography';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 import { useState } from 'react';
@@ -69,11 +62,8 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
   };
 
   return (
-    // @ts-ignore - Material-UI v4 compatibility
     <AppBar position="static" className={classes.appBar}>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Toolbar variant="dense">
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Typography variant="h6" noWrap className={classes.title}>
           {/* @ts-ignore - React Router DOM v5 compatibility */}
           <Link
@@ -97,7 +87,6 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
           </Tooltip>
         </Box>
         <Tooltip title={<Trans>Help</Trans>}>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <IconButton
             color="inherit"
             aria-label="Settings"
@@ -105,7 +94,6 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
             onClick={handleClickHelpDialog}
             className={classes.helpButton}
           >
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <HelpOutlineIcon />
           </IconButton>
         </Tooltip>

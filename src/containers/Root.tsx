@@ -1,6 +1,5 @@
 import React from 'react';
 import { ApolloClient } from '@apollo/client';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Button from '@mui/material/Button';
 import {
   createTheme,
@@ -23,7 +22,6 @@ const Root: React.FC<RootProps> = ({ client }) => (
       <>
         <div>You have encountered an error</div>
         <div>{error.toString()}</div>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Button
           color="primary"
           href="/"

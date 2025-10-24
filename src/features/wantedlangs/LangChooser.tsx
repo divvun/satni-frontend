@@ -1,13 +1,9 @@
 import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Checkbox from '@mui/material/Checkbox';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import FormControlLabel from '@mui/material/FormControlLabel';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import FormGroup from '@mui/material/FormGroup';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Grid from '@mui/material/Grid';
 import setSrcLangs from '../../operations/mutations/setSrcLangs';
 import setTargetLangs from '../../operations/mutations/setTargetLangs';
@@ -35,11 +31,9 @@ const LangChooser: React.FC<LangChooserProps> = ({ langs }) => {
           {availableLanguages
             .filter((lang) => samiLanguages.has(lang))
             .map((lang) => (
-              // @ts-ignore - Material-UI v4 compatibility
               <FormControlLabel
                 key={lang}
                 control={
-                  // @ts-ignore - Material-UI v4 compatibility
                   <Checkbox
                     color="default"
                     checked={langs.includes(lang)}
@@ -57,11 +51,9 @@ const LangChooser: React.FC<LangChooserProps> = ({ langs }) => {
           {availableLanguages
             .filter((lang) => !samiLanguages.has(lang))
             .map((lang) => (
-              // @ts-ignore - Material-UI v4 compatibility
               <FormControlLabel
                 key={lang}
                 control={
-                  // @ts-ignore - Material-UI v4 compatibility
                   <Checkbox
                     color="default"
                     checked={langs.includes(lang)}

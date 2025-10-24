@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import IconButton from '@mui/material/IconButton';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Tooltip from '@mui/material/Tooltip';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import InfoOutlined from '@mui/icons-material/InfoOutlined';
 import { tableRowToParadigmList } from '../../utils';
 import { AdjTableRows } from './AdjParadigm';
@@ -70,12 +67,10 @@ const ParadigmButton: React.FC<ParadigmButtonProps> = ({
     !isLoading
   ) {
     return (
-      // @ts-ignore - Material-UI v4 compatibility
       <Tooltip
         title={<Trans>Show paradigm for this word</Trans>}
         aria-label={<Trans>Show paradigm for this word</Trans>}
       >
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <IconButton
           className={classes.icons}
           component="span"
@@ -83,7 +78,6 @@ const ParadigmButton: React.FC<ParadigmButtonProps> = ({
           onClick={onClick}
           color="primary"
         >
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <InfoOutlined />
         </IconButton>
       </Tooltip>
@@ -91,13 +85,11 @@ const ParadigmButton: React.FC<ParadigmButtonProps> = ({
   }
 
   return (
-    // @ts-ignore - Material-UI v4 compatibility
     <Tooltip
       title={<Trans>There is no paradigm for this word</Trans>}
       aria-label={<Trans>There is no paradigm for this word</Trans>}
     >
       <span>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <IconButton
           disabled
           className={classes.icons}
@@ -106,7 +98,6 @@ const ParadigmButton: React.FC<ParadigmButtonProps> = ({
           onClick={onClick}
           color="primary"
         >
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <InfoOutlined />
         </IconButton>
       </span>

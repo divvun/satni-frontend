@@ -1,17 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 
 import React from 'react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { } from '@mui/material/styles';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Table from '@mui/material/Table';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableBody from '@mui/material/TableBody';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableCell from '@mui/material/TableCell';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableHead from '@mui/material/TableHead';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableRow from '@mui/material/TableRow';
 import { makeStyles } from '@mui/styles';
 
@@ -505,12 +499,9 @@ const MyTableRow: React.FC<MyTableRowProps> = ({
   const classes = useStyles();
 
   return (
-    // @ts-ignore - Material-UI v4 compatibility
     <TableRow key={name}>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <TableCell>{name}</TableCell>
       {values.length === 1 && (
-        // @ts-ignore - Material-UI v4 compatibility
         <TableCell key={`${name}_1`} colSpan={2} align="center">
           {analyses[values[0]].map((analysis, index) => (
             <div key={`${analysis}_${index}`} className={classes.analysisRow}>
@@ -528,7 +519,6 @@ const MyTableRow: React.FC<MyTableRowProps> = ({
       )}
       {values.length > 1 &&
         values.map((value, index1) => (
-          // @ts-ignore - Material-UI v4 compatibility
           <TableCell key={index1}>
             {analyses[value]?.map((analysis, index) => (
               <div key={`${analysis}_${index}`} className={classes.analysisRow}>
@@ -554,7 +544,6 @@ interface LangTableProps {
 }
 
 const LangTable: React.FC<LangTableProps> = ({ analyses, language }) => (
-  // @ts-ignore - Material-UI v4 compatibility
   <TableBody>
     {AdjTableRows[language].map((MapTableRow, rowIndex) => {
       if (MapTableRow.values.some((value) => analyses[value])) {
@@ -604,19 +593,12 @@ interface AdjParadigmProps {
 const AdjParadigm: React.FC<AdjParadigmProps> = ({ paradigm, language }) => {
   if (paradigm) {
     return (
-      // @ts-ignore - Material-UI v4 compatibility
       <Table>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <TableHead>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <TableRow>
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <TableCell>&nbsp;</TableCell>
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <TableCell>Positive</TableCell>
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <TableCell>Comparative</TableCell>
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <TableCell>Superlative</TableCell>
           </TableRow>
         </TableHead>

@@ -2,20 +2,13 @@ import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/macro';
 import { useLingui } from '@lingui/react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Accordion from '@mui/material/Accordion';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import AccordionDetails from '@mui/material/AccordionDetails';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import AccordionSummary from '@mui/material/AccordionSummary';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Checkbox from '@mui/material/Checkbox';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Theme } from '@mui/material/styles';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Typography from '@mui/material/Typography';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { makeStyles } from '@mui/styles';
 
@@ -51,24 +44,19 @@ const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
   return (
     <>
       {Object.keys(dictionaryInfo).map((dict) => (
-        // @ts-ignore - Material-UI v4 compatibility
         <Accordion key={dict}>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <AccordionSummary
             expandIcon={
-              // @ts-ignore - Material-UI v4 compatibility
               <ExpandMoreIcon />
             }
             aria-controls={`${dict}-content`}
             id={`${dict}-header`}
           >
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <FormControlLabel
               aria-label={dict}
               onClick={(event) => event.stopPropagation()}
               onFocus={(event) => event.stopPropagation()}
               control={
-                // @ts-ignore - Material-UI v4 compatibility
                 <Checkbox
                   checked={dicts.includes(dict)}
                   onChange={handleChange}
@@ -78,11 +66,9 @@ const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
               label={<Trans id={dict}>{dict}</Trans>}
             />
           </AccordionSummary>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <AccordionDetails>
             {(dictionaryInfo as any)[dict]?.info?.map(
               (infoText: any, index: number) => (
-                // @ts-ignore - Material-UI v4 compatibility
                 <Typography
                   key={`${dict}-info-${index}`}
                   className={classes.infoText}

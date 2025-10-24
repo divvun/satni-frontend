@@ -1,17 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 
 import React from 'react';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { } from '@mui/material/styles';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Table from '@mui/material/Table';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableBody from '@mui/material/TableBody';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableCell from '@mui/material/TableCell';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableHead from '@mui/material/TableHead';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import TableRow from '@mui/material/TableRow';
 import { makeStyles } from '@mui/styles';
 
@@ -45,12 +39,9 @@ const MyTableRow: React.FC<MyTableRowProps> = ({
   const classes = useStyles();
 
   return (
-    // @ts-ignore - Material-UI v4 compatibility
     <TableRow key={pron}>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <TableCell>{pron}</TableCell>
       {values.map((value, index1) => (
-        // @ts-ignore - Material-UI v4 compatibility
         <TableCell key={index1}>
           {analyses[value]
             ? analyses[value].map((analysis, index) => (
@@ -277,21 +268,14 @@ interface LangTableProps {
 }
 
 const LangTable: React.FC<LangTableProps> = ({ analyses, language }) => (
-  // @ts-ignore - Material-UI v4 compatibility
   <Table>
-    {/* @ts-ignore - Material-UI v4 compatibility */}
     <TableHead>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <TableRow>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <TableCell />
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <TableCell>Present</TableCell>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
         <TableCell>Perfectum</TableCell>
       </TableRow>
     </TableHead>
-    {/* @ts-ignore - Material-UI v4 compatibility */}
     <TableBody>
       {VerbTableRows[language].map((MapTableRow, rowIndex) => {
         if (MapTableRow.values.some((value) => analyses[value])) {
