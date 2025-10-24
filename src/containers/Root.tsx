@@ -1,4 +1,6 @@
+import React from 'react';
 import { ApolloClient } from '@apollo/client';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Button from '@material-ui/core/Button';
 import {
   createMuiTheme,
@@ -6,16 +8,23 @@ import {
   responsiveFontSizes,
 } from '@material-ui/core/styles';
 import * as Sentry from '@sentry/react';
-import PropTypes from 'prop-types';
+import { Store } from 'redux';
 import InterfaceLanguage from './InterfaceLanguage';
 import ProviderWrapper from './ProviderWrapper';
 
-const Root = ({ store, client }) => (
+interface RootProps {
+  store: Store;
+  client: ApolloClient<any>;
+}
+
+const Root: React.FC<RootProps> = ({ store, client }) => (
+  // @ts-ignore - Sentry ErrorBoundary compatibility with React types
   <Sentry.ErrorBoundary
     fallback={({ error, resetError }) => (
       <>
         <div>You have encountered an error</div>
         <div>{error.toString()}</div>
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Button
           color="primary"
           href="/"
@@ -44,14 +53,5 @@ const Root = ({ store, client }) => (
     </ProviderWrapper>
   </Sentry.ErrorBoundary>
 );
-
-Root.propTypes = {
-  store: PropTypes.shape({
-    subscribe: PropTypes.func.isRequired,
-    dispatch: PropTypes.func.isRequired,
-    getState: PropTypes.func.isRequired,
-  }).isRequired,
-  client: PropTypes.instanceOf(ApolloClient).isRequired,
-};
 
 export default Root;

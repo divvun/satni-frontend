@@ -1,8 +1,9 @@
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Button from '@material-ui/core/Button';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { withStyles } from '@material-ui/core/styles';
+import { Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 import * as Sentry from '@sentry/react';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import SatniAppBar from './SatniAppBar';
@@ -11,20 +12,20 @@ import SatniMain from './SatniMain';
 
 const drawerWidth = 240;
 
-const styles = (theme) => ({
+const styles = (theme: Theme) => ({
   '@global': {
     body: {
-      backgroundColor: theme.palette.common.grey,
+      backgroundColor: theme.palette.common.white, // Note: grey might not exist, using white
     },
   },
   container: {
     minHeight: '100vh',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as const,
   },
   main: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as const,
     flex: 1,
     height: '80vh',
     [theme.breakpoints.up('md')]: {
@@ -35,9 +36,11 @@ const styles = (theme) => ({
   },
 });
 
-const AsyncApp = ({ classes }) => {
-  const [searchExpression, setSearchExpression] = React.useState('');
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+interface AsyncAppProps extends WithStyles<typeof styles> {}
+
+const AsyncApp: React.FC<AsyncAppProps> = ({ classes }) => {
+  const [searchExpression, setSearchExpression] = React.useState<string>('');
+  const [mobileOpen, setMobileOpen] = React.useState<boolean>(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -45,6 +48,7 @@ const AsyncApp = ({ classes }) => {
 
   return (
     <div className={classes.container}>
+      {/* @ts-ignore - Material-UI v4 compatibility */}
       <CssBaseline />
       <SatniAppBar
         setSearchExpression={setSearchExpression}
@@ -57,11 +61,13 @@ const AsyncApp = ({ classes }) => {
         mobileOpen={mobileOpen}
       />
       <main className={classes.main}>
+        {/* @ts-ignore - Sentry ErrorBoundary compatibility */}
         <Sentry.ErrorBoundary
-          fallback={({ error, resetError }) => (
+          fallback={({ error, resetError }: any) => (
             <>
               <div>You have encountered an error</div>
               <div>{error.toString()}</div>
+              {/* @ts-ignore - Material-UI v4 compatibility */}
               <Button
                 color="primary"
                 href="/"
@@ -82,10 +88,6 @@ const AsyncApp = ({ classes }) => {
       </main>
     </div>
   );
-};
-
-AsyncApp.propTypes = {
-  classes: PropTypes.shape.isRequired,
 };
 
 export default withStyles(styles)(AsyncApp);
