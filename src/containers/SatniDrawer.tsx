@@ -10,11 +10,9 @@ import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import List from '@mui/material/List';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import ListItem from '@mui/material/ListItem';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
+import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
-// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import ListItemText from '@mui/material/ListItemText';
 import { Theme } from '@mui/material/styles';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
@@ -152,68 +150,47 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
   const drawer = (
     <div>
       <div className={classes.toolbarDense} />
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Divider />
-      {/* @ts-ignore - Material-UI v4 compatibility */}
       <List>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
-        <ListItem
+        <ListItemButton
           key="LangChooser"
           onClick={handleClickLangChooserDialog}
-          button
         >
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <ListItemIcon>
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <LanguageIcon />
           </ListItemIcon>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <ListItemText primary={<Trans>Languages</Trans>} />
-        </ListItem>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
-        <ListItem
+        </ListItemButton>
+        <ListItemButton
           key="DictChooser"
           onClick={handleClickDictChooserDialog}
-          button
         >
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <ListItemIcon>
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <MenuBookIcon />
           </ListItemIcon>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <ListItemText primary={<Trans>Dictionaries</Trans>} />
-        </ListItem>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
-        <ListItem
+        </ListItemButton>
+        <ListItemButton
           key="SpeakerChooser"
           onClick={handleClickSpeakerChooserDialog}
-          button
         >
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <ListItemIcon>
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <RecordVoiceOverIcon />
           </ListItemIcon>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
           <ListItemText primary={<Trans>TTS Voices</Trans>} />
-        </ListItem>
+        </ListItemButton>
         <ListItem key="Feedback" component="a" href="mailto:feedback@divvun.no">
           <ListItemIcon>
             <FeedbackIcon />
           </ListItemIcon>
           <ListItemText primary="Feedback" />
         </ListItem>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
-        <ListItem key="Site language" button>
-          {/* @ts-ignore - Material-UI v4 compatibility */}
+        <ListItemButton key="Site language">
           <ListItemIcon>
-            {/* @ts-ignore - Material-UI v4 compatibility */}
             <TranslateIcon />
           </ListItemIcon>
           <MetaLanguageSelector />
-        </ListItem>
-        {/* @ts-ignore - Material-UI v4 compatibility */}
+        </ListItemButton>
         <ListItem>
           <Footer />
         </ListItem>

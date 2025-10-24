@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client';
 import CircularProgress from '@mui/material/CircularProgress';
 import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 
 import { makeStyles } from '@mui/styles';
@@ -78,9 +79,9 @@ const InfiniteStems = ({ searchExpression }) => {
                 {({ index, style }) => {
                   if (!isStemLoaded(index)) {
                     return (
-                      <ListItem button key={index} style={style}>
+                      <ListItemButton key={index} style={style}>
                         <CircularProgress size={16} />
-                      </ListItem>
+                      </ListItemButton>
                     );
                   }
 
