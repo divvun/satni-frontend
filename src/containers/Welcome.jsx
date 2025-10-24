@@ -3,6 +3,7 @@ import { makeStyles } from '@mui/styles';
 import { useLocation } from 'react-router-dom';
 
 import { Trans } from '@lingui/macro';
+import { useLingui } from '@lingui/react';
 import InfoOutlined from '@mui/icons-material/InfoOutlined';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -42,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const WelcomeHeader = () => {
   const classes = useStyles();
+  const { _ } = useLingui();
   const { currentLemma, currentDict } = locationParser(useLocation().pathname);
   return (
     <Paper className={classes.welcome}>
@@ -55,9 +57,12 @@ export const WelcomeHeader = () => {
       <Typography component="p" className={classes.list}>
         {currentDict && !currentLemma ? (
           <>
-            {dictionaryInfo[currentDict].info.map((infoText) => (
-              <Typography key={infoText} className={classes.infoText}>
-                <Trans id={infoText}>{infoText}</Trans>
+            {dictionaryInfo[currentDict].info.map((infoText, index) => (
+              <Typography
+                key={`${currentDict}-info-${index}`}
+                className={classes.infoText}
+              >
+                {_(infoText)}
               </Typography>
             ))}
           </>
