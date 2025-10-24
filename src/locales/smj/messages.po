@@ -219,7 +219,7 @@ msgstr "Vállji gielajt"
 msgid "Choose TTS voices"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:145
+#: src/features/search/FilterBar.tsx:141
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr "Vállji jus åhtsåmbáhko galggá liehket bágo álgon, sinna jali låhpan."
 
@@ -497,8 +497,7 @@ msgstr "latijnagiela"
 msgid "Listen to pronunciation"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:131
-#: src/features/search/FilterBar.tsx:132
+#: src/features/search/FilterBar.tsx:129
 msgid "Lookup the search word"
 msgstr "Vuoseda åhtsåmbágo båhtusijt"
 
@@ -610,11 +609,10 @@ msgid "rus"
 msgstr ""
 
 #: src/features/search/FilterBar.tsx:118
-msgid "sámi keys"
-msgstr "Sáme bokstáva"
+#~ msgid "sámi keys"
+#~ msgstr "Sáme bokstáva"
 
 #: src/features/search/FilterBar.tsx:113
-#: src/features/search/FilterBar.tsx:114
 msgid "Sámi letters"
 msgstr "Sáme bokstáva"
 
@@ -639,14 +637,14 @@ msgid "se_genitive"
 msgstr "nuorttasámegiela"
 
 #: src/features/search/FilterBar.tsx:136
-msgid "Search"
-msgstr "Åtså"
+#~ msgid "Search"
+#~ msgstr "Åtså"
 
 #: src/features/search/WildCard.tsx:23
 #: src/features/search/WildCard.tsx:34
 #: src/features/search/WildCard.tsx:45
-msgid "Search mode"
-msgstr "Åhtsåmmodus"
+#~ msgid "Search mode"
+#~ msgstr "Åhtsåmmodus"
 
 #: src/features/search/WildCard.tsx:19
 msgid "Search mode:"
@@ -656,11 +654,11 @@ msgstr "Åhtsåmmodus:"
 msgid "Search results will appear here."
 msgstr "Åhtsåmbåhtusa ihti dási"
 
-#: src/features/search/WildCard.tsx:33
+#: src/features/search/WildCard.tsx:32
 msgid "Search words that contain your search term"
 msgstr "Åtså bágojt gånnå åhtsåmbáhko l bágo sinna"
 
-#: src/features/search/WildCard.tsx:44
+#: src/features/search/WildCard.tsx:42
 msgid "Search words that end in your search term"
 msgstr "Åtså bágojt gånnå åhtsåmbáhko l bágo låhpan"
 
@@ -676,13 +674,11 @@ msgstr "Sebrudakdiehtaga"
 msgid "Settings"
 msgstr "Hiebadibme"
 
-#: src/features/paradigm/ParadigmButton.tsx:71
-#: src/features/paradigm/ParadigmButton.tsx:72
+#: src/features/paradigm/ParadigmButton.tsx:70
 msgid "Show paradigm for this word"
 msgstr "Vuoseda dán bágo såjådimev"
 
-#: src/features/korp/KorpButton.tsx:47
-#: src/features/korp/KorpButton.tsx:48
+#: src/features/korp/KorpButton.tsx:46
 msgid "Show this word in our corpus"
 msgstr "Vuoseda dáv bágo tækstatjoakkáldagán"
 
@@ -846,8 +842,7 @@ msgstr ""
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr "Tærmmavuorkán li badjel 50,000 artihkkala, and ådåsmáhteduvvá juovnnát"
 
-#: src/features/paradigm/ParadigmButton.tsx:89
-#: src/features/paradigm/ParadigmButton.tsx:90
+#: src/features/paradigm/ParadigmButton.tsx:85
 msgid "There is no paradigm for this word"
 msgstr "Dán báhkuj ij la dagádum såjådibme"
 
@@ -875,8 +870,7 @@ msgstr "Vuodon dán báhkogirjjáj li báhkolista «Forskingscentralen för de i
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr "Vuodon dán báhkogirjjáj li báhkolista «Forskingscentralen för de inhemska språken i Helsingfors»-ásadusás ja Giellatekno bargos nuorttasáme Åhpajn. Duodden lip lasedam dábálasj bágojt nuorttasámegielas"
 
-#: src/features/korp/KorpButton.tsx:71
-#: src/features/korp/KorpButton.tsx:72
+#: src/features/korp/KorpButton.tsx:67
 msgid "This word is not found in our corpus"
 msgstr "Dát báhko ij lim tækstatjoakkáldagán"
 

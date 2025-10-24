@@ -1,10 +1,10 @@
-import React from 'react';
-import { msg } from '@lingui/macro';
-import { useLingui } from '@lingui/react';
-import InputBase from '@mui/material/InputBase';
-import { Theme } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
-import { useEffect, useState } from 'react';
+import React from "react";
+import { msg } from "@lingui/macro";
+import { useLingui } from "@lingui/react";
+import InputBase from "@mui/material/InputBase";
+import { Theme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
+import { useEffect, useState } from "react";
 
 interface InputWithTranslationProps {
   value: string;
@@ -15,7 +15,7 @@ interface InputWithTranslationProps {
 const InputWithTranslation: React.FC<InputWithTranslationProps> = (props) => {
   const useStyles = makeStyles((theme: Theme) => ({
     input: {
-      color: 'inherit',
+      color: "inherit",
       marginLeft: theme.spacing(1),
       flex: 1,
     },
@@ -55,7 +55,7 @@ const InputWithTranslation: React.FC<InputWithTranslationProps> = (props) => {
       onKeyUp={onKeyUp}
       placeholder={_(msg`Write at least one letter here`)}
       className={classes.input}
-      inputProps={{ 'aria-label': 'search' }}
+      inputProps={{ "aria-label": "search" }}
     />
   );
 };

@@ -219,7 +219,7 @@ msgstr "Vel språk"
 msgid "Choose TTS voices"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:145
+#: src/features/search/FilterBar.tsx:141
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr "Vel om søkjeuttrykket skal vera i byrjinga, midten eller slutten av det du leitar etter."
 
@@ -497,8 +497,7 @@ msgstr "latin"
 msgid "Listen to pronunciation"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:131
-#: src/features/search/FilterBar.tsx:132
+#: src/features/search/FilterBar.tsx:129
 msgid "Lookup the search word"
 msgstr "Slå opp søkjeordet"
 
@@ -610,11 +609,10 @@ msgid "rus"
 msgstr ""
 
 #: src/features/search/FilterBar.tsx:118
-msgid "sámi keys"
-msgstr "Samiske bokstavar"
+#~ msgid "sámi keys"
+#~ msgstr "Samiske bokstavar"
 
 #: src/features/search/FilterBar.tsx:113
-#: src/features/search/FilterBar.tsx:114
 msgid "Sámi letters"
 msgstr "Samiske bokstavar"
 
@@ -639,14 +637,14 @@ msgid "se_genitive"
 msgstr "nordsamisk"
 
 #: src/features/search/FilterBar.tsx:136
-msgid "Search"
-msgstr "Søk"
+#~ msgid "Search"
+#~ msgstr "Søk"
 
 #: src/features/search/WildCard.tsx:23
 #: src/features/search/WildCard.tsx:34
 #: src/features/search/WildCard.tsx:45
-msgid "Search mode"
-msgstr "Søkjemodus"
+#~ msgid "Search mode"
+#~ msgstr "Søkjemodus"
 
 #: src/features/search/WildCard.tsx:19
 msgid "Search mode:"
@@ -656,11 +654,11 @@ msgstr "Søkjemodus:"
 msgid "Search results will appear here."
 msgstr "Søkeresultat dukkar opp her."
 
-#: src/features/search/WildCard.tsx:33
+#: src/features/search/WildCard.tsx:32
 msgid "Search words that contain your search term"
 msgstr "Søk etter ord som inneheld søkjetermen"
 
-#: src/features/search/WildCard.tsx:44
+#: src/features/search/WildCard.tsx:42
 msgid "Search words that end in your search term"
 msgstr "Søk etter ord som sluttar på søkjetermen"
 
@@ -676,13 +674,11 @@ msgstr "Samfunnsvitskap"
 msgid "Settings"
 msgstr "Innstillingar"
 
-#: src/features/paradigm/ParadigmButton.tsx:71
-#: src/features/paradigm/ParadigmButton.tsx:72
+#: src/features/paradigm/ParadigmButton.tsx:70
 msgid "Show paradigm for this word"
 msgstr "Vis bøyingsmønsteret for dette ordet"
 
-#: src/features/korp/KorpButton.tsx:47
-#: src/features/korp/KorpButton.tsx:48
+#: src/features/korp/KorpButton.tsx:46
 msgid "Show this word in our corpus"
 msgstr "Vis dette ordet i tekstsamlinga vår"
 
@@ -846,8 +842,7 @@ msgstr ""
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr "Termbasen inneheld 50 000 termartiklar og vert oppdatert jamleg."
 
-#: src/features/paradigm/ParadigmButton.tsx:89
-#: src/features/paradigm/ParadigmButton.tsx:90
+#: src/features/paradigm/ParadigmButton.tsx:85
 msgid "There is no paradigm for this word"
 msgstr "Dette ordet har ikkje bøyingsmønster"
 
@@ -875,8 +870,7 @@ msgstr "Denne ordboka er basert på leksikalsk materiale frå Intitutionen för 
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr "Denne ordboka er basert på leksikalsk materiale frå Intitutionen för de inhemska språken i Finland, og frå Giellatekno sitt arbeid med nordsamisk Oahpa. I tillegg er det lagt til vanlege nordsamiske ord."
 
-#: src/features/korp/KorpButton.tsx:71
-#: src/features/korp/KorpButton.tsx:72
+#: src/features/korp/KorpButton.tsx:67
 msgid "This word is not found in our corpus"
 msgstr "Dette ordet finst ikkje i tekstsamlinga vår"
 

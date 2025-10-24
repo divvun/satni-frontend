@@ -229,7 +229,7 @@ msgstr "Vaʹlljed ǩiõlid"
 msgid "Choose TTS voices"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:145
+#: src/features/search/FilterBar.tsx:141
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr "Vaʹlljed ooʒʒak-a ciâlkki aalǥâst, kõõskâst leʹbe looppâst."
 
@@ -525,8 +525,7 @@ msgstr "Latinaǩiõl"
 msgid "Listen to pronunciation"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:131
-#: src/features/search/FilterBar.tsx:132
+#: src/features/search/FilterBar.tsx:129
 msgid "Lookup the search word"
 msgstr "Čuäʹjat puäʹđõõzz"
 
@@ -641,11 +640,10 @@ msgid "rus"
 msgstr ""
 
 #: src/features/search/FilterBar.tsx:118
-msgid "sámi keys"
-msgstr "Sääʹm bukva"
+#~ msgid "sámi keys"
+#~ msgstr "Sääʹm bukva"
 
 #: src/features/search/FilterBar.tsx:113
-#: src/features/search/FilterBar.tsx:114
 msgid "Sámi letters"
 msgstr "Sääʹmbukva"
 
@@ -670,14 +668,14 @@ msgid "se_genitive"
 msgstr "Tuõddârsääʹmǩiõl"
 
 #: src/features/search/FilterBar.tsx:136
-msgid "Search"
-msgstr "Ooʒʒ"
+#~ msgid "Search"
+#~ msgstr "Ooʒʒ"
 
 #: src/features/search/WildCard.tsx:23
 #: src/features/search/WildCard.tsx:34
 #: src/features/search/WildCard.tsx:45
-msgid "Search mode"
-msgstr "Ooccâm-mood"
+#~ msgid "Search mode"
+#~ msgstr "Ooccâm-mood"
 
 #: src/features/search/WildCard.tsx:19
 msgid "Search mode:"
@@ -687,11 +685,11 @@ msgstr "Ooccâm-mood:"
 msgid "Search results will appear here."
 msgstr "Ooccâmpuäđõõzz eʹtte tääzz."
 
-#: src/features/search/WildCard.tsx:33
+#: src/features/search/WildCard.tsx:32
 msgid "Search words that contain your search term"
 msgstr "Ooʒʒ saaʹnid, kook âʹnne seʹst ooccâmteermad"
 
-#: src/features/search/WildCard.tsx:44
+#: src/features/search/WildCard.tsx:42
 msgid "Search words that end in your search term"
 msgstr "Ooʒʒ saaʹnid, kook loʹppe ooccâmtermmsad"
 
@@ -707,13 +705,11 @@ msgstr "Õhttsažkåʹddtiõđ"
 msgid "Settings"
 msgstr "Asetõõzz"
 
-#: src/features/paradigm/ParadigmButton.tsx:71
-#: src/features/paradigm/ParadigmButton.tsx:72
+#: src/features/paradigm/ParadigmButton.tsx:70
 msgid "Show paradigm for this word"
 msgstr "Čuäjat tän sääʹn soojtemååʹbleǩ"
 
-#: src/features/korp/KorpButton.tsx:47
-#: src/features/korp/KorpButton.tsx:48
+#: src/features/korp/KorpButton.tsx:46
 msgid "Show this word in our corpus"
 msgstr "Čuäjat sääʹnn korpuuzzâst"
 
@@ -880,8 +876,7 @@ msgstr ""
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr "Teʹrmmnorldõõǥǥâst lie pâʹjjel 50 000 teeʹrm da tõn peeiʹvtet kõskkmieʹrin."
 
-#: src/features/paradigm/ParadigmButton.tsx:89
-#: src/features/paradigm/ParadigmButton.tsx:90
+#: src/features/paradigm/ParadigmButton.tsx:85
 msgid "There is no paradigm for this word"
 msgstr "Tän sänna jeät kaunnu soojtemååʹbleǩ"
 
@@ -909,8 +904,7 @@ msgstr "Tän sääʹnnǩeeʹrj vuâđđan lij Kotus sannõs, da tõõzz leät l�
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr "Tän sääʹnnǩeeʹrj vuâđđan lij Kotus sannõs, da tõõzz leät lââʹzztam Giellatekno Oahpast taarbšum saaʹnid. Lââʹssen takai lääʹdd sääʹn leät lââʹzztam."
 
-#: src/features/korp/KorpButton.tsx:71
-#: src/features/korp/KorpButton.tsx:72
+#: src/features/korp/KorpButton.tsx:67
 msgid "This word is not found in our corpus"
 msgstr "Tän sääʹn jeät kaunnu korpuuzzâst"
 

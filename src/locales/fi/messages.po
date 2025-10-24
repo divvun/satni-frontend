@@ -229,7 +229,7 @@ msgstr "Valitse kieliä"
 msgid "Choose TTS voices"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:145
+#: src/features/search/FilterBar.tsx:141
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr "Valitse koskeeko haku sanojen alkua, keskiosaa vai loppua."
 
@@ -516,8 +516,7 @@ msgstr "latinan"
 msgid "Listen to pronunciation"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:131
-#: src/features/search/FilterBar.tsx:132
+#: src/features/search/FilterBar.tsx:129
 msgid "Lookup the search word"
 msgstr "Hae hakusanaa"
 
@@ -632,11 +631,10 @@ msgid "rus"
 msgstr ""
 
 #: src/features/search/FilterBar.tsx:118
-msgid "sámi keys"
-msgstr "saamelaiset näppäimet"
+#~ msgid "sámi keys"
+#~ msgstr "saamelaiset näppäimet"
 
 #: src/features/search/FilterBar.tsx:113
-#: src/features/search/FilterBar.tsx:114
 msgid "Sámi letters"
 msgstr "Saamenkieliset kirjaimet"
 
@@ -661,14 +659,14 @@ msgid "se_genitive"
 msgstr "pohjoissaamen"
 
 #: src/features/search/FilterBar.tsx:136
-msgid "Search"
-msgstr "Hae"
+#~ msgid "Search"
+#~ msgstr "Hae"
 
 #: src/features/search/WildCard.tsx:23
 #: src/features/search/WildCard.tsx:34
 #: src/features/search/WildCard.tsx:45
-msgid "Search mode"
-msgstr "Hakutila"
+#~ msgid "Search mode"
+#~ msgstr "Hakutila"
 
 #: src/features/search/WildCard.tsx:19
 msgid "Search mode:"
@@ -678,11 +676,11 @@ msgstr "Hakutila:"
 msgid "Search results will appear here."
 msgstr "Hakutulokset tulevat tähän."
 
-#: src/features/search/WildCard.tsx:33
+#: src/features/search/WildCard.tsx:32
 msgid "Search words that contain your search term"
 msgstr "Hae sanoja jotka sisältävät hakusanan"
 
-#: src/features/search/WildCard.tsx:44
+#: src/features/search/WildCard.tsx:42
 msgid "Search words that end in your search term"
 msgstr "Hae sanoja jotka loppuvat hakusanaan"
 
@@ -698,13 +696,11 @@ msgstr "Yhteiskuntatiede"
 msgid "Settings"
 msgstr "Asetukset"
 
-#: src/features/paradigm/ParadigmButton.tsx:71
-#: src/features/paradigm/ParadigmButton.tsx:72
+#: src/features/paradigm/ParadigmButton.tsx:70
 msgid "Show paradigm for this word"
 msgstr "Näytä sanan paradigma"
 
-#: src/features/korp/KorpButton.tsx:47
-#: src/features/korp/KorpButton.tsx:48
+#: src/features/korp/KorpButton.tsx:46
 msgid "Show this word in our corpus"
 msgstr "Näytä sana korpuksessa"
 
@@ -871,8 +867,7 @@ msgstr ""
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr "Termipankissa on yli 50 000 termiartikkelia ja sitä päivitetään säännöllisesti."
 
-#: src/features/paradigm/ParadigmButton.tsx:89
-#: src/features/paradigm/ParadigmButton.tsx:90
+#: src/features/paradigm/ParadigmButton.tsx:85
 msgid "There is no paradigm for this word"
 msgstr "Tälle sanalle ei löydy paradigmaa"
 
@@ -900,8 +895,7 @@ msgstr "Tämä sanakirja perustuu Kotimaisten kielten keskuksen sana-aineistoon 
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr "Tämä sanakirja perustuu Kotimaisten kielten keskuksen sana-aineistoon ja siihen on lisätty Giellateknon Oahpa-kehityksessä tarvittuja sanoja. Lisäksi useita yleisiä suomalaisia sanoja on lisätty."
 
-#: src/features/korp/KorpButton.tsx:71
-#: src/features/korp/KorpButton.tsx:72
+#: src/features/korp/KorpButton.tsx:67
 msgid "This word is not found in our corpus"
 msgstr "Tätä sanaa ei löydy korpuksistamme"
 

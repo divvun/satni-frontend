@@ -231,7 +231,7 @@ msgstr ""
 msgid "Choose TTS voices"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:145
+#: src/features/search/FilterBar.tsx:141
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr ""
 
@@ -533,8 +533,7 @@ msgstr ""
 msgid "Listen to pronunciation"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:131
-#: src/features/search/FilterBar.tsx:132
+#: src/features/search/FilterBar.tsx:129
 msgid "Lookup the search word"
 msgstr ""
 
@@ -650,11 +649,10 @@ msgid "rus"
 msgstr ""
 
 #: src/features/search/FilterBar.tsx:118
-msgid "sámi keys"
-msgstr ""
+#~ msgid "sámi keys"
+#~ msgstr ""
 
 #: src/features/search/FilterBar.tsx:113
-#: src/features/search/FilterBar.tsx:114
 msgid "Sámi letters"
 msgstr ""
 
@@ -679,14 +677,14 @@ msgid "se_genitive"
 msgstr ""
 
 #: src/features/search/FilterBar.tsx:136
-msgid "Search"
-msgstr ""
+#~ msgid "Search"
+#~ msgstr ""
 
 #: src/features/search/WildCard.tsx:23
 #: src/features/search/WildCard.tsx:34
 #: src/features/search/WildCard.tsx:45
-msgid "Search mode"
-msgstr ""
+#~ msgid "Search mode"
+#~ msgstr ""
 
 #: src/features/search/WildCard.tsx:19
 msgid "Search mode:"
@@ -696,11 +694,11 @@ msgstr ""
 msgid "Search results will appear here."
 msgstr ""
 
-#: src/features/search/WildCard.tsx:33
+#: src/features/search/WildCard.tsx:32
 msgid "Search words that contain your search term"
 msgstr ""
 
-#: src/features/search/WildCard.tsx:44
+#: src/features/search/WildCard.tsx:42
 msgid "Search words that end in your search term"
 msgstr ""
 
@@ -716,13 +714,11 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: src/features/paradigm/ParadigmButton.tsx:71
-#: src/features/paradigm/ParadigmButton.tsx:72
+#: src/features/paradigm/ParadigmButton.tsx:70
 msgid "Show paradigm for this word"
 msgstr ""
 
-#: src/features/korp/KorpButton.tsx:47
-#: src/features/korp/KorpButton.tsx:48
+#: src/features/korp/KorpButton.tsx:46
 msgid "Show this word in our corpus"
 msgstr ""
 
@@ -890,8 +886,7 @@ msgstr ""
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr ""
 
-#: src/features/paradigm/ParadigmButton.tsx:89
-#: src/features/paradigm/ParadigmButton.tsx:90
+#: src/features/paradigm/ParadigmButton.tsx:85
 msgid "There is no paradigm for this word"
 msgstr ""
 
@@ -919,8 +914,7 @@ msgstr ""
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr ""
 
-#: src/features/korp/KorpButton.tsx:71
-#: src/features/korp/KorpButton.tsx:72
+#: src/features/korp/KorpButton.tsx:67
 msgid "This word is not found in our corpus"
 msgstr ""
 

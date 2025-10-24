@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 // @ts-nocheck - Variables are intentionally unused (used by @lingui/macro for translation extraction)
 // Message descriptors for translation extraction - not evaluated at module level
-import { msg } from '@lingui/macro';
+import { msg } from "@lingui/macro";
 
 const _dicts = [
   msg`termwiki`,
