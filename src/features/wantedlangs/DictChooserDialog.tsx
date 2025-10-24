@@ -12,7 +12,7 @@ import DialogContent from '@mui/material/DialogContent';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import IconButton from '@mui/material/IconButton';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import { } from '@mui/material/styles';
+import {} from '@mui/material/styles';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Toolbar from '@mui/material/Toolbar';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
@@ -59,7 +59,10 @@ const DictChooserDialog: React.FC<DictChooserDialogProps> = ({
   const classes = useStyles();
 
   const handleClose = () => {
-    onClose();
+    // Use setTimeout to ensure focus is released before closing
+    setTimeout(() => {
+      onClose();
+    }, 0);
   };
 
   // Handle loading/error states
@@ -71,7 +74,12 @@ const DictChooserDialog: React.FC<DictChooserDialogProps> = ({
 
   return (
     // @ts-ignore - Material-UI v4 compatibility
-    <Dialog onClose={handleClose} aria-labelledby="DictChooser" open={open}>
+    <Dialog
+      onClose={handleClose}
+      aria-labelledby="DictChooser"
+      open={open}
+      disableRestoreFocus
+    >
       {/* @ts-ignore - Material-UI v4 compatibility */}
       <AppBar className={classes.appBar}>
         {/* @ts-ignore - Material-UI v4 compatibility */}
