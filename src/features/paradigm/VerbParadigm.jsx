@@ -34,7 +34,7 @@ const MyTableRow = ({ analyses, pron, values, language }) => {
                 >
                   {['sme', 'sma', 'smj'].includes(language) && (
                     <SpeakerButton
-                      text={analysis}
+                      text={`${analysis},`}
                       language={language}
                       classes={{ icons: '' }}
                     />
