@@ -90,7 +90,10 @@ export const handleErrors = (response: Response): Response => {
  * @param concepts Concepts where the language might not appear first
  * @returns Concept where the language is placed first
  */
-export const moveLangFirst = (language: string, concepts: Concept[]): Concept[] =>
+export const moveLangFirst = (
+  language: string,
+  concepts: Concept[],
+): Concept[] =>
   concepts.reduce((accumulator: Concept[], concept: Concept) => {
     if (concept.terms[0].expression.language !== language) {
       accumulator.push(concept);
@@ -123,7 +126,10 @@ export const moveLemmaFirst = (lemma: string, terms: Term[]): Term[] =>
  * @param concept A monolingual concept
  * @return A monolingual concept where language is added and terms has the wanted lemma placed in the front
  */
-export const cleanFrom = (lemma: string, concept: Concept): Concept & { language: string } => ({
+export const cleanFrom = (
+  lemma: string,
+  concept: Concept,
+): Concept & { language: string } => ({
   ...concept,
   language: concept.terms[0].expression.language,
   terms: moveLemmaFirst(lemma, concept.terms),
@@ -135,7 +141,10 @@ export const cleanFrom = (lemma: string, concept: Concept): Concept & { language
  * @param conceptList A multilingual concept
  * @return List of languages
  */
-export const languagesOfLemma = (lemma: string, conceptList: Concept[]): string[] =>
+export const languagesOfLemma = (
+  lemma: string,
+  conceptList: Concept[],
+): string[] =>
   Array.from(
     new Set(
       conceptList
@@ -151,7 +160,10 @@ export const languagesOfLemma = (lemma: string, conceptList: Concept[]): string[
  * @param multilingualConcept An unordered multilingual concept
  * @return An ordered multilingual concept
  */
-export const orderedMultilingualConcept = (lemma: string, multilingualConcept: Concept[]): Concept[] => {
+export const orderedMultilingualConcept = (
+  lemma: string,
+  multilingualConcept: Concept[],
+): Concept[] => {
   const languages = languagesOfLemma(lemma, multilingualConcept);
   const [first, ...rest] = moveLangFirst(languages[0], multilingualConcept);
 
@@ -163,18 +175,23 @@ export const orderedMultilingualConcept = (lemma: string, multilingualConcept: C
  * @param conceptList List of concepts
  * @return Concept lists ordered by names => multilingual concepts
  */
-export const multilingualconceptListsByNames = (conceptList: Concept[]): Record<string, Concept[]> =>
-  conceptList.reduce((accumulator: Record<string, Concept[]>, concept: Concept) => {
-    const { name, ...rest } = concept;
-    if (name && !(name in accumulator)) {
-      accumulator[name] = [];
-    }
-    if (name) {
-      accumulator[name].push(rest);
-    }
+export const multilingualconceptListsByNames = (
+  conceptList: Concept[],
+): Record<string, Concept[]> =>
+  conceptList.reduce(
+    (accumulator: Record<string, Concept[]>, concept: Concept) => {
+      const { name, ...rest } = concept;
+      if (name && !(name in accumulator)) {
+        accumulator[name] = [];
+      }
+      if (name) {
+        accumulator[name].push(rest);
+      }
 
-    return accumulator;
-  }, {});
+      return accumulator;
+    },
+    {},
+  );
 
 export const backendTranslationGroup2frontendTranslationGroup = (
   translationGroup: TranslationGroup,
@@ -186,7 +203,9 @@ export const backendTranslationGroup2frontendTranslationGroup = (
   examples: translationGroup.exampleGroups.map((exampleGroup) => exampleGroup),
 });
 
-export const dictBackend2Frontend = (backendDictArticle: BackendDictArticle): DictArticle => ({
+export const dictBackend2Frontend = (
+  backendDictArticle: BackendDictArticle,
+): DictArticle => ({
   dict: backendDictArticle.dictName,
   from: {
     language: backendDictArticle.srcLang,
@@ -208,12 +227,14 @@ export const hasAvailableDict = (pathname: string): boolean =>
   );
 
 export const pathname2Dict = (pathname: string): string[] => {
-  const indices = pathname.split('').reduce((accumulator: number[], pathPart: string, index: number) => {
-    if (pathPart === '/') {
-      accumulator.push(index);
-    }
-    return accumulator;
-  }, []);
+  const indices = pathname
+    .split('')
+    .reduce((accumulator: number[], pathPart: string, index: number) => {
+      if (pathPart === '/') {
+        accumulator.push(index);
+      }
+      return accumulator;
+    }, []);
 
   return [pathname.slice(indices[0] + 1, indices[1])];
 };
@@ -261,22 +282,28 @@ export const locationParser = (pathname: string): LocationParsed => {
 };
 
 export const filterProp = (analyses: Analyses): Analyses => {
-  const content = Object.keys(analyses.analyses).reduce((accumulator: Record<string, any>, key: string) => {
-    accumulator[key.replace('+Prop', '')] = analyses.analyses[key];
+  const content = Object.keys(analyses.analyses).reduce(
+    (accumulator: Record<string, any>, key: string) => {
+      accumulator[key.replace('+Prop', '')] = analyses.analyses[key];
 
-    return accumulator;
-  }, {});
+      return accumulator;
+    },
+    {},
+  );
 
   return { analyses: content };
 };
 
 export const filterParadigm = (satniParadigm: SatniParadigm): Analyses => {
-  const result = satniParadigm.generated.reduce((accumulator: Record<string, string[]>, key) => {
-    accumulator[key.paradigmTemplate] = key.analyses.map(
-      (analysis) => analysis.wordform,
-    );
-    return accumulator;
-  }, {});
+  const result = satniParadigm.generated.reduce(
+    (accumulator: Record<string, string[]>, key) => {
+      accumulator[key.paradigmTemplate] = key.analyses.map(
+        (analysis) => analysis.wordform,
+      );
+      return accumulator;
+    },
+    {},
+  );
 
   return { analyses: result };
 };

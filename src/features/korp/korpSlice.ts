@@ -39,18 +39,22 @@ const korpSlice = createSlice({
   },
 });
 
-export const { getKorpStart, getKorpSuccess, getKorpFailure } =
-  korpSlice.actions;
+export const {
+  getKorpStart,
+  getKorpSuccess,
+  getKorpFailure,
+} = korpSlice.actions;
 
 export default korpSlice.reducer;
 
-export const isLemmaInKorp = (language: string, lemma: string) => 
-  async (dispatch: AppDispatch) => {
-    try {
-      dispatch(getKorpStart());
-      const korp = await doesLemmaExist(language, lemma);
-      dispatch(getKorpSuccess({ korp }));
-    } catch (err) {
-      dispatch(getKorpFailure(err instanceof Error ? err.message : String(err)));
-    }
-  };
+export const isLemmaInKorp = (language: string, lemma: string) => async (
+  dispatch: AppDispatch,
+) => {
+  try {
+    dispatch(getKorpStart());
+    const korp = await doesLemmaExist(language, lemma);
+    dispatch(getKorpSuccess({ korp }));
+  } catch (err) {
+    dispatch(getKorpFailure(err instanceof Error ? err.message : String(err)));
+  }
+};

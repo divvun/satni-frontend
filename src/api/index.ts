@@ -42,7 +42,10 @@ const korpInfo: KorpInfo = {
   },
 };
 
-const doesLemmaExist = async (language: string, lemma: string): Promise<boolean> => {
+const doesLemmaExist = async (
+  language: string,
+  lemma: string,
+): Promise<boolean> => {
   if (!korpInfo[language]) {
     throw new Error(`Language '${language}' is not supported`);
   }

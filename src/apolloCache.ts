@@ -3,7 +3,9 @@ import { relayStylePagination } from '@apollo/client/utilities';
 import dictionaryInfo from './translateble_variables';
 import { availableLanguages } from './utils';
 
-export const availableDictsVar: ReactiveVar<string[]> = makeVar(Object.keys(dictionaryInfo));
+export const availableDictsVar: ReactiveVar<string[]> = makeVar(
+  Object.keys(dictionaryInfo),
+);
 
 export const interfaceLanguageVar: ReactiveVar<string> = makeVar(
   localStorage.getItem('interfaceLanguage') || 'se',
