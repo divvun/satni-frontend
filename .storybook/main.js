@@ -32,7 +32,7 @@ module.exports = {
       },
       esbuild: {
         loader: 'jsx',
-        include: /\.(js|jsx|ts|tsx)$/,
+        include: /\.(js|jsx)$/,
         jsxFactory: 'React.createElement',
         jsxFragment: 'React.Fragment',
       },
@@ -41,7 +41,8 @@ module.exports = {
         esbuildOptions: {
           loader: {
             '.js': 'jsx',
-            '.ts': 'tsx',
+            '.ts': 'ts',
+            '.tsx': 'tsx',
           },
           define: {
             global: 'globalThis',
@@ -53,9 +54,9 @@ module.exports = {
       },
       resolve: {
         alias: {
-          utils: '/Users/bga001/repos/divvun/satni-frontend/src/utils.js',
+          utils: '/Users/bga001/repos/divvun/satni-frontend/src/utils.ts',
           'utils.data':
-            '/Users/bga001/repos/divvun/satni-frontend/src/utils.data.js',
+            '/Users/bga001/repos/divvun/satni-frontend/src/utils.data.ts',
         },
       },
     };
