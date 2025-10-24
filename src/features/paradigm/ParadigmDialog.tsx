@@ -12,7 +12,7 @@ import DialogContent from '@mui/material/DialogContent';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import IconButton from '@mui/material/IconButton';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
-import { } from '@mui/material/styles';
+import {} from '@mui/material/styles';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Toolbar from '@mui/material/Toolbar';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
@@ -65,9 +65,9 @@ const ParadigmDialog: React.FC<ParadigmDialogProps> = ({
 
   return (
     // @ts-ignore - Material-UI v4 compatibility
-    <Dialog 
-      onClose={handleClose} 
-      aria-labelledby="Paradigm" 
+    <Dialog
+      onClose={handleClose}
+      aria-labelledby="Paradigm"
       open={open}
       fullWidth
       maxWidth="md"
