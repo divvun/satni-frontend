@@ -78,7 +78,7 @@ const Stem = ({ stem, restriction, withLink }) => {
               )}
               {['sme', 'sma', 'smj'].includes(language) && (
                 <SpeakerButton
-                  text={`${lemma},`}
+                  text={` ${lemma},`}
                   language={language}
                   classes={classes}
                 />

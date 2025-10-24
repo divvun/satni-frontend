@@ -30,7 +30,7 @@ const MyTableRow = ({ analyses, name, values, language }) => {
             <div key={`${analysis}_${index}`} className={classes.analysisRow}>
               {['sme', 'sma', 'smj'].includes(language) && (
                 <SpeakerButton
-                  text={`${analysis},`}
+                  text={` ${analysis},`}
                   language={language}
                   classes={{ icons: '' }}
                 />
@@ -51,7 +51,7 @@ const MyTableRow = ({ analyses, name, values, language }) => {
                 >
                   {['sme', 'sma', 'smj'].includes(language) && (
                     <SpeakerButton
-                      text={`${analysis},`}
+                      text={` ${analysis},`}
                       language={language}
                       classes={{ icons: '' }}
                     />
