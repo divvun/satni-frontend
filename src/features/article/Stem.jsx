@@ -61,7 +61,7 @@ const Stem = ({ stem, restriction, withLink }) => {
         ) : (
           <PresentationLemma presentationLemma={presentationLemma} />
         )}
-        {restriction && (
+        {restriction?.restriction && (
           <Typography component="span"> ({restriction.restriction})</Typography>
         )}
         {!lemma.includes(' ') && (
