@@ -104,7 +104,11 @@ interface SatniDrawerProps {
   mobileOpen: boolean;
 }
 
-const SatniDrawer: React.FC<SatniDrawerProps> = ({ drawerWidth, handleDrawerToggle, mobileOpen }) => {
+const SatniDrawer: React.FC<SatniDrawerProps> = ({
+  drawerWidth,
+  handleDrawerToggle,
+  mobileOpen,
+}) => {
   const useStyles = makeStyles((theme: Theme) => ({
     drawer: {
       [theme.breakpoints.up('sm')]: {
