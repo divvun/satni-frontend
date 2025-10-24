@@ -7,6 +7,7 @@ import {
   ThemeProvider as MuiThemeProvider,
   responsiveFontSizes,
 } from '@mui/material/styles';
+import { ThemeProvider as StylesThemeProvider } from '@mui/styles';
 import * as Sentry from '@sentry/react';
 import { Store } from 'redux';
 import InterfaceLanguage from './InterfaceLanguage';
@@ -48,7 +49,17 @@ const Root: React.FC<RootProps> = ({ store, client }) => (
           }),
         )}
       >
-        <InterfaceLanguage />
+        <StylesThemeProvider
+          theme={responsiveFontSizes(
+            createTheme({
+              typography: {
+                htmlFontSize: 14,
+              },
+            }),
+          )}
+        >
+          <InterfaceLanguage />
+        </StylesThemeProvider>
       </MuiThemeProvider>
     </ProviderWrapper>
   </Sentry.ErrorBoundary>
