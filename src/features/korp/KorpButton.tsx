@@ -7,10 +7,9 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import ViewHeadlineOutlined from '@mui/icons-material/ViewHeadlineOutlined';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 
-import { isLemmaInKorp } from './korpSlice';
+import { isLemmaInKorp } from './korpService';
 
 interface KorpButtonProps {
   language: string;
@@ -20,29 +19,32 @@ interface KorpButtonProps {
   };
 }
 
-interface KorpState {
-  lemmaExists: boolean;
-}
-
-interface RootState {
-  korp: KorpState;
-}
-
 const KorpButton: React.FC<KorpButtonProps> = ({
   language,
   lemma,
   classes,
 }) => {
   const korpLangs = new Set(['sma', 'sme', 'smj', 'smn', 'sms']);
-  const korp = useSelector((state: RootState) => state.korp);
-  const dispatch = useDispatch();
+  const [lemmaExists, setLemmaExists] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const korpAddress = `https://gtweb.uit.no/korp/${language}/#?cqp=[lemma%3D"${lemma}"]&search_tab=1&within=sentence&search=cqp`;
 
   useEffect(() => {
-    dispatch(isLemmaInKorp(language, lemma) as any);
-  }, [dispatch, language, lemma]);
+    const checkLemma = async () => {
+      setIsLoading(true);
+      const exists = await isLemmaInKorp(language, lemma);
+      setLemmaExists(exists);
+      setIsLoading(false);
+    };
 
-  if (korpLangs.has(language) && korp && korp.lemmaExists) {
+    if (korpLangs.has(language)) {
+      checkLemma();
+    } else {
+      setIsLoading(false);
+    }
+  }, [language, lemma]);
+
+  if (korpLangs.has(language) && lemmaExists && !isLoading) {
     return (
       // @ts-ignore - Material-UI v4 compatibility
       <Tooltip

@@ -9,16 +9,14 @@ import {
 } from '@mui/material/styles';
 import { ThemeProvider as StylesThemeProvider } from '@mui/styles';
 import * as Sentry from '@sentry/react';
-import { Store } from 'redux';
 import InterfaceLanguage from './InterfaceLanguage';
 import ProviderWrapper from './ProviderWrapper';
 
 interface RootProps {
-  store: Store;
   client: ApolloClient<any>;
 }
 
-const Root: React.FC<RootProps> = ({ store, client }) => (
+const Root: React.FC<RootProps> = ({ client }) => (
   // @ts-ignore - Sentry ErrorBoundary compatibility with React types
   <Sentry.ErrorBoundary
     fallback={({ error, resetError }) => (
@@ -38,7 +36,7 @@ const Root: React.FC<RootProps> = ({ store, client }) => (
       </>
     )}
   >
-    <ProviderWrapper store={store} client={client}>
+    <ProviderWrapper client={client}>
       <MuiThemeProvider
         theme={responsiveFontSizes(
           createTheme({

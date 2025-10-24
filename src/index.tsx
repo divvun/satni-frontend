@@ -1,7 +1,6 @@
 import * as Sentry from '@sentry/react';
 import { createRoot } from 'react-dom/client';
 import apolloClient from './apolloClient';
-import satniStore from './configureStore';
 import Root from './containers/Root';
 
 Sentry.init({
@@ -12,4 +11,4 @@ const container = document.getElementById('root');
 if (!container) throw new Error('Failed to find the root element');
 
 const root = createRoot(container);
-root.render(<Root store={satniStore} client={apolloClient} />);
+root.render(<Root client={apolloClient} />);

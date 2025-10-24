@@ -10,11 +10,8 @@ import Tooltip from '@mui/material/Tooltip';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 
-import { isTTSAvailable } from './speakerApi';
-import { fetchCachedTTSAudio } from './speakerSlice';
-import type { RootState } from '../../reducers';
+import { fetchCachedTTSAudio } from './speakerService';
 
 interface SpeakerButtonProps {
   text: string;
@@ -34,38 +31,33 @@ const SpeakerButton: React.FC<SpeakerButtonProps> = ({
   classes = {},
 }) => {
   const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
-  const dispatch = useDispatch();
-  const isLoading = useSelector(
-    (state: RootState) => state.speaker?.isFetching || false,
-  );
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleSpeak = async () => {
-    // Check if GiellaLT TTS supports this language
-    if (isTTSAvailable(language)) {
-      const audioUrl = (await dispatch(
-        fetchCachedTTSAudio(text, language) as any,
-      )) as string | null;
+    // Try GiellaLT TTS API first (with caching)
+    setIsLoading(true);
+    const audioUrl = await fetchCachedTTSAudio(text, language);
+    setIsLoading(false);
 
-      if (audioUrl) {
-        // Play the MP3 from the API
-        const audio = new Audio(audioUrl);
+    if (audioUrl) {
+      // Play the MP3 from the API
+      const audio = new Audio(audioUrl);
 
-        audio.onplay = () => {
-          setIsSpeaking(true);
-        };
+      audio.onplay = () => {
+        setIsSpeaking(true);
+      };
 
-        audio.onended = () => {
-          setIsSpeaking(false);
-        };
+      audio.onended = () => {
+        setIsSpeaking(false);
+      };
 
-        audio.onerror = () => {
-          setIsSpeaking(false);
-          console.error('Error playing audio');
-        };
+      audio.onerror = () => {
+        setIsSpeaking(false);
+        console.error('Error playing audio');
+      };
 
-        audio.play();
-        return;
-      }
+      audio.play();
+      return;
     }
 
     // Fallback to browser speech synthesis for other languages
