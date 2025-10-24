@@ -30,18 +30,13 @@ module.exports = {
         'process.browser': true,
         React: 'globalThis.React',
       },
-      esbuild: {
-        loader: 'jsx',
-        include: /\.(js|jsx)$/,
-        jsxFactory: 'React.createElement',
-        jsxFragment: 'React.Fragment',
-      },
       optimizeDeps: {
         include: ['react', 'react-dom'],
         esbuildOptions: {
           loader: {
             '.js': 'jsx',
-            '.ts': 'ts',
+            '.jsx': 'jsx',
+            '.ts': 'tsx',
             '.tsx': 'tsx',
           },
           define: {
