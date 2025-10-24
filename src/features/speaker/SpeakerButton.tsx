@@ -92,25 +92,29 @@ const SpeakerButton: React.FC<SpeakerButtonProps> = ({
     }
   };
 
+  const isDisabled = isSpeaking || isLoading;
+
   return (
     // @ts-ignore - Material-UI v4 compatibility
     <Tooltip title={<Trans>Listen to pronunciation</Trans>}>
-      {/* @ts-ignore - Material-UI v4 compatibility */}
-      <IconButton
-        className={classes?.icons}
-        onClick={handleSpeak}
-        disabled={isSpeaking || isLoading}
-        size="small"
-        aria-label="speak text"
-      >
-        {isLoading ? (
-          // @ts-ignore - Material-UI v4 compatibility
-          <CircularProgress size={20} />
-        ) : (
-          // @ts-ignore - Material-UI v4 compatibility
-          <VolumeUpIcon fontSize="small" />
-        )}
-      </IconButton>
+      <span>
+        {/* @ts-ignore - Material-UI v4 compatibility */}
+        <IconButton
+          className={classes?.icons}
+          onClick={handleSpeak}
+          disabled={isDisabled}
+          size="small"
+          aria-label="speak text"
+        >
+          {isLoading ? (
+            // @ts-ignore - Material-UI v4 compatibility
+            <CircularProgress size={20} />
+          ) : (
+            // @ts-ignore - Material-UI v4 compatibility
+            <VolumeUpIcon fontSize="small" />
+          )}
+        </IconButton>
+      </span>
     </Tooltip>
   );
 };
