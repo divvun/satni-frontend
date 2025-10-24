@@ -20,7 +20,6 @@ const WildCard: React.FC = () => {
 
       <Tooltip
         title={<Trans>Search words that start with your search term</Trans>}
-        aria-label={<Trans>Search mode</Trans>}
       >
         <Radio
           checked={searchMode === 'start'}
@@ -31,7 +30,6 @@ const WildCard: React.FC = () => {
       </Tooltip>
       <Tooltip
         title={<Trans>Search words that contain your search term</Trans>}
-        aria-label={<Trans>Search mode</Trans>}
       >
         <Radio
           checked={searchMode === 'middle'}
@@ -42,7 +40,6 @@ const WildCard: React.FC = () => {
       </Tooltip>
       <Tooltip
         title={<Trans>Search words that end in your search term</Trans>}
-        aria-label={<Trans>Search mode</Trans>}
       >
         <Radio
           checked={searchMode === 'end'}

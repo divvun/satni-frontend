@@ -111,11 +111,9 @@ const FilterBar: React.FC<FilterBarProps> = ({
     <Paper component="div" className={classes.root}>
       <Tooltip
         title={<Trans>Sámi letters</Trans>}
-        aria-label={<Trans>Sámi letters</Trans>}
       >
         <IconButton
           className={classes.iconButton}
-          aria-label={<Trans>sámi keys</Trans>}
           aria-describedby={idSamiKey}
           onClick={handleOpenSamiKey}
         >
@@ -129,11 +127,9 @@ const FilterBar: React.FC<FilterBarProps> = ({
       />
       <Tooltip
         title={<Trans>Lookup the search word</Trans>}
-        aria-label={<Trans>Lookup the search word</Trans>}
       >
         <IconButton
           className={classes.iconButton}
-          aria-label={<Trans>Search</Trans>}
           onClick={lookup}
         >
           <SearchIcon />

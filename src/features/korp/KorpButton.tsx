@@ -43,10 +43,7 @@ const KorpButton: React.FC<KorpButtonProps> = ({
 
   if (korpLangs.has(language) && lemmaExists && !isLoading) {
     return (
-      <Tooltip
-        title={<Trans>Show this word in our corpus</Trans>}
-        aria-label={<Trans>Show this word in our corpus</Trans>}
-      >
+      <Tooltip title={<Trans>Show this word in our corpus</Trans>}>
         <IconButton
           className={classes.icons}
           component="span"
@@ -67,10 +64,7 @@ const KorpButton: React.FC<KorpButtonProps> = ({
   }
 
   return (
-    <Tooltip
-      title={<Trans>This word is not found in our corpus</Trans>}
-      aria-label={<Trans>This word is not found in our corpus</Trans>}
-    >
+    <Tooltip title={<Trans>This word is not found in our corpus</Trans>}>
       <span>
         <IconButton
           disabled

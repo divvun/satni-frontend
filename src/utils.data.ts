@@ -36,7 +36,7 @@ export interface TranslationLemmaNode {
   language: string;
   pos: string;
   dialect: string | null;
-  country?: string;
+  country?: string | null;
 }
 
 export interface RestrictionData {

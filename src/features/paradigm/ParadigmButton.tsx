@@ -67,10 +67,7 @@ const ParadigmButton: React.FC<ParadigmButtonProps> = ({
     !isLoading
   ) {
     return (
-      <Tooltip
-        title={<Trans>Show paradigm for this word</Trans>}
-        aria-label={<Trans>Show paradigm for this word</Trans>}
-      >
+      <Tooltip title={<Trans>Show paradigm for this word</Trans>}>
         <IconButton
           className={classes.icons}
           component="span"
@@ -85,10 +82,7 @@ const ParadigmButton: React.FC<ParadigmButtonProps> = ({
   }
 
   return (
-    <Tooltip
-      title={<Trans>There is no paradigm for this word</Trans>}
-      aria-label={<Trans>There is no paradigm for this word</Trans>}
-    >
+    <Tooltip title={<Trans>There is no paradigm for this word</Trans>}>
       <span>
         <IconButton
           disabled
