@@ -1,14 +1,12 @@
-import React from 'react';
 import { Trans } from '@lingui/macro';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
-
-import { availableLanguages } from '../../utils';
 import setSrcLangs from '../../operations/mutations/setSrcLangs';
 import setTargetLangs from '../../operations/mutations/setTargetLangs';
+import { availableLanguages } from '../../utils';
 
 const LangChooser = ({ langs }) => {
   const samiLanguages = new Set(['sma', 'sme', 'smj', 'smn', 'sms']);

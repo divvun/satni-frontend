@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { I18n } from '@lingui/react';
 import { t } from '@lingui/macro';
+import { I18n } from '@lingui/react';
 import InputBase from '@material-ui/core/InputBase';
+import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   input: {

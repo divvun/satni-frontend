@@ -1,5 +1,3 @@
-import React from 'react';
-
 import LemmaGroup from './LemmaGroup';
 
 const term = {

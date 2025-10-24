@@ -1,9 +1,9 @@
 import { useQuery } from '@apollo/client';
 import { useLocation } from 'react-router-dom';
-import { locationParser } from '../../utils';
+import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
 import GET_LEMMAS from '../../operations/queries/getLemmas';
 import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
-import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
+import { locationParser } from '../../utils';
 
 function useStems(inputValue) {
   const searchModeQueryResult = useQuery(GET_SEARCH_MODE);

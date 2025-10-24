@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { t } from '@lingui/macro';
 
-const dicts = [
+const _dicts = [
   t`termwiki`,
   t`gtsmenob`,
   t`gtnobsme`,
@@ -25,9 +25,9 @@ const dicts = [
   t`gtrussms`,
 ];
 
-const partOfSpeech = [t`N`, t`V`, t`A`, t`Adv`, t`Pron`];
+const _partOfSpeech = [t`N`, t`V`, t`A`, t`Adv`, t`Pron`];
 
-const languageCodes = [
+const _languageCodes = [
   t`en`,
   t`eng`,
   t`fi`,
@@ -48,11 +48,11 @@ const languageCodes = [
   t`rus`,
 ];
 
-const contryCodes = [t`FI`, t`SE`, t`NO`];
+const _contryCodes = [t`FI`, t`SE`, t`NO`];
 
-const dialects = [t`east`, t`west`, t`north`, t`south`];
+const _dialects = [t`east`, t`west`, t`north`, t`south`];
 
-const languageCodesGenitive = [
+const _languageCodesGenitive = [
   t`en_genitive`,
   t`eng_genitive`,
   t`fi_genitive`,
@@ -72,7 +72,7 @@ const languageCodesGenitive = [
   t`lat_genitive`,
 ];
 
-const categories = [
+const _categories = [
   t`Beaivválaš giella`,
   t`Boazodoallu`,
   t`Dihtorteknologiija ja diehtoteknihkka`,

@@ -1,11 +1,9 @@
-import React from 'react';
-
-import TermWikiArticle from './TermWikiArticle';
 import {
   multilingualconceptListsByNames,
   orderedMultilingualConcept,
 } from 'utils';
 import { conceptList } from 'utils.data';
+import TermWikiArticle from './TermWikiArticle';
 
 const lemma = 'vuorká';
 const termsByNames = multilingualconceptListsByNames(conceptList);

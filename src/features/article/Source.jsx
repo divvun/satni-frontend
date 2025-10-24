@@ -1,12 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
-
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import PropTypes from 'prop-types';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { wantedDictsVar } from '../../apolloCache';
 

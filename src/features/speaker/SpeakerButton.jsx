@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import IconButton from '@material-ui/core/IconButton';
-import VolumeUpIcon from '@material-ui/icons/VolumeUp';
-import Tooltip from '@material-ui/core/Tooltip';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import { Trans } from '@lingui/macro';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
+import VolumeUpIcon from '@material-ui/icons/VolumeUp';
+import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 import { fetchTTSAudio, isTTSAvailable } from './speakerApi';
 
@@ -76,7 +76,7 @@ const SpeakerButton = ({ text, language, classes }) => {
   return (
     <Tooltip title={<Trans>Listen to pronunciation</Trans>}>
       <IconButton
-        className={classes && classes.icons}
+        className={classes?.icons}
         onClick={handleSpeak}
         disabled={isSpeaking || isLoading}
         size="small"

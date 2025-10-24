@@ -1,11 +1,12 @@
 /* eslint-disable react/no-array-index-key */
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { useLocation } from 'react-router-dom';
+
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { hasAvailableDict } from '../../utils';
 import DictTargetStem from './DictTargetStem';

@@ -1,16 +1,14 @@
-import React from 'react';
-import * as Sentry from '@sentry/react';
 import { ApolloClient } from '@apollo/client';
+import Button from '@material-ui/core/Button';
 import {
   createMuiTheme,
-  responsiveFontSizes,
   ThemeProvider as MuiThemeProvider,
+  responsiveFontSizes,
 } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import * as Sentry from '@sentry/react';
 import PropTypes from 'prop-types';
-
-import ProviderWrapper from './ProviderWrapper';
 import InterfaceLanguage from './InterfaceLanguage';
+import ProviderWrapper from './ProviderWrapper';
 
 const Root = ({ store, client }) => (
   <Sentry.ErrorBoundary

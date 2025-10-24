@@ -1,16 +1,14 @@
-import React from 'react';
+import { useQuery } from '@apollo/client';
 import { Trans } from '@lingui/macro';
 import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 import InfoOutlined from '@material-ui/icons/InfoOutlined';
 import PropTypes from 'prop-types';
-import Tooltip from '@material-ui/core/Tooltip';
-import { useQuery } from '@apollo/client';
-
+import GET_NOUN from '../../operations/queries/getNoun';
 import { tableRowToParadigmList } from '../../utils';
 import { AdjTableRows } from './AdjParadigm';
 import { NounTableRows } from './NounParadigm';
 import { VerbTableRows } from './VerbParadigm';
-import GET_NOUN from '../../operations/queries/getNoun';
 
 const tableDict = {
   A: AdjTableRows,

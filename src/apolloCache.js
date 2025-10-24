@@ -1,7 +1,7 @@
 import { InMemoryCache, makeVar } from '@apollo/client';
 import { relayStylePagination } from '@apollo/client/utilities';
-import { availableLanguages } from './utils';
 import dictionaryInfo from './translateble_variables';
+import { availableLanguages } from './utils';
 
 export const availableDictsVar = makeVar(Object.keys(dictionaryInfo));
 

@@ -1,16 +1,15 @@
 /* eslint-disable react/no-array-index-key */
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Trans } from '@lingui/macro';
-import { useLocation } from 'react-router-dom';
 
+import { Trans } from '@lingui/macro';
 import Paper from '@material-ui/core/Paper';
-import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import PropTypes from 'prop-types';
+import { useLocation } from 'react-router-dom';
 
 import { hasAvailableDict } from '../../utils';
 import Source from './Source';

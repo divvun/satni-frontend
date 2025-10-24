@@ -1,5 +1,3 @@
-import React from 'react';
-
 import WildCard from './WildCard';
 
 export default {

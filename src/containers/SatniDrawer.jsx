@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
+import { ListSubheader } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
-import FeedbackIcon from '@material-ui/icons/Feedback';
 import Hidden from '@material-ui/core/Hidden';
-import LanguageIcon from '@material-ui/icons/Language';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import { makeStyles } from '@material-ui/core/styles';
+import FeedbackIcon from '@material-ui/icons/Feedback';
+import LanguageIcon from '@material-ui/icons/Language';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
-import PropTypes from 'prop-types';
 import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
 import TranslateIcon from '@material-ui/icons/Translate';
-import { ListSubheader } from '@material-ui/core';
-
+import PropTypes from 'prop-types';
+import { useState } from 'react';
+import SpeakerChooserDialog from '../features/speaker/SpeakerChooserDialog';
 import DictChooserDialog from '../features/wantedlangs/DictChooserDialog';
 import LangChooserDialog from '../features/wantedlangs/LangChooserDialog';
-import SpeakerChooserDialog from '../features/speaker/SpeakerChooserDialog';
 import MetaLanguageSelector from './MetaLanguageSelector';
 
 const Footer = () => (

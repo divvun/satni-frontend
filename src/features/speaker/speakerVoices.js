@@ -25,7 +25,7 @@ export const getSelectedVoice = (language) => {
     try {
       const voices = JSON.parse(storedVoices);
       return voices[language] || defaultVoices[language];
-    } catch (e) {
+    } catch (_e) {
       return defaultVoices[language];
     }
   }
@@ -40,7 +40,7 @@ export const getAllSelectedVoices = () => {
   if (storedVoices) {
     try {
       return { ...defaultVoices, ...JSON.parse(storedVoices) };
-    } catch (e) {
+    } catch (_e) {
       return defaultVoices;
     }
   }

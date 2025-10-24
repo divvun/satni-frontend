@@ -1,5 +1,3 @@
-import React from 'react';
-
 import VerbParadigm from './VerbParadigm';
 
 const paradigm = {
@@ -155,7 +153,7 @@ export default {
 };
 
 export const SouthSaamiVerbs = () => (
-  <VerbParadigm paradigm={paradigm['sma']} language="sma" />
+  <VerbParadigm paradigm={paradigm.sma} language="sma" />
 );
 
 SouthSaamiVerbs.story = {
@@ -163,7 +161,7 @@ SouthSaamiVerbs.story = {
 };
 
 export const NorthSaamiVerbs = () => (
-  <VerbParadigm paradigm={paradigm['sme']} language="sme" />
+  <VerbParadigm paradigm={paradigm.sme} language="sme" />
 );
 
 NorthSaamiVerbs.story = {
@@ -171,7 +169,7 @@ NorthSaamiVerbs.story = {
 };
 
 export const LuleSaamiVerbs = () => (
-  <VerbParadigm paradigm={paradigm['smj']} language="smj" />
+  <VerbParadigm paradigm={paradigm.smj} language="smj" />
 );
 
 LuleSaamiVerbs.story = {
@@ -179,7 +177,7 @@ LuleSaamiVerbs.story = {
 };
 
 export const InariSaamiVerbs = () => (
-  <VerbParadigm paradigm={paradigm['smn']} language="smn" />
+  <VerbParadigm paradigm={paradigm.smn} language="smn" />
 );
 
 InariSaamiVerbs.story = {
@@ -187,7 +185,7 @@ InariSaamiVerbs.story = {
 };
 
 export const SkoltSaamiVerbs = () => (
-  <VerbParadigm paradigm={paradigm['sms']} language="sms" />
+  <VerbParadigm paradigm={paradigm.sms} language="sms" />
 );
 
 SkoltSaamiVerbs.story = {

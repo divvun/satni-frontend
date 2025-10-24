@@ -1,5 +1,3 @@
-import React from 'react';
-
 import PresentationLemma from './PresentationLemma';
 
 export default {

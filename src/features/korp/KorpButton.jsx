@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
 import { Trans } from '@lingui/macro';
-import { useDispatch, useSelector } from 'react-redux';
-
 import IconButton from '@material-ui/core/IconButton';
-import PropTypes from 'prop-types';
 import Tooltip from '@material-ui/core/Tooltip';
 import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
+import PropTypes from 'prop-types';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { isLemmaInKorp } from './korpSlice';
 

@@ -1,12 +1,12 @@
 /* eslint-disable react/no-array-index-key */
-import React from 'react';
-import PropTypes from 'prop-types';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import PropTypes from 'prop-types';
 
 import SpeakerButton from '../speaker/SpeakerButton';
 
@@ -43,22 +43,18 @@ const MyTableRow = ({ analyses, name, values, language }) => {
       {values.length > 1 &&
         values.map((value, index1) => (
           <TableCell key={index1}>
-            {analyses[value] &&
-              analyses[value].map((analysis, index) => (
-                <div
-                  key={`${analysis}_${index}`}
-                  className={classes.analysisRow}
-                >
-                  {['sme', 'sma', 'smj'].includes(language) && (
-                    <SpeakerButton
-                      text={` ${analysis},`}
-                      language={language}
-                      classes={{ icons: '' }}
-                    />
-                  )}
-                  <span>{analysis}</span>
-                </div>
-              ))}
+            {analyses[value]?.map((analysis, index) => (
+              <div key={`${analysis}_${index}`} className={classes.analysisRow}>
+                {['sme', 'sma', 'smj'].includes(language) && (
+                  <SpeakerButton
+                    text={` ${analysis},`}
+                    language={language}
+                    classes={{ icons: '' }}
+                  />
+                )}
+                <span>{analysis}</span>
+              </div>
+            ))}
           </TableCell>
         ))}
     </TableRow>

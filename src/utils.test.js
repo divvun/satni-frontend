@@ -1,4 +1,3 @@
-import { conceptList, dictEntryList } from './utils.data';
 import {
   cleanFrom,
   dictBackend2Frontend,
@@ -9,6 +8,7 @@ import {
   multilingualconceptListsByNames,
   orderedMultilingualConcept,
 } from './utils';
+import { conceptList, dictEntryList } from './utils.data';
 
 describe('Massage termwiki data from backend', () => {
   it('Order concept list by concept names', () => {
@@ -951,9 +951,10 @@ describe('Massage termwiki data from backend', () => {
   });
 
   it('Order the multilingual concept by lemma and language', () => {
-    const got = multilingualconceptListsByNames(conceptList)[
-      'Dihtorteknologiija ja diehtoteknihkka:fiila'
-    ];
+    const got =
+      multilingualconceptListsByNames(conceptList)[
+        'Dihtorteknologiija ja diehtoteknihkka:fiila'
+      ];
     const want = [
       {
         collections: [

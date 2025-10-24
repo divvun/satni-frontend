@@ -1,5 +1,3 @@
-import React from 'react';
-
 import DictArticle from './DictArticle';
 
 const dictGroup = {

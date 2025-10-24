@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Definitions from './Definitions';
 
 const termGroup = {

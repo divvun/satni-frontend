@@ -1,13 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/Typography';
 import { useQuery } from '@apollo/client';
-
+import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
+import GET_NOUN from '../../operations/queries/getNoun';
 import { filterParadigm, tableRowToParadigmList } from '../../utils';
 import AdjParadigm, { AdjTableRows } from './AdjParadigm';
 import NounParadigm, { NounTableRows } from './NounParadigm';
 import VerbParadigm, { VerbTableRows } from './VerbParadigm';
-import GET_NOUN from '../../operations/queries/getNoun';
 
 const langs = new Set(['fin', 'sma', 'sme', 'smj', 'smn', 'sms']);
 const poses = new Set(['N', 'V', 'A']);

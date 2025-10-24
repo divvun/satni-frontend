@@ -1,5 +1,3 @@
-import React from 'react';
-
 import NounParadigm from './NounParadigm';
 
 const paradigm = {

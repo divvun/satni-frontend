@@ -1,8 +1,7 @@
-import React from 'react';
-import { ApolloProvider, ApolloClient } from '@apollo/client';
+import { ApolloClient, ApolloProvider } from '@apollo/client';
+import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 const ProviderWrapper = ({ children, store, client }) => (
   <ApolloProvider client={client}>

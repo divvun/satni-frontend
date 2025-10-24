@@ -1,20 +1,18 @@
-import React from 'react';
 import { useQuery } from '@apollo/client';
-import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
-import CloseIcon from '@material-ui/icons/Close';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import IconButton from '@material-ui/core/IconButton';
-import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-
-import DictChooser from './DictChooser';
-import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
+import CloseIcon from '@material-ui/icons/Close';
+import PropTypes from 'prop-types';
 import setWantedDicts from '../../operations/mutations/setWantedDicts';
+import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
+import DictChooser from './DictChooser';
 
 const useStyles = makeStyles((theme) => ({
   root: {

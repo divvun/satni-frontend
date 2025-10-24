@@ -1,12 +1,11 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
+import { useLocation } from 'react-router-dom';
+import { locationParser } from '../../utils';
 import DictArticles from './DictArticles';
 import TermArticles from './TermArticles';
-import { locationParser } from '../../utils';
 
 const useStyles = makeStyles((theme) => ({
   articles: {

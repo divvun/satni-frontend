@@ -1,10 +1,9 @@
-import React from 'react';
-import * as Sentry from '@sentry/react';
-import { withStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
-
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { withStyles } from '@material-ui/core/styles';
+import * as Sentry from '@sentry/react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import SatniAppBar from './SatniAppBar';
 import SatniDrawer from './SatniDrawer';

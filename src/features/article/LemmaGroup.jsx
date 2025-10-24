@@ -1,8 +1,7 @@
-import React from 'react';
 import { Trans } from '@lingui/macro';
 import Box from '@material-ui/core/Box';
-import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
 
 import Stem from './Stem';
 

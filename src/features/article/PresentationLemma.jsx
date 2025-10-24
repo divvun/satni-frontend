@@ -1,8 +1,9 @@
 /* eslint-disable react/no-array-index-key */
-import React from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const useStyles = makeStyles({
   lemma: {
@@ -41,11 +42,7 @@ const Parts = ({ lemma, classes }) => {
 const PresentationLemma = ({ presentationLemma }) => {
   const classes = useStyles();
 
-  return (
-    <>
-      <Parts lemma={presentationLemma} classes={classes} />
-    </>
-  );
+  return <Parts lemma={presentationLemma} classes={classes} />;
 };
 
 PresentationLemma.propTypes = {

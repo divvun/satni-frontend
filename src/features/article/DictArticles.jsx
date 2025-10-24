@@ -1,11 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 import { Trans } from '@lingui/macro';
+import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
-import { locationParser } from '../../utils';
 import GET_DICT_ARTICLES from '../../operations/queries/getDictArticles';
 import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
+import { locationParser } from '../../utils';
 import PresentDictArticles from './PresentDictArticles';
 
 const DictArticles = ({ lemma }) => {

@@ -1,12 +1,10 @@
-import React from 'react';
 import { useQuery } from '@apollo/client';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
-
-import GET_INTERFACE_LANGUAGE from '../operations/queries/getInterfaceLanguage';
 import setInterfaceLanguage from '../operations/mutations/setInterfaceLanguage';
+import GET_INTERFACE_LANGUAGE from '../operations/queries/getInterfaceLanguage';
 
 const MetaLanguageSelector = () => {
   const interfaceLanguageQueryResult = useQuery(GET_INTERFACE_LANGUAGE);

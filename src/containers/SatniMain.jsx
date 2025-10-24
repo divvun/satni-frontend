@@ -1,15 +1,12 @@
-import React from 'react';
-import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
-import PropTypes from 'prop-types';
-
 import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
 import qs from 'qs';
-
-import { locationParser } from '../utils';
+import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import Articles from '../features/article/Articles';
 import InfiniteStems from '../features/infinitestems/InfiniteStems';
-import StatusBar from './StatusBar';
 import FilterBar from '../features/search/FilterBar';
+import { locationParser } from '../utils';
+import StatusBar from './StatusBar';
 import { WelcomeHeader } from './Welcome';
 
 const SatniMain = ({ searchExpression, setSearchExpression }) => {

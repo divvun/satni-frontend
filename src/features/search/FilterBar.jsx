@@ -1,21 +1,20 @@
-import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
-import { useHistory, useLocation } from 'react-router-dom';
-import PropTypes from 'prop-types';
-
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import KeyboardIcon from '@material-ui/icons/Keyboard';
-import MoreVert from '@material-ui/icons/MoreVert';
 import Paper from '@material-ui/core/Paper';
 import Popover from '@material-ui/core/Popover';
-import SearchIcon from '@material-ui/icons/Search';
+import { fade, makeStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
+import KeyboardIcon from '@material-ui/icons/Keyboard';
+import MoreVert from '@material-ui/icons/MoreVert';
+import SearchIcon from '@material-ui/icons/Search';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 
 import { locationParser } from '../../utils';
-import SamiKeys from './SamiKeys';
 import InputWithTranslation from './InputWithTranslation';
+import SamiKeys from './SamiKeys';
 import WildCard from './WildCard';
 
 export const useStyles = makeStyles((theme) => ({

@@ -1,12 +1,12 @@
 /* eslint-disable react/no-array-index-key */
-import React from 'react';
-import PropTypes from 'prop-types';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import PropTypes from 'prop-types';
 
 import SpeakerButton from '../speaker/SpeakerButton';
 
@@ -380,7 +380,7 @@ Content.propTypes = {
 };
 
 const VerbParadigm = ({ paradigm, language }) => {
-  if (paradigm && paradigm.analyses) {
+  if (paradigm?.analyses) {
     return <Content analyses={paradigm.analyses} language={language} />;
   }
   return <div>Paradigm undefined {language}</div>;

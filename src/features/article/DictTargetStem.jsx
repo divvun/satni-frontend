@@ -1,13 +1,11 @@
-import React from 'react';
 import { useQuery } from '@apollo/client';
-import { useLocation } from 'react-router-dom';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import PropTypes from 'prop-types';
-
-import Stem from './Stem';
-import { locationParser } from '../../utils';
-import HAS_STEM from '../../operations/queries/hasStem';
+import { useLocation } from 'react-router-dom';
 import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
+import HAS_STEM from '../../operations/queries/hasStem';
+import { locationParser } from '../../utils';
+import Stem from './Stem';
 
 const DictTargetStem = ({ stem, restriction }) => {
   const { lemma } = stem;

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import apolloClient from 'apolloClient';
 import satniStore from 'configureStore';
 import ProviderWrapper from 'containers/ProviderWrapper';

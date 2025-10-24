@@ -1,11 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 import { Trans } from '@lingui/macro';
-import GET_TERM_ARTICLES from '../../operations/queries/getTermArticles';
+import PropTypes from 'prop-types';
 import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
-import PresentTermArticles from './PresentTermArticles';
+import GET_TERM_ARTICLES from '../../operations/queries/getTermArticles';
 import { multilingualconceptListsByNames } from '../../utils';
+import PresentTermArticles from './PresentTermArticles';
 
 const TermArticles = ({ lemma }) => {
   const langsDictsResult = useQuery(GET_LANGS_DICTS);

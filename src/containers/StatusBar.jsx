@@ -1,13 +1,11 @@
-import React from 'react';
 import { useQuery } from '@apollo/client';
-import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
-import { Link, useLocation } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-
-import { availableLanguages, locationParser } from '../utils';
-import dictionaryInfo from '../translateble_variables';
+import { Link, useLocation } from 'react-router-dom';
 import GET_LANGS_DICTS from '../operations/queries/getLangsDicts';
+import dictionaryInfo from '../translateble_variables';
+import { availableLanguages, locationParser } from '../utils';
 
 const useStyles = makeStyles((theme) => ({
   status: {

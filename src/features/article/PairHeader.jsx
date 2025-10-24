@@ -1,12 +1,10 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
-
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
 
 // import { wantedLangsVar } from '../../apolloCache';
 

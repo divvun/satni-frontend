@@ -23,11 +23,8 @@ const korpSlice = createSlice({
   },
 });
 
-export const {
-  getKorpStart,
-  getKorpSuccess,
-  getKorpFailure,
-} = korpSlice.actions;
+export const { getKorpStart, getKorpSuccess, getKorpFailure } =
+  korpSlice.actions;
 
 export default korpSlice.reducer;
 

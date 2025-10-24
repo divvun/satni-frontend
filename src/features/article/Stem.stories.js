@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Stem from './Stem';
 
 const stem = {

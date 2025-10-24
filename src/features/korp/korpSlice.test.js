@@ -1,7 +1,7 @@
 import korp, {
+  getKorpFailure,
   getKorpStart,
   getKorpSuccess,
-  getKorpFailure,
 } from './korpSlice';
 
 describe('reducers', () => {

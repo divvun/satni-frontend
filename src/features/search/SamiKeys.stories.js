@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SamiKeys from './SamiKeys';
 
 export default {

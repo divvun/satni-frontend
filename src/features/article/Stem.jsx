@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { Trans } from '@lingui/macro';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import KorpButton from '../korp/KorpButton';
 import ParadigmButton from '../paradigm/ParadigmButton';

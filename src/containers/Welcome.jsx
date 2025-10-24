@@ -1,16 +1,14 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { useLocation } from 'react-router-dom';
-
 import { Trans } from '@lingui/macro';
+import Link from '@material-ui/core/Link';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import InfoOutlined from '@material-ui/icons/InfoOutlined';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
 import LanguageIcon from '@material-ui/icons/Language';
-import Link from '@material-ui/core/Link';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import ViewHeadlineOutlined from '@material-ui/icons/ViewHeadlineOutlined';
+import { useLocation } from 'react-router-dom';
 
 import dictionaryInfo from '../translateble_variables';
 import { locationParser } from '../utils';
@@ -54,13 +52,11 @@ export const WelcomeHeader = () => {
       </Typography>
       <Typography component="p" className={classes.list}>
         {currentDict && !currentLemma ? (
-          <>
-            {dictionaryInfo[currentDict].info.map((infoText) => (
-              <Typography key={infoText} className={classes.infoText}>
-                <Trans id={infoText} />
-              </Typography>
-            ))}
-          </>
+          dictionaryInfo[currentDict].info.map((infoText) => (
+            <Typography key={infoText} className={classes.infoText}>
+              <Trans id={infoText} />
+            </Typography>
+          ))
         ) : (
           <Trans>
             Do searches in{' '}

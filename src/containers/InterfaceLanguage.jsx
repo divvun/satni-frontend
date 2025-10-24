@@ -1,12 +1,13 @@
-/* eslint-disable */
-import React, { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { I18nProvider } from '@lingui/react';
-import AsyncApp from './AsyncApp';
+import { useEffect, useState } from 'react';
 import GET_INTERFACE_LANGUAGE from '../operations/queries/getInterfaceLanguage';
+import AsyncApp from './AsyncApp';
 
 async function loadMessages(language) {
-  return import(/* @vite-ignore */ `@lingui/loader!locales/${language}/messages.po`);
+  return import(
+    /* @vite-ignore */ `@lingui/loader!locales/${language}/messages.po`
+  );
 }
 
 const InterfaceLanguage = () => {
@@ -22,7 +23,7 @@ const InterfaceLanguage = () => {
   useEffect(() => {
     const fetchCatalog = () => handleLanguageChange(interfaceLanguage);
     fetchCatalog();
-  }, [interfaceLanguage]);
+  }, [interfaceLanguage, handleLanguageChange]);
 
   return (
     <I18nProvider language={interfaceLanguage} catalogs={catalogs}>
