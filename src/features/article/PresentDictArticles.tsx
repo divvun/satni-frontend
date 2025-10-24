@@ -1,11 +1,22 @@
 /* eslint-disable react/no-array-index-key */
 
-import PropTypes from 'prop-types';
+import React from 'react';
 
-import { dictBackend2Frontend } from '../../utils';
+import {
+  dictBackend2Frontend,
+  type BackendDictArticle,
+} from '../../utils';
 import DictArticle from './DictArticle';
 
-const PresentDictArticles = ({ lemma, dictEntryList }) => (
+interface PresentDictArticlesProps {
+  lemma: string;
+  dictEntryList: BackendDictArticle[];
+}
+
+const PresentDictArticles: React.FC<PresentDictArticlesProps> = ({
+  lemma,
+  dictEntryList,
+}) => (
   <>
     {dictEntryList.map((dictEntry, index) => (
       <DictArticle
@@ -16,10 +27,5 @@ const PresentDictArticles = ({ lemma, dictEntryList }) => (
     ))}
   </>
 );
-
-PresentDictArticles.propTypes = {
-  dictEntryList: PropTypes.shape.isRequired,
-  lemma: PropTypes.string.isRequired,
-};
 
 export default PresentDictArticles;

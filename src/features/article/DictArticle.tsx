@@ -1,14 +1,17 @@
 /* eslint-disable react/no-array-index-key */
 
-import Divider from '@material-ui/core/Divider';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
 import React from 'react';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
+import Divider from '@material-ui/core/Divider';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
+import Grid from '@material-ui/core/Grid';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
+import Paper from '@material-ui/core/Paper';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
+import { makeStyles } from '@material-ui/core/styles';
 import { useLocation } from 'react-router-dom';
 
-import { hasAvailableDict } from '../../utils';
+import { hasAvailableDict, type DictArticle as DictGroup } from '../../utils';
 import DictTargetStem from './DictTargetStem';
 import Examples from './Examples';
 import Source from './Source';
@@ -24,20 +27,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DictArticle = ({ dictGroup, lemma }) => {
+interface DictArticleProps {
+  lemma: string;
+  dictGroup: DictGroup;
+}
+
+const DictArticle: React.FC<DictArticleProps> = ({ dictGroup, lemma }) => {
   const classes = useStyles();
   const { dict, from, to } = dictGroup;
   const { pathname } = useLocation();
 
   return (
+    // @ts-ignore - Material-UI v4 compatibility
     <Paper className={classes.paper} elevation={1}>
+      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Grid container spacing={1}>
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Grid item xs={12}>
           {!hasAvailableDict(pathname) && (
             <Source source={dict} lemma={lemma} />
           )}
+          {/* @ts-ignore - Material-UI v4 compatibility */}
           <Divider />
         </Grid>
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Grid item xs={12}>
           {from.lookupLemmas.map((lookupLemma) =>
             lookupLemma.lemma === lemma ? (
@@ -47,6 +60,7 @@ const DictArticle = ({ dictGroup, lemma }) => {
             ),
           )}
         </Grid>
+        {/* @ts-ignore - Material-UI v4 compatibility */}
         <Grid item xs={12} className={classes.translations}>
           {to.translationGroups.map((translationGroup, i) => (
             <React.Fragment key={i}>
@@ -54,12 +68,16 @@ const DictArticle = ({ dictGroup, lemma }) => {
                 <DictTargetStem
                   key={index}
                   stem={stem}
-                  restriction={translationGroup.restriction}
+                  restriction={
+                    translationGroup.restriction
+                      ? { restriction: translationGroup.restriction }
+                      : undefined
+                  }
                 />
               ))}
               {translationGroup.examples && (
                 <Examples
-                  examples={translationGroup.examples}
+                  examples={translationGroup.examples as any}
                   sourceLanguage={from.language}
                   targetLanguage={to.language}
                 />
@@ -70,11 +88,6 @@ const DictArticle = ({ dictGroup, lemma }) => {
       </Grid>
     </Paper>
   );
-};
-
-DictArticle.propTypes = {
-  lemma: PropTypes.string.isRequired,
-  dictGroup: PropTypes.shape.isRequired,
 };
 
 export default DictArticle;

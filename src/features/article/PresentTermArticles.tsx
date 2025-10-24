@@ -1,11 +1,23 @@
 /* eslint-disable react/no-array-index-key */
 
-import PropTypes from 'prop-types';
+import React from 'react';
 
 import { orderedMultilingualConcept } from '../../utils';
 import TermWikiArticle from './TermWikiArticle';
 
-const PresentTermArticles = ({ lemma, termsByNames }) => (
+interface TermsByNames {
+  [key: string]: any;
+}
+
+interface PresentTermArticlesProps {
+  lemma: string;
+  termsByNames?: TermsByNames;
+}
+
+const PresentTermArticles: React.FC<PresentTermArticlesProps> = ({
+  lemma,
+  termsByNames,
+}) => (
   <>
     {termsByNames &&
       Object.keys(termsByNames).map((name, index) => (
@@ -21,10 +33,5 @@ const PresentTermArticles = ({ lemma, termsByNames }) => (
       ))}
   </>
 );
-
-PresentTermArticles.propTypes = {
-  termsByNames: PropTypes.shape.isRequired,
-  lemma: PropTypes.string.isRequired,
-};
 
 export default PresentTermArticles;

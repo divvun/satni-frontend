@@ -1,8 +1,12 @@
+// @ts-ignore - @lingui/macro has no type definitions
 import { Trans } from '@lingui/macro';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import { makeStyles } from '@material-ui/core/styles';
+// @ts-ignore - Material-UI v4 compatibility with React 17/18
 import Typography from '@material-ui/core/Typography';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
+
 import { locationParser } from '../../utils';
 import DictArticles from './DictArticles';
 import TermArticles from './TermArticles';
@@ -19,13 +23,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Articles = ({ lemma }) => {
+interface ArticlesProps {
+  lemma: string;
+}
+
+const Articles: React.FC<ArticlesProps> = ({ lemma }) => {
   const classes = useStyles();
   const location = useLocation();
   const { currentDict } = locationParser(location.pathname);
 
   return (
     <div>
+      {/* @ts-ignore - Material-UI v4 compatibility */}
       <Typography className={classes.status}>
         <Trans>Results for «{lemma}»</Trans>
       </Typography>
@@ -37,10 +46,6 @@ const Articles = ({ lemma }) => {
       </div>
     </div>
   );
-};
-
-Articles.propTypes = {
-  lemma: PropTypes.string.isRequired,
 };
 
 export default Articles;
