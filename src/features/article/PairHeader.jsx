@@ -28,7 +28,7 @@ const PairHeader = ({ language }) => {
       className={classes.lang1}
       label={
         <Typography variant="subtitle2">
-          <Trans id={language} />
+          <Trans id={language}>{language}</Trans>
         </Typography>
       }
       control={

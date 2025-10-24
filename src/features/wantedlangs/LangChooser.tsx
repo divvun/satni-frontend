@@ -50,7 +50,7 @@ const LangChooser: React.FC<LangChooserProps> = ({ langs }) => {
                     name={lang}
                   />
                 }
-                label={<Trans id={lang} />}
+                label={<Trans id={lang}>{lang}</Trans>}
               />
             ))}
         </FormGroup>
@@ -74,7 +74,7 @@ const LangChooser: React.FC<LangChooserProps> = ({ langs }) => {
                     name={lang}
                   />
                 }
-                label={<Trans id={lang} />}
+                label={<Trans id={lang}>{lang}</Trans>}
               />
             ))}
         </FormGroup>

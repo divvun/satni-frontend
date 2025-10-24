@@ -1,8 +1,6 @@
 import React from 'react';
-// @ts-ignore - @lingui/macro types compatibility
-import { t } from '@lingui/macro';
-// @ts-ignore - @lingui/react types compatibility
-import { I18n } from '@lingui/react';
+import { msg } from '@lingui/macro';
+import { useLingui } from '@lingui/react';
 // @ts-ignore - Material-UI v4 compatibility with React 17/18
 import InputBase from '@mui/material/InputBase';
 import { Theme } from '@mui/material/styles';
@@ -27,6 +25,7 @@ const InputWithTranslation: React.FC<InputWithTranslationProps> = (props) => {
 
   const { value, onChange, onKeyUp } = props;
   const [inputValue, setInputValue] = useState<string>(value);
+  const { _ } = useLingui();
 
   // Custom hook for debouncing
   useEffect(() => {
@@ -50,21 +49,16 @@ const InputWithTranslation: React.FC<InputWithTranslationProps> = (props) => {
   };
 
   return (
-    // @ts-ignore - @lingui/react types compatibility
-    <I18n>
-      {({ i18n }: { i18n: any }) => (
-        // @ts-ignore - Material-UI v4 compatibility
-        <InputBase
-          autoFocus
-          value={inputValue}
-          onChange={handleInputChange}
-          onKeyUp={onKeyUp}
-          placeholder={i18n._(t`Write at least one letter here`)}
-          className={classes.input}
-          inputProps={{ 'aria-label': 'search' }}
-        />
-      )}
-    </I18n>
+    // @ts-ignore - Material-UI v4 compatibility
+    <InputBase
+      autoFocus
+      value={inputValue}
+      onChange={handleInputChange}
+      onKeyUp={onKeyUp}
+      placeholder={_(msg`Write at least one letter here`)}
+      className={classes.input}
+      inputProps={{ 'aria-label': 'search' }}
+    />
   );
 };
 

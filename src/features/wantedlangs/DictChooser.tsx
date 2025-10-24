@@ -62,7 +62,7 @@ const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
           >
             {/* @ts-ignore - Material-UI v4 compatibility */}
             <FormControlLabel
-              aria-label={<Trans id={dict} />}
+              aria-label={dict}
               onClick={(event) => event.stopPropagation()}
               onFocus={(event) => event.stopPropagation()}
               control={
@@ -73,7 +73,7 @@ const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
                   name={dict}
                 />
               }
-              label={<Trans id={dict} />}
+              label={<Trans id={dict}>{dict}</Trans>}
             />
           </AccordionSummary>
           {/* @ts-ignore - Material-UI v4 compatibility */}
@@ -81,7 +81,7 @@ const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
             {(dictionaryInfo as any)[dict]?.info?.map((infoText: string) => (
               // @ts-ignore - Material-UI v4 compatibility
               <Typography key={infoText} className={classes.infoText}>
-                <Trans id={infoText} />
+                <Trans id={infoText}>{infoText}</Trans>
               </Typography>
             ))}
           </AccordionDetails>

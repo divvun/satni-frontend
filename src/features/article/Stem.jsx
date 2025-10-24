@@ -73,7 +73,7 @@ const Stem = ({ stem, restriction, withLink }) => {
                   color="textSecondary"
                   className={classes.pos}
                 >
-                  (<Trans id={pos} />)
+                  (<Trans id={pos}>{pos}</Trans>)
                 </Typography>
               )}
               {['sme', 'sma', 'smj'].includes(language) && (
@@ -106,12 +106,12 @@ const Stem = ({ stem, restriction, withLink }) => {
         <Typography>
           {dialect && (
             <Typography component="span">
-              <Trans>Dialect</Trans>: <Trans id={dialect} />{' '}
+              <Trans>Dialect</Trans>: <Trans id={dialect}>{dialect}</Trans>{' '}
             </Typography>
           )}
           {country && (
             <Typography component="span">
-              <Trans>Country</Trans>: <Trans id={country} />
+              <Trans>Country</Trans>: <Trans id={country}>{country}</Trans>
             </Typography>
           )}
         </Typography>

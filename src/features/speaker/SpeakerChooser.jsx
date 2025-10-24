@@ -20,7 +20,7 @@ const SpeakerChooser = ({ selectedVoices, onVoiceChange }) => {
         <Grid item xs={12} sm={4} key={language}>
           <FormControl component="fieldset">
             <FormLabel component="legend">
-              <Trans id={language} />
+              <Trans id={language}>{language}</Trans>
             </FormLabel>
             <RadioGroup
               aria-label={`voice-${language}`}

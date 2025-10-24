@@ -20,7 +20,7 @@ const dictStatus = (wantedDicts, currentLemma) => {
   if (wantedDicts.length === 1) {
     return (
       <>
-        <Trans>Results only from</Trans> <Trans id={wantedDicts[0]} />{' '}
+        <Trans>Results only from</Trans> <Trans id={wantedDicts[0]}>{wantedDicts[0]}</Trans>{' '}
         <Trans>
           (<Link to={`/${currentLemma}`}>Show all</Link>)
         </Trans>

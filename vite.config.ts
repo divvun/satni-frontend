@@ -10,6 +10,24 @@ export default defineConfig({
         plugins: ['macros'],
       },
     }),
+    // Transform Lingui message files from CommonJS to ES modules
+    {
+      name: 'transform-lingui-messages',
+      transform(code, id) {
+        // Only process message.js files from locales
+        if (id.includes('/locales/') && id.endsWith('/messages.js')) {
+          // Convert module.exports to export default (handle with or without space)
+          const transformed = code.replace(
+            /module\.exports\s*=/,
+            'export default ',
+          );
+          return {
+            code: transformed,
+            map: null,
+          };
+        }
+      },
+    },
   ],
   resolve: {
     alias: {

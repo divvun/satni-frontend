@@ -47,7 +47,7 @@ export const WelcomeHeader = () => {
     <Paper className={classes.welcome}>
       <Typography variant="h5" className={classes.heading}>
         {currentDict && !currentLemma ? (
-          <Trans id={currentDict} />
+          <Trans id={currentDict}>{currentDict}</Trans>
         ) : (
           <Trans>Welcome!</Trans>
         )}
@@ -57,7 +57,7 @@ export const WelcomeHeader = () => {
           <>
             {dictionaryInfo[currentDict].info.map((infoText) => (
               <Typography key={infoText} className={classes.infoText}>
-                <Trans id={infoText} />
+                <Trans id={infoText}>{infoText}</Trans>
               </Typography>
             ))}
           </>

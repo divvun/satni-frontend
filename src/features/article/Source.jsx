@@ -22,7 +22,7 @@ const Source = ({ source, lemma }) => {
         <Typography variant="body2">
           <Trans>Source:</Trans>{' '}
           <Link to={`${source}/${lemma}`}>
-            <Trans id={source} />
+            <Trans id={source}>{source}</Trans>
           </Link>
         </Typography>
       }
