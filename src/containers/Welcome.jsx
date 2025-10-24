@@ -61,6 +61,7 @@ export const WelcomeHeader = () => {
               <Typography
                 key={`${currentDict}-info-${index}`}
                 className={classes.infoText}
+                component="span"
               >
                 {_(infoText)}
               </Typography>
