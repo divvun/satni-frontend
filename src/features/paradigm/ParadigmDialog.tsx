@@ -57,12 +57,22 @@ const ParadigmDialog: React.FC<ParadigmDialogProps> = ({
   const classes = useStyles();
 
   const handleClose = () => {
-    onClose();
+    // Use setTimeout to ensure focus is released before closing
+    setTimeout(() => {
+      onClose();
+    }, 0);
   };
 
   return (
     // @ts-ignore - Material-UI v4 compatibility
-    <Dialog onClose={handleClose} aria-labelledby="Paradigm" open={open}>
+    <Dialog 
+      onClose={handleClose} 
+      aria-labelledby="Paradigm" 
+      open={open}
+      fullWidth
+      maxWidth="md"
+      disableRestoreFocus
+    >
       {/* @ts-ignore - Material-UI v4 compatibility */}
       <AppBar className={classes.appBar}>
         {/* @ts-ignore - Material-UI v4 compatibility */}
