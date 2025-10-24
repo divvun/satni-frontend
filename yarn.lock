@@ -2256,6 +2256,14 @@
     hoist-non-react-statics "3.3.0"
     prop-types "^15.7.2"
 
+"@lingui/vite-plugin@^5.5.1":
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@lingui/vite-plugin/-/vite-plugin-5.5.1.tgz#c05947c2d6fd10ad0839a300b40fb8de0a1a0556"
+  integrity sha512-Kb+5OtBiDqmiV+FS4YM4h+uGXSt0RzCjKCPJEoZgtLodblRwfZkxTqPON2B08B1ghq75VnFk5nOL44WW0dl7AQ==
+  dependencies:
+    "@lingui/cli" "5.5.1"
+    "@lingui/conf" "5.5.1"
+
 "@mdx-js/react@^3.0.0":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-3.1.1.tgz#24bda7fffceb2fe256f954482123cda1be5f5fef"

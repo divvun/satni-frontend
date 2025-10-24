@@ -7,9 +7,9 @@ import { interfaceLanguageVar } from '../apolloCache';
 import AsyncApp from './AsyncApp';
 
 async function loadMessages(language: string): Promise<any> {
-  // Dynamically import the message module (transformed by Vite plugin)
-  const module = await import(`../locales/${language}/messages.js`);
-  return module.default;
+  // Dynamically import the compiled .mjs file
+  const module = await import(`../locales/${language}/messages.mjs`);
+  return module.messages;
 }
 
 const InterfaceLanguage: React.FC = () => {
