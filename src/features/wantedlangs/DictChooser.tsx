@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import { useLingui } from '@lingui/react';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';

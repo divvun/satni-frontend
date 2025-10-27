@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Dialog from '@mui/material/Dialog';

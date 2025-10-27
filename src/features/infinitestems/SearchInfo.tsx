@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 
 interface SearchInfoProps {
   stemsLength: number;

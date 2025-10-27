@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';

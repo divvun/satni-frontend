@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { makeStyles } from '@mui/styles';
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import { Link, useLocation } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 

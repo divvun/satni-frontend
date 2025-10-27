@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import { useLocation } from 'react-router-dom';
 import GET_DICT_ARTICLES from '../../operations/queries/getDictArticles';
 import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';

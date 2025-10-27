@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import Box from '@mui/material/Box';
 import { } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';

@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@mui/styles';
 import { useLocation } from 'react-router-dom';
 
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import { useLingui } from '@lingui/react';
 import InfoOutlined from '@mui/icons-material/InfoOutlined';
 import KeyboardIcon from '@mui/icons-material/Keyboard';

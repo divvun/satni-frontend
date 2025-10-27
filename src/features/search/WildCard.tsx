@@ -1,7 +1,7 @@
 import React from 'react';
 import { useReactiveVar } from '@apollo/client';
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import Radio from '@mui/material/Radio';
 import Tooltip from '@mui/material/Tooltip';
 import { searchModeVar } from '../../apolloCache';

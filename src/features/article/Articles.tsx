@@ -1,5 +1,5 @@
 // @ts-ignore - @lingui/macro has no type definitions
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import { } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';

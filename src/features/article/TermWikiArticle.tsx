@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 
 // @ts-ignore - @lingui/macro has no type definitions
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import Paper from '@mui/material/Paper';
 import { } from '@mui/material/styles';
 import Table from '@mui/material/Table';

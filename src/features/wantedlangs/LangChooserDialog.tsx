@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
 // @ts-ignore - @lingui/macro has no type definitions
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Dialog from '@mui/material/Dialog';
