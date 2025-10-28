@@ -1,33 +1,39 @@
-import { Trans } from '@lingui/react/macro';
-import { makeStyles } from '@mui/styles';
-import Typography from '@mui/material/Typography';
-import PropTypes from 'prop-types';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Trans } from "@lingui/react/macro";
+import { useLingui } from "@lingui/react";
+import { makeStyles } from "@mui/styles";
+import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import KorpButton from '../korp/KorpButton';
-import ParadigmButton from '../paradigm/ParadigmButton';
-import ParadigmDialog from '../paradigm/ParadigmDialog';
-import SpeakerButton from '../speaker/SpeakerButton';
+import KorpButton from "../korp/KorpButton";
+import ParadigmButton from "../paradigm/ParadigmButton";
+import ParadigmDialog from "../paradigm/ParadigmDialog";
+import SpeakerButton from "../speaker/SpeakerButton";
+import {
+  partOfSpeech,
+  dialects,
+  countryCodes,
+} from "../../translateble_variables";
 
-import PresentationLemma from './PresentationLemma';
+import PresentationLemma from "./PresentationLemma";
 
 const useStyles = makeStyles({
   stemContainer: {
-    width: '100%',
-    borderStyle: 'dotted',
+    width: "100%",
+    borderStyle: "dotted",
     borderWidth: 1,
-    borderColor: 'transparent',
+    borderColor: "transparent",
   },
   stem: {
     flexGrow: 1,
   },
   lemma: {
-    fontWeight: 'normal',
+    fontWeight: "normal",
   },
   rightGroup: {
-    float: 'right',
-    justify: 'space-evenly',
+    float: "right",
+    justify: "space-evenly",
   },
   icons: {
     margin: 0,
@@ -65,7 +71,7 @@ const Stem = ({ stem, restriction, withLink }) => {
         {restriction?.restriction && (
           <Typography component="span"> ({restriction.restriction})</Typography>
         )}
-        {!lemma.includes(' ') && (
+        {!lemma.includes(" ") && (
           <>
             <span className={classes.rightGroup}>
               {pos && (
@@ -77,7 +83,7 @@ const Stem = ({ stem, restriction, withLink }) => {
                   ({partOfSpeech[pos] ? _(partOfSpeech[pos]) : pos})
                 </Typography>
               )}
-              {['sme', 'sma', 'smj'].includes(language) && (
+              {["sme", "sma", "smj"].includes(language) && (
                 <SpeakerButton
                   text={` ${lemma},`}
                   language={language}

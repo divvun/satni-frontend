@@ -1,14 +1,15 @@
-import { Trans } from '@lingui/react/macro';
-import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormLabel from '@mui/material/FormLabel';
-import Grid from '@mui/material/Grid';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import PropTypes from 'prop-types';
+import { Trans } from "@lingui/react/macro";
 import { useLingui } from "@lingui/react";
+import FormControl from "@mui/material/FormControl";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormLabel from "@mui/material/FormLabel";
+import Grid from "@mui/material/Grid";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import PropTypes from "prop-types";
 
-import { availableVoices } from './speakerVoices';
+import { availableVoices } from "./speakerVoices";
+import { languageCodes } from "../../translateble_variables";
 
 const SpeakerChooser = ({ selectedVoices, onVoiceChange }) => {
   const { _ } = useLingui();

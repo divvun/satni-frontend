@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/react/macro';
-import { useLingui } from '@lingui/react';
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import Checkbox from '@mui/material/Checkbox';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import { Theme } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { makeStyles } from '@mui/styles';
+import { Trans } from "@lingui/react/macro";
+import { useLingui } from "@lingui/react";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import { Theme } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { makeStyles } from "@mui/styles";
 
 import dictionaryInfo, { dictionaryNames } from "../../translateble_variables";
 
@@ -28,7 +28,7 @@ const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
     },
     infoText: {
       marginRight: theme.spacing(1),
-      width: '50%',
+      width: "50%",
     },
   }));
   const classes = useStyles();
@@ -46,9 +46,7 @@ const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
       {Object.keys(dictionaryInfo).map((dict) => (
         <Accordion key={dict}>
           <AccordionSummary
-            expandIcon={
-              <ExpandMoreIcon />
-            }
+            expandIcon={<ExpandMoreIcon />}
             aria-controls={`${dict}-content`}
             id={`${dict}-header`}
           >
@@ -79,7 +77,7 @@ const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
                 >
                   {_(infoText)}
                 </Typography>
-              ),
+              )
             )}
           </AccordionDetails>
         </Accordion>
