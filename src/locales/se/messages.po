@@ -13,33 +13,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n == 1 || n == 2);\n"
 "X-Generator: Pontoon\n"
 
-#: src/translateble_variables.ts:208
+#: src/translateble_variables.ts:228
 msgid "    \"Koltan- ja kuolanlapin sanakirja\" (T. I. Itkonen, 1958)"
 msgstr ""
 
-#: src/translateble_variables.ts:213
+#: src/translateble_variables.ts:233
 msgid "    \"Kuvitettu käsityösanasto\" (Mettäpuro & Moshnikoff, 2009)"
 msgstr ""
 
-#: src/translateble_variables.ts:211
+#: src/translateble_variables.ts:231
 msgid "    \"Lääʹdd-sääʹm sääʹnnǩeʹrjj \" (Sammallahti & Moshnikoff, 1991)"
 msgstr ""
 
-#: src/translateble_variables.ts:212
+#: src/translateble_variables.ts:232
 msgid "    \"Mattu saaʹnid\" (Mänty & Fofonoff, 2003)"
 msgstr ""
 
-#: src/translateble_variables.ts:210
+#: src/translateble_variables.ts:230
 msgid "    \"Suomi-koltansaame-piensanasto : Suáma-sääém-sieǒmsäennös\" (Sverloff, 1989)"
 msgstr ""
 
-#: src/translateble_variables.ts:209
+#: src/translateble_variables.ts:229
 msgid "    \"Suomi-saamski keskeissanasto : Suâma-sââma kôskaldsännôs\" (Sverloff, 1978)"
 msgstr ""
 
-#: src/translateble_variables.ts:214
+#: src/translateble_variables.ts:234
 msgid "    \"Vuõʹlǧǧe jååʹtted ooudâs\" (Sammallahti, 2012)"
 msgstr ""
+
+#~ msgid "\"Koltan- ja kuolanlapin sanakirja\" (T. I. Itkonen, 1958)"
+#~ msgstr ""
+
+#~ msgid "\"Kuvitettu käsityösanasto\" (Mettäpuro & Moshnikoff, 2009)"
+#~ msgstr ""
+
+#~ msgid "\"Lääʹdd-sääʹm sääʹnnǩeʹrjj \" (Sammallahti & Moshnikoff, 1991)"
+#~ msgstr ""
+
+#~ msgid "\"Mattu saaʹnid\" (Mänty & Fofonoff, 2003)"
+#~ msgstr ""
+
+#~ msgid "\"Suomi-koltansaame-piensanasto : Suáma-sääém-sieǒmsäennös\" (Sverloff, 1989)"
+#~ msgstr ""
+
+#~ msgid "\"Suomi-saamski keskeissanasto : Suâma-sââma kôskaldsännôs\" (Sverloff, 1978)"
+#~ msgstr ""
+
+#~ msgid "\"Vuõʹlǧǧe jååʹtted ooudâs\" (Sammallahti, 2012)"
+#~ msgstr ""
 
 #: src/containers/StatusBar.jsx:24
 msgid "(<0>Show all</0>)"
@@ -63,36 +84,41 @@ msgid "{0}/{1} sources."
 msgstr "{0}/{1} gáldus."
 
 #: src/features/article/Stem.jsx:114
-msgid "{country}"
-msgstr ""
+#~ msgid "{country}"
+#~ msgstr ""
 
 #: src/containers/Welcome.jsx:52
 msgid "{currentDict}"
 msgstr ""
 
 #: src/features/article/Stem.jsx:109
-msgid "{dialect}"
-msgstr ""
+#~ msgid "{dialect}"
+#~ msgstr ""
 
 #: src/features/wantedlangs/DictChooser.tsx:66
-msgid "{dict}"
-msgstr ""
+#~ msgid "{dict}"
+#~ msgstr ""
 
-#: src/features/wantedlangs/LangChooser.tsx:44 src/features/wantedlangs/LangChooser.tsx:64
-msgid "{lang}"
-msgstr ""
+#~ msgid "{infoText}"
+#~ msgstr ""
 
-#: src/features/article/PairHeader.jsx:31 src/features/speaker/SpeakerChooser.jsx:23
-msgid "{language}"
-msgstr ""
+#: src/features/wantedlangs/LangChooser.tsx:44
+#: src/features/wantedlangs/LangChooser.tsx:64
+#~ msgid "{lang}"
+#~ msgstr ""
+
+#: src/features/article/PairHeader.jsx:31
+#: src/features/speaker/SpeakerChooser.jsx:23
+#~ msgid "{language}"
+#~ msgstr ""
 
 #: src/features/article/Stem.jsx:76
-msgid "{pos}"
-msgstr ""
+#~ msgid "{pos}"
+#~ msgstr ""
 
 #: src/features/article/Source.jsx:25
-msgid "{source}"
-msgstr ""
+#~ msgid "{source}"
+#~ msgstr ""
 
 #: src/features/infinitestems/SearchInfo.tsx:36
 msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
@@ -106,8 +132,12 @@ msgstr "{stemsLength}/{totalCount} main loahppa lea <0>{searchExpression}</0>"
 msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
 msgstr "{stemsLength}/{totalCount} main álgu lea <0>{searchExpression}</0>"
 
+#~ msgid "<0/>"
+#~ msgstr "<0/>"
+
 #. placeholder {0}: error.message
-#: src/features/article/DictArticles.tsx:65 src/features/article/TermArticles.tsx:56
+#: src/features/article/DictArticles.tsx:65
+#: src/features/article/TermArticles.tsx:56
 msgid "<0>Error {0}</0>"
 msgstr "<0>Meattáhus {0}</0>"
 
@@ -115,49 +145,51 @@ msgstr "<0>Meattáhus {0}</0>"
 msgid "<0>Giellagáldu</0>"
 msgstr "<0>Giellagáldu</0>"
 
-#: src/features/article/DictArticles.tsx:30 src/features/article/DictArticles.tsx:58
+#: src/features/article/DictArticles.tsx:30
+#: src/features/article/DictArticles.tsx:58
 msgid "<0>Loading dicts …</0>"
 msgstr "<0>Viežžamin sátnegirjebohtosiid …</0>"
 
-#: src/features/article/TermArticles.tsx:29 src/features/article/TermArticles.tsx:49
+#: src/features/article/TermArticles.tsx:29
+#: src/features/article/TermArticles.tsx:49
 msgid "<0>Loading terms …</0>"
 msgstr "<0>Viežžamin tearbmabohtosiid …</0>"
 
-#: src/features/article/DictArticles.tsx:73 src/features/article/TermArticles.tsx:64
+#: src/features/article/DictArticles.tsx:73
+#: src/features/article/TermArticles.tsx:64
 msgid "<0>No data available</0>"
 msgstr ""
 
-#: src/translateble_variables.ts:30
+#: src/translateble_variables.ts:35
 msgid "A"
 msgstr "adj."
 
-#: src/translateble_variables.ts:30
+#: src/translateble_variables.ts:36
 msgid "Adv"
 msgstr "adv."
 
-#: src/translateble_variables.ts:100
+#: src/translateble_variables.ts:120
 msgid "Álšateknihkka"
 msgstr "Álšateknihkka"
 
-#: src/translateble_variables.ts:125 src/translateble_variables.ts:131
-msgid ""
-"Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and "
-"Modernisation."
+#: src/translateble_variables.ts:145
+#: src/translateble_variables.ts:151
+msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
 msgstr "Sullii bealli sátnebárain leat vižžojuvvon dáru-sámi bálddalas teavsttain, ja dán barggu lea Gielda- ja guovlodepartemeanta ruhtadan."
 
-#: src/translateble_variables.ts:101
+#: src/translateble_variables.ts:121
 msgid "Ásttoáigi ja faláštallan"
 msgstr "Astoáigi ja faláštallan "
 
-#: src/translateble_variables.ts:102
+#: src/translateble_variables.ts:122
 msgid "Ávnnasindustriija"
 msgstr "Ávnnasindustriija"
 
-#: src/translateble_variables.ts:78
+#: src/translateble_variables.ts:98
 msgid "Beaivválaš giella"
 msgstr "Beaivválaš giella"
 
-#: src/translateble_variables.ts:79
+#: src/translateble_variables.ts:99
 msgid "Boazodoallu"
 msgstr "Boazodoallu"
 
@@ -185,11 +217,11 @@ msgstr "Vállje jus ohcancealkka galgá leat álggus, gasku dahje loahpas sánii
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr "Go coahkkalat <0/>, de oainnát mo sátni sodjá. Go coahkkalat <1/>, de oainnát mo sátni lea atnon."
 
-#: src/features/article/Stem.jsx:114
+#: src/features/article/Stem.jsx:122
 msgid "Country"
 msgstr "Riika"
 
-#: src/translateble_variables.ts:81
+#: src/translateble_variables.ts:101
 msgid "Dáidda ja girjjálašvuohta"
 msgstr "Dáidda ja girjjálašvuohta"
 
@@ -201,7 +233,7 @@ msgstr "Definišuvdna"
 msgid "Delivered by"
 msgstr "Ráhkadeaddjit"
 
-#: src/features/article/Stem.jsx:109
+#: src/features/article/Stem.jsx:116
 msgid "Dialect"
 msgstr "Suopman"
 
@@ -209,11 +241,11 @@ msgstr "Suopman"
 msgid "Dictionaries"
 msgstr "Sátnegirjjit"
 
-#: src/translateble_variables.ts:204
+#: src/translateble_variables.ts:224
 msgid "Dictionaries for Skolt Saami and Finnish consist of materials based on various sources and research projects:"
 msgstr ""
 
-#: src/translateble_variables.ts:206
+#: src/translateble_variables.ts:226
 msgid "Dictionaries:"
 msgstr "Sátnegirjjit:"
 
@@ -221,222 +253,223 @@ msgstr "Sátnegirjjit:"
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr "Sátnegirjeartihkkalat ihtet dása go coahkkalat sáni ohcanbohtosiin dás gurut bealde."
 
-#: src/translateble_variables.ts:80
+#: src/translateble_variables.ts:100
 msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Dihtorteknologiija ja diehtoteknihkka"
 
-#: src/containers/Welcome.jsx:71
-msgid ""
-"Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> "
-"medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
-msgstr ""
-"Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi – suoma sátnegirjjis</1>, Hábmera suohkana <2>julevsámi - dáro</2> dahje <3>dáro - julevsámi</3> medisiidnasátnegirjjiin "
-"dahje <4>Giellatekno</4> <5>sámi sátnegirjjiin</5>."
+#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
+#~ msgstr "Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi – suoma sátnegirjjis</1> ja <2>Giellatekno</2> <3>sámi sátnegirjjiin</3>."
 
-#: src/translateble_variables.ts:82
+#: src/containers/Welcome.jsx:71
+msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
+msgstr "Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi – suoma sátnegirjjis</1>, Hábmera suohkana <2>julevsámi - dáro</2> dahje <3>dáro - julevsámi</3> medisiidnasátnegirjjiin dahje <4>Giellatekno</4> <5>sámi sátnegirjjiin</5>."
+
+#: src/translateble_variables.ts:102
 msgid "Eanandoallu"
 msgstr "Eanandoallu"
 
-#: src/translateble_variables.ts:55
+#: src/translateble_variables.ts:71
 msgid "easmsg"
 msgstr ""
 
-#: src/translateble_variables.ts:83
+#~ msgid "east"
+#~ msgstr "nuorti"
+
+#: src/translateble_variables.ts:103
 msgid "Education"
 msgstr "Oahpahus"
 
-#: src/translateble_variables.ts:84
+#: src/translateble_variables.ts:104
 msgid "Ekologiija ja biras"
 msgstr "Ekologiija ja biras"
 
-#: src/translateble_variables.ts:85
+#: src/translateble_variables.ts:105
 msgid "Ekonomiija ja gávppašeapmi"
 msgstr "Ekonomiija ja gávppašeapmi"
 
-#: src/translateble_variables.ts:112
+#: src/translateble_variables.ts:132
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
 msgstr "Emeritusprofessor Pekka Sammallahti lea čállán dán sátnegirjji iežas 1989 ja 1993 prentejuvvon sátnegirjjiid vuođul."
 
-#: src/translateble_variables.ts:33
+#: src/translateble_variables.ts:42
 msgid "en"
 msgstr "Eŋgelasgiella"
 
-#: src/translateble_variables.ts:58
+#: src/translateble_variables.ts:78
 msgid "en_genitive"
 msgstr "eŋgelasgiela"
 
-#: src/translateble_variables.ts:34
+#: src/translateble_variables.ts:43
 msgid "eng"
 msgstr "Eŋgelasgiella"
 
-#: src/translateble_variables.ts:59
+#: src/translateble_variables.ts:79
 msgid "eng_genitive"
 msgstr "eŋgelasgiela"
 
-#: src/translateble_variables.ts:35
+#: src/translateble_variables.ts:44
 msgid "fi"
 msgstr "Suomagiella"
 
-#: src/translateble_variables.ts:53
+#: src/translateble_variables.ts:64
 msgid "FI"
 msgstr "Suopma"
 
-#: src/translateble_variables.ts:60
+#: src/translateble_variables.ts:80
 msgid "fi_genitive"
 msgstr "suomagiela"
 
-#: src/translateble_variables.ts:36
+#: src/translateble_variables.ts:45
 msgid "fin"
 msgstr "Suomagiella"
 
-#: src/translateble_variables.ts:61
+#: src/translateble_variables.ts:81
 msgid "fin_genitive"
 msgstr "suomagiela"
 
-#: src/translateble_variables.ts:86
+#: src/translateble_variables.ts:106
 msgid "Geografiija"
 msgstr "Geografiija"
 
-#: src/translateble_variables.ts:87
+#: src/translateble_variables.ts:107
 msgid "Gielladieđa"
 msgstr "Gielladieđa"
 
-#: src/translateble_variables.ts:118
-msgid ""
-"Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported "
-"daily to this site, to be easily accessible to the Sami community."
-msgstr ""
-"Giellagáldu váldobargu lea ođđa terminologiija ja čállingiela normeren. Normerejuvvon tearpmat vižžojit beaivválaččat dán neahttabáikái sin <a href=\"satni.uit.no/termwiki\">tearbmavuođus<a>, vai "
-"lea álkit ozahahtti sámi servodahkii."
+#: src/translateble_variables.ts:138
+msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
+msgstr "Giellagáldu váldobargu lea ođđa terminologiija ja čállingiela normeren. Normerejuvvon tearpmat vižžojit beaivválaččat dán neahttabáikái sin <a href=\"satni.uit.no/termwiki\">tearbmavuođus<a>, vai lea álkit ozahahtti sámi servodahkii."
 
-#: src/translateble_variables.ts:18
+#: src/translateble_variables.ts:19
 msgid "gtfinnob"
 msgstr "Trond Trosteruda suoma – girjedáru sátnegirji"
 
-#: src/translateble_variables.ts:13
+#: src/translateble_variables.ts:14
 msgid "gtfinsme"
 msgstr "Giellatekno suoma – davvisámi sátnegirji"
 
-#: src/translateble_variables.ts:16
+#: src/translateble_variables.ts:17
 msgid "gtfinsmn"
 msgstr "Giellatekno suoma – anársámi sátnegirji"
 
-#: src/translateble_variables.ts:26
+#: src/translateble_variables.ts:27
 msgid "gtfinsms"
 msgstr "Giellatekno suoma – nuorttalašgiel sátnegirji"
 
-#: src/translateble_variables.ts:10
+#: src/translateble_variables.ts:11
 msgid "gtnobsma"
 msgstr "Giellatekno girjedáru – lullisámi sátnegirji"
 
-#: src/translateble_variables.ts:9
+#: src/translateble_variables.ts:10
 msgid "gtnobsme"
 msgstr "Giellatekno girjedáru – davvisámi sátnegirji"
 
-#: src/translateble_variables.ts:25
+#: src/translateble_variables.ts:26
 msgid "gtnobsms"
 msgstr "Giellatekno girjedáru – nuorttalašgiel sátnegirji"
 
-#: src/translateble_variables.ts:27
+#: src/translateble_variables.ts:28
 msgid "gtrussms"
 msgstr "Giellatekno's ruoššagiel – nuorttalašgiel sátnegirji"
 
-#: src/translateble_variables.ts:11
+#: src/translateble_variables.ts:12
 msgid "gtsmanob"
 msgstr "Giellatekno lullisámi – girjedáru sátnegirji"
 
-#: src/translateble_variables.ts:12
+#: src/translateble_variables.ts:13
 msgid "gtsmefin"
 msgstr "Giellatekno davvisámi – suoma sátnegirji"
 
-#: src/translateble_variables.ts:8
+#: src/translateble_variables.ts:9
 msgid "gtsmenob"
 msgstr "Giellatekno davvisámi – girjedáru sátnegirji"
 
-#: src/translateble_variables.ts:14
+#: src/translateble_variables.ts:15
 msgid "gtsmesmn"
 msgstr "Giellatekno davvisámi – anársámi sátnegirji"
 
-#: src/translateble_variables.ts:17
+#: src/translateble_variables.ts:18
 msgid "gtsmnfin"
 msgstr "Giellatekno anársámi – suoma sátnegirji"
 
-#: src/translateble_variables.ts:15
+#: src/translateble_variables.ts:16
 msgid "gtsmnsme"
 msgstr "Giellatekno anársámi – davvisámi sátnegirji"
 
-#: src/translateble_variables.ts:23
+#: src/translateble_variables.ts:24
 msgid "gtsmsfin"
 msgstr "Giellatekno nuorttalašgiel - suoma sátnegirji"
 
-#: src/translateble_variables.ts:22
+#: src/translateble_variables.ts:23
 msgid "gtsmsnob"
 msgstr "Giellatekno nuorttalašgiel - girjedáru sátnegirji"
 
-#: src/translateble_variables.ts:24
+#: src/translateble_variables.ts:25
 msgid "gtsmsrus"
 msgstr "Giellatekno nuorttalašgiel - ruoššagiel sátnegirji"
 
-#: src/translateble_variables.ts:88
+#: src/translateble_variables.ts:108
 msgid "Gulahallanteknihkka"
 msgstr "Gulahallanteknihkka"
 
-#: src/translateble_variables.ts:89
+#: src/translateble_variables.ts:109
 msgid "Guolástus"
 msgstr "Guolástus"
 
-#: src/translateble_variables.ts:183
+#: src/translateble_variables.ts:203
 msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
 msgstr "Hábmera suohkana julevsámi - dáro medisidnasátnegirji.Sisttisdoallá sullii 1600 ohcansáni."
 
-#: src/translateble_variables.ts:188
+#: src/translateble_variables.ts:208
 msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
 msgstr "Hábmera suohkana dáro - julevsámi medisiidnasátnegirji.Sisttisdoallá sullii 1600 ohcansáni"
 
-#: src/translateble_variables.ts:21
+#: src/translateble_variables.ts:22
 msgid "habmernobsmj"
 msgstr "Hábmera suohkana dáro - julevsámi medisiidnasátnegirji"
 
-#: src/translateble_variables.ts:20
+#: src/translateble_variables.ts:21
 msgid "habmersmjnob"
 msgstr "Hábmera suohkana julevsámi - dáro medisiidnasátnegirji"
 
-#: src/containers/HelpDialog.tsx:58 src/containers/SatniAppBar.tsx:89
+#: src/containers/HelpDialog.tsx:58
+#: src/containers/SatniAppBar.tsx:89
 msgid "Help"
 msgstr "Veahkki"
 
-#: src/features/article/Source.jsx:31 src/features/article/Source.jsx:32
+#: src/features/article/Source.jsx:34
+#: src/features/article/Source.jsx:35
 msgid "Hide this dictionary"
 msgstr "Čiega dán sátnegirjji"
 
-#: src/features/article/PairHeader.jsx:36 src/features/article/PairHeader.jsx:37
+#: src/features/article/PairHeader.jsx:40
+#: src/features/article/PairHeader.jsx:41
 msgid "Hide this language"
 msgstr "Čiega dán giela"
 
-#: src/translateble_variables.ts:90
+#: src/translateble_variables.ts:110
 msgid "Huksenteknihkka"
 msgstr "Huksenteknihkka"
 
-#: src/translateble_variables.ts:243
-msgid ""
-"In June of 2020, the files generated by Jack Rueter (approximately 30000 entries) were moved into main/words/dicts/finsms/inc/ for future consultation. The files have been replaced by a newer set "
-"(approximately 20000 entries) deriving directly from editing of the Satu & Jouni Moshnikoff dictionary organized by the Oulu University Giellagas Institute and Saami Parliament in Inari, Finland "
-"with funding from the Finnish Ministry of Education (2019–2020)."
+#: src/translateble_variables.ts:263
+msgid "In June of 2020, the files generated by Jack Rueter (approximately 30000 entries) were moved into main/words/dicts/finsms/inc/ for future consultation. The files have been replaced by a newer set (approximately 20000 entries) deriving directly from editing of the Satu & Jouni Moshnikoff dictionary organized by the Oulu University Giellagas Institute and Saami Parliament in Inari, Finland with funding from the Finnish Ministry of Education (2019–2020)."
 msgstr ""
 
 #: src/containers/Welcome.jsx:161
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr "Artihkkaliin sáhtát čiehkat gielaid dahje sátnegirjjiid maid it háliit oaidnit. Sáhtát daid čájehit fas jus coahkkalat <0/> dahje <1/>."
 
-#: src/translateble_variables.ts:91
+#: src/translateble_variables.ts:111
 msgid "Juridihkka"
 msgstr "Juridihkka"
 
-#: src/translateble_variables.ts:49
+#: src/translateble_variables.ts:58
 msgid "lamsg"
 msgstr ""
 
-#: src/translateble_variables.ts:198 src/translateble_variables.ts:224 src/translateble_variables.ts:235 src/translateble_variables.ts:256
+#: src/translateble_variables.ts:218
+#: src/translateble_variables.ts:244
+#: src/translateble_variables.ts:255
+#: src/translateble_variables.ts:276
 msgid "Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009."
 msgstr ""
 
@@ -444,7 +477,10 @@ msgstr ""
 msgid "Languages"
 msgstr "Gielat"
 
-#: src/translateble_variables.ts:74
+#~ msgid "lat"
+#~ msgstr "Latiinnagiella"
+
+#: src/translateble_variables.ts:94
 msgid "lat_genitive"
 msgstr "latiinnagiela"
 
@@ -456,47 +492,47 @@ msgstr ""
 msgid "Lookup the search word"
 msgstr "Čájet ohcansáni bohtosa"
 
-#: src/translateble_variables.ts:92
+#: src/translateble_variables.ts:112
 msgid "Luonddudieđa ja matematihkka"
 msgstr "Luonddudieđa ja matematihkka"
 
-#: src/translateble_variables.ts:94
+#: src/translateble_variables.ts:114
 msgid "Mášenteknihkka"
 msgstr "Mášenteknihkka"
 
-#: src/translateble_variables.ts:93
+#: src/translateble_variables.ts:113
 msgid "Medisiidna"
 msgstr "Medisiidna"
 
-#: src/translateble_variables.ts:30
+#: src/translateble_variables.ts:33
 msgid "N"
 msgstr "subst."
 
-#: src/translateble_variables.ts:37
+#: src/translateble_variables.ts:46
 msgid "nb"
 msgstr "Girjedárogiella"
 
-#: src/translateble_variables.ts:62
+#: src/translateble_variables.ts:82
 msgid "nb_genitive"
 msgstr "girjedárogiela"
 
-#: src/translateble_variables.ts:38
+#: src/translateble_variables.ts:47
 msgid "nn"
 msgstr "Ođđadárogiella"
 
-#: src/translateble_variables.ts:63
+#: src/translateble_variables.ts:83
 msgid "nn_genitive"
 msgstr "ođđadárogiela"
 
-#: src/translateble_variables.ts:39
+#: src/translateble_variables.ts:48
 msgid "nno"
 msgstr "Ođđadárogiella"
 
-#: src/translateble_variables.ts:64
+#: src/translateble_variables.ts:84
 msgid "nno_genitive"
 msgstr "ođđadárogiela"
 
-#: src/translateble_variables.ts:53
+#: src/translateble_variables.ts:66
 msgid "NO"
 msgstr "Norga"
 
@@ -504,19 +540,19 @@ msgstr "Norga"
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "<0>{searchExpression}</0> ii gávdno sátnegirjjiin"
 
-#: src/translateble_variables.ts:40
+#: src/translateble_variables.ts:49
 msgid "nob"
 msgstr "Girjedárogiella"
 
-#: src/translateble_variables.ts:65
+#: src/translateble_variables.ts:85
 msgid "nob_genitive"
 msgstr "girjedárogiela"
 
-#: src/translateble_variables.ts:55
+#: src/translateble_variables.ts:73
 msgid "north"
 msgstr "davvi"
 
-#: src/translateble_variables.ts:130
+#: src/translateble_variables.ts:150
 msgid "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but frequent Norwegian words have been added. It contains about 26,000 Norwegian entries."
 msgstr "Dáru → davvisámi lea vuođđuduvvon Davvisámi → dáru sátnegirjái, muhto leat lasihan dábálaš dáru sániid. Sátnegirjjis leat oktiibuot 26,000 ohcansáni."
 
@@ -524,11 +560,17 @@ msgstr "Dáru → davvisámi lea vuođđuduvvon Davvisámi → dáru sátnegirj�
 msgid "Note:"
 msgstr "Notáhta:"
 
-#: src/translateble_variables.ts:95
+#: src/translateble_variables.ts:115
 msgid "Ođđa sánimsg"
 msgstr ""
 
-#: src/translateble_variables.ts:196 src/translateble_variables.ts:222 src/translateble_variables.ts:233 src/translateble_variables.ts:254
+#~ msgid "Ođđa sánit"
+#~ msgstr "Ođđa sánit"
+
+#: src/translateble_variables.ts:216
+#: src/translateble_variables.ts:242
+#: src/translateble_variables.ts:253
+#: src/translateble_variables.ts:274
 msgid "Other main contributors to these projects were (in alphabetical order) Katri Jefremoff, Erkki Lumisalmi, Zoja Nosova, Lena Terhart, and Joshua Wilbur."
 msgstr ""
 
@@ -536,11 +578,11 @@ msgstr ""
 msgid "Paradigm"
 msgstr "Sojahanminsttar"
 
-#: src/translateble_variables.ts:30
+#: src/translateble_variables.ts:37
 msgid "Pron"
 msgstr "pron."
 
-#: src/translateble_variables.ts:96
+#: src/translateble_variables.ts:116
 msgid "Religion"
 msgstr "Religiovdna"
 
@@ -552,7 +594,7 @@ msgstr "«{lemma}» bohtosat"
 msgid "Results only from"
 msgstr "Bohtosat dušše"
 
-#: src/translateble_variables.ts:50
+#: src/translateble_variables.ts:59
 msgid "rus"
 msgstr ""
 
@@ -564,23 +606,23 @@ msgstr ""
 msgid "Sámi letters"
 msgstr "Sámi bustávat"
 
-#: src/translateble_variables.ts:19
+#: src/translateble_variables.ts:20
 msgid "sammallahtismefin"
 msgstr "Pekka Sammallahti davvisámi – suoma sátnegirji"
 
-#: src/translateble_variables.ts:205
+#: src/translateble_variables.ts:225
 msgid "Satu & Jouni Moshnikoff sanasto"
 msgstr ""
 
-#: src/translateble_variables.ts:41
+#: src/translateble_variables.ts:50
 msgid "se"
 msgstr "Davvisámegiella"
 
-#: src/translateble_variables.ts:53
+#: src/translateble_variables.ts:65
 msgid "SE"
 msgstr "Ruoŧŧa"
 
-#: src/translateble_variables.ts:66
+#: src/translateble_variables.ts:86
 msgid "se_genitive"
 msgstr "davvisámegiela"
 
@@ -614,7 +656,7 @@ msgstr "Oza sániid main loahpa lea ohcansánis"
 msgid "Search words that start with your search term"
 msgstr "Oza sániid main álgu lea ohcansánis"
 
-#: src/translateble_variables.ts:97
+#: src/translateble_variables.ts:117
 msgid "Servodatdieđa"
 msgstr "Servodatdieđa"
 
@@ -630,63 +672,67 @@ msgstr "Čájet dán sáni sojahanminstara"
 msgid "Show this word in our corpus"
 msgstr "Čájet dán sáni min teakstačoakkáldagas"
 
-#: src/translateble_variables.ts:193 src/translateble_variables.ts:219 src/translateble_variables.ts:230 src/translateble_variables.ts:251
+#: src/translateble_variables.ts:213
+#: src/translateble_variables.ts:239
+#: src/translateble_variables.ts:250
+#: src/translateble_variables.ts:271
 msgid "Skolt Sámi → X project contains materials deriving from the research of numerous projects, dictionaries and word lists."
 msgstr ""
 
-#: src/translateble_variables.ts:207
+#: src/translateble_variables.ts:227
 msgid "Skolt Sámi lemmas with Finnish translations can also be attributed to materials in:"
 msgstr ""
 
-#: src/translateble_variables.ts:43
+#: src/translateble_variables.ts:52
 msgid "sma"
 msgstr "Lullisámegiella"
 
-#: src/translateble_variables.ts:68
+#: src/translateble_variables.ts:88
 msgid "sma_genitive"
 msgstr "lullisámegiela"
 
-#: src/translateble_variables.ts:44
+#: src/translateble_variables.ts:53
 msgid "sme"
 msgstr "Davvisámegiella"
 
-#: src/translateble_variables.ts:69
+#: src/translateble_variables.ts:89
 msgid "sme_genitive"
 msgstr "davvisámegiela"
 
-#: src/translateble_variables.ts:45
+#: src/translateble_variables.ts:54
 msgid "smj"
 msgstr "Julevsámegiella"
 
-#: src/translateble_variables.ts:70
+#: src/translateble_variables.ts:90
 msgid "smj_genitive"
 msgstr "julevsámegiela"
 
-#: src/translateble_variables.ts:46
+#: src/translateble_variables.ts:55
 msgid "smn"
 msgstr "Anársámegiella"
 
-#: src/translateble_variables.ts:71
+#: src/translateble_variables.ts:91
 msgid "smn_genitive"
 msgstr "anársámegiela"
 
-#: src/translateble_variables.ts:47
+#: src/translateble_variables.ts:56
 msgid "sms"
 msgstr "Nuortalašgiella"
 
-#: src/translateble_variables.ts:72
+#: src/translateble_variables.ts:92
 msgid "sms_genitive"
 msgstr "nuortalašgiela"
 
-#: src/features/article/LemmaGroup.tsx:45 src/features/article/Source.jsx:23
+#: src/features/article/LemmaGroup.tsx:45
+#: src/features/article/Source.jsx:26
 msgid "Source:"
 msgstr "Gáldu:"
 
-#: src/translateble_variables.ts:55
+#: src/translateble_variables.ts:74
 msgid "south"
 msgstr "lulli"
 
-#: src/translateble_variables.ts:98
+#: src/translateble_variables.ts:118
 msgid "Stáda almmolaš hálddašeapmi"
 msgstr "Almmolaš hálddašeapmi"
 
@@ -694,89 +740,91 @@ msgstr "Almmolaš hálddašeapmi"
 msgid "Status:"
 msgstr "Stáhtus:"
 
-#: src/translateble_variables.ts:244
+#: src/translateble_variables.ts:264
 msgid "Subsequent updating of these files is being continued using the Veʹrdd dictionary editing platform, which played an instrumental role in the development of 2020."
 msgstr ""
 
-#: src/translateble_variables.ts:246
-msgid ""
-"Subsequent updating of these files is being continued using the Veʹrdd dictionary editing platform, which played an instrumental role in the development of 2020. Extensive work can be attributed to "
-"members of the language community, language researchers and students at the Giellagas Institute and language technology researchers."
+#: src/translateble_variables.ts:266
+msgid "Subsequent updating of these files is being continued using the Veʹrdd dictionary editing platform, which played an instrumental role in the development of 2020. Extensive work can be attributed to members of the language community, language researchers and students at the Giellagas Institute and language technology researchers."
 msgstr ""
 
-#: src/translateble_variables.ts:42
+#: src/translateble_variables.ts:51
 msgid "sv"
 msgstr "Ruoŧagiella"
 
-#: src/translateble_variables.ts:67
+#: src/translateble_variables.ts:87
 msgid "sv_genitive"
 msgstr "ruoŧagiela"
 
-#: src/translateble_variables.ts:48
+#: src/translateble_variables.ts:57
 msgid "swe"
 msgstr "Ruoŧagiella"
 
-#: src/translateble_variables.ts:73
+#: src/translateble_variables.ts:93
 msgid "swe_genitive"
 msgstr "ruoŧagiela"
 
-#: src/translateble_variables.ts:99
+#: src/translateble_variables.ts:119
 msgid "Teknihkka industriija duodji"
 msgstr "Teknihkka, industriija, duodji"
 
-#: src/translateble_variables.ts:7
+#: src/translateble_variables.ts:8
 msgid "termwiki"
 msgstr "Giellagáldu máŋggagielat tearpmat"
 
-#: src/translateble_variables.ts:195 src/translateble_variables.ts:221 src/translateble_variables.ts:232 src/translateble_variables.ts:253
-msgid ""
-"The creation of this wordlist was related to the Kola Sámi Documentation Project (KSDP) led by Michael Rießler, to work carried out by Michael Rießler at Äʹvv Saaʹmi muʹzei, as well as the art "
-"installation \"Language Memory\" at Äʹvv Saaʹmi muʹzei by Espen Sommer Eide."
+#: src/translateble_variables.ts:215
+#: src/translateble_variables.ts:241
+#: src/translateble_variables.ts:252
+#: src/translateble_variables.ts:273
+msgid "The creation of this wordlist was related to the Kola Sámi Documentation Project (KSDP) led by Michael Rießler, to work carried out by Michael Rießler at Äʹvv Saaʹmi muʹzei, as well as the art installation \"Language Memory\" at Äʹvv Saaʹmi muʹzei by Espen Sommer Eide."
 msgstr ""
 
-#: src/translateble_variables.ts:147 src/translateble_variables.ts:153
+#: src/translateble_variables.ts:167
+#: src/translateble_variables.ts:173
 msgid "The dictionary contains about 11,000 entries."
 msgstr "Sátnegirjjis lea sullii 11 000 ohcansáni."
 
-#: src/translateble_variables.ts:113
+#: src/translateble_variables.ts:133
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
 msgstr "Sátnegirjjis lea eanet go 50 000 ohcansáni, ja Sammallahti jeavddalaččat lasiha ođđa materiála."
 
-#: src/translateble_variables.ts:241
-msgid ""
-"The Finnish-to-Skolt Sami dictionary has gone through three phases, moving from quantity to quality. After original work with in the Skolt Sami-to-X dictionary, a simple flipped dictionary was "
-"produced for providing Finnish-to-Skolt Sami searches in the saan.oahpa.no online dictionary in 2016."
+#: src/translateble_variables.ts:261
+msgid "The Finnish-to-Skolt Sami dictionary has gone through three phases, moving from quantity to quality. After original work with in the Skolt Sami-to-X dictionary, a simple flipped dictionary was produced for providing Finnish-to-Skolt Sami searches in the saan.oahpa.no online dictionary in 2016."
 msgstr ""
 
 #: src/containers/Welcome.jsx:119
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 msgstr "Oza sámi, davviriikkalaš, eŋgelas dahje latiinna sániid ohcangiettis. Jus du mašiinnas eai leat sámi bustávat, coahkkal <0/> vai boalut main leat sámi bustávat ihtet."
 
-#: src/translateble_variables.ts:199 src/translateble_variables.ts:225 src/translateble_variables.ts:236 src/translateble_variables.ts:257
-msgid ""
-"The Kone funded project \"Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages\" [Koltansaamen elvytys "
-"kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the "
-"language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the"
-" establishment of a large morphological database from research by others"
+#: src/translateble_variables.ts:219
+#: src/translateble_variables.ts:245
+#: src/translateble_variables.ts:256
+#: src/translateble_variables.ts:277
+msgid "The Kone funded project \"Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages\" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others"
 msgstr ""
 
-#: src/translateble_variables.ts:197 src/translateble_variables.ts:223 src/translateble_variables.ts:234 src/translateble_variables.ts:255
+#~ msgid "The Kone funded project \"Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages\" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others"
+#~ msgstr ""
+
+#: src/translateble_variables.ts:217
+#: src/translateble_variables.ts:243
+#: src/translateble_variables.ts:254
+#: src/translateble_variables.ts:275
 msgid "The KSDP started in 2005 and in principle is still active."
 msgstr ""
 
-#: src/translateble_variables.ts:245
-msgid ""
-"The present Finnish-to-Skolt Sami dictionary consists of approximately 20000 entries, which are derived directly from editing of the Satu & Jouni Moshnikoff dictionary organized by the Oulu "
-"University Giellagas Institute and Saami Parliament in Inari, Finland with funding from the Finnish Ministry of Education (2019–2020)."
+#: src/translateble_variables.ts:265
+msgid "The present Finnish-to-Skolt Sami dictionary consists of approximately 20000 entries, which are derived directly from editing of the Satu & Jouni Moshnikoff dictionary organized by the Oulu University Giellagas Institute and Saami Parliament in Inari, Finland with funding from the Finnish Ministry of Education (2019–2020)."
 msgstr ""
 
-#: src/translateble_variables.ts:194 src/translateble_variables.ts:220 src/translateble_variables.ts:231 src/translateble_variables.ts:252
-msgid ""
-"The research projects have lead to the merging of several word lists featuring Skolt Sami as a source language with multiple target languages. Michael Rießler's contribution mainly consists of the "
-"integration of an earlier created Skolt Saami word list with English, Finnish, Norwegian, and Russian translations and linking to sound files."
+#: src/translateble_variables.ts:214
+#: src/translateble_variables.ts:240
+#: src/translateble_variables.ts:251
+#: src/translateble_variables.ts:272
+msgid "The research projects have lead to the merging of several word lists featuring Skolt Sami as a source language with multiple target languages. Michael Rießler's contribution mainly consists of the integration of an earlier created Skolt Saami word list with English, Finnish, Norwegian, and Russian translations and linking to sound files."
 msgstr ""
 
-#: src/translateble_variables.ts:119
+#: src/translateble_variables.ts:139
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr "Tearbmavuođus lea badjel 50 000 artihkkala, ja ođasmahtto jeavddalaččat."
 
@@ -784,47 +832,39 @@ msgstr "Tearbmavuođus lea badjel 50 000 artihkkala, ja ođasmahtto jeavddalač�
 msgid "There is no paradigm for this word"
 msgstr "Dán sánis ii leat sojahanminsttar"
 
-#: src/translateble_variables.ts:136 src/translateble_variables.ts:141
-msgid ""
-"This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern "
-"Sámi Oahpa."
+#: src/translateble_variables.ts:156
+#: src/translateble_variables.ts:161
+msgid "This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern Sámi Oahpa."
 msgstr "Dán sátnegirjji vuođđu lea Hemnes sámesearvvi Albert Jåma ja Tove Brustad bargu. Dasa lassin Giellatekno ja Aajege leat lasihan sániid lullisámi Oahpa ovdánahtidettiin."
 
-#: src/translateble_variables.ts:124
+#: src/translateble_variables.ts:144
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
 msgstr "Dát sátnegirji lea ráhkaduvvon Nils Jernslettena Álgosátnegirji vuođul (4322 vuođđosáni), muhto dál sátnegirji sisttisdoallá 30,000 ohcansáni, ja dasa lassin 6000 báikenama."
 
-#: src/translateble_variables.ts:158 src/translateble_variables.ts:163 src/translateble_variables.ts:168 src/translateble_variables.ts:173
+#: src/translateble_variables.ts:178
+#: src/translateble_variables.ts:183
+#: src/translateble_variables.ts:188
+#: src/translateble_variables.ts:193
 msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
 msgstr "Dán sátnegirjji vuođđu lea Valtonena ja Olthuisa  Inarinsaame-suomi-inarinsaame sátnegirji (30 000 ohcansáni)."
 
-#: src/translateble_variables.ts:152
-msgid ""
-"This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been "
-"added."
-msgstr ""
-"Dán sátnegirjji vuođđun leat sátnelisttut «Forskingscentralen för de inhemska språken i Helsingfors»-ásahusas ja Giellatekno bargu davvisámi Oahpain. Dasa lassin dasa leat lasihuvvon dábálaš suoma "
-"sánit."
+#: src/translateble_variables.ts:172
+msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been added."
+msgstr "Dán sátnegirjji vuođđun leat sátnelisttut «Forskingscentralen för de inhemska språken i Helsingfors»-ásahusas ja Giellatekno bargu davvisámi Oahpain. Dasa lassin dasa leat lasihuvvon dábálaš suoma sánit."
 
-#: src/translateble_variables.ts:146
-msgid ""
-"This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words "
-"from North Saami."
-msgstr ""
-"Dán sátnegirjji vuođđun leat sátnelisttut «Forskingscentralen för de inhemska språken i Helsingfors»-ásahusas ja Giellatekno bargu davvisámi Oahpain. Dasa lassin dasa leat lasihuvvon dábálaš "
-"davvisámi sánit."
+#: src/translateble_variables.ts:166
+msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
+msgstr "Dán sátnegirjji vuođđun leat sátnelisttut «Forskingscentralen för de inhemska språken i Helsingfors»-ásahusas ja Giellatekno bargu davvisámi Oahpain. Dasa lassin dasa leat lasihuvvon dábálaš davvisámi sánit."
 
 #: src/features/korp/KorpButton.tsx:67
 msgid "This word is not found in our corpus"
 msgstr "Dát sátni ii gávdno min teakstačoakkáldagas"
 
-#: src/translateble_variables.ts:242
-msgid ""
-"This, of course, meant that an extensive amount of non-standard words and word forms were presented. As more and more students of the language became aware of the dictionary, it began to serve as a "
-"basis of vocabulary learning and, unfortunately, the source of many spelling mistakes and morphological misconceptions."
+#: src/translateble_variables.ts:262
+msgid "This, of course, meant that an extensive amount of non-standard words and word forms were presented. As more and more students of the language became aware of the dictionary, it began to serve as a basis of vocabulary learning and, unfortunately, the source of many spelling mistakes and morphological misconceptions."
 msgstr ""
 
-#: src/translateble_variables.ts:178
+#: src/translateble_variables.ts:198
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
 msgstr "Trond Trosteruda suoma – girjedáru sátnegirjjis leat eanet go 30000 ohcansáni."
 
@@ -832,7 +872,7 @@ msgstr "Trond Trosteruda suoma – girjedáru sátnegirjjis leat eanet go 30000 
 msgid "TTS Voices"
 msgstr ""
 
-#: src/translateble_variables.ts:30
+#: src/translateble_variables.ts:34
 msgid "V"
 msgstr "vearba"
 
@@ -840,9 +880,12 @@ msgstr "vearba"
 msgid "Welcome!"
 msgstr "Bures boahtin!"
 
-#: src/translateble_variables.ts:55
+#: src/translateble_variables.ts:72
 msgid "wesmsg"
 msgstr ""
+
+#~ msgid "west"
+#~ msgstr "oarji"
 
 #: src/containers/Welcome.jsx:133
 msgid "When you click a word here, dictionary articles appear to the right."
@@ -855,52 +898,3 @@ msgstr "Čális unnimustá ovtta bustáva dása"
 #: src/containers/Welcome.jsx:127
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr "Sáhtát bláđet ohcanbohtosiid gaskkas dás, ođđa bohtosat ihtet dassáigo visot deaivamat leat gávdnon."
-
-#~ msgid "\"Koltan- ja kuolanlapin sanakirja\" (T. I. Itkonen, 1958)"
-#~ msgstr ""
-
-#~ msgid "\"Kuvitettu käsityösanasto\" (Mettäpuro & Moshnikoff, 2009)"
-#~ msgstr ""
-
-#~ msgid "\"Lääʹdd-sääʹm sääʹnnǩeʹrjj \" (Sammallahti & Moshnikoff, 1991)"
-#~ msgstr ""
-
-#~ msgid "\"Mattu saaʹnid\" (Mänty & Fofonoff, 2003)"
-#~ msgstr ""
-
-#~ msgid "\"Suomi-koltansaame-piensanasto : Suáma-sääém-sieǒmsäennös\" (Sverloff, 1989)"
-#~ msgstr ""
-
-#~ msgid "\"Suomi-saamski keskeissanasto : Suâma-sââma kôskaldsännôs\" (Sverloff, 1978)"
-#~ msgstr ""
-
-#~ msgid "\"Vuõʹlǧǧe jååʹtted ooudâs\" (Sammallahti, 2012)"
-#~ msgstr ""
-
-#~ msgid "{infoText}"
-#~ msgstr ""
-
-#~ msgid "<0/>"
-#~ msgstr "<0/>"
-
-#~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
-#~ msgstr "Oza <0>Giellagáldu</0> tearbmačoakkáldagas, <1>Pekka Sammallahti davvisámi – suoma sátnegirjjis</1> ja <2>Giellatekno</2> <3>sámi sátnegirjjiin</3>."
-
-#~ msgid "east"
-#~ msgstr "nuorti"
-
-#~ msgid "lat"
-#~ msgstr "Latiinnagiella"
-
-#~ msgid "Ođđa sánit"
-#~ msgstr "Ođđa sánit"
-
-#~ msgid ""
-#~ "The Kone funded project \"Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages\" [Koltansaamen elvytys "
-#~ "kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the "
-#~ "language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the"
-#~ " establishment of a large morphological database from research by others"
-#~ msgstr ""
-
-#~ msgid "west"
-#~ msgstr "oarji"
