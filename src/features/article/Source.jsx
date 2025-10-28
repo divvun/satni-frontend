@@ -1,12 +1,12 @@
-import { Trans } from '@lingui/react/macro';
-import Checkbox from '@mui/material/Checkbox';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Tooltip from '@mui/material/Tooltip';
-import Typography from '@mui/material/Typography';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Trans } from "@lingui/react/macro";
+import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Tooltip from "@mui/material/Tooltip";
+import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-import { wantedDictsVar } from '../../apolloCache';
+import { wantedDictsVar } from "../../apolloCache";
 
 const Source = ({ source, lemma }) => {
   const wantedDicts = wantedDictsVar();
@@ -20,7 +20,7 @@ const Source = ({ source, lemma }) => {
     <FormControlLabel
       label={
         <Typography variant="body2">
-          <Trans>Source:</Trans>{' '}
+          <Trans>Source:</Trans>{" "}
           <Link to={`${source}/${lemma}`}>
             <Trans id={source}>{source}</Trans>
           </Link>

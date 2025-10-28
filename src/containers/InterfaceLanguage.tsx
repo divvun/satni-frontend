@@ -1,10 +1,10 @@
-import React from 'react';
-import { useReactiveVar } from '@apollo/client';
-import { I18nProvider } from '@lingui/react';
-import { i18n } from '@lingui/core';
-import { useEffect, useState } from 'react';
-import { interfaceLanguageVar } from '../apolloCache';
-import AsyncApp from './AsyncApp';
+import React from "react";
+import { useReactiveVar } from "@apollo/client";
+import { I18nProvider } from "@lingui/react";
+import { i18n } from "@lingui/core";
+import { useEffect, useState } from "react";
+import { interfaceLanguageVar } from "../apolloCache";
+import AsyncApp from "./AsyncApp";
 
 async function loadMessages(language: string): Promise<any> {
   // Dynamically import the .po file
@@ -26,10 +26,10 @@ const InterfaceLanguage: React.FC = () => {
     } catch (error) {
       console.error(`Failed to load messages for language: ${lang}`, error);
       // Fallback to English if loading fails
-      if (lang !== 'en') {
-        const fallbackMessages = await loadMessages('en');
-        i18n.load('en', fallbackMessages);
-        i18n.activate('en');
+      if (lang !== "en") {
+        const fallbackMessages = await loadMessages("en");
+        i18n.load("en", fallbackMessages);
+        i18n.activate("en");
       }
       setIsI18nReady(true);
     }
