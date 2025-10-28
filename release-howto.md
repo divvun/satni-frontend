@@ -13,4 +13,4 @@ by an increase of the largest number from the previous command.
 - git tag -a v0.10.4
 - git push origin v0.10.4
 - git push origin master
-- pnpm deploy
+- pnpm run deploy
