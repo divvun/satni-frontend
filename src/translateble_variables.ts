@@ -3,56 +3,76 @@
 // Message descriptors for translation extraction - not evaluated at module level
 import { msg } from "@lingui/macro";
 
-const _dicts = [
-  msg`termwiki`,
-  msg`gtsmenob`,
-  msg`gtnobsme`,
-  msg`gtnobsma`,
-  msg`gtsmanob`,
-  msg`gtsmefin`,
-  msg`gtfinsme`,
-  msg`gtsmesmn`,
-  msg`gtsmnsme`,
-  msg`gtfinsmn`,
-  msg`gtsmnfin`,
-  msg`gtfinnob`,
-  msg`sammallahtismefin`,
-  msg`habmersmjnob`,
-  msg`habmernobsmj`,
-  msg`gtsmsnob`,
-  msg`gtsmsfin`,
-  msg`gtsmsrus`,
-  msg`gtnobsms`,
-  msg`gtfinsms`,
-  msg`gtrussms`,
-];
+// Exported dictionary name message descriptors for runtime translation
+export const dictionaryNames = {
+  termwiki: msg`termwiki`,
+  gtsmenob: msg`gtsmenob`,
+  gtnobsme: msg`gtnobsme`,
+  gtnobsma: msg`gtnobsma`,
+  gtsmanob: msg`gtsmanob`,
+  gtsmefin: msg`gtsmefin`,
+  gtfinsme: msg`gtfinsme`,
+  gtsmesmn: msg`gtsmesmn`,
+  gtsmnsme: msg`gtsmnsme`,
+  gtfinsmn: msg`gtfinsmn`,
+  gtsmnfin: msg`gtsmnfin`,
+  gtfinnob: msg`gtfinnob`,
+  sammallahtismefin: msg`sammallahtismefin`,
+  habmersmjnob: msg`habmersmjnob`,
+  habmernobsmj: msg`habmernobsmj`,
+  gtsmsnob: msg`gtsmsnob`,
+  gtsmsfin: msg`gtsmsfin`,
+  gtsmsrus: msg`gtsmsrus`,
+  gtnobsms: msg`gtnobsms`,
+  gtfinsms: msg`gtfinsms`,
+  gtrussms: msg`gtrussms`,
+} as const;
 
-const _partOfSpeech = [msg`N`, msg`V`, msg`A`, msg`Adv`, msg`Pron`];
+// Exported part of speech message descriptors for runtime translation
+export const partOfSpeech = {
+  N: msg`N`,
+  V: msg`V`,
+  A: msg`A`,
+  Adv: msg`Adv`,
+  Pron: msg`Pron`,
+} as const;
 
-const _languageCodes = [
-  msg`en`,
-  msg`eng`,
-  msg`fi`,
-  msg`fin`,
-  msg`nb`,
-  msg`nn`,
-  msg`nno`,
-  msg`nob`,
-  msg`se`,
-  msg`sv`,
-  msg`sma`,
-  msg`sme`,
-  msg`smj`,
-  msg`smn`,
-  msg`sms`,
-  msg`swe`,
-  msg`lamsg`,
-  msg`rus`,
-];
+// Exported language code message descriptors for runtime translation
+export const languageCodes = {
+  en: msg`en`,
+  eng: msg`eng`,
+  fi: msg`fi`,
+  fin: msg`fin`,
+  nb: msg`nb`,
+  nn: msg`nn`,
+  nno: msg`nno`,
+  nob: msg`nob`,
+  se: msg`se`,
+  sv: msg`sv`,
+  sma: msg`sma`,
+  sme: msg`sme`,
+  smj: msg`smj`,
+  smn: msg`smn`,
+  sms: msg`sms`,
+  swe: msg`swe`,
+  lamsg: msg`lamsg`,
+  rus: msg`rus`,
+} as const;
 
-const _contryCodes = [msg`FI`, msg`SE`, msg`NO`];
+// Exported country code message descriptors for runtime translation
+export const countryCodes = {
+  FI: msg`FI`,
+  SE: msg`SE`,
+  NO: msg`NO`,
+} as const;
 
-const _dialects = [msg`easmsg`, msg`wesmsg`, msg`north`, msg`south`];
+// Exported dialect message descriptors for runtime translation
+export const dialects = {
+  easmsg: msg`easmsg`,
+  wesmsg: msg`wesmsg`,
+  north: msg`north`,
+  south: msg`south`,
+} as const;
 
 const _languageCodesGenitive = [
   msg`en_genitive`,

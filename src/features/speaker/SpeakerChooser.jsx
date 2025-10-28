@@ -6,10 +6,12 @@ import Grid from '@mui/material/Grid';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import PropTypes from 'prop-types';
+import { useLingui } from "@lingui/react";
 
 import { availableVoices } from './speakerVoices';
 
 const SpeakerChooser = ({ selectedVoices, onVoiceChange }) => {
+  const { _ } = useLingui();
   const handleChange = (language) => (event) => {
     onVoiceChange(language, event.target.value);
   };
@@ -20,7 +22,7 @@ const SpeakerChooser = ({ selectedVoices, onVoiceChange }) => {
         <Grid size={{ xs: 12, sm: 4 }} key={language}>
           <FormControl component="fieldset">
             <FormLabel component="legend">
-              <Trans id={language}>{language}</Trans>
+              {languageCodes[language] ? _(languageCodes[language]) : language}
             </FormLabel>
             <RadioGroup
               aria-label={`voice-${language}`}

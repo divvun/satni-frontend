@@ -1,4 +1,5 @@
 import { Trans } from "@lingui/react/macro";
+import { useLingui } from "@lingui/react";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Tooltip from "@mui/material/Tooltip";
@@ -7,8 +8,10 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import { wantedDictsVar } from "../../apolloCache";
+import { dictionaryNames } from "../../translateble_variables";
 
 const Source = ({ source, lemma }) => {
+  const { _ } = useLingui();
   const wantedDicts = wantedDictsVar();
 
   const handleChange = (event) => {
@@ -22,7 +25,7 @@ const Source = ({ source, lemma }) => {
         <Typography variant="body2">
           <Trans>Source:</Trans>{" "}
           <Link to={`${source}/${lemma}`}>
-            <Trans id={source}>{source}</Trans>
+            {dictionaryNames[source] ? _(dictionaryNames[source]) : source}
           </Link>
         </Typography>
       }

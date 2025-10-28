@@ -39,6 +39,7 @@ const useStyles = makeStyles({
 });
 
 const Stem = ({ stem, restriction, withLink }) => {
+  const { _ } = useLingui();
   const classes = useStyles();
   const { lemma, presentationLemma, pos, language, dialect, country } = stem;
   const [openParadigm, setOpenParadigm] = useState(false);
@@ -73,7 +74,7 @@ const Stem = ({ stem, restriction, withLink }) => {
                   color="textSecondary"
                   className={classes.pos}
                 >
-                  (<Trans id={pos}>{pos}</Trans>)
+                  ({partOfSpeech[pos] ? _(partOfSpeech[pos]) : pos})
                 </Typography>
               )}
               {['sme', 'sma', 'smj'].includes(language) && (
@@ -106,12 +107,14 @@ const Stem = ({ stem, restriction, withLink }) => {
         <Typography>
           {dialect && (
             <Typography component="span">
-              <Trans>Dialect</Trans>: <Trans id={dialect}>{dialect}</Trans>{' '}
+              <Trans>Dialect</Trans>:{" "}
+              {dialects[dialect] ? _(dialects[dialect]) : dialect}{" "}
             </Typography>
           )}
           {country && (
             <Typography component="span">
-              <Trans>Country</Trans>: <Trans id={country}>{country}</Trans>
+              <Trans>Country</Trans>:{" "}
+              {countryCodes[country] ? _(countryCodes[country]) : country}
             </Typography>
           )}
         </Typography>

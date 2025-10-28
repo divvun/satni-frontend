@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { makeStyles } from '@mui/styles';
 
-import dictionaryInfo from '../../translateble_variables';
+import dictionaryInfo, { dictionaryNames } from "../../translateble_variables";
 
 interface DictChooserProps {
   dicts: string[];
@@ -63,7 +63,11 @@ const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
                   name={dict}
                 />
               }
-              label={<Trans id={dict}>{dict}</Trans>}
+              label={
+                dictionaryNames[dict as keyof typeof dictionaryNames]
+                  ? _(dictionaryNames[dict as keyof typeof dictionaryNames])
+                  : dict
+              }
             />
           </AccordionSummary>
           <AccordionDetails>

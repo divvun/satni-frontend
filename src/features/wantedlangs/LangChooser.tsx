@@ -8,13 +8,16 @@ import Grid from '@mui/material/Grid';
 import setSrcLangs from '../../operations/mutations/setSrcLangs';
 import setTargetLangs from '../../operations/mutations/setTargetLangs';
 import { availableLanguages } from '../../utils';
+import { useLingui } from "@lingui/react";
+import { languageCodes } from "../../translateble_variables";
 
 interface LangChooserProps {
   langs: string[];
 }
 
 const LangChooser: React.FC<LangChooserProps> = ({ langs }) => {
-  const samiLanguages = new Set(['sma', 'sme', 'smj', 'smn', 'sms']);
+  const { _ } = useLingui();
+  const samiLanguages = new Set(["sma", "sme", "smj", "smn", "sms"]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newLangs = langs.includes(event.target.name)
@@ -41,7 +44,11 @@ const LangChooser: React.FC<LangChooserProps> = ({ langs }) => {
                     name={lang}
                   />
                 }
-                label={<Trans id={lang}>{lang}</Trans>}
+                label={
+                  languageCodes[lang as keyof typeof languageCodes]
+                    ? _(languageCodes[lang as keyof typeof languageCodes])
+                    : lang
+                }
               />
             ))}
         </FormGroup>
@@ -61,7 +68,11 @@ const LangChooser: React.FC<LangChooserProps> = ({ langs }) => {
                     name={lang}
                   />
                 }
-                label={<Trans id={lang}>{lang}</Trans>}
+                label={
+                  languageCodes[lang as keyof typeof languageCodes]
+                    ? _(languageCodes[lang as keyof typeof languageCodes])
+                    : lang
+                }
               />
             ))}
         </FormGroup>

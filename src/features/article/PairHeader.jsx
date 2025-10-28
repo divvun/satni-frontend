@@ -1,10 +1,13 @@
-import { Trans } from '@lingui/react/macro';
-import Checkbox from '@mui/material/Checkbox';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import { makeStyles } from '@mui/styles';
-import Tooltip from '@mui/material/Tooltip';
-import Typography from '@mui/material/Typography';
-import PropTypes from 'prop-types';
+import { Trans } from "@lingui/react/macro";
+import { useLingui } from "@lingui/react";
+import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import { makeStyles } from "@mui/styles";
+import Tooltip from "@mui/material/Tooltip";
+import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
+
+import { languageCodes } from "../../translateble_variables";
 
 // import { wantedLangsVar } from '../../apolloCache';
 
@@ -15,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const PairHeader = ({ language }) => {
+  const { _ } = useLingui();
   const classes = useStyles();
   // const wantedLangs = wantedLangsVar();
 
@@ -28,7 +32,7 @@ const PairHeader = ({ language }) => {
       className={classes.lang1}
       label={
         <Typography variant="subtitle2">
-          <Trans id={language}>{language}</Trans>
+          {languageCodes[language] ? _(languageCodes[language]) : language}
         </Typography>
       }
       control={
