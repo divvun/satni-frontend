@@ -7,8 +7,8 @@ import { interfaceLanguageVar } from '../apolloCache';
 import AsyncApp from './AsyncApp';
 
 async function loadMessages(language: string): Promise<any> {
-  // Dynamically import the compiled .mjs file
-  const module = await import(`../locales/${language}/messages.mjs`);
+  // Dynamically import the .po file
+  const module = await import(`../locales/${language}/messages.po`);
   return module.messages;
 }
 
