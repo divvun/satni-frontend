@@ -68,10 +68,10 @@ export const countryCodes = {
 
 // Exported dialect message descriptors for runtime translation
 export const dialects = {
-  easmsg: msg`easmsg`,
-  wesmsg: msg`wesmsg`,
-  north: msg`north`,
-  south: msg`south`,
+  eastern: msg`eastern`,
+  western: msg`western`,
+  northern: msg`northern`,
+  southern: msg`southern`,
 } as const;
 
 // Exported language code genitive message descriptors for runtime translation
