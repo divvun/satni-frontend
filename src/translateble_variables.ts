@@ -74,25 +74,26 @@ export const dialects = {
   south: msg`south`,
 } as const;
 
-const _languageCodesGenitive = [
-  msg`en_genitive`,
-  msg`eng_genitive`,
-  msg`fi_genitive`,
-  msg`fin_genitive`,
-  msg`nb_genitive`,
-  msg`nn_genitive`,
-  msg`nno_genitive`,
-  msg`nob_genitive`,
-  msg`se_genitive`,
-  msg`sv_genitive`,
-  msg`sma_genitive`,
-  msg`sme_genitive`,
-  msg`smj_genitive`,
-  msg`smn_genitive`,
-  msg`sms_genitive`,
-  msg`swe_genitive`,
-  msg`lat_genitive`,
-];
+// Exported language code genitive message descriptors for runtime translation
+export const languageCodesGenitive = {
+  en_genitive: msg`en_genitive`,
+  eng_genitive: msg`eng_genitive`,
+  fi_genitive: msg`fi_genitive`,
+  fin_genitive: msg`fin_genitive`,
+  nb_genitive: msg`nb_genitive`,
+  nn_genitive: msg`nn_genitive`,
+  nno_genitive: msg`nno_genitive`,
+  nob_genitive: msg`nob_genitive`,
+  se_genitive: msg`se_genitive`,
+  sv_genitive: msg`sv_genitive`,
+  sma_genitive: msg`sma_genitive`,
+  sme_genitive: msg`sme_genitive`,
+  smj_genitive: msg`smj_genitive`,
+  smn_genitive: msg`smn_genitive`,
+  sms_genitive: msg`sms_genitive`,
+  swe_genitive: msg`swe_genitive`,
+  lat_genitive: msg`lat_genitive`,
+} as const;
 
 const _categories = [
   msg`Beaivválaš giella`,
