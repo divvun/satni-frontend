@@ -6,7 +6,7 @@ const stem = {
   presentationLemma: 'bárdni',
   language: 'sme',
   pos: 'N',
-  dialect: 'north',
+  dialect: 'northern',
   country: 'SE',
 };
 
