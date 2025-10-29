@@ -14,31 +14,31 @@ msgstr ""
 "Mime-Version: 1.0\n"
 "X-Generator: Pontoon\n"
 
-#: src/translateble_variables.ts:228
+#: src/translateble_variables.ts:229
 msgid "    \"Koltan- ja kuolanlapin sanakirja\" (T. I. Itkonen, 1958)"
 msgstr ""
 
-#: src/translateble_variables.ts:233
+#: src/translateble_variables.ts:234
 msgid "    \"Kuvitettu käsityösanasto\" (Mettäpuro & Moshnikoff, 2009)"
 msgstr ""
 
-#: src/translateble_variables.ts:231
+#: src/translateble_variables.ts:232
 msgid "    \"Lääʹdd-sääʹm sääʹnnǩeʹrjj \" (Sammallahti & Moshnikoff, 1991)"
 msgstr ""
 
-#: src/translateble_variables.ts:232
+#: src/translateble_variables.ts:233
 msgid "    \"Mattu saaʹnid\" (Mänty & Fofonoff, 2003)"
 msgstr ""
 
-#: src/translateble_variables.ts:230
+#: src/translateble_variables.ts:231
 msgid "    \"Suomi-koltansaame-piensanasto : Suáma-sääém-sieǒmsäennös\" (Sverloff, 1989)"
 msgstr ""
 
-#: src/translateble_variables.ts:229
+#: src/translateble_variables.ts:230
 msgid "    \"Suomi-saamski keskeissanasto : Suâma-sââma kôskaldsännôs\" (Sverloff, 1978)"
 msgstr ""
 
-#: src/translateble_variables.ts:234
+#: src/translateble_variables.ts:235
 msgid "    \"Vuõʹlǧǧe jååʹtted ooudâs\" (Sammallahti, 2012)"
 msgstr ""
 
@@ -70,24 +70,23 @@ msgstr ""
 #~ msgid "\"Vuõʹlǧǧe jååʹtted ooudâs\" (Sammallahti, 2012)"
 #~ msgstr ""
 
-#: src/containers/StatusBar.jsx:24
+#: src/containers/StatusBar.jsx:28
 msgid "(<0>Show all</0>)"
 msgstr "<0>Visa alla</0>"
 
-#. placeholder {0}: wantedDicts[0]
 #: src/containers/StatusBar.jsx:23
-msgid "{0}"
-msgstr ""
+#~ msgid "{0}"
+#~ msgstr ""
 
 #. placeholder {0}: srcLangs.length
 #. placeholder {1}: availableLanguages.length
-#: src/containers/StatusBar.jsx:41
+#: src/containers/StatusBar.jsx:45
 msgid "{0}/{1} languages."
 msgstr ""
 
 #. placeholder {0}: wantedDicts.length
 #. placeholder {1}: Object.keys(dictionaryInfo).length
-#: src/containers/StatusBar.jsx:32
+#: src/containers/StatusBar.jsx:36
 msgid "{0}/{1} sources."
 msgstr ""
 
@@ -99,8 +98,8 @@ msgstr ""
 #~ msgstr ""
 
 #: src/containers/Welcome.jsx:52
-msgid "{currentDict}"
-msgstr ""
+#~ msgid "{currentDict}"
+#~ msgstr ""
 
 #: src/features/article/Stem.jsx:109
 #~ msgid "{dialect}"
@@ -188,28 +187,28 @@ msgstr "adj."
 msgid "Adv"
 msgstr "adv."
 
-#: src/translateble_variables.ts:120
+#: src/translateble_variables.ts:121
 msgid "Álšateknihkka"
 msgstr ""
 
-#: src/translateble_variables.ts:145
-#: src/translateble_variables.ts:151
+#: src/translateble_variables.ts:146
+#: src/translateble_variables.ts:152
 msgid "Approximately half of the content of the dictionary is taken by searching for parallels in a parallel corpus of administrative text. This work was financed by the Ministry of Local Government and Modernisation."
 msgstr "Ungefär hälften av innehållet i ordböckerna är hämtat från en parallell korpus av administrativa texter, finansierad av Kommunal- och förvaltningsdepartementet."
 
-#: src/translateble_variables.ts:121
+#: src/translateble_variables.ts:122
 msgid "Ásttoáigi ja faláštallan"
 msgstr ""
 
-#: src/translateble_variables.ts:122
+#: src/translateble_variables.ts:123
 msgid "Ávnnasindustriija"
 msgstr ""
 
-#: src/translateble_variables.ts:98
+#: src/translateble_variables.ts:99
 msgid "Beaivválaš giella"
 msgstr "Vardagligt språk"
 
-#: src/translateble_variables.ts:99
+#: src/translateble_variables.ts:100
 msgid "Boazodoallu"
 msgstr "Renskötsel"
 
@@ -233,7 +232,7 @@ msgstr ""
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr "Välj om söktermen ska vara i början, mitten eller slutet av det du letar efter."
 
-#: src/containers/Welcome.jsx:153
+#: src/containers/Welcome.jsx:157
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr "Klicka på <0/> för att se hur ordet böjs. Klicka på <1/> för att se exempel på hur ordet används."
 
@@ -241,7 +240,7 @@ msgstr "Klicka på <0/> för att se hur ordet böjs. Klicka på <1/> för att se
 msgid "Country"
 msgstr "Rike"
 
-#: src/translateble_variables.ts:101
+#: src/translateble_variables.ts:102
 msgid "Dáidda ja girjjálašvuohta"
 msgstr "Konst och litteratur"
 
@@ -264,19 +263,19 @@ msgstr "Dialekt"
 msgid "Dictionaries"
 msgstr "Ordböcker"
 
-#: src/translateble_variables.ts:224
+#: src/translateble_variables.ts:225
 msgid "Dictionaries for Skolt Saami and Finnish consist of materials based on various sources and research projects:"
 msgstr ""
 
-#: src/translateble_variables.ts:226
+#: src/translateble_variables.ts:227
 msgid "Dictionaries:"
 msgstr ""
 
-#: src/containers/Welcome.jsx:147
+#: src/containers/Welcome.jsx:151
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr "I den här panelen visas ordboksartiklar när du trycker på ett ord bland sökresultaten till vänster."
 
-#: src/translateble_variables.ts:100
+#: src/translateble_variables.ts:101
 msgid "Dihtorteknologiija ja diehtoteknihkka"
 msgstr "Datorteknik och datateknik"
 
@@ -286,35 +285,39 @@ msgstr "Datorteknik och datateknik"
 #~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
 #~ msgstr ""
 
-#: src/containers/Welcome.jsx:71
+#: src/containers/Welcome.jsx:75
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
 msgstr "Sök i <0>Gielagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamiska - finska ordbok</1>, Hamarøy kommuns <2>lulesamiska - norska</2> eller <3>norska - lulesamiska< /3> medicinska ordböcker eller i <4>Giellateknos</4> <5>samiska ordböcker</5>."
 
-#: src/translateble_variables.ts:102
+#: src/translateble_variables.ts:103
 msgid "Eanandoallu"
 msgstr "Lantbruk"
 
 #: src/translateble_variables.ts:71
-msgid "easmsg"
-msgstr ""
+#~ msgid "easmsg"
+#~ msgstr ""
 
 #: src/translateble_variables.js:53
 #~ msgid "east"
 #~ msgstr "öst"
 
-#: src/translateble_variables.ts:103
+#: src/translateble_variables.ts:71
+msgid "eastern"
+msgstr ""
+
+#: src/translateble_variables.ts:104
 msgid "Education"
 msgstr "Pedagogik"
 
-#: src/translateble_variables.ts:104
+#: src/translateble_variables.ts:105
 msgid "Ekologiija ja biras"
 msgstr "Ekologi och miljö"
 
-#: src/translateble_variables.ts:105
+#: src/translateble_variables.ts:106
 msgid "Ekonomiija ja gávppašeapmi"
 msgstr "Ekonomi och handel"
 
-#: src/translateble_variables.ts:132
+#: src/translateble_variables.ts:133
 msgid "Emeritusprofessor Pekka Sammallahti has based this dictionary on his own printed dictionaries published in 1989 and 1993."
 msgstr "Professor emeritus Pekka Sammallahti har baserat denna ordbok på sina egna tryckta ordböcker utgivna 1989 och 1993."
 
@@ -322,7 +325,7 @@ msgstr "Professor emeritus Pekka Sammallahti har baserat denna ordbok på sina e
 msgid "en"
 msgstr "en"
 
-#: src/translateble_variables.ts:78
+#: src/translateble_variables.ts:79
 msgid "en_genitive"
 msgstr "en-genitive"
 
@@ -330,7 +333,7 @@ msgstr "en-genitive"
 msgid "eng"
 msgstr ""
 
-#: src/translateble_variables.ts:79
+#: src/translateble_variables.ts:80
 msgid "eng_genitive"
 msgstr ""
 
@@ -342,7 +345,7 @@ msgstr ""
 msgid "FI"
 msgstr "Finland"
 
-#: src/translateble_variables.ts:80
+#: src/translateble_variables.ts:81
 msgid "fi_genitive"
 msgstr ""
 
@@ -350,22 +353,22 @@ msgstr ""
 msgid "fin"
 msgstr ""
 
-#: src/translateble_variables.ts:81
+#: src/translateble_variables.ts:82
 msgid "fin_genitive"
 msgstr ""
 
-#: src/translateble_variables.ts:106
+#: src/translateble_variables.ts:107
 msgid "Geografiija"
 msgstr "Geografi"
 
-#: src/translateble_variables.ts:107
+#: src/translateble_variables.ts:108
 msgid "Gielladieđa"
 msgstr "Språkvetenskap"
 
 #~ msgid "Giellagáldu"
 #~ msgstr ""
 
-#: src/translateble_variables.ts:138
+#: src/translateble_variables.ts:139
 msgid "Giellagáldu's main task is to standardise new terminology and written language for the Sami languages. The standardised terms from their <a href=\"satni.uit.no/termwiki\">termbase<a> is exported daily to this site, to be easily accessible to the Sami community."
 msgstr "Giellagáldus huvuduppgift är standardisering av ny terminologi och skriftspråk för de samiska språken. De standardiserade termerna från deras <a href=\"satni.uit.no/termwiki\">termbas<a> hämtas dagligen till denna webbplats, så att de är lättillgängliga för det samiska samhället."
 
@@ -437,25 +440,25 @@ msgstr "Giellatekno's Skolt Sami - Norwegian Bokmål dictionary"
 msgid "gtsmsrus"
 msgstr "Giellatekno's Skolt Sami - Russian dictionary"
 
-#: src/translateble_variables.ts:108
+#: src/translateble_variables.ts:109
 msgid "Gulahallanteknihkka"
 msgstr "Kommunikationsteknik"
 
-#: src/translateble_variables.ts:109
+#: src/translateble_variables.ts:110
 msgid "Guolástus"
 msgstr "Fiske"
 
 #~ msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary"
 #~ msgstr ""
 
-#: src/translateble_variables.ts:203
+#: src/translateble_variables.ts:204
 msgid "Hábmer municipality's Lule Sámi - Norwegian medicinal dictionary. Contains about 1600 search words."
 msgstr "Hamarøy kommuns lulesamisk-norska medicinska ordbok. Innehåller ungefär 1 600 sökord."
 
 #~ msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary"
 #~ msgstr ""
 
-#: src/translateble_variables.ts:208
+#: src/translateble_variables.ts:209
 msgid "Hábmer municipality's Norwegian - Lule Sámi medicinal dictionary. Contains about 1600 search words."
 msgstr "Hamarøy kommuns norsk-lulesamiska medicinska ordbok. Innehåller ungefär 1600 sökord."
 
@@ -482,19 +485,19 @@ msgstr "Göm den här ordboken"
 msgid "Hide this language"
 msgstr "Göm det här språket"
 
-#: src/translateble_variables.ts:110
+#: src/translateble_variables.ts:111
 msgid "Huksenteknihkka"
 msgstr "Byggteknik"
 
-#: src/translateble_variables.ts:263
+#: src/translateble_variables.ts:264
 msgid "In June of 2020, the files generated by Jack Rueter (approximately 30000 entries) were moved into main/words/dicts/finsms/inc/ for future consultation. The files have been replaced by a newer set (approximately 20000 entries) deriving directly from editing of the Satu & Jouni Moshnikoff dictionary organized by the Oulu University Giellagas Institute and Saami Parliament in Inari, Finland with funding from the Finnish Ministry of Education (2019–2020)."
 msgstr ""
 
-#: src/containers/Welcome.jsx:161
+#: src/containers/Welcome.jsx:165
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr "Inuti artiklarna kan du gömma oönskade språk och ordböcker. För att återaktivera dem, tryck på <0/> eller <1/>."
 
-#: src/translateble_variables.ts:111
+#: src/translateble_variables.ts:112
 msgid "Juridihkka"
 msgstr "Juridik"
 
@@ -502,10 +505,10 @@ msgstr "Juridik"
 msgid "lamsg"
 msgstr ""
 
-#: src/translateble_variables.ts:218
-#: src/translateble_variables.ts:244
-#: src/translateble_variables.ts:255
-#: src/translateble_variables.ts:276
+#: src/translateble_variables.ts:219
+#: src/translateble_variables.ts:245
+#: src/translateble_variables.ts:256
+#: src/translateble_variables.ts:277
 msgid "Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009."
 msgstr ""
 
@@ -517,7 +520,7 @@ msgstr "Språk"
 #~ msgid "lat"
 #~ msgstr ""
 
-#: src/translateble_variables.ts:94
+#: src/translateble_variables.ts:95
 msgid "lat_genitive"
 msgstr ""
 
@@ -529,15 +532,15 @@ msgstr ""
 msgid "Lookup the search word"
 msgstr "Slå upp söktermen"
 
-#: src/translateble_variables.ts:112
+#: src/translateble_variables.ts:113
 msgid "Luonddudieđa ja matematihkka"
 msgstr "Naturvetenskap och matematik"
 
-#: src/translateble_variables.ts:114
+#: src/translateble_variables.ts:115
 msgid "Mášenteknihkka"
 msgstr "Maskinteknik"
 
-#: src/translateble_variables.ts:113
+#: src/translateble_variables.ts:114
 msgid "Medisiidna"
 msgstr "Medisin"
 
@@ -549,7 +552,7 @@ msgstr "subst."
 msgid "nb"
 msgstr ""
 
-#: src/translateble_variables.ts:82
+#: src/translateble_variables.ts:83
 msgid "nb_genitive"
 msgstr ""
 
@@ -557,7 +560,7 @@ msgstr ""
 msgid "nn"
 msgstr ""
 
-#: src/translateble_variables.ts:83
+#: src/translateble_variables.ts:84
 msgid "nn_genitive"
 msgstr ""
 
@@ -565,7 +568,7 @@ msgstr ""
 msgid "nno"
 msgstr ""
 
-#: src/translateble_variables.ts:84
+#: src/translateble_variables.ts:85
 msgid "nno_genitive"
 msgstr ""
 
@@ -584,15 +587,19 @@ msgstr "Inga resultat för <0>{searchExpression}</0>"
 msgid "nob"
 msgstr ""
 
-#: src/translateble_variables.ts:85
+#: src/translateble_variables.ts:86
 msgid "nob_genitive"
 msgstr ""
 
 #: src/translateble_variables.ts:73
-msgid "north"
+#~ msgid "north"
+#~ msgstr ""
+
+#: src/translateble_variables.ts:73
+msgid "northern"
 msgstr ""
 
-#: src/translateble_variables.ts:150
+#: src/translateble_variables.ts:151
 msgid "Norwegian → North Sámi is based on the North Sámi → Norwegian dictionary, but frequent Norwegian words have been added. It contains about 26,000 Norwegian entries."
 msgstr "Norska → Nordsamiska bygger på den nordsamiska → norska ordboken, men vanliga norska ord har också lagts till. Den innehåller cirka 26 000 norska söktermer."
 
@@ -600,7 +607,7 @@ msgstr "Norska → Nordsamiska bygger på den nordsamiska → norska ordboken, m
 msgid "Note:"
 msgstr "Notat:"
 
-#: src/translateble_variables.ts:115
+#: src/translateble_variables.ts:116
 msgid "Ođđa sánimsg"
 msgstr ""
 
@@ -608,10 +615,10 @@ msgstr ""
 #~ msgid "Ođđa sánit"
 #~ msgstr "Nya ord"
 
-#: src/translateble_variables.ts:216
-#: src/translateble_variables.ts:242
-#: src/translateble_variables.ts:253
-#: src/translateble_variables.ts:274
+#: src/translateble_variables.ts:217
+#: src/translateble_variables.ts:243
+#: src/translateble_variables.ts:254
+#: src/translateble_variables.ts:275
 msgid "Other main contributors to these projects were (in alphabetical order) Katri Jefremoff, Erkki Lumisalmi, Zoja Nosova, Lena Terhart, and Joshua Wilbur."
 msgstr ""
 
@@ -623,7 +630,7 @@ msgstr "Böjningsmönster"
 msgid "Pron"
 msgstr "pron."
 
-#: src/translateble_variables.ts:116
+#: src/translateble_variables.ts:117
 msgid "Religion"
 msgstr "Religion"
 
@@ -631,7 +638,7 @@ msgstr "Religion"
 msgid "Results for «{lemma}»"
 msgstr "Resultat för \"{lemma}\""
 
-#: src/containers/StatusBar.jsx:23
+#: src/containers/StatusBar.jsx:24
 msgid "Results only from"
 msgstr "Visar endast resultat från"
 
@@ -651,7 +658,7 @@ msgstr "Samiska bokstäver"
 msgid "sammallahtismefin"
 msgstr ""
 
-#: src/translateble_variables.ts:225
+#: src/translateble_variables.ts:226
 msgid "Satu & Jouni Moshnikoff sanasto"
 msgstr ""
 
@@ -663,7 +670,7 @@ msgstr ""
 msgid "SE"
 msgstr "Sverige"
 
-#: src/translateble_variables.ts:86
+#: src/translateble_variables.ts:87
 msgid "se_genitive"
 msgstr ""
 
@@ -681,7 +688,7 @@ msgstr ""
 msgid "Search mode:"
 msgstr "Sökläge:"
 
-#: src/containers/Welcome.jsx:116
+#: src/containers/Welcome.jsx:120
 msgid "Search results will appear here."
 msgstr "Sökresultat visas här."
 
@@ -697,7 +704,7 @@ msgstr "Sök efter ord som slutar på söktermen"
 msgid "Search words that start with your search term"
 msgstr "Sök efter ord som börjar med söktermen"
 
-#: src/translateble_variables.ts:117
+#: src/translateble_variables.ts:118
 msgid "Servodatdieđa"
 msgstr "Samhällskunskap"
 
@@ -713,14 +720,14 @@ msgstr "Visa konjugationsmönstret för detta ord"
 msgid "Show this word in our corpus"
 msgstr "Visa detta ord i vår textsamling"
 
-#: src/translateble_variables.ts:213
-#: src/translateble_variables.ts:239
-#: src/translateble_variables.ts:250
-#: src/translateble_variables.ts:271
+#: src/translateble_variables.ts:214
+#: src/translateble_variables.ts:240
+#: src/translateble_variables.ts:251
+#: src/translateble_variables.ts:272
 msgid "Skolt Sámi → X project contains materials deriving from the research of numerous projects, dictionaries and word lists."
 msgstr ""
 
-#: src/translateble_variables.ts:227
+#: src/translateble_variables.ts:228
 msgid "Skolt Sámi lemmas with Finnish translations can also be attributed to materials in:"
 msgstr ""
 
@@ -728,7 +735,7 @@ msgstr ""
 msgid "sma"
 msgstr ""
 
-#: src/translateble_variables.ts:88
+#: src/translateble_variables.ts:89
 msgid "sma_genitive"
 msgstr ""
 
@@ -736,7 +743,7 @@ msgstr ""
 msgid "sme"
 msgstr ""
 
-#: src/translateble_variables.ts:89
+#: src/translateble_variables.ts:90
 msgid "sme_genitive"
 msgstr ""
 
@@ -744,7 +751,7 @@ msgstr ""
 msgid "smj"
 msgstr ""
 
-#: src/translateble_variables.ts:90
+#: src/translateble_variables.ts:91
 msgid "smj_genitive"
 msgstr ""
 
@@ -752,7 +759,7 @@ msgstr ""
 msgid "smn"
 msgstr ""
 
-#: src/translateble_variables.ts:91
+#: src/translateble_variables.ts:92
 msgid "smn_genitive"
 msgstr ""
 
@@ -760,7 +767,7 @@ msgstr ""
 msgid "sms"
 msgstr ""
 
-#: src/translateble_variables.ts:92
+#: src/translateble_variables.ts:93
 msgid "sms_genitive"
 msgstr ""
 
@@ -770,10 +777,14 @@ msgid "Source:"
 msgstr "Källa:"
 
 #: src/translateble_variables.ts:74
-msgid "south"
+#~ msgid "south"
+#~ msgstr ""
+
+#: src/translateble_variables.ts:74
+msgid "southern"
 msgstr ""
 
-#: src/translateble_variables.ts:118
+#: src/translateble_variables.ts:119
 msgid "Stáda almmolaš hálddašeapmi"
 msgstr "Offentlig förvaltning"
 
@@ -784,11 +795,11 @@ msgstr "Offentlig förvaltning"
 msgid "Status:"
 msgstr "Status:"
 
-#: src/translateble_variables.ts:264
+#: src/translateble_variables.ts:265
 msgid "Subsequent updating of these files is being continued using the Veʹrdd dictionary editing platform, which played an instrumental role in the development of 2020."
 msgstr ""
 
-#: src/translateble_variables.ts:266
+#: src/translateble_variables.ts:267
 msgid "Subsequent updating of these files is being continued using the Veʹrdd dictionary editing platform, which played an instrumental role in the development of 2020. Extensive work can be attributed to members of the language community, language researchers and students at the Giellagas Institute and language technology researchers."
 msgstr ""
 
@@ -796,7 +807,7 @@ msgstr ""
 msgid "sv"
 msgstr ""
 
-#: src/translateble_variables.ts:87
+#: src/translateble_variables.ts:88
 msgid "sv_genitive"
 msgstr ""
 
@@ -804,11 +815,11 @@ msgstr ""
 msgid "swe"
 msgstr ""
 
-#: src/translateble_variables.ts:93
+#: src/translateble_variables.ts:94
 msgid "swe_genitive"
 msgstr ""
 
-#: src/translateble_variables.ts:119
+#: src/translateble_variables.ts:120
 msgid "Teknihkka industriija duodji"
 msgstr "Teknik, industri och duodji"
 
@@ -816,34 +827,34 @@ msgstr "Teknik, industri och duodji"
 msgid "termwiki"
 msgstr ""
 
-#: src/translateble_variables.ts:215
-#: src/translateble_variables.ts:241
-#: src/translateble_variables.ts:252
-#: src/translateble_variables.ts:273
+#: src/translateble_variables.ts:216
+#: src/translateble_variables.ts:242
+#: src/translateble_variables.ts:253
+#: src/translateble_variables.ts:274
 msgid "The creation of this wordlist was related to the Kola Sámi Documentation Project (KSDP) led by Michael Rießler, to work carried out by Michael Rießler at Äʹvv Saaʹmi muʹzei, as well as the art installation \"Language Memory\" at Äʹvv Saaʹmi muʹzei by Espen Sommer Eide."
 msgstr ""
 
-#: src/translateble_variables.ts:167
-#: src/translateble_variables.ts:173
+#: src/translateble_variables.ts:168
+#: src/translateble_variables.ts:174
 msgid "The dictionary contains about 11,000 entries."
 msgstr "Ordboken har ungefär 11 000 uppslagsord."
 
-#: src/translateble_variables.ts:133
+#: src/translateble_variables.ts:134
 msgid "The dictionary contains more than 50.000 entries, and Sammallahti adds entries regularly."
 msgstr "Ordboken innehåller med än 50.000 poster, och Sammallahti lägger regelbundet till fler."
 
-#: src/translateble_variables.ts:261
+#: src/translateble_variables.ts:262
 msgid "The Finnish-to-Skolt Sami dictionary has gone through three phases, moving from quantity to quality. After original work with in the Skolt Sami-to-X dictionary, a simple flipped dictionary was produced for providing Finnish-to-Skolt Sami searches in the saan.oahpa.no online dictionary in 2016."
 msgstr ""
 
-#: src/containers/Welcome.jsx:119
+#: src/containers/Welcome.jsx:123
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 msgstr "Inmatningsfältet accepterar samisk, nordisk, engelska och latinska sökord. Om du inte har samiska bokstäver på ditt tangentbord så klickar du på <0/> för att få in dom i inmatningsfältet."
 
-#: src/translateble_variables.ts:219
-#: src/translateble_variables.ts:245
-#: src/translateble_variables.ts:256
-#: src/translateble_variables.ts:277
+#: src/translateble_variables.ts:220
+#: src/translateble_variables.ts:246
+#: src/translateble_variables.ts:257
+#: src/translateble_variables.ts:278
 msgid "The Kone funded project \"Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages\" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others"
 msgstr ""
 
@@ -854,25 +865,25 @@ msgstr ""
 #~ msgid "The Kone funded project \"Skolt Sami revitalization with language technology and development of guidelines for transferring these methods to other endangered languages\" [Koltansaamen elvytys kieliteknologia-avusteisen kielenoppimisohjelmien avulla sekä mallin ja ohjeiden laatiminen menetelmän siirtämiseksi toisiin uhanalaisiin kieliin] (2015--2018) headed by Jack Rueter employed the language expertise of Eino Koponen, and upcoming specialists such as Miika Lehtinen and Markus Juutinen as well as the invaluable feedback fro the language community, e.g. Merja Fofonoff, XXX in the establishment of a large morphological database from research by others"
 #~ msgstr ""
 
-#: src/translateble_variables.ts:217
-#: src/translateble_variables.ts:243
-#: src/translateble_variables.ts:254
-#: src/translateble_variables.ts:275
+#: src/translateble_variables.ts:218
+#: src/translateble_variables.ts:244
+#: src/translateble_variables.ts:255
+#: src/translateble_variables.ts:276
 msgid "The KSDP started in 2005 and in principle is still active."
 msgstr ""
 
-#: src/translateble_variables.ts:265
+#: src/translateble_variables.ts:266
 msgid "The present Finnish-to-Skolt Sami dictionary consists of approximately 20000 entries, which are derived directly from editing of the Satu & Jouni Moshnikoff dictionary organized by the Oulu University Giellagas Institute and Saami Parliament in Inari, Finland with funding from the Finnish Ministry of Education (2019–2020)."
 msgstr ""
 
-#: src/translateble_variables.ts:214
-#: src/translateble_variables.ts:240
-#: src/translateble_variables.ts:251
-#: src/translateble_variables.ts:272
+#: src/translateble_variables.ts:215
+#: src/translateble_variables.ts:241
+#: src/translateble_variables.ts:252
+#: src/translateble_variables.ts:273
 msgid "The research projects have lead to the merging of several word lists featuring Skolt Sami as a source language with multiple target languages. Michael Rießler's contribution mainly consists of the integration of an earlier created Skolt Saami word list with English, Finnish, Norwegian, and Russian translations and linking to sound files."
 msgstr ""
 
-#: src/translateble_variables.ts:139
+#: src/translateble_variables.ts:140
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr "Termbasen täcker över 50,000 termposter, och uppdateras regelbundet."
 
@@ -880,27 +891,27 @@ msgstr "Termbasen täcker över 50,000 termposter, och uppdateras regelbundet."
 msgid "There is no paradigm for this word"
 msgstr "Det finns inget paradigm för detta ord"
 
-#: src/translateble_variables.ts:156
-#: src/translateble_variables.ts:161
+#: src/translateble_variables.ts:157
+#: src/translateble_variables.ts:162
 msgid "This dictionary builds on material prepared by Albert Jåma and Tove Brustad in the Hemnes Saami Organization, but has in addition gained words from Giellatekno and Aajege's work with the Southern Sámi Oahpa."
 msgstr "Ordboken bygger på material framtaget av Alber Jåma och Tove Brustad i Hemnes samiska förening men har även fått material från Giellatekno och Aajages arbete med sydsamiska Oahpa."
 
-#: src/translateble_variables.ts:144
+#: src/translateble_variables.ts:145
 msgid "This dictionary builds on Nils Jernsletten's dictionary Álgosátnegirji (4322 words), but now it contains 30,000 entries, plus 6000 place name entries."
 msgstr "Ordboken bygger på Nils Jernslettens ordbok Álgosátnegirji (med 4322 ord) men innehåller idag 30,000 ord samt 6000 ortsnamn."
 
-#: src/translateble_variables.ts:178
-#: src/translateble_variables.ts:183
-#: src/translateble_variables.ts:188
-#: src/translateble_variables.ts:193
+#: src/translateble_variables.ts:179
+#: src/translateble_variables.ts:184
+#: src/translateble_variables.ts:189
+#: src/translateble_variables.ts:194
 msgid "This dictionary builds on the Valtonen and Olthuis Inarinsaame-suomi-inarinsaame dictionary (30000 words)."
 msgstr "Ordboken bygger på Valtonen och Olthuis Inarinsaame-suomi-inarinsaame ordbok (30000 ord)."
 
-#: src/translateble_variables.ts:172
+#: src/translateble_variables.ts:173
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition frequent Finnish words have been added."
 msgstr "Ordboken bygger på lexikalt material framtaget av Institutet för dom inhemska språken i Finland samt material hämtat från Giellateknos arbete med nordsamisk Oahpa. Utöver detta har frekventa finländska ord även inkluderats."
 
-#: src/translateble_variables.ts:166
+#: src/translateble_variables.ts:167
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr "Ordboken bygger på lexikalt material framtaget av Institutet för dom inhemska språken i Finland samt material hämtat från Giellateknos arbete med nordsamisk Oahpa. Utöver detta har frekventa nordsamiska ord även inkluderats."
 
@@ -908,11 +919,11 @@ msgstr "Ordboken bygger på lexikalt material framtaget av Institutet för dom i
 msgid "This word is not found in our corpus"
 msgstr "Detta ord finns ej i våran korpus"
 
-#: src/translateble_variables.ts:262
+#: src/translateble_variables.ts:263
 msgid "This, of course, meant that an extensive amount of non-standard words and word forms were presented. As more and more students of the language became aware of the dictionary, it began to serve as a basis of vocabulary learning and, unfortunately, the source of many spelling mistakes and morphological misconceptions."
 msgstr ""
 
-#: src/translateble_variables.ts:198
+#: src/translateble_variables.ts:199
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
 msgstr "Trond Trosteruds Finska - Norska ordbok har mer än 30000 sökord."
 
@@ -924,19 +935,23 @@ msgstr ""
 msgid "V"
 msgstr "V"
 
-#: src/containers/Welcome.jsx:54
+#: src/containers/Welcome.jsx:58
 msgid "Welcome!"
 msgstr "Välkomen!"
 
 #: src/translateble_variables.ts:72
-msgid "wesmsg"
-msgstr ""
+#~ msgid "wesmsg"
+#~ msgstr ""
 
 #: src/translateble_variables.js:53
 #~ msgid "west"
 #~ msgstr ""
 
-#: src/containers/Welcome.jsx:133
+#: src/translateble_variables.ts:72
+msgid "western"
+msgstr ""
+
+#: src/containers/Welcome.jsx:137
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "När du klickar på ord här dyker ordboksartiklarna upp till höger."
 
@@ -944,6 +959,6 @@ msgstr "När du klickar på ord här dyker ordboksartiklarna upp till höger."
 msgid "Write at least one letter here"
 msgstr "Skriv åtminstone en bokstav här"
 
-#: src/containers/Welcome.jsx:127
+#: src/containers/Welcome.jsx:131
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr "Du kan söka bland dom hämtade orden här, nya ord laddas in tills alla matchningar har hittats."
