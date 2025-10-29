@@ -1,17 +1,18 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
-import { makeStyles } from '@mui/styles';
-import { Trans } from '@lingui/react/macro';
-import { Link, useLocation } from 'react-router-dom';
-import Typography from '@mui/material/Typography';
+import React from "react";
+import { useQuery } from "@apollo/client";
+import { makeStyles } from "@mui/styles";
+import { Trans } from "@lingui/react/macro";
+import { useLingui } from "@lingui/react";
+import { Link, useLocation } from "react-router-dom";
+import Typography from "@mui/material/Typography";
 
-import { availableLanguages, locationParser } from '../utils';
-import GET_LANGS_DICTS from '../operations/queries/getLangsDicts';
+import { availableLanguages, locationParser } from "../utils";
 import dictionaryInfo, { dictionaryNames } from "../translateble_variables";
+import GET_LANGS_DICTS from "../operations/queries/getLangsDicts";
 
 const useStyles = makeStyles((theme) => ({
   status: {
-    textAlign: 'center',
+    textAlign: "center",
     margin: theme.spacing(1),
   },
 }));
@@ -39,7 +40,7 @@ const dictStatus = (wantedDicts, currentLemma, _) => {
 };
 
 const langStatus = (wantedDicts, srcLangs) => {
-  if (wantedDicts.length > 1 || wantedDicts.includes('termwiki')) {
+  if (wantedDicts.length > 1 || wantedDicts.includes("termwiki")) {
     return (
       <Trans>
         {srcLangs.length}/{availableLanguages.length} languages.
@@ -64,8 +65,8 @@ const StatusBar = () => {
 
   return (
     <Typography className={classes.status}>
-      {langStatus(wantedDicts, srcLangs)}{' '}
-      {dictStatus(wantedDicts, currentLemma)}
+      {langStatus(wantedDicts, srcLangs)}{" "}
+      {dictStatus(wantedDicts, currentLemma, _)}
     </Typography>
   );
 };

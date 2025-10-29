@@ -1,28 +1,28 @@
-import React from 'react';
-import { makeStyles } from '@mui/styles';
-import { useLocation } from 'react-router-dom';
+import React from "react";
+import { makeStyles } from "@mui/styles";
+import { useLocation } from "react-router-dom";
 
-import { Trans } from '@lingui/react/macro';
-import { useLingui } from '@lingui/react';
-import InfoOutlined from '@mui/icons-material/InfoOutlined';
-import KeyboardIcon from '@mui/icons-material/Keyboard';
-import LanguageIcon from '@mui/icons-material/Language';
-import Link from '@mui/material/Link';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import ViewHeadlineOutlined from '@mui/icons-material/ViewHeadlineOutlined';
+import { Trans } from "@lingui/react/macro";
+import { useLingui } from "@lingui/react";
+import InfoOutlined from "@mui/icons-material/InfoOutlined";
+import KeyboardIcon from "@mui/icons-material/Keyboard";
+import LanguageIcon from "@mui/icons-material/Language";
+import Link from "@mui/material/Link";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import ViewHeadlineOutlined from "@mui/icons-material/ViewHeadlineOutlined";
 
-import { locationParser } from '../utils';
 import dictionaryInfo, { dictionaryNames } from "../translateble_variables";
+import { locationParser } from "../utils";
 
 const useStyles = makeStyles((theme) => ({
   welcome: {
-    [theme.breakpoints.up('xs')]: {
-      marginRight: '20%',
-      marginLeft: '20%',
+    [theme.breakpoints.up("xs")]: {
+      marginRight: "20%",
+      marginLeft: "20%",
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down("xs")]: {
       marginRight: theme.spacing(4),
       marginLeft: theme.spacing(4),
     },
@@ -30,14 +30,14 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   heading: {
-    textAlign: 'center',
+    textAlign: "center",
     margin: theme.spacing(1),
   },
   list: {
     marginBottom: theme.spacing(1),
   },
   icons: {
-    fontSize: 'inherit',
+    fontSize: "inherit",
   },
 }));
 
@@ -73,29 +73,29 @@ export const WelcomeHeader = () => {
           </>
         ) : (
           <Trans>
-            Do searches in{' '}
+            Do searches in{" "}
             <Link
               target="_blank"
               rel="noopener noreferrer"
               href="https://giella.org"
             >
               Giellagáldu&apos;s
-            </Link>{' '}
-            term collection,{' '}
+            </Link>{" "}
+            term collection,{" "}
             <Link href="/sammallahtismefin">
               Pekka Sammallahti&apos;s North Sami – Finnish dictionary
             </Link>
-            {', '}Hábmer municipality&apos;s{' '}
-            <Link href="/habmersmjnob">Lule Sámi - Norwegian</Link> or{' '}
+            {", "}Hábmer municipality&apos;s{" "}
+            <Link href="/habmersmjnob">Lule Sámi - Norwegian</Link> or{" "}
             <Link href="/habmernobsmj">Norwegian - Lule Sámi</Link> medicinal
-            dictionaries and{' '}
+            dictionaries and{" "}
             <Link
               target="_blank"
               rel="noopener noreferrer"
               href="http://giellatekno.uit.no"
             >
               Giellatekno&apos;s
-            </Link>{' '}
+            </Link>{" "}
             <Link
               target="_blank"
               rel="noopener noreferrer"
@@ -122,7 +122,7 @@ export const SearchWelcome = () => {
       <Typography component="p" className={classes.list}>
         <Trans>
           The input field accepts sami, nordic, english and latin search words.
-          If you do not have Sami letters on your device, press{' '}
+          If you do not have Sami letters on your device, press{" "}
           <KeyboardIcon className={classes.icons} /> to write them in the input
           field.
         </Trans>
@@ -156,7 +156,7 @@ export const DictWelcome = () => {
       <Typography component="p" className={classes.list}>
         <Trans>
           Click <InfoOutlined className={classes.icons} /> to see the inflection
-          paradigm of words. Click{' '}
+          paradigm of words. Click{" "}
           <ViewHeadlineOutlined className={classes.icons} /> to see examples of
           how the word is used.
         </Trans>
@@ -164,7 +164,7 @@ export const DictWelcome = () => {
       <Typography component="p" className={classes.list}>
         <Trans>
           Inside the articles you can hide unwanted languages and dictionaries.
-          To reactivate them, press <LanguageIcon className={classes.icons} />{' '}
+          To reactivate them, press <LanguageIcon className={classes.icons} />{" "}
           or <MenuBookIcon className={classes.icons} /> .
         </Trans>
       </Typography>
