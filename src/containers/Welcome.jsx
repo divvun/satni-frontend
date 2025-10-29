@@ -13,8 +13,8 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ViewHeadlineOutlined from '@mui/icons-material/ViewHeadlineOutlined';
 
-import dictionaryInfo from '../translateble_variables';
 import { locationParser } from '../utils';
+import dictionaryInfo, { dictionaryNames } from "../translateble_variables";
 
 const useStyles = makeStyles((theme) => ({
   welcome: {
@@ -49,7 +49,11 @@ export const WelcomeHeader = () => {
     <Paper className={classes.welcome}>
       <Typography variant="h5" className={classes.heading}>
         {currentDict && !currentLemma ? (
-          <Trans id={currentDict}>{currentDict}</Trans>
+          dictionaryNames[currentDict] ? (
+            _(dictionaryNames[currentDict])
+          ) : (
+            currentDict
+          )
         ) : (
           <Trans>Welcome!</Trans>
         )}

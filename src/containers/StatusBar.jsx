@@ -6,8 +6,8 @@ import { Link, useLocation } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 
 import { availableLanguages, locationParser } from '../utils';
-import dictionaryInfo from '../translateble_variables';
 import GET_LANGS_DICTS from '../operations/queries/getLangsDicts';
+import dictionaryInfo, { dictionaryNames } from "../translateble_variables";
 
 const useStyles = makeStyles((theme) => ({
   status: {
@@ -16,11 +16,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const dictStatus = (wantedDicts, currentLemma) => {
+const dictStatus = (wantedDicts, currentLemma, _) => {
   if (wantedDicts.length === 1) {
     return (
       <>
-        <Trans>Results only from</Trans> <Trans id={wantedDicts[0]}>{wantedDicts[0]}</Trans>{' '}
+        <Trans>Results only from</Trans>{" "}
+        {dictionaryNames[wantedDicts[0]]
+          ? _(dictionaryNames[wantedDicts[0]])
+          : wantedDicts[0]}{" "}
         <Trans>
           (<Link to={`/${currentLemma}`}>Show all</Link>)
         </Trans>
@@ -49,6 +52,7 @@ const langStatus = (wantedDicts, srcLangs) => {
 
 const StatusBar = () => {
   const classes = useStyles();
+  const { _ } = useLingui();
   const location = useLocation();
   const { currentDict, currentLemma } = locationParser(location.pathname);
   const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
