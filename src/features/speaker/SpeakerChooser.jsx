@@ -8,7 +8,7 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import PropTypes from "prop-types";
 
-import { availableVoices } from "./speakerVoices";
+import { availableVoices, getVoiceDisplayName } from "./speakerVoices";
 import { languageCodes } from "../../translateble_variables";
 
 const SpeakerChooser = ({ selectedVoices, onVoiceChange }) => {
@@ -36,7 +36,7 @@ const SpeakerChooser = ({ selectedVoices, onVoiceChange }) => {
                   key={voice}
                   value={voice}
                   control={<Radio color="primary" />}
-                  label={voice.charAt(0).toUpperCase() + voice.slice(1)}
+                  label={getVoiceDisplayName(voice)}
                 />
               ))}
             </RadioGroup>
