@@ -38,11 +38,11 @@ interface InfiniteStemsProps {
 
 const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
   const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
-  const { searchMode } = searchModeQueryResult.data;
+  const { searchMode = "start" } = searchModeQueryResult.data || {};
   const { stems, loading, loadMore, hasNextPage, totalCount } =
     useStems(searchExpression);
   const searchListClickedItemQuery = useQuery(GET_SEARCH_LIST_CLICKED_ITEM);
-  const { searchListClickedItem } = searchListClickedItemQuery.data;
+  const { searchListClickedItem = -1 } = searchListClickedItemQuery.data || {};
   const classes = useStyles();
 
   const stemsCount = hasNextPage ? stems.length + 1 : stems.length;
@@ -100,11 +100,12 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
                   }
 
                   const { stem } = stems[index];
+                  const stemValue = stem ?? "";
                   const truncStem = (
-                    <Truncate width={(width ?? 300) - 50}>{stem}</Truncate>
+                    <Truncate width={(width ?? 300) - 50}>{stemValue}</Truncate>
                   );
                   const stemNode =
-                    stem === searchListClickedItem ? (
+                    stemValue === String(searchListClickedItem) ? (
                       <Typography component="span" className={classes.clicked}>
                         {truncStem}
                       </Typography>
@@ -114,14 +115,14 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
 
                   const path =
                     currentDict && !currentLemma
-                      ? `${currentDict}/${stem}`
-                      : stem;
+                      ? `${currentDict}/${stemValue}`
+                      : stemValue;
                   return (
                     <Sentry.ErrorBoundary>
                       <ListItem
                         key={index}
                         style={style}
-                        onClick={() => setSearchListClickedItem(stem)}
+                        onClick={() => setSearchListClickedItem(index)}
                       >
                         <ListItemText
                           primary={<Link to={path}>{stemNode}</Link>}

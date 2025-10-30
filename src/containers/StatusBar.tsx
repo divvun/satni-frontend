@@ -61,11 +61,10 @@ const StatusBar: React.FC = () => {
   const location = useLocation();
   const { currentDict, currentLemma } = locationParser(location.pathname);
   const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
-  const { srcLangs } = langsDictsQueryResult.data;
+  const { srcLangs = [], wantedDicts: allWantedDicts = [] } =
+    langsDictsQueryResult.data || {};
 
-  const wantedDicts = currentDict
-    ? [currentDict]
-    : langsDictsQueryResult.data.wantedDicts;
+  const wantedDicts = currentDict ? [currentDict] : allWantedDicts;
 
   return (
     <Typography className={classes.status}>

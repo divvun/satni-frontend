@@ -1,6 +1,20 @@
-import { gql } from '@apollo/client';
+import { gql, TypedDocumentNode } from "@apollo/client";
+import type { Query, QueryConceptListArgs } from "../../graphql/graphql";
 
-const GET_TERM_ARTICLES = gql`
+export interface TermArticlesQuery {
+  conceptList: Query["conceptList"];
+}
+
+export interface TermArticlesVariables {
+  lemma: QueryConceptListArgs["exact"];
+  srcLangs: QueryConceptListArgs["srcLangs"];
+  targetLangs: QueryConceptListArgs["targetLangs"];
+}
+
+const GET_TERM_ARTICLES: TypedDocumentNode<
+  TermArticlesQuery,
+  TermArticlesVariables
+> = gql`
   query TermArticles(
     $lemma: String!
     $srcLangs: [String]!

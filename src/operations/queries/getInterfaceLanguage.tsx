@@ -1,6 +1,13 @@
-import { gql } from '@apollo/client';
+import { gql, TypedDocumentNode } from "@apollo/client";
 
-const GET_INTERFACE_LANGUAGE = gql`
+export interface GetInterfaceLanguageQuery {
+  interfaceLanguage: string;
+}
+
+const GET_INTERFACE_LANGUAGE: TypedDocumentNode<
+  GetInterfaceLanguageQuery,
+  never
+> = gql`
   query GetInterfaceLanguage {
     interfaceLanguage @client
   }

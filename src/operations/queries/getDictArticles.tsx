@@ -1,6 +1,21 @@
-import { gql } from '@apollo/client';
+import { gql, TypedDocumentNode } from "@apollo/client";
+import type { Query, QueryDictEntryListArgs } from "../../graphql/graphql";
 
-const GET_DICT_ARTICLES = gql`
+export interface DictArticlesQuery {
+  dictEntryList: Query["dictEntryList"];
+}
+
+export interface DictArticlesVariables {
+  lemma: QueryDictEntryListArgs["exact"];
+  srcLangs: QueryDictEntryListArgs["srcLangs"];
+  targetLangs: QueryDictEntryListArgs["targetLangs"];
+  wantedDicts: QueryDictEntryListArgs["wantedDicts"];
+}
+
+const GET_DICT_ARTICLES: TypedDocumentNode<
+  DictArticlesQuery,
+  DictArticlesVariables
+> = gql`
   query DictArticles(
     $lemma: String!
     $srcLangs: [String]!

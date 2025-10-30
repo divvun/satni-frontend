@@ -1,6 +1,16 @@
-import { gql } from '@apollo/client';
+import { gql, TypedDocumentNode } from "@apollo/client";
+import type { Query, QueryStemListArgs } from "../../graphql/graphql";
 
-const GET_LEMMAS = gql`
+export interface AllLemmasQuery {
+  stemList: Query["stemList"];
+}
+
+export interface AllLemmasVariables extends Omit<QueryStemListArgs, "first"> {
+  inputValue: string;
+  searchMode: string;
+}
+
+const GET_LEMMAS: TypedDocumentNode<AllLemmasQuery, AllLemmasVariables> = gql`
   query AllLemmas(
     $inputValue: String!
     $searchMode: String!

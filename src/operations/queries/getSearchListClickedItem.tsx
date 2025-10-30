@@ -1,6 +1,13 @@
-import { gql } from '@apollo/client';
+import { gql, TypedDocumentNode } from "@apollo/client";
 
-const GET_SEARCH_LIST_CLICKED_ITEM = gql`
+export interface GetSearchListClickedItemQuery {
+  searchListClickedItem: number;
+}
+
+const GET_SEARCH_LIST_CLICKED_ITEM: TypedDocumentNode<
+  GetSearchListClickedItemQuery,
+  never
+> = gql`
   query GetSearchListClickedItem {
     searchListClickedItem @client
   }

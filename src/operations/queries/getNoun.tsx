@@ -1,6 +1,13 @@
-import { gql } from '@apollo/client';
+import { gql, TypedDocumentNode } from "@apollo/client";
+import type { Query, QueryGeneratedArgs } from "../../graphql/graphql";
 
-const GET_NOUN = gql`
+export interface GeneratedQuery {
+  generated: Query["generated"];
+}
+
+export type GeneratedVariables = QueryGeneratedArgs;
+
+const GET_NOUN: TypedDocumentNode<GeneratedQuery, GeneratedVariables> = gql`
   query Generated(
     $origform: String!
     $language: String!
