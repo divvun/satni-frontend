@@ -1,38 +1,42 @@
-import { useQuery } from '@apollo/client';
-import CircularProgress from '@mui/material/CircularProgress';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import { useQuery } from "@apollo/client";
+import CircularProgress from "@mui/material/CircularProgress";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
 
-import { makeStyles } from '@mui/styles';
-import Typography from '@mui/material/Typography';
-import * as Sentry from '@sentry/react';
-import PropTypes from 'prop-types';
-import { Link, useLocation } from 'react-router-dom';
-import Truncate from 'react-truncate';
-import AutoSizer from 'react-virtualized-auto-sizer';
-import { FixedSizeList as List } from 'react-window';
-import InfiniteLoader from 'react-window-infinite-loader';
-import setSearchListClickedItem from '../../operations/mutations/setSearchListClickedItem';
-import GET_SEARCH_LIST_CLICKED_ITEM from '../../operations/queries/getSearchListClickedItem';
-import GET_SEARCH_MODE from '../../operations/queries/getSearchMode';
-import { locationParser } from '../../utils';
-import useStems from './InfiniteStems.hooks';
-import SearchInfo from './SearchInfo';
+import { makeStyles } from "@mui/styles";
+import Typography from "@mui/material/Typography";
+import * as Sentry from "@sentry/react";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import Truncate from "react-truncate";
+import AutoSizer from "react-virtualized-auto-sizer";
+import { FixedSizeList as List } from "react-window";
+import InfiniteLoader from "react-window-infinite-loader";
+import setSearchListClickedItem from "../../operations/mutations/setSearchListClickedItem";
+import GET_SEARCH_LIST_CLICKED_ITEM from "../../operations/queries/getSearchListClickedItem";
+import GET_SEARCH_MODE from "../../operations/queries/getSearchMode";
+import { locationParser } from "../../utils";
+import useStems from "./InfiniteStems.hooks";
+import SearchInfo from "./SearchInfo";
 
 const useStyles = makeStyles(() => ({
   infiniteList: {
-    height: '72vh',
+    height: "72vh",
   },
   status: {
-    textAlign: 'center',
+    textAlign: "center",
   },
   clicked: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 }));
 
-const InfiniteStems = ({ searchExpression }) => {
+interface InfiniteStemsProps {
+  searchExpression: string;
+}
+
+const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
   const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
   const { searchMode } = searchModeQueryResult.data;
   const { stems, loading, loadMore, hasNextPage, totalCount } =
@@ -42,8 +46,12 @@ const InfiniteStems = ({ searchExpression }) => {
   const classes = useStyles();
 
   const stemsCount = hasNextPage ? stems.length + 1 : stems.length;
-  const loadMoreStems = loading ? () => {} : loadMore;
-  const isStemLoaded = (index) => !hasNextPage || index < stems.length;
+  const loadMoreStems = loading
+    ? (_startIndex: number, _stopIndex: number) => {}
+    : (_startIndex: number, _stopIndex: number) => {
+        loadMore && loadMore();
+      };
+  const isStemLoaded = (index: number) => !hasNextPage || index < stems.length;
 
   const { currentLemma, currentDict } = locationParser(useLocation().pathname);
   if (loading && stems.length === 0) return <CircularProgress size={16} />;
@@ -54,29 +62,35 @@ const InfiniteStems = ({ searchExpression }) => {
         <Typography className={classes.status}>
           <SearchInfo
             stemsLength={stems.length}
-            totalCount={totalCount}
+            totalCount={totalCount ?? 0}
             searchExpression={searchExpression}
             searchMode={searchMode}
           />
         </Typography>
       )}
       <AutoSizer>
-        {({ height, width }) => (
+        {({ height, width }: { height?: number; width?: number }) => (
           <InfiniteLoader
             isItemLoaded={isStemLoaded}
             itemCount={stemsCount}
             loadMoreItems={loadMoreStems}
           >
-            {({ onItemsRendered, ref }) => (
+            {({ onItemsRendered, ref }: any) => (
               <List
-                height={height}
+                height={height ?? 500}
                 itemCount={stemsCount}
                 itemSize={20}
                 onItemsRendered={onItemsRendered}
                 ref={ref}
-                width={width}
+                width={width ?? 300}
               >
-                {({ index, style }) => {
+                {({
+                  index,
+                  style,
+                }: {
+                  index: number;
+                  style: React.CSSProperties;
+                }) => {
                   if (!isStemLoaded(index)) {
                     return (
                       <ListItemButton key={index} style={style}>
@@ -87,7 +101,7 @@ const InfiniteStems = ({ searchExpression }) => {
 
                   const { stem } = stems[index];
                   const truncStem = (
-                    <Truncate width={width - 50}>{stem}</Truncate>
+                    <Truncate width={(width ?? 300) - 50}>{stem}</Truncate>
                   );
                   const stemNode =
                     stem === searchListClickedItem ? (
@@ -123,10 +137,6 @@ const InfiniteStems = ({ searchExpression }) => {
       </AutoSizer>
     </div>
   );
-};
-
-InfiniteStems.propTypes = {
-  searchExpression: PropTypes.string.isRequired,
 };
 
 export default InfiniteStems;

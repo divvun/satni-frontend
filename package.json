@@ -68,6 +68,7 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@types/react-router-dom": "^5.3.3",
+    "@types/react-truncate": "^2.3.7",
     "@vitejs/plugin-react": "^5.1.0",
     "@vitest/ui": "^4.0.2",
     "babel-core": "^7.0.0-bridge.0",
