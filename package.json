@@ -47,11 +47,15 @@
     "deploy": "rsync -vaz  --info=progress2 build/* boerre@satni.org:/var/www/html/risten/"
   },
   "devDependencies": {
+    "@0no-co/graphqlsp": "^1.15.0",
     "@babel/core": "^7.12.3",
     "@biomejs/biome": "^2.3.0",
+    "@graphql-codegen/cli": "^6.0.1",
+    "@graphql-codegen/schema-ast": "^5.0.0",
     "@lingui/cli": "^5.5.1",
     "@lingui/loader": "^5.5.1",
     "@lingui/vite-plugin": "^5.5.1",
+    "@parcel/watcher": "^2.5.1",
     "@storybook/addon-docs": "^9.2.0-alpha.3",
     "@storybook/addon-links": "^9.2.0-alpha.3",
     "@storybook/react-vite": "^9.2.0-alpha.3",

@@ -31,7 +31,15 @@
     "checkJs": false,
 
     /* Types */
-    "types": ["vite/client", "node", "vitest/globals"]
+    "types": ["vite/client", "node", "vitest/globals"],
+
+    /* GraphQL auto-complete */
+    "plugins": [
+      {
+        "name": "@0no-co/graphqlsp",
+        "schema": "./schema.graphql"
+      }
+    ]
   },
   "include": [
     "src/**/*",
