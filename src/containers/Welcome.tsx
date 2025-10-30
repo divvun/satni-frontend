@@ -1,4 +1,3 @@
-import React from "react";
 import { makeStyles } from "@mui/styles";
 import { useLocation } from "react-router-dom";
 
@@ -16,7 +15,7 @@ import ViewHeadlineOutlined from "@mui/icons-material/ViewHeadlineOutlined";
 import dictionaryInfo, { dictionaryNames } from "../translateble_variables";
 import { locationParser } from "../utils";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: any) => ({
   welcome: {
     [theme.breakpoints.up("xs")]: {
       marginRight: "20%",
@@ -41,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const WelcomeHeader = () => {
+export const WelcomeHeader: React.FC = () => {
   const classes = useStyles();
   const { _ } = useLingui();
   const { currentLemma, currentDict } = locationParser(useLocation().pathname);
@@ -49,8 +48,8 @@ export const WelcomeHeader = () => {
     <Paper className={classes.welcome}>
       <Typography variant="h5" className={classes.heading}>
         {currentDict && !currentLemma ? (
-          dictionaryNames[currentDict] ? (
-            _(dictionaryNames[currentDict])
+          dictionaryNames[currentDict as keyof typeof dictionaryNames] ? (
+            _(dictionaryNames[currentDict as keyof typeof dictionaryNames])
           ) : (
             currentDict
           )
@@ -61,12 +60,10 @@ export const WelcomeHeader = () => {
       <Typography component="p" className={classes.list}>
         {currentDict && !currentLemma ? (
           <>
-            {dictionaryInfo[currentDict].info.map((infoText, index) => (
-              <Typography
-                key={`${currentDict}-info-${index}`}
-                className={classes.infoText}
-                component="span"
-              >
+            {dictionaryInfo[
+              currentDict as keyof typeof dictionaryInfo
+            ].info.map((infoText, index) => (
+              <Typography key={`${currentDict}-info-${index}`} component="span">
                 {_(infoText)}
               </Typography>
             ))}
@@ -111,7 +108,7 @@ export const WelcomeHeader = () => {
   );
 };
 
-export const SearchWelcome = () => {
+export const SearchWelcome: React.FC = () => {
   const classes = useStyles();
 
   return (
@@ -142,7 +139,7 @@ export const SearchWelcome = () => {
   );
 };
 
-export const DictWelcome = () => {
+export const DictWelcome: React.FC = () => {
   const classes = useStyles();
 
   return (

@@ -4,17 +4,21 @@ import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import { wantedDictsVar } from "../../apolloCache";
 import { dictionaryNames } from "../../translateble_variables";
 
-const Source = ({ source, lemma }) => {
+interface SourceProps {
+  source: string;
+  lemma: string;
+}
+
+const Source: React.FC<SourceProps> = ({ source, lemma }) => {
   const { _ } = useLingui();
   const wantedDicts = wantedDictsVar();
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.stopPropagation();
     wantedDictsVar(wantedDicts.filter((value) => value !== event.target.name));
   };
@@ -25,15 +29,14 @@ const Source = ({ source, lemma }) => {
         <Typography variant="body2">
           <Trans>Source:</Trans>{" "}
           <Link to={`${source}/${lemma}`}>
-            {dictionaryNames[source] ? _(dictionaryNames[source]) : source}
+            {dictionaryNames[source as keyof typeof dictionaryNames]
+              ? _(dictionaryNames[source as keyof typeof dictionaryNames])
+              : source}
           </Link>
         </Typography>
       }
       control={
-        <Tooltip
-          title={<Trans>Hide this dictionary</Trans>}
-          aria-label={<Trans>Hide this dictionary</Trans>}
-        >
+        <Tooltip title="Hide this dictionary">
           <Checkbox
             checked
             color="default"
@@ -44,11 +47,6 @@ const Source = ({ source, lemma }) => {
       }
     />
   );
-};
-
-Source.propTypes = {
-  source: PropTypes.string.isRequired,
-  lemma: PropTypes.string.isRequired,
 };
 
 export default Source;

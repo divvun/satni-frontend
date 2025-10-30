@@ -1,4 +1,3 @@
-import { Trans } from "@lingui/react/macro";
 import { useLingui } from "@lingui/react";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -6,16 +5,24 @@ import FormLabel from "@mui/material/FormLabel";
 import Grid from "@mui/material/Grid";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
-import PropTypes from "prop-types";
 
 import { availableVoices, getVoiceDisplayName } from "./speakerVoices";
 import { languageCodes } from "../../translateble_variables";
 
-const SpeakerChooser = ({ selectedVoices, onVoiceChange }) => {
+interface SpeakerChooserProps {
+  selectedVoices: Record<string, string>;
+  onVoiceChange: (language: string, voice: string) => void;
+}
+
+const SpeakerChooser: React.FC<SpeakerChooserProps> = ({
+  selectedVoices,
+  onVoiceChange,
+}) => {
   const { _ } = useLingui();
-  const handleChange = (language) => (event) => {
-    onVoiceChange(language, event.target.value);
-  };
+  const handleChange =
+    (language: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
+      onVoiceChange(language, event.target.value);
+    };
 
   return (
     <Grid container spacing={3}>
@@ -23,7 +30,9 @@ const SpeakerChooser = ({ selectedVoices, onVoiceChange }) => {
         <Grid size={{ xs: 12, sm: 4 }} key={language}>
           <FormControl component="fieldset">
             <FormLabel component="legend">
-              {languageCodes[language] ? _(languageCodes[language]) : language}
+              {languageCodes[language as keyof typeof languageCodes]
+                ? _(languageCodes[language as keyof typeof languageCodes])
+                : language}
             </FormLabel>
             <RadioGroup
               aria-label={`voice-${language}`}
@@ -45,11 +54,6 @@ const SpeakerChooser = ({ selectedVoices, onVoiceChange }) => {
       ))}
     </Grid>
   );
-};
-
-SpeakerChooser.propTypes = {
-  selectedVoices: PropTypes.objectOf(PropTypes.string).isRequired,
-  onVoiceChange: PropTypes.func.isRequired,
 };
 
 export default SpeakerChooser;

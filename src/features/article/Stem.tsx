@@ -2,7 +2,6 @@ import { Trans } from "@lingui/react/macro";
 import { useLingui } from "@lingui/react";
 import { makeStyles } from "@mui/styles";
 import Typography from "@mui/material/Typography";
-import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -17,6 +16,25 @@ import {
 } from "../../translateble_variables";
 
 import PresentationLemma from "./PresentationLemma";
+
+interface StemData {
+  lemma: string;
+  presentationLemma: string;
+  pos?: string;
+  language: string;
+  dialect?: string;
+  country?: string;
+}
+
+interface RestrictionData {
+  restriction?: string;
+}
+
+interface StemProps {
+  stem: StemData;
+  restriction?: RestrictionData | null;
+  withLink?: boolean;
+}
 
 const useStyles = makeStyles({
   stemContainer: {
@@ -44,7 +62,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Stem = ({ stem, restriction, withLink }) => {
+const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
   const { _ } = useLingui();
   const classes = useStyles();
   const { lemma, presentationLemma, pos, language, dialect, country } = stem;
@@ -75,12 +93,12 @@ const Stem = ({ stem, restriction, withLink }) => {
           <>
             <span className={classes.rightGroup}>
               {pos && (
-                <Typography
-                  component="span"
-                  color="textSecondary"
-                  className={classes.pos}
-                >
-                  ({partOfSpeech[pos] ? _(partOfSpeech[pos]) : pos})
+                <Typography component="span" color="textSecondary">
+                  (
+                  {partOfSpeech[pos as keyof typeof partOfSpeech]
+                    ? _(partOfSpeech[pos as keyof typeof partOfSpeech])
+                    : pos}
+                  )
                 </Typography>
               )}
               {["sme", "sma", "smj"].includes(language) && (
@@ -92,7 +110,7 @@ const Stem = ({ stem, restriction, withLink }) => {
               )}
               <ParadigmButton
                 lemma={lemma}
-                pos={pos}
+                pos={pos || ""}
                 language={language}
                 onClick={handleClickParadigmDialog}
                 classes={classes}
@@ -101,7 +119,7 @@ const Stem = ({ stem, restriction, withLink }) => {
             </span>
             <ParadigmDialog
               lemma={lemma}
-              pos={pos}
+              pos={pos || ""}
               language={language}
               open={openParadigm}
               onClose={handleCloseParadigmDialog}
@@ -114,30 +132,23 @@ const Stem = ({ stem, restriction, withLink }) => {
           {dialect && (
             <Typography component="span">
               <Trans>Dialect</Trans>:{" "}
-              {dialects[dialect] ? _(dialects[dialect]) : dialect}{" "}
+              {dialects[dialect as keyof typeof dialects]
+                ? _(dialects[dialect as keyof typeof dialects])
+                : dialect}{" "}
             </Typography>
           )}
           {country && (
             <Typography component="span">
               <Trans>Country</Trans>:{" "}
-              {countryCodes[country] ? _(countryCodes[country]) : country}
+              {countryCodes[country as keyof typeof countryCodes]
+                ? _(countryCodes[country as keyof typeof countryCodes])
+                : country}
             </Typography>
           )}
         </Typography>
       )}
     </>
   );
-};
-
-Stem.propTypes = {
-  stem: PropTypes.shape.isRequired,
-  restriction: PropTypes.shape,
-  withLink: PropTypes.bool,
-};
-
-Stem.defaultProps = {
-  restriction: null,
-  withLink: false,
 };
 
 export default Stem;
