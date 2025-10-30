@@ -1,0 +1,265 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+"""Collection grouping related concepts."""
+type CollectionType {
+  description: String
+  """_id"""
+  id: ID
+  name: String!
+}
+
+"""Input type for creating/updating language-specific concepts."""
+input ConceptInput {
+  definition: String
+  explanation: String
+  moreInfo: String
+  terms: [TermInput]
+}
+
+type ConceptType {
+  collections: [String]
+  definition: String
+  explanation: String
+  """_id"""
+  id: ID
+  language: String!
+  name: String!
+  terms: [TermType]!
+}
+
+"""
+Language-specific concept data.
+
+Note: This is not a MongoengineObjectType because Concept is an EmbeddedDocument.
+We create a regular graphene.ObjectType to represent it.
+"""
+type ConceptTypeV2 {
+  definition: String
+  explanation: String
+  language: String!
+  moreInfo: String
+  terms: [TermTypeV2]
+}
+
+type DictEntryType {
+  Cls: String
+  dictName: String!
+  lookupLemmas(after: String, before: String, first: Int, last: Int): LemmaConnection
+  srcLang: String!
+  targetLang: String!
+  translationGroups: [TranslationGroupType]!
+}
+
+type ExampleGroupType {
+  example: String!
+  translation: String!
+}
+
+"""HFST gives a wordform and a weight."""
+type GeneratorAnalysis {
+  weight: Float!
+  wordform: String!
+}
+
+"""The result of the generation of one paradigm template."""
+type GeneratorResultType {
+  analyses: [GeneratorAnalysis]
+  paradigmTemplate: String!
+}
+
+type LemmaConnection {
+  """Contains the nodes in this connection."""
+  edges: [LemmaEdge]!
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+}
+
+"""A Relay edge containing a `Lemma` and its cursor."""
+type LemmaEdge {
+  """A cursor for use in pagination"""
+  cursor: String!
+  """The item at the end of the edge"""
+  node: LemmaType
+}
+
+type LemmaType implements Node {
+  country: String
+  dialect: String
+  """The ID of the object"""
+  id: ID!
+  language: String!
+  lemma: String!
+  pos: String
+  presentationLemma: String!
+}
+
+"""HFST gives a wordform and a weight."""
+type LemmatiserAnalysis {
+  analysis: String!
+  weight: Float!
+}
+
+"""Results for all languages."""
+type LemmatiserResultType {
+  analyses: [LemmatiserAnalysis]!
+  language: String!
+  wordforms: [String]!
+}
+
+"""Multilingual concept with language-specific data."""
+type MultiLingualConceptType {
+  collections: [CollectionType]
+  concepts: [ConceptTypeV2]
+  """_id"""
+  id: ID
+  relatedConcepts: [MultiLingualConceptType]
+}
+
+type Mutation {
+  """Add a related concept with a specific relation type"""
+  addRelatedConcept(conceptId: String!, related: RelatedConceptInput!): MultiLingualConceptType
+  """Add a term to a concept in a specific language"""
+  addTerm(conceptId: String!, language: String!, term: TermInput!): MultiLingualConceptType
+  """Add concept to a collection"""
+  addToCollection(collectionId: String!, conceptId: String!): MultiLingualConceptType
+  """Create a new terminology collection"""
+  createCollection(collectionDescription: String, name: String!): CollectionType
+  """Create a new multilingual concept"""
+  createMultilingualConcept: MultiLingualConceptType
+  """Remove concept data for a specific language"""
+  deleteConceptInLanguage(conceptId: String!, language: String!): MultiLingualConceptType
+  """Delete a multilingual concept"""
+  deleteMultilingualConcept(conceptId: String!): Boolean
+  """Remove a term by index"""
+  deleteTerm(conceptId: String!, language: String!, termIndex: Int!): MultiLingualConceptType
+  """Remove concept from a collection"""
+  removeFromCollection(collectionId: String!, conceptId: String!): MultiLingualConceptType
+  """Remove a related concept relationship"""
+  removeRelatedConcept(conceptId: String!, relatedConceptId: String!): MultiLingualConceptType
+  """Update or add a concept for a specific language"""
+  updateConceptInLanguage(conceptData: ConceptInput!, conceptId: String!, language: String!): MultiLingualConceptType
+  """Update a specific term by index"""
+  updateTerm(conceptId: String!, language: String!, term: TermInput!, termIndex: Int!): MultiLingualConceptType
+}
+
+"""An object with an ID"""
+interface Node {
+  """The ID of the object"""
+  id: ID!
+}
+
+"""The Relay compliant `PageInfo` type, containing data necessary to paginate this connection."""
+type PageInfo {
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+}
+
+type Query {
+  """Get a specific collection by name."""
+  collectionByName(name: String!): CollectionType
+  """List all available terminology collections."""
+  collectionList: [CollectionType]
+  conceptList(exact: String!, srcLangs: [String]!, targetLangs: [String]!): [ConceptType] @deprecated(reason: "This query uses the old per-language Concept model. Please migrate to 'multilingualConceptList' which uses the new MultiLingualConcept structure. See MIGRATION_GRAPHQL_V2.md for details. This field will be removed in v3.0")
+  dictEntryList(exact: String!, srcLangs: [String]!, targetLangs: [String]!, wantedDicts: [String]!): [DictEntryType]
+  generated(language: String!, origform: String!, paradigmTemplates: [String]!): [GeneratorResultType]
+  hasStem(exact: String!, srcLangs: [String]!, targetLangs: [String]!, wantedDicts: [String]!): [StemType]
+  lemmatised(lookupString: String!): [LemmatiserResultType]
+  """Query multilingual concepts by lemma and languages. Returns concepts that have terms in any of the specified languages."""
+  multilingualConceptList(exact: String!, languages: [String]!): [MultiLingualConceptType]
+  stemList(after: String, before: String, first: Int, last: Int, mode: String!, search: String!, srcLangs: [String]!, targetLangs: [String]!, wantedDicts: [String]!): StemConnection
+}
+
+"""Input type for adding related concepts."""
+input RelatedConceptInput {
+  """MultiLingualConcept ObjectId"""
+  conceptId: String!
+  """Relation type (e.g., 'broader', 'narrower')"""
+  relationType: String!
+}
+
+type RestrictionType {
+  attributes: String
+  restriction: String
+}
+
+type StemConnection {
+  """Contains the nodes in this connection."""
+  edges: [StemEdge]!
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+  totalCount: Int
+}
+
+"""A Relay edge containing a `Stem` and its cursor."""
+type StemEdge {
+  """A cursor for use in pagination"""
+  cursor: String!
+  """The item at the end of the edge"""
+  node: StemType
+}
+
+"""
+GraphQL type that exposes Lemma objects with the Stem interface.
+
+This maintains backward compatibility with the old Stem model while
+using Lemma objects as the data source. The availability data
+(srclangs, targetlangs, dicts) is computed dynamically and attached
+to the Lemma object as _availability.
+"""
+type StemType implements Node {
+  country: String
+  dialect: String
+  dicts: [String]
+  """The ID of the object"""
+  id: ID!
+  language: String!
+  lemma: String!
+  pos: String
+  presentationLemma: String!
+  searchStem: String
+  srclangs: [String]
+  stem: String
+  targetlangs: [String]
+}
+
+"""Input type for creating/updating terms."""
+input TermInput {
+  """Lemma ObjectId"""
+  expressionId: String!
+  note: String
+  sanctioned: Boolean
+  source: String
+  status: String
+}
+
+type TermType {
+  expression: LemmaType
+  note: String
+  sanctioned: Boolean
+  source: String
+  status: String
+}
+
+"""Term with expression reference to Lemma."""
+type TermTypeV2 {
+  expression: LemmaType
+  note: String
+  sanctioned: Boolean
+  source: String
+  status: String
+}
+
+type TranslationGroupType {
+  exampleGroups: [ExampleGroupType]
+  restriction: RestrictionType
+  translationLemmas(after: String, before: String, first: Int, last: Int): LemmaConnection
+}
