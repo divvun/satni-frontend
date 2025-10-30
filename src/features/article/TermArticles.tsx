@@ -2,27 +2,22 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/react/macro';
-import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
-import GET_TERM_ARTICLES from '../../operations/queries/getTermArticles';
+import GET_LANGS_DICTS, {
+  type GetLangsAndDictsQuery,
+} from '../../operations/queries/getLangsDicts';
+import GET_TERM_ARTICLES, {
+  type TermArticlesQuery,
+} from '../../operations/queries/getTermArticles';
 import { multilingualconceptListsByNames } from '../../utils';
 import PresentTermArticles from './PresentTermArticles';
+import type { ConceptType, Maybe } from '../../graphql/graphql';
 
 interface TermArticlesProps {
   lemma: string;
 }
 
-interface LangsDictsData {
-  srcLangs: string[];
-  targetLangs: string[];
-  wantedDicts: string[];
-}
-
-interface TermArticlesData {
-  conceptList: any[];
-}
-
 const TermArticles: React.FC<TermArticlesProps> = ({ lemma }) => {
-  const langsDictsResult = useQuery<LangsDictsData>(GET_LANGS_DICTS);
+  const langsDictsResult = useQuery<GetLangsAndDictsQuery>(GET_LANGS_DICTS);
 
   if (langsDictsResult.loading || !langsDictsResult.data) {
     return (
@@ -33,7 +28,7 @@ const TermArticles: React.FC<TermArticlesProps> = ({ lemma }) => {
   }
 
   const { srcLangs, targetLangs } = langsDictsResult.data;
-  const { data, loading, error } = useQuery<TermArticlesData>(
+  const { data, loading, error } = useQuery<TermArticlesQuery>(
     GET_TERM_ARTICLES,
     {
       variables: {
@@ -59,7 +54,7 @@ const TermArticles: React.FC<TermArticlesProps> = ({ lemma }) => {
     );
   }
 
-  if (!data) {
+  if (!data || !data.conceptList) {
     return (
       <Trans>
         <p>No data available</p>
@@ -67,10 +62,14 @@ const TermArticles: React.FC<TermArticlesProps> = ({ lemma }) => {
     );
   }
 
+  const filteredConcepts = data.conceptList.filter(
+    (concept: Maybe<ConceptType>): concept is ConceptType => concept != null
+  );
+
   return (
     <PresentTermArticles
       lemma={lemma}
-      termsByNames={multilingualconceptListsByNames(data.conceptList)}
+      termsByNames={multilingualconceptListsByNames(filteredConcepts as any)}
     />
   );
 };

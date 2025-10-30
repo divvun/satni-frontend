@@ -3,27 +3,22 @@ import { useQuery } from '@apollo/client';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/react/macro';
 import { useLocation } from 'react-router-dom';
-import GET_DICT_ARTICLES from '../../operations/queries/getDictArticles';
-import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
+import GET_DICT_ARTICLES, {
+  type DictArticlesQuery,
+} from '../../operations/queries/getDictArticles';
+import GET_LANGS_DICTS, {
+  type GetLangsAndDictsQuery,
+} from '../../operations/queries/getLangsDicts';
 import { locationParser } from '../../utils';
 import PresentDictArticles from './PresentDictArticles';
+import type { DictEntryType, Maybe } from '../../graphql/graphql';
 
 interface DictArticlesProps {
   lemma: string;
 }
 
-interface LangsDictsData {
-  srcLangs: string[];
-  targetLangs: string[];
-  wantedDicts: string[];
-}
-
-interface DictArticlesData {
-  dictEntryList: any[];
-}
-
 const DictArticles: React.FC<DictArticlesProps> = ({ lemma }) => {
-  const langsDictsQueryResult = useQuery<LangsDictsData>(GET_LANGS_DICTS);
+  const langsDictsQueryResult = useQuery<GetLangsAndDictsQuery>(GET_LANGS_DICTS);
 
   if (langsDictsQueryResult.loading || !langsDictsQueryResult.data) {
     return (
@@ -41,7 +36,7 @@ const DictArticles: React.FC<DictArticlesProps> = ({ lemma }) => {
     ? [currentDict]
     : langsDictsQueryResult.data.wantedDicts;
 
-  const { data, loading, error } = useQuery<DictArticlesData>(
+  const { data, loading, error } = useQuery<DictArticlesQuery>(
     GET_DICT_ARTICLES,
     {
       variables: {
@@ -68,7 +63,7 @@ const DictArticles: React.FC<DictArticlesProps> = ({ lemma }) => {
     );
   }
 
-  if (!data) {
+  if (!data || !data.dictEntryList) {
     return (
       <Trans>
         <p>No data available</p>
@@ -76,8 +71,15 @@ const DictArticles: React.FC<DictArticlesProps> = ({ lemma }) => {
     );
   }
 
+  const filteredEntries = data.dictEntryList.filter(
+    (entry: Maybe<DictEntryType>): entry is DictEntryType => entry != null
+  );
+
   return (
-    <PresentDictArticles lemma={lemma} dictEntryList={data.dictEntryList} />
+    <PresentDictArticles
+      lemma={lemma}
+      dictEntryList={filteredEntries as any}
+    />
   );
 };
 

@@ -2,8 +2,10 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useLocation } from 'react-router-dom';
-import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
-import HAS_STEM from '../../operations/queries/hasStem';
+import GET_LANGS_DICTS, {
+  type GetLangsAndDictsQuery,
+} from '../../operations/queries/getLangsDicts';
+import HAS_STEM, { type HasStemQuery } from '../../operations/queries/hasStem';
 import { locationParser } from '../../utils';
 import Stem from './Stem';
 
@@ -27,22 +29,12 @@ interface DictTargetStemProps {
   restriction?: RestrictionData | null;
 }
 
-interface LangsDictsData {
-  srcLangs: string[];
-  targetLangs: string[];
-  wantedDicts: string[];
-}
-
-interface HasStemData {
-  hasStem: any[];
-}
-
 const DictTargetStem: React.FC<DictTargetStemProps> = ({
   stem,
   restriction,
 }) => {
   const { lemma } = stem;
-  const langsDictsQueryResult = useQuery<LangsDictsData>(GET_LANGS_DICTS);
+  const langsDictsQueryResult = useQuery<GetLangsAndDictsQuery>(GET_LANGS_DICTS);
 
   // Handle loading and error states for the first query
   if (langsDictsQueryResult.loading || !langsDictsQueryResult.data) {
@@ -59,7 +51,7 @@ const DictTargetStem: React.FC<DictTargetStemProps> = ({
     ? [currentDict]
     : langsDictsQueryResult.data.wantedDicts;
 
-  const { data, loading } = useQuery<HasStemData>(HAS_STEM, {
+  const { data, loading } = useQuery<HasStemQuery>(HAS_STEM, {
     variables: {
       stem: lemma,
       srcLangs,
@@ -77,7 +69,7 @@ const DictTargetStem: React.FC<DictTargetStemProps> = ({
     <Stem
       stem={stem}
       restriction={restriction}
-      withLink={data && data.hasStem.length > 0}
+      withLink={Boolean(data?.hasStem && data.hasStem.length > 0)}
     />
   );
 };
