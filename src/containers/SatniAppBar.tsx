@@ -44,6 +44,19 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
       }}
     >
       <Toolbar variant="dense">
+        <Box sx={{ display: { xs: "block", md: "none" } }}>
+          <Tooltip title={<Trans>Menu</Trans>}>
+            <IconButton
+              color="inherit"
+              aria-label="Open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Tooltip>
+        </Box>
         <Typography
           variant="h6"
           noWrap
@@ -60,27 +73,12 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
             sátni.org
           </Link>
         </Typography>
-        <Box sx={{ display: { xs: "block", md: "none" } }}>
-          <Tooltip title={<Trans>Settings</Trans>}>
-            <IconButton
-              color="inherit"
-              aria-label="Settings"
-              edge="start"
-              onClick={handleDrawerToggle}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Tooltip>
-        </Box>
         <Tooltip title={<Trans>Help</Trans>}>
           <IconButton
             color="inherit"
-            aria-label="Settings"
-            edge="start"
+            aria-label="Help"
+            edge="end"
             onClick={handleClickHelpDialog}
-            sx={{
-              ml: 1,
-            }}
           >
             <HelpOutlineIcon />
           </IconButton>
