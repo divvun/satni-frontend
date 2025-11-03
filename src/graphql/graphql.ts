@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { DocumentTypeDecoration } from '@graphql-typed-document-node/core';
+import type { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = T | null | undefined;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -496,146 +496,9 @@ export type HasStemQueryVariables = Exact<{
 
 export type HasStemQuery = { __typename?: 'Query', hasStem?: Array<{ __typename?: 'StemType', stem?: string | null } | null> | null };
 
-export class TypedDocumentString<TResult, TVariables>
-  extends String
-  implements DocumentTypeDecoration<TResult, TVariables>
-{
-  __apiType?: NonNullable<DocumentTypeDecoration<TResult, TVariables>['__apiType']>;
-  private value: string;
-  public __meta__?: Record<string, any> | undefined;
 
-  constructor(value: string, __meta__?: Record<string, any> | undefined) {
-    super(value);
-    this.value = value;
-    this.__meta__ = __meta__;
-  }
-
-  override toString(): string & DocumentTypeDecoration<TResult, TVariables> {
-    return this.value;
-  }
-}
-
-export const DictArticlesDocument = new TypedDocumentString(`
-    query DictArticles($lemma: String!, $srcLangs: [String]!, $targetLangs: [String]!, $wantedDicts: [String]!) {
-  dictEntryList(
-    exact: $lemma
-    srcLangs: $srcLangs
-    targetLangs: $targetLangs
-    wantedDicts: $wantedDicts
-  ) {
-    dictName
-    srcLang
-    targetLang
-    lookupLemmas {
-      edges {
-        node {
-          lemma
-          presentationLemma
-          language
-          pos
-          dialect
-          country
-        }
-      }
-    }
-    translationGroups {
-      translationLemmas {
-        edges {
-          node {
-            lemma
-            presentationLemma
-            language
-            pos
-            dialect
-            country
-          }
-        }
-      }
-      restriction {
-        restriction
-        attributes
-      }
-      exampleGroups {
-        example
-        translation
-      }
-    }
-  }
-}
-    `) as unknown as TypedDocumentString<DictArticlesQuery, DictArticlesQueryVariables>;
-export const AllLemmasDocument = new TypedDocumentString(`
-    query AllLemmas($inputValue: String!, $searchMode: String!, $srcLangs: [String]!, $targetLangs: [String]!, $wantedDicts: [String]!, $after: String) {
-  stemList(
-    first: 100
-    search: $inputValue
-    mode: $searchMode
-    srcLangs: $srcLangs
-    targetLangs: $targetLangs
-    wantedDicts: $wantedDicts
-    after: $after
-  ) {
-    totalCount
-    edges {
-      node {
-        stem
-        srclangs
-        targetlangs
-      }
-    }
-    pageInfo {
-      endCursor
-      hasNextPage
-    }
-  }
-}
-    `) as unknown as TypedDocumentString<AllLemmasQuery, AllLemmasQueryVariables>;
-export const GeneratedDocument = new TypedDocumentString(`
-    query Generated($origform: String!, $language: String!, $paradigmTemplates: [String]!) {
-  generated(
-    origform: $origform
-    language: $language
-    paradigmTemplates: $paradigmTemplates
-  ) {
-    paradigmTemplate
-    analyses {
-      wordform
-      weight
-    }
-  }
-}
-    `) as unknown as TypedDocumentString<GeneratedQuery, GeneratedQueryVariables>;
-export const TermArticlesDocument = new TypedDocumentString(`
-    query TermArticles($lemma: String!, $srcLangs: [String]!, $targetLangs: [String]!) {
-  conceptList(exact: $lemma, srcLangs: $srcLangs, targetLangs: $targetLangs) {
-    name
-    collections
-    definition
-    explanation
-    terms {
-      note
-      source
-      status
-      expression {
-        lemma
-        presentationLemma
-        language
-        pos
-        dialect
-        country
-      }
-    }
-  }
-}
-    `) as unknown as TypedDocumentString<TermArticlesQuery, TermArticlesQueryVariables>;
-export const HasStemDocument = new TypedDocumentString(`
-    query HasStem($stem: String!, $srcLangs: [String]!, $targetLangs: [String]!, $wantedDicts: [String]!) {
-  hasStem(
-    exact: $stem
-    srcLangs: $srcLangs
-    targetLangs: $targetLangs
-    wantedDicts: $wantedDicts
-  ) {
-    stem
-  }
-}
-    `) as unknown as TypedDocumentString<HasStemQuery, HasStemQueryVariables>;
+export const DictArticlesDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"DictArticles"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"lemma"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"srcLangs"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"targetLangs"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"wantedDicts"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"dictEntryList"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"exact"},"value":{"kind":"Variable","name":{"kind":"Name","value":"lemma"}}},{"kind":"Argument","name":{"kind":"Name","value":"srcLangs"},"value":{"kind":"Variable","name":{"kind":"Name","value":"srcLangs"}}},{"kind":"Argument","name":{"kind":"Name","value":"targetLangs"},"value":{"kind":"Variable","name":{"kind":"Name","value":"targetLangs"}}},{"kind":"Argument","name":{"kind":"Name","value":"wantedDicts"},"value":{"kind":"Variable","name":{"kind":"Name","value":"wantedDicts"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"dictName"}},{"kind":"Field","name":{"kind":"Name","value":"srcLang"}},{"kind":"Field","name":{"kind":"Name","value":"targetLang"}},{"kind":"Field","name":{"kind":"Name","value":"lookupLemmas"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"lemma"}},{"kind":"Field","name":{"kind":"Name","value":"presentationLemma"}},{"kind":"Field","name":{"kind":"Name","value":"language"}},{"kind":"Field","name":{"kind":"Name","value":"pos"}},{"kind":"Field","name":{"kind":"Name","value":"dialect"}},{"kind":"Field","name":{"kind":"Name","value":"country"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"translationGroups"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"translationLemmas"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"lemma"}},{"kind":"Field","name":{"kind":"Name","value":"presentationLemma"}},{"kind":"Field","name":{"kind":"Name","value":"language"}},{"kind":"Field","name":{"kind":"Name","value":"pos"}},{"kind":"Field","name":{"kind":"Name","value":"dialect"}},{"kind":"Field","name":{"kind":"Name","value":"country"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"restriction"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"restriction"}},{"kind":"Field","name":{"kind":"Name","value":"attributes"}}]}},{"kind":"Field","name":{"kind":"Name","value":"exampleGroups"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"example"}},{"kind":"Field","name":{"kind":"Name","value":"translation"}}]}}]}}]}}]}}]} as unknown as DocumentNode<DictArticlesQuery, DictArticlesQueryVariables>;
+export const AllLemmasDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"AllLemmas"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"inputValue"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"searchMode"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"srcLangs"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"targetLangs"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"wantedDicts"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"after"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stemList"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"first"},"value":{"kind":"IntValue","value":"100"}},{"kind":"Argument","name":{"kind":"Name","value":"search"},"value":{"kind":"Variable","name":{"kind":"Name","value":"inputValue"}}},{"kind":"Argument","name":{"kind":"Name","value":"mode"},"value":{"kind":"Variable","name":{"kind":"Name","value":"searchMode"}}},{"kind":"Argument","name":{"kind":"Name","value":"srcLangs"},"value":{"kind":"Variable","name":{"kind":"Name","value":"srcLangs"}}},{"kind":"Argument","name":{"kind":"Name","value":"targetLangs"},"value":{"kind":"Variable","name":{"kind":"Name","value":"targetLangs"}}},{"kind":"Argument","name":{"kind":"Name","value":"wantedDicts"},"value":{"kind":"Variable","name":{"kind":"Name","value":"wantedDicts"}}},{"kind":"Argument","name":{"kind":"Name","value":"after"},"value":{"kind":"Variable","name":{"kind":"Name","value":"after"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"totalCount"}},{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stem"}},{"kind":"Field","name":{"kind":"Name","value":"srclangs"}},{"kind":"Field","name":{"kind":"Name","value":"targetlangs"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"pageInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"endCursor"}},{"kind":"Field","name":{"kind":"Name","value":"hasNextPage"}}]}}]}}]}}]} as unknown as DocumentNode<AllLemmasQuery, AllLemmasQueryVariables>;
+export const GeneratedDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Generated"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"origform"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"language"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"paradigmTemplates"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"generated"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"origform"},"value":{"kind":"Variable","name":{"kind":"Name","value":"origform"}}},{"kind":"Argument","name":{"kind":"Name","value":"language"},"value":{"kind":"Variable","name":{"kind":"Name","value":"language"}}},{"kind":"Argument","name":{"kind":"Name","value":"paradigmTemplates"},"value":{"kind":"Variable","name":{"kind":"Name","value":"paradigmTemplates"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"paradigmTemplate"}},{"kind":"Field","name":{"kind":"Name","value":"analyses"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"wordform"}},{"kind":"Field","name":{"kind":"Name","value":"weight"}}]}}]}}]}}]} as unknown as DocumentNode<GeneratedQuery, GeneratedQueryVariables>;
+export const TermArticlesDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"TermArticles"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"lemma"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"srcLangs"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"targetLangs"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"conceptList"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"exact"},"value":{"kind":"Variable","name":{"kind":"Name","value":"lemma"}}},{"kind":"Argument","name":{"kind":"Name","value":"srcLangs"},"value":{"kind":"Variable","name":{"kind":"Name","value":"srcLangs"}}},{"kind":"Argument","name":{"kind":"Name","value":"targetLangs"},"value":{"kind":"Variable","name":{"kind":"Name","value":"targetLangs"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"collections"}},{"kind":"Field","name":{"kind":"Name","value":"definition"}},{"kind":"Field","name":{"kind":"Name","value":"explanation"}},{"kind":"Field","name":{"kind":"Name","value":"terms"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"note"}},{"kind":"Field","name":{"kind":"Name","value":"source"}},{"kind":"Field","name":{"kind":"Name","value":"status"}},{"kind":"Field","name":{"kind":"Name","value":"expression"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"lemma"}},{"kind":"Field","name":{"kind":"Name","value":"presentationLemma"}},{"kind":"Field","name":{"kind":"Name","value":"language"}},{"kind":"Field","name":{"kind":"Name","value":"pos"}},{"kind":"Field","name":{"kind":"Name","value":"dialect"}},{"kind":"Field","name":{"kind":"Name","value":"country"}}]}}]}}]}}]}}]} as unknown as DocumentNode<TermArticlesQuery, TermArticlesQueryVariables>;
+export const HasStemDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"HasStem"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"stem"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"srcLangs"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"targetLangs"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"wantedDicts"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"hasStem"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"exact"},"value":{"kind":"Variable","name":{"kind":"Name","value":"stem"}}},{"kind":"Argument","name":{"kind":"Name","value":"srcLangs"},"value":{"kind":"Variable","name":{"kind":"Name","value":"srcLangs"}}},{"kind":"Argument","name":{"kind":"Name","value":"targetLangs"},"value":{"kind":"Variable","name":{"kind":"Name","value":"targetLangs"}}},{"kind":"Argument","name":{"kind":"Name","value":"wantedDicts"},"value":{"kind":"Variable","name":{"kind":"Name","value":"wantedDicts"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stem"}}]}}]}}]} as unknown as DocumentNode<HasStemQuery, HasStemQueryVariables>;

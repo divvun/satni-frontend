@@ -14,7 +14,9 @@ const config: CodegenConfig = {
     "./src/graphql/": {
       preset: "client",
       config: {
-        documentMode: "string",
+        documentMode: "documentNode",
+        useTypeImports: true,
+        skipTypename: false,
       },
     },
     "./schema.graphql": {
