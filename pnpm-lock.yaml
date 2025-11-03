@@ -47,9 +47,6 @@ importers:
       cross-fetch:
         specifier: ^3.1.5
         version: 3.2.0
-      graphql-anywhere:
-        specifier: ^4.2.7
-        version: 4.2.8(graphql@16.12.0)
       prop-types:
         specifier: ^15.6.2
         version: 15.8.1
