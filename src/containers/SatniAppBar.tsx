@@ -6,11 +6,12 @@ import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import Tooltip from "@mui/material/Tooltip";
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import MenuIcon from "@mui/icons-material/Menu";
+import HomeIcon from "@mui/icons-material/Home";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import HelpDialog from "./HelpDialog";
 
@@ -21,7 +22,6 @@ interface SatniAppBarProps {
 }
 
 const SatniAppBar: React.FC<SatniAppBarProps> = ({
-  setSearchExpression,
   handleDrawerToggle,
   drawerWidth,
 }) => {
@@ -44,7 +44,7 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
       }}
     >
       <Toolbar variant="dense">
-        <Box sx={{ display: { xs: "block", md: "none" } }}>
+        <Box sx={{ display: { xs: "flex", md: "none" }, alignItems: "center" }}>
           <Tooltip title={<Trans>Menu</Trans>}>
             <IconButton
               color="inherit"
@@ -56,23 +56,22 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
               <MenuIcon />
             </IconButton>
           </Tooltip>
+          {/* Mobile-only home icon linking to sátni.org */}
+          <Tooltip title={<Trans>Home</Trans>}>
+            <IconButton
+              color="inherit"
+              aria-label="Home"
+              edge="start"
+              component="a"
+              href="https://satni.org"
+              sx={{ mr: 1 }}
+            >
+              <HomeIcon />
+            </IconButton>
+          </Tooltip>
         </Box>
-        <Typography
-          variant="h6"
-          noWrap
-          sx={{
-            flexGrow: 1,
-          }}
-        >
-          {/* @ts-ignore - React Router DOM v5 compatibility */}
-          <Link
-            style={{ color: "white" }}
-            to="/"
-            onClick={() => setSearchExpression("")}
-          >
-            sátni.org
-          </Link>
-        </Typography>
+        {/* Spacer to push Help icon to the right; desktop text home removed */}
+        <Box sx={{ flexGrow: 1 }} />
         <Tooltip title={<Trans>Help</Trans>}>
           <IconButton
             color="inherit"

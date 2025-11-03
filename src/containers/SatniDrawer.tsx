@@ -1,6 +1,6 @@
 import React from "react";
 import { Trans } from "@lingui/react/macro";
-import { ListSubheader } from "@mui/material";
+import { ListSubheader, Link as MUILink } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
@@ -111,7 +111,17 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
 
   const drawer = (
     <div>
-      <Box sx={{ minHeight: 48 }} />
+      {/* Top-left sátni.org home link */}
+      <Box sx={{ display: "flex", alignItems: "center", minHeight: 48, px: 2 }}>
+        <MUILink
+          href="https://satni.org"
+          color="inherit"
+          underline="hover"
+          sx={{ fontWeight: 600 }}
+        >
+          sátni.org
+        </MUILink>
+      </Box>
       <Divider />
       <List>
         <ListItemButton
