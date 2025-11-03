@@ -36,6 +36,7 @@ const AsyncApp: React.FC = () => {
       />
       <CssBaseline />
       <SatniAppBar
+        searchExpression={searchExpression}
         setSearchExpression={setSearchExpression}
         handleDrawerToggle={handleDrawerToggle}
         drawerWidth={drawerWidth}

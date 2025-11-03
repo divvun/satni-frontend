@@ -96,14 +96,19 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
                       {stemValue}
                     </span>
                   );
-                  const stemNode =
-                    stemValue === String(searchListClickedItem) ? (
-                      <Typography component="span" sx={{ fontWeight: "bold" }}>
-                        {truncStem}
-                      </Typography>
-                    ) : (
-                      <Typography component="span">{truncStem}</Typography>
-                    );
+
+                  // Highlight if this is the currently viewed lemma or the clicked item
+                  const isCurrentItem =
+                    index === searchListClickedItem ||
+                    stemValue === currentLemma;
+
+                  const stemNode = isCurrentItem ? (
+                    <Typography component="span" sx={{ fontWeight: "bold" }}>
+                      {truncStem}
+                    </Typography>
+                  ) : (
+                    <Typography component="span">{truncStem}</Typography>
+                  );
 
                   const path =
                     currentDict && !currentLemma
@@ -115,6 +120,11 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
                         key={index}
                         style={style}
                         onClick={() => setSearchListClickedItem(index)}
+                        sx={{
+                          bgcolor: isCurrentItem
+                            ? "action.selected"
+                            : "transparent",
+                        }}
                       >
                         <ListItemText
                           primary={<Link to={path}>{stemNode}</Link>}

@@ -1,5 +1,4 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -11,10 +10,8 @@ import {
   useLocation,
   useHistory,
 } from "react-router-dom";
-import Articles from "../features/article/Articles";
-import ArticlesDialog from "../features/article/ArticlesDialog";
+import ArticlesSheet from "../features/article/ArticlesSheet";
 import InfiniteStems from "../features/infinitestems/InfiniteStems";
-import FilterBar from "../features/search/FilterBar";
 import { locationParser } from "../utils";
 import StatusBar from "./StatusBar";
 import { WelcomeHeader } from "./Welcome";
@@ -26,7 +23,7 @@ interface SatniMainProps {
 
 const SatniMain: React.FC<SatniMainProps> = ({
   searchExpression,
-  setSearchExpression,
+  // setSearchExpression is no longer needed here as search is in AppBar
 }) => {
   const location = useLocation();
   const history = useHistory();
@@ -36,12 +33,27 @@ const SatniMain: React.FC<SatniMainProps> = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
+  // Track previous search expression to detect changes
+  const prevSearchExpressionRef = React.useRef(searchExpression);
+
   // Close dialog: navigate to path without lemma but preserve dict and query
   const handleCloseArticles = () => {
     const { currentDict } = locationParser(location.pathname);
     const basePath = currentDict ? `/${currentDict}` : "/";
     history.push({ pathname: basePath, search: location.search });
   };
+
+  // On mobile, dismiss ArticlesSheet when user starts typing in search field
+  React.useEffect(() => {
+    if (
+      isMobile &&
+      currentLemma &&
+      searchExpression !== prevSearchExpressionRef.current
+    ) {
+      handleCloseArticles();
+    }
+    prevSearchExpressionRef.current = searchExpression;
+  }, [searchExpression, isMobile, currentLemma]);
 
   return (
     // @ts-ignore - React Router DOM v5 compatibility
@@ -59,12 +71,6 @@ const SatniMain: React.FC<SatniMainProps> = ({
             <Box>
               <StatusBar />
             </Box>
-            <Box>
-              <FilterBar
-                searchExpression={searchExpression}
-                setSearchExpression={setSearchExpression}
-              />
-            </Box>
             {!currentLemma && !searchExpression && (
               <Box sx={{ px: 2, py: 1 }}>
                 <WelcomeHeader />
@@ -73,7 +79,7 @@ const SatniMain: React.FC<SatniMainProps> = ({
             <Box sx={{ flex: 1, overflow: "auto" }}>
               <InfiniteStems searchExpression={searchExpression} />
             </Box>
-            <ArticlesDialog
+            <ArticlesSheet
               open={Boolean(currentLemma)}
               lemma={currentLemma}
               searchExpression={searchExpression}
@@ -81,24 +87,64 @@ const SatniMain: React.FC<SatniMainProps> = ({
             />
           </Box>
         ) : (
-          <Grid container>
-            <Grid size={12}>
+          <Box
+            sx={{ display: "flex", flexDirection: "column", height: "100%" }}
+          >
+            <Box>
               <StatusBar />
-            </Grid>
-            <Grid size={12}>
-              <FilterBar
-                searchExpression={searchExpression}
-                setSearchExpression={setSearchExpression}
-              />
-              {!currentLemma && !searchExpression && <WelcomeHeader />}
-            </Grid>
-            <Grid size={4}>
-              <InfiniteStems searchExpression={searchExpression} />
-            </Grid>
-            <Grid size={8}>
-              {currentLemma && <Articles lemma={currentLemma} />}
-            </Grid>
-          </Grid>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                flex: 1,
+                overflow: "hidden",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "33.33%",
+                  minWidth: 0,
+                  borderRight: 1,
+                  borderColor: "divider",
+                  overflow: "auto",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                {!currentLemma && !searchExpression && (
+                  <Box sx={{ px: 2, py: 1 }}>
+                    <WelcomeHeader />
+                  </Box>
+                )}
+                <Box sx={{ flex: 1, overflow: "auto" }}>
+                  <InfiniteStems searchExpression={searchExpression} />
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  flex: 1,
+                  minWidth: 0,
+                  position: "relative",
+                  overflow: "auto",
+                }}
+              >
+                {currentLemma ? (
+                  <ArticlesSheet
+                    open={true}
+                    lemma={currentLemma}
+                    searchExpression={searchExpression}
+                  />
+                ) : (
+                  !searchExpression && (
+                    <Box sx={{ px: 2, py: 1 }}>
+                      <WelcomeHeader />
+                    </Box>
+                  )
+                )}
+              </Box>
+            </Box>
+          </Box>
         )}
       </Route>
     </Switch>

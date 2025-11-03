@@ -21,11 +21,14 @@ import WildCard from "./WildCard";
 interface FilterBarProps {
   searchExpression: string;
   setSearchExpression: (expression: string) => void;
+  /** When true, renders with compact styles suitable for the AppBar */
+  inAppBar?: boolean;
 }
 
 const FilterBar: React.FC<FilterBarProps> = ({
   searchExpression,
   setSearchExpression,
+  inAppBar = false,
 }) => {
   const theme = useTheme();
   const history = useHistory();
@@ -86,12 +89,17 @@ const FilterBar: React.FC<FilterBarProps> = ({
     <Paper
       component="div"
       sx={{
-        m: 2,
-        color: theme.palette.common.black,
+        m: inAppBar ? 0 : 2,
+        px: inAppBar ? 1 : 0,
+        color: inAppBar
+          ? theme.palette.common.white
+          : theme.palette.common.black,
         display: "flex",
         alignItems: "center",
         flexGrow: 1,
-        backgroundColor: alpha(theme.palette.common.black, 0.15),
+        backgroundColor: inAppBar
+          ? alpha(theme.palette.common.white, 0.15)
+          : alpha(theme.palette.common.black, 0.15),
       }}
     >
       <Tooltip title={<Trans>Sámi letters</Trans>}>

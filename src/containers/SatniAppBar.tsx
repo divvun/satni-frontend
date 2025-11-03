@@ -14,14 +14,18 @@ import { useState } from "react";
 // import { Link } from "react-router-dom";
 
 import HelpDialog from "./HelpDialog";
+import FilterBar from "../features/search/FilterBar";
 
 interface SatniAppBarProps {
+  searchExpression: string;
   setSearchExpression: (expression: string) => void;
   handleDrawerToggle: () => void;
   drawerWidth: number;
 }
 
 const SatniAppBar: React.FC<SatniAppBarProps> = ({
+  searchExpression,
+  setSearchExpression,
   handleDrawerToggle,
   drawerWidth,
 }) => {
@@ -43,7 +47,7 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
         marginLeft: { md: `${drawerWidth}px` },
       }}
     >
-      <Toolbar variant="dense">
+      <Toolbar variant="dense" sx={{ gap: 1 }}>
         <Box sx={{ display: { xs: "flex", md: "none" }, alignItems: "center" }}>
           <Tooltip title={<Trans>Menu</Trans>}>
             <IconButton
@@ -70,8 +74,14 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
             </IconButton>
           </Tooltip>
         </Box>
-        {/* Spacer to push Help icon to the right; desktop text home removed */}
-        <Box sx={{ flexGrow: 1 }} />
+        {/* Search bar inside the AppBar */}
+        <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
+          <FilterBar
+            inAppBar
+            searchExpression={searchExpression}
+            setSearchExpression={setSearchExpression}
+          />
+        </Box>
         <Tooltip title={<Trans>Help</Trans>}>
           <IconButton
             color="inherit"
