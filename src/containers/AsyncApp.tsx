@@ -59,17 +59,20 @@ const AsyncApp: React.FC<AsyncAppProps> = ({ classes }) => {
         mobileOpen={mobileOpen}
       />
       <main className={classes.main}>
-        {/* @ts-ignore - Sentry ErrorBoundary compatibility */}
         <Sentry.ErrorBoundary
-          fallback={({ error, resetError }: any) => (
+          fallback={(errorData) => (
             <>
               <div>You have encountered an error</div>
-              <div>{error.toString()}</div>
+              <div>
+                {errorData.error instanceof Error
+                  ? errorData.error.message
+                  : String(errorData.error)}
+              </div>
               <Button
                 color="primary"
                 href="/"
                 onClick={() => {
-                  resetError();
+                  errorData.resetError();
                 }}
               >
                 Click here to reset!

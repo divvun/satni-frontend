@@ -5,6 +5,12 @@ import Root from './containers/Root';
 
 Sentry.init({
   dsn: 'https://65960ebe11524e22b83637dfe43344a2@sentry.io/1303235',
+  
+  // Environment
+  environment: import.meta.env.MODE || 'production',
+  
+  // Only send errors in production
+  enabled: import.meta.env.PROD,
 });
 
 const container = document.getElementById('root');
