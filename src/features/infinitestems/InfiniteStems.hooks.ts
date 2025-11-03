@@ -1,12 +1,9 @@
 import { useQuery } from "@apollo/client";
 import { useLocation } from "react-router-dom";
 
-import GET_LANGS_DICTS from "../../operations/queries/getLangsDicts";
-import type { GetLangsAndDictsQuery } from "../../operations/queries/getLangsDicts";
-import GET_LEMMAS from "../../operations/queries/getLemmas";
-import type { AllLemmasQuery } from "../../operations/queries/getLemmas";
-import GET_SEARCH_MODE from "../../operations/queries/getSearchMode";
-import type { GetSearchModeQuery } from "../../operations/queries/getSearchMode";
+import { GET_LANGS_DICTS, type GetLangsAndDictsQuery } from "../../operations/queries/getLangsDicts";
+import { GET_LEMMAS, type  AllLemmasQuery } from "../../operations/queries/getLemmas";
+import { GET_SEARCH_MODE, type  GetSearchModeQuery } from "../../operations/queries/getSearchMode";
 import type { StemType } from "../../graphql/graphql";
 import { locationParser } from "../../utils";
 

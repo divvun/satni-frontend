@@ -3,11 +3,12 @@ import { useQuery } from '@apollo/client';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/react/macro';
 import { useLocation } from 'react-router-dom';
-import GET_DICT_ARTICLES, {
+import {
+  GET_DICT_ARTICLES, 
   type DictArticlesQuery,
 } from '../../operations/queries/getDictArticles';
-import GET_LANGS_DICTS, {
-  type GetLangsAndDictsQuery,
+import {
+  GET_LANGS_DICTS, type GetLangsAndDictsQuery,
 } from '../../operations/queries/getLangsDicts';
 import { locationParser } from '../../utils';
 import PresentDictArticles from './PresentDictArticles';

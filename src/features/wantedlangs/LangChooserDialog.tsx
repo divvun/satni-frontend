@@ -13,8 +13,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
 
-import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
-import LangChooser from './LangChooser';
+import {GET_LANGS_DICTS} from '../../operations/queries/getLangsDicts';
+import LangChooser from "./LangChooser";
 
 const useStyles = makeStyles((theme) => ({
   root: {

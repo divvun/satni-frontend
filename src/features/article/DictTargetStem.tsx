@@ -2,10 +2,8 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useLocation } from 'react-router-dom';
-import GET_LANGS_DICTS, {
-  type GetLangsAndDictsQuery,
-} from '../../operations/queries/getLangsDicts';
-import HAS_STEM, { type HasStemQuery } from '../../operations/queries/hasStem';
+import { GET_LANGS_DICTS, type  GetLangsAndDictsQuery } from '../../operations/queries/getLangsDicts';
+import { HAS_STEM, type HasStemQuery } from '../../operations/queries/hasStem';
 import { locationParser } from '../../utils';
 import Stem from './Stem';
 

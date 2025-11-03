@@ -2,10 +2,10 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/react/macro';
-import GET_LANGS_DICTS, {
+import { GET_LANGS_DICTS, 
   type GetLangsAndDictsQuery,
 } from '../../operations/queries/getLangsDicts';
-import GET_TERM_ARTICLES, {
+import { GET_TERM_ARTICLES, 
   type TermArticlesQuery,
 } from '../../operations/queries/getTermArticles';
 import { multilingualconceptListsByNames } from '../../utils';
