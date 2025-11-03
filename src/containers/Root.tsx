@@ -21,7 +21,7 @@ const Root: React.FC<RootProps> = ({ client }) => (
     fallback={({ error, resetError }) => (
       <>
         <div>You have encountered an error</div>
-        <div>{error.toString()}</div>
+        <div>{error instanceof Error ? error.toString() : String(error)}</div>
         <Button
           color="primary"
           href="/"

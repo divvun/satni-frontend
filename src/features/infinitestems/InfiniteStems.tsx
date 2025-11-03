@@ -9,7 +9,6 @@ import Typography from "@mui/material/Typography";
 import * as Sentry from "@sentry/react";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import Truncate from "react-truncate";
 import AutoSizer from "react-virtualized-auto-sizer";
 import { FixedSizeList as List } from "react-window";
 import InfiniteLoader from "react-window-infinite-loader";
@@ -26,6 +25,11 @@ const useStyles = makeStyles(() => ({
   },
   status: {
     textAlign: "center",
+  },
+  truncate: {
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap",
   },
   clicked: {
     fontWeight: "bold",
@@ -102,7 +106,7 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
                   const { stem } = stems[index];
                   const stemValue = stem ?? "";
                   const truncStem = (
-                    <Truncate width={(width ?? 300) - 50}>{stemValue}</Truncate>
+                    <span className={classes.truncate}>{stemValue}</span>
                   );
                   const stemNode =
                     stemValue === String(searchListClickedItem) ? (
