@@ -176,13 +176,13 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
     <Box
       component="nav"
       sx={{
-        width: { sm: drawerWidth },
-        flexShrink: { sm: 0 },
+        width: { md: drawerWidth },
+        flexShrink: { md: 0 },
       }}
       aria-label="mailbox folders"
     >
       {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-      <Box sx={{ display: { xs: "block", sm: "none" } }}>
+      <Box sx={{ display: { xs: "block", md: "none" } }}>
         <Drawer
           container={null}
           variant="temporary"
@@ -190,8 +190,9 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
           open={mobileOpen}
           onClose={handleDrawerToggle}
           sx={{
-            paper: {
+            "& .MuiDrawer-paper": {
               width: drawerWidth,
+              boxSizing: "border-box",
             },
           }}
           ModalProps={{
@@ -201,11 +202,12 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
           {drawer}
         </Drawer>
       </Box>
-      <Box sx={{ display: { xs: "none", sm: "block" } }}>
+      <Box sx={{ display: { xs: "none", md: "block" } }}>
         <Drawer
           sx={{
-            paper: {
+            "& .MuiDrawer-paper": {
               width: drawerWidth,
+              boxSizing: "border-box",
             },
           }}
           variant="permanent"
