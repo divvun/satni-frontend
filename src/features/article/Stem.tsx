@@ -1,6 +1,5 @@
 import { Trans } from "@lingui/react/macro";
 import { useLingui } from "@lingui/react";
-import { makeStyles } from "@mui/styles";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -36,35 +35,8 @@ interface StemProps {
   withLink?: boolean;
 }
 
-const useStyles = makeStyles({
-  stemContainer: {
-    width: "100%",
-    borderStyle: "dotted",
-    borderWidth: 1,
-    borderColor: "transparent",
-  },
-  stem: {
-    flexGrow: 1,
-  },
-  lemma: {
-    fontWeight: "normal",
-  },
-  rightGroup: {
-    float: "right",
-    justify: "space-evenly",
-  },
-  icons: {
-    margin: 0,
-    paddingTop: 0,
-    paddingBottom: 0,
-    paddingLeft: 5,
-    paddingRight: 5,
-  },
-});
-
 const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
   const { _ } = useLingui();
-  const classes = useStyles();
   const { lemma, presentationLemma, pos, language, dialect, country } = stem;
   const [openParadigm, setOpenParadigm] = useState(false);
 
@@ -78,7 +50,14 @@ const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
 
   return (
     <>
-      <Typography className={classes.stemContainer}>
+      <Typography
+        sx={{
+          width: "100%",
+          borderStyle: "dotted",
+          borderWidth: 1,
+          borderColor: "transparent",
+        }}
+      >
         {withLink ? (
           <Link to={`/${lemma}`}>
             <PresentationLemma presentationLemma={presentationLemma} />
@@ -91,7 +70,7 @@ const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
         )}
         {!lemma.includes(" ") && (
           <>
-            <span className={classes.rightGroup}>
+            <span style={{ float: "right", justifyContent: "space-evenly" }}>
               {pos && (
                 <Typography component="span" color="textSecondary">
                   (
@@ -105,7 +84,7 @@ const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
                 <SpeakerButton
                   text={` ${lemma},`}
                   language={language}
-                  classes={classes}
+                  classes={{ icons: "" }}
                 />
               )}
               <ParadigmButton
@@ -113,9 +92,13 @@ const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
                 pos={pos || ""}
                 language={language}
                 onClick={handleClickParadigmDialog}
-                classes={classes}
+                classes={{ icons: "" }}
               />
-              <KorpButton lemma={lemma} language={language} classes={classes} />
+              <KorpButton
+                lemma={lemma}
+                language={language}
+                classes={{ icons: "" }}
+              />
             </span>
             <ParadigmDialog
               lemma={lemma}

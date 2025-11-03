@@ -1,17 +1,9 @@
 /* eslint-disable react/no-array-index-key */
 
-import React from 'react';
-import Box from '@mui/material/Box';
-import { } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
+import React from "react";
+import Box from "@mui/material/Box";
 
-import LemmaGroup from './LemmaGroup';
-
-const useStyles = makeStyles((theme) => ({
-  divisor: {
-    margin: theme.spacing(1),
-  },
-}));
+import LemmaGroup from "./LemmaGroup";
 
 interface LemmaGroupsProps {
   lemma: string;
@@ -19,10 +11,8 @@ interface LemmaGroupsProps {
 }
 
 const LemmaGroups: React.FC<LemmaGroupsProps> = ({ lemma, terms }) => {
-  const classes = useStyles();
-
   return (
-    <Box className={classes.divisor}>
+    <Box sx={{ m: 1 }}>
       {terms.map((term, index) => (
         <LemmaGroup key={index} lemma={lemma} term={term} />
       ))}

@@ -1,26 +1,22 @@
-import React from 'react';
-import {
-  ThemeProvider as MuiThemeProvider,
-  createTheme,
-} from '@mui/material/styles';
-import { ThemeProvider as StylesThemeProvider } from '@mui/styles';
+import React from "react";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 // Make React available globally for JSX - critical for older components
 globalThis.React = React;
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   window.React = React;
 }
 
 // Polyfill for Node.js globals in browser
-if (typeof globalThis.process === 'undefined') {
+if (typeof globalThis.process === "undefined") {
   globalThis.process = {
     env: {},
     browser: true,
-    version: '',
+    version: "",
     versions: {},
-    platform: 'browser',
+    platform: "browser",
     argv: [],
-    cwd: () => '/',
+    cwd: () => "/",
     nextTick: (cb) => Promise.resolve().then(cb),
   };
 }
@@ -35,16 +31,14 @@ const theme = createTheme({
 // Add theme providers as decorators
 export const decorators = [
   (Story) => (
-    <MuiThemeProvider theme={theme}>
-      <StylesThemeProvider theme={theme}>
-        <Story />
-      </StylesThemeProvider>
-    </MuiThemeProvider>
+    <ThemeProvider theme={theme}>
+      <Story />
+    </ThemeProvider>
   ),
 ];
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
       color: /(background|color)$/i,

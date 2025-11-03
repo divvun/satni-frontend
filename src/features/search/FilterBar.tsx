@@ -1,56 +1,33 @@
-import React from 'react';
+import React from "react";
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/react/macro';
-import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
-import Paper from '@mui/material/Paper';
-import Popover from '@mui/material/Popover';
-import { alpha, Theme } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
-import Tooltip from '@mui/material/Tooltip';
-import KeyboardIcon from '@mui/icons-material/Keyboard';
-import MoreVert from '@mui/icons-material/MoreVert';
-import SearchIcon from '@mui/icons-material/Search';
+import { Trans } from "@lingui/react/macro";
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import Paper from "@mui/material/Paper";
+import Popover from "@mui/material/Popover";
+import { alpha, useTheme } from "@mui/material/styles";
+import Tooltip from "@mui/material/Tooltip";
+import KeyboardIcon from "@mui/icons-material/Keyboard";
+import MoreVert from "@mui/icons-material/MoreVert";
+import SearchIcon from "@mui/icons-material/Search";
 // @ts-ignore - React Router DOM v5 compatibility
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from "react-router-dom";
 
-import { locationParser } from '../../utils';
-import InputWithTranslation from './InputWithTranslation';
-import SamiKeys from './SamiKeys';
-import WildCard from './WildCard';
+import { locationParser } from "../../utils";
+import InputWithTranslation from "./InputWithTranslation";
+import SamiKeys from "./SamiKeys";
+import WildCard from "./WildCard";
 
 interface FilterBarProps {
   searchExpression: string;
   setSearchExpression: (expression: string) => void;
 }
 
-export const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    margin: theme.spacing(2),
-    color: theme.palette.common.black,
-    display: 'flex',
-    alignItems: 'center',
-    flexGrow: 1,
-    backgroundColor: alpha(theme.palette.common.black, 0.15),
-  },
-  iconButton: {
-    color: 'inherit',
-    padding: theme.spacing(1),
-  },
-  samiKeys: {
-    maxWidth: '600px',
-  },
-  searchMode: {
-    margin: theme.spacing(1),
-    width: '100%',
-  },
-}));
-
 const FilterBar: React.FC<FilterBarProps> = ({
   searchExpression,
   setSearchExpression,
 }) => {
-  const classes = useStyles();
+  const theme = useTheme();
   const history = useHistory();
   const location = useLocation();
   const currentPath = locationParser(location.pathname);
@@ -71,13 +48,13 @@ const FilterBar: React.FC<FilterBarProps> = ({
   };
 
   const keyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       lookup();
     }
   };
 
   const [samiKeyAnchor, setSamiKeyAnchor] = React.useState<HTMLElement | null>(
-    null,
+    null
   );
 
   const handleOpenSamiKey = (event: React.MouseEvent<HTMLElement>) => {
@@ -89,12 +66,10 @@ const FilterBar: React.FC<FilterBarProps> = ({
   };
 
   const samiKeyOpen = Boolean(samiKeyAnchor);
-  const idSamiKey = samiKeyOpen ? 'sami-keys' : undefined;
+  const idSamiKey = samiKeyOpen ? "sami-keys" : undefined;
 
-  const [
-    searchModeAnchor,
-    setSearchModeAnchor,
-  ] = React.useState<HTMLElement | null>(null);
+  const [searchModeAnchor, setSearchModeAnchor] =
+    React.useState<HTMLElement | null>(null);
 
   const handleOpenSearchMode = (event: React.MouseEvent<HTMLElement>) => {
     setSearchModeAnchor(event.currentTarget);
@@ -105,15 +80,23 @@ const FilterBar: React.FC<FilterBarProps> = ({
   };
 
   const searchModeOpen = Boolean(searchModeAnchor);
-  const idSearchMode = searchModeOpen ? 'search-mode' : undefined;
+  const idSearchMode = searchModeOpen ? "search-mode" : undefined;
 
   return (
-    <Paper component="div" className={classes.root}>
-      <Tooltip
-        title={<Trans>Sámi letters</Trans>}
-      >
+    <Paper
+      component="div"
+      sx={{
+        m: 2,
+        color: theme.palette.common.black,
+        display: "flex",
+        alignItems: "center",
+        flexGrow: 1,
+        backgroundColor: alpha(theme.palette.common.black, 0.15),
+      }}
+    >
+      <Tooltip title={<Trans>Sámi letters</Trans>}>
         <IconButton
-          className={classes.iconButton}
+          sx={{ color: "inherit", p: 1 }}
           aria-describedby={idSamiKey}
           onClick={handleOpenSamiKey}
         >
@@ -125,17 +108,12 @@ const FilterBar: React.FC<FilterBarProps> = ({
         onChange={handleChange}
         onKeyUp={keyPress}
       />
-      <Tooltip
-        title={<Trans>Lookup the search word</Trans>}
-      >
-        <IconButton
-          className={classes.iconButton}
-          onClick={lookup}
-        >
+      <Tooltip title={<Trans>Lookup the search word</Trans>}>
+        <IconButton sx={{ color: "inherit", p: 1 }} onClick={lookup}>
           <SearchIcon />
         </IconButton>
       </Tooltip>
-      <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+      <Box sx={{ display: { xs: "block", sm: "none" } }}>
         <Tooltip
           title={
             <Trans>
@@ -145,7 +123,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           }
         >
           <IconButton
-            className={classes.iconButton}
+            sx={{ color: "inherit", p: 1 }}
             aria-label="Search mode"
             onClick={handleOpenSearchMode}
           >
@@ -153,39 +131,39 @@ const FilterBar: React.FC<FilterBarProps> = ({
           </IconButton>
         </Tooltip>
       </Box>
-      <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+      <Box sx={{ display: { xs: "none", sm: "block" } }}>
         <WildCard />
       </Box>
       <Popover
-        className={classes.samiKeys}
+        sx={{ maxWidth: "600px" }}
         id={idSamiKey}
         open={samiKeyOpen}
         anchorEl={samiKeyAnchor}
         onClose={handleCloseSamiKey}
         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
+          vertical: "bottom",
+          horizontal: "left",
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
+          vertical: "top",
+          horizontal: "left",
         }}
       >
         <SamiKeys keyHandler={handleKeyInput} />
       </Popover>
       <Popover
-        className={classes.searchMode}
+        sx={{ m: 1, width: "100%" }}
         id={idSearchMode}
         open={searchModeOpen}
         anchorEl={searchModeAnchor}
         onClose={handleCloseSearchMode}
         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'right',
+          vertical: "bottom",
+          horizontal: "right",
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
+          vertical: "top",
+          horizontal: "right",
         }}
       >
         <WildCard />

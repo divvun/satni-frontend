@@ -1,27 +1,24 @@
-import React from 'react';
-// @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/react/macro';
-import { ListSubheader } from '@mui/material';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import { Theme } from '@mui/material/styles';
-import FeedbackIcon from '@mui/icons-material/Feedback';
-import LanguageIcon from '@mui/icons-material/Language';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
-import TranslateIcon from '@mui/icons-material/Translate';
-import { makeStyles } from '@mui/styles';
-import { useState } from 'react';
-import SpeakerChooserDialog from '../features/speaker/SpeakerChooserDialog';
-import DictChooserDialog from '../features/wantedlangs/DictChooserDialog';
-import LangChooserDialog from '../features/wantedlangs/LangChooserDialog';
-import MetaLanguageSelector from './MetaLanguageSelector';
+import React from "react";
+import { Trans } from "@lingui/react/macro";
+import { ListSubheader } from "@mui/material";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import FeedbackIcon from "@mui/icons-material/Feedback";
+import LanguageIcon from "@mui/icons-material/Language";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver";
+import TranslateIcon from "@mui/icons-material/Translate";
+import { useState } from "react";
+import SpeakerChooserDialog from "../features/speaker/SpeakerChooserDialog";
+import DictChooserDialog from "../features/wantedlangs/DictChooserDialog";
+import LangChooserDialog from "../features/wantedlangs/LangChooserDialog";
+import MetaLanguageSelector from "./MetaLanguageSelector";
 
 const Footer: React.FC = () => (
   <List
@@ -88,22 +85,6 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
   handleDrawerToggle,
   mobileOpen,
 }) => {
-  const useStyles = makeStyles((theme: Theme) => ({
-    drawer: {
-      [theme.breakpoints.up('sm')]: {
-        width: drawerWidth,
-        flexShrink: 0,
-      },
-    },
-    drawerPaper: {
-      width: drawerWidth,
-    },
-    toolbarDense: {
-      minHeight: 48,
-    },
-  }));
-  const classes = useStyles();
-
   const [openLangChooser, setOpenLangChooser] = useState<boolean>(false);
   const handleClickLangChooserDialog = () => {
     setOpenLangChooser(true);
@@ -130,7 +111,7 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
 
   const drawer = (
     <div>
-      <div className={classes.toolbarDense} />
+      <Box sx={{ minHeight: 48 }} />
       <Divider />
       <List>
         <ListItemButton
@@ -192,17 +173,26 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
   );
 
   return (
-    <nav className={classes.drawer} aria-label="mailbox folders">
+    <Box
+      component="nav"
+      sx={{
+        width: { sm: drawerWidth },
+        flexShrink: { sm: 0 },
+      }}
+      aria-label="mailbox folders"
+    >
       {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-      <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+      <Box sx={{ display: { xs: "block", sm: "none" } }}>
         <Drawer
           container={null}
           variant="temporary"
           anchor="left"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          classes={{
-            paper: classes.drawerPaper,
+          sx={{
+            paper: {
+              width: drawerWidth,
+            },
           }}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
@@ -211,10 +201,12 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
           {drawer}
         </Drawer>
       </Box>
-      <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+      <Box sx={{ display: { xs: "none", sm: "block" } }}>
         <Drawer
-          classes={{
-            paper: classes.drawerPaper,
+          sx={{
+            paper: {
+              width: drawerWidth,
+            },
           }}
           variant="permanent"
           open
@@ -222,7 +214,7 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
           {drawer}
         </Drawer>
       </Box>
-    </nav>
+    </Box>
   );
 };
 

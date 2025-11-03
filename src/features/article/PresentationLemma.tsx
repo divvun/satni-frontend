@@ -1,29 +1,14 @@
 /* eslint-disable react/no-array-index-key */
 
-import React from 'react';
-import { } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles({
-  lemma: {
-    fontWeight: 'normal',
-  },
-  sammallahti: {
-    fontWeight: 'bolder',
-  },
-});
+import React from "react";
+import Typography from "@mui/material/Typography";
 
 interface PartsProps {
   lemma: string;
-  classes: {
-    lemma: string;
-    sammallahti: string;
-  };
 }
 
-const Parts: React.FC<PartsProps> = ({ lemma, classes }) => {
-  const parts = lemma.split('@');
+const Parts: React.FC<PartsProps> = ({ lemma }) => {
+  const parts = lemma.split("@");
 
   return (
     <>
@@ -31,10 +16,10 @@ const Parts: React.FC<PartsProps> = ({ lemma, classes }) => {
         if (index < parts.length - 1) {
           return (
             <React.Fragment key={index}>
-              <Typography component="span" className={classes.lemma}>
+              <Typography component="span" sx={{ fontWeight: "normal" }}>
                 {part.slice(0, -1)}
               </Typography>
-              <Typography component="span" className={classes.sammallahti}>
+              <Typography component="span" sx={{ fontWeight: "bolder" }}>
                 {part.slice(-1)}
               </Typography>
             </React.Fragment>
@@ -42,7 +27,11 @@ const Parts: React.FC<PartsProps> = ({ lemma, classes }) => {
         }
 
         return (
-          <Typography key={index} component="span" className={classes.lemma}>
+          <Typography
+            key={index}
+            component="span"
+            sx={{ fontWeight: "normal" }}
+          >
             {part}
           </Typography>
         );
@@ -58,9 +47,7 @@ interface PresentationLemmaProps {
 const PresentationLemma: React.FC<PresentationLemmaProps> = ({
   presentationLemma,
 }) => {
-  const classes = useStyles();
-
-  return <Parts lemma={presentationLemma} classes={classes} />;
+  return <Parts lemma={presentationLemma} />;
 };
 
 export default PresentationLemma;

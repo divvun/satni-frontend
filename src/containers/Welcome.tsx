@@ -1,4 +1,3 @@
-import { makeStyles } from "@mui/styles";
 import { useLocation } from "react-router-dom";
 
 import { Trans } from "@lingui/react/macro";
@@ -15,38 +14,18 @@ import ViewHeadlineOutlined from "@mui/icons-material/ViewHeadlineOutlined";
 import dictionaryInfo, { dictionaryNames } from "../translateble_variables";
 import { locationParser } from "../utils";
 
-const useStyles = makeStyles((theme: any) => ({
-  welcome: {
-    [theme.breakpoints.up("xs")]: {
-      marginRight: "20%",
-      marginLeft: "20%",
-    },
-    [theme.breakpoints.down("xs")]: {
-      marginRight: theme.spacing(4),
-      marginLeft: theme.spacing(4),
-    },
-    marginTop: theme.spacing(4),
-    padding: theme.spacing(2),
-  },
-  heading: {
-    textAlign: "center",
-    margin: theme.spacing(1),
-  },
-  list: {
-    marginBottom: theme.spacing(1),
-  },
-  icons: {
-    fontSize: "inherit",
-  },
-}));
-
 export const WelcomeHeader: React.FC = () => {
-  const classes = useStyles();
   const { _ } = useLingui();
   const { currentLemma, currentDict } = locationParser(useLocation().pathname);
   return (
-    <Paper className={classes.welcome}>
-      <Typography variant="h5" className={classes.heading}>
+    <Paper
+      sx={{
+        mx: { xs: 4, sm: "20%" },
+        mt: 4,
+        p: 2,
+      }}
+    >
+      <Typography variant="h5" sx={{ textAlign: "center", m: 1 }}>
         {currentDict && !currentLemma ? (
           dictionaryNames[currentDict as keyof typeof dictionaryNames] ? (
             _(dictionaryNames[currentDict as keyof typeof dictionaryNames])
@@ -57,7 +36,7 @@ export const WelcomeHeader: React.FC = () => {
           <Trans>Welcome!</Trans>
         )}
       </Typography>
-      <Typography component="p" className={classes.list}>
+      <Typography component="p" sx={{ mb: 1 }}>
         {currentDict && !currentLemma ? (
           <>
             {dictionaryInfo[
@@ -109,28 +88,33 @@ export const WelcomeHeader: React.FC = () => {
 };
 
 export const SearchWelcome: React.FC = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.welcome}>
-      <Typography component="p" className={classes.list}>
+    <div
+      style={{
+        marginLeft: "20%",
+        marginRight: "20%",
+        marginTop: 32,
+        padding: 16,
+      }}
+    >
+      <Typography component="p" sx={{ mb: 1 }}>
         <Trans>Search results will appear here.</Trans>
       </Typography>
-      <Typography component="p" className={classes.list}>
+      <Typography component="p" sx={{ mb: 1 }}>
         <Trans>
           The input field accepts sami, nordic, english and latin search words.
           If you do not have Sami letters on your device, press{" "}
-          <KeyboardIcon className={classes.icons} /> to write them in the input
-          field.
+          <KeyboardIcon sx={{ fontSize: "inherit" }} /> to write them in the
+          input field.
         </Trans>
       </Typography>
-      <Typography component="p" className={classes.list}>
+      <Typography component="p" sx={{ mb: 1 }}>
         <Trans>
           You can browse the search words here, new ones will be fetched until
           all matches have been found.
         </Trans>
       </Typography>
-      <Typography component="p" className={classes.list}>
+      <Typography component="p" sx={{ mb: 1 }}>
         <Trans>
           When you click a word here, dictionary articles appear to the right.
         </Trans>
@@ -140,29 +124,35 @@ export const SearchWelcome: React.FC = () => {
 };
 
 export const DictWelcome: React.FC = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.welcome}>
-      <Typography component="p" className={classes.list}>
+    <div
+      style={{
+        marginLeft: "20%",
+        marginRight: "20%",
+        marginTop: 32,
+        padding: 16,
+      }}
+    >
+      <Typography component="p" sx={{ mb: 1 }}>
         <Trans>
           Dictionary articles will appear in this pane when you press a word in
           the search results to the left.
         </Trans>
       </Typography>
-      <Typography component="p" className={classes.list}>
+      <Typography component="p" sx={{ mb: 1 }}>
         <Trans>
-          Click <InfoOutlined className={classes.icons} /> to see the inflection
-          paradigm of words. Click{" "}
-          <ViewHeadlineOutlined className={classes.icons} /> to see examples of
-          how the word is used.
+          Click <InfoOutlined sx={{ fontSize: "inherit" }} /> to see the
+          inflection paradigm of words. Click{" "}
+          <ViewHeadlineOutlined sx={{ fontSize: "inherit" }} /> to see examples
+          of how the word is used.
         </Trans>
       </Typography>
-      <Typography component="p" className={classes.list}>
+      <Typography component="p" sx={{ mb: 1 }}>
         <Trans>
           Inside the articles you can hide unwanted languages and dictionaries.
-          To reactivate them, press <LanguageIcon className={classes.icons} />{" "}
-          or <MenuBookIcon className={classes.icons} /> .
+          To reactivate them, press{" "}
+          <LanguageIcon sx={{ fontSize: "inherit" }} /> or{" "}
+          <MenuBookIcon sx={{ fontSize: "inherit" }} /> .
         </Trans>
       </Typography>
     </div>

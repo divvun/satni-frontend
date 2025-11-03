@@ -3,8 +3,6 @@ import CircularProgress from "@mui/material/CircularProgress";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-
-import { makeStyles } from "@mui/styles";
 import Typography from "@mui/material/Typography";
 import * as Sentry from "@sentry/react";
 import React from "react";
@@ -19,23 +17,6 @@ import { locationParser } from "../../utils";
 import useStems from "./InfiniteStems.hooks";
 import SearchInfo from "./SearchInfo";
 
-const useStyles = makeStyles(() => ({
-  infiniteList: {
-    height: "72vh",
-  },
-  status: {
-    textAlign: "center",
-  },
-  truncate: {
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    whiteSpace: "nowrap",
-  },
-  clicked: {
-    fontWeight: "bold",
-  },
-}));
-
 interface InfiniteStemsProps {
   searchExpression: string;
 }
@@ -47,7 +28,6 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
     useStems(searchExpression);
   const searchListClickedItemQuery = useQuery(GET_SEARCH_LIST_CLICKED_ITEM, {});
   const { searchListClickedItem = -1 } = searchListClickedItemQuery.data || {};
-  const classes = useStyles();
 
   const stemsCount = hasNextPage ? stems.length + 1 : stems.length;
   const loadMoreStems = loading
@@ -61,9 +41,9 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
   if (loading && stems.length === 0) return <CircularProgress size={16} />;
 
   return (
-    <div className={classes.infiniteList}>
+    <div style={{ height: "72vh" }}>
       {searchExpression && (
-        <Typography className={classes.status}>
+        <Typography sx={{ textAlign: "center" }}>
           <SearchInfo
             stemsLength={stems.length}
             totalCount={totalCount ?? 0}
@@ -106,11 +86,19 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
                   const { stem } = stems[index];
                   const stemValue = stem ?? "";
                   const truncStem = (
-                    <span className={classes.truncate}>{stemValue}</span>
+                    <span
+                      style={{
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {stemValue}
+                    </span>
                   );
                   const stemNode =
                     stemValue === String(searchListClickedItem) ? (
-                      <Typography component="span" className={classes.clicked}>
+                      <Typography component="span" sx={{ fontWeight: "bold" }}>
                         {truncStem}
                       </Typography>
                     ) : (

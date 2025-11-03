@@ -11,7 +11,6 @@
     "@lingui/react": "^5.5.1",
     "@mui/icons-material": "^7.3.4",
     "@mui/material": "^7.3.4",
-    "@mui/styles": "^6.4.8",
     "@sentry/react": "^10.22.0",
     "classnames": "^2.2.6",
     "cross-fetch": "^3.1.5",

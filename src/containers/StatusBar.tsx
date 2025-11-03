@@ -1,5 +1,4 @@
 import { useQuery } from "@apollo/client/react";
-import { makeStyles } from "@mui/styles";
 import { Trans } from "@lingui/react/macro";
 import { useLingui } from "@lingui/react";
 import { Link, useLocation } from "react-router-dom";
@@ -9,13 +8,6 @@ import type { MessageDescriptor } from "@lingui/core";
 import { availableLanguages, locationParser } from "../utils";
 import dictionaryInfo, { dictionaryNames } from "../translateble_variables";
 import { GET_LANGS_DICTS } from "../operations/queries/getLangsDicts";
-
-const useStyles = makeStyles((theme: any) => ({
-  status: {
-    textAlign: "center",
-    margin: theme.spacing(1),
-  },
-}));
 
 const dictStatus = (
   wantedDicts: string[],
@@ -56,7 +48,6 @@ const langStatus = (wantedDicts: string[], srcLangs: string[]) => {
 };
 
 const StatusBar: React.FC = () => {
-  const classes = useStyles();
   const { _ } = useLingui();
   const location = useLocation();
   const { currentDict, currentLemma } = locationParser(location.pathname);
@@ -74,7 +65,7 @@ const StatusBar: React.FC = () => {
       ) as string[]);
 
   return (
-    <Typography className={classes.status}>
+    <Typography sx={{ textAlign: "center", m: 1 }}>
       {langStatus(wantedDicts, srcLangs)}{" "}
       {dictStatus(wantedDicts, currentLemma, _)}
     </Typography>

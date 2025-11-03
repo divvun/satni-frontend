@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
-import { Theme } from "@mui/material/styles";
-import { withStyles, WithStyles } from "@mui/styles";
+import Box from "@mui/material/Box";
+import GlobalStyles from "@mui/material/GlobalStyles";
 import * as Sentry from "@sentry/react";
 import React from "react";
 
@@ -11,33 +11,7 @@ import SatniMain from "./SatniMain";
 
 const drawerWidth = 240;
 
-const styles = (theme: Theme) => ({
-  "@global": {
-    body: {
-      backgroundColor: theme.palette.common.white, // Note: grey might not exist, using white
-    },
-  },
-  container: {
-    minHeight: "100vh",
-    display: "flex",
-    flexDirection: "column" as const,
-  },
-  main: {
-    display: "flex",
-    flexDirection: "column" as const,
-    flex: 1,
-    height: "80vh",
-    [theme.breakpoints.up("md")]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-    },
-    marginTop: theme.spacing(1),
-  },
-});
-
-interface AsyncAppProps extends WithStyles<typeof styles> {}
-
-const AsyncApp: React.FC<AsyncAppProps> = ({ classes }) => {
+const AsyncApp: React.FC = () => {
   const [searchExpression, setSearchExpression] = React.useState<string>("");
   const [mobileOpen, setMobileOpen] = React.useState<boolean>(false);
 
@@ -46,7 +20,20 @@ const AsyncApp: React.FC<AsyncAppProps> = ({ classes }) => {
   };
 
   return (
-    <div className={classes.container}>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <GlobalStyles
+        styles={(theme) => ({
+          body: {
+            backgroundColor: theme.palette.common.white,
+          },
+        })}
+      />
       <CssBaseline />
       <SatniAppBar
         setSearchExpression={setSearchExpression}
@@ -58,7 +45,18 @@ const AsyncApp: React.FC<AsyncAppProps> = ({ classes }) => {
         handleDrawerToggle={handleDrawerToggle}
         mobileOpen={mobileOpen}
       />
-      <main className={classes.main}>
+      <Box
+        component="main"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          flex: 1,
+          height: "80vh",
+          marginTop: 1,
+          width: { md: `calc(100% - ${drawerWidth}px)` },
+          marginLeft: { md: `${drawerWidth}px` },
+        }}
+      >
         <Sentry.ErrorBoundary
           fallback={(errorData) => (
             <>
@@ -85,9 +83,9 @@ const AsyncApp: React.FC<AsyncAppProps> = ({ classes }) => {
             setSearchExpression={setSearchExpression}
           />
         </Sentry.ErrorBoundary>
-      </main>
-    </div>
+      </Box>
+    </Box>
   );
 };
 
-export default withStyles(styles)(AsyncApp);
+export default AsyncApp;

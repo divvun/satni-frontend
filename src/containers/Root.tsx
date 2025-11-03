@@ -3,10 +3,9 @@ import { ApolloClient } from "@apollo/client";
 import Button from "@mui/material/Button";
 import {
   createTheme,
-  ThemeProvider as MuiThemeProvider,
+  ThemeProvider,
   responsiveFontSizes,
 } from "@mui/material/styles";
-import { ThemeProvider as StylesThemeProvider } from "@mui/styles";
 import * as Sentry from "@sentry/react";
 import InterfaceLanguage from "./InterfaceLanguage";
 import ProviderWrapper from "./ProviderWrapper";
@@ -35,7 +34,7 @@ const Root: React.FC<RootProps> = ({ client }) => (
     )}
   >
     <ProviderWrapper client={client}>
-      <MuiThemeProvider
+      <ThemeProvider
         theme={responsiveFontSizes(
           createTheme({
             typography: {
@@ -45,18 +44,8 @@ const Root: React.FC<RootProps> = ({ client }) => (
           })
         )}
       >
-        <StylesThemeProvider
-          theme={responsiveFontSizes(
-            createTheme({
-              typography: {
-                htmlFontSize: 14,
-              },
-            })
-          )}
-        >
-          <InterfaceLanguage />
-        </StylesThemeProvider>
-      </MuiThemeProvider>
+        <InterfaceLanguage />
+      </ThemeProvider>
     </ProviderWrapper>
   </Sentry.ErrorBoundary>
 );

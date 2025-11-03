@@ -1,7 +1,6 @@
 import { useLingui } from "@lingui/react";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { makeStyles } from "@mui/styles";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 
@@ -9,19 +8,12 @@ import { languageCodes } from "../../translateble_variables";
 
 // import { wantedLangsVar } from '../../apolloCache';
 
-const useStyles = makeStyles((theme: any) => ({
-  lang1: {
-    marginRight: theme.spacing(1),
-  },
-}));
-
 interface PairHeaderProps {
   language: string;
 }
 
 const PairHeader: React.FC<PairHeaderProps> = ({ language }) => {
   const { _ } = useLingui();
-  const classes = useStyles();
   // const wantedLangs = wantedLangsVar();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +23,7 @@ const PairHeader: React.FC<PairHeaderProps> = ({ language }) => {
 
   return (
     <FormControlLabel
-      className={classes.lang1}
+      sx={{ mr: 1 }}
       label={
         <Typography variant="subtitle2">
           {languageCodes[language as keyof typeof languageCodes]

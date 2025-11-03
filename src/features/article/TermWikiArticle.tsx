@@ -1,31 +1,19 @@
 /* eslint-disable react/no-array-index-key */
 
 // @ts-ignore - @lingui/macro has no type definitions
-import { Trans } from '@lingui/react/macro';
-import Paper from '@mui/material/Paper';
-import { } from '@mui/material/styles';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import { makeStyles } from '@mui/styles';
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Trans } from "@lingui/react/macro";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import React from "react";
+import { useLocation } from "react-router-dom";
 
-import { hasAvailableDict } from '../../utils';
-import Source from './Source';
-import TermCore from './TermCore';
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: theme.spacing(2),
-    marginBottom: theme.spacing(1),
-  },
-  title: {
-    fontSize: 14,
-  },
-}));
+import { hasAvailableDict } from "../../utils";
+import Source from "./Source";
+import TermCore from "./TermCore";
 
 interface TermWikiArticleProps {
   category: string;
@@ -38,11 +26,10 @@ const TermWikiArticle: React.FC<TermWikiArticleProps> = ({
   multiLingualConcept,
   lemma,
 }) => {
-  const classes = useStyles();
   const { pathname } = useLocation();
 
   return (
-    <Paper className={classes.paper} elevation={1}>
+    <Paper sx={{ p: 2, mb: 1 }} elevation={1}>
       <Table>
         <TableHead>
           <TableRow>

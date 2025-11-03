@@ -7,10 +7,8 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { Theme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { makeStyles } from "@mui/styles";
 
 import dictionaryInfo, { dictionaryNames } from "../../translateble_variables";
 
@@ -21,17 +19,6 @@ interface DictChooserProps {
 
 const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
   const { _ } = useLingui();
-  const useStyles = makeStyles((theme: Theme) => ({
-    accordionHeading: {
-      // fontSize: theme.typography.pxToRem(15),
-      // fontWeight: theme.typography.fontWeightRegular
-    },
-    infoText: {
-      marginRight: theme.spacing(1),
-      width: "50%",
-    },
-  }));
-  const classes = useStyles();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.stopPropagation();
@@ -73,7 +60,7 @@ const DictChooser: React.FC<DictChooserProps> = ({ dicts, setDicts }) => {
               (infoText: any, index: number) => (
                 <Typography
                   key={`${dict}-info-${index}`}
-                  className={classes.infoText}
+                  sx={{ mr: 1, width: "50%" }}
                 >
                   {_(infoText)}
                 </Typography>

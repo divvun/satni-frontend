@@ -1,23 +1,14 @@
 /* eslint-disable react/no-array-index-key */
 
-import React from 'react';
-import { } from '@mui/material/styles';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import { makeStyles } from '@mui/styles';
+import React from "react";
+import Box from "@mui/material/Box";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
 
-import SpeakerButton from '../speaker/SpeakerButton';
-
-const useStyles = makeStyles({
-  analysisRow: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '4px',
-  },
-});
+import SpeakerButton from "../speaker/SpeakerButton";
 
 interface Analyses {
   [key: string]: string[];
@@ -36,24 +27,29 @@ const MyTableRow: React.FC<MyTableRowProps> = ({
   values,
   language,
 }) => {
-  const classes = useStyles();
-
   return (
     <TableRow key={name}>
       <TableCell>{name}</TableCell>
       {values.length === 1 && (
         <TableCell key={`${name}_1`} colSpan={2} align="center">
           {analyses[values[0]].map((analysis, index) => (
-            <div key={`${analysis}_${index}`} className={classes.analysisRow}>
-              {['sme', 'sma', 'smj'].includes(language) && (
+            <Box
+              key={`${analysis}_${index}`}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "4px",
+              }}
+            >
+              {["sme", "sma", "smj"].includes(language) && (
                 <SpeakerButton
                   text={` ${analysis},`}
                   language={language}
-                  classes={{ icons: '' }}
+                  classes={{ icons: "" }}
                 />
               )}
               <span>{analysis}</span>
-            </div>
+            </Box>
           ))}
         </TableCell>
       )}
@@ -61,16 +57,23 @@ const MyTableRow: React.FC<MyTableRowProps> = ({
         values.map((value, index1) => (
           <TableCell key={index1}>
             {analyses[value]?.map((analysis, index) => (
-              <div key={`${analysis}_${index}`} className={classes.analysisRow}>
-                {['sme', 'sma', 'smj'].includes(language) && (
+              <Box
+                key={`${analysis}_${index}`}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "4px",
+                }}
+              >
+                {["sme", "sma", "smj"].includes(language) && (
                   <SpeakerButton
                     text={` ${analysis},`}
                     language={language}
-                    classes={{ icons: '' }}
+                    classes={{ icons: "" }}
                   />
                 )}
                 <span>{analysis}</span>
-              </div>
+              </Box>
             ))}
           </TableCell>
         ))}
@@ -90,234 +93,234 @@ interface TableRowData {
 export const NounTableRows: TableRowData = {
   sma: [
     {
-      name: 'Nom',
-      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
+      name: "Nom",
+      values: ["+N+Sg+Nom", "+N+Pl+Nom"],
     },
     {
-      name: 'Acc',
-      values: ['+N+Sg+Acc', '+N+Pl+Acc'],
+      name: "Acc",
+      values: ["+N+Sg+Acc", "+N+Pl+Acc"],
     },
     {
-      name: 'Gen',
-      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
+      name: "Gen",
+      values: ["+N+Sg+Gen", "+N+Pl+Gen"],
     },
     {
-      name: 'Ill',
-      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
+      name: "Ill",
+      values: ["+N+Sg+Ill", "+N+Pl+Ill"],
     },
     {
-      name: 'Ine',
-      values: ['+N+Sg+Ine', '+N+Pl+Ine'],
+      name: "Ine",
+      values: ["+N+Sg+Ine", "+N+Pl+Ine"],
     },
     {
-      name: 'Ela',
-      values: ['+N+Sg+Ela', '+N+Pl+Ela'],
+      name: "Ela",
+      values: ["+N+Sg+Ela", "+N+Pl+Ela"],
     },
     {
-      name: 'Com',
-      values: ['+N+Sg+Com', '+N+Pl+Com'],
+      name: "Com",
+      values: ["+N+Sg+Com", "+N+Pl+Com"],
     },
     {
-      name: 'Ess',
-      values: ['+N+Ess'],
+      name: "Ess",
+      values: ["+N+Ess"],
     },
   ],
   sme: [
     {
-      name: 'Nom',
-      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
+      name: "Nom",
+      values: ["+N+Sg+Nom", "+N+Pl+Nom"],
     },
     {
-      name: 'Acc',
-      values: ['+N+Sg+Acc', '+N+Pl+Acc'],
+      name: "Acc",
+      values: ["+N+Sg+Acc", "+N+Pl+Acc"],
     },
     {
-      name: 'Gen',
-      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
+      name: "Gen",
+      values: ["+N+Sg+Gen", "+N+Pl+Gen"],
     },
     {
-      name: 'Ill',
-      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
+      name: "Ill",
+      values: ["+N+Sg+Ill", "+N+Pl+Ill"],
     },
     {
-      name: 'Loc',
-      values: ['+N+Sg+Loc', '+N+Pl+Loc'],
+      name: "Loc",
+      values: ["+N+Sg+Loc", "+N+Pl+Loc"],
     },
     {
-      name: 'Com',
-      values: ['+N+Sg+Com', '+N+Pl+Com'],
+      name: "Com",
+      values: ["+N+Sg+Com", "+N+Pl+Com"],
     },
     {
-      name: 'Ess',
-      values: ['+N+Ess'],
+      name: "Ess",
+      values: ["+N+Ess"],
     },
   ],
   smj: [
     {
-      name: 'Nom',
-      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
+      name: "Nom",
+      values: ["+N+Sg+Nom", "+N+Pl+Nom"],
     },
     {
-      name: 'Acc',
-      values: ['+N+Sg+Acc', '+N+Pl+Acc'],
+      name: "Acc",
+      values: ["+N+Sg+Acc", "+N+Pl+Acc"],
     },
     {
-      name: 'Gen',
-      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
+      name: "Gen",
+      values: ["+N+Sg+Gen", "+N+Pl+Gen"],
     },
     {
-      name: 'Ill',
-      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
+      name: "Ill",
+      values: ["+N+Sg+Ill", "+N+Pl+Ill"],
     },
     {
-      name: 'Ine',
-      values: ['+N+Sg+Ine', '+N+Pl+Ine'],
+      name: "Ine",
+      values: ["+N+Sg+Ine", "+N+Pl+Ine"],
     },
     {
-      name: 'Ela',
-      values: ['+N+Sg+Ela', '+N+Pl+Ela'],
+      name: "Ela",
+      values: ["+N+Sg+Ela", "+N+Pl+Ela"],
     },
     {
-      name: 'Com',
-      values: ['+N+Sg+Com', '+N+Pl+Com'],
+      name: "Com",
+      values: ["+N+Sg+Com", "+N+Pl+Com"],
     },
     {
-      name: 'Abe',
-      values: ['+N+Abe'],
+      name: "Abe",
+      values: ["+N+Abe"],
     },
     {
-      name: 'Ess',
-      values: ['+N+Ess'],
+      name: "Ess",
+      values: ["+N+Ess"],
     },
   ],
   smn: [
     {
-      name: 'Nom',
-      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
+      name: "Nom",
+      values: ["+N+Sg+Nom", "+N+Pl+Nom"],
     },
     {
-      name: 'Acc',
-      values: ['+N+Sg+Acc', '+N+Pl+Acc'],
+      name: "Acc",
+      values: ["+N+Sg+Acc", "+N+Pl+Acc"],
     },
     {
-      name: 'Gen',
-      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
+      name: "Gen",
+      values: ["+N+Sg+Gen", "+N+Pl+Gen"],
     },
     {
-      name: 'Ill',
-      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
+      name: "Ill",
+      values: ["+N+Sg+Ill", "+N+Pl+Ill"],
     },
     {
-      name: 'Loc',
-      values: ['+N+Sg+Loc', '+N+Pl+Loc'],
+      name: "Loc",
+      values: ["+N+Sg+Loc", "+N+Pl+Loc"],
     },
     {
-      name: 'Com',
-      values: ['+N+Sg+Com', '+N+Pl+Com'],
+      name: "Com",
+      values: ["+N+Sg+Com", "+N+Pl+Com"],
     },
     {
-      name: 'Abe',
-      values: ['+N+Sg+Abe', '+N+Pl+Abe'],
+      name: "Abe",
+      values: ["+N+Sg+Abe", "+N+Pl+Abe"],
     },
     {
-      name: 'Par',
-      values: ['+N+Par'],
+      name: "Par",
+      values: ["+N+Par"],
     },
     {
-      name: 'Ess',
-      values: ['+N+Ess'],
+      name: "Ess",
+      values: ["+N+Ess"],
     },
   ],
   sms: [
     {
-      name: 'Nom',
-      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
+      name: "Nom",
+      values: ["+N+Sg+Nom", "+N+Pl+Nom"],
     },
     {
-      name: 'Acc',
-      values: ['+N+Sg+Acc', '+N+Pl+Acc'],
+      name: "Acc",
+      values: ["+N+Sg+Acc", "+N+Pl+Acc"],
     },
     {
-      name: 'Gen',
-      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
+      name: "Gen",
+      values: ["+N+Sg+Gen", "+N+Pl+Gen"],
     },
     {
-      name: 'Ill',
-      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
+      name: "Ill",
+      values: ["+N+Sg+Ill", "+N+Pl+Ill"],
     },
     {
-      name: 'Loc',
-      values: ['+N+Sg+Loc', '+N+Pl+Loc'],
+      name: "Loc",
+      values: ["+N+Sg+Loc", "+N+Pl+Loc"],
     },
     {
-      name: 'Com',
-      values: ['+N+Sg+Com', '+N+Pl+Com'],
+      name: "Com",
+      values: ["+N+Sg+Com", "+N+Pl+Com"],
     },
     {
-      name: 'Abe',
-      values: ['+N+Sg+Abe', '+N+Pl+Abe'],
+      name: "Abe",
+      values: ["+N+Sg+Abe", "+N+Pl+Abe"],
     },
     {
-      name: 'Par',
-      values: ['+N+Par'],
+      name: "Par",
+      values: ["+N+Par"],
     },
     {
-      name: 'Ess',
-      values: ['+N+Ess'],
+      name: "Ess",
+      values: ["+N+Ess"],
     },
   ],
   fin: [
     {
-      name: 'Nom',
-      values: ['+N+Sg+Nom', '+N+Pl+Nom'],
+      name: "Nom",
+      values: ["+N+Sg+Nom", "+N+Pl+Nom"],
     },
     {
-      name: 'Gen',
-      values: ['+N+Sg+Gen', '+N+Pl+Gen'],
+      name: "Gen",
+      values: ["+N+Sg+Gen", "+N+Pl+Gen"],
     },
     {
-      name: 'Par',
-      values: ['+N+Sg+Par', '+N+Pl+Par'],
+      name: "Par",
+      values: ["+N+Sg+Par", "+N+Pl+Par"],
     },
     {
-      name: 'All',
-      values: ['+N+Sg+All', '+N+Pl+All'],
+      name: "All",
+      values: ["+N+Sg+All", "+N+Pl+All"],
     },
     {
-      name: 'Abl',
-      values: ['+N+Sg+Abl', '+N+Pl+Abl'],
+      name: "Abl",
+      values: ["+N+Sg+Abl", "+N+Pl+Abl"],
     },
     {
-      name: 'Ade',
-      values: ['+N+Sg+Ade', '+N+Pl+Ade'],
+      name: "Ade",
+      values: ["+N+Sg+Ade", "+N+Pl+Ade"],
     },
     {
-      name: 'Ill',
-      values: ['+N+Sg+Ill', '+N+Pl+Ill'],
+      name: "Ill",
+      values: ["+N+Sg+Ill", "+N+Pl+Ill"],
     },
     {
-      name: 'Ine',
-      values: ['+N+Sg+Ine', '+N+Pl+Ine'],
+      name: "Ine",
+      values: ["+N+Sg+Ine", "+N+Pl+Ine"],
     },
     {
-      name: 'Ela',
-      values: ['+N+Sg+Ela', '+N+Pl+Ela'],
+      name: "Ela",
+      values: ["+N+Sg+Ela", "+N+Pl+Ela"],
     },
     {
-      name: 'Abe',
-      values: ['+N+Sg+Abe', '+N+Pl+Abe'],
+      name: "Abe",
+      values: ["+N+Sg+Abe", "+N+Pl+Abe"],
     },
     {
-      name: 'Ess',
-      values: ['+N+Sg+Ess', '+N+Pl+Ess'],
+      name: "Ess",
+      values: ["+N+Sg+Ess", "+N+Pl+Ess"],
     },
     {
-      name: 'Tra',
-      values: ['+N+Sg+Tra', '+N+Pl+Tra'],
+      name: "Tra",
+      values: ["+N+Sg+Tra", "+N+Pl+Tra"],
     },
     {
-      name: 'Ins',
-      values: ['+N+Sg+Ins', '+N+Pl+Ins'],
+      name: "Ins",
+      values: ["+N+Sg+Ins", "+N+Pl+Ins"],
     },
   ],
 };
@@ -353,12 +356,12 @@ interface ContentProps {
 
 const Content: React.FC<ContentProps> = ({ analyses, language }) => {
   switch (language) {
-    case 'sma':
-    case 'sme':
-    case 'smj':
-    case 'smn':
-    case 'sms':
-    case 'fin':
+    case "sma":
+    case "sme":
+    case "smj":
+    case "smn":
+    case "sms":
+    case "fin":
       return <LangTable analyses={analyses} language={language} />;
     default:
       return null;

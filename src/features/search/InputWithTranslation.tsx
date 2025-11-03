@@ -2,8 +2,6 @@ import React from "react";
 import { msg } from "@lingui/macro";
 import { useLingui } from "@lingui/react";
 import InputBase from "@mui/material/InputBase";
-import { Theme } from "@mui/material/styles";
-import { makeStyles } from "@mui/styles";
 import { useEffect, useState } from "react";
 
 interface InputWithTranslationProps {
@@ -13,15 +11,6 @@ interface InputWithTranslationProps {
 }
 
 const InputWithTranslation: React.FC<InputWithTranslationProps> = (props) => {
-  const useStyles = makeStyles((theme: Theme) => ({
-    input: {
-      color: "inherit",
-      marginLeft: theme.spacing(1),
-      flex: 1,
-    },
-  }));
-  const classes = useStyles();
-
   const { value, onChange, onKeyUp } = props;
   const [inputValue, setInputValue] = useState<string>(value);
   const { _ } = useLingui();
@@ -34,9 +23,9 @@ const InputWithTranslation: React.FC<InputWithTranslationProps> = (props) => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (inputValue !== value) {
-        onChange({ target: { value: inputValue } } as React.ChangeEvent<
-          HTMLInputElement
-        >);
+        onChange({
+          target: { value: inputValue },
+        } as React.ChangeEvent<HTMLInputElement>);
       }
     }, 300);
 
@@ -54,7 +43,11 @@ const InputWithTranslation: React.FC<InputWithTranslationProps> = (props) => {
       onChange={handleInputChange}
       onKeyUp={onKeyUp}
       placeholder={_(msg`Write at least one letter here`)}
-      className={classes.input}
+      sx={{
+        color: "inherit",
+        ml: 1,
+        flex: 1,
+      }}
       inputProps={{ "aria-label": "search" }}
     />
   );
