@@ -86,7 +86,20 @@ const SatniMain: React.FC<SatniMainProps> = ({
               onClose={handleCloseArticles}
             />
           </Box>
+        ) : !searchExpression && !currentLemma ? (
+          // Desktop start screen - single pane with welcome
+          <Box
+            sx={{ display: "flex", flexDirection: "column", height: "100%" }}
+          >
+            <Box>
+              <StatusBar />
+            </Box>
+            <Box sx={{ px: 2, py: 1 }}>
+              <WelcomeHeader />
+            </Box>
+          </Box>
         ) : (
+          // Desktop with search or article - two pane layout
           <Box
             sx={{ display: "flex", flexDirection: "column", height: "100%" }}
           >
@@ -112,11 +125,6 @@ const SatniMain: React.FC<SatniMainProps> = ({
                   flexDirection: "column",
                 }}
               >
-                {!currentLemma && !searchExpression && (
-                  <Box sx={{ px: 2, py: 1 }}>
-                    <WelcomeHeader />
-                  </Box>
-                )}
                 <Box sx={{ flex: 1, overflow: "auto" }}>
                   <InfiniteStems searchExpression={searchExpression} />
                 </Box>
@@ -129,18 +137,12 @@ const SatniMain: React.FC<SatniMainProps> = ({
                   overflow: "auto",
                 }}
               >
-                {currentLemma ? (
+                {currentLemma && (
                   <ArticlesSheet
                     open={true}
                     lemma={currentLemma}
                     searchExpression={searchExpression}
                   />
-                ) : (
-                  !searchExpression && (
-                    <Box sx={{ px: 2, py: 1 }}>
-                      <WelcomeHeader />
-                    </Box>
-                  )
                 )}
               </Box>
             </Box>
