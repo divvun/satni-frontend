@@ -4,7 +4,7 @@ export interface GetInterfaceLanguageQuery {
   interfaceLanguage: string;
 }
 
-const GET_INTERFACE_LANGUAGE: TypedDocumentNode<
+export const GET_INTERFACE_LANGUAGE: TypedDocumentNode<
   GetInterfaceLanguageQuery,
   never
 > = gql`
@@ -12,5 +12,3 @@ const GET_INTERFACE_LANGUAGE: TypedDocumentNode<
     interfaceLanguage @client
   }
 `;
-
-export default GET_INTERFACE_LANGUAGE;

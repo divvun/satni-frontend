@@ -11,7 +11,7 @@ export interface TermArticlesVariables {
   targetLangs: QueryConceptListArgs["targetLangs"];
 }
 
-const GET_TERM_ARTICLES: TypedDocumentNode<
+export const GET_TERM_ARTICLES: TypedDocumentNode<
   TermArticlesQuery,
   TermArticlesVariables
 > = gql`
@@ -42,4 +42,3 @@ const GET_TERM_ARTICLES: TypedDocumentNode<
   }
 `;
 
-export default GET_TERM_ARTICLES;

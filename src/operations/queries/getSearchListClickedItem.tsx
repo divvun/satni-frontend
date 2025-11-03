@@ -4,7 +4,7 @@ export interface GetSearchListClickedItemQuery {
   searchListClickedItem: number;
 }
 
-const GET_SEARCH_LIST_CLICKED_ITEM: TypedDocumentNode<
+export  const GET_SEARCH_LIST_CLICKED_ITEM: TypedDocumentNode<
   GetSearchListClickedItemQuery,
   never
 > = gql`
@@ -13,4 +13,3 @@ const GET_SEARCH_LIST_CLICKED_ITEM: TypedDocumentNode<
   }
 `;
 
-export default GET_SEARCH_LIST_CLICKED_ITEM;

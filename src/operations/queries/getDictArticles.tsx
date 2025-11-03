@@ -12,7 +12,7 @@ export interface DictArticlesVariables {
   wantedDicts: QueryDictEntryListArgs["wantedDicts"];
 }
 
-const GET_DICT_ARTICLES: TypedDocumentNode<
+export const GET_DICT_ARTICLES: TypedDocumentNode<
   DictArticlesQuery,
   DictArticlesVariables
 > = gql`
@@ -68,5 +68,3 @@ const GET_DICT_ARTICLES: TypedDocumentNode<
     }
   }
 `;
-
-export default GET_DICT_ARTICLES;

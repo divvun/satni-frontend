@@ -12,7 +12,7 @@ export interface HasStemVariables {
   wantedDicts: QueryHasStemArgs["wantedDicts"];
 }
 
-const HAS_STEM: TypedDocumentNode<HasStemQuery, HasStemVariables> = gql`
+export const HAS_STEM: TypedDocumentNode<HasStemQuery, HasStemVariables> = gql`
   query HasStem(
     $stem: String!
     $srcLangs: [String]!
@@ -29,5 +29,3 @@ const HAS_STEM: TypedDocumentNode<HasStemQuery, HasStemVariables> = gql`
     }
   }
 `;
-
-export default HAS_STEM;
