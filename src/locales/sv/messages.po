@@ -70,7 +70,7 @@ msgstr ""
 #~ msgid "\"Vuõʹlǧǧe jååʹtted ooudâs\" (Sammallahti, 2012)"
 #~ msgstr ""
 
-#: src/containers/StatusBar.jsx:28
+#: src/containers/StatusBar.tsx:24
 msgid "(<0>Show all</0>)"
 msgstr "<0>Visa alla</0>"
 
@@ -80,13 +80,13 @@ msgstr "<0>Visa alla</0>"
 
 #. placeholder {0}: srcLangs.length
 #. placeholder {1}: availableLanguages.length
-#: src/containers/StatusBar.jsx:45
+#: src/containers/StatusBar.tsx:41
 msgid "{0}/{1} languages."
 msgstr ""
 
 #. placeholder {0}: wantedDicts.length
 #. placeholder {1}: Object.keys(dictionaryInfo).length
-#: src/containers/StatusBar.jsx:36
+#: src/containers/StatusBar.tsx:32
 msgid "{0}/{1} sources."
 msgstr ""
 
@@ -149,30 +149,30 @@ msgstr ""
 #~ msgstr "<0/>"
 
 #. placeholder {0}: error.message
-#: src/features/article/DictArticles.tsx:65
-#: src/features/article/TermArticles.tsx:56
+#: src/features/article/DictArticles.tsx:61
+#: src/features/article/TermArticles.tsx:51
 msgid "<0>Error {0}</0>"
 msgstr "<0>Fel {0}</0>"
 
-#: src/containers/SatniDrawer.tsx:48
+#: src/containers/SatniDrawer.tsx:45
 msgid "<0>Giellagáldu</0>"
 msgstr "<0>Giellagáldu</0>"
 
-#: src/features/article/DictArticles.tsx:30
-#: src/features/article/DictArticles.tsx:58
+#: src/features/article/DictArticles.tsx:26
+#: src/features/article/DictArticles.tsx:54
 msgid "<0>Loading dicts …</0>"
 msgstr "<0>Laddar ordböcker …</0>"
 
-#: src/features/article/TermArticles.tsx:29
-#: src/features/article/TermArticles.tsx:49
+#: src/features/article/TermArticles.tsx:24
+#: src/features/article/TermArticles.tsx:44
 msgid "<0>Loading terms …</0>"
 msgstr "<0>Laddar termer …</0>"
 
 #~ msgid "<0>Loading...</0>"
 #~ msgstr ""
 
-#: src/features/article/DictArticles.tsx:73
-#: src/features/article/TermArticles.tsx:64
+#: src/features/article/DictArticles.tsx:69
+#: src/features/article/TermArticles.tsx:59
 msgid "<0>No data available</0>"
 msgstr ""
 
@@ -212,31 +212,31 @@ msgstr "Vardagligt språk"
 msgid "Boazodoallu"
 msgstr "Renskötsel"
 
-#: src/features/article/TermWikiArticle.tsx:58
+#: src/features/article/TermWikiArticle.tsx:45
 msgid "Category"
 msgstr "Kategori"
 
-#: src/features/wantedlangs/DictChooserDialog.tsx:84
+#: src/features/wantedlangs/DictChooserDialog.tsx:65
 msgid "Choose dictionaries"
 msgstr "Välj ordböcker"
 
-#: src/features/wantedlangs/LangChooserDialog.tsx:83
+#: src/features/wantedlangs/LangChooserDialog.tsx:64
 msgid "Choose languages"
 msgstr "Välj språk"
 
-#: src/features/speaker/SpeakerChooserDialog.tsx:81
+#: src/features/speaker/SpeakerChooserDialog.tsx:62
 msgid "Choose TTS voices"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:141
+#: src/features/search/FilterBar.tsx:127
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr "Välj om söktermen ska vara i början, mitten eller slutet av det du letar efter."
 
-#: src/containers/Welcome.jsx:157
+#: src/containers/Welcome.tsx:143
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr "Klicka på <0/> för att se hur ordet böjs. Klicka på <1/> för att se exempel på hur ordet används."
 
-#: src/features/article/Stem.jsx:122
+#: src/features/article/Stem.tsx:125
 msgid "Country"
 msgstr "Rike"
 
@@ -244,22 +244,22 @@ msgstr "Rike"
 msgid "Dáidda ja girjjálašvuohta"
 msgstr "Konst och litteratur"
 
-#: src/features/article/Definitions.tsx:33
+#: src/features/article/Definitions.tsx:18
 msgid "Definition"
 msgstr "Definition"
 
 #~ msgid "Definitions:"
 #~ msgstr ""
 
-#: src/containers/SatniDrawer.tsx:30
+#: src/containers/SatniDrawer.tsx:27
 msgid "Delivered by"
 msgstr "Levererad av"
 
-#: src/features/article/Stem.jsx:116
+#: src/features/article/Stem.tsx:117
 msgid "Dialect"
 msgstr "Dialekt"
 
-#: src/containers/SatniDrawer.tsx:152
+#: src/containers/SatniDrawer.tsx:143
 msgid "Dictionaries"
 msgstr "Ordböcker"
 
@@ -271,7 +271,7 @@ msgstr ""
 msgid "Dictionaries:"
 msgstr ""
 
-#: src/containers/Welcome.jsx:151
+#: src/containers/Welcome.tsx:137
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr "I den här panelen visas ordboksartiklar när du trycker på ett ord bland sökresultaten till vänster."
 
@@ -285,7 +285,7 @@ msgstr "Datorteknik och datateknik"
 #~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
 #~ msgstr ""
 
-#: src/containers/Welcome.jsx:75
+#: src/containers/Welcome.tsx:51
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
 msgstr "Sök i <0>Gielagáldus</0> termsamling, <1>Pekka Sammalahtis nordsamiska - finska ordbok</1>, Hamarøy kommuns <2>lulesamiska - norska</2> eller <3>norska - lulesamiska< /3> medicinska ordböcker eller i <4>Giellateknos</4> <5>samiska ordböcker</5>."
 
@@ -470,20 +470,24 @@ msgstr ""
 msgid "habmersmjnob"
 msgstr ""
 
-#: src/containers/HelpDialog.tsx:58
-#: src/containers/SatniAppBar.tsx:89
+#: src/containers/HelpDialog.tsx:47
+#: src/containers/SatniAppBar.tsx:86
 msgid "Help"
 msgstr "Hjälp"
 
 #: src/features/article/Source.jsx:34
 #: src/features/article/Source.jsx:35
-msgid "Hide this dictionary"
-msgstr "Göm den här ordboken"
+#~ msgid "Hide this dictionary"
+#~ msgstr "Göm den här ordboken"
 
 #: src/features/article/PairHeader.jsx:40
 #: src/features/article/PairHeader.jsx:41
-msgid "Hide this language"
-msgstr "Göm det här språket"
+#~ msgid "Hide this language"
+#~ msgstr "Göm det här språket"
+
+#: src/containers/SatniAppBar.tsx:65
+msgid "Home"
+msgstr ""
 
 #: src/translateble_variables.ts:111
 msgid "Huksenteknihkka"
@@ -493,7 +497,7 @@ msgstr "Byggteknik"
 msgid "In June of 2020, the files generated by Jack Rueter (approximately 30000 entries) were moved into main/words/dicts/finsms/inc/ for future consultation. The files have been replaced by a newer set (approximately 20000 entries) deriving directly from editing of the Satu & Jouni Moshnikoff dictionary organized by the Oulu University Giellagas Institute and Saami Parliament in Inari, Finland with funding from the Finnish Ministry of Education (2019–2020)."
 msgstr ""
 
-#: src/containers/Welcome.jsx:165
+#: src/containers/Welcome.tsx:151
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr "Inuti artiklarna kan du gömma oönskade språk och ordböcker. För att återaktivera dem, tryck på <0/> eller <1/>."
 
@@ -512,7 +516,7 @@ msgstr ""
 msgid "Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009."
 msgstr ""
 
-#: src/containers/SatniDrawer.tsx:143
+#: src/containers/SatniDrawer.tsx:134
 msgid "Languages"
 msgstr "Språk"
 
@@ -528,7 +532,7 @@ msgstr ""
 msgid "Listen to pronunciation"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:129
+#: src/features/search/FilterBar.tsx:119
 msgid "Lookup the search word"
 msgstr "Slå upp söktermen"
 
@@ -543,6 +547,10 @@ msgstr "Maskinteknik"
 #: src/translateble_variables.ts:114
 msgid "Medisiidna"
 msgstr "Medisin"
+
+#: src/containers/SatniAppBar.tsx:53
+msgid "Menu"
+msgstr ""
 
 #: src/translateble_variables.ts:33
 msgid "N"
@@ -622,7 +630,7 @@ msgstr ""
 msgid "Other main contributors to these projects were (in alphabetical order) Katri Jefremoff, Erkki Lumisalmi, Zoja Nosova, Lena Terhart, and Joshua Wilbur."
 msgstr ""
 
-#: src/features/paradigm/ParadigmDialog.tsx:77
+#: src/features/paradigm/ParadigmDialog.tsx:57
 msgid "Paradigm"
 msgstr "Böjningsmönster"
 
@@ -634,11 +642,15 @@ msgstr "pron."
 msgid "Religion"
 msgstr "Religion"
 
-#: src/features/article/Articles.tsx:37
+#: src/features/article/ArticlesSheet.tsx:155
+msgid "Results for «{headerTerm}»"
+msgstr ""
+
+#: src/features/article/Articles.tsx:25
 msgid "Results for «{lemma}»"
 msgstr "Resultat för \"{lemma}\""
 
-#: src/containers/StatusBar.jsx:24
+#: src/containers/StatusBar.tsx:20
 msgid "Results only from"
 msgstr "Visar endast resultat från"
 
@@ -650,7 +662,7 @@ msgstr ""
 #~ msgid "sámi keys"
 #~ msgstr ""
 
-#: src/features/search/FilterBar.tsx:113
+#: src/features/search/FilterBar.tsx:105
 msgid "Sámi letters"
 msgstr "Samiska bokstäver"
 
@@ -688,7 +700,7 @@ msgstr ""
 msgid "Search mode:"
 msgstr "Sökläge:"
 
-#: src/containers/Welcome.jsx:120
+#: src/containers/Welcome.tsx:101
 msgid "Search results will appear here."
 msgstr "Sökresultat visas här."
 
@@ -696,7 +708,7 @@ msgstr "Sökresultat visas här."
 msgid "Search words that contain your search term"
 msgstr "Sök efter ord som innehåller söktermen"
 
-#: src/features/search/WildCard.tsx:42
+#: src/features/search/WildCard.tsx:41
 msgid "Search words that end in your search term"
 msgstr "Sök efter ord som slutar på söktermen"
 
@@ -709,8 +721,8 @@ msgid "Servodatdieđa"
 msgstr "Samhällskunskap"
 
 #: src/containers/SatniAppBar.tsx:78
-msgid "Settings"
-msgstr "Inställningar"
+#~ msgid "Settings"
+#~ msgstr "Inställningar"
 
 #: src/features/paradigm/ParadigmButton.tsx:70
 msgid "Show paradigm for this word"
@@ -772,7 +784,7 @@ msgid "sms_genitive"
 msgstr ""
 
 #: src/features/article/LemmaGroup.tsx:45
-#: src/features/article/Source.jsx:26
+#: src/features/article/Source.tsx:30
 msgid "Source:"
 msgstr "Källa:"
 
@@ -847,7 +859,7 @@ msgstr "Ordboken innehåller med än 50.000 poster, och Sammallahti lägger rege
 msgid "The Finnish-to-Skolt Sami dictionary has gone through three phases, moving from quantity to quality. After original work with in the Skolt Sami-to-X dictionary, a simple flipped dictionary was produced for providing Finnish-to-Skolt Sami searches in the saan.oahpa.no online dictionary in 2016."
 msgstr ""
 
-#: src/containers/Welcome.jsx:123
+#: src/containers/Welcome.tsx:104
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 msgstr "Inmatningsfältet accepterar samisk, nordisk, engelska och latinska sökord. Om du inte har samiska bokstäver på ditt tangentbord så klickar du på <0/> för att få in dom i inmatningsfältet."
 
@@ -927,7 +939,7 @@ msgstr ""
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
 msgstr "Trond Trosteruds Finska - Norska ordbok har mer än 30000 sökord."
 
-#: src/containers/SatniDrawer.tsx:161
+#: src/containers/SatniDrawer.tsx:152
 msgid "TTS Voices"
 msgstr ""
 
@@ -935,7 +947,7 @@ msgstr ""
 msgid "V"
 msgstr "V"
 
-#: src/containers/Welcome.jsx:58
+#: src/containers/Welcome.tsx:36
 msgid "Welcome!"
 msgstr "Välkomen!"
 
@@ -951,14 +963,14 @@ msgstr "Välkomen!"
 msgid "western"
 msgstr ""
 
-#: src/containers/Welcome.jsx:137
+#: src/containers/Welcome.tsx:118
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "När du klickar på ord här dyker ordboksartiklarna upp till höger."
 
-#: src/features/search/InputWithTranslation.tsx:56
+#: src/features/search/InputWithTranslation.tsx:45
 msgid "Write at least one letter here"
 msgstr "Skriv åtminstone en bokstav här"
 
-#: src/containers/Welcome.jsx:131
+#: src/containers/Welcome.tsx:112
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr "Du kan söka bland dom hämtade orden här, nya ord laddas in tills alla matchningar har hittats."

@@ -69,7 +69,7 @@ msgstr ""
 #~ msgid "\"Vuõʹlǧǧe jååʹtted ooudâs\" (Sammallahti, 2012)"
 #~ msgstr ""
 
-#: src/containers/StatusBar.jsx:28
+#: src/containers/StatusBar.tsx:24
 msgid "(<0>Show all</0>)"
 msgstr ""
 
@@ -79,13 +79,13 @@ msgstr ""
 
 #. placeholder {0}: srcLangs.length
 #. placeholder {1}: availableLanguages.length
-#: src/containers/StatusBar.jsx:45
+#: src/containers/StatusBar.tsx:41
 msgid "{0}/{1} languages."
 msgstr ""
 
 #. placeholder {0}: wantedDicts.length
 #. placeholder {1}: Object.keys(dictionaryInfo).length
-#: src/containers/StatusBar.jsx:36
+#: src/containers/StatusBar.tsx:32
 msgid "{0}/{1} sources."
 msgstr ""
 
@@ -149,22 +149,22 @@ msgstr ""
 #~ msgstr ""
 
 #. placeholder {0}: error.message
-#: src/features/article/DictArticles.tsx:65
-#: src/features/article/TermArticles.tsx:56
+#: src/features/article/DictArticles.tsx:61
+#: src/features/article/TermArticles.tsx:51
 msgid "<0>Error {0}</0>"
 msgstr ""
 
-#: src/containers/SatniDrawer.tsx:48
+#: src/containers/SatniDrawer.tsx:45
 msgid "<0>Giellagáldu</0>"
 msgstr ""
 
-#: src/features/article/DictArticles.tsx:30
-#: src/features/article/DictArticles.tsx:58
+#: src/features/article/DictArticles.tsx:26
+#: src/features/article/DictArticles.tsx:54
 msgid "<0>Loading dicts …</0>"
 msgstr ""
 
-#: src/features/article/TermArticles.tsx:29
-#: src/features/article/TermArticles.tsx:49
+#: src/features/article/TermArticles.tsx:24
+#: src/features/article/TermArticles.tsx:44
 msgid "<0>Loading terms …</0>"
 msgstr ""
 
@@ -172,8 +172,8 @@ msgstr ""
 #~ msgid "<0>Loading...</0>"
 #~ msgstr ""
 
-#: src/features/article/DictArticles.tsx:73
-#: src/features/article/TermArticles.tsx:64
+#: src/features/article/DictArticles.tsx:69
+#: src/features/article/TermArticles.tsx:59
 msgid "<0>No data available</0>"
 msgstr ""
 
@@ -214,31 +214,31 @@ msgstr ""
 msgid "Boazodoallu"
 msgstr ""
 
-#: src/features/article/TermWikiArticle.tsx:58
+#: src/features/article/TermWikiArticle.tsx:45
 msgid "Category"
 msgstr ""
 
-#: src/features/wantedlangs/DictChooserDialog.tsx:84
+#: src/features/wantedlangs/DictChooserDialog.tsx:65
 msgid "Choose dictionaries"
 msgstr ""
 
-#: src/features/wantedlangs/LangChooserDialog.tsx:83
+#: src/features/wantedlangs/LangChooserDialog.tsx:64
 msgid "Choose languages"
 msgstr ""
 
-#: src/features/speaker/SpeakerChooserDialog.tsx:81
+#: src/features/speaker/SpeakerChooserDialog.tsx:62
 msgid "Choose TTS voices"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:141
+#: src/features/search/FilterBar.tsx:127
 msgid "Choose whether the search expression is in the start, middle or the end of words."
 msgstr ""
 
-#: src/containers/Welcome.jsx:157
+#: src/containers/Welcome.tsx:143
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr ""
 
-#: src/features/article/Stem.jsx:122
+#: src/features/article/Stem.tsx:125
 msgid "Country"
 msgstr ""
 
@@ -246,7 +246,7 @@ msgstr ""
 msgid "Dáidda ja girjjálašvuohta"
 msgstr ""
 
-#: src/features/article/Definitions.tsx:33
+#: src/features/article/Definitions.tsx:18
 msgid "Definition"
 msgstr ""
 
@@ -254,15 +254,15 @@ msgstr ""
 #~ msgid "Definitions:"
 #~ msgstr ""
 
-#: src/containers/SatniDrawer.tsx:30
+#: src/containers/SatniDrawer.tsx:27
 msgid "Delivered by"
 msgstr ""
 
-#: src/features/article/Stem.jsx:116
+#: src/features/article/Stem.tsx:117
 msgid "Dialect"
 msgstr ""
 
-#: src/containers/SatniDrawer.tsx:152
+#: src/containers/SatniDrawer.tsx:143
 msgid "Dictionaries"
 msgstr ""
 
@@ -274,7 +274,7 @@ msgstr ""
 msgid "Dictionaries:"
 msgstr ""
 
-#: src/containers/Welcome.jsx:151
+#: src/containers/Welcome.tsx:137
 msgid "Dictionary articles will appear in this pane when you press a word in the search results to the left."
 msgstr ""
 
@@ -290,7 +290,7 @@ msgstr ""
 #~ msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1> and <2>Giellatekno's</2> <3>sami dictionaries</3>."
 #~ msgstr ""
 
-#: src/containers/Welcome.jsx:75
+#: src/containers/Welcome.tsx:51
 msgid "Do searches in <0>Giellagáldu's</0> term collection, <1>Pekka Sammallahti's North Sami – Finnish dictionary</1>, Hábmer municipality's <2>Lule Sámi - Norwegian</2> or <3>Norwegian - Lule Sámi</3> medicinal dictionaries and <4>Giellatekno's</4> <5>sami dictionaries</5>."
 msgstr ""
 
@@ -478,19 +478,23 @@ msgstr ""
 msgid "habmersmjnob"
 msgstr ""
 
-#: src/containers/HelpDialog.tsx:58
-#: src/containers/SatniAppBar.tsx:89
+#: src/containers/HelpDialog.tsx:47
+#: src/containers/SatniAppBar.tsx:86
 msgid "Help"
 msgstr ""
 
 #: src/features/article/Source.jsx:34
 #: src/features/article/Source.jsx:35
-msgid "Hide this dictionary"
-msgstr ""
+#~ msgid "Hide this dictionary"
+#~ msgstr ""
 
 #: src/features/article/PairHeader.jsx:40
 #: src/features/article/PairHeader.jsx:41
-msgid "Hide this language"
+#~ msgid "Hide this language"
+#~ msgstr ""
+
+#: src/containers/SatniAppBar.tsx:65
+msgid "Home"
 msgstr ""
 
 #: src/translateble_variables.ts:111
@@ -501,7 +505,7 @@ msgstr ""
 msgid "In June of 2020, the files generated by Jack Rueter (approximately 30000 entries) were moved into main/words/dicts/finsms/inc/ for future consultation. The files have been replaced by a newer set (approximately 20000 entries) deriving directly from editing of the Satu & Jouni Moshnikoff dictionary organized by the Oulu University Giellagas Institute and Saami Parliament in Inari, Finland with funding from the Finnish Ministry of Education (2019–2020)."
 msgstr ""
 
-#: src/containers/Welcome.jsx:165
+#: src/containers/Welcome.tsx:151
 msgid "Inside the articles you can hide unwanted languages and dictionaries. To reactivate them, press <0/> or <1/> ."
 msgstr ""
 
@@ -520,7 +524,7 @@ msgstr ""
 msgid "Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009."
 msgstr ""
 
-#: src/containers/SatniDrawer.tsx:143
+#: src/containers/SatniDrawer.tsx:134
 msgid "Languages"
 msgstr ""
 
@@ -536,7 +540,7 @@ msgstr ""
 msgid "Listen to pronunciation"
 msgstr ""
 
-#: src/features/search/FilterBar.tsx:129
+#: src/features/search/FilterBar.tsx:119
 msgid "Lookup the search word"
 msgstr ""
 
@@ -550,6 +554,10 @@ msgstr ""
 
 #: src/translateble_variables.ts:114
 msgid "Medisiidna"
+msgstr ""
+
+#: src/containers/SatniAppBar.tsx:53
+msgid "Menu"
 msgstr ""
 
 #: src/translateble_variables.ts:33
@@ -631,7 +639,7 @@ msgstr ""
 msgid "Other main contributors to these projects were (in alphabetical order) Katri Jefremoff, Erkki Lumisalmi, Zoja Nosova, Lena Terhart, and Joshua Wilbur."
 msgstr ""
 
-#: src/features/paradigm/ParadigmDialog.tsx:77
+#: src/features/paradigm/ParadigmDialog.tsx:57
 msgid "Paradigm"
 msgstr ""
 
@@ -643,11 +651,15 @@ msgstr ""
 msgid "Religion"
 msgstr ""
 
-#: src/features/article/Articles.tsx:37
+#: src/features/article/ArticlesSheet.tsx:155
+msgid "Results for «{headerTerm}»"
+msgstr ""
+
+#: src/features/article/Articles.tsx:25
 msgid "Results for «{lemma}»"
 msgstr ""
 
-#: src/containers/StatusBar.jsx:24
+#: src/containers/StatusBar.tsx:20
 msgid "Results only from"
 msgstr ""
 
@@ -659,7 +671,7 @@ msgstr ""
 #~ msgid "sámi keys"
 #~ msgstr ""
 
-#: src/features/search/FilterBar.tsx:113
+#: src/features/search/FilterBar.tsx:105
 msgid "Sámi letters"
 msgstr ""
 
@@ -697,7 +709,7 @@ msgstr ""
 msgid "Search mode:"
 msgstr ""
 
-#: src/containers/Welcome.jsx:120
+#: src/containers/Welcome.tsx:101
 msgid "Search results will appear here."
 msgstr ""
 
@@ -705,7 +717,7 @@ msgstr ""
 msgid "Search words that contain your search term"
 msgstr ""
 
-#: src/features/search/WildCard.tsx:42
+#: src/features/search/WildCard.tsx:41
 msgid "Search words that end in your search term"
 msgstr ""
 
@@ -718,8 +730,8 @@ msgid "Servodatdieđa"
 msgstr ""
 
 #: src/containers/SatniAppBar.tsx:78
-msgid "Settings"
-msgstr ""
+#~ msgid "Settings"
+#~ msgstr ""
 
 #: src/features/paradigm/ParadigmButton.tsx:70
 msgid "Show paradigm for this word"
@@ -781,7 +793,7 @@ msgid "sms_genitive"
 msgstr ""
 
 #: src/features/article/LemmaGroup.tsx:45
-#: src/features/article/Source.jsx:26
+#: src/features/article/Source.tsx:30
 msgid "Source:"
 msgstr ""
 
@@ -857,7 +869,7 @@ msgstr ""
 msgid "The Finnish-to-Skolt Sami dictionary has gone through three phases, moving from quantity to quality. After original work with in the Skolt Sami-to-X dictionary, a simple flipped dictionary was produced for providing Finnish-to-Skolt Sami searches in the saan.oahpa.no online dictionary in 2016."
 msgstr ""
 
-#: src/containers/Welcome.jsx:123
+#: src/containers/Welcome.tsx:104
 msgid "The input field accepts sami, nordic, english and latin search words. If you do not have Sami letters on your device, press <0/> to write them in the input field."
 msgstr ""
 
@@ -937,7 +949,7 @@ msgstr ""
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
 msgstr ""
 
-#: src/containers/SatniDrawer.tsx:161
+#: src/containers/SatniDrawer.tsx:152
 msgid "TTS Voices"
 msgstr ""
 
@@ -945,7 +957,7 @@ msgstr ""
 msgid "V"
 msgstr ""
 
-#: src/containers/Welcome.jsx:58
+#: src/containers/Welcome.tsx:36
 msgid "Welcome!"
 msgstr ""
 
@@ -961,14 +973,14 @@ msgstr ""
 msgid "western"
 msgstr ""
 
-#: src/containers/Welcome.jsx:137
+#: src/containers/Welcome.tsx:118
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr ""
 
-#: src/features/search/InputWithTranslation.tsx:56
+#: src/features/search/InputWithTranslation.tsx:45
 msgid "Write at least one letter here"
 msgstr ""
 
-#: src/containers/Welcome.jsx:131
+#: src/containers/Welcome.tsx:112
 msgid "You can browse the search words here, new ones will be fetched until all matches have been found."
 msgstr ""
