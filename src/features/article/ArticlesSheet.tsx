@@ -114,17 +114,24 @@ const ArticlesSheet: React.FC<ArticlesSheetProps> = ({
         sx={{
           position: isMobile ? "fixed" : "relative",
           top: isMobile ? 48 : undefined,
+          right: isMobile ? 0 : undefined,
+          bottom: isMobile ? 0 : undefined,
           left: isMobile ? 0 : undefined,
-          width: isMobile ? "100vw" : "100%",
-          height: isMobile ? "calc(100vh - 96px)" : "100%",
+          width: isMobile ? undefined : "100%",
+          height: isMobile ? undefined : "100%",
           zIndex: isMobile ? 1200 : "auto",
           bgcolor: "background.paper",
           boxShadow: isMobile ? 6 : 0,
           display: "flex",
           flexDirection: "column",
+          overflow: isMobile ? "auto" : undefined,
         }}
       >
-        <AppBar position="static" color="default" sx={{ boxShadow: 1 }}>
+        <AppBar
+          position="sticky"
+          color="default"
+          sx={{ boxShadow: 1, top: 0, zIndex: 1 }}
+        >
           <Toolbar>
             <IconButton
               edge="start"
@@ -176,7 +183,14 @@ const ArticlesSheet: React.FC<ArticlesSheetProps> = ({
             )}
           </Toolbar>
         </AppBar>
-        <Box sx={{ flex: 1, overflow: "auto", p: { xs: 1, sm: 3 } }}>
+        <Box
+          sx={{
+            flex: 1,
+            overflow: isMobile ? "visible" : "auto",
+            p: { xs: 1, sm: 3 },
+            minHeight: 0,
+          }}
+        >
           <Articles lemma={lemma} showHeader={false} />
         </Box>
       </Box>

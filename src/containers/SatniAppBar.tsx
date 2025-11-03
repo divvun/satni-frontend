@@ -39,12 +39,13 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
 
   return (
     <AppBar
-      position="static"
+      position="sticky"
       sx={{
-        position: "relative",
+        top: 0,
         flexDirection: "column",
         width: { md: `calc(100% - ${drawerWidth}px)` },
         marginLeft: { md: `${drawerWidth}px` },
+        zIndex: (theme) => theme.zIndex.appBar,
       }}
     >
       <Toolbar variant="dense" sx={{ gap: 1 }}>

@@ -65,7 +65,17 @@ const StatusBar: React.FC = () => {
       ) as string[]);
 
   return (
-    <Typography sx={{ textAlign: "center", m: 1 }}>
+    <Typography
+      sx={{
+        textAlign: "center",
+        m: 1,
+        position: "sticky",
+        top: { xs: 48, md: 0 },
+        bgcolor: "background.paper",
+        zIndex: 1100,
+        py: 1,
+      }}
+    >
       {langStatus(wantedDicts, srcLangs)}{" "}
       {dictStatus(wantedDicts, currentLemma, _)}
     </Typography>

@@ -76,7 +76,7 @@ const SatniMain: React.FC<SatniMainProps> = ({
                 <WelcomeHeader />
               </Box>
             )}
-            <Box sx={{ flex: 1, overflow: "auto" }}>
+            <Box sx={{ flex: 1 }}>
               <InfiniteStems searchExpression={searchExpression} />
             </Box>
             <ArticlesSheet
