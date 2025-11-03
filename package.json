@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "@apollo/client": "^3.2.5",
+    "@apollo/client": "^4.0.9",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@lingui/macro": "^5.5.1",
@@ -16,7 +16,6 @@
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
     "cross-fetch": "^3.1.5",
-    "graphql": "^15.4.0",
     "graphql-anywhere": "^4.2.7",
     "prop-types": "^15.6.2",
     "qs": "^6.9.0",
@@ -27,6 +26,7 @@
     "react-virtualized-auto-sizer": "^1.0.2",
     "react-window": "^1.8.6",
     "react-window-infinite-loader": "^1.0.5",
+    "rxjs": "^7.8.2",
     "xss-filters": "^1.2.7"
   },
   "scripts": {
@@ -75,6 +75,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-plugin-macros": "^3.1.0",
     "babel-runtime": "^6.26.0",
+    "graphql": "^16.12.0",
     "jsdom": "^27.0.1",
     "react-test-renderer": "^19.0.0",
     "storybook": "^9.2.0-alpha.3",
