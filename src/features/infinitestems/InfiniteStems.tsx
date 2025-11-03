@@ -29,6 +29,9 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
   const searchListClickedItemQuery = useQuery(GET_SEARCH_LIST_CLICKED_ITEM, {});
   const { searchListClickedItem = -1 } = searchListClickedItemQuery.data || {};
 
+  // Ref to the List component for programmatic scrolling
+  const listRef = React.useRef<any>(null);
+
   const stemsCount = hasNextPage ? stems.length + 1 : stems.length;
   const loadMoreStems = loading
     ? (_startIndex: number, _stopIndex: number) => {}
@@ -38,6 +41,17 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
   const isStemLoaded = (index: number) => !hasNextPage || index < stems.length;
 
   const { currentLemma, currentDict } = locationParser(useLocation().pathname);
+
+  // Auto-scroll to keep the highlighted item visible
+  React.useEffect(() => {
+    if (
+      listRef.current &&
+      searchListClickedItem >= 0 &&
+      searchListClickedItem < stems.length
+    ) {
+      listRef.current.scrollToItem(searchListClickedItem, "smart");
+    }
+  }, [searchListClickedItem, stems.length]);
   if (loading && stems.length === 0) return <CircularProgress size={16} />;
 
   return (
@@ -65,7 +79,11 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
                 itemCount={stemsCount}
                 itemSize={20}
                 onItemsRendered={onItemsRendered}
-                ref={ref}
+                ref={(list) => {
+                  // Assign to both refs
+                  ref(list);
+                  listRef.current = list;
+                }}
                 width={width ?? 300}
               >
                 {({
