@@ -1,15 +1,12 @@
-import React from 'react';
-import {
-  ApolloClient,
-  ApolloProvider,
-  NormalizedCacheObject,
-} from '@apollo/client';
+import React from "react";
+import { ApolloClient } from "@apollo/client";
+import { ApolloProvider } from "@apollo/client/react";
 // @ts-ignore - React Router DOM v5 compatibility
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
 
 interface ProviderWrapperProps {
   children: React.ReactNode;
-  client: ApolloClient<NormalizedCacheObject>;
+  client: ApolloClient;
 }
 
 const ProviderWrapper: React.FC<ProviderWrapperProps> = ({

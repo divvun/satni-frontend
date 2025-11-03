@@ -1,5 +1,5 @@
 import React from "react";
-import { useReactiveVar } from "@apollo/client";
+import { useReactiveVar } from "@apollo/client/react";
 import { I18nProvider } from "@lingui/react";
 import { i18n } from "@lingui/core";
 import { useEffect, useState } from "react";

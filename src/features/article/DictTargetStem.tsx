@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
+import { useQuery } from "@apollo/client/react";
 import CircularProgress from '@mui/material/CircularProgress';
 import { useLocation } from 'react-router-dom';
 import { GET_LANGS_DICTS, type  GetLangsAndDictsQuery } from '../../operations/queries/getLangsDicts';

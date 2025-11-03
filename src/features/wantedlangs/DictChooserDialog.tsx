@@ -1,21 +1,21 @@
-import { useQuery } from '@apollo/client';
+import { useQuery } from "@apollo/client/react";
 // @ts-ignore - @lingui/macro has no type definitions
-import { Trans } from '@lingui/react/macro';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Dialog from '@mui/material/Dialog';
-import DialogContent from '@mui/material/DialogContent';
-import IconButton from '@mui/material/IconButton';
-import {} from '@mui/material/styles';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import CloseIcon from '@mui/icons-material/Close';
-import { makeStyles } from '@mui/styles';
-import React from 'react';
+import { Trans } from "@lingui/react/macro";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import IconButton from "@mui/material/IconButton";
+import {} from "@mui/material/styles";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import CloseIcon from "@mui/icons-material/Close";
+import { makeStyles } from "@mui/styles";
+import React from "react";
 
-import setWantedDicts from '../../operations/mutations/setWantedDicts';
-import GET_LANGS_DICTS from '../../operations/queries/getLangsDicts';
-import DictChooser from './DictChooser';
+import setWantedDicts from "../../operations/mutations/setWantedDicts";
+import { GET_LANGS_DICTS } from "../../operations/queries/getLangsDicts";
+import DictChooser from "./DictChooser";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(8),
   },
   appBar: {
-    position: 'relative',
+    position: "relative",
   },
   title: {
     marginLeft: theme.spacing(2),

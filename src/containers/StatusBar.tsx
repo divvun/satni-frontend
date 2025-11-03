@@ -1,4 +1,4 @@
-import { useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client/react";
 import { makeStyles } from "@mui/styles";
 import { Trans } from "@lingui/react/macro";
 import { useLingui } from "@lingui/react";
@@ -8,7 +8,7 @@ import type { MessageDescriptor } from "@lingui/core";
 
 import { availableLanguages, locationParser } from "../utils";
 import dictionaryInfo, { dictionaryNames } from "../translateble_variables";
-import GET_LANGS_DICTS from "../operations/queries/getLangsDicts";
+import { GET_LANGS_DICTS } from "../operations/queries/getLangsDicts";
 
 const useStyles = makeStyles((theme: any) => ({
   status: {
@@ -60,11 +60,18 @@ const StatusBar: React.FC = () => {
   const { _ } = useLingui();
   const location = useLocation();
   const { currentDict, currentLemma } = locationParser(location.pathname);
-  const langsDictsQueryResult = useQuery(GET_LANGS_DICTS);
-  const { srcLangs = [], wantedDicts: allWantedDicts = [] } =
+  const langsDictsQueryResult = useQuery(GET_LANGS_DICTS, {});
+  const { srcLangs: rawSrcLangs = [], wantedDicts: allWantedDicts = [] } =
     langsDictsQueryResult.data || {};
 
-  const wantedDicts = currentDict ? [currentDict] : allWantedDicts;
+  const srcLangs = rawSrcLangs.filter(
+    (lang: any): lang is string => lang != null
+  ) as string[];
+  const wantedDicts = currentDict
+    ? [currentDict]
+    : (allWantedDicts.filter(
+        (dict: any): dict is string => dict != null
+      ) as string[]);
 
   return (
     <Typography className={classes.status}>

@@ -1,18 +1,18 @@
-import React from 'react';
-import { ApolloClient } from '@apollo/client';
-import Button from '@mui/material/Button';
+import React from "react";
+import { ApolloClient } from "@apollo/client";
+import Button from "@mui/material/Button";
 import {
   createTheme,
   ThemeProvider as MuiThemeProvider,
   responsiveFontSizes,
-} from '@mui/material/styles';
-import { ThemeProvider as StylesThemeProvider } from '@mui/styles';
-import * as Sentry from '@sentry/react';
-import InterfaceLanguage from './InterfaceLanguage';
-import ProviderWrapper from './ProviderWrapper';
+} from "@mui/material/styles";
+import { ThemeProvider as StylesThemeProvider } from "@mui/styles";
+import * as Sentry from "@sentry/react";
+import InterfaceLanguage from "./InterfaceLanguage";
+import ProviderWrapper from "./ProviderWrapper";
 
 interface RootProps {
-  client: ApolloClient<any>;
+  client: ApolloClient;
 }
 
 const Root: React.FC<RootProps> = ({ client }) => (
@@ -42,7 +42,7 @@ const Root: React.FC<RootProps> = ({ client }) => (
               // Tell Material-UI what's the font-size on the html element is.
               htmlFontSize: 14,
             },
-          }),
+          })
         )}
       >
         <StylesThemeProvider
@@ -51,7 +51,7 @@ const Root: React.FC<RootProps> = ({ client }) => (
               typography: {
                 htmlFontSize: 14,
               },
-            }),
+            })
           )}
         >
           <InterfaceLanguage />

@@ -1,23 +1,23 @@
-import { InMemoryCache, makeVar, ReactiveVar } from '@apollo/client';
-import { relayStylePagination } from '@apollo/client/utilities';
-import dictionaryInfo from './translateble_variables';
-import { availableLanguages } from './utils';
+import { InMemoryCache, makeVar, ReactiveVar } from "@apollo/client";
+import { relayStylePagination } from "@apollo/client/utilities";
+import dictionaryInfo from "./translateble_variables";
+import { availableLanguages } from "./utils";
 
 export const availableDictsVar: ReactiveVar<string[]> = makeVar(
-  Object.keys(dictionaryInfo),
+  Object.keys(dictionaryInfo)
 );
 
 export const interfaceLanguageVar: ReactiveVar<string> = makeVar(
-  localStorage.getItem('interfaceLanguage') || 'se',
+  localStorage.getItem("interfaceLanguage") || "se"
 );
 
 const getWanted = (): string[] => {
-  const unwantedDictsItem = localStorage.getItem('unwantedDicts');
+  const unwantedDictsItem = localStorage.getItem("unwantedDicts");
   const unwanted = unwantedDictsItem ? JSON.parse(unwantedDictsItem) : [];
 
   return unwanted
     ? Object.keys(dictionaryInfo).filter(
-        (availableDict) => !unwanted.includes(availableDict),
+        (availableDict) => !unwanted.includes(availableDict)
       )
     : Object.keys(dictionaryInfo);
 };
@@ -25,18 +25,18 @@ const getWanted = (): string[] => {
 export const wantedDictsVar: ReactiveVar<string[]> = makeVar(getWanted());
 
 export const srcLangsVar: ReactiveVar<string[]> = makeVar(
-  localStorage.getItem('srcLangs')
-    ? JSON.parse(localStorage.getItem('srcLangs')!)
-    : availableLanguages,
+  localStorage.getItem("srcLangs")
+    ? JSON.parse(localStorage.getItem("srcLangs")!)
+    : availableLanguages
 );
 
 export const targetLangsVar: ReactiveVar<string[]> = makeVar(
-  localStorage.getItem('targetLangs')
-    ? JSON.parse(localStorage.getItem('targetLangs')!)
-    : availableLanguages,
+  localStorage.getItem("targetLangs")
+    ? JSON.parse(localStorage.getItem("targetLangs")!)
+    : availableLanguages
 );
 
-export const searchModeVar: ReactiveVar<string> = makeVar('start');
+export const searchModeVar: ReactiveVar<string> = makeVar("start");
 
 export const searchListClickedItemVar: ReactiveVar<number> = makeVar(-1);
 
@@ -84,10 +84,10 @@ export const cache = new InMemoryCache({
           },
         },
         stemList: relayStylePagination([
-          'search',
-          'mode',
-          'wanted',
-          'wantedDicts',
+          "search",
+          "mode",
+          "wanted",
+          "wantedDicts",
         ]),
       },
     },

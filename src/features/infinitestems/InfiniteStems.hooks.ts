@@ -1,4 +1,4 @@
-import { useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client/react";
 import { useLocation } from "react-router-dom";
 
 import { GET_LANGS_DICTS, type GetLangsAndDictsQuery } from "../../operations/queries/getLangsDicts";

@@ -1,11 +1,11 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
-import setInterfaceLanguage from '../operations/mutations/setInterfaceLanguage';
-import GET_INTERFACE_LANGUAGE from '../operations/queries/getInterfaceLanguage';
+import React from "react";
+import { useQuery } from "@apollo/client/react";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import setInterfaceLanguage from "../operations/mutations/setInterfaceLanguage";
+import { GET_INTERFACE_LANGUAGE } from "../operations/queries/getInterfaceLanguage";
 
 interface InterfaceLanguageQueryData {
   interfaceLanguage: string;
@@ -13,10 +13,10 @@ interface InterfaceLanguageQueryData {
 
 const MetaLanguageSelector: React.FC = () => {
   const interfaceLanguageQueryResult = useQuery<InterfaceLanguageQueryData>(
-    GET_INTERFACE_LANGUAGE,
+    GET_INTERFACE_LANGUAGE
   );
   const { interfaceLanguage } = interfaceLanguageQueryResult.data || {
-    interfaceLanguage: 'en',
+    interfaceLanguage: "en",
   };
 
   const handleChange = (event: any) => {

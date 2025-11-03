@@ -1,6 +1,6 @@
-import { paradigmCacheVar } from '../../apolloCache';
-import apolloClient from '../../apolloClient';
-import GET_NOUN from '../../operations/queries/getNoun';
+import { paradigmCacheVar } from "../../apolloCache";
+import apolloClient from "../../apolloClient";
+import { GET_NOUN } from "../../operations/queries/getNoun";
 
 interface ParadigmAnalysis {
   wordform: string;
@@ -19,8 +19,8 @@ interface GeneratedData {
 const createCacheKey = (
   lemma: string,
   language: string,
-  paradigmTemplates: string[],
-): string => `${language}:${lemma}:${paradigmTemplates.join(',')}`;
+  paradigmTemplates: string[]
+): string => `${language}:${lemma}:${paradigmTemplates.join(",")}`;
 
 /**
  * Check if paradigm data exists for a word with caching
@@ -32,7 +32,7 @@ const createCacheKey = (
 export const fetchParadigm = async (
   lemma: string,
   language: string,
-  paradigmTemplates: string[],
+  paradigmTemplates: string[]
 ): Promise<ParadigmResult[]> => {
   const cacheKey = createCacheKey(lemma, language, paradigmTemplates);
   const cache = paradigmCacheVar();
@@ -63,7 +63,7 @@ export const fetchParadigm = async (
 
     return result;
   } catch (err) {
-    console.error('Error fetching paradigm:', err);
+    console.error("Error fetching paradigm:", err);
     return [];
   }
 };
@@ -78,7 +78,7 @@ export const fetchParadigm = async (
 export const hasParadigm = async (
   lemma: string,
   language: string,
-  paradigmTemplates: string[],
+  paradigmTemplates: string[]
 ): Promise<boolean> => {
   const result = await fetchParadigm(lemma, language, paradigmTemplates);
   return result.length > 0;

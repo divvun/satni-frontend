@@ -1,4 +1,4 @@
-import { useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client/react";
 // @ts-ignore - @lingui/macro has no type definitions
 import { Trans } from "@lingui/react/macro";
 import AppBar from "@mui/material/AppBar";
@@ -13,7 +13,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { makeStyles } from "@mui/styles";
 import React from "react";
 
-import {GET_LANGS_DICTS} from '../../operations/queries/getLangsDicts';
+import { GET_LANGS_DICTS } from "../../operations/queries/getLangsDicts";
 import LangChooser from "./LangChooser";
 
 const useStyles = makeStyles((theme) => ({

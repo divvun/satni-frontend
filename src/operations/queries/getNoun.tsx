@@ -7,7 +7,10 @@ export interface GeneratedQuery {
 
 export type GeneratedVariables = QueryGeneratedArgs;
 
-export const GET_NOUN: TypedDocumentNode<GeneratedQuery, GeneratedVariables> = gql`
+export const GET_NOUN: TypedDocumentNode<
+  GeneratedQuery,
+  GeneratedVariables
+> = gql`
   query Generated(
     $origform: String!
     $language: String!

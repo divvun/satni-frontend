@@ -1,4 +1,4 @@
-import { useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client/react";
 import CircularProgress from "@mui/material/CircularProgress";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -14,8 +14,8 @@ import AutoSizer from "react-virtualized-auto-sizer";
 import { FixedSizeList as List } from "react-window";
 import InfiniteLoader from "react-window-infinite-loader";
 import setSearchListClickedItem from "../../operations/mutations/setSearchListClickedItem";
-import {GET_SEARCH_LIST_CLICKED_ITEM} from "../../operations/queries/getSearchListClickedItem";
-import {GET_SEARCH_MODE} from "../../operations/queries/getSearchMode";
+import { GET_SEARCH_LIST_CLICKED_ITEM } from "../../operations/queries/getSearchListClickedItem";
+import { GET_SEARCH_MODE } from "../../operations/queries/getSearchMode";
 import { locationParser } from "../../utils";
 import useStems from "./InfiniteStems.hooks";
 import SearchInfo from "./SearchInfo";
@@ -37,11 +37,11 @@ interface InfiniteStemsProps {
 }
 
 const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
-  const searchModeQueryResult = useQuery(GET_SEARCH_MODE);
+  const searchModeQueryResult = useQuery(GET_SEARCH_MODE, {});
   const { searchMode = "start" } = searchModeQueryResult.data || {};
   const { stems, loading, loadMore, hasNextPage, totalCount } =
     useStems(searchExpression);
-  const searchListClickedItemQuery = useQuery(GET_SEARCH_LIST_CLICKED_ITEM);
+  const searchListClickedItemQuery = useQuery(GET_SEARCH_LIST_CLICKED_ITEM, {});
   const { searchListClickedItem = -1 } = searchListClickedItemQuery.data || {};
   const classes = useStyles();
 

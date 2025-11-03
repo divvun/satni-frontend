@@ -8,7 +8,7 @@ export interface GetLangsAndDictsQuery {
 
 export const GET_LANGS_DICTS: TypedDocumentNode<
   GetLangsAndDictsQuery,
-  never
+  Record<string, never>
 > = gql`
   query GetLangsAndDicts {
     wantedDicts @client

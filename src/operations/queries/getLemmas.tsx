@@ -10,7 +10,10 @@ export interface AllLemmasVariables extends Omit<QueryStemListArgs, "first"> {
   searchMode: string;
 }
 
-export const GET_LEMMAS: TypedDocumentNode<AllLemmasQuery, AllLemmasVariables> = gql`
+export const GET_LEMMAS: TypedDocumentNode<
+  AllLemmasQuery,
+  AllLemmasVariables
+> = gql`
   query AllLemmas(
     $inputValue: String!
     $searchMode: String!

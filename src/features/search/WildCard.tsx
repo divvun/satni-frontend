@@ -1,11 +1,11 @@
-import React from 'react';
-import { useReactiveVar } from '@apollo/client';
+import React from "react";
+import { useReactiveVar } from "@apollo/client/react";
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/react/macro';
-import Radio from '@mui/material/Radio';
-import Tooltip from '@mui/material/Tooltip';
-import { searchModeVar } from '../../apolloCache';
-import setSearchMode from '../../operations/mutations/setSearchMode';
+import { Trans } from "@lingui/react/macro";
+import Radio from "@mui/material/Radio";
+import Tooltip from "@mui/material/Tooltip";
+import { searchModeVar } from "../../apolloCache";
+import setSearchMode from "../../operations/mutations/setSearchMode";
 
 const WildCard: React.FC = () => {
   const searchMode = useReactiveVar(searchModeVar);
@@ -22,30 +22,28 @@ const WildCard: React.FC = () => {
         title={<Trans>Search words that start with your search term</Trans>}
       >
         <Radio
-          checked={searchMode === 'start'}
+          checked={searchMode === "start"}
           onChange={handleChange}
           value="start"
-          inputProps={{ 'aria-label': 'Start' }}
+          inputProps={{ "aria-label": "Start" }}
         />
       </Tooltip>
       <Tooltip
         title={<Trans>Search words that contain your search term</Trans>}
       >
         <Radio
-          checked={searchMode === 'middle'}
+          checked={searchMode === "middle"}
           onChange={handleChange}
           value="middle"
-          inputProps={{ 'aria-label': 'Middle' }}
+          inputProps={{ "aria-label": "Middle" }}
         />
       </Tooltip>
-      <Tooltip
-        title={<Trans>Search words that end in your search term</Trans>}
-      >
+      <Tooltip title={<Trans>Search words that end in your search term</Trans>}>
         <Radio
-          checked={searchMode === 'end'}
+          checked={searchMode === "end"}
           onChange={handleChange}
           value="end"
-          inputProps={{ 'aria-label': 'End' }}
+          inputProps={{ "aria-label": "End" }}
         />
       </Tooltip>
     </>

@@ -6,7 +6,7 @@ export interface GetInterfaceLanguageQuery {
 
 export const GET_INTERFACE_LANGUAGE: TypedDocumentNode<
   GetInterfaceLanguageQuery,
-  never
+  Record<string, never>
 > = gql`
   query GetInterfaceLanguage {
     interfaceLanguage @client

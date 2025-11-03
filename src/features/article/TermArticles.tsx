@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
+import { useQuery } from "@apollo/client/react";
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from '@lingui/react/macro';
 import { GET_LANGS_DICTS, 

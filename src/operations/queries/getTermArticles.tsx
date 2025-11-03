@@ -41,4 +41,3 @@ export const GET_TERM_ARTICLES: TypedDocumentNode<
     }
   }
 `;
-

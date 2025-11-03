@@ -6,7 +6,7 @@ export interface GetSearchModeQuery {
 
 export const GET_SEARCH_MODE: TypedDocumentNode<
   GetSearchModeQuery,
-  never
+  Record<string, never>
 > = gql`
   query GetSearchMode {
     searchMode @client
