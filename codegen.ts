@@ -2,7 +2,13 @@ import type { CodegenConfig } from "@graphql-codegen/cli";
 
 const config: CodegenConfig = {
   schema: "http://localhost:8000/graphql/",
-  documents: ["src/**/*.{ts,tsx}"],
+  documents: [
+    "src/**/*.{ts,tsx}",
+    "!src/operations/queries/getInterfaceLanguage.tsx",
+    "!src/operations/queries/getLangsDicts.tsx",
+    "!src/operations/queries/getSearchListClickedItem.tsx",
+    "!src/operations/queries/getSearchMode.tsx",
+  ],
   ignoreNoDocuments: true,
   generates: {
     "./src/graphql/": {
