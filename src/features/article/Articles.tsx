@@ -11,17 +11,20 @@ import TermArticles from "./TermArticles";
 
 interface ArticlesProps {
   lemma: string;
+  showHeader?: boolean;
 }
 
-const Articles: React.FC<ArticlesProps> = ({ lemma }) => {
+const Articles: React.FC<ArticlesProps> = ({ lemma, showHeader = true }) => {
   const location = useLocation();
   const { currentDict } = locationParser(location.pathname);
 
   return (
     <div>
-      <Typography sx={{ textAlign: "center" }}>
-        <Trans>Results for «{lemma}»</Trans>
-      </Typography>
+      {showHeader && (
+        <Typography sx={{ textAlign: "center" }}>
+          <Trans>Results for «{lemma}»</Trans>
+        </Typography>
+      )}
       <Box
         sx={{
           height: "72vh",
