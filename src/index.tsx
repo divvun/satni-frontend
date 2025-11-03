@@ -1,20 +1,20 @@
-import * as Sentry from '@sentry/react';
-import { createRoot } from 'react-dom/client';
-import apolloClient from './apolloClient';
-import Root from './containers/Root';
+import * as Sentry from "@sentry/react";
+import { createRoot } from "react-dom/client";
+import apolloClient from "./apolloClient";
+import Root from "./containers/Root";
 
 Sentry.init({
-  dsn: 'https://65960ebe11524e22b83637dfe43344a2@sentry.io/1303235',
-  
+  dsn: "https://65960ebe11524e22b83637dfe43344a2@sentry.io/1303235",
+
   // Environment
-  environment: import.meta.env.MODE || 'production',
-  
+  environment: import.meta.env.MODE || "production",
+
   // Only send errors in production
   enabled: import.meta.env.PROD,
 });
 
-const container = document.getElementById('root');
-if (!container) throw new Error('Failed to find the root element');
+const container = document.getElementById("root");
+if (!container) throw new Error("Failed to find the root element");
 
 const root = createRoot(container);
 root.render(<Root client={apolloClient} />);

@@ -1,33 +1,33 @@
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import { Theme } from '@mui/material/styles';
-import { withStyles, WithStyles } from '@mui/styles';
-import * as Sentry from '@sentry/react';
-import React from 'react';
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import { Theme } from "@mui/material/styles";
+import { withStyles, WithStyles } from "@mui/styles";
+import * as Sentry from "@sentry/react";
+import React from "react";
 
-import SatniAppBar from './SatniAppBar';
-import SatniDrawer from './SatniDrawer';
-import SatniMain from './SatniMain';
+import SatniAppBar from "./SatniAppBar";
+import SatniDrawer from "./SatniDrawer";
+import SatniMain from "./SatniMain";
 
 const drawerWidth = 240;
 
 const styles = (theme: Theme) => ({
-  '@global': {
+  "@global": {
     body: {
       backgroundColor: theme.palette.common.white, // Note: grey might not exist, using white
     },
   },
   container: {
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column' as const,
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column" as const,
   },
   main: {
-    display: 'flex',
-    flexDirection: 'column' as const,
+    display: "flex",
+    flexDirection: "column" as const,
     flex: 1,
-    height: '80vh',
-    [theme.breakpoints.up('md')]: {
+    height: "80vh",
+    [theme.breakpoints.up("md")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
@@ -38,7 +38,7 @@ const styles = (theme: Theme) => ({
 interface AsyncAppProps extends WithStyles<typeof styles> {}
 
 const AsyncApp: React.FC<AsyncAppProps> = ({ classes }) => {
-  const [searchExpression, setSearchExpression] = React.useState<string>('');
+  const [searchExpression, setSearchExpression] = React.useState<string>("");
   const [mobileOpen, setMobileOpen] = React.useState<boolean>(false);
 
   const handleDrawerToggle = () => {
