@@ -102,6 +102,13 @@ const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
         {!lemma.includes(" ") && (
           <>
             <span style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+              {["sme", "sma", "smj"].includes(language) && (
+                <SpeakerButton
+                  text={` ${lemma},`}
+                  language={language}
+                  classes={{ icons: "" }}
+                />
+              )}
               {pos && (
                 <Typography component="span" color="textSecondary">
                   (
@@ -110,13 +117,6 @@ const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
                     : pos}
                   )
                 </Typography>
-              )}
-              {["sme", "sma", "smj"].includes(language) && (
-                <SpeakerButton
-                  text={` ${lemma},`}
-                  language={language}
-                  classes={{ icons: "" }}
-                />
               )}
               <ParadigmButton
                 lemma={lemma}
