@@ -1,9 +1,9 @@
-import React from 'react';
-import Grid from '@mui/material/Grid';
+import React from "react";
+import Grid from "@mui/material/Grid";
 
-import Definitions from './Definitions';
-import LemmaGroups from './LemmaGroups';
-import PairHeader from './PairHeader';
+import Definitions from "./Definitions";
+import LemmaGroups from "./LemmaGroups";
+import PairHeader from "./PairHeader";
 
 interface Term {
   expression: {
@@ -29,10 +29,10 @@ const TermCore: React.FC<TermCoreProps> = ({ concept, lemma }) => {
       <Grid size={{ xs: 12, md: 3 }}>
         <PairHeader language={terms[0].expression.language} />
       </Grid>
-      <Grid size={{ xs: 12, md: 4 }}>
+      <Grid size={{ xs: 12, md: 9 }}>
         <LemmaGroups lemma={lemma} terms={terms} />
       </Grid>
-      <Grid size={{ xs: 12, md: 5 }}>
+      <Grid>
         {definition && (
           <Definitions
             definitions={definition}
