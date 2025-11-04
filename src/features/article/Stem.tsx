@@ -63,37 +63,45 @@ const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
           borderStyle: "dotted",
           borderWidth: 1,
           borderColor: "transparent",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
         }}
       >
-        <Typography
-          component="span"
-          onClick={withLink ? handleLemmaClick : undefined}
-          sx={{
-            cursor: withLink ? "pointer" : "default",
-            fontWeight: 500,
-            px: 1,
-            py: 0.25,
-            borderRadius: 1,
-            bgcolor: withLink ? "action.hover" : "transparent",
-            display: "inline-block",
-            transition: withLink ? "all 0.2s" : "none",
-            ...(withLink && {
-              "&:hover": {
-                bgcolor: "action.selected",
-                transform: "translateY(-1px)",
-                boxShadow: 1,
-              },
-            }),
-          }}
-        >
-          <PresentationLemma presentationLemma={presentationLemma} />
-        </Typography>
-        {restriction?.restriction && (
-          <Typography component="span"> ({restriction.restriction})</Typography>
-        )}
+        <span>
+          <Typography
+            component="span"
+            onClick={withLink ? handleLemmaClick : undefined}
+            sx={{
+              cursor: withLink ? "pointer" : "default",
+              fontWeight: 500,
+              px: 1,
+              py: 0.25,
+              borderRadius: 1,
+              bgcolor: withLink ? "action.hover" : "transparent",
+              display: "inline-block",
+              transition: withLink ? "all 0.2s" : "none",
+              ...(withLink && {
+                "&:hover": {
+                  bgcolor: "action.selected",
+                  transform: "translateY(-1px)",
+                  boxShadow: 1,
+                },
+              }),
+            }}
+          >
+            <PresentationLemma presentationLemma={presentationLemma} />
+          </Typography>
+          {restriction?.restriction && (
+            <Typography component="span">
+              {" "}
+              ({restriction.restriction})
+            </Typography>
+          )}
+        </span>
         {!lemma.includes(" ") && (
           <>
-            <span style={{ float: "right", justifyContent: "space-evenly" }}>
+            <span style={{ display: "flex", alignItems: "center", gap: "4px" }}>
               {pos && (
                 <Typography component="span" color="textSecondary">
                   (
