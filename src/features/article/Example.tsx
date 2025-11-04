@@ -36,6 +36,7 @@ const Example: React.FC<ExampleProps> = ({
           gap: "4px",
         }}
       >
+        <Typography>{example.example}</Typography>
         {["sme", "sma", "smj"].includes(sourceLanguage) && (
           <SpeakerButton
             text={example.example}
@@ -43,7 +44,6 @@ const Example: React.FC<ExampleProps> = ({
             classes={{ icons: "" }}
           />
         )}
-        <Typography>{example.example}</Typography>
       </Box>
       <Box
         sx={{
@@ -54,6 +54,7 @@ const Example: React.FC<ExampleProps> = ({
           gap: "4px",
         }}
       >
+        <Typography>{example.translation}</Typography>
         {["sme", "sma", "smj"].includes(targetLanguage) && (
           <SpeakerButton
             text={example.translation}
@@ -61,7 +62,6 @@ const Example: React.FC<ExampleProps> = ({
             classes={{ icons: "" }}
           />
         )}
-        <Typography>{example.translation}</Typography>
       </Box>
     </Box>
   );
