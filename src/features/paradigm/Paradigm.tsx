@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import Typography from '@mui/material/Typography';
+import React, { useEffect, useState } from "react";
 import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 import {
   filterParadigm,
   tableRowToParadigmList,
   SatniParadigm,
-} from '../../utils';
-import AdjParadigm, { AdjTableRows } from './AdjParadigm';
-import NounParadigm, { NounTableRows } from './NounParadigm';
-import VerbParadigm, { VerbTableRows } from './VerbParadigm';
-import { fetchParadigm } from './paradigmService';
+} from "../../utils";
+import AdjParadigm, { AdjTableRows } from "./AdjParadigm";
+import NounParadigm, { NounTableRows } from "./NounParadigm";
+import VerbParadigm, { VerbTableRows } from "./VerbParadigm";
+import { fetchParadigm } from "./paradigmService";
 
-const langs = new Set(['fin', 'sma', 'sme', 'smj', 'smn', 'sms']);
-const poses = new Set(['N', 'V', 'A']);
+const langs = new Set(["fin", "sma", "sme", "smj", "smn", "sms"]);
+const poses = new Set(["N", "V", "A"]);
 
 interface TableDict {
   [key: string]: {
@@ -53,12 +53,12 @@ const Paradigm: React.FC<ParadigmProps> = ({ lemma, language, pos }) => {
         const generated = await fetchParadigm(lemma, language, templates);
 
         if (generated.length === 0) {
-          setError(new Error('No paradigm data'));
+          setError(new Error("No paradigm data"));
         } else {
           setData({ generated });
         }
       } catch (err) {
-        setError(err instanceof Error ? err : new Error('Unknown error'));
+        setError(err instanceof Error ? err : new Error("Unknown error"));
       } finally {
         setLoading(false);
       }
@@ -68,9 +68,7 @@ const Paradigm: React.FC<ParadigmProps> = ({ lemma, language, pos }) => {
   }, [lemma, language, pos]);
 
   if (!langs.has(language)) {
-    return (
-      <Typography>Cannot produce paradigm for {language}</Typography>
-    );
+    return <Typography>Cannot produce paradigm for {language}</Typography>;
   }
 
   if (!poses.has(pos)) {
@@ -90,19 +88,15 @@ const Paradigm: React.FC<ParadigmProps> = ({ lemma, language, pos }) => {
   }
 
   if (loading) {
-    return (
-      <Typography>Loading paradigms…</Typography>
-    );
+    return <Typography>Loading paradigms…</Typography>;
   }
 
   if (!data) {
-    return (
-      <Typography>No data available</Typography>
-    );
+    return <Typography>No data available</Typography>;
   }
 
   switch (pos) {
-    case 'A':
+    case "A":
       return (
         <>
           <AdjParadigm paradigm={filterParadigm(data)} language={language} />
@@ -115,7 +109,7 @@ const Paradigm: React.FC<ParadigmProps> = ({ lemma, language, pos }) => {
           </Link>
         </>
       );
-    case 'N':
+    case "N":
       return (
         <>
           <NounParadigm paradigm={filterParadigm(data)} language={language} />
@@ -128,7 +122,7 @@ const Paradigm: React.FC<ParadigmProps> = ({ lemma, language, pos }) => {
           </Link>
         </>
       );
-    case 'V':
+    case "V":
       return (
         <>
           <VerbParadigm paradigm={filterParadigm(data)} language={language} />
