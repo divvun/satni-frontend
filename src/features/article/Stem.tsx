@@ -2,7 +2,7 @@ import { Trans } from "@lingui/react/macro";
 import { useLingui } from "@lingui/react";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import KorpButton from "../korp/KorpButton";
 import ParadigmButton from "../paradigm/ParadigmButton";
@@ -39,6 +39,7 @@ const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
   const { _ } = useLingui();
   const { lemma, presentationLemma, pos, language, dialect, country } = stem;
   const [openParadigm, setOpenParadigm] = useState(false);
+  const history = useHistory();
 
   const handleClickParadigmDialog = () => {
     setOpenParadigm(true);
@@ -46,6 +47,12 @@ const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
 
   const handleCloseParadigmDialog = () => {
     setOpenParadigm(false);
+  };
+
+  const handleLemmaClick = () => {
+    if (withLink) {
+      history.push(`/${lemma}`);
+    }
   };
 
   return (
@@ -58,13 +65,29 @@ const Stem: React.FC<StemProps> = ({ stem, restriction, withLink = false }) => {
           borderColor: "transparent",
         }}
       >
-        {withLink ? (
-          <Link to={`/${lemma}`}>
-            <PresentationLemma presentationLemma={presentationLemma} />
-          </Link>
-        ) : (
+        <Typography
+          component="span"
+          onClick={withLink ? handleLemmaClick : undefined}
+          sx={{
+            cursor: withLink ? "pointer" : "default",
+            fontWeight: 500,
+            px: 1,
+            py: 0.25,
+            borderRadius: 1,
+            bgcolor: withLink ? "action.hover" : "transparent",
+            display: "inline-block",
+            transition: withLink ? "all 0.2s" : "none",
+            ...(withLink && {
+              "&:hover": {
+                bgcolor: "action.selected",
+                transform: "translateY(-1px)",
+                boxShadow: 1,
+              },
+            }),
+          }}
+        >
           <PresentationLemma presentationLemma={presentationLemma} />
-        )}
+        </Typography>
         {restriction?.restriction && (
           <Typography component="span"> ({restriction.restriction})</Typography>
         )}
