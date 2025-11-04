@@ -32,9 +32,13 @@ const Footer: React.FC = () => (
       <ListItemText
         inset
         primary={
-          <a href="http://divvun.no" target="_blank" rel="noopener noreferrer">
+          <MUILink
+            href="http://divvun.no"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Divvun
-          </a>
+          </MUILink>
         }
       />
     </ListItem>
@@ -43,13 +47,13 @@ const Footer: React.FC = () => (
         inset
         primary={
           <Trans>
-            <a
+            <MUILink
               href="http://giella.org"
               target="_blank"
               rel="noopener noreferrer"
             >
               Giellagáldu
-            </a>
+            </MUILink>
           </Trans>
         }
       />
@@ -58,13 +62,13 @@ const Footer: React.FC = () => (
       <ListItemText
         inset
         primary={
-          <a
+          <MUILink
             href="http://giellatekno.uit.no"
             target="_blank"
             rel="noopener noreferrer"
           >
             Giellatekno
-          </a>
+          </MUILink>
         }
       />
     </ListItem>
@@ -151,12 +155,18 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
           </ListItemIcon>
           <ListItemText primary={<Trans>TTS Voices</Trans>} />
         </ListItemButton>
-        <ListItem key="Feedback" component="a" href="mailto:feedback@divvun.no">
-          <ListItemIcon>
-            <FeedbackIcon />
-          </ListItemIcon>
-          <ListItemText primary="Feedback" />
-        </ListItem>
+        <MUILink
+          href="mailto:feedback@divvun.no"
+          underline="none"
+          color="inherit"
+        >
+          <ListItemButton key="Feedback">
+            <ListItemIcon>
+              <FeedbackIcon />
+            </ListItemIcon>
+            <ListItemText primary="Feedback" />
+          </ListItemButton>
+        </MUILink>
         <ListItem key="Site language">
           <ListItemIcon>
             <TranslateIcon />

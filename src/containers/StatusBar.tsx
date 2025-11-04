@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client/react";
 import { Trans } from "@lingui/react/macro";
 import { useLingui } from "@lingui/react";
 import { Link, useLocation } from "react-router-dom";
+import MuiLink from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import type { MessageDescriptor } from "@lingui/core";
 
@@ -22,7 +23,11 @@ const dictStatus = (
           ? _(dictionaryNames[wantedDicts[0] as keyof typeof dictionaryNames])
           : wantedDicts[0]}{" "}
         <Trans>
-          (<Link to={`/${currentLemma}`}>Show all</Link>)
+          (
+          <MuiLink component={Link} to={`/${currentLemma}`}>
+            Show all
+          </MuiLink>
+          )
         </Trans>
       </>
     );

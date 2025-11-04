@@ -25,10 +25,32 @@ const Root: React.FC<RootProps> = ({ client }) => {
         createTheme({
           palette: {
             mode: darkMode ? "dark" : "light",
+            ...(darkMode && {
+              primary: {
+                main: "#64b5f6", // Brighter blue for better visibility in dark mode
+              },
+              secondary: {
+                main: "#e1bee7", // Lighter purple for better visibility in dark mode
+              },
+            }),
           },
           typography: {
             // Tell Material-UI what's the font-size on the html element is.
             htmlFontSize: 14,
+          },
+          components: {
+            MuiLink: {
+              styleOverrides: {
+                root: {
+                  ...(darkMode && {
+                    color: "#64b5f6", // Bright blue for links in dark mode
+                    "&:visited": {
+                      color: "#e1bee7", // Light purple for visited links in dark mode
+                    },
+                  }),
+                },
+              },
+            },
           },
         })
       ),

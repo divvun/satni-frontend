@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
+import Link from "@mui/material/Link";
 import {
   filterParadigm,
   tableRowToParadigmList,
@@ -105,27 +106,39 @@ const Paradigm: React.FC<ParadigmProps> = ({ lemma, language, pos }) => {
       return (
         <>
           <AdjParadigm paradigm={filterParadigm(data)} language={language} />
-          <a href={fullParadigmLink} rel="noreferrer noopener" target="_blank">
+          <Link
+            href={fullParadigmLink}
+            rel="noreferrer noopener"
+            target="_blank"
+          >
             More …
-          </a>
+          </Link>
         </>
       );
     case 'N':
       return (
         <>
           <NounParadigm paradigm={filterParadigm(data)} language={language} />
-          <a href={fullParadigmLink} rel="noreferrer noopener" target="_blank">
+          <Link
+            href={fullParadigmLink}
+            rel="noreferrer noopener"
+            target="_blank"
+          >
             More …
-          </a>
+          </Link>
         </>
       );
     case 'V':
       return (
         <>
           <VerbParadigm paradigm={filterParadigm(data)} language={language} />
-          <a href={fullParadigmLink} rel="noreferrer noopener" target="_blank">
+          <Link
+            href={fullParadigmLink}
+            rel="noreferrer noopener"
+            target="_blank"
+          >
             More …
-          </a>
+          </Link>
         </>
       );
     default:

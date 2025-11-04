@@ -30,7 +30,7 @@ const AsyncApp: React.FC = () => {
       <GlobalStyles
         styles={(theme) => ({
           body: {
-            backgroundColor: theme.palette.common.white,
+            backgroundColor: theme.palette.background.default,
           },
         })}
       />

@@ -2,6 +2,7 @@ import { Trans } from "@lingui/react/macro";
 import { useLingui } from "@lingui/react";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import MuiLink from "@mui/material/Link";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
@@ -28,11 +29,11 @@ const Source: React.FC<SourceProps> = ({ source, lemma }) => {
       label={
         <Typography variant="body2">
           <Trans>Source:</Trans>{" "}
-          <Link to={`${source}/${lemma}`}>
+          <MuiLink component={Link} to={`${source}/${lemma}`}>
             {dictionaryNames[source as keyof typeof dictionaryNames]
               ? _(dictionaryNames[source as keyof typeof dictionaryNames])
               : source}
-          </Link>
+          </MuiLink>
         </Typography>
       }
       control={
