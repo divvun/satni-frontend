@@ -1,4 +1,5 @@
 import React from "react";
+import { useQuery } from "@apollo/client/react";
 // @ts-ignore - @lingui/macro types compatibility
 import { Trans } from "@lingui/react/macro";
 import AppBar from "@mui/material/AppBar";
@@ -17,11 +18,18 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { useState } from "react";
 // import { Link } from "react-router-dom";
 
 import HelpDialog from "./HelpDialog";
 import FilterBar from "../features/search/FilterBar";
+import setDarkMode from "../operations/mutations/setDarkMode";
+import {
+  GET_DARK_MODE,
+  type GetDarkModeQuery,
+} from "../operations/queries/getDarkMode";
 
 interface SatniAppBarProps {
   searchExpression: string;
@@ -39,31 +47,41 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
   const theme = useTheme();
   const isVeryNarrow = useMediaQuery(theme.breakpoints.down(400));
   const [openHelpDialog, setOpenHelpDialog] = useState<boolean>(false);
-  const [moreMenuAnchor, setMoreMenuAnchor] = useState<null | HTMLElement>(null);
-  
+  const [moreMenuAnchor, setMoreMenuAnchor] = useState<null | HTMLElement>(
+    null
+  );
+
+  const darkModeQuery = useQuery<GetDarkModeQuery>(GET_DARK_MODE);
+  const { darkMode = false } = darkModeQuery.data || {};
+
   const handleClickHelpDialog = () => {
     setOpenHelpDialog(true);
   };
   const handleCloseHelpDialog = () => {
     setOpenHelpDialog(false);
   };
-  
+
   const handleMoreMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setMoreMenuAnchor(event.currentTarget);
   };
-  
+
   const handleMoreMenuClose = () => {
     setMoreMenuAnchor(null);
   };
-  
+
   const handleDrawerClick = () => {
     handleMoreMenuClose();
     handleDrawerToggle();
   };
-  
+
   const handleHelpClick = () => {
     handleMoreMenuClose();
     handleClickHelpDialog();
+  };
+
+  const handleToggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    handleMoreMenuClose();
   };
 
   return (
@@ -111,7 +129,11 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
                   <Trans>Menu</Trans>
                 </ListItemText>
               </MenuItem>
-              <MenuItem component="a" href="https://satni.org" onClick={handleMoreMenuClose}>
+              <MenuItem
+                component="a"
+                href="https://satni.org"
+                onClick={handleMoreMenuClose}
+              >
                 <ListItemIcon>
                   <HomeIcon fontSize="small" />
                 </ListItemIcon>
@@ -127,12 +149,30 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
                   <Trans>Help</Trans>
                 </ListItemText>
               </MenuItem>
+              <MenuItem onClick={handleToggleDarkMode}>
+                <ListItemIcon>
+                  {darkMode ? (
+                    <Brightness7Icon fontSize="small" />
+                  ) : (
+                    <Brightness4Icon fontSize="small" />
+                  )}
+                </ListItemIcon>
+                <ListItemText>
+                  {darkMode ? (
+                    <Trans>Light mode</Trans>
+                  ) : (
+                    <Trans>Dark mode</Trans>
+                  )}
+                </ListItemText>
+              </MenuItem>
             </Menu>
           </>
         ) : (
           // Normal mobile/desktop: Show all controls
           <>
-            <Box sx={{ display: { xs: "flex", md: "none" }, alignItems: "center" }}>
+            <Box
+              sx={{ display: { xs: "flex", md: "none" }, alignItems: "center" }}
+            >
               <Tooltip title={<Trans>Menu</Trans>}>
                 <IconButton
                   color="inherit"
@@ -164,6 +204,19 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
                 setSearchExpression={setSearchExpression}
               />
             </Box>
+            <Tooltip
+              title={
+                darkMode ? <Trans>Light mode</Trans> : <Trans>Dark mode</Trans>
+              }
+            >
+              <IconButton
+                color="inherit"
+                aria-label="Toggle dark mode"
+                onClick={handleToggleDarkMode}
+              >
+                {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+              </IconButton>
+            </Tooltip>
             <Tooltip title={<Trans>Help</Trans>}>
               <IconButton
                 color="inherit"

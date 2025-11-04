@@ -40,6 +40,10 @@ export const searchModeVar: ReactiveVar<string> = makeVar("start");
 
 export const searchListClickedItemVar: ReactiveVar<number> = makeVar(-1);
 
+export const darkModeVar: ReactiveVar<boolean> = makeVar(
+  localStorage.getItem("darkMode") === "true"
+);
+
 // Korp cache: Map of "language:lemma" -> boolean (lemma exists in corpus)
 export const korpCacheVar: ReactiveVar<Record<string, boolean>> = makeVar({});
 
@@ -81,6 +85,11 @@ export const cache = new InMemoryCache({
         searchListClickedItem: {
           read() {
             return searchListClickedItemVar();
+          },
+        },
+        darkMode: {
+          read() {
+            return darkModeVar();
           },
         },
         stemList: relayStylePagination([
