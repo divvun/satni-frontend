@@ -1,12 +1,11 @@
 import { useQuery } from "@apollo/client/react";
 import CircularProgress from "@mui/material/CircularProgress";
-import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import * as Sentry from "@sentry/react";
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import AutoSizer from "react-virtualized-auto-sizer";
 import { FixedSizeList as List } from "react-window";
 import InfiniteLoader from "react-window-infinite-loader";
@@ -29,6 +28,9 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
   const searchListClickedItemQuery = useQuery(GET_SEARCH_LIST_CLICKED_ITEM, {});
   const { searchListClickedItem = -1 } = searchListClickedItemQuery.data || {};
 
+  const history = useHistory();
+  const location = useLocation();
+
   // Ref to the List component for programmatic scrolling
   const listRef = React.useRef<any>(null);
 
@@ -40,7 +42,7 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
       };
   const isStemLoaded = (index: number) => !hasNextPage || index < stems.length;
 
-  const { currentLemma, currentDict } = locationParser(useLocation().pathname);
+  const { currentLemma, currentDict } = locationParser(location.pathname);
 
   // Auto-scroll to keep the highlighted item visible
   React.useEffect(() => {
@@ -132,22 +134,30 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
                     currentDict && !currentLemma
                       ? `${currentDict}/${stemValue}`
                       : stemValue;
+
+                  const handleClick = () => {
+                    setSearchListClickedItem(index);
+                    history.push({
+                      pathname: `/${path}`,
+                      search: location.search,
+                    });
+                  };
+
                   return (
                     <Sentry.ErrorBoundary>
-                      <ListItem
+                      <ListItemButton
                         key={index}
                         style={style}
-                        onClick={() => setSearchListClickedItem(index)}
+                        onClick={handleClick}
+                        selected={isCurrentItem}
                         sx={{
                           bgcolor: isCurrentItem
                             ? "action.selected"
                             : "transparent",
                         }}
                       >
-                        <ListItemText
-                          primary={<Link to={path}>{stemNode}</Link>}
-                        />
-                      </ListItem>
+                        <ListItemText primary={stemNode} />
+                      </ListItemButton>
                     </Sentry.ErrorBoundary>
                   );
                 }}
