@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/react/macro';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
-import InfoOutlined from '@mui/icons-material/InfoOutlined';
-import { tableRowToParadigmList } from '../../utils';
-import { AdjTableRows } from './AdjParadigm';
-import { NounTableRows } from './NounParadigm';
-import { VerbTableRows } from './VerbParadigm';
-import { hasParadigm } from './paradigmService';
+import { Trans } from "@lingui/react/macro";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
+import InfoOutlined from "@mui/icons-material/InfoOutlined";
+import { tableRowToParadigmList } from "../../utils";
+import { AdjTableRows } from "./AdjParadigm";
+import { NounTableRows } from "./NounParadigm";
+import { VerbTableRows } from "./VerbParadigm";
+import { hasParadigm } from "./paradigmService";
 
 interface ParadigmButtonProps {
   lemma: string;
@@ -47,7 +47,7 @@ const ParadigmButton: React.FC<ParadigmButtonProps> = ({
       if (pos in tableDict && language in tableDict[pos]) {
         setIsLoading(true);
         const templates = tableRowToParadigmList(
-          tableDict[pos][language],
+          tableDict[pos][language]
         ).slice(0, 1);
         const exists = await hasParadigm(lemma, language, templates);
         setParadigmExists(exists);

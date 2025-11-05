@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/react/macro';
-import CircularProgress from '@mui/material/CircularProgress';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
-import VolumeUpIcon from '@mui/icons-material/VolumeUp';
-import { useState } from 'react';
+import { Trans } from "@lingui/react/macro";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
+import { useState } from "react";
 
-import { fetchCachedTTSAudio } from './speakerService';
+import { fetchCachedTTSAudio } from "./speakerService";
 
 interface SpeakerButtonProps {
   text: string;
@@ -49,7 +48,7 @@ const SpeakerButton: React.FC<SpeakerButtonProps> = ({
 
       audio.onerror = () => {
         setIsSpeaking(false);
-        console.error('Error playing audio');
+        console.error("Error playing audio");
       };
 
       audio.play();
@@ -57,19 +56,19 @@ const SpeakerButton: React.FC<SpeakerButtonProps> = ({
     }
 
     // Fallback to browser speech synthesis for other languages
-    if ('speechSynthesis' in window) {
+    if ("speechSynthesis" in window) {
       window.speechSynthesis.cancel();
 
       const utterance = new SpeechSynthesisUtterance(text);
 
       const langMap: LangMap = {
-        fin: 'fi-FI',
-        nob: 'nb-NO',
-        swe: 'sv-SE',
-        eng: 'en-US',
+        fin: "fi-FI",
+        nob: "nb-NO",
+        swe: "sv-SE",
+        eng: "en-US",
       };
 
-      utterance.lang = langMap[language] || 'en-US';
+      utterance.lang = langMap[language] || "en-US";
       utterance.rate = 0.9;
 
       utterance.onstart = () => {

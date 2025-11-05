@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/react/macro';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
-import ViewHeadlineOutlined from '@mui/icons-material/ViewHeadlineOutlined';
-import { useEffect, useState } from 'react';
+import { Trans } from "@lingui/react/macro";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
+import ViewHeadlineOutlined from "@mui/icons-material/ViewHeadlineOutlined";
+import { useEffect, useState } from "react";
 
-import { isLemmaInKorp } from './korpService';
+import { isLemmaInKorp } from "./korpService";
 
 interface KorpButtonProps {
   language: string;
@@ -21,7 +21,7 @@ const KorpButton: React.FC<KorpButtonProps> = ({
   lemma,
   classes,
 }) => {
-  const korpLangs = new Set(['sma', 'sme', 'smj', 'smn', 'sms']);
+  const korpLangs = new Set(["sma", "sme", "smj", "smn", "sms"]);
   const [lemmaExists, setLemmaExists] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const korpAddress = `https://gtweb.uit.no/korp/${language}/#?cqp=[lemma%3D"${lemma}"]&search_tab=1&within=sentence&search=cqp`;
@@ -50,10 +50,10 @@ const KorpButton: React.FC<KorpButtonProps> = ({
           aria-label="Corpus"
           color="primary"
           onClick={() => {
-            const a = document.createElement('a');
+            const a = document.createElement("a");
             a.href = korpAddress;
-            a.target = '_blank';
-            a.rel = 'noopener';
+            a.target = "_blank";
+            a.rel = "noopener";
             a.click();
           }}
         >
