@@ -15,6 +15,7 @@ const SamiKeys: React.FC<SamiKeysProps> = ({ keyHandler }) => {
     "č",
     "đ",
     "ǧ",
+    "ǥ",
     "ï",
     "ǩ",
     "ŋ",
@@ -27,6 +28,7 @@ const SamiKeys: React.FC<SamiKeysProps> = ({ keyHandler }) => {
     "ʒ",
     "ǯ",
     "ʹ",
+    "ʼ",
   ];
 
   return (
