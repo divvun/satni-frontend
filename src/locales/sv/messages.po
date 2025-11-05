@@ -254,8 +254,8 @@ msgstr "Konst och litteratur"
 
 #: src/containers/SatniAppBar.tsx:164
 #: src/containers/SatniAppBar.tsx:209
-msgid "Dark mode"
-msgstr ""
+#~ msgid "Dark mode"
+#~ msgstr ""
 
 #: src/features/article/Definitions.tsx:18
 msgid "Definition"
@@ -484,8 +484,8 @@ msgid "habmersmjnob"
 msgstr ""
 
 #: src/containers/HelpDialog.tsx:47
-#: src/containers/SatniAppBar.tsx:149
-#: src/containers/SatniAppBar.tsx:220
+#: src/containers/SatniAppBar.tsx:197
+#: src/containers/SatniAppBar.tsx:252
 msgid "Help"
 msgstr "Hjälp"
 
@@ -499,8 +499,8 @@ msgstr "Hjälp"
 #~ msgid "Hide this language"
 #~ msgstr "Göm det här språket"
 
-#: src/containers/SatniAppBar.tsx:141
-#: src/containers/SatniAppBar.tsx:187
+#: src/containers/SatniAppBar.tsx:189
+#: src/containers/SatniAppBar.tsx:223
 msgid "Home"
 msgstr ""
 
@@ -545,8 +545,8 @@ msgstr ""
 
 #: src/containers/SatniAppBar.tsx:162
 #: src/containers/SatniAppBar.tsx:209
-msgid "Light mode"
-msgstr ""
+#~ msgid "Light mode"
+#~ msgstr ""
 
 #: src/features/speaker/SpeakerButton.tsx:98
 msgid "Listen to pronunciation"
@@ -572,12 +572,12 @@ msgstr "Maskinteknik"
 msgid "Medisiidna"
 msgstr "Medisin"
 
-#: src/containers/SatniAppBar.tsx:129
-#: src/containers/SatniAppBar.tsx:176
+#: src/containers/SatniAppBar.tsx:177
+#: src/containers/SatniAppBar.tsx:212
 msgid "Menu"
 msgstr ""
 
-#: src/containers/SatniAppBar.tsx:109
+#: src/containers/SatniAppBar.tsx:157
 msgid "More"
 msgstr ""
 
@@ -927,6 +927,19 @@ msgstr ""
 #: src/translateble_variables.ts:140
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr "Termbasen täcker över 50,000 termposter, och uppdateras regelbundet."
+
+#: src/containers/SatniAppBar.tsx:127
+msgid "Theme: Dark"
+msgstr ""
+
+#: src/containers/SatniAppBar.tsx:125
+msgid "Theme: Light"
+msgstr ""
+
+#: src/containers/SatniAppBar.tsx:129
+#: src/containers/SatniAppBar.tsx:131
+msgid "Theme: System"
+msgstr ""
 
 #: src/features/paradigm/ParadigmButton.tsx:90
 msgid "There is no paradigm for this word"
