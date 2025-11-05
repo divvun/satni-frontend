@@ -2,6 +2,7 @@ import React from "react";
 import { ApolloClient } from "@apollo/client";
 import { useReactiveVar } from "@apollo/client/react";
 import Button from "@mui/material/Button";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import {
   createTheme,
   ThemeProvider,
@@ -10,7 +11,7 @@ import {
 import * as Sentry from "@sentry/react";
 import InterfaceLanguage from "./InterfaceLanguage";
 import ProviderWrapper from "./ProviderWrapper";
-import { darkModeVar } from "../apolloCache";
+import { themePreferenceVar } from "../apolloCache";
 
 // Import Gentium Plus font (excellent Sámi coverage with hooked ʼ)
 import "@fontsource/gentium-plus/400.css"; // Regular
@@ -23,7 +24,14 @@ interface RootProps {
 }
 
 const Root: React.FC<RootProps> = ({ client }) => {
-  const darkMode = useReactiveVar(darkModeVar);
+  const themePreference = useReactiveVar(themePreferenceVar);
+
+  // Detect system preference
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+
+  // Determine actual dark mode based on preference
+  const darkMode =
+    themePreference === "system" ? prefersDarkMode : themePreference === "dark";
 
   const theme = React.useMemo(
     () =>
@@ -62,7 +70,7 @@ const Root: React.FC<RootProps> = ({ client }) => {
           },
         })
       ),
-    [darkMode]
+    [darkMode, themePreference, prefersDarkMode]
   );
 
   return (

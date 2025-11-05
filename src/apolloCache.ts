@@ -40,6 +40,14 @@ export const searchModeVar: ReactiveVar<string> = makeVar("start");
 
 export const searchListClickedItemVar: ReactiveVar<number> = makeVar(-1);
 
+// Theme preference: "light", "dark", or "system"
+export const themePreferenceVar: ReactiveVar<"light" | "dark" | "system"> =
+  makeVar(
+    (localStorage.getItem("themePreference") as "light" | "dark" | "system") ||
+      "system"
+  );
+
+// For backward compatibility, keep darkModeVar but make it computed
 export const darkModeVar: ReactiveVar<boolean> = makeVar(
   localStorage.getItem("darkMode") === "true"
 );
@@ -90,6 +98,11 @@ export const cache = new InMemoryCache({
         darkMode: {
           read() {
             return darkModeVar();
+          },
+        },
+        themePreference: {
+          read() {
+            return themePreferenceVar();
           },
         },
         stemList: relayStylePagination([

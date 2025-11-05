@@ -20,16 +20,17 @@ import HomeIcon from "@mui/icons-material/Home";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
+import BrightnessAutoIcon from "@mui/icons-material/BrightnessAuto";
 import { useState } from "react";
 // import { Link } from "react-router-dom";
 
 import HelpDialog from "./HelpDialog";
 import FilterBar from "../features/search/FilterBar";
-import setDarkMode from "../operations/mutations/setDarkMode";
+import setThemePreference from "../operations/mutations/setThemePreference";
 import {
-  GET_DARK_MODE,
-  type GetDarkModeQuery,
-} from "../operations/queries/getDarkMode";
+  GET_THEME_PREFERENCE,
+  type GetThemePreferenceQuery,
+} from "../operations/queries/getThemePreference";
 
 interface SatniAppBarProps {
   searchExpression: string;
@@ -51,8 +52,8 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
     null
   );
 
-  const darkModeQuery = useQuery<GetDarkModeQuery>(GET_DARK_MODE);
-  const { darkMode = false } = darkModeQuery.data || {};
+  const themeQuery = useQuery<GetThemePreferenceQuery>(GET_THEME_PREFERENCE);
+  const { themePreference = "system" } = themeQuery.data || {};
 
   const handleClickHelpDialog = () => {
     setOpenHelpDialog(true);
@@ -79,9 +80,56 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
     handleClickHelpDialog();
   };
 
-  const handleToggleDarkMode = () => {
-    setDarkMode(!darkMode);
+  const handleToggleTheme = () => {
+    // Cycle through: system -> light -> dark -> system
+    const nextTheme =
+      themePreference === "system"
+        ? "light"
+        : themePreference === "light"
+        ? "dark"
+        : "system";
+    setThemePreference(nextTheme);
     handleMoreMenuClose();
+  };
+
+  // Helper to get icon based on theme preference
+  const getThemeIcon = () => {
+    switch (themePreference) {
+      case "light":
+        return <Brightness7Icon fontSize="small" />;
+      case "dark":
+        return <Brightness4Icon fontSize="small" />;
+      case "system":
+        return <BrightnessAutoIcon fontSize="small" />;
+      default:
+        return <BrightnessAutoIcon fontSize="small" />;
+    }
+  };
+
+  const getThemeIconLarge = () => {
+    switch (themePreference) {
+      case "light":
+        return <Brightness7Icon />;
+      case "dark":
+        return <Brightness4Icon />;
+      case "system":
+        return <BrightnessAutoIcon />;
+      default:
+        return <BrightnessAutoIcon />;
+    }
+  };
+
+  const getThemeLabel = () => {
+    switch (themePreference) {
+      case "light":
+        return <Trans>Theme: Light</Trans>;
+      case "dark":
+        return <Trans>Theme: Dark</Trans>;
+      case "system":
+        return <Trans>Theme: System</Trans>;
+      default:
+        return <Trans>Theme: System</Trans>;
+    }
   };
 
   return (
@@ -149,21 +197,9 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
                   <Trans>Help</Trans>
                 </ListItemText>
               </MenuItem>
-              <MenuItem onClick={handleToggleDarkMode}>
-                <ListItemIcon>
-                  {darkMode ? (
-                    <Brightness7Icon fontSize="small" />
-                  ) : (
-                    <Brightness4Icon fontSize="small" />
-                  )}
-                </ListItemIcon>
-                <ListItemText>
-                  {darkMode ? (
-                    <Trans>Light mode</Trans>
-                  ) : (
-                    <Trans>Dark mode</Trans>
-                  )}
-                </ListItemText>
+              <MenuItem onClick={handleToggleTheme}>
+                <ListItemIcon>{getThemeIcon()}</ListItemIcon>
+                <ListItemText>{getThemeLabel()}</ListItemText>
               </MenuItem>
             </Menu>
           </>
@@ -204,17 +240,13 @@ const SatniAppBar: React.FC<SatniAppBarProps> = ({
                 setSearchExpression={setSearchExpression}
               />
             </Box>
-            <Tooltip
-              title={
-                darkMode ? <Trans>Light mode</Trans> : <Trans>Dark mode</Trans>
-              }
-            >
+            <Tooltip title={getThemeLabel()}>
               <IconButton
                 color="inherit"
-                aria-label="Toggle dark mode"
-                onClick={handleToggleDarkMode}
+                aria-label="Toggle theme"
+                onClick={handleToggleTheme}
               >
-                {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+                {getThemeIconLarge()}
               </IconButton>
             </Tooltip>
             <Tooltip title={<Trans>Help</Trans>}>
