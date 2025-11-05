@@ -1,16 +1,19 @@
-import React from 'react';
+import React from "react";
 import { useQuery } from "@apollo/client/react";
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/react/macro';
-import { GET_LANGS_DICTS, 
+import { Trans } from "@lingui/react/macro";
+import {
+  GET_LANGS_DICTS,
   type GetLangsAndDictsQuery,
-} from '../../operations/queries/getLangsDicts';
-import { GET_TERM_ARTICLES, 
+} from "../../operations/queries/getLangsDicts";
+import {
+  GET_TERM_ARTICLES,
   type TermArticlesQuery,
-} from '../../operations/queries/getTermArticles';
-import { multilingualconceptListsByNames } from '../../utils';
-import PresentTermArticles from './PresentTermArticles';
-import type { ConceptType, Maybe } from '../../graphql/graphql';
+} from "../../operations/queries/getTermArticles";
+import { multilingualconceptListsByNames } from "../../utils";
+import ArticleLoadingSkeleton from "./ArticleLoadingSkeleton";
+import PresentTermArticles from "./PresentTermArticles";
+import type { ConceptType, Maybe } from "../../graphql/graphql";
 
 interface TermArticlesProps {
   lemma: string;
@@ -21,9 +24,10 @@ const TermArticles: React.FC<TermArticlesProps> = ({ lemma }) => {
 
   if (langsDictsResult.loading || !langsDictsResult.data) {
     return (
-      <Trans>
-        <p>Loading terms …</p>
-      </Trans>
+      <>
+        <ArticleLoadingSkeleton />
+        <ArticleLoadingSkeleton />
+      </>
     );
   }
 
@@ -36,14 +40,15 @@ const TermArticles: React.FC<TermArticlesProps> = ({ lemma }) => {
         srcLangs,
         targetLangs,
       },
-    },
+    }
   );
 
   if (loading) {
     return (
-      <Trans>
-        <p>Loading terms …</p>
-      </Trans>
+      <>
+        <ArticleLoadingSkeleton />
+        <ArticleLoadingSkeleton />
+      </>
     );
   }
   if (error) {

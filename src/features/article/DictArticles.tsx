@@ -1,31 +1,35 @@
-import React from 'react';
+import React from "react";
 import { useQuery } from "@apollo/client/react";
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/react/macro';
-import { useLocation } from 'react-router-dom';
+import { Trans } from "@lingui/react/macro";
+import { useLocation } from "react-router-dom";
 import {
-  GET_DICT_ARTICLES, 
+  GET_DICT_ARTICLES,
   type DictArticlesQuery,
-} from '../../operations/queries/getDictArticles';
+} from "../../operations/queries/getDictArticles";
 import {
-  GET_LANGS_DICTS, type GetLangsAndDictsQuery,
-} from '../../operations/queries/getLangsDicts';
-import { locationParser } from '../../utils';
-import PresentDictArticles from './PresentDictArticles';
-import type { DictEntryType, Maybe } from '../../graphql/graphql';
+  GET_LANGS_DICTS,
+  type GetLangsAndDictsQuery,
+} from "../../operations/queries/getLangsDicts";
+import { locationParser } from "../../utils";
+import ArticleLoadingSkeleton from "./ArticleLoadingSkeleton";
+import PresentDictArticles from "./PresentDictArticles";
+import type { DictEntryType, Maybe } from "../../graphql/graphql";
 
 interface DictArticlesProps {
   lemma: string;
 }
 
 const DictArticles: React.FC<DictArticlesProps> = ({ lemma }) => {
-  const langsDictsQueryResult = useQuery<GetLangsAndDictsQuery>(GET_LANGS_DICTS);
+  const langsDictsQueryResult =
+    useQuery<GetLangsAndDictsQuery>(GET_LANGS_DICTS);
 
   if (langsDictsQueryResult.loading || !langsDictsQueryResult.data) {
     return (
-      <Trans>
-        <p>Loading dicts …</p>
-      </Trans>
+      <>
+        <ArticleLoadingSkeleton />
+        <ArticleLoadingSkeleton />
+      </>
     );
   }
 
@@ -46,14 +50,15 @@ const DictArticles: React.FC<DictArticlesProps> = ({ lemma }) => {
         targetLangs,
         wantedDicts,
       },
-    },
+    }
   );
 
   if (loading) {
     return (
-      <Trans>
-        <p>Loading dicts …</p>
-      </Trans>
+      <>
+        <ArticleLoadingSkeleton />
+        <ArticleLoadingSkeleton />
+      </>
     );
   }
   if (error) {
@@ -77,10 +82,7 @@ const DictArticles: React.FC<DictArticlesProps> = ({ lemma }) => {
   );
 
   return (
-    <PresentDictArticles
-      lemma={lemma}
-      dictEntryList={filteredEntries as any}
-    />
+    <PresentDictArticles lemma={lemma} dictEntryList={filteredEntries as any} />
   );
 };
 
