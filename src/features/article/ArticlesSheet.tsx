@@ -72,23 +72,16 @@ const ArticlesSheet: React.FC<ArticlesSheetProps> = ({
     setSearchListClickedItem(index);
   };
 
-  // Add keyboard navigation for left/right arrow keys
+  // Add keyboard navigation for up/down arrow keys
   React.useEffect(() => {
     if (!open) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Only handle arrow keys if not typing in an input field
-      if (
-        event.target instanceof HTMLInputElement ||
-        event.target instanceof HTMLTextAreaElement
-      ) {
-        return;
-      }
-
-      if (event.key === "ArrowLeft" && !prevDisabled) {
+      // Allow up/down navigation even when typing in search field
+      if (event.key === "ArrowUp" && !prevDisabled) {
         event.preventDefault();
         navigateToIndex(computedIndex - 1);
-      } else if (event.key === "ArrowRight" && !nextDisabled) {
+      } else if (event.key === "ArrowDown" && !nextDisabled) {
         event.preventDefault();
         navigateToIndex(computedIndex + 1);
       }
