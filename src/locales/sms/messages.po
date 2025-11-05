@@ -70,7 +70,7 @@ msgstr ""
 #~ msgid "\"Vuõʹlǧǧe jååʹtted ooudâs\" (Sammallahti, 2012)"
 #~ msgstr ""
 
-#: src/containers/StatusBar.tsx:24
+#: src/containers/StatusBar.tsx:25
 msgid "(<0>Show all</0>)"
 msgstr "(<0>Čuäʹjat puk</0>)"
 
@@ -80,13 +80,13 @@ msgstr "(<0>Čuäʹjat puk</0>)"
 
 #. placeholder {0}: srcLangs.length
 #. placeholder {1}: availableLanguages.length
-#: src/containers/StatusBar.tsx:41
+#: src/containers/StatusBar.tsx:46
 msgid "{0}/{1} languages."
 msgstr "{0}/{1} ǩiõl."
 
 #. placeholder {0}: wantedDicts.length
 #. placeholder {1}: Object.keys(dictionaryInfo).length
-#: src/containers/StatusBar.tsx:32
+#: src/containers/StatusBar.tsx:37
 msgid "{0}/{1} sources."
 msgstr "{0}/{1} teâttkääiv."
 
@@ -149,30 +149,30 @@ msgstr "{stemsLength}/{totalCount} kååʹtt älgg ooccâmsaaʹnin <0>{searchExp
 #~ msgstr "<0/>"
 
 #. placeholder {0}: error.message
-#: src/features/article/DictArticles.tsx:61
-#: src/features/article/TermArticles.tsx:51
+#: src/features/article/DictArticles.tsx:66
+#: src/features/article/TermArticles.tsx:56
 msgid "<0>Error {0}</0>"
 msgstr "<0>Vââʹǩǩ {0}</0>"
 
-#: src/containers/SatniDrawer.tsx:45
+#: src/containers/SatniDrawer.tsx:49
 msgid "<0>Giellagáldu</0>"
 msgstr "<0>Ǩiõllkaʹlddi</0>"
 
 #: src/features/article/DictArticles.tsx:26
 #: src/features/article/DictArticles.tsx:54
-msgid "<0>Loading dicts …</0>"
-msgstr "<0>Viǯǯmen sääʹnnǩiiʹrjid ...</0>"
+#~ msgid "<0>Loading dicts …</0>"
+#~ msgstr "<0>Viǯǯmen sääʹnnǩiiʹrjid ...</0>"
 
 #: src/features/article/TermArticles.tsx:24
 #: src/features/article/TermArticles.tsx:44
-msgid "<0>Loading terms …</0>"
-msgstr "<0>Viǯǯmen teermid …</0>"
+#~ msgid "<0>Loading terms …</0>"
+#~ msgstr "<0>Viǯǯmen teermid …</0>"
 
 #~ msgid "<0>Loading...</0>"
 #~ msgstr ""
 
-#: src/features/article/DictArticles.tsx:69
-#: src/features/article/TermArticles.tsx:59
+#: src/features/article/DictArticles.tsx:74
+#: src/features/article/TermArticles.tsx:64
 msgid "<0>No data available</0>"
 msgstr ""
 
@@ -216,6 +216,14 @@ msgstr "Puäʒʒhåidd"
 msgid "Category"
 msgstr "Kategoria"
 
+#: src/features/korp/KorpButton.tsx:70
+msgid "Checking corpus availability..."
+msgstr ""
+
+#: src/features/paradigm/ParadigmButton.tsx:88
+msgid "Checking paradigm availability..."
+msgstr ""
+
 #: src/features/wantedlangs/DictChooserDialog.tsx:65
 msgid "Choose dictionaries"
 msgstr "Vaʹlljed sääʹnnǩiiʹrjid"
@@ -236,13 +244,18 @@ msgstr "Vaʹlljed ooʒʒak-a ciâlkki aalǥâst, kõõskâst leʹbe looppâst."
 msgid "Click <0/> to see the inflection paradigm of words. Click <1/> to see examples of how the word is used."
 msgstr "Teäʹddel <0/> što vuäinak saaʹni soojtemååʹbleǩ. Teäʹddel <1/>što vuäinak ouddmiârkid sääʹn âânnmõõžžâst."
 
-#: src/features/article/Stem.tsx:125
+#: src/features/article/Stem.tsx:156
 msgid "Country"
 msgstr "Jânnam"
 
 #: src/translateble_variables.ts:102
 msgid "Dáidda ja girjjálašvuohta"
 msgstr "Čeäppõs da ǩeerjlažvuõtt"
+
+#: src/containers/SatniAppBar.tsx:164
+#: src/containers/SatniAppBar.tsx:209
+msgid "Dark mode"
+msgstr ""
 
 #: src/features/article/Definitions.tsx:18
 msgid "Definition"
@@ -255,11 +268,11 @@ msgstr "Meäʹrtelm"
 msgid "Delivered by"
 msgstr "Tååimtam"
 
-#: src/features/article/Stem.tsx:117
+#: src/features/article/Stem.tsx:148
 msgid "Dialect"
 msgstr "Suõmm"
 
-#: src/containers/SatniDrawer.tsx:143
+#: src/containers/SatniDrawer.tsx:147
 msgid "Dictionaries"
 msgstr "Sääʹnnǩeeʹrj"
 
@@ -471,7 +484,8 @@ msgid "habmersmjnob"
 msgstr "Hamarøy juʹlevsääʹm - taar taalkâstiõtti sääʹnnǩeʹrjj"
 
 #: src/containers/HelpDialog.tsx:47
-#: src/containers/SatniAppBar.tsx:86
+#: src/containers/SatniAppBar.tsx:149
+#: src/containers/SatniAppBar.tsx:220
 msgid "Help"
 msgstr "Veäʹǩǩ"
 
@@ -485,7 +499,8 @@ msgstr "Veäʹǩǩ"
 #~ msgid "Hide this language"
 #~ msgstr "Võiddad tän ǩiõl"
 
-#: src/containers/SatniAppBar.tsx:65
+#: src/containers/SatniAppBar.tsx:141
+#: src/containers/SatniAppBar.tsx:187
 msgid "Home"
 msgstr ""
 
@@ -516,7 +531,7 @@ msgstr ""
 msgid "Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009."
 msgstr ""
 
-#: src/containers/SatniDrawer.tsx:134
+#: src/containers/SatniDrawer.tsx:138
 msgid "Languages"
 msgstr "Ǩiõl"
 
@@ -528,8 +543,17 @@ msgstr "Ǩiõl"
 msgid "lat_genitive"
 msgstr "Latinaǩiõl"
 
-#: src/features/speaker/SpeakerButton.tsx:94
+#: src/containers/SatniAppBar.tsx:162
+#: src/containers/SatniAppBar.tsx:209
+msgid "Light mode"
+msgstr ""
+
+#: src/features/speaker/SpeakerButton.tsx:98
 msgid "Listen to pronunciation"
+msgstr ""
+
+#: src/features/speaker/SpeakerButton.tsx:96
+msgid "Loading pronunciation..."
 msgstr ""
 
 #: src/features/search/FilterBar.tsx:119
@@ -548,8 +572,13 @@ msgstr "Mašinateknikk"
 msgid "Medisiidna"
 msgstr "Taalkâstiõđ"
 
-#: src/containers/SatniAppBar.tsx:53
+#: src/containers/SatniAppBar.tsx:129
+#: src/containers/SatniAppBar.tsx:176
 msgid "Menu"
+msgstr ""
+
+#: src/containers/SatniAppBar.tsx:109
+msgid "More"
 msgstr ""
 
 #: src/translateble_variables.ts:33
@@ -642,7 +671,7 @@ msgstr "pron."
 msgid "Religion"
 msgstr "Åskldõk"
 
-#: src/features/article/ArticlesSheet.tsx:155
+#: src/features/article/ArticlesSheet.tsx:148
 msgid "Results for «{headerTerm}»"
 msgstr ""
 
@@ -650,7 +679,7 @@ msgstr ""
 msgid "Results for «{lemma}»"
 msgstr "«{lemma}» puäđõõzz"
 
-#: src/containers/StatusBar.tsx:20
+#: src/containers/StatusBar.tsx:21
 msgid "Results only from"
 msgstr "Puäđõõzz tåʹlǩ"
 
@@ -784,7 +813,7 @@ msgid "sms_genitive"
 msgstr "Sääʹmǩiõl"
 
 #: src/features/article/LemmaGroup.tsx:45
-#: src/features/article/Source.tsx:30
+#: src/features/article/Source.tsx:31
 msgid "Source:"
 msgstr "Teâttkäivv:"
 
@@ -899,7 +928,7 @@ msgstr ""
 msgid "The termbase consists of over 50,000 term articles, and is updated on a regular basis."
 msgstr "Teʹrmmnorldõõǥǥâst lie pâʹjjel 50 000 teeʹrm da tõn peeiʹvtet kõskkmieʹrin."
 
-#: src/features/paradigm/ParadigmButton.tsx:85
+#: src/features/paradigm/ParadigmButton.tsx:90
 msgid "There is no paradigm for this word"
 msgstr "Tän sänna jeät kaunnu soojtemååʹbleǩ"
 
@@ -927,7 +956,7 @@ msgstr "Tän sääʹnnǩeeʹrj vuâđđan lij Kotus sannõs, da tõõzz leät l�
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr "Tän sääʹnnǩeeʹrj vuâđđan lij Kotus sannõs, da tõõzz leät lââʹzztam Giellatekno Oahpast taarbšum saaʹnid. Lââʹssen takai lääʹdd sääʹn leät lââʹzztam."
 
-#: src/features/korp/KorpButton.tsx:67
+#: src/features/korp/KorpButton.tsx:72
 msgid "This word is not found in our corpus"
 msgstr "Tän sääʹn jeät kaunnu korpuuzzâst"
 
@@ -939,7 +968,7 @@ msgstr ""
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
 msgstr ""
 
-#: src/containers/SatniDrawer.tsx:152
+#: src/containers/SatniDrawer.tsx:156
 msgid "TTS Voices"
 msgstr ""
 
