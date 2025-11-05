@@ -64,13 +64,32 @@ const KorpButton: React.FC<KorpButtonProps> = ({
   }
 
   return (
-    <Tooltip title={<Trans>This word is not found in our corpus</Trans>}>
+    <Tooltip
+      title={
+        isLoading ? (
+          <Trans>Checking corpus availability...</Trans>
+        ) : (
+          <Trans>This word is not found in our corpus</Trans>
+        )
+      }
+    >
       <span>
         <IconButton
           disabled
           className={classes.icons}
           component="span"
           aria-label="Corpus"
+          sx={
+            isLoading
+              ? {
+                  "@keyframes throb": {
+                    "0%, 100%": { opacity: 0.3 },
+                    "50%": { opacity: 1 },
+                  },
+                  animation: "throb 1.5s ease-in-out infinite",
+                }
+              : undefined
+          }
         >
           <ViewHeadlineOutlined />
         </IconButton>

@@ -82,7 +82,15 @@ const ParadigmButton: React.FC<ParadigmButtonProps> = ({
   }
 
   return (
-    <Tooltip title={<Trans>There is no paradigm for this word</Trans>}>
+    <Tooltip
+      title={
+        isLoading ? (
+          <Trans>Checking paradigm availability...</Trans>
+        ) : (
+          <Trans>There is no paradigm for this word</Trans>
+        )
+      }
+    >
       <span>
         <IconButton
           disabled
@@ -91,6 +99,17 @@ const ParadigmButton: React.FC<ParadigmButtonProps> = ({
           aria-label="Paradigm"
           onClick={onClick}
           color="primary"
+          sx={
+            isLoading
+              ? {
+                  "@keyframes throb": {
+                    "0%, 100%": { opacity: 0.3 },
+                    "50%": { opacity: 1 },
+                  },
+                  animation: "throb 1.5s ease-in-out infinite",
+                }
+              : undefined
+          }
         >
           <InfoOutlined />
         </IconButton>

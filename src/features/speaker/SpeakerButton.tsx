@@ -91,7 +91,15 @@ const SpeakerButton: React.FC<SpeakerButtonProps> = ({
   const isDisabled = isSpeaking || isLoading;
 
   return (
-    <Tooltip title={<Trans>Listen to pronunciation</Trans>}>
+    <Tooltip
+      title={
+        isLoading ? (
+          <Trans>Loading pronunciation...</Trans>
+        ) : (
+          <Trans>Listen to pronunciation</Trans>
+        )
+      }
+    >
       <span>
         <IconButton
           className={classes?.icons}
@@ -99,12 +107,19 @@ const SpeakerButton: React.FC<SpeakerButtonProps> = ({
           disabled={isDisabled}
           size="small"
           aria-label="speak text"
+          sx={
+            isLoading
+              ? {
+                  "@keyframes throb": {
+                    "0%, 100%": { opacity: 0.3 },
+                    "50%": { opacity: 1 },
+                  },
+                  animation: "throb 1.5s ease-in-out infinite",
+                }
+              : undefined
+          }
         >
-          {isLoading ? (
-            <CircularProgress size={20} />
-          ) : (
-            <VolumeUpIcon fontSize="small" />
-          )}
+          <VolumeUpIcon fontSize="small" />
         </IconButton>
       </span>
     </Tooltip>
