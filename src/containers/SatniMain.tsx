@@ -12,6 +12,8 @@ import {
 } from "react-router-dom";
 import ArticlesSheet from "../features/article/ArticlesSheet";
 import InfiniteStems from "../features/infinitestems/InfiniteStems";
+import useStems from "../features/infinitestems/InfiniteStems.hooks";
+import setSearchListClickedItem from "../operations/mutations/setSearchListClickedItem";
 import { locationParser } from "../utils";
 import StatusBar from "./StatusBar";
 import { WelcomeHeader } from "./Welcome";
@@ -33,8 +35,12 @@ const SatniMain: React.FC<SatniMainProps> = ({
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  // Track previous search expression to detect changes
+  // Get stems for auto-selection in desktop mode
+  const { stems } = useStems(searchExpression);
+
+  // Track previous values for detecting changes
   const prevSearchExpressionRef = React.useRef(searchExpression);
+  const prevFirstStemRef = React.useRef<string | null>(null);
 
   // Close dialog: navigate to path without lemma but preserve dict and query
   const handleCloseArticles = () => {
@@ -54,6 +60,43 @@ const SatniMain: React.FC<SatniMainProps> = ({
     }
     prevSearchExpressionRef.current = searchExpression;
   }, [searchExpression, isMobile, currentLemma]);
+
+  // Auto-select first item in desktop mode when search results appear or change
+  React.useEffect(() => {
+    // Skip if mobile or no search expression
+    if (isMobile || !searchExpression || stems.length === 0) {
+      return;
+    }
+
+    const firstStem = stems[0].stem ?? "";
+    const firstStemChanged = firstStem !== prevFirstStemRef.current;
+
+    // Auto-navigate to first result when:
+    // - First stem in the list has changed (results updated)
+    // - OR no lemma is currently selected (initial search)
+    if (firstStem && (firstStemChanged || !currentLemma)) {
+      const { currentDict } = locationParser(location.pathname);
+      const path = currentDict ? `${currentDict}/${firstStem}` : firstStem;
+
+      // Set clicked item to index 0 and navigate to first result
+      setSearchListClickedItem(0);
+      history.push({
+        pathname: `/${path}`,
+        search: location.search,
+      });
+
+      // Update ref to track this stem
+      prevFirstStemRef.current = firstStem;
+    }
+  }, [
+    isMobile,
+    searchExpression,
+    currentLemma,
+    stems,
+    location.pathname,
+    location.search,
+    history,
+  ]);
 
   return (
     // @ts-ignore - React Router DOM v5 compatibility
