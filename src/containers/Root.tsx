@@ -12,6 +12,12 @@ import InterfaceLanguage from "./InterfaceLanguage";
 import ProviderWrapper from "./ProviderWrapper";
 import { darkModeVar } from "../apolloCache";
 
+// Import Gentium Plus font (excellent Sámi coverage with hooked ʼ)
+import "@fontsource/gentium-plus/400.css"; // Regular
+import "@fontsource/gentium-plus/700.css"; // Bold
+import "@fontsource/gentium-plus/400-italic.css"; // Regular Italic
+import "@fontsource/gentium-plus/700-italic.css"; // Bold Italic
+
 interface RootProps {
   client: ApolloClient;
 }
@@ -37,6 +43,8 @@ const Root: React.FC<RootProps> = ({ client }) => {
           typography: {
             // Tell Material-UI what's the font-size on the html element is.
             htmlFontSize: 14,
+            // Set Gentium Plus as the global font with fallbacks
+            fontFamily: ["Gentium Plus", "Georgia", "serif"].join(","),
           },
           components: {
             MuiLink: {

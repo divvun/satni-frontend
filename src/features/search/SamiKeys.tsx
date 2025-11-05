@@ -38,7 +38,7 @@ const SamiKeys: React.FC<SamiKeysProps> = ({ keyHandler }) => {
           key={char}
           onClick={() => keyHandler(char)}
           variant="outlined"
-          sx={{ textTransform: "none" }}
+          sx={{ textTransform: "none", fontWeight: 600 }}
         >
           {char}
         </Button>

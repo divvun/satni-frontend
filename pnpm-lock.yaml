@@ -17,6 +17,9 @@ importers:
       '@emotion/styled':
         specifier: ^11.14.1
         version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0)
+      '@fontsource/gentium-plus':
+        specifier: ^5.2.7
+        version: 5.2.7
       '@lingui/core':
         specifier: ^5.5.2
         version: 5.5.2(@lingui/babel-plugin-lingui-macro@5.5.2(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)
@@ -627,6 +630,9 @@ packages:
 
   '@fastify/busboy@3.2.0':
     resolution: {integrity: sha512-m9FVDXU3GT2ITSe0UaMA5rU3QkfC/UXtCU8y0gSN/GugTqtVldOBWIB5V6V3sbmenVZUIpU6f+mPEO2+m5iTaA==}
+
+  '@fontsource/gentium-plus@5.2.7':
+    resolution: {integrity: sha512-qgkMjwE4t3XOv6bEAlddTqIC8OUfUWKphfZswkqi9+Qn5FcQu2bXi1uIqHg46xMhIrXQ3WJZkv9HZZfCdAxmhQ==}
 
   '@gql.tada/internal@1.0.8':
     resolution: {integrity: sha512-XYdxJhtHC5WtZfdDqtKjcQ4d7R1s0d1rnlSs3OcBEUbYiPoJJfZU7tWsVXuv047Z6msvmr4ompJ7eLSK5Km57g==}
@@ -3973,6 +3979,8 @@ snapshots:
     optional: true
 
   '@fastify/busboy@3.2.0': {}
+
+  '@fontsource/gentium-plus@5.2.7': {}
 
   '@gql.tada/internal@1.0.8(graphql@16.12.0)(typescript@5.9.3)':
     dependencies:

@@ -6,6 +6,7 @@
     "@apollo/client": "^4.0.9",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@fontsource/gentium-plus": "^5.2.7",
     "@lingui/core": "^5.5.2",
     "@lingui/macro": "^5.5.1",
     "@lingui/react": "^5.5.1",
