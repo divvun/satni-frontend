@@ -37,6 +37,7 @@ const MetaLanguageSelector: React.FC = () => {
         <MenuItem value="se">Davvisámegiella</MenuItem>
         <MenuItem value="smj">Julevsámegiella</MenuItem>
         <MenuItem value="sma">Åarjelsaemiengïele</MenuItem>
+        <MenuItem value="smn">Anarâškielâ </MenuItem>
         <MenuItem value="sms">Nuõrttsääʹmǩiõll</MenuItem>
         <MenuItem value="fi">Suomen kieli</MenuItem>
         <MenuItem value="nb">Bokmål</MenuItem>
