@@ -19,6 +19,7 @@ import SpeakerChooserDialog from "../features/speaker/SpeakerChooserDialog";
 import DictChooserDialog from "../features/wantedlangs/DictChooserDialog";
 import LangChooserDialog from "../features/wantedlangs/LangChooserDialog";
 import MetaLanguageSelector from "./MetaLanguageSelector";
+import { getSiteName } from "../utils/siteConfig";
 
 const Footer: React.FC = () => (
   <List
@@ -89,19 +90,7 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
   handleDrawerToggle,
   mobileOpen,
 }) => {
-  // Determine site name based on hostname
-  const getSiteName = (): string => {
-    const hostname = window.location.hostname;
-    if (hostname.includes("baakoe")) {
-      return "baakoe.org";
-    }
-    if (hostname.includes("bahko") || hostname.includes("báhko")) {
-      return "báhko.org";
-    }
-    // Default to sátni.org for satni.org and sátni.org
-    return "sátni.org";
-  };
-
+  // Get site name from shared utility
   const siteName = getSiteName();
 
   const [openLangChooser, setOpenLangChooser] = useState<boolean>(false);

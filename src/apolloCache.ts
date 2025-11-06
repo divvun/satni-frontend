@@ -2,13 +2,14 @@ import { InMemoryCache, makeVar, ReactiveVar } from "@apollo/client";
 import { relayStylePagination } from "@apollo/client/utilities";
 import dictionaryInfo from "./translateble_variables";
 import { availableLanguages } from "./utils";
+import { getDefaultInterfaceLanguage } from "./utils/siteConfig";
 
 export const availableDictsVar: ReactiveVar<string[]> = makeVar(
   Object.keys(dictionaryInfo)
 );
 
 export const interfaceLanguageVar: ReactiveVar<string> = makeVar(
-  localStorage.getItem("interfaceLanguage") || "se"
+  localStorage.getItem("interfaceLanguage") || getDefaultInterfaceLanguage()
 );
 
 const getWanted = (): string[] => {
