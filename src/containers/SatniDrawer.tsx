@@ -118,7 +118,7 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
       {/* Top-left sátni.org home link */}
       <Box sx={{ display: "flex", alignItems: "center", minHeight: 48, px: 2 }}>
         <MUILink
-          href="https://satni.org"
+          href="/"
           color="inherit"
           underline="hover"
           sx={{ fontWeight: 600 }}
