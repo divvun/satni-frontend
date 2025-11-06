@@ -7,6 +7,7 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import { useState } from "react";
 
 import { fetchCachedTTSAudio } from "./speakerService";
+import { getSelectedVoice } from "./speakerVoices";
 
 interface SpeakerButtonProps {
   text: string;
@@ -31,7 +32,8 @@ const SpeakerButton: React.FC<SpeakerButtonProps> = ({
   const handleSpeak = async () => {
     // Try GiellaLT TTS API first (with caching)
     setIsLoading(true);
-    const audioUrl = await fetchCachedTTSAudio(text, language);
+    const selectedVoice = getSelectedVoice(language);
+    const audioUrl = await fetchCachedTTSAudio(text, language, selectedVoice);
     setIsLoading(false);
 
     if (audioUrl) {
