@@ -89,6 +89,21 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
   handleDrawerToggle,
   mobileOpen,
 }) => {
+  // Determine site name based on hostname
+  const getSiteName = (): string => {
+    const hostname = window.location.hostname;
+    if (hostname.includes("baakoe")) {
+      return "baakoe.org";
+    }
+    if (hostname.includes("bahko") || hostname.includes("báhko")) {
+      return "báhko.org";
+    }
+    // Default to sátni.org for satni.org and sátni.org
+    return "sátni.org";
+  };
+
+  const siteName = getSiteName();
+
   const [openLangChooser, setOpenLangChooser] = useState<boolean>(false);
   const handleClickLangChooserDialog = () => {
     setOpenLangChooser(true);
@@ -115,7 +130,7 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
 
   const drawer = (
     <div>
-      {/* Top-left sátni.org home link */}
+      {/* Top-left site name home link */}
       <Box sx={{ display: "flex", alignItems: "center", minHeight: 48, px: 2 }}>
         <MUILink
           href="/"
@@ -123,7 +138,7 @@ const SatniDrawer: React.FC<SatniDrawerProps> = ({
           underline="hover"
           sx={{ fontWeight: 600 }}
         >
-          sátni.org
+          {siteName}
         </MUILink>
       </Box>
       <Divider />
