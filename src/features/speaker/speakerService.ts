@@ -1,11 +1,11 @@
-import { ttsCacheVar } from '../../apolloCache';
-import { fetchTTSAudio, isTTSAvailable } from './speakerApi';
+import { ttsCacheVar } from "../../apolloCache";
+import { fetchTTSAudio, isTTSAvailable } from "./speakerApi";
 
 const createCacheKey = (
   text: string,
   language: string,
   voice: string | null,
-): string => `${language}:${voice || 'default'}:${text}`;
+): string => `${language}:${voice || "default"}:${text}`;
 
 /**
  * Fetch TTS audio with caching
@@ -46,7 +46,7 @@ export const fetchCachedTTSAudio = async (
 
     return audioUrl;
   } catch (err) {
-    console.error('Error fetching TTS audio:', err);
+    console.error("Error fetching TTS audio:", err);
     return null;
   }
 };
