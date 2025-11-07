@@ -25,7 +25,7 @@ const WildCard: React.FC = () => {
           checked={searchMode === "start"}
           onChange={handleChange}
           value="start"
-          inputProps={{ "aria-label": "Start" }}
+          slotProps={{ input: { "aria-label": "Start" } }}
         />
       </Tooltip>
       <Tooltip
@@ -35,7 +35,7 @@ const WildCard: React.FC = () => {
           checked={searchMode === "middle"}
           onChange={handleChange}
           value="middle"
-          inputProps={{ "aria-label": "Middle" }}
+          slotProps={{ input: { "aria-label": "Middle" } }}
         />
       </Tooltip>
       <Tooltip title={<Trans>Search words that end in your search term</Trans>}>
@@ -43,7 +43,7 @@ const WildCard: React.FC = () => {
           checked={searchMode === "end"}
           onChange={handleChange}
           value="end"
-          inputProps={{ "aria-label": "End" }}
+          slotProps={{ input: { "aria-label": "End" } }}
         />
       </Tooltip>
     </>
