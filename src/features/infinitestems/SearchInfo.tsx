@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 // @ts-ignore - @lingui/macro types compatibility
-import { Trans } from '@lingui/react/macro';
+import { Trans } from "@lingui/react/macro";
 
 interface SearchInfoProps {
   totalCount: number;
@@ -21,7 +21,7 @@ const SearchInfo: React.FC<SearchInfoProps> = ({
     );
   }
 
-  if (searchMode === 'start') {
+  if (searchMode === "start") {
     return (
       <Trans>
         {totalCount} starting with <b>{searchExpression}</b>
@@ -29,7 +29,7 @@ const SearchInfo: React.FC<SearchInfoProps> = ({
     );
   }
 
-  if (searchMode === 'middle') {
+  if (searchMode === "middle") {
     return (
       <Trans>
         {totalCount} containing <b>{searchExpression}</b>
