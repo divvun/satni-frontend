@@ -3,14 +3,12 @@ import React from 'react';
 import { Trans } from '@lingui/react/macro';
 
 interface SearchInfoProps {
-  stemsLength: number;
   totalCount: number;
   searchExpression: string;
   searchMode: string;
 }
 
 const SearchInfo: React.FC<SearchInfoProps> = ({
-  stemsLength,
   totalCount,
   searchExpression,
   searchMode,
@@ -26,7 +24,7 @@ const SearchInfo: React.FC<SearchInfoProps> = ({
   if (searchMode === 'start') {
     return (
       <Trans>
-        {stemsLength}/{totalCount} starting with <b>{searchExpression}</b>
+        {totalCount} starting with <b>{searchExpression}</b>
       </Trans>
     );
   }
@@ -34,14 +32,14 @@ const SearchInfo: React.FC<SearchInfoProps> = ({
   if (searchMode === 'middle') {
     return (
       <Trans>
-        {stemsLength}/{totalCount} containing <b>{searchExpression}</b>
+        {totalCount} containing <b>{searchExpression}</b>
       </Trans>
     );
   }
 
   return (
     <Trans>
-      {stemsLength}/{totalCount} ending in <b>{searchExpression}</b>
+      {totalCount} ending in <b>{searchExpression}</b>
     </Trans>
   );
 };

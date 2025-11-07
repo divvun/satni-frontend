@@ -61,7 +61,6 @@ const InfiniteStems: React.FC<InfiniteStemsProps> = ({ searchExpression }) => {
       {searchExpression && (
         <Typography sx={{ textAlign: "center" }}>
           <SearchInfo
-            stemsLength={stems.length}
             totalCount={totalCount ?? 0}
             searchExpression={searchExpression}
             searchMode={searchMode}
