@@ -2,7 +2,7 @@ import React from "react";
 import { msg } from "@lingui/macro";
 import { useLingui } from "@lingui/react";
 import InputBase from "@mui/material/InputBase";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface InputWithTranslationProps {
   value: string;
@@ -14,25 +14,42 @@ const InputWithTranslation: React.FC<InputWithTranslationProps> = (props) => {
   const { value, onChange, onKeyUp } = props;
   const [inputValue, setInputValue] = useState<string>(value);
   const { _ } = useLingui();
+  const isTypingRef = useRef<boolean>(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Custom hook for debouncing
+  // Only update inputValue from prop when not actively typing
   useEffect(() => {
-    setInputValue(value);
+    if (!isTypingRef.current) {
+      setInputValue(value);
+    }
   }, [value]);
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      if (inputValue !== value) {
+    // Clear existing timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    // Only call onChange if the input value differs from prop value
+    if (inputValue !== value) {
+      timeoutRef.current = setTimeout(() => {
         onChange({
           target: { value: inputValue },
         } as React.ChangeEvent<HTMLInputElement>);
-      }
-    }, 300);
+        isTypingRef.current = false;
+      }, 300);
+    }
 
-    return () => clearTimeout(timeoutId);
-  }, [inputValue, onChange, value]);
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inputValue]);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    isTypingRef.current = true;
     setInputValue(event.target.value);
   };
 
