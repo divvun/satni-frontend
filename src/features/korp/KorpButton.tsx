@@ -21,12 +21,18 @@ const KorpButton: React.FC<KorpButtonProps> = ({
   lemma,
   classes,
 }) => {
+  // Languages the corpus always covers, so the lookup check is skipped for them
   const korpLangs = new Set(["sma", "sme", "smj", "smn", "sms"]);
   const [lemmaExists, setLemmaExists] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const korpAddress = `https://gtweb.uit.no/korp/${language}/#?cqp=[lemma%3D"${lemma}"]&search_tab=1&within=sentence&search=cqp`;
 
   useEffect(() => {
+    if (korpLangs.has(language)) {
+      setIsLoading(false);
+      return;
+    }
+
     const checkLemma = async () => {
       setIsLoading(true);
       const exists = await isLemmaInKorp(language, lemma);
@@ -34,14 +40,10 @@ const KorpButton: React.FC<KorpButtonProps> = ({
       setIsLoading(false);
     };
 
-    if (korpLangs.has(language)) {
-      checkLemma();
-    } else {
-      setIsLoading(false);
-    }
+    checkLemma();
   }, [language, lemma]);
 
-  if (korpLangs.has(language) && lemmaExists && !isLoading) {
+  if (korpLangs.has(language) || (lemmaExists && !isLoading)) {
     return (
       <Tooltip title={<Trans>Show this word in our corpus</Trans>}>
         <IconButton
