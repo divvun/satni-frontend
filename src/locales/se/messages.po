@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-09-17 10:15+0000\n"
+"PO-Revision-Date: 2026-09-17 11:43+0000\n"
 "Last-Translator: Børre <albbas@gmail.com>\n"
 "Language-Team: \n"
 "Language: se\n"
@@ -589,7 +589,7 @@ msgstr "Čájet dán sáni min teakstačoakkáldagas"
 
 #: src/translateble_variables.ts:214 src/translateble_variables.ts:240 src/translateble_variables.ts:251 src/translateble_variables.ts:272
 msgid "Skolt Sámi → X project contains materials deriving from the research of numerous projects, dictionaries and word lists."
-msgstr "Máŋga dutkanprošeavtta, sátnegirjji ja sátnelisttu lea Skolt Sámi → X prošeavtta gáldu."
+msgstr "Skolt Sámi → X prošeavtta vuođđun leat máŋga dutkanprošeavtta, sátnegirjji ja sátnelisttu."
 
 #: src/translateble_variables.ts:228
 msgid "Skolt Sámi lemmas with Finnish translations can also be attributed to materials in:"
@@ -653,13 +653,14 @@ msgstr "Stáhtus:"
 
 #: src/translateble_variables.ts:265
 msgid "Subsequent updating of these files is being continued using the Veʹrdd dictionary editing platform, which played an instrumental role in the development of 2020."
-msgstr ""
+msgstr "Veʹrdd sátnegirjedoaimmahanprográmma lei guovddážis go ođastuhtte sátnegirjjiid 2020:s."
 
 #: src/translateble_variables.ts:267
 msgid ""
 "Subsequent updating of these files is being continued using the Veʹrdd dictionary editing platform, which played an instrumental role in the development of 2020. Extensive work can be attributed to "
 "members of the language community, language researchers and students at the Giellagas Institute and language technology researchers."
 msgstr ""
+"Ođastuhttimat leat dahkon Veʹrdd sátnegirjedoaimmahanprográmmain. Giellaservvoš, giellačeahpit, Giellagas instituhta studeanttat ja giellateknologiija dutkit leat dahkan olu barggu dán oktavuođas."
 
 #: src/translateble_variables.ts:51
 msgid "sv"
@@ -794,6 +795,8 @@ msgid ""
 "This, of course, meant that an extensive amount of non-standard words and word forms were presented. As more and more students of the language became aware of the dictionary, it began to serve as a "
 "basis of vocabulary learning and, unfortunately, the source of many spelling mistakes and morphological misconceptions."
 msgstr ""
+"Dát dieđusge mávssii ahte ollu ii-standárdiserejuvvon sánit ja sátnehámit bohte ovdan. Dađistaga go studeanttat fuobmájedje sátnegirjji, sii das de ohppe sániid, ja, dađi bahábut, šattai gáldun "
+"moanat čállinmeattáhusaide ja morfologalaš boasttuipmárdusaide."
 
 #: src/translateble_variables.ts:199
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
