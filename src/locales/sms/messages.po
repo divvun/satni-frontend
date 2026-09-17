@@ -133,16 +133,28 @@ msgstr "{0}/{1} teâttkääiv."
 #~ msgstr ""
 
 #: src/features/infinitestems/SearchInfo.tsx:36
-msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
-msgstr "{stemsLength}/{totalCount} kååʹtt ââʹnn seʹst ooccâmsääʹn <0>{searchExpression}</0>"
+#~ msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
+#~ msgstr "{stemsLength}/{totalCount} kååʹtt ââʹnn seʹst ooccâmsääʹn <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.tsx:43
-msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
-msgstr "{stemsLength}/{totalCount} koon looppâst lij ooccâmsääʹnn<0>{searchExpression}</0>"
+#~ msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
+#~ msgstr "{stemsLength}/{totalCount} koon looppâst lij ooccâmsääʹnn<0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.tsx:28
-msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr "{stemsLength}/{totalCount} kååʹtt älgg ooccâmsaaʹnin <0>{searchExpression}</0>"
+#~ msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
+#~ msgstr "{stemsLength}/{totalCount} kååʹtt älgg ooccâmsaaʹnin <0>{searchExpression}</0>"
+
+#: src/features/infinitestems/SearchInfo.tsx:34
+msgid "{totalCount} containing <0>{searchExpression}</0>"
+msgstr ""
+
+#: src/features/infinitestems/SearchInfo.tsx:41
+msgid "{totalCount} ending in <0>{searchExpression}</0>"
+msgstr ""
+
+#: src/features/infinitestems/SearchInfo.tsx:26
+msgid "{totalCount} starting with <0>{searchExpression}</0>"
+msgstr ""
 
 #: src/features/article/Source.stories.js:12
 #~ msgid "<0/>"
@@ -154,7 +166,7 @@ msgstr "{stemsLength}/{totalCount} kååʹtt älgg ooccâmsaaʹnin <0>{searchExp
 msgid "<0>Error {0}</0>"
 msgstr "<0>Vââʹǩǩ {0}</0>"
 
-#: src/containers/SatniDrawer.tsx:49
+#: src/containers/SatniDrawer.tsx:50
 msgid "<0>Giellagáldu</0>"
 msgstr "<0>Ǩiõllkaʹlddi</0>"
 
@@ -216,7 +228,7 @@ msgstr "Puäʒʒhåidd"
 msgid "Category"
 msgstr "Kategoria"
 
-#: src/features/korp/KorpButton.tsx:70
+#: src/features/korp/KorpButton.tsx:72
 msgid "Checking corpus availability..."
 msgstr ""
 
@@ -264,7 +276,7 @@ msgstr "Meäʹrtelm"
 #~ msgid "Definitions:"
 #~ msgstr ""
 
-#: src/containers/SatniDrawer.tsx:27
+#: src/containers/SatniDrawer.tsx:28
 msgid "Delivered by"
 msgstr "Tååimtam"
 
@@ -272,7 +284,7 @@ msgstr "Tååimtam"
 msgid "Dialect"
 msgstr "Suõmm"
 
-#: src/containers/SatniDrawer.tsx:147
+#: src/containers/SatniDrawer.tsx:151
 msgid "Dictionaries"
 msgstr "Sääʹnnǩeeʹrj"
 
@@ -531,7 +543,7 @@ msgstr ""
 msgid "Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009."
 msgstr ""
 
-#: src/containers/SatniDrawer.tsx:138
+#: src/containers/SatniDrawer.tsx:142
 msgid "Languages"
 msgstr "Ǩiõl"
 
@@ -548,11 +560,11 @@ msgstr "Latinaǩiõl"
 #~ msgid "Light mode"
 #~ msgstr ""
 
-#: src/features/speaker/SpeakerButton.tsx:98
+#: src/features/speaker/SpeakerButton.tsx:100
 msgid "Listen to pronunciation"
 msgstr ""
 
-#: src/features/speaker/SpeakerButton.tsx:96
+#: src/features/speaker/SpeakerButton.tsx:98
 msgid "Loading pronunciation..."
 msgstr ""
 
@@ -616,7 +628,7 @@ msgstr "Taarr"
 #~ msgid "No results for <0>{lemma}</0>. Check <1/> or <2/> in the left menu to see if the wanted languages or dictionaries are selected."
 #~ msgstr ""
 
-#: src/features/infinitestems/SearchInfo.tsx:20
+#: src/features/infinitestems/SearchInfo.tsx:18
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "<0>{searchExpression}</0> ij kaunnu sääʹnnǩiiʹrjin"
 
@@ -757,7 +769,7 @@ msgstr "Õhttsažkåʹddtiõđ"
 msgid "Show paradigm for this word"
 msgstr "Čuäjat tän sääʹn soojtemååʹbleǩ"
 
-#: src/features/korp/KorpButton.tsx:46
+#: src/features/korp/KorpButton.tsx:48
 msgid "Show this word in our corpus"
 msgstr "Čuäjat sääʹnn korpuuzzâst"
 
@@ -969,7 +981,7 @@ msgstr "Tän sääʹnnǩeeʹrj vuâđđan lij Kotus sannõs, da tõõzz leät l�
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr "Tän sääʹnnǩeeʹrj vuâđđan lij Kotus sannõs, da tõõzz leät lââʹzztam Giellatekno Oahpast taarbšum saaʹnid. Lââʹssen takai lääʹdd sääʹn leät lââʹzztam."
 
-#: src/features/korp/KorpButton.tsx:72
+#: src/features/korp/KorpButton.tsx:74
 msgid "This word is not found in our corpus"
 msgstr "Tän sääʹn jeät kaunnu korpuuzzâst"
 
@@ -981,7 +993,7 @@ msgstr ""
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
 msgstr ""
 
-#: src/containers/SatniDrawer.tsx:156
+#: src/containers/SatniDrawer.tsx:160
 msgid "TTS Voices"
 msgstr ""
 
@@ -1009,7 +1021,7 @@ msgstr ""
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Ko teäddlak sääʹn täʹst, eett sääʹnnǩeʹrjjartikkel vuäʹljsbeälla."
 
-#: src/features/search/InputWithTranslation.tsx:45
+#: src/features/search/InputWithTranslation.tsx:62
 msgid "Write at least one letter here"
 msgstr "Ǩeeʹrjat tääzz kuuitâǥ õõut bukva"
 

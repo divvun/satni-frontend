@@ -59,23 +59,35 @@ msgid "{0}/{1} sources."
 msgstr "{0}/{1} kilder."
 
 #: src/features/infinitestems/SearchInfo.tsx:36
-msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
-msgstr "{stemsLength}/{totalCount} som inneholder <0>{searchExpression}</0>"
+#~ msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
+#~ msgstr "{stemsLength}/{totalCount} som inneholder <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.tsx:43
-msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
-msgstr "{stemsLength}/{totalCount} som slutter med <0>{searchExpression}</0>"
+#~ msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
+#~ msgstr "{stemsLength}/{totalCount} som slutter med <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.tsx:28
-msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr "{stemsLength}/{totalCount} som begynner med <0>{searchExpression}</0>"
+#~ msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
+#~ msgstr "{stemsLength}/{totalCount} som begynner med <0>{searchExpression}</0>"
+
+#: src/features/infinitestems/SearchInfo.tsx:34
+msgid "{totalCount} containing <0>{searchExpression}</0>"
+msgstr ""
+
+#: src/features/infinitestems/SearchInfo.tsx:41
+msgid "{totalCount} ending in <0>{searchExpression}</0>"
+msgstr ""
+
+#: src/features/infinitestems/SearchInfo.tsx:26
+msgid "{totalCount} starting with <0>{searchExpression}</0>"
+msgstr ""
 
 #. placeholder {0}: error.message
 #: src/features/article/DictArticles.tsx:66 src/features/article/TermArticles.tsx:56
 msgid "<0>Error {0}</0>"
 msgstr "<0>Feil {0}</0>"
 
-#: src/containers/SatniDrawer.tsx:49
+#: src/containers/SatniDrawer.tsx:50
 msgid "<0>Giellagáldu</0>"
 msgstr "<0>Giellagáldu</0>"
 
@@ -121,7 +133,7 @@ msgstr "Reindrift"
 msgid "Category"
 msgstr "Kategori"
 
-#: src/features/korp/KorpButton.tsx:70
+#: src/features/korp/KorpButton.tsx:72
 msgid "Checking corpus availability..."
 msgstr ""
 
@@ -161,7 +173,7 @@ msgstr "Kunst og litteratur"
 msgid "Definition"
 msgstr "Definisjon"
 
-#: src/containers/SatniDrawer.tsx:27
+#: src/containers/SatniDrawer.tsx:28
 msgid "Delivered by"
 msgstr "Laget av"
 
@@ -169,7 +181,7 @@ msgstr "Laget av"
 msgid "Dialect"
 msgstr "Dialekt"
 
-#: src/containers/SatniDrawer.tsx:147
+#: src/containers/SatniDrawer.tsx:151
 msgid "Dictionaries"
 msgstr "Ordbøker"
 
@@ -400,7 +412,7 @@ msgstr ""
 msgid "Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009."
 msgstr ""
 
-#: src/containers/SatniDrawer.tsx:138
+#: src/containers/SatniDrawer.tsx:142
 msgid "Languages"
 msgstr "Språk"
 
@@ -408,11 +420,16 @@ msgstr "Språk"
 msgid "lat_genitive"
 msgstr "latinsk"
 
-#: src/features/speaker/SpeakerButton.tsx:98
+#: src/containers/SatniAppBar.tsx:162
+#: src/containers/SatniAppBar.tsx:209
+#~ msgid "Light mode"
+#~ msgstr ""
+
+#: src/features/speaker/SpeakerButton.tsx:100
 msgid "Listen to pronunciation"
 msgstr ""
 
-#: src/features/speaker/SpeakerButton.tsx:96
+#: src/features/speaker/SpeakerButton.tsx:98
 msgid "Loading pronunciation..."
 msgstr ""
 
@@ -472,7 +489,7 @@ msgstr "nynorsk"
 msgid "NO"
 msgstr "Norge"
 
-#: src/features/infinitestems/SearchInfo.tsx:20
+#: src/features/infinitestems/SearchInfo.tsx:18
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "Ingen resultater for <0>{searchExpression}</0>"
 
@@ -584,7 +601,7 @@ msgstr "Samfunnsvitenskap"
 msgid "Show paradigm for this word"
 msgstr "Vis bøyingsmønsteret for dette ordet"
 
-#: src/features/korp/KorpButton.tsx:46
+#: src/features/korp/KorpButton.tsx:48
 msgid "Show this word in our corpus"
 msgstr "Vis dette ordet i tekstsamlingen vår"
 
@@ -783,7 +800,7 @@ msgstr ""
 "Denne ordboken er basert på leksikalsk materiale fra Intitutionen för de inhemska språken i Finland, og fra Giellateknos arbeid med nordsamisk Oahpa. I tillegg er det lagt til vanlige nordsamiske "
 "ord."
 
-#: src/features/korp/KorpButton.tsx:72
+#: src/features/korp/KorpButton.tsx:74
 msgid "This word is not found in our corpus"
 msgstr "Dette ordet finnes ikke i tekstsamlingen vår"
 
@@ -797,7 +814,7 @@ msgstr ""
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
 msgstr "Trond Trosteruds finsk – norske ordbok har mer en 30000 søkeord."
 
-#: src/containers/SatniDrawer.tsx:156
+#: src/containers/SatniDrawer.tsx:160
 msgid "TTS Voices"
 msgstr ""
 
@@ -817,7 +834,7 @@ msgstr ""
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Når du klikker på et ord her, dukker ordboksartikler opp til høyre."
 
-#: src/features/search/InputWithTranslation.tsx:45
+#: src/features/search/InputWithTranslation.tsx:62
 msgid "Write at least one letter here"
 msgstr "Skriv minst en bokstav her"
 

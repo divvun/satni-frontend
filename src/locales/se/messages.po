@@ -120,16 +120,28 @@ msgstr "{0}/{1} gáldus."
 #~ msgstr ""
 
 #: src/features/infinitestems/SearchInfo.tsx:36
-msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
-msgstr "{stemsLength}/{totalCount} mat sisttisdollet <0>{searchExpression}</0>"
+#~ msgid "{stemsLength}/{totalCount} containing <0>{searchExpression}</0>"
+#~ msgstr "{stemsLength}/{totalCount} mat sisttisdollet <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.tsx:43
-msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
-msgstr "{stemsLength}/{totalCount} main loahppa lea <0>{searchExpression}</0>"
+#~ msgid "{stemsLength}/{totalCount} ending in <0>{searchExpression}</0>"
+#~ msgstr "{stemsLength}/{totalCount} main loahppa lea <0>{searchExpression}</0>"
 
 #: src/features/infinitestems/SearchInfo.tsx:28
-msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
-msgstr "{stemsLength}/{totalCount} main álgu lea <0>{searchExpression}</0>"
+#~ msgid "{stemsLength}/{totalCount} starting with <0>{searchExpression}</0>"
+#~ msgstr "{stemsLength}/{totalCount} main álgu lea <0>{searchExpression}</0>"
+
+#: src/features/infinitestems/SearchInfo.tsx:34
+msgid "{totalCount} containing <0>{searchExpression}</0>"
+msgstr ""
+
+#: src/features/infinitestems/SearchInfo.tsx:41
+msgid "{totalCount} ending in <0>{searchExpression}</0>"
+msgstr ""
+
+#: src/features/infinitestems/SearchInfo.tsx:26
+msgid "{totalCount} starting with <0>{searchExpression}</0>"
+msgstr ""
 
 #~ msgid "<0/>"
 #~ msgstr "<0/>"
@@ -140,7 +152,7 @@ msgstr "{stemsLength}/{totalCount} main álgu lea <0>{searchExpression}</0>"
 msgid "<0>Error {0}</0>"
 msgstr "<0>Meattáhus {0}</0>"
 
-#: src/containers/SatniDrawer.tsx:49
+#: src/containers/SatniDrawer.tsx:50
 msgid "<0>Giellagáldu</0>"
 msgstr "<0>Giellagáldu</0>"
 
@@ -196,7 +208,7 @@ msgstr "Boazodoallu"
 msgid "Category"
 msgstr "Kategoriija"
 
-#: src/features/korp/KorpButton.tsx:70
+#: src/features/korp/KorpButton.tsx:72
 msgid "Checking corpus availability..."
 msgstr ""
 
@@ -241,7 +253,7 @@ msgstr "Dáidda ja girjjálašvuohta"
 msgid "Definition"
 msgstr "Definišuvdna"
 
-#: src/containers/SatniDrawer.tsx:27
+#: src/containers/SatniDrawer.tsx:28
 msgid "Delivered by"
 msgstr "Ráhkadeaddjit"
 
@@ -249,7 +261,7 @@ msgstr "Ráhkadeaddjit"
 msgid "Dialect"
 msgstr "Suopman"
 
-#: src/containers/SatniDrawer.tsx:147
+#: src/containers/SatniDrawer.tsx:151
 msgid "Dictionaries"
 msgstr "Sátnegirjjit"
 
@@ -495,7 +507,7 @@ msgstr ""
 msgid "Language memory was (officially) installed in 2018, but the project with the wordlist and recordings by Espen Sommer Eide was begun in 2009."
 msgstr ""
 
-#: src/containers/SatniDrawer.tsx:138
+#: src/containers/SatniDrawer.tsx:142
 msgid "Languages"
 msgstr "Gielat"
 
@@ -511,11 +523,11 @@ msgstr "latiinnagiela"
 #~ msgid "Light mode"
 #~ msgstr ""
 
-#: src/features/speaker/SpeakerButton.tsx:98
+#: src/features/speaker/SpeakerButton.tsx:100
 msgid "Listen to pronunciation"
 msgstr ""
 
-#: src/features/speaker/SpeakerButton.tsx:96
+#: src/features/speaker/SpeakerButton.tsx:98
 msgid "Loading pronunciation..."
 msgstr ""
 
@@ -576,7 +588,7 @@ msgstr "ođđadárogiela"
 msgid "NO"
 msgstr "Norga"
 
-#: src/features/infinitestems/SearchInfo.tsx:20
+#: src/features/infinitestems/SearchInfo.tsx:18
 msgid "No results for <0>{searchExpression}</0>"
 msgstr "<0>{searchExpression}</0> ii gávdno sátnegirjjiin"
 
@@ -716,7 +728,7 @@ msgstr "Servodatdieđa"
 msgid "Show paradigm for this word"
 msgstr "Čájet dán sáni sojahanminstara"
 
-#: src/features/korp/KorpButton.tsx:46
+#: src/features/korp/KorpButton.tsx:48
 msgid "Show this word in our corpus"
 msgstr "Čájet dán sáni min teakstačoakkáldagas"
 
@@ -921,7 +933,7 @@ msgstr "Dán sátnegirjji vuođđun leat sátnelisttut «Forskingscentralen för
 msgid "This dictionary is based on lexical material from the Institute for the Languages of Finland, and from Giellatekno's work with the North Saami Oahpa. In addition, we have included frequent words from North Saami."
 msgstr "Dán sátnegirjji vuođđun leat sátnelisttut «Forskingscentralen för de inhemska språken i Helsingfors»-ásahusas ja Giellatekno bargu davvisámi Oahpain. Dasa lassin dasa leat lasihuvvon dábálaš davvisámi sánit."
 
-#: src/features/korp/KorpButton.tsx:72
+#: src/features/korp/KorpButton.tsx:74
 msgid "This word is not found in our corpus"
 msgstr "Dát sátni ii gávdno min teakstačoakkáldagas"
 
@@ -933,7 +945,7 @@ msgstr ""
 msgid "Trond Trosterud's Finnish – Norwegian dictionary has more than 30000 search words."
 msgstr "Trond Trosteruda suoma – girjedáru sátnegirjjis leat eanet go 30000 ohcansáni."
 
-#: src/containers/SatniDrawer.tsx:156
+#: src/containers/SatniDrawer.tsx:160
 msgid "TTS Voices"
 msgstr ""
 
@@ -960,7 +972,7 @@ msgstr ""
 msgid "When you click a word here, dictionary articles appear to the right."
 msgstr "Go coahkkalat sáni dás, de sátnegirjeartihkkalat ihtet olgeš beallái."
 
-#: src/features/search/InputWithTranslation.tsx:45
+#: src/features/search/InputWithTranslation.tsx:62
 msgid "Write at least one letter here"
 msgstr "Čális unnimustá ovtta bustáva dása"
 
