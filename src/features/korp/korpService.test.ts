@@ -1,11 +1,16 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { korpCacheVar } from '../../apolloCache';
+import apolloClient from '../../apolloClient';
 import { isLemmaInKorp } from './korpService';
-import doesLemmaExist from '../../api';
 
-// Mock the API
-vi.mock('../../api');
-const mockedDoesLemmaExist = doesLemmaExist as ReturnType<typeof vi.fn>;
+// Mock Apollo Client
+vi.mock('../../apolloClient', () => ({
+  default: {
+    query: vi.fn(),
+  },
+}));
+
+const mockedApolloClient = apolloClient as any;
 
 describe('korpService', () => {
   beforeEach(() => {
@@ -16,16 +21,23 @@ describe('korpService', () => {
 
   describe('isLemmaInKorp', () => {
     it('should fetch from API when not cached', async () => {
-      mockedDoesLemmaExist.mockResolvedValue(true);
+      mockedApolloClient.query.mockResolvedValue({
+        data: { korpLemmaExists: true },
+      });
 
       const result = await isLemmaInKorp('sme', 'muorra');
 
-      expect(mockedDoesLemmaExist).toHaveBeenCalledWith('sme', 'muorra');
+      expect(mockedApolloClient.query).toHaveBeenCalledWith({
+        query: expect.any(Object),
+        variables: { language: 'sme', lemma: 'muorra' },
+      });
       expect(result).toBe(true);
     });
 
     it('should cache the result after fetching', async () => {
-      mockedDoesLemmaExist.mockResolvedValue(true);
+      mockedApolloClient.query.mockResolvedValue({
+        data: { korpLemmaExists: true },
+      });
 
       await isLemmaInKorp('sme', 'muorra');
 
@@ -39,12 +51,12 @@ describe('korpService', () => {
 
       const result = await isLemmaInKorp('sma', 'dïhte');
 
-      expect(mockedDoesLemmaExist).not.toHaveBeenCalled();
+      expect(mockedApolloClient.query).not.toHaveBeenCalled();
       expect(result).toBe(false);
     });
 
     it('should handle API errors gracefully', async () => {
-      mockedDoesLemmaExist.mockRejectedValue(new Error('Network error'));
+      mockedApolloClient.query.mockRejectedValue(new Error('Network error'));
 
       const result = await isLemmaInKorp('smj', 'word');
 
@@ -52,9 +64,9 @@ describe('korpService', () => {
     });
 
     it('should cache multiple results', async () => {
-      mockedDoesLemmaExist
-        .mockResolvedValueOnce(true)
-        .mockResolvedValueOnce(false);
+      mockedApolloClient.query
+        .mockResolvedValueOnce({ data: { korpLemmaExists: true } })
+        .mockResolvedValueOnce({ data: { korpLemmaExists: false } });
 
       await isLemmaInKorp('sme', 'muorra');
       await isLemmaInKorp('sma', 'dïhte');

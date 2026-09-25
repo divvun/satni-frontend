@@ -1,5 +1,6 @@
 import { korpCacheVar } from '../../apolloCache';
-import doesLemmaExist from '../../api';
+import apolloClient from '../../apolloClient';
+import { GET_KORP_LEMMA_EXISTS } from '../../operations/queries/getKorpLemmaExists';
 
 const createCacheKey = (language: string, lemma: string): string =>
   `${language}:${lemma}`;
@@ -22,9 +23,14 @@ export const isLemmaInKorp = async (
     return cache[cacheKey];
   }
 
-  // Fetch from API if not cached
+  // Fetch from satni-backend (which caches the upstream Korp lookup) if not cached
   try {
-    const exists = await doesLemmaExist(language, lemma);
+    const { data } = await apolloClient.query({
+      query: GET_KORP_LEMMA_EXISTS,
+      variables: { language, lemma },
+    });
+
+    const exists = data?.korpLemmaExists ?? false;
 
     // Update cache
     korpCacheVar({
