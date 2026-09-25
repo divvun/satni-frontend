@@ -40,6 +40,11 @@ export const GET_DICT_ARTICLES: TypedDocumentNode<
             pos
             dialect
             country
+            hasStem(
+              srcLangs: $srcLangs
+              targetLangs: $targetLangs
+              wantedDicts: $wantedDicts
+            )
           }
         }
       }
@@ -53,6 +58,11 @@ export const GET_DICT_ARTICLES: TypedDocumentNode<
               pos
               dialect
               country
+              hasStem(
+                srcLangs: $srcLangs
+                targetLangs: $targetLangs
+                wantedDicts: $wantedDicts
+              )
             }
           }
         }

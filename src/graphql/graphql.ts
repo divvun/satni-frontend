@@ -119,12 +119,19 @@ export type LemmaType = Node & {
   __typename?: 'LemmaType';
   country?: Maybe<Scalars['String']['output']>;
   dialect?: Maybe<Scalars['String']['output']>;
+  hasStem?: Maybe<Scalars['Boolean']['output']>;
   /** The ID of the object */
   id: Scalars['ID']['output'];
   language: Scalars['String']['output'];
   lemma: Scalars['String']['output'];
   pos?: Maybe<Scalars['String']['output']>;
   presentationLemma: Scalars['String']['output'];
+};
+
+export type LemmaTypeHasStemArgs = {
+  srcLangs: Array<InputMaybe<Scalars['String']['input']>>;
+  targetLangs: Array<InputMaybe<Scalars['String']['input']>>;
+  wantedDicts: Array<InputMaybe<Scalars['String']['input']>>;
 };
 
 /** HFST gives a wordform and a weight. */
@@ -461,7 +468,7 @@ export type DictArticlesQueryVariables = Exact<{
 }>;
 
 
-export type DictArticlesQuery = { __typename?: 'Query', dictEntryList?: Array<{ __typename?: 'DictEntryType', dictName: string, srcLang: string, targetLang: string, lookupLemmas?: { __typename?: 'LemmaConnection', edges: Array<{ __typename?: 'LemmaEdge', node?: { __typename?: 'LemmaType', lemma: string, presentationLemma: string, language: string, pos?: string | null, dialect?: string | null, country?: string | null } | null } | null> } | null, translationGroups: Array<{ __typename?: 'TranslationGroupType', translationLemmas?: { __typename?: 'LemmaConnection', edges: Array<{ __typename?: 'LemmaEdge', node?: { __typename?: 'LemmaType', lemma: string, presentationLemma: string, language: string, pos?: string | null, dialect?: string | null, country?: string | null } | null } | null> } | null, restriction?: { __typename?: 'RestrictionType', restriction?: string | null, attributes?: string | null } | null, exampleGroups?: Array<{ __typename?: 'ExampleGroupType', example: string, translation: string } | null> | null } | null> } | null> | null };
+export type DictArticlesQuery = { __typename?: 'Query', dictEntryList?: Array<{ __typename?: 'DictEntryType', dictName: string, srcLang: string, targetLang: string, lookupLemmas?: { __typename?: 'LemmaConnection', edges: Array<{ __typename?: 'LemmaEdge', node?: { __typename?: 'LemmaType', lemma: string, presentationLemma: string, language: string, pos?: string | null, dialect?: string | null, country?: string | null, hasStem?: boolean | null } | null } | null> } | null, translationGroups: Array<{ __typename?: 'TranslationGroupType', translationLemmas?: { __typename?: 'LemmaConnection', edges: Array<{ __typename?: 'LemmaEdge', node?: { __typename?: 'LemmaType', lemma: string, presentationLemma: string, language: string, pos?: string | null, dialect?: string | null, country?: string | null, hasStem?: boolean | null } | null } | null> } | null, restriction?: { __typename?: 'RestrictionType', restriction?: string | null, attributes?: string | null } | null, exampleGroups?: Array<{ __typename?: 'ExampleGroupType', example: string, translation: string } | null> | null } | null> } | null> | null };
 
 export type AllLemmasQueryVariables = Exact<{
   inputValue: Scalars['String']['input'];
